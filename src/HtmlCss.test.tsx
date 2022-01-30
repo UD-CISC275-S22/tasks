@@ -9,6 +9,20 @@ describe("Some HTML Elements are added.", () => {
         const header = screen.getByRole("heading");
         expect(header).toBeInTheDocument();
     });
+
+    test("There is an image with alt text", () => {
+        render(<App />);
+        const image = screen.getByRole("image");
+        expect(image).toBeInTheDocument();
+        expect(image).toHaveAttribute("alt");
+    });
+
+    test("There is a list with at least three elements", () => {
+        render(<App />);
+        const list = screen.getByRole("list");
+        expect(list).toBeInTheDocument();
+        expect(list.children.length).toBeGreaterThanOrEqual(3);
+    });
 });
 
 describe("Some basic CSS is added.", () => {
