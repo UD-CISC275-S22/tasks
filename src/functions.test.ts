@@ -6,8 +6,8 @@ import {
     convertYesNo
 } from "./functions";
 
-test("Testing the basic functions", () => {
-    it("Testing the add3 function", () => {
+describe("Testing the basic functions", () => {
+    test("Testing the add3 function", () => {
         expect(add3(1, 2, 3)).toBe(6);
         expect(add3(9, 7, 4)).toBe(20);
         expect(add3(6, -3, 9)).toBe(15);
@@ -16,7 +16,7 @@ test("Testing the basic functions", () => {
         expect(add3(-1, -1, 1)).toBe(1);
     });
 
-    it("Testing the fahrenheitToCelius function", () => {
+    test("Testing the fahrenheitToCelius function", () => {
         expect(fahrenheitToCelius(32)).toBe(0);
         expect(fahrenheitToCelius(-40)).toBe(40);
         expect(fahrenheitToCelius(-22)).toBe(-30);
@@ -26,7 +26,7 @@ test("Testing the basic functions", () => {
         expect(fahrenheitToCelius(212)).toBe(100);
     });
 
-    it("Testing the shout function", () => {
+    test("Testing the shout function", () => {
         expect(shout("Hello")).toBe("HELLO!");
         expect(shout("What?")).toBe("WHAT?!");
         expect(shout("oHo")).toBe("OHO!");
@@ -35,7 +35,7 @@ test("Testing the basic functions", () => {
         expect(shout("Please go outside")).toBe("PLEASE GO OUTSIDE!");
     });
 
-    it("Testing the isQuestion function", () => {
+    test("Testing the isQuestion function", () => {
         expect(isQuestion("Is this a question?")).toBe(true);
         expect(isQuestion("Who are you?")).toBe(true);
         expect(isQuestion("WHAT ARE YOU !?")).toBe(true);
@@ -45,7 +45,7 @@ test("Testing the basic functions", () => {
         expect(isQuestion("")).toBe(false);
     });
 
-    it("Testing the convertYesNo function", () => {
+    test("Testing the convertYesNo function", () => {
         expect(convertYesNo("yes")).toBe(true);
         expect(convertYesNo("YES")).toBe(true);
         expect(convertYesNo("NO")).toBe(false);
