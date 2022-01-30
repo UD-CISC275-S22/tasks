@@ -18,7 +18,7 @@ describe("Testing the basic functions", () => {
 
     test("Testing the fahrenheitToCelius function", () => {
         expect(fahrenheitToCelius(32)).toBe(0);
-        expect(fahrenheitToCelius(-40)).toBe(40);
+        expect(fahrenheitToCelius(-40)).toBe(-40);
         expect(fahrenheitToCelius(-22)).toBe(-30);
         expect(fahrenheitToCelius(14)).toBe(-10);
         expect(fahrenheitToCelius(68)).toBe(20);
