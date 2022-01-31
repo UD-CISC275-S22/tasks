@@ -30,6 +30,14 @@ describe("Some basic CSS is added.", () => {
         render(<App />);
         expect(true);
     });
+
+    test("The background color of the header area is different", () => {
+        render(<App />);
+        const banner = screen.getByRole("banner");
+        expect(banner).not.toHaveStyle({
+            "background-color": "rgb(40, 44, 52)"
+        });
+    });
 });
 
 describe("Some Bootstrap Elements are added", () => {
