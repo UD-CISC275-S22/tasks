@@ -6,7 +6,7 @@ function App(): JSX.Element {
         <div className="App">
             <header className="App-header">Josh was here - CISC275</header>
             <p>
-                Edit <code>src/App.tsx</code> and save. This page will
+                Hello World! Edit <code>src/App.tsx</code> and save. This page
                 automatically reload.
             </p>
         </div>
