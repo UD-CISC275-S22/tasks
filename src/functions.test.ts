@@ -7,15 +7,6 @@ import {
 } from "./functions";
 
 describe("Testing the basic functions", () => {
-    test("Testing the add3 function", () => {
-        expect(add3(1, 2, 3)).toBe(6);
-        expect(add3(9, 7, 4)).toBe(20);
-        expect(add3(6, -3, 9)).toBe(15);
-        expect(add3(10, 1, -9)).toBe(11);
-        expect(add3(-9, -100, -4)).toBe(0);
-        expect(add3(-1, -1, 1)).toBe(1);
-    });
-
     test("Testing the fahrenheitToCelius function", () => {
         expect(fahrenheitToCelius(32)).toBe(0);
         expect(fahrenheitToCelius(-40)).toBe(-40);
@@ -24,6 +15,15 @@ describe("Testing the basic functions", () => {
         expect(fahrenheitToCelius(68)).toBe(20);
         expect(fahrenheitToCelius(86)).toBe(30);
         expect(fahrenheitToCelius(212)).toBe(100);
+    });
+
+    test("Testing the add3 function", () => {
+        expect(add3(1, 2, 3)).toBe(6);
+        expect(add3(9, 7, 4)).toBe(20);
+        expect(add3(6, -3, 9)).toBe(15);
+        expect(add3(10, 1, -9)).toBe(11);
+        expect(add3(-9, -100, -4)).toBe(0);
+        expect(add3(-1, -1, 1)).toBe(1);
     });
 
     test("Testing the shout function", () => {
