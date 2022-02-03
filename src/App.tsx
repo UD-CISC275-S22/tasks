@@ -6,7 +6,7 @@ function App(): JSX.Element {
     return (
         <div className="App">
             <header className="App-header">Josh was here - CISC275</header>
-            <h1>Hello World</h1>
+            <h1>Hi, Im Josh</h1>
 
             <img alt="A picture of prof silber" src="assets/sadber.png" />
             <ul>
