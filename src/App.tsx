@@ -10,8 +10,8 @@ function App(): JSX.Element {
                 amount of characters per line.
             </header>
             <p>
-                Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload.
+                Hello World! Prettier is yelling at me for having carriage
+                return characters! It&apos;s driving me insane!!
             </p>
         </div>
     );
