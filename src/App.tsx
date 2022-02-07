@@ -5,7 +5,9 @@ function App(): JSX.Element {
     return (
         <div className="App">
             <header className="App-header">
-                UD CISC275 with React Hooks and TypeScript
+                Jackson Leadlove&apos;s UD CISC275 with React Hooks and
+                TypeScript. For some reason, it will only let me put a certain
+                amount of characters per line.
             </header>
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
