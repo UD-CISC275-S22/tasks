@@ -5,11 +5,11 @@ function App(): JSX.Element {
     return (
         <div className="App">
             <header className="App-header">
-                UD CISC275 with React Hooks and TypeScript
+                Ocean Shen - UD CISC275 with React Hooks and TypeScript
             </header>
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload.
+                automatically reload. Edited by Ocean Shen on 2/8/22.
             </p>
         </div>
     );
