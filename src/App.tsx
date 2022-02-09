@@ -30,6 +30,18 @@ function App(): JSX.Element {
                     </Button>
                 </div>
             </div>
+            <div>
+                <Container>
+                    <Row>
+                        <Col>
+                            <div> Rectangle 1</div>
+                        </Col>
+                        <Col>
+                            <div> Rectangle 2</div>
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
         </div>
     );
 }
