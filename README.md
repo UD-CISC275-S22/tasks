@@ -16,3 +16,6 @@ You will, however, need to finish setting up the deployment.
 Back in this repository, go to `settings` -> `secrets` -> `Actions` and click the `New repository secret` button in the topright.
 
 Name the secret "GH_TOKEN" and paste in the token you copied in the previous step.
+
+
+Would you like some supervised practice with branching? Try this excellent [interactive tutorial:](https://learngitbranching.js.org/?locale=en_US)
