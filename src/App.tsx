@@ -34,7 +34,7 @@ function App(): JSX.Element {
                 <Container>
                     <Row>
                         <Col>
-                            <div> Rectangle 1</div>
+                            <div>Rectangle </div>
                         </Col>
                         <Col>
                             <div> Rectangle 2</div>
