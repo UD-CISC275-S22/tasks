@@ -153,6 +153,9 @@ export function changeQuestionTypeById(
  * Question should be the same EXCEPT that its `option` array should have a new element.
  * If the `targetOptionIndex` is -1, the `newOption` should be added to the end of the list.
  * Otherwise, it should *replace* the existing element at the `targetOptionIndex`.
+ *
+ * Remember, if a function starts getting too complicated, think about how a helper function
+ * can make it simpler! Break down complicated tasks into little pieces.
  */
 export function editOption(
     questions: Question[],
