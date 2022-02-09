@@ -1,7 +1,6 @@
 import React from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import "./App.css";
-import image from "./images/image.png";
 
 function App(): JSX.Element {
     return (
@@ -19,7 +18,7 @@ function App(): JSX.Element {
             <h2> This is a header! Yay! </h2>
 
             <img
-                src={image}
+                src="https://i.imgur.com/t9r2IAI.png"
                 alt="This is an image I created in Photopea. More specifically, this is the alternative text for the image in case it fails to load."
             />
 
