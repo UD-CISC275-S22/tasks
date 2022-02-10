@@ -37,6 +37,8 @@ function App(): JSX.Element {
                             Here is a picture of food I like to eat when coding:
                         </p>
                         <img
+                            height="70%"
+                            width="50%"
                             src="https://media.chefdehome.com/740/0/0/salsa/homemade-salsa.jpg"
                             alt="A picture of chips being dipped in salsa"
                         />
