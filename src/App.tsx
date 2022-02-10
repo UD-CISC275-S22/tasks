@@ -12,14 +12,14 @@ function App(): JSX.Element {
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
             </p>
-            <header>Hello World</header>
-            <div>
-                <header>What is included in a Powerlifting Meet?</header>
-                <ul>
+            <p> Hello World</p>
+            <div className="Task3">
+                <h1>What is included in a Powerlifting Meet?</h1>
+                <ol>
                     <li>Squat</li>
                     <li>Bench</li>
                     <li>Deadlift</li>
-                </ul>
+                </ol>
                 <img
                     src="../SquatBenchDeadlift.jpg"
                     alt="A picture the three powerlifting lifts"

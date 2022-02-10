@@ -1,7 +1,9 @@
 .App {
     text-align: center;
 }
-
+.Task3 {
+    text-align: center;
+}
 .App-logo {
     height: 40vmin;
     pointer-events: none;
@@ -32,13 +34,13 @@
 .Rectangle1 {
     width: 20%;
     background-color: #99ad9d;
-    min-height: 40vh;
+    min-height: 20vh;
 }
 
 .Rectangle2 {
     width: 20%;
     background-color: #1d0a70;
-    min-height: 40vh;
+    min-height: 20vh;
 }
 
 .App-link {
