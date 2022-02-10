@@ -8,8 +8,8 @@ function App(): JSX.Element {
                 UD CISC275 with React Hooks and TypeScript
             </header>
             <p>
-                Daniel Xu has edited <code>src/App.tsx</code> and saved. This
-                page will automatically reload.
+                Hello World, Daniel Xu has edited <code>src/App.tsx</code> and
+                saved. This page will automatically reload.
             </p>
         </div>
     );
