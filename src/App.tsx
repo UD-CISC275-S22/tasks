@@ -30,14 +30,14 @@ function App(): JSX.Element {
                     </Button>
                 </div>
             </div>
-            <div>
+            <div className="Rectangle">
                 <Container>
                     <Row>
                         <Col>
-                            <div>Rectangle </div>
+                            <div className="Rectangle1"> </div>
                         </Col>
                         <Col>
-                            <div> Rectangle 2</div>
+                            <div className="Rectangle2"></div>
                         </Col>
                     </Row>
                 </Container>

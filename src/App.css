@@ -25,6 +25,22 @@
     color: white;
 }
 
+.Rectangle {
+    text-align: center;
+}
+
+.Rectangle1 {
+    width: 20%;
+    background-color: #99ad9d;
+    min-height: 40vh;
+}
+
+.Rectangle2 {
+    width: 20%;
+    background-color: #1d0a70;
+    min-height: 40vh;
+}
+
 .App-link {
     color: #61dafb;
 }
