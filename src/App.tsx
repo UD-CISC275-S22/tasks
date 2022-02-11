@@ -14,9 +14,9 @@ function App(): JSX.Element {
                     <Col>
                         Things I like to do:
                         <ul>
-                            <li>I like photography</li>
-                            <li>I like to code</li>
-                            <li>I like to go out to eat</li>
+                            <li>I like photography.</li>
+                            <li>I like to code.</li>
+                            <li>I like to go out to eat.</li>
                         </ul>
                         <Button onClick={() => console.log("Hello World!")}>
                             Log Hello World
