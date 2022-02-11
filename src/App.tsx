@@ -32,7 +32,7 @@ function App(): JSX.Element {
                     <Col>
                         <img
                             src="https://i.etsystatic.com/20158337/r/il/6f243d/2359030151/il_340x270.2359030151_88d0.jpg"
-                            alt="Picture of a dusty pink flower."
+                            alt="Picture of a dusty pink flower"
                         />
                         <div
                             style={{
