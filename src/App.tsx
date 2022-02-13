@@ -17,46 +17,28 @@ function App(): JSX.Element {
             </ul>
             <div>
                 <Container>
-                    <Row xl="auto">
-                        <Col xs="auto" className="rectangle">
-                            Attack titan
-                        </Col>
-                        <Col xs="auto" className="rectangle1">
-                            Armored titan
-                        </Col>
-                        <Col xs="auto" className="rectangle2">
-                            Beast titan
-                        </Col>
+                    <Row>
+                        <Col className="box">Attack titan</Col>
+                        <Col className="box1">Armored titan</Col>
+                        <Col className="box2">Beast titan</Col>
                     </Row>
                 </Container>
             </div>
             <div>
                 <Container>
-                    <Row xl="auto">
-                        <Col xl="auto" className="rectangle">
-                            Female titan
-                        </Col>
-                        <Col xl="auto" className="rectangle1">
-                            Jaw titan
-                        </Col>
-                        <Col xl="auto" className="rectangle2">
-                            Founding titan
-                        </Col>
+                    <Row>
+                        <Col className="box">Female titan</Col>
+                        <Col className="box1">Jaw titan</Col>
+                        <Col className="box2">Founding titan</Col>
                     </Row>
                 </Container>
             </div>
             <div>
                 <Container>
-                    <Row xl="auto">
-                        <Col xl="auto" className="rectangle">
-                            Colossal titan
-                        </Col>
-                        <Col xl="auto" className="rectangle1">
-                            Warhammer titan
-                        </Col>
-                        <Col xl="auto" className="rectangle2">
-                            Cart titan
-                        </Col>
+                    <Row>
+                        <Col className="box">Colossal titan</Col>
+                        <Col className="box1">Warhammer titan</Col>
+                        <Col className="box2">Cart titan</Col>
                     </Row>
                 </Container>
             </div>

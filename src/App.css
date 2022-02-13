@@ -38,18 +38,18 @@
     }
 }
 
-.rectangle {
-    width: 70;
-    height: 100;
+.box {
+    width: 60;
+    height: 60;
     background-color: red;
 }
-.rectangle1 {
-    width: fit-content;
-    height: fit-content;
+.box1 {
+    width: 60;
+    height: 60;
     background-color: blue;
 }
-.rectangle2 {
-    width: fit-content;
-    height: fit-content;
+.box2 {
+    width: 60;
+    height: 60;
     background-color: yellow;
 }
