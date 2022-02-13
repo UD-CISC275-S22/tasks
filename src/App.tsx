@@ -9,21 +9,23 @@ function App(): JSX.Element {
                 UD CISC275 with React Hooks and TypeScript
             </header>
             <h1>This is a header text</h1>
+            <ul>
+                <li>First</li>
+                <li>Second</li>
+                <li>Third</li>
+            </ul>
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload. Andrew Long was here! Hello World
                 <Button onClick={() => console.log("Hello World!")}>
                     Log Hello World
                 </Button>
-                <ul>
-                    <li>First</li>
-                    <li>Second</li>
-                    <li>Third</li>
-                </ul>
                 <img
                     src="https://www.looper.com/img/gallery/things-only-adults-notice-in-shrek/intro-1573597941.jpg"
                     alt="Shrek.png"
                 />
+            </p>
+            <div className="Columns">
                 <Container>
                     <Row>
                         <Col>
@@ -38,7 +40,7 @@ function App(): JSX.Element {
                         </Col>
                     </Row>
                 </Container>
-            </p>
+            </div>
         </div>
     );
 }

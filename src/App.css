@@ -36,10 +36,11 @@
 }
 
 .C2{
-    background-color: #fa0000;
+    background-color: #ff0000;
     height: 200px;
     width: 100px;
 }
+
 
 @keyframes App-logo-spin {
     from {
