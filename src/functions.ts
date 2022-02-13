@@ -4,7 +4,7 @@
  *      C = (F - 32) * 5/9
  */
 export function fahrenheitToCelius(temperature: number): number {
-    return 0;
+    return ((temperature - 32) * 5) / 9;
 }
 
 /**
@@ -12,7 +12,17 @@ export function fahrenheitToCelius(temperature: number): number {
  * if the number is greater than zero.
  */
 export function add3(first: number, second: number, third: number): number {
-    return 0;
+    let end = 0;
+    if (second > 0) {
+        end += second;
+    }
+    if (first > 0) {
+        end += first;
+    }
+    if (third > 0) {
+        end += third;
+    }
+    return end;
 }
 
 /**
@@ -20,7 +30,9 @@ export function add3(first: number, second: number, third: number): number {
  * mark added to the end.
  */
 export function shout(message: string): string {
-    return "";
+    let newMessage = message.toUpperCase() + "!";
+    //newMessage += "!";
+    return newMessage;
 }
 
 /**
@@ -28,8 +40,12 @@ export function shout(message: string): string {
  * mark. Do not use an `if` statement in solving this question.
  */
 export function isQuestion(message: string): boolean {
-    return true;
+    //let checkLength = message.length;
+    return message[message.length - 1] === "?";
 }
+//test("Count vampires' teeth", () => {
+//    expect(isQuestion("Hello?")).toBe(true);
+//});
 
 /**
  * Consumes a word (a string) and returns either `true`, `false`, or `null`. If the string
@@ -37,5 +53,12 @@ export function isQuestion(message: string): boolean {
  * upper or lower case), then return `false`. Otherwise, return `null`.
  */
 export function convertYesNo(word: string): boolean | null {
-    return true;
+    if (word === "yes" || word === "YES") {
+        return true;
+    }
+    if (word === "no" || word === "NO") {
+        return false;
+    } else {
+        return null;
+    }
 }
