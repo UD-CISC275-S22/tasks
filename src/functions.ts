@@ -30,9 +30,9 @@ export function add3(first: number, second: number, third: number): number {
  * mark added to the end.
  */
 export function shout(message: string): string {
-    let newMessage = message.toUpperCase() + "!";
+    //let newMessage = message.toUpperCase() + "!";
     //newMessage += "!";
-    return newMessage;
+    return message.toUpperCase() + "!";
 }
 
 /**
