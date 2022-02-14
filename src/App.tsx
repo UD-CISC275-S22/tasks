@@ -7,7 +7,7 @@ function App(): JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript Kiefer
             </header>
-            <p>Hello World</p>
+            <body>Hello World</body>
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
