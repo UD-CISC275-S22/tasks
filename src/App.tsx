@@ -14,9 +14,9 @@ function App(): JSX.Element {
                     <Col>
                         Things I like to do:
                         <ul>
-                            <li>I like photography</li>
-                            <li>I like to code</li>
-                            <li>I like to go out to eat</li>
+                            <li>I like photography.</li>
+                            <li>I like to code.</li>
+                            <li>I like to go out to eat.</li>
                         </ul>
                         <Button onClick={() => console.log("Hello World!")}>
                             Log Hello World
@@ -32,7 +32,7 @@ function App(): JSX.Element {
                     <Col>
                         <img
                             src="https://i.etsystatic.com/20158337/r/il/6f243d/2359030151/il_340x270.2359030151_88d0.jpg"
-                            alt="Picture of a pink flower."
+                            alt="Picture of a dusty pink flower"
                         />
                         <div
                             style={{
