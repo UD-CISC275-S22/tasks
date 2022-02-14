@@ -17,6 +17,12 @@ function App(): JSX.Element {
                         <Col>
                             Edit <code>src/App.tsx</code> and save. This page
                             automatically reload. Hello World
+                            <img
+                                src=" https://pngimg.com/uploads/persimmon/persimmon_PNG86238.png"
+                                width="300"
+                                height="200"
+                                alt="picture of a persimmon"
+                            />
                         </Col>
                     </p>
                 </Row>
