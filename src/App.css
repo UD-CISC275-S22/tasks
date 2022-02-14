@@ -2,6 +2,12 @@
     text-align: center;
 }
 
+.Rectangle {
+    height: 50;
+    width: 100;
+    background-color: red;
+}
+
 .App-logo {
     height: 40vmin;
     pointer-events: none;
@@ -15,7 +21,7 @@
 
 .App-header {
     width: 100%;
-    background-color: #282c34;
+    background-color: #1317e6;
     min-height: 40vh;
     display: flex;
     flex-direction: column;
