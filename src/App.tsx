@@ -23,7 +23,7 @@ function App(): JSX.Element {
                             </header>
                         </Col>
                         <Col>
-                            <header>I love you. Dr.Bart</header>
+                            <h2>I love you. Dr.Bart</h2>
                         </Col>
                     </Row>
                 </Container>
@@ -37,7 +37,7 @@ function App(): JSX.Element {
                 <li>two</li>
                 <li>three</li>
             </ul>
-            <Button onClick={() => console.log("Hello World")}>
+            <Button onClick={() => console.log("Hello World!")}>
                 Log Hello World
             </Button>
 
