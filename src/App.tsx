@@ -1,16 +1,26 @@
 import React from "react";
+import { Col, Container, Row } from "react-bootstrap";
 import "./App.css";
 
 function App(): JSX.Element {
     return (
         <div className="App">
-            <header className="App-header">
-                Rehan Amir UD CISC275 with React Hooks and TypeScript
-            </header>
-            <p>
-                Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload. Hello World
-            </p>
+            <Container>
+                <Row>
+                    <header className="App-header">
+                        <Col>
+                            Rehan Amir UD CISC275 with React Hooks and
+                            TypeScript
+                        </Col>
+                    </header>
+                    <p>
+                        <Col>
+                            Edit <code>src/App.tsx</code> and save. This page
+                            automatically reload. Hello World
+                        </Col>
+                    </p>
+                </Row>
+            </Container>
         </div>
     );
 }
