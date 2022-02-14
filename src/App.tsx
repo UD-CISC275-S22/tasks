@@ -48,7 +48,7 @@ function App(): JSX.Element {
                             style={{
                                 border: "1px solid red",
                                 padding: "4px",
-                                width: "60%",
+                                width: "20%",
                                 height: "40vmin",
                                 backgroundColor: "green"
                             }}
