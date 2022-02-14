@@ -4,7 +4,7 @@
  *      C = (F - 32) * 5/9
  */
 export function fahrenheitToCelius(temperature: number): number {
-    return 0;
+    return (temperature - 32) * (5 / 9);
 }
 
 /**
@@ -12,7 +12,37 @@ export function fahrenheitToCelius(temperature: number): number {
  * if the number is greater than zero.
  */
 export function add3(first: number, second: number, third: number): number {
-    return 0;
+    let sum = 0;
+    if (first > 0) {
+        if (second > 0) {
+            if (third > 0) {
+                sum = first + second + third;
+            } else {
+                sum = first + second;
+            }
+        } else {
+            if (third > 0) {
+                sum = first + third;
+            } else {
+                sum = first;
+            }
+        }
+    } else {
+        if (second > 0) {
+            if (third > 0) {
+                sum = second + third;
+            } else {
+                sum = second;
+            }
+        } else {
+            if (third > 0) {
+                sum = third;
+            } else {
+                sum = 0;
+            }
+        }
+    }
+    return sum;
 }
 
 /**
@@ -20,7 +50,7 @@ export function add3(first: number, second: number, third: number): number {
  * mark added to the end.
  */
 export function shout(message: string): string {
-    return "";
+    return message.toUpperCase() + "!";
 }
 
 /**
@@ -28,7 +58,7 @@ export function shout(message: string): string {
  * mark. Do not use an `if` statement in solving this question.
  */
 export function isQuestion(message: string): boolean {
-    return true;
+    return message.endsWith("?") ? true : false;
 }
 
 /**
@@ -37,5 +67,13 @@ export function isQuestion(message: string): boolean {
  * upper or lower case), then return `false`. Otherwise, return `null`.
  */
 export function convertYesNo(word: string): boolean | null {
-    return true;
+    if (word == "yes".toUpperCase() || word == "YES".toLowerCase()) {
+        return true;
+    } else {
+        if (word == "no".toUpperCase() || word == "NO".toLowerCase()) {
+            return false;
+        } else {
+            return null;
+        }
+    }
 }
