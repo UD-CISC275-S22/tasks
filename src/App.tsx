@@ -1,7 +1,6 @@
 import React from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import "./App.css";
-import Cat2 from "./CAT2.jpg";
 import Cat1 from "./CAT1.jpg";
 function App(): JSX.Element {
     return (
