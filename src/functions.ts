@@ -38,8 +38,8 @@ export function shout(message: string): string {
  * mark. Do not use an `if` statement in solving this question.
  */
 export function isQuestion(message: string): boolean {
-    let len = message.length;
-    if (message.charAt(len-1) == "?") {
+    const len = message.length;
+    if (message.charAt(len - 1) == "?") {
         return true;
     }
     return false;
