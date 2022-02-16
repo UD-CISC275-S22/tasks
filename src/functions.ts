@@ -7,7 +7,7 @@ import { createLanguageServiceSourceFile } from "typescript";
  *      C = (F - 32) * 5/9
  */
 export function fahrenheitToCelius(temperature: number): number {
-    let celsius: number = (temperature - 32) * (5 / 9);
+    const celsius: number = (temperature - 32) * (5 / 9);
     return celsius;
 }
 
@@ -16,7 +16,7 @@ export function fahrenheitToCelius(temperature: number): number {
  * if the number is greater than zero.
  */
 export function add3(first: number, second: number, third: number): number {
-    let sum: number = 0;
+    let sum = 0;
     if (first > 0) {
         sum += first;
     }
@@ -34,7 +34,7 @@ export function add3(first: number, second: number, third: number): number {
  * mark added to the end.
  */
 export function shout(message: string): string {
-    let yell: string = "";
+    let yell = "";
     for (let i = 0; i < message.length; i++) {
         yell += message[i].toUpperCase();
     }
@@ -48,7 +48,7 @@ export function shout(message: string): string {
  * mark. Do not use an `if` statement in solving this question.
  */
 export function isQuestion(message: string): boolean {
-    let last: string = message[message.length - 1];
+    const last: string = message[message.length - 1];
     return last === "?" ? true : false;
 }
 
