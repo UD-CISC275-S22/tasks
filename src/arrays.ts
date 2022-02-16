@@ -134,7 +134,7 @@ export function injectPositive(values: number[]): number[] {
         (currentTotal: number, num: number) => currentTotal + num,
         0
     );
-    const copyarr = [...values];
-    copyarr.splice(index + 1, 0, sum);
-    return copyarr;
+    const copyarray = [...values];
+    copyarray.splice(index + 1, 0, sum);
+    return copyarray;
 }
