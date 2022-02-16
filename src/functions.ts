@@ -1,5 +1,5 @@
-import { stringify } from "querystring";
-import { createLanguageServiceSourceFile } from "typescript";
+//import { stringify } from "querystring";
+//import { createLanguageServiceSourceFile } from "typescript";
 
 /**
  * Consumes a single temperature in Fahrenheit (a number) and converts to Celsius
