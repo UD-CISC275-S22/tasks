@@ -123,8 +123,8 @@ export function injectPositive(values: number[]): number[] {
             (currentTotal: number, num: number) => currentTotal + num,
             0
         );
-        const newarray = [...values, sum];
-        return newarray;
+        const newarrays = [...values, sum];
+        return newarrays;
     }
     const index = values.findIndex((val: number): boolean => val < 0);
     const newarray = values.filter(
