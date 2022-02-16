@@ -7,10 +7,7 @@ import { createLanguageServiceSourceFile } from "typescript";
  *      C = (F - 32) * 5/9
  */
 export function fahrenheitToCelius(temperature: number): number {
-    //only declared it to 0 because i'm not completely sure how to leace
-    //it undeclared
-    let celsius: number = 0;
-    celsius = (temperature - 32) * (5 / 9);
+    let celsius: number = (temperature - 32) * (5 / 9);
     return celsius;
 }
 
