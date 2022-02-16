@@ -36,6 +36,7 @@ export function add3(first: number, second: number, third: number): number {
     if (first < 0 && second < 0 && third < 0) {
         return 0;
     }
+    return 0;
 }
 
 /**
@@ -69,4 +70,5 @@ export function convertYesNo(word: string): boolean | null {
     if (word.toLowerCase() != "yes" && word.toLowerCase() != "no") {
         return null;
     }
+    return true;
 }
