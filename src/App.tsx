@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import { alignPropType } from "react-bootstrap/esm/types";
 import "./App.css";
 
 function App(): JSX.Element {
@@ -22,25 +23,34 @@ function App(): JSX.Element {
                 alt="Looks like theres no image here..."
             />
             <Container>
-                <div
-                    style={{
-                        width: "1000px",
-                        height: "100px",
-                        backgroundColor: "red"
-                    }}
-                >
-                    <Row>
-                        <Col>
-                            Things in this picture
-                            <ul>
-                                <li>Fish</li>
-                                <li>Water</li>
-                                <li>some coral</li>
-                            </ul>
-                        </Col>
-                        <Col>Second section of the coulumn</Col>
-                    </Row>
-                </div>
+                <Row>
+                    <Col xs md lg="5">
+                        <div
+                            style={{
+                                width: "400px",
+                                height: "100px",
+                                backgroundColor: "red"
+                            }}
+                        ></div>
+                    </Col>
+                    <p className="unorderedList">
+                        Things in this picture
+                        <ul>
+                            <li>Fish</li>
+                            <li>Water</li>
+                            <li>some coral</li>
+                        </ul>
+                    </p>
+                    <Col>
+                        <div
+                            style={{
+                                width: "400px",
+                                height: "100px",
+                                backgroundColor: "red"
+                            }}
+                        ></div>
+                    </Col>
+                </Row>
             </Container>
             <button
                 className="btn btn-primary"
