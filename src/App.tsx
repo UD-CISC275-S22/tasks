@@ -1,6 +1,5 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { alignPropType } from "react-bootstrap/esm/types";
 import "./App.css";
 
 function App(): JSX.Element {
