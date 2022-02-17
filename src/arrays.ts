@@ -1,6 +1,3 @@
-import { parse } from "path/posix";
-import { parseConfigFileTextToJson } from "typescript";
-
 /**
  * Consume an array of numbers, and return a new array containing
  * JUST the first and last number. If there are no elements, return
@@ -43,7 +40,11 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    return [];
+    const nodollarsign = amounts.map((amounts: string): string =>
+        amounts.substring(0, 1) === "$" ? amounts.substring(1) : amounts
+    );
+    const nums = stringsToIntegers(nodollarsign);
+    return nums;
 };
 
 /**
