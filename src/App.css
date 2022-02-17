@@ -24,14 +24,6 @@
     font-size: calc(10px + 2vmin);
     color: rgb(31, 18, 211);
 }
-.App-rect {
-    width: 250px;
-    background-color: #ff0000;
-    height: 100px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-}
 
 .App-link {
     color: #61dafb;

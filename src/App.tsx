@@ -7,7 +7,10 @@ function App(): JSX.Element {
         <>
             <div className="App">
                 <div className="App-header">
-                    <h1> Welcome to my website, home of my precious dogs!</h1>
+                    <header>
+                        Hello World and CISC275! Welcome to my website, home of
+                        dogs!
+                    </header>
                 </div>
                 <img
                     src="https://i.postimg.cc/tC2qF95N/E30-BA202-970-B-47-E4-A82-F-07-B992-B5-A896-1-201-a.jpg"
@@ -21,39 +24,55 @@ function App(): JSX.Element {
                 </p>
                 <h2>Bruno&apos;s Favorite Things:</h2>
                 <ol>
-                    {" "}
-                    <li>1. People</li>
-                    <li>2. Licking everything</li>
+                    <li>People</li>
+                    <li>Licking everything</li>
                     <li>
-                        3. Splooting (if you are unfamiliar with this term you
-                        will not regret looking it up)
+                        Splooting (if you are unfamiliar with this term you
+                        regret looking it up)
                     </li>
                 </ol>
-                <h3>Alfie&apos;s Favorite Things:</h3>
+                {/* <h3>Alfie&apos;s Favorite Things:</h3>
                 <ol>
-                    {" "}
-                    <li>1. Food</li>
-                    <li>2. Receiving pets</li>
-                    <li>3. Being lazy</li>
+                    <li>Food</li>
+                    <li>Receiving pets</li>
+                    <li>Being lazy</li>
                 </ol>
                 <h4>Maggie&apos;s Favorite Things:</h4>
                 <ol>
-                    {" "}
-                    <li>1. Cuddling</li>
-                    <li>2. Playing with her frisbee</li>
-                    <li>3. Ripping the bark off of trees in the backyard</li>
-                </ol>
+                    <li>Cuddling</li>
+                    <li>Playing with her frisbee</li>
+                    <li>Ripping the bark off of trees in the backyard</li>
+                </ol> */}
                 <Button onClick={() => console.log("Hello World!")}>
                     Log Hello World
                 </Button>
-                <Container>
+                <Container fluid>
+                    <br />
                     <Row>
-                        <div className="App-rect">
-                            <Col>First Column</Col>
-                        </div>
-                        <div className="App-rect">
-                            <Col>Second Column</Col>
-                        </div>
+                        <Col>
+                            <div
+                                style={{
+                                    width: "500px",
+                                    height: "100px",
+                                    backgroundColor: "red",
+                                    alignContent: "center"
+                                }}
+                            >
+                                First Rectangle
+                            </div>
+                        </Col>
+                        <Col>
+                            <div
+                                style={{
+                                    width: "500px",
+                                    height: "100px",
+                                    backgroundColor: "red",
+                                    alignContent: "center"
+                                }}
+                            >
+                                Second Rectangle
+                            </div>
+                        </Col>
                     </Row>
                 </Container>
                 <p>
