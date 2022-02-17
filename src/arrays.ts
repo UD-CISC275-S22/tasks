@@ -1,3 +1,6 @@
+import { parse } from "path/posix";
+import { parseConfigFileTextToJson } from "typescript";
+
 /**
  * Consume an array of numbers, and return a new array containing
  * JUST the first and last number. If there are no elements, return
@@ -26,7 +29,10 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    return [];
+    const int_numbers = numbers.map((numbers: string): number =>
+        Number.isInteger(parseInt(numbers)) ? parseInt(numbers) : 0
+    );
+    return int_numbers;
 }
 
 /**
