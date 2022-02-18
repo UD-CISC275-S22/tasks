@@ -58,6 +58,7 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
+    //FINISHED
     const noDollars = amounts.map((num: string): string =>
         num.replace("$", "")
     );
@@ -74,11 +75,18 @@ export const removeDollars = (amounts: string[]): number[] => {
  * string that ends in "!" should be made uppercase. Also, remove any strings that end
  * in question marks ("?").
  */
-export const shoutIfExclaiming = (messages: string[]): string[] => {
-    //find a string that ends with ! --> make it uppercase
-    //remove any strings that end in ?
+export const shoutIfExclaiming = (messages: string[]): string[] => { //FINISHED
+    //map first and change everything to shouting
+    const shout = messages.map((message: string): string =>
+        message[message.length - 1] === "!" ? message.toUpperCase() : message
+    );
 
-    return [];
+    //filter and get rid of question
+    const noQuest = shout.filter(
+        (message: string): boolean => message[message.length - 1] !== "?"
+    );
+
+    return noQuest;
 };
 
 /**
@@ -108,6 +116,7 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
+    //use reduce
     return "";
 }
 
