@@ -5,7 +5,18 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    return numbers;
+    const arr = [...numbers];
+    if (arr.length > 1) {
+        const array = [arr[0], arr[arr.length - 1]];
+        return array;
+    }
+    if (arr.length === 0) {
+        return arr;
+    }
+    if (arr.length === 1) {
+        const oneArray = [...arr, ...arr];
+        return oneArray;
+    }
 }
 
 /**
@@ -13,7 +24,8 @@ export function bookEndList(numbers: number[]): number[] {
  * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
-    return numbers;
+    const tripled = numbers.map((num: number): number => num * 3);
+    return tripled;
 }
 
 /**
@@ -21,7 +33,11 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    return [];
+    const toNum = numbers.map((num: string): number => parseInt(num));
+    const zero = toNum.map((num: number): number =>
+        Number.isNaN(num) ? (num = 0) : num
+    );
+    return zero;
 }
 
 /**
@@ -32,7 +48,14 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    return [];
+    const zero = amounts.map((num: string): string =>
+        num.includes("$") ? num.replace("$", "") : num
+    );
+    const toNum = zero.map((num: string): number => parseInt(num));
+    const final = toNum.map((num: number): number =>
+        Number.isNaN(num) ? (num = 0) : num
+    );
+    return final;
 };
 
 /**
@@ -41,7 +64,13 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    return [];
+    const zero = messages.map((sms: string): string =>
+        sms[sms.length - 1] === "!" ? sms.toUpperCase() : sms
+    );
+    const noQM = zero.filter(
+        (sms: string): boolean => sms[sms.length - 1] !== "?"
+    );
+    return noQM;
 };
 
 /**
@@ -49,7 +78,8 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return 0;
+    const lessFour = words.filter((word: string): boolean => word.length < 4);
+    return lessFour.length;
 }
 
 /**
@@ -58,6 +88,17 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
+    if (colors.length === 0) {
+        return true;
+    }
+    const checkColor = colors.every(
+        (color: string): boolean =>
+            color === "red" || color === "blue" || color === "green"
+    );
+    if (checkColor === true) {
+        return true;
+    }
+
     return false;
 }
 
@@ -69,7 +110,16 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    if (addends.length === 0) {
+        return "0=0";
+    }
+    let equation = addends.join("+");
+    const sum = addends.reduce(
+        (currentTotal: number, num: number) => currentTotal + num,
+        0
+    );
+    equation = sum.toString() + "=" + equation;
+    return equation;
 }
 
 /**
@@ -82,5 +132,51 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    return [];
+    const temp = [...values];
+    const isAllPositive = values.every((price: number): boolean => price > 0);
+    if (isAllPositive) {
+        const sum = values.reduce(
+            (currentTotal: number, num: number) => currentTotal + num,
+            0
+        );
+        return [...values, sum];
+    } else {
+        const findFirstNegative = temp.findIndex(
+            (value: number): boolean => value < 0
+        );
+        const ifNeg = temp.filter(
+            (value: number): boolean =>
+                temp.indexOf(value) < temp.indexOf(findFirstNegative) - 2
+        );
+        const sum = ifNeg.reduce(
+            (currentTotal: number, num: number) => currentTotal + num,
+            0
+        );
+        temp.splice(findFirstNegative + 1, 0, sum);
+        return temp;
+    }
+    return [0];
+
+    // const findNegative = values.find((value: number): boolean => value < 0);
+    // const ifNeg = values.filter(
+    //     (value: number): boolean =>
+    //         value >= 0 && value < values.findIndex(findNegative)
+    // );
+    // const sum = values.reduce(
+    //     (currentTotal: number, num: number) => currentTotal + num,
+    //     0
+    // );
+    // const sumIfNeg = ifNeg.reduce(
+    //     (currentTotal: number, num: number) => currentTotal + num,
+    //     0
+    // );
+    // const negative = values.some((value: number): boolean => value < 0);
+    // if (negative) {
+    //     const negativeSum = [...values];
+    //     negativeSum.splice(negativeSum.findIndex(fi), 0, sumIfNeg);
+    //     return negativeSum;
+    // }
+    // if (!negative) {
+    //     return [...values, sum];
+    // }
 }
