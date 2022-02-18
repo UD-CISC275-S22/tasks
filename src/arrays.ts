@@ -1,3 +1,5 @@
+import { parseIsolatedEntityName } from "typescript";
+
 /**
  * Consume an array of numbers, and return a new array containing
  * JUST the first and last number. If there are no elements, return
@@ -5,7 +7,19 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    return numbers;
+    //FINISHED
+    let book: number[] = [];
+    if (numbers.length === 0) {
+        book = [];
+    }
+    if (numbers.length === 1) {
+        book = [numbers[0], numbers[0]];
+    }
+    if (numbers.length > 1) {
+        book = [numbers[0], numbers[numbers.length - 1]];
+    }
+
+    return book;
 }
 
 /**
@@ -13,7 +27,11 @@ export function bookEndList(numbers: number[]): number[] {
  * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
-    return numbers;
+    //FINISHED
+    //triple each element and put in a new array
+    //use a map
+    const tripled = numbers.map((price: number): number => price * 3);
+    return tripled;
 }
 
 /**
@@ -21,7 +39,7 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    return [];
+    return ints;
 }
 
 /**
@@ -32,7 +50,11 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    return [];
+    const noDollars = amounts.map((num: string): string =>
+        num.replace("$", "")
+    );
+    const toNumber = noDollars.map((num: string): number => parseInt(num));
+    return toNumber;
 };
 
 /**
@@ -41,6 +63,9 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
+    //find a string that ends with ! --> make it uppercase
+    //remove any strings that end in ?
+
     return [];
 };
 
@@ -49,7 +74,9 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return 0;
+    //FINISHED
+    const short = words.filter((word: string): boolean => word.length < 4);
+    return short.length;
 }
 
 /**
