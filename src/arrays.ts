@@ -17,7 +17,7 @@ export function bookEndList(numbers: number[]): number[] {
         const oneArray = [...arr, ...arr];
         return oneArray;
     }
-    return numbers;
+    return arr;
 }
 
 /**
@@ -157,27 +157,4 @@ export function injectPositive(values: number[]): number[] {
         return temp;
     }
     return [0];
-
-    // const findNegative = values.find((value: number): boolean => value < 0);
-    // const ifNeg = values.filter(
-    //     (value: number): boolean =>
-    //         value >= 0 && value < values.findIndex(findNegative)
-    // );
-    // const sum = values.reduce(
-    //     (currentTotal: number, num: number) => currentTotal + num,
-    //     0
-    // );
-    // const sumIfNeg = ifNeg.reduce(
-    //     (currentTotal: number, num: number) => currentTotal + num,
-    //     0
-    // );
-    // const negative = values.some((value: number): boolean => value < 0);
-    // if (negative) {
-    //     const negativeSum = [...values];
-    //     negativeSum.splice(negativeSum.findIndex(fi), 0, sumIfNeg);
-    //     return negativeSum;
-    // }
-    // if (!negative) {
-    //     return [...values, sum];
-    // }
 }
