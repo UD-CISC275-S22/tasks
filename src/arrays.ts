@@ -39,7 +39,15 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    return ints;
+    // FINISHED
+    //map and change the values to the integer form
+    //map AGAIN, use conditionally modify array, if it is NaN (use isNaN function)
+    //then replace it with 0
+    const ints = numbers.map((num: string): number => parseInt(num));
+    const zeros = ints.map((num: number): number =>
+        isNaN(num) ? (num = 0) : num
+    );
+    return zeros;
 }
 
 /**
@@ -54,7 +62,11 @@ export const removeDollars = (amounts: string[]): number[] => {
         num.replace("$", "")
     );
     const toNumber = noDollars.map((num: string): number => parseInt(num));
-    return toNumber;
+    //add in same as above to remove zeros
+    const zeros = toNumber.map((num: number): number =>
+        isNaN(num) ? (num = 0) : num
+    );
+    return zeros;
 };
 
 /**
