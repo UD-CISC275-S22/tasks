@@ -17,6 +17,7 @@ export function bookEndList(numbers: number[]): number[] {
         const oneArray = [...arr, ...arr];
         return oneArray;
     }
+    return numbers;
 }
 
 /**
