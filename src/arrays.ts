@@ -105,8 +105,13 @@ export function countShortWords(words: string[]): number {
  * the colors are either 'red', 'blue', or 'green'. If an empty list is given,
  * then return true.
  */
-export function allRGB(colors: string[]): boolean {
-    return false;
+export function allRGB(colors: string[]): boolean { //FINISHED
+    //use every
+    const allColors = colors.every(
+        (color: string): boolean =>
+            color === "blue" || color === "red" || color === "green"
+    );
+    return allColors;
 }
 
 /**
@@ -116,7 +121,8 @@ export function allRGB(colors: string[]): boolean {
  * For instance, the array [1, 2, 3] would become "6=1+2+3".
  * And the array [] would become "0=0".
  */
-export function makeMath(addends: number[]): string { // FINISHED
+export function makeMath(addends: number[]): string {
+    // FINISHED
     //use reduce
     //items: X[]
     //(resultsSoFar: Y, currentItem: x)-> Y
