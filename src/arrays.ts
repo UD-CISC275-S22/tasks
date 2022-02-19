@@ -75,7 +75,8 @@ export const removeDollars = (amounts: string[]): number[] => {
  * string that ends in "!" should be made uppercase. Also, remove any strings that end
  * in question marks ("?").
  */
-export const shoutIfExclaiming = (messages: string[]): string[] => { //FINISHED
+export const shoutIfExclaiming = (messages: string[]): string[] => {
+    //FINISHED
     //map first and change everything to shouting
     const shout = messages.map((message: string): string =>
         message[message.length - 1] === "!" ? message.toUpperCase() : message
@@ -115,9 +116,38 @@ export function allRGB(colors: string[]): boolean {
  * For instance, the array [1, 2, 3] would become "6=1+2+3".
  * And the array [] would become "0=0".
  */
-export function makeMath(addends: number[]): string {
+export function makeMath(addends: number[]): string { // FINISHED
     //use reduce
-    return "";
+    //items: X[]
+    //(resultsSoFar: Y, currentItem: x)-> Y
+    //INitial value: x
+    //return y
+
+    const sum = addends.reduce(
+        (CurrentTotal: number, num: number) => CurrentTotal + num,
+        0
+    );
+    //sum is calculated, now let's convert the array to a string array
+
+    const toStr = addends.map((num: number): string => num.toString());
+
+    //now, reduce again, but make it a string
+    let partialStr: str[] = toStr.reduce(
+        (CurrentStr: string, str: string) => CurrentStr + str + "+",
+        0
+    );
+
+    const partialSTR = partialStr.toString();
+    const par = partialSTR.slice(1);
+    let par2: string = par.slice(0, -1);
+
+    if (addends.length === 0) {
+        par2 = "0";
+    }
+
+    const totalStr = sum + "=" + par2;
+
+    return totalStr;
 }
 
 /**
