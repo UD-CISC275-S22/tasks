@@ -214,7 +214,9 @@ export function injectPositive(values: number[]): number[] {
     const sum = temp.reduce(
         (currentTotal: number, num: number) => currentTotal + num,
         0
-    );
+    ); 
+
+    console.log("I am testing something");
 
     //add the sum to the array - splice
 
