@@ -141,7 +141,7 @@ export function makeMath(addends: number[]): string {
     //now, reduce again, but make it a string
     const partialStr = toStr.reduce(
         (CurrentStr: string, str: string) => CurrentStr + str + "+",
-        0
+        ""
     );
 
     const partialSTR = partialStr.toString();
