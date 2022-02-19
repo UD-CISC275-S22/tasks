@@ -1,4 +1,4 @@
-import { parseIsolatedEntityName } from "typescript";
+//import { parseIsolatedEntityName } from "typescript";
 
 /**
  * Consume an array of numbers, and return a new array containing
@@ -167,27 +167,6 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    //how would i do this?
-    //go through, and copy all the positive integers over (so if they are > 0, move it to the new array)
-    //IF you reach a negative number, then INSERT the sum of previous numbers
-    //copy the last element of the array
-
-    //use spread?
-    //spread: creates a new copy of an existing array
-
-    //copy an array, and add a new element:
-    //const pricesAtEnd = [...prices, 55];
-
-    //insert a number after another:
-    //make a duplicate of the original array ....
-    //const pricesInside = [...prices]
-
-    //use 'splice' method
-    //3 arguments: new position, number of deletions, new element
-    //pricesInside.splice(2, 0, 499)
-
-    //integer that will hold the index of the negative value
-
     //new array
 
     //values.subarray(0, negative)
