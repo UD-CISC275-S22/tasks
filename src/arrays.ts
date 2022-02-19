@@ -139,7 +139,7 @@ export function makeMath(addends: number[]): string {
     const toStr = addends.map((num: number): string => num.toString());
 
     //now, reduce again, but make it a string
-    let partialStr: str[] = toStr.reduce(
+    const partialStr = toStr.reduce(
         (CurrentStr: string, str: string) => CurrentStr + str + "+",
         0
     );
@@ -197,7 +197,7 @@ export function injectPositive(values: number[]): number[] {
     //use find, to find the negative element
 
     //copy the array
-    let dup: number[] = [...values];
+    const dup = [...values];
 
     //find the index negative number
     const negativeIndex = values.findIndex((num: number): boolean => num < 0);
