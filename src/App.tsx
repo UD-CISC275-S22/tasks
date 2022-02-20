@@ -25,11 +25,15 @@ function App(): JSX.Element {
             <Button onClick={() => console.log("Hello World!")}>
                 Log Hello World
             </Button>
-            <div className="App-column1">
+            <div className="row">
                 <Container>
                     <Row>
-                        <Col>First column.</Col>
-                        <Col>Second column.</Col>
+                        <Col>
+                            <div className="column1"> C++ </div>
+                        </Col>
+                        <Col>
+                            <div className="column2"> ROCKS! </div>
+                        </Col>
                     </Row>
                 </Container>
             </div>

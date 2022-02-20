@@ -37,10 +37,16 @@
         transform: rotate(360deg);
     }
 }
-.App-column1 {
-    background-color: #ff0000;
-    padding: "40px";
+.column1 {
+    float: middle;
     width: 20%;
-    height: 400%;
-    column-gap: 40px;
+    background-color: red;
+    height: 13vmin;
+}
+.column2 {
+    float: middle;
+    width: 20%;
+    background-color: rgb(255, 2, 2);
+    height: 13vmin;
+    column-rule: 4px double #ff0000;
 }
