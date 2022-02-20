@@ -1,6 +1,6 @@
 /**
  * Consumes a single temperature in Fahrenheit (a number) and converts to Celsius
- * using this formula:
+ * using this formula
  *      C = (F - 32) * 5/9
  */
 export function fahrenheitToCelius(temperature: number): number {
