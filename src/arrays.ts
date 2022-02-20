@@ -5,7 +5,17 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    return numbers;
+    const lastIndex = numbers.length - 1;
+    const length = numbers.length;
+    let newArr: number[];
+    if (length == 1) {
+        newArr = [numbers[0], numbers[0]];
+    } else if (length != 0) {
+        newArr = [numbers[0], numbers[lastIndex]];
+    } else {
+        newArr = [];
+    }
+    return newArr;
 }
 
 /**
@@ -22,7 +32,11 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    return [];
+    if (numbers.length == 0) {
+        return [0];
+    }
+    const s2n = numbers.map((str: string): number => parseInt(str, 10));
+    return s2n;
 }
 
 /**
