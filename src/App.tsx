@@ -39,7 +39,7 @@ function App(): JSX.Element {
                                 padding: "4px",
                                 width: "20%",
                                 height: "40vmin",
-                                backgroundColor: "green"
+                                backgroundColor: "red"
                             }}
                         >
                             <Col>West Coast</Col>
@@ -50,7 +50,7 @@ function App(): JSX.Element {
                                 padding: "4px",
                                 width: "30%",
                                 height: "40vmin",
-                                backgroundColor: "green"
+                                backgroundColor: "red"
                             }}
                         >
                             <Col>East Coast</Col>
