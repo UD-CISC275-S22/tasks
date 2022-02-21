@@ -5,7 +5,6 @@ import "./App.css";
 function App(): JSX.Element {
     return (
         <>
-            <body className="App-header">Hello World</body>
             <>
                 <h1 className="csn">Crosby, Stills and Nash</h1>
                 <img
@@ -13,8 +12,8 @@ function App(): JSX.Element {
                     alt="Crosby, Stills and Nash"
                 />
                 <header className="App-header"> </header>
-                Isaac Lewis <br></br> UD CISC275 with React Hooks and TypeScript{" "}
-                <br></br>
+                Hello World <br></br> Isaac Lewis <br></br> UD CISC275 with
+                React Hooks and TypeScript <br></br>
                 <Button onClick={() => console.log("Hello World!")}>
                     Log Hello World
                 </Button>
