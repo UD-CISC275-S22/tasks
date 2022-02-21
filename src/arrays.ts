@@ -89,14 +89,11 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    if (colors == []) {
-        return false;
-    }
     const onlyRGB = colors.filter(
         (str: string): boolean =>
-            str.toLowerCase() != "red" ||
-            str.toLowerCase() != "blue" ||
-            str.toLowerCase() != "green"
+            str.toLowerCase() == "red" ||
+            str.toLowerCase() == "blue" ||
+            str.toLowerCase() == "green"
     );
     if (onlyRGB.length == colors.length) {
         return true;
