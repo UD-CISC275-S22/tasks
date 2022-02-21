@@ -1,5 +1,5 @@
-import { stringify } from "querystring";
-import { isQuestion } from "./functions";
+//import { stringify } from "querystring";
+//import { isQuestion } from "./functions";
 import { Question, QuestionType } from "./interfaces/question";
 
 /**
