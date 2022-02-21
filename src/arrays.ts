@@ -32,8 +32,8 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    if (numbers.length == 0) {
-        return [0];
+    if (numbers == []) {
+        return [];
     }
     const s2n = numbers.map((str: string): number => parseInt(str, 10));
     return s2n;
@@ -68,12 +68,13 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
         (str: string): boolean => str[str.length - 1] == "?"
     );
     const makeCapital = removeQST.map((str: string): string =>
-        str.toUpperCase()
+        str[length - 1] == "!" ? str.toUpperCase() : str
     );
     return makeCapital;
 };
 
-/**
+/*
+ *
  * Consumes an array of words and returns the number of words that are LESS THAN
  * 4 letters long.
  */
@@ -88,7 +89,20 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    return false;
+    if (colors == []) {
+        return false;
+    }
+    const onlyRGB = colors.filter(
+        (str: string): boolean =>
+            str.toLowerCase() != "red" ||
+            str.toLowerCase() != "blue" ||
+            str.toLowerCase() != "green"
+    );
+    if (onlyRGB.length == colors.length) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 /**
