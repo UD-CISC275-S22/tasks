@@ -33,11 +33,10 @@ export function makeBlankQuestion(
 export function isCorrect(question: Question, answer: string): boolean {
     //consumes a question and a potential 'answer'
     //return whether or not the 'answer'
-    question.expected.trim();
-    question.expected.toLowerCase();
-    answer.trim();
-    answer.toLowerCase();
-    if (answer === question.expected) {
+    question.expected = question.expected.trim();
+    question.expected = question.expected.toLowerCase();
+
+    if (question.expected === answer) {
         return true;
     } else {
         return false;
@@ -51,7 +50,16 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
-    return false;
+    let val = false;
+    if (question.type === "short_answer_question") {
+        val = true;
+    } else if (question.type === "multiple_choice_question") {
+        if (question.options.includes(question.expected, 0)) {
+            val = true;
+        }
+    }
+
+    return val;
 }
 
 /**
@@ -61,6 +69,7 @@ export function isValid(question: Question, answer: string): boolean {
  * name "My First Question" would become "9: My First Q".
  */
 export function toShortForm(question: Question): string {
+    //FINISHED
     //produce a string representation combining 'id' and first 10 chars of 'name'
     const id = question.id.toString();
     const name = question.name.slice(0, 10);
@@ -86,7 +95,15 @@ export function toShortForm(question: Question): string {
  * Check the unit tests for more examples of what this looks like!
  */
 export function toMarkdown(question: Question): string {
-    return "";
+    const format = "# " + question.name + "\n" + question.body;
+    //use reduce
+    const options = question.options.reduce(
+        (curr: string, op: string) => curr + op,
+        "\n"
+    );
+
+    const formatOp = format + "\n" + options;
+    return formatOp;
 }
 
 /**
@@ -94,7 +111,18 @@ export function toMarkdown(question: Question): string {
  * `newName`.
  */
 export function renameQuestion(question: Question, newName: string): Question {
-    return question;
+    const newQues = {
+        id: question.id,
+        name: newName,
+        type: question.type,
+        body: question.body,
+        expected: question.expected,
+        options: question.options,
+        points: question.points,
+        published: question.published
+    };
+
+    return newQues;
 }
 
 /**
