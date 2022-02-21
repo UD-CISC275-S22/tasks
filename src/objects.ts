@@ -1,3 +1,4 @@
+import { stringify } from "querystring";
 import { Question, QuestionType } from "./interfaces/question";
 
 /**
@@ -10,7 +11,16 @@ export function makeBlankQuestion(
     name: string,
     type: QuestionType
 ): Question {
-    return {};
+    return {
+        id,
+        name,
+        type,
+        body: "",
+        expected: "",
+        options: [],
+        points: 1,
+        published: false
+    };
 }
 
 /**
@@ -21,7 +31,17 @@ export function makeBlankQuestion(
  * HINT: Look up the `trim` and `toLowerCase` functions.
  */
 export function isCorrect(question: Question, answer: string): boolean {
-    return false;
+    //consumes a question and a potential 'answer'
+    //return whether or not the 'answer'
+    question.expected.trim();
+    question.expected.toLowerCase();
+    answer.trim();
+    answer.toLowerCase();
+    if (answer === question.expected) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 /**
@@ -41,7 +61,11 @@ export function isValid(question: Question, answer: string): boolean {
  * name "My First Question" would become "9: My First Q".
  */
 export function toShortForm(question: Question): string {
-    return "";
+    //produce a string representation combining 'id' and first 10 chars of 'name'
+    const id = question.id.toString();
+    const name = question.name.slice(0, 10);
+    const idname = id + ": " + name;
+    return idname;
 }
 
 /**
