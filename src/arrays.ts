@@ -1,3 +1,5 @@
+import { notEqual } from "assert";
+
 /**
  * Consume an array of numbers, and return a new array containing
  * JUST the first and last number. If there are no elements, return
@@ -5,7 +7,13 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    return numbers;
+    let list: number[];
+    if (numbers.length === 0) {
+        list = [];
+    } else {
+        list = [numbers[0], numbers[numbers.length - 1]];
+    }
+    return list;
 }
 
 /**
@@ -13,7 +21,10 @@ export function bookEndList(numbers: number[]): number[] {
  * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
-    return numbers;
+    const tripled: number[] = numbers.map(
+        (element: number): number => element * 3
+    );
+    return tripled;
 }
 
 /**
@@ -21,7 +32,10 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    return [];
+    const num = numbers.map((i): number =>
+        isNaN(parseInt(i)) ? 0 : parseInt(i)
+    );
+    return num;
 }
 
 /**
@@ -32,7 +46,13 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    return [];
+    const namounts = amounts.map((i): string =>
+        i[0] === "$" ? i.replace("$", "") : i
+    );
+    const arr = namounts.map((i): number =>
+        isNaN(parseInt(i)) ? 0 : parseInt(i)
+    );
+    return arr;
 };
 
 /**
@@ -41,7 +61,14 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    return [];
+    const mmessage = [...messages];
+    const nmessage = mmessage.filter(
+        (arr_1: string): boolean => !arr_1.includes("?")
+    );
+    const finalmessage: string[] = nmessage.map((arr_2: string): string =>
+        arr_2.includes("!") ? arr_2.toUpperCase() : arr_2
+    );
+    return finalmessage;
 };
 
 /**
@@ -49,7 +76,9 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return 0;
+    const strlist = words.filter((word: string): boolean => word.length < 4);
+    const numword = strlist.length;
+    return numword;
 }
 
 /**
@@ -58,7 +87,11 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    return false;
+    const colresult = colors.every(
+        (color: string): boolean =>
+            color == "red" || color == "blue" || color == "green"
+    );
+    return colresult;
 }
 
 /**
@@ -69,7 +102,17 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    const sum = addends.reduce(
+        (currentTotal: number, num: number) => currentTotal + num,
+        0
+    );
+    let result;
+    if (addends.length !== 0) {
+        result = sum + "=" + addends.join("+");
+    } else {
+        result = "0=0";
+    }
+    return result;
 }
 
 /**
@@ -82,5 +125,22 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    return [];
+    const nnnum = [...values];
+    const nnum = [...values];
+    const negIntIndex = nnum.findIndex((value: number): boolean => value < 0);
+    if (negIntIndex === -1) {
+        nnum;
+    } else {
+        nnum.splice(negIntIndex);
+    }
+    const sum = nnum.reduce(
+        (currentTotal: number, num: number) => currentTotal + num,
+        0
+    );
+    if (negIntIndex === -1) {
+        nnnum.splice(values.length, 0, sum);
+    } else {
+        nnnum.splice(negIntIndex + 1, 0, sum);
+    }
+    return nnnum;
 }
