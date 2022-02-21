@@ -96,15 +96,26 @@ export function toShortForm(question: Question): string {
  * Check the unit tests for more examples of what this looks like!
  */
 export function toMarkdown(question: Question): string {
-    const format = "# " + question.name + "\n" + question.body;
-    //use reduce
-    const options = question.options.reduce(
-        (curr: string, op: string) => curr + op,
-        "\n"
-    );
+    const line1 = "# " + question.name;
+    const line2 = question.body;
 
-    const formatOp = format + "\n" + options;
-    return formatOp;
+    let format: string;
+
+    if (question.options.length > 0) {
+        const options = question.options.reduce(
+            (curr: string, op: string) => curr + "\n- " + op,
+            ""
+        );
+        format = line1 + "\n" + line2 + options;
+        //format = format.trim();
+    } else {
+        format = line1 + "\n" + line2;
+        //format = format.trim();
+    }
+
+    //console.log(format);
+
+    return format;
 }
 
 /**
