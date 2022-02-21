@@ -35,7 +35,9 @@ export function stringsToIntegers(numbers: string[]): number[] {
     if (numbers == []) {
         return [];
     }
-    const s2n = numbers.map((str: string): number => parseInt(str, 10));
+    const s2n = numbers.map((str: string): number =>
+        isNaN(parseInt(str, 10)) ? 0 : parseInt(str, 10)
+    );
     return s2n;
 }
 
@@ -64,11 +66,11 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    const removeQST = messages.filter(
-        (str: string): boolean => str[str.length - 1] == "?"
+    const removeQST = messages.filter((str: string): boolean =>
+        str.includes("?")
     );
     const makeCapital = removeQST.map((str: string): string =>
-        str[length - 1] == "!" ? str.toUpperCase() : str
+        str.includes("!") ? str.toUpperCase() : str
     );
     return makeCapital;
 };
@@ -131,15 +133,22 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
+    if (values.length == 0) {
+        return [0];
+    }
     const sum = values.reduce(
         (currentTotal: number, num: number): number => currentTotal + num,
         0
     );
     const sortedArray = values.sort((a: number, b: number): number => a - b);
     const SmallestNumber = sortedArray[0];
+    if (SmallestNumber > 0) {
+        return [...values, sum];
+    }
     const SmallestNumberIndex = values.findIndex(
         (a: number): boolean => a == SmallestNumber
     );
-    const returnArray = [];
+    const returnArray = [...values];
+    returnArray.splice(SmallestNumberIndex, 0, sum);
     return [];
 }
