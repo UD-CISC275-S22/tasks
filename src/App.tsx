@@ -29,7 +29,7 @@ function App(): JSX.Element {
                 </Container>
             </div>
             <img
-                src="/Users/ziyangjiang/Desktop/iron-man_marvel_silo.png"
+                src="https://inews.gtimg.com/newsapp_bt/0/13184400729/1000"
                 alt="A picture of Iron Man"
             />
             <ul>
