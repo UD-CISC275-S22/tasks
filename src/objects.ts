@@ -1,6 +1,3 @@
-import { stringify } from "querystring";
-import internal from "stream";
-import { urlToHttpOptions } from "url";
 import { Question, QuestionType } from "./interfaces/question";
 
 /**
