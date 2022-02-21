@@ -46,7 +46,7 @@ export function stringsToIntegers(numbers: string[]): number[] {
  * convert it to 0 instead.
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
-const removeDollars = (amounts: string[]): number[] => {
+export const removeDollars = (amounts: string[]): number[] => {
     if (amounts == []) {
         return [];
     }
@@ -110,7 +110,15 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    if (addends.length == 0) {
+        return "0=0";
+    }
+    const numbersAdded = addends.join("+");
+    const sum = addends.reduce(
+        (currentTotal: number, num: number): number => currentTotal + num,
+        0
+    );
+    return sum + "=" + numbersAdded;
 }
 
 /**
@@ -123,5 +131,15 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
+    const sum = values.reduce(
+        (currentTotal: number, num: number): number => currentTotal + num,
+        0
+    );
+    const sortedArray = values.sort((a: number, b: number): number => a - b);
+    const SmallestNumber = sortedArray[0];
+    const SmallestNumberIndex = values.findIndex(
+        (a: number): boolean => a == SmallestNumber
+    );
+    const returnArray = [];
     return [];
 }
