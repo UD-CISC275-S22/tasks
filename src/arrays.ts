@@ -5,7 +5,14 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    return numbers;
+    const len = numbers.length;
+    if (len === 0) {
+        return [];
+    } else if (len === 1) {
+        return [...numbers, ...numbers];
+    } else {
+        return [numbers[0], numbers[len - 1]];
+    }
 }
 
 /**
@@ -22,7 +29,7 @@ export function tripleNumbers(numbers: number[]): number[] {
  */
 export function stringsToIntegers(numbers: string[]): number[] {
     return numbers.map((num: string): number =>
-        isNaN(parseInt(num)) ? parseInt(num) : 0
+        isNaN(parseInt(num)) ? 0 : parseInt(num)
     );
 }
 
@@ -34,8 +41,11 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    return amounts.map((num: string): number =>
-        isNaN(parseInt(num)) ? parseInt(num) : 0
+    const nums = amounts.map((val: string): string =>
+        val[0] === "$" ? val.slice(1) : val
+    );
+    return nums.map((num: string): number =>
+        isNaN(parseInt(num)) ? 0 : parseInt(num)
     );
 };
 
@@ -45,7 +55,12 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    return [];
+    const excl = messages.filter(
+        (message: string): boolean => message.charAt(message.length - 1) != "?"
+    );
+    return excl.map((message: string): string =>
+        message[message.length - 1] === "!" ? message.toUpperCase() : message
+    );
 };
 
 /**
@@ -53,7 +68,7 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return 0;
+    return words.filter((word: string): boolean => word.length < 4).length;
 }
 
 /**
@@ -62,7 +77,10 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    return false;
+    return colors.every(
+        (color: string): boolean =>
+            color === "red" || color === "blue" || color === "green"
+    );
 }
 
 /**
@@ -73,7 +91,14 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    if (addends.length === 0) {
+        return "0=0";
+    }
+    const sum: number = addends.reduce(
+        (currentTotal: number, num: number) => currentTotal + num,
+        0
+    );
+    return sum + "=" + addends.join("+");
 }
 
 /**
@@ -86,5 +111,28 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    return [];
+    const index: number = values.findIndex((val: number): boolean => val < 0);
+    let retVal: number[];
+    if (index === -1) {
+        retVal = [
+            ...values,
+            values.reduce(
+                (currentTotal: number, num: number) => currentTotal + num,
+                0
+            )
+        ];
+    } else {
+        retVal = [...values];
+        retVal.splice(
+            index + 1,
+            0,
+            values
+                .slice(0, index)
+                .reduce(
+                    (currentTotal: number, num: number) => currentTotal + num,
+                    0
+                )
+        );
+    }
+    return retVal;
 }
