@@ -32,12 +32,16 @@ export function makeBlankQuestion(
  * HINT: Look up the `trim` and `toLowerCase` functions.
  */
 export function isCorrect(question: Question, answer: string): boolean {
-    //consumes a question and a potential 'answer'
-    //return whether or not the 'answer'
-    question.expected = question.expected.trim();
-    question.expected = question.expected.toLowerCase();
+    //is the answer correct
+    //answer = expected
 
-    if (question.expected === answer) {
+    answer = answer.trim();
+    answer = answer.toLowerCase();
+
+    //question.expected = question.expected.trim();
+    //question.expected = question.expected.toLowerCase();
+
+    if (answer === question.expected.toLowerCase().trim()) {
         return true;
     } else {
         return false;
@@ -54,12 +58,13 @@ export function isValid(question: Question, answer: string): boolean {
     let val = false;
     if (question.type === "short_answer_question") {
         val = true;
-    } else if (question.type === "multiple_choice_question") {
-        if (question.options.includes(question.expected, 0)) {
+    }
+
+    if (question.type === "multiple_choice_question") {
+        if (question.options.includes(answer)) {
             val = true;
         }
     }
-
     return val;
 }
 
