@@ -79,7 +79,7 @@ export function countShortWords(words: string[]): number {
 /**
  * Consumes an array of colors (e.g., 'red', 'purple') and returns true if ALL
  * the colors are either 'red', 'blue', or 'green'. If an empty list is given,
- * then return true.
+ * then return true. weeeeee
  */
 export function allRGB(colors: string[]): boolean {
     if (colors.length === 0) {
