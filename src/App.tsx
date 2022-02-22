@@ -14,14 +14,14 @@ function App(): JSX.Element {
             </p>
             <p> Hello World</p>
             <div className="Task3">
-                <h1>What is included in a Powerlifting Meet?</h1>
+                <h1>What lifts are included in a Powerlifting Meet?</h1>
                 <ol>
                     <li>Squat</li>
                     <li>Bench</li>
                     <li>Deadlift</li>
                 </ol>
                 <img
-                    src="../SquatBenchDeadlift.jpg"
+                    src="https://i.pinimg.com/564x/8a/37/b3/8a37b379da64918e5499fbdba4d93c75.jpg"
                     alt="A picture the three powerlifting lifts"
                 />
                 <div>
@@ -29,18 +29,18 @@ function App(): JSX.Element {
                         Log Hello World
                     </Button>
                 </div>
-            </div>
-            <div className="Rectangle">
-                <Container>
-                    <Row>
-                        <Col>
-                            <div className="Rectangle1"> </div>
-                        </Col>
-                        <Col>
-                            <div className="Rectangle2"></div>
-                        </Col>
-                    </Row>
-                </Container>
+                <div className="Rectangle">
+                    <Container>
+                        <Row>
+                            <Col>
+                                <div className="Rectangle1"> </div>
+                            </Col>
+                            <Col>
+                                <div className="Rectangle2"></div>
+                            </Col>
+                        </Row>
+                    </Container>
+                </div>
             </div>
         </div>
     );
