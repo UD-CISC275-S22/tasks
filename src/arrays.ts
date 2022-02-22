@@ -137,19 +137,33 @@ export function injectPositive(values: number[]): number[] {
     if (values.length == 0) {
         return [0];
     }
-    const sum = values.reduce(
-        (currentTotal: number, num: number): number => currentTotal + num,
-        0
-    );
+
     const valuesClone = [...values];
     const sortedArray = valuesClone.sort(
         (a: number, b: number): number => a - b
     );
+
     const SmallestNumber = sortedArray[0];
+    const SmallestNumberIndex = values.findIndex((a: number): boolean => a < 0);
+
     if (SmallestNumber > 0) {
+        const sum = values.reduce(
+            (currentTotal: number, num: number): number => currentTotal + num,
+            0
+        );
         return [...values, sum];
     }
-    const SmallestNumberIndex = values.findIndex((a: number): boolean => a < 0);
+
+    let seenNeg = true;
+    const beforeNegative = values.filter((num: number): boolean =>
+        num > 0 && seenNeg == true ? (seenNeg = true) : (seenNeg = false)
+    );
+
+    const sum = beforeNegative.reduce(
+        (currentTotal: number, num: number): number => currentTotal + num,
+        0
+    );
+
     const returnArray = [...values];
     returnArray.splice(SmallestNumberIndex + 1, 0, sum);
     return returnArray;
