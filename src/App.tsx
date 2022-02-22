@@ -17,10 +17,7 @@ function App(): JSX.Element {
             />
             <div className="container">
                 <div className="row">
-                    <div
-                        className="col"
-                        style={{ border: "3px solid red", padding: "6px" }}
-                    >
+                    <div className="col" style={{ backgroundColor: "red" }}>
                         <p>
                             Nature is a very important part of the modern world
                             but many are unable to enjoy its splendor. So this
@@ -32,10 +29,7 @@ function App(): JSX.Element {
                             Travel the World
                         </button>
                     </div>
-                    <div
-                        className="col"
-                        style={{ border: "3px solid red", padding: "6px" }}
-                    >
+                    <div className="col" style={{ backgroundColor: "red" }}>
                         <h3> Reasons you should travel here </h3>
                         <ul>
                             <li>It is beautiful</li>
