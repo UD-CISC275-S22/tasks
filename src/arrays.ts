@@ -141,15 +141,16 @@ export function injectPositive(values: number[]): number[] {
         (currentTotal: number, num: number): number => currentTotal + num,
         0
     );
-    const sortedArray = values.sort((a: number, b: number): number => a - b);
+    const valuesClone = [...values];
+    const sortedArray = valuesClone.sort(
+        (a: number, b: number): number => a - b
+    );
     const SmallestNumber = sortedArray[0];
     if (SmallestNumber > 0) {
         return [...values, sum];
     }
-    const SmallestNumberIndex = values.findIndex(
-        (a: number): boolean => a == SmallestNumber
-    );
+    const SmallestNumberIndex = values.findIndex((a: number): boolean => a < 0);
     const returnArray = [...values];
-    returnArray.splice(SmallestNumberIndex, 0, sum);
-    return [];
+    returnArray.splice(SmallestNumberIndex + 1, 0, sum);
+    return returnArray;
 }
