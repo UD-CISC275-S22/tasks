@@ -54,7 +54,7 @@ export function isValid(question: Question, answer: string): boolean {
  * Consumes a question and produces a string representation combining the
  * `id` and first 10 characters of the `name`. The two strings should be
  * separated by ": ". So for example, the question with id 9 and the
- * name "My First Question" would become "9: My First Q".
+ * name "My First Question" would become "9: My First Q". BLAW
  */
 export function toShortForm(question: Question): string {
     return (
