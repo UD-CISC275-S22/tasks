@@ -1,3 +1,4 @@
+import { type } from "os";
 import { Question, QuestionType } from "./interfaces/question";
 
 /**
@@ -161,5 +162,14 @@ export function mergeQuestion(
     contentQuestion: Question,
     { points }: { points: number }
 ): Question {
-    return contentQuestion;
+    return {
+        id,
+        name,
+        type: contentQuestion.type,
+        body: contentQuestion.body,
+        expected: contentQuestion.expected,
+        options: contentQuestion.options,
+        points,
+        published: false
+    };
 }
