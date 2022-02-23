@@ -1,4 +1,4 @@
-import { type } from "os";
+//import { type } from "os";
 import { Question, QuestionType } from "./interfaces/question";
 
 /**
