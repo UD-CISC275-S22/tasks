@@ -128,7 +128,8 @@ export function duplicateQuestion(id: number, oldQuestion: Question): Question {
     const duplicateQuestion = {
         ...oldQuestion,
         name: "Copy of " + oldQuestion.name,
-        published: false
+        published: false,
+        id: id
     };
     return duplicateQuestion;
 }
