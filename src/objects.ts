@@ -36,11 +36,11 @@ export function makeBlankQuestion(
  * HINT: Look up the `trim` and `toLowerCase` functions.
  */
 export function isCorrect(question: Question, answer: string): boolean {
-    //const answer1 = ;
+    const copyQuestion = { ...question };
     if (
-        answer === question.expected ||
-        answer.trim() === question.expected.trim() ||
-        answer.toLowerCase() === question.expected.toLowerCase()
+        answer === copyQuestion.expected ||
+        answer.trim() === copyQuestion.expected.trim() ||
+        answer.toLowerCase() === copyQuestion.expected.toLowerCase()
     ) {
         return true;
     } else {
@@ -55,10 +55,11 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
-    if (question.type == "short_answer_question") {
+    const copyQuestion = { ...question };
+    if (copyQuestion.type == "short_answer_question") {
         return true;
-    } else if (question.type == "multiple_choice_question") {
-        if (question.options.includes(answer)) {
+    } else if (copyQuestion.type == "multiple_choice_question") {
+        if (copyQuestion.options.includes(answer)) {
             return true;
         } else {
             return false;
@@ -75,8 +76,8 @@ export function isValid(question: Question, answer: string): boolean {
  * name "My First Question" would become "9: My First Q".
  */
 export function toShortForm(question: Question): string {
-    return question.id + ": " + question.name.substring(0, 10);
-    //return "";
+    const copyQuestion = { ...question };
+    return copyQuestion.id + ": " + copyQuestion.name.substring(0, 10);
 }
 
 /**
@@ -97,13 +98,20 @@ export function toShortForm(question: Question): string {
  * Check the unit tests for more examples of what this looks like!
  */
 export function toMarkdown(question: Question): string {
-    if (question.type === "multiple_choice_question") {
-        const options = question.options.join("\n- ");
+    const copyQuestion = { ...question };
+    if (copyQuestion.type === "multiple_choice_question") {
+        const options = copyQuestion.options.join("\n- ");
         return (
-            "# " + question.name + "\n" + question.body + "\n" + "- " + options
+            "# " +
+            copyQuestion.name +
+            "\n" +
+            copyQuestion.body +
+            "\n" +
+            "- " +
+            options
         );
     } else {
-        return "# " + question.name + "\n" + question.body;
+        return "# " + copyQuestion.name + "\n" + copyQuestion.body;
     }
 }
 
