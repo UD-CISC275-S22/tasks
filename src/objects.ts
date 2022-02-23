@@ -1,5 +1,3 @@
-import { ModalBody } from "react-bootstrap";
-import { urlToHttpOptions } from "url";
 import { Question, QuestionType } from "./interfaces/question";
 
 /**
