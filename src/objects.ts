@@ -30,10 +30,7 @@ export function makeBlankQuestion(
  * HINT: Look up the `trim` and `toLowerCase` functions.
  */
 export function isCorrect(question: Question, answer: string): boolean {
-    if (answer === question.expected) {
-        return true;
-    }
-    return false;
+    return question.expected.toLowerCase() === answer.trim().toLowerCase();
 }
 
 /**
@@ -113,7 +110,10 @@ export function renameQuestion(question: Question, newName: string): Question {
  * published; if it was published, now it should be not published.
  */
 export function publishQuestion(question: Question): Question {
-    return question;
+    return {
+        ...question,
+        published: question.published ? false : true
+    };
 }
 
 /**
