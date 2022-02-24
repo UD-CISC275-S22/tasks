@@ -1,3 +1,5 @@
+import { workerData } from "worker_threads";
+
 /**
  * Consume an array of numbers, and return a new array containing
  * JUST the first and last number. If there are no elements, return
@@ -47,7 +49,15 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    return [];
+    const filterArr: string[] = amounts.map((wrdz: string): string => {
+        if (wrdz.includes("$")) {
+            return wrdz.replace("$", "");
+        } else {
+            return wrdz;
+        }
+    });
+    const intArr: number[] = stringsToIntegers(filterArr);
+    return intArr;
 };
 
 /**
