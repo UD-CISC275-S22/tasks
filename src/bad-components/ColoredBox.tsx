@@ -16,6 +16,7 @@ function ChangeColor(): JSX.Element {
 function ColorPreview(): JSX.Element {
     return (
         <div
+            data-testid="colored-box"
             style={{
                 width: "50px",
                 height: "50px",
