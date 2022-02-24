@@ -1,5 +1,6 @@
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
+import { makeBlankQuestion } from "./objects";
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
@@ -148,7 +149,8 @@ export function publishAll(questions: Question[]): Question[] {
  * are the same type. They can be any type, as long as they are all the SAME type.
  */
 export function sameType(questions: Question[]): boolean {
-    return false;
+    const checkType = questions[1].type;
+    return questions.every((q: Question): boolean => q.type === checkType);
 }
 
 /***
@@ -162,7 +164,7 @@ export function addNewQuestion(
     name: string,
     type: QuestionType
 ): Question[] {
-    return [];
+    return [...questions, makeBlankQuestion(id, name, type)];
 }
 
 /***
@@ -175,7 +177,10 @@ export function renameQuestionById(
     targetId: number,
     newName: string
 ): Question[] {
-    return [];
+    return questions.map(
+        (q: Question): Question =>
+            q.id === targetId ? { ...q, name: newName } : q
+    );
 }
 
 /***
@@ -190,7 +195,14 @@ export function changeQuestionTypeById(
     targetId: number,
     newQuestionType: QuestionType
 ): Question[] {
-    return [];
+    return questions.map(
+        (q: Question): Question =>
+            q.id === targetId
+                ? newQuestionType != "multiple_choice_question"
+                    ? { ...q, options: [], type: newQuestionType }
+                    : { ...q, type: newQuestionType }
+                : q
+    );
 }
 
 /**
@@ -209,7 +221,17 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ) {
-    return [];
+    return questions.map(
+        (q: Question): Question =>
+            q.id === targetId
+                ? editOptionHelp(q, targetOptionIndex, newOption)
+                : q
+    );
+}
+function editOptionHelp(q: Question, tOI: number, nO: string): Question {
+    return tOI === -1
+        ? { ...q, options: [...q.options, nO] }
+        : { ...q, options: q.options.splice(tOI, 1, nO) };
 }
 
 /***
