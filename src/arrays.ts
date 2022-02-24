@@ -5,7 +5,13 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    return numbers;
+    const length: number = numbers.length;
+    let FirstLast: number[] = [];
+    if (length === 0) {
+        return FirstLast;
+    } else {
+        return (FirstLast = [numbers[0], numbers[length - 1]]);
+    }
 }
 
 /**
