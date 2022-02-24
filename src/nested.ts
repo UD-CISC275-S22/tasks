@@ -1,6 +1,7 @@
+import { queries } from "@testing-library/react";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
-import { makeBlankQuestion } from "./objects";
+import { duplicateQuestion, makeBlankQuestion } from "./objects";
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
@@ -229,9 +230,13 @@ export function editOption(
     );
 }
 function editOptionHelp(q: Question, tOI: number, nO: string): Question {
-    return tOI === -1
-        ? { ...q, options: [...q.options, nO] }
-        : { ...q, options: q.options.splice(tOI, 1, nO) };
+    if (tOI === -1) {
+        return { ...q, options: [...q.options, nO] };
+    } else {
+        const qes: Question = { ...q, options: [...q.options] };
+        qes.options.splice(tOI, 1, nO);
+        return qes;
+    }
 }
 
 /***
@@ -245,5 +250,10 @@ export function duplicateQuestionInArray(
     targetId: number,
     newId: number
 ): Question[] {
-    return [];
+    const q = [...questions];
+    const pos: number = q.findIndex(
+        (qes: Question): boolean => qes.id === targetId
+    );
+    q.splice(pos + 1, 0, duplicateQuestion(newId, q[pos]));
+    return q;
 }
