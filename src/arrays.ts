@@ -79,11 +79,10 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    const col = colors.map(
+    const truth = colors.every(
         (str: string): boolean =>
             str === "red" || str === "blue" || str === "green"
     );
-    const truth = col.every((): boolean => true);
     if (truth === true) {
         return true;
     } else {
