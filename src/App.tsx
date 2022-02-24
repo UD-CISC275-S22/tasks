@@ -9,7 +9,6 @@ import { Counter } from "./components/Counter";
 import { DoubleHalf } from "./bad-components/DoubleHalf";
 import { ColoredBox } from "./bad-components/ColoredBox";
 import { ShoveBox } from "./bad-components/ShoveBox";
-import { TrackingNumbers } from "./bad-components/TrackingNumbers";
 import { ChooseTeam } from "./bad-components/ChooseTeam";
 
 function App(): JSX.Element {
@@ -26,8 +25,6 @@ function App(): JSX.Element {
             <ColoredBox></ColoredBox>
             <hr></hr>
             <ShoveBox></ShoveBox>
-            <hr></hr>
-            <TrackingNumbers></TrackingNumbers>
             <hr></hr>
             <Counter></Counter>
             <hr />
