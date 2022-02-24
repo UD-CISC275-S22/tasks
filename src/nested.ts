@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
 
@@ -299,7 +300,6 @@ export function editOption(
             ...question,
             options:
                 question.id === targetId
-                    // eslint-disable-next-line prettier/prettier
                     ? helpEditOptions(question.options, targetOptionIndex, newOption)
                     : question.options
         })
