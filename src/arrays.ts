@@ -83,11 +83,7 @@ export function allRGB(colors: string[]): boolean {
         (str: string): boolean =>
             str === "red" || str === "blue" || str === "green"
     );
-    if (truth === true) {
-        return true;
-    } else {
-        return false;
-    }
+    return truth;
 }
 
 /**
