@@ -1,16 +1,14 @@
 import React from "react";
 import "./App.css";
 import { Button, Col, Container, Row } from "react-bootstrap";
+import catPic from "./assets/bella.jpg";
 
 function App(): JSX.Element {
     return (
         <div className="App">
             <header className="App-header">
                 <h1> Welcome to a page about my cat</h1>
-                <img
-                    src="Users/sydneysegear/Downloads/bella.jpg"
-                    alt="A picture of my cat Bella"
-                />
+                <img src={catPic} alt="A picture of my cat Bella" />
                 Hello World. UD CISC275 with React Hooks and TypeScript. Sydney
                 Segear.
             </header>
