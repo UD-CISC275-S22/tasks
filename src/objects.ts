@@ -180,7 +180,5 @@ export function mergeQuestion(
     };
     cq.points = points;
     cq.published = false;
-    console.log(contentQuestion.options);
-    console.log(cq.options);
     return cq;
 }
