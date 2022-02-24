@@ -31,6 +31,7 @@ function ColorPreview(): JSX.Element {
 export function ColoredBox(): JSX.Element {
     return (
         <div>
+            <h3>Colored Box</h3>
             <span>The current color is: {COLORS[DEFAULT_COLOR_INDEX]}</span>
             <div>
                 <ChangeColor></ChangeColor>

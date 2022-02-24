@@ -30,6 +30,7 @@ export function ChooseTeam(): JSX.Element {
 
     return (
         <div>
+            <h3>Choose Team</h3>
             <Row>
                 <Col>
                     {allOptions.map((option: string) => (

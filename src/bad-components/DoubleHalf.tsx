@@ -13,6 +13,7 @@ function Halver(): JSX.Element {
 export function DoubleHalf(): JSX.Element {
     return (
         <div>
+            <h3>Double Half</h3>
             <span>The current value is: {dhValue}</span>
             <Doubler></Doubler>
             <Halver></Halver>
