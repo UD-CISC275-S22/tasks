@@ -45,10 +45,9 @@ export function isCorrect(question: Question, answer: string): boolean {
 export function isValid(question: Question, answer: string): boolean {
     if (question.type === "short_answer_question") {
         return true;
-    } else if (question.type === "multiple_choice_question") {
+    } else {
         return question.options.includes(answer);
     }
-    return false;
 }
 
 /**
@@ -120,8 +119,9 @@ export function duplicateQuestion(id: number, oldQuestion: Question): Question {
     return {
         ...oldQuestion,
         name: "Copy of " + oldQuestion.name,
-        published: false
-        
+        published: false,
+        id: id
+    };
 }
 
 /**
@@ -132,7 +132,11 @@ export function duplicateQuestion(id: number, oldQuestion: Question): Question {
  * Check out the subsection about "Nested Fields" for more information.
  */
 export function addOption(question: Question, newOption: string): Question {
-    return question;
+    const newQuestion = {
+        ...question,
+        options: [...question.options, newOption]
+    };
+    return newQuestion;
 }
 
 /**
@@ -143,11 +147,18 @@ export function addOption(question: Question, newOption: string): Question {
  * Notice that the second Question is provided as just an object with a `points`
  * field; but the function call would be the same as if it were a `Question` type!
  */
+
 export function mergeQuestion(
     id: number,
     name: string,
     contentQuestion: Question,
     { points }: { points: number }
 ): Question {
-    return contentQuestion;
+    return {
+        ...contentQuestion,
+        id: id,
+        name: name,
+        points: points,
+        published: false
+    };
 }

@@ -18,7 +18,7 @@ function App(): JSX.Element {
                 <li> She is small</li>
                 <li> She can sometimes be nice</li>
             </ul>
-            <p>
+            <div>
                 <div>
                     <Button onClick={() => console.log("Hello World!")}>
                         Log Hello World
@@ -26,7 +26,7 @@ function App(): JSX.Element {
                 </div>
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
-            </p>
+            </div>
             <Container>
                 <Row>
                     <Col>
