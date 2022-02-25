@@ -19,11 +19,9 @@ function App(): JSX.Element {
                 <li> She can sometimes be nice</li>
             </ul>
             <div>
-                <div>
-                    <Button onClick={() => console.log("Hello World!")}>
-                        Log Hello World
-                    </Button>
-                </div>
+                <Button onClick={() => console.log("Hello World!")}>
+                    Log Hello World
+                </Button>
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
             </div>
