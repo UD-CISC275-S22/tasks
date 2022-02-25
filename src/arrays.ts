@@ -80,7 +80,10 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return 0;
+    const countArr: string[] = words.filter(
+        (wrdz: string): boolean => wrdz.length < 4
+    );
+    return countArr.length;
 }
 
 /**
