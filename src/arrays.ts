@@ -112,7 +112,17 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    const total: number = addends.length;
+    const sum: number = addends.reduce(
+        (total: number, num: number) => total + num,
+        0
+    );
+    const stringCombined: string = addends.join("+");
+    if (total === 0) {
+        return "0=0";
+    } else {
+        return `${sum}=${stringCombined}`;
+    }
 }
 
 /**
