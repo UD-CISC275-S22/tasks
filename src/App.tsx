@@ -22,9 +22,9 @@ function App(): JSX.Element {
                 <Button onClick={() => console.log("Hello World!")}>
                     Log Hello World
                 </Button>
-                Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload.
             </div>
+            Edit <code>src/App.tsx</code> and save. This page will automatically
+            reload.
             <Container>
                 <Row>
                     <Col>
