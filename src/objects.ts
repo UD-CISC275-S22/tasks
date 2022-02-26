@@ -1,4 +1,3 @@
-import { write } from "fs";
 import { Question, QuestionType } from "./interfaces/question";
 
 /**
