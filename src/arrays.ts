@@ -78,7 +78,7 @@ export function countShortWords(words: string[]): number {
             sum++;
         }
     }*/
-    const counted = words.filter((word: string): number => word.length < 4);
+    const counted = words.filter((word: string): boolean => word.length < 4);
     return counted.length;
 }
 
