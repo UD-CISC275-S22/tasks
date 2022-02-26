@@ -1,3 +1,5 @@
+import { constants } from "buffer";
+
 /**
  * Consume an array of numbers, and return a new array containing
  * JUST the first and last number. If there are no elements, return
@@ -113,7 +115,16 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    if (addends.length === 0) {
+        return "0=0";
+    }
+    const plus = addends.join("+");
+    const sum = addends.reduce(
+        (currentTotal: number, num: number) => currentTotal + num,
+        0
+    );
+    const sumTotal = sum + "=" + plus;
+    return sumTotal;
 }
 
 /**
@@ -126,5 +137,23 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    return [];
+    const anyNeg = values.some((num: number): boolean => num < 0);
+    const negInd = values.findIndex((num: number): boolean => num < 0);
+    const posValues = [...values];
+    const negValues = values.slice(0, negInd);
+    if (anyNeg) {
+        const sum = negValues.reduce(
+            (currentTotal: number, num: number) => currentTotal + num,
+            0
+        );
+        posValues.splice(negInd + 1, 0, sum);
+        return posValues;
+    } else {
+        const sum = posValues.reduce(
+            (currentTotal: number, num: number) => currentTotal + num,
+            0
+        );
+        posValues.push(sum);
+        return posValues;
+    }
 }
