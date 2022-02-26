@@ -102,7 +102,6 @@ export function allRGB(colors: string[]): boolean {
             return true;
         }
     }
-    return false;
 }
 
 /**
