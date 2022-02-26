@@ -1,3 +1,4 @@
+import { write } from "fs";
 import { Question, QuestionType } from "./interfaces/question";
 
 /**
@@ -42,7 +43,7 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
-    if (question.type == "short_answer_question") {
+    if (question.type === "short_answer_question") {
         return true;
     } else {
         return question.options.includes(answer);
@@ -77,7 +78,19 @@ export function toShortForm(question: Question): string {
  * Check the unit tests for more examples of what this looks like!
  */
 export function toMarkdown(question: Question): string {
-    return "";
+    if (question.type === "multiple_choice_question") {
+        return (
+            "# " +
+            question.name +
+            "\n" +
+            question.body +
+            "\n" +
+            "- " +
+            question.options.join("\n" + "- ")
+        );
+    } else {
+        return "# " + question.name + "\n" + question.body;
+    }
 }
 
 /**
