@@ -1,3 +1,4 @@
+import { ListGroup } from "react-bootstrap";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
 
@@ -160,7 +161,16 @@ export function publishAll(questions: Question[]): Question[] {
  * are the same type. They can be any type, as long as they are all the SAME type.
  */
 export function sameType(questions: Question[]): boolean {
-    return false;
+    const firstQuestion = questions[0];
+    const firstType = firstQuestion.type;
+    const filteredTypes = questions.filter(
+        (question: Question): boolean => question.type == firstType
+    );
+    if (filteredTypes.length != questions.length) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 /***
@@ -202,7 +212,20 @@ export function changeQuestionTypeById(
     targetId: number,
     newQuestionType: QuestionType
 ): Question[] {
-    return [];
+    const changeType = questions.map(
+        (question: Question): Question =>
+            question.id == targetId
+                ? (question = { ...question, type: newQuestionType })
+                : question
+    );
+    const UpdateOptions = changeType.map(
+        (question: Question): Question =>
+            question.id == targetId &&
+            newQuestionType != "multiple_choice_question"
+                ? (question = { ...question, options: [] })
+                : question
+    );
+    return UpdateOptions;
 }
 
 /**
