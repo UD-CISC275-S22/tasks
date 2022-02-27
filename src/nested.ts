@@ -20,11 +20,9 @@ export function getPublishedQuestions(questions: Question[]): Question[] {
 export function getNonEmptyQuestions(questions: Question[]): Question[] {
     const nonEmptyQuestions = questions.filter(
         (question: Question): boolean =>
-            !(
-                question.body == "" &&
-                question.expected == "" &&
-                question.options == []
-            )
+            question.body == "" &&
+            question.expected == "" &&
+            question.options == []
     );
     return nonEmptyQuestions;
 }
@@ -63,7 +61,10 @@ export function removeQuestion(questions: Question[], id: number): Question[] {
  * questions, as an array.
  */
 export function getNames(questions: Question[]): string[] {
-    return [];
+    const justQuestions = questions.map(
+        (question: Question): string => question.name
+    );
+    return justQuestions;
 }
 
 /***
