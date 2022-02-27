@@ -1,6 +1,7 @@
+import { moveEmitHelpers } from "typescript";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
-import { makeBlankQuestion } from "./objects";
+import { duplicateQuestion, makeBlankQuestion } from "./objects";
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
@@ -82,7 +83,7 @@ export function sumPoints(questions: Question[]): number {
  * Consumes an array of questions and returns the sum total of the PUBLISHED questions.
  */
 export function sumPublishedPoints(questions: Question[]): number {
-    const totalPointsPublished = questions.filter(
+    const totalPointsPublished = [...questions].filter(
         (question: Question): boolean => question.published
     );
     return sumPoints(totalPointsPublished);
@@ -106,7 +107,7 @@ id,name,options,points,published
  * Check the unit tests for more examples!
  */
 export function toCSV(questions: Question[]): string {
-    const questionCSV = questions
+    const questionCSV = [...questions]
         .map(
             (question: Question): string =>
                 // Convenient String Interpolation; could have just used + operator too
@@ -173,7 +174,8 @@ export function addNewQuestion(
     name: string,
     type: QuestionType
 ): Question[] {
-    return [...questions, makeBlankQuestion(id, name, type)];
+    const newArray = [...questions, makeBlankQuestion(id, name, type)];
+    return newArray;
 }
 
 /***
@@ -186,7 +188,14 @@ export function renameQuestionById(
     targetId: number,
     newName: string
 ): Question[] {
-    return [];
+    const changingNameForTarget = [...questions].map(
+        (question: Question): Question => {
+            return question.id === targetId
+                ? { ...question, name: newName }
+                : { ...question };
+        }
+    );
+    return changingNameForTarget;
 }
 
 /***
@@ -201,7 +210,15 @@ export function changeQuestionTypeById(
     targetId: number,
     newQuestionType: QuestionType
 ): Question[] {
-    return [];
+    const changingTypeForTarget = [...questions].map(
+        (question: Question): Question => {
+            return question.id === targetId &&
+                newQuestionType !== "multiple_choice_question"
+                ? { ...question, type: newQuestionType, options: [] }
+                : { ...question };
+        }
+    );
+    return changingTypeForTarget;
 }
 
 /**
@@ -220,7 +237,20 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ) {
-    return [];
+    return questions.map((question: Question): Question => {
+        if (question.id === targetId && targetOptionIndex === -1) {
+            return { ...question, options: [...question.options, newOption] };
+        } else if (question.id === targetId && targetOptionIndex !== -1) {
+            const newArray = [...question.options];
+            newArray.splice(targetOptionIndex, 1, newOption);
+            return {
+                ...question,
+                options: newArray
+            };
+        } else {
+            return { ...question };
+        }
+    });
 }
 
 /***
@@ -234,5 +264,10 @@ export function duplicateQuestionInArray(
     targetId: number,
     newId: number
 ): Question[] {
-    return [];
+    const index = questions.findIndex(
+        (question: Question): boolean => question.id === targetId
+    );
+    const newArray = [...questions];
+    newArray.splice(index + 1, 0, duplicateQuestion(newId, questions[index]));
+    return newArray;
 }
