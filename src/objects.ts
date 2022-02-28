@@ -197,20 +197,3 @@ export function mergeQuestion(
     };
     return newquestion;
 }
-/**export function makeBlankQuestion(
-    id: number,
-    name: string,
-    type: QuestionType
-): Question {
-    const blank = {
-        id,
-        name,
-        type,
-        body: "",
-        expected: "",
-        options: [],
-        points: 1,
-        published: false
-    };
-    return blank;
-} */

@@ -86,6 +86,7 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  */
 export function countShortWords(words: string[]): number {
     let x = 0;
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const checker = words.map((b: string): number => (b.length < 4 ? x++ : x));
     return x;
 }
@@ -115,6 +116,7 @@ export function allRGB(colors: string[]): boolean {
  */
 export function makeMath(addends: number[]): string {
     let temp = 0;
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const finna_answer = addends.map(
         (int: number): number => (temp = temp + int)
     );
@@ -154,6 +156,7 @@ export function injectPositive(values: number[]): number[] {
         return values.splice(find_negative + 1, 0, total);
     } else {
         let count_for_none = 0;
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const total_1 = values.map(
             (n: number): number => (count_for_none = count_for_none + n)
         );
