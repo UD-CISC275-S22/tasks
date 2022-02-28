@@ -5,7 +5,14 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    return numbers;
+    let numbersHold = numbers;
+    if (numbers.length == 0) {
+        return numbersHold;
+    } else {
+        numbersHold = [numbers[0]];
+        numbersHold.push(numbers[numbers.length - 1]);
+        return numbersHold;
+    }
 }
 
 /**
@@ -13,6 +20,7 @@ export function bookEndList(numbers: number[]): number[] {
  * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
+    numbers = numbers.map((numbers: number): number => numbers * 3);
     return numbers;
 }
 
@@ -21,7 +29,10 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    return [];
+    const numbersHold = numbers.map((num: string): number =>
+        isNaN(parseInt(num)) ? 0 : parseInt(num)
+    );
+    return numbersHold;
 }
 
 /**
@@ -32,7 +43,13 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    return [];
+    const dollars = amounts.map((dollar: string): string =>
+        dollar[0] == "$" ? (dollar = dollar.slice(1)) : dollar
+    );
+    const numbersHold = dollars.map((num: string): number =>
+        isNaN(parseInt(num)) ? 0 : parseInt(num)
+    );
+    return numbersHold;
 };
 
 /**
@@ -41,7 +58,12 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    return [];
+    const upperCaseExca = messages.map((message: string): string =>
+        message[message.length - 1] == "!" ? message.toUpperCase() : message
+    );
+    const result = upperCaseExca.filter((word) => word[word.length - 1] != "?");
+
+    return result;
 };
 
 /**
@@ -49,7 +71,8 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return 0;
+    const countShortWords = words.filter((word) => word.length < 4);
+    return countShortWords.length;
 }
 
 /**
@@ -58,7 +81,11 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    return false;
+    const colorArray = colors.every(
+        (color: string): boolean =>
+            color == "red" || color == "green" || color == "blue"
+    );
+    return colorArray;
 }
 
 /**
@@ -69,7 +96,16 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    const sum = addends.reduce(
+        (currentTotal: number, num: number) => currentTotal + num,
+        0
+    );
+    const nums = addends.join("+");
+    if (addends.length == 0) {
+        return sum + "=" + 0;
+    } else {
+        return sum + "=" + nums;
+    }
 }
 
 /**
@@ -82,5 +118,26 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    return [];
+    const injected = values;
+    const firstNeg = injected.findIndex((num: number): boolean => num < 0);
+    const inject = [...values];
+    if (firstNeg != -1) {
+        const sum = injected
+            .slice(0, firstNeg)
+            .reduce(
+                (currentTotal: number, num: number) => currentTotal + num,
+                0
+            );
+        inject.splice(firstNeg + 1, 0, sum);
+    } else {
+        const sum = injected
+            .slice()
+            .reduce(
+                (currentTotal: number, num: number) => currentTotal + num,
+                0
+            );
+        inject.splice(injected.length, 0, sum);
+    }
+
+    return inject;
 }
