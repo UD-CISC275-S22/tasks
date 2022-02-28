@@ -23,11 +23,9 @@ export function getPublishedQuestions(questions: Question[]): Question[] {
 export function getNonEmptyQuestions(questions: Question[]): Question[] {
     const nonEmptyQuestions = questions.filter(
         (question: Question): boolean =>
-            !(
-                question.body === "" &&
-                question.expected === "" &&
-                question.options === []
-            )
+            question.body !== "" ||
+            question.expected !== "" ||
+            question.options.length !== 0
     );
     return nonEmptyQuestions;
 }
@@ -262,17 +260,14 @@ export function editOption(
         return changeType;
     } else {
         /// I need to figure out how I am going to insert a value at the given Index
-        //const changeType = questions.map(
-        //    (question: Question): Question =>
-        //        question.id == targetId
-        //            ? {
-        //                  ...question,
-        //                  options: (question.options[targetOptionIndex] =
-        //                      newOption)
-        //              }
-        //            : question
-        //);
-        return questions;
+        let x = [...question.options];
+        const changeType = questions.map(
+            (question: Question): Question =>
+                question.id === targetId
+                    ? { ...question, options: [...question.options] }
+                    : question
+        );
+        return changeType;
     }
 }
 
@@ -288,11 +283,11 @@ export function duplicateQuestionInArray(
     newId: number
 ): Question[] {
     const dupeOriginal = questions.filter(
-        (question: Question): boolean => question.id != targetId
+        (question: Question): boolean => question.id !== targetId
     );
     const dupe = duplicateQuestion(newId, dupeOriginal[0]);
     const originalIndex = questions.findIndex(
-        (question: Question): boolean => question == dupeOriginal[0]
+        (question: Question): boolean => question === dupeOriginal[0]
     );
     const returnarray = questions.splice(originalIndex + 1, 0, dupe);
     return returnarray;
