@@ -1,5 +1,3 @@
-import { totalmem } from "os";
-
 /**
  * Consume an array of numbers, and return a new array containing
  * JUST the first and last number. If there are no elements, return
@@ -96,6 +94,7 @@ export function allRGB(colors: string[]): boolean {
  * For instance, the array [1, 2, 3] would become "6=1+2+3".
  * And the array [] would become "0=0".
  */
+
 export function makeMath(addends: number[]): string {
     if (addends.length === 0) {
         addends = [...addends, 0];
