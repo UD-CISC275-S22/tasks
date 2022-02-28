@@ -23,9 +23,11 @@ export function getPublishedQuestions(questions: Question[]): Question[] {
 export function getNonEmptyQuestions(questions: Question[]): Question[] {
     const nonEmptyQuestions = questions.filter(
         (question: Question): boolean =>
-            question.body == "" &&
-            question.expected == "" &&
-            question.options == []
+            !(
+                question.body === "" &&
+                question.expected === "" &&
+                question.options === []
+            )
     );
     return nonEmptyQuestions;
 }
@@ -163,15 +165,13 @@ export function publishAll(questions: Question[]): Question[] {
  * are the same type. They can be any type, as long as they are all the SAME type.
  */
 export function sameType(questions: Question[]): boolean {
-    const firstQuestion: Question = questions[0];
-    const firstType = firstQuestion.type;
     const filteredTypes = questions.filter(
-        (question: Question): boolean => question.type != firstType
+        (question: Question): boolean => question.type === questions[0].type
     );
     if (filteredTypes.length != questions.length) {
-        return true;
-    } else {
         return false;
+    } else {
+        return true;
     }
 }
 
