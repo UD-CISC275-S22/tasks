@@ -1,7 +1,8 @@
+import Q from "q";
 import { ListGroup } from "react-bootstrap";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
-import { makeBlankQuestion } from "./objects";
+import { duplicateQuestion, makeBlankQuestion } from "./objects";
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
@@ -162,10 +163,10 @@ export function publishAll(questions: Question[]): Question[] {
  * are the same type. They can be any type, as long as they are all the SAME type.
  */
 export function sameType(questions: Question[]): boolean {
-    const firstQuestion = questions[0];
+    const firstQuestion: Question = questions[0];
     const firstType = firstQuestion.type;
     const filteredTypes = questions.filter(
-        (question: Question): boolean => question.type == firstType
+        (question: Question): boolean => question.type != firstType
     );
     if (filteredTypes.length != questions.length) {
         return true;
@@ -186,8 +187,8 @@ export function addNewQuestion(
     type: QuestionType
 ): Question[] {
     const newQuestion = makeBlankQuestion(id, name, type);
-    questions.push(newQuestion);
-    return questions;
+    const returnQuestions = [...questions, newQuestion];
+    return returnQuestions;
 }
 
 /***
@@ -200,7 +201,11 @@ export function renameQuestionById(
     targetId: number,
     newName: string
 ): Question[] {
-    return [];
+    const targetIdNewName = questions.map(
+        (question: Question): Question =>
+            question.id == targetId ? { ...question, name: newName } : question
+    );
+    return targetIdNewName;
 }
 
 /***
@@ -218,14 +223,14 @@ export function changeQuestionTypeById(
     const changeType = questions.map(
         (question: Question): Question =>
             question.id == targetId
-                ? (question = { ...question, type: newQuestionType })
+                ? { ...question, type: newQuestionType }
                 : question
     );
     const UpdateOptions = changeType.map(
         (question: Question): Question =>
             question.id == targetId &&
             newQuestionType != "multiple_choice_question"
-                ? (question = { ...question, options: [] })
+                ? { ...question, options: [] }
                 : question
     );
     return UpdateOptions;
@@ -247,7 +252,28 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ) {
-    return [];
+    if (targetOptionIndex == -1) {
+        const changeType = questions.map(
+            (question: Question): Question =>
+                question.id == targetId
+                    ? { ...question, options: [...question.options, newOption] }
+                    : question
+        );
+        return changeType;
+    } else {
+        /// I need to figure out how I am going to insert a value at the given Index
+        //const changeType = questions.map(
+        //    (question: Question): Question =>
+        //        question.id == targetId
+        //            ? {
+        //                  ...question,
+        //                  options: (question.options[targetOptionIndex] =
+        //                      newOption)
+        //              }
+        //            : question
+        //);
+        return questions;
+    }
 }
 
 /***
@@ -261,5 +287,13 @@ export function duplicateQuestionInArray(
     targetId: number,
     newId: number
 ): Question[] {
-    return [];
+    const dupeOriginal = questions.filter(
+        (question: Question): boolean => question.id != targetId
+    );
+    const dupe = duplicateQuestion(newId, dupeOriginal[0]);
+    const originalIndex = questions.findIndex(
+        (question: Question): boolean => question == dupeOriginal[0]
+    );
+    const returnarray = questions.splice(originalIndex + 1, 0, dupe);
+    return returnarray;
 }
