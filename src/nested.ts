@@ -1,3 +1,4 @@
+import { urlToHttpOptions } from "url";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
 import { makeBlankQuestion, renameQuestion } from "./objects";
@@ -217,13 +218,36 @@ export function changeQuestionTypeById(
  * Remember, if a function starts getting too complicated, think about how a helper function
  * can make it simpler! Break down complicated tasks into little pieces.
  */
+function editor(
+    question: Question,
+    targetOptionIndex: number,
+    newOption: string
+): Question {
+    if (targetOptionIndex === -1) {
+        return { ...question, options: [...question.options, newOption] };
+    } else {
+        return {
+            ...question,
+            options: [
+                ...question.options.slice(0, targetOptionIndex),
+                newOption,
+                ...question.options.slice(targetOptionIndex + 1)
+            ]
+        };
+    }
+}
 export function editOption(
     questions: Question[],
     targetId: number,
     targetOptionIndex: number,
     newOption: string
 ) {
-    return [];
+    return questions.map(
+        (question: Question): Question =>
+            question.id === targetId
+                ? editor(question, targetOptionIndex, newOption)
+                : { ...question }
+    );
 }
 
 /***
