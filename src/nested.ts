@@ -1,7 +1,7 @@
 import { urlToHttpOptions } from "url";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
-import { makeBlankQuestion } from "./objects";
+import { duplicateQuestion, makeBlankQuestion } from "./objects";
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
@@ -22,9 +22,9 @@ export function getPublishedQuestions(questions: Question[]): Question[] {
 export function getNonEmptyQuestions(questions: Question[]): Question[] {
     const notEmpty = questions.filter(
         (quest: Question): boolean =>
-            quest.body !== "" &&
-            quest.expected !== "" &&
-            quest.options !== undefined
+            quest.body !== "" ||
+            quest.expected !== "" ||
+            quest.options.length !== 0
     );
     return notEmpty;
 }
@@ -218,27 +218,48 @@ export function changeQuestionTypeById(
  * Remember, if a function starts getting too complicated, think about how a helper function
  * can make it simpler! Break down complicated tasks into little pieces.
  */
+export function helperFunc(
+    questions: Question,
+    targetId: number,
+    targetOptionIndex: number,
+    newOption: string
+): Question {
+    let newQuest;
+    if (questions.id === targetId) {
+        newQuest = {
+            ...questions,
+            options: [
+                ...questions.options.slice(0, targetOptionIndex),
+                newOption,
+                ...questions.options.slice(targetOptionIndex + 1)
+            ]
+        };
+    } else {
+        newQuest = { ...questions };
+    }
+    return newQuest;
+}
 export function editOption(
     questions: Question[],
     targetId: number,
     targetOptionIndex: number,
     newOption: string
 ) {
-    const newQuestion = questions.map(
-        (quest: Question): Question =>
-            // eslint-disable-next-line prettier/prettier
-            quest.id === targetId
-                ? {
-                      ...quest,
-                      options: quest.options.splice(
-                          targetOptionIndex,
-                          0,
-                          newOption
-                      )
-                  }
-                : { ...quest }
-    );
-    return newQuestion;
+    let ans;
+    if (targetOptionIndex === -1) {
+        ans = questions.map(
+            (quest: Question): Question =>
+                quest.id === targetId
+                    ? { ...quest, options: [...quest.options, newOption] }
+                    : { ...quest }
+        );
+    } else {
+        ans = questions.map(
+            (quest: Question): Question =>
+                helperFunc(quest, targetId, targetOptionIndex, newOption)
+        );
+    }
+    return ans;
 }
 
 /***
@@ -247,10 +268,20 @@ export function editOption(
  * the duplicate inserted directly after the original question. Use the `duplicateQuestion`
  * function you defined previously; the `newId` is the parameter to use for the duplicate's ID.
  */
+//export function handler(questions: Question, id: number): Question{
+//const newQuest = questions.map((quest:Question): Question => quest.id === id ? {...quest, name: duplicateQuestion()})
+//}
 export function duplicateQuestionInArray(
     questions: Question[],
     targetId: number,
     newId: number
 ): Question[] {
-    return [];
+    const index = questions.findIndex(
+        (quest: Question) => quest.id === targetId
+    );
+    return [
+        ...questions.slice(0, index + 1),
+        duplicateQuestion(newId, questions[index]),
+        ...questions.slice(index + 1)
+    ];
 }
