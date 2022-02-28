@@ -10,7 +10,16 @@ export function makeBlankQuestion(
     name: string,
     type: QuestionType
 ): Question {
-    return {};
+    return {
+        id: id,
+        name: name,
+        type: type,
+        body: "",
+        expected: "",
+        options: [],
+        points: 1,
+        published: false
+    };
 }
 
 /**
@@ -21,7 +30,23 @@ export function makeBlankQuestion(
  * HINT: Look up the `trim` and `toLowerCase` functions.
  */
 export function isCorrect(question: Question, answer: string): boolean {
-    return false;
+    if (answer.trim().toLowerCase() === question.expected) {
+        return true;
+    } else if (answer.trim().toUpperCase() === question.expected) {
+        return true;
+    } else {
+        return answer === question.expected;
+    }
+}
+/**else if (answer.trim() === question.expected) {
+        return true;
+    } else if (answer.toLowerCase() === question.expected) {
+        return true;
+    } else if (answer === question.expected) {
+        return true;
+    } else {
+        return false;
+    } *\
 }
 
 /**
