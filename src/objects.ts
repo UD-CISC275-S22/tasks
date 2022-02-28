@@ -57,7 +57,7 @@ export function isValid(question: Question, answer: string): boolean {
         } else {
             return false;
         }
-    } else if (question.expected == answer) {
+    } else {
         return true;
     }
 }
