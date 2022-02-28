@@ -1,12 +1,17 @@
+import { urlToHttpOptions } from "url";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
+import { makeBlankQuestion } from "./objects";
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
  * that are `published`.
  */
 export function getPublishedQuestions(questions: Question[]): Question[] {
-    return [];
+    const pubQuestions = questions.filter(
+        (quest: Question): boolean => quest.published === true
+    );
+    return pubQuestions;
 }
 
 /**
@@ -15,7 +20,13 @@ export function getPublishedQuestions(questions: Question[]): Question[] {
  * `expected`, and an empty array for its `options`.
  */
 export function getNonEmptyQuestions(questions: Question[]): Question[] {
-    return [];
+    const notEmpty = questions.filter(
+        (quest: Question): boolean =>
+            quest.body !== "" &&
+            quest.expected !== "" &&
+            quest.options !== undefined
+    );
+    return notEmpty;
 }
 
 /***
@@ -26,7 +37,10 @@ export function findQuestion(
     questions: Question[],
     id: number
 ): Question | null {
-    return null;
+    const findID = questions.find(
+        (quest: Question): boolean => quest.id === id
+    );
+    return findID !== undefined ? findID : null;
 }
 
 /**
@@ -34,7 +48,10 @@ export function findQuestion(
  * with the given `id`.
  */
 export function removeQuestion(questions: Question[], id: number): Question[] {
-    return [];
+    const removedID = questions.filter(
+        (quest: Question): boolean => quest.id !== id
+    );
+    return removedID;
 }
 
 /***
@@ -42,21 +59,33 @@ export function removeQuestion(questions: Question[], id: number): Question[] {
  * questions, as an array.
  */
 export function getNames(questions: Question[]): string[] {
-    return [];
+    const names = questions.map((quest: Question): string => quest.name);
+    return names;
 }
 
 /***
  * Consumes an array of questions and returns the sum total of all their points added together.
  */
 export function sumPoints(questions: Question[]): number {
-    return 0;
+    const sum = questions.reduce(
+        (total: number, quest: Question) => total + quest.points,
+        0
+    );
+    return sum;
 }
 
 /***
  * Consumes an array of questions and returns the sum total of the PUBLISHED questions.
  */
 export function sumPublishedPoints(questions: Question[]): number {
-    return 0;
+    const findPub = questions.filter(
+        (quest: Question): boolean => quest.published === true
+    );
+    const sum = findPub.reduce(
+        (total: number, quest: Question) => total + quest.points,
+        0
+    );
+    return sum;
 }
 
 /***
@@ -77,7 +106,14 @@ id,name,options,points,published
  * Check the unit tests for more examples!
  */
 export function toCSV(questions: Question[]): string {
-    return "";
+    const topBit = "id,name,options,points,published" + "\n";
+    const csv = questions
+        .map(
+            (quest: Question): string =>
+                `${quest.id},${quest.name},${quest.options.length},${quest.points},${quest.published}`
+        )
+        .join("\n");
+    return topBit + csv;
 }
 
 /**
@@ -86,7 +122,15 @@ export function toCSV(questions: Question[]): string {
  * making the `text` an empty string, and using false for both `submitted` and `correct`.
  */
 export function makeAnswers(questions: Question[]): Answer[] {
-    return [];
+    const answer: Answer[] = questions.map(
+        (quest: Question): Answer => ({
+            questionId: quest.id,
+            text: "",
+            correct: false,
+            submitted: false
+        })
+    );
+    return answer;
 }
 
 /***
@@ -94,7 +138,10 @@ export function makeAnswers(questions: Question[]): Answer[] {
  * each question is now published, regardless of its previous published status.
  */
 export function publishAll(questions: Question[]): Question[] {
-    return [];
+    const newQuest = questions.map(
+        (quest: Question): Question => ({ ...quest, published: true })
+    );
+    return newQuest;
 }
 
 /***
@@ -102,7 +149,10 @@ export function publishAll(questions: Question[]): Question[] {
  * are the same type. They can be any type, as long as they are all the SAME type.
  */
 export function sameType(questions: Question[]): boolean {
-    return false;
+    const fil = questions.filter(
+        (quest: Question) => quest.type === "short_answer_question"
+    );
+    return fil.length === questions.length || fil.length === 0 ? true : false;
 }
 
 /***
@@ -116,7 +166,8 @@ export function addNewQuestion(
     name: string,
     type: QuestionType
 ): Question[] {
-    return [];
+    const newQuesiton = [...questions, makeBlankQuestion(id, name, type)];
+    return newQuesiton;
 }
 
 /***
@@ -129,7 +180,11 @@ export function renameQuestionById(
     targetId: number,
     newName: string
 ): Question[] {
-    return [];
+    const newQuestion = questions.map(
+        (quest: Question): Question =>
+            quest.id === targetId ? { ...quest, name: newName } : { ...quest }
+    );
+    return newQuestion;
 }
 
 /***
@@ -144,7 +199,13 @@ export function changeQuestionTypeById(
     targetId: number,
     newQuestionType: QuestionType
 ): Question[] {
-    return [];
+    const newQuestion = questions.map(
+        (quest: Question): Question =>
+            quest.id === targetId
+                ? { ...quest, type: newQuestionType, options: [] }
+                : { ...quest }
+    );
+    return newQuestion;
 }
 
 /**
@@ -163,7 +224,21 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ) {
-    return [];
+    const newQuestion = questions.map(
+        (quest: Question): Question =>
+            // eslint-disable-next-line prettier/prettier
+            quest.id === targetId
+                ? {
+                      ...quest,
+                      options: quest.options.splice(
+                          targetOptionIndex,
+                          0,
+                          newOption
+                      )
+                  }
+                : { ...quest }
+    );
+    return newQuestion;
 }
 
 /***
