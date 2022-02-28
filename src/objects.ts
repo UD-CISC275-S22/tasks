@@ -1,5 +1,4 @@
 import { Question, QuestionType } from "./interfaces/question";
-
 /**
  * Create a new blank question with the given `id`, `name`, and `type. The `body` and
  * `expected` should be empty strings, the `options` should be an empty list, the `points`
@@ -10,7 +9,17 @@ export function makeBlankQuestion(
     name: string,
     type: QuestionType
 ): Question {
-    return {};
+    const blank = {
+        id,
+        name,
+        type,
+        body: "",
+        expected: "",
+        options: [],
+        points: 1,
+        published: false
+    };
+    return blank;
 }
 
 /**
@@ -21,7 +30,15 @@ export function makeBlankQuestion(
  * HINT: Look up the `trim` and `toLowerCase` functions.
  */
 export function isCorrect(question: Question, answer: string): boolean {
-    return false;
+    if (
+        question.expected == answer.trim() ||
+        question.expected.toLowerCase() == answer ||
+        question.expected == answer
+    ) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 /**
@@ -31,7 +48,18 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
-    return false;
+    if (question.type == "short_answer_question") {
+        return true;
+    }
+    if (question.type == "multiple_choice_question") {
+        if (question.options.includes(answer)) {
+            return true;
+        } else {
+            return false;
+        }
+    } else if (question.expected == answer) {
+        return true;
+    }
 }
 
 /**
@@ -41,7 +69,15 @@ export function isValid(question: Question, answer: string): boolean {
  * name "My First Question" would become "9: My First Q".
  */
 export function toShortForm(question: Question): string {
-    return "";
+    const id = question.id;
+    let x = 0;
+    let temp = "";
+    const namelength = question.name.length;
+    while (x <= namelength - 1 && x <= 9) {
+        temp = temp + question.name[x];
+        x++;
+    }
+    return id + ": " + temp;
 }
 
 /**
@@ -62,7 +98,23 @@ export function toShortForm(question: Question): string {
  * Check the unit tests for more examples of what this looks like!
  */
 export function toMarkdown(question: Question): string {
-    return "";
+    if (question.type == "multiple_choice_question") {
+        const str =
+            "# " +
+            question.name +
+            "\n" +
+            question.body +
+            "\n- " +
+            question.options[0] +
+            "\n- " +
+            question.options[1] +
+            "\n- " +
+            question.options[2];
+        return str;
+    } else {
+        const str2 = "# " + question.name + "\n" + question.body;
+        return str2;
+    }
 }
 
 /**
@@ -70,7 +122,8 @@ export function toMarkdown(question: Question): string {
  * `newName`.
  */
 export function renameQuestion(question: Question, newName: string): Question {
-    return question;
+    const newquestion = { ...question, name: newName };
+    return newquestion;
 }
 
 /**
@@ -79,9 +132,14 @@ export function renameQuestion(question: Question, newName: string): Question {
  * published; if it was published, now it should be not published.
  */
 export function publishQuestion(question: Question): Question {
-    return question;
+    if (question.published == false) {
+        const newquestion = { ...question, published: true };
+        return newquestion;
+    } else {
+        const newnewquestion = { ...question, published: false };
+        return newnewquestion;
+    }
 }
-
 /**
  * Create a new question based on the old question, copying over its `body`, `type`,
  * `options`, `expected`, and `points` without changes. The `name` should be copied
@@ -89,7 +147,13 @@ export function publishQuestion(question: Question): Question {
  * The `published` field should be reset to false.
  */
 export function duplicateQuestion(id: number, oldQuestion: Question): Question {
-    return oldQuestion;
+    const newquestion = {
+        ...oldQuestion,
+        id: id,
+        name: "Copy of " + oldQuestion.name,
+        published: false
+    };
+    return newquestion;
 }
 
 /**
@@ -100,7 +164,11 @@ export function duplicateQuestion(id: number, oldQuestion: Question): Question {
  * Check out the subsection about "Nested Fields" for more information.
  */
 export function addOption(question: Question, newOption: string): Question {
-    return question;
+    const newquestion = {
+        ...question,
+        options: [...question.options, newOption]
+    };
+    return newquestion;
 }
 
 /**
@@ -117,5 +185,32 @@ export function mergeQuestion(
     contentQuestion: Question,
     { points }: { points: number }
 ): Question {
-    return contentQuestion;
+    const newquestion = {
+        id,
+        name,
+        type: contentQuestion.type,
+        body: contentQuestion.body,
+        options: contentQuestion.options,
+        expected: contentQuestion.expected,
+        points,
+        published: false
+    };
+    return newquestion;
 }
+/**export function makeBlankQuestion(
+    id: number,
+    name: string,
+    type: QuestionType
+): Question {
+    const blank = {
+        id,
+        name,
+        type,
+        body: "",
+        expected: "",
+        options: [],
+        points: 1,
+        published: false
+    };
+    return blank;
+} */
