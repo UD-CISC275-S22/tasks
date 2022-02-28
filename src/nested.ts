@@ -263,7 +263,6 @@ export function duplicateQuestionInArray(
     const index = questions.findIndex(
         (question: Question) => question.id === targetId
     );
-    console.log(index);
     return [
         ...questions.slice(0, index + 1),
         duplicateQuestion(newId, questions[index]),
