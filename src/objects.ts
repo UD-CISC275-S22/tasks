@@ -110,7 +110,13 @@ export function renameQuestion(question: Question, newName: string): Question {
  * published; if it was published, now it should be not published.
  */
 export function publishQuestion(question: Question): Question {
-    return question;
+    const newQ: Question = { ...question };
+    if (question.published === true) {
+        newQ.published = false;
+    } else {
+        newQ.published = true;
+    }
+    return newQ;
 }
 
 /**
