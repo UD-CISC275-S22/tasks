@@ -78,7 +78,18 @@ export function sumPoints(questions: Question[]): number {
  * Consumes an array of questions and returns the sum total of the PUBLISHED questions.
  */
 export function sumPublishedPoints(questions: Question[]): number {
-    return 0;
+    const published = getPublishedQuestions(questions);
+    if (published.length === 0) {
+        return 0;
+    } else {
+        const points = published.map(
+            (question: Question): number => question.points
+        );
+        const sum = points.reduce(
+            (currentTotal: number, num: number) => currentTotal + num
+        );
+        return sum;
+    }
 }
 
 /***
