@@ -16,7 +16,9 @@ export function getPublishedQuestions(questions: Question[]): Question[] {
  * `expected`, and an empty array for its `options`.
  */
 export function getNonEmptyQuestions(questions: Question[]): Question[] {
-    return [];
+    const test1 = (q1: Question) =>
+        !(q1.body == "" && q1.expected == "" && q1.options.length == 0);
+    return [...questions].filter(test1);
 }
 
 /***
@@ -27,7 +29,8 @@ export function findQuestion(
     questions: Question[],
     id: number
 ): Question | null {
-    return null;
+    const ans = questions.find((q1) => q1.id === id);
+    return ans === undefined ? null : ans;
 }
 
 /**
@@ -35,7 +38,7 @@ export function findQuestion(
  * with the given `id`.
  */
 export function removeQuestion(questions: Question[], id: number): Question[] {
-    return [];
+    return [...questions].filter((q1) => q1.id != id);
 }
 
 /***
@@ -43,21 +46,24 @@ export function removeQuestion(questions: Question[], id: number): Question[] {
  * questions, as an array.
  */
 export function getNames(questions: Question[]): string[] {
-    return [];
+    return questions.map((q1) => q1.name);
 }
 
 /***
  * Consumes an array of questions and returns the sum total of all their points added together.
  */
 export function sumPoints(questions: Question[]): number {
-    return 0;
+    return questions.reduce((sum: number, q1: Question) => sum + q1.points, 0);
 }
 
 /***
  * Consumes an array of questions and returns the sum total of the PUBLISHED questions.
  */
 export function sumPublishedPoints(questions: Question[]): number {
-    return 0;
+    return questions.reduce(
+        (sum: number, q1: Question) => (q1.published ? sum + q1.points : sum),
+        0
+    );
 }
 
 /***
@@ -78,7 +84,11 @@ id,name,options,points,published
  * Check the unit tests for more examples!
  */
 export function toCSV(questions: Question[]): string {
-    return "";
+    const head = ["id", "name", "options", "points", "published"].join(",");
+    const body = questions.map((q1) =>
+        [q1.id, q1.name, q1.options.length, q1.points, q1.published].join(",")
+    );
+    return head + "\n" + body.join("\n");
 }
 
 /**
@@ -87,7 +97,14 @@ export function toCSV(questions: Question[]): string {
  * making the `text` an empty string, and using false for both `submitted` and `correct`.
  */
 export function makeAnswers(questions: Question[]): Answer[] {
-    return [];
+    return questions.map(
+        (q1: Question): Answer => ({
+            questionId: q1.id,
+            text: "",
+            submitted: false,
+            correct: false
+        })
+    );
 }
 
 /***
@@ -95,7 +112,7 @@ export function makeAnswers(questions: Question[]): Answer[] {
  * each question is now published, regardless of its previous published status.
  */
 export function publishAll(questions: Question[]): Question[] {
-    return [];
+    return [...questions].map((q1) => ({ ...q1, published: true }));
 }
 
 /***
@@ -103,7 +120,9 @@ export function publishAll(questions: Question[]): Question[] {
  * are the same type. They can be any type, as long as they are all the SAME type.
  */
 export function sameType(questions: Question[]): boolean {
-    return false;
+    return questions.length > 0
+        ? questions.every((q1) => q1.type === questions[0].type)
+        : true;
 }
 
 /***

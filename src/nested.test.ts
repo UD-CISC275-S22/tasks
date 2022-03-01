@@ -147,7 +147,7 @@ describe("Testing the Question[] functions", () => {
             }
         ]);
     });
-    /*
+
     test("Testing the getNonEmptyQuestions functions", () => {
         expect(getNonEmptyQuestions(BLANK_QUESTIONS)).toEqual([]);
         expect(getNonEmptyQuestions(SIMPLE_QUESTIONS)).toEqual(
@@ -665,7 +665,7 @@ describe("Testing the Question[] functions", () => {
             )
         ).toEqual([...TRIVIA_QUESTIONS, NEW_TRIVIA_QUESTION]);
     });
-
+    /*
     test("Testing the renameQuestionById function", () => {
         expect(renameQuestionById(BLANK_QUESTIONS, 1, "New Name")).toEqual([
             {
