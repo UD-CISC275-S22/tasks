@@ -147,7 +147,7 @@ describe("Testing the Question[] functions", () => {
             }
         ]);
     });
-
+    /*
     test("Testing the getNonEmptyQuestions functions", () => {
         expect(getNonEmptyQuestions(BLANK_QUESTIONS)).toEqual([]);
         expect(getNonEmptyQuestions(SIMPLE_QUESTIONS)).toEqual(
@@ -1227,7 +1227,7 @@ describe("Testing the Question[] functions", () => {
             }
         ]);
     });
-
+*/
     afterEach(() => {
         expect(BLANK_QUESTIONS).toEqual(BACKUP_BLANK_QUESTIONS);
         expect(SIMPLE_QUESTIONS).toEqual(BACKUP_SIMPLE_QUESTIONS);

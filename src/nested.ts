@@ -1,3 +1,4 @@
+import { createModuleResolutionCache } from "typescript";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
 
@@ -6,7 +7,7 @@ import { Question, QuestionType } from "./interfaces/question";
  * that are `published`.
  */
 export function getPublishedQuestions(questions: Question[]): Question[] {
-    return [];
+    return [...questions].filter((q1) => q1.published);
 }
 
 /**
