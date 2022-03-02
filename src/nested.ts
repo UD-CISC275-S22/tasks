@@ -287,14 +287,19 @@ export function duplicateQuestionInArray(
     newId: number
 ): Question[] {
     const questionsDupe = [...questions];
+    // we are going ot find the target ID
     const dupeOriginal = questions.filter(
-        (question: Question): boolean => question.id !== targetId
+        (question: Question): boolean => question.id === targetId
     );
+    // our question is still in an array so we need to take it out
     const dupeQuestionHolder = dupeOriginal[0];
+    // creating the duplicate
     const dupe = duplicateQuestion(newId, dupeQuestionHolder);
+    // finding the original index for the question
     const originalIndex = questions.findIndex(
         (question: Question): boolean => question.id === targetId
     );
-    const returnarray = questionsDupe.splice(originalIndex, 0, dupe);
-    return returnarray;
+    // inserting into our new array
+    questionsDupe.splice(originalIndex + 1, 0, dupe);
+    return questionsDupe;
 }
