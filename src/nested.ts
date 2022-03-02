@@ -244,7 +244,27 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ) {
-    return [];
+    const finding = questions.findIndex((question) => question.id === targetId);
+    const changed = questions.map(
+        (question: Question): Question => ({
+            ...question,
+            options: [...question.options]
+        })
+    );
+    if (changed[finding].options.length === 0) {
+        changed[finding].options = [newOption];
+        return changed;
+    }
+    if (targetOptionIndex === -1) {
+        changed[finding].options.splice(
+            changed[finding].options.length,
+            0,
+            newOption
+        );
+        return changed;
+    }
+    changed[finding].options.splice(targetOptionIndex, 1, newOption);
+    return changed;
 }
 
 /***
