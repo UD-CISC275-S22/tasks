@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 //import { isQuestion } from "../functions";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Question, QuestionType } from "../interfaces/question";
 //import { getNonEmptyQuestions } from "../nested";
 

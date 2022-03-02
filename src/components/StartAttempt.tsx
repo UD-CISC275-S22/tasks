@@ -11,6 +11,7 @@ export function StartAttempt(): JSX.Element {
     }
     function manageState(): boolean {
         let temp = false;
+        // eslint-disable-next-line no-extra-parens
         attemptState !== 0 && quizState === false ? (temp = true) : temp;
         return temp;
     }
