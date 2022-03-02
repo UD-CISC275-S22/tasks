@@ -1,5 +1,5 @@
-import Q from "q";
-import { ListGroup } from "react-bootstrap";
+//import Q from "q";
+//import { ListGroup } from "react-bootstrap";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
 import { duplicateQuestion, makeBlankQuestion } from "./objects";
