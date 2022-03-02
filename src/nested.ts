@@ -325,10 +325,6 @@ export function duplicateQuestionInArray(
     targetId: number,
     newId: number
 ): Question[] {
-    const duplicate: Question = questions.find(
-        (question: Question): boolean => question.id === targetId
-    );
-
     //console.log(duplicate);
     const quesCollection = [...questions];
     const duplicateIndex: number = quesCollection.findIndex(
@@ -337,7 +333,7 @@ export function duplicateQuestionInArray(
     quesCollection.splice(
         1 + duplicateIndex,
         0,
-        duplicateQuestion(newId, duplicate)
+        duplicateQuestion(newId, quesCollection[duplicateIndex])
     );
 
     return quesCollection;
