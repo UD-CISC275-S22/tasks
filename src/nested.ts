@@ -259,12 +259,16 @@ export function editOption(
         );
         return changeType;
     } else {
-        /// I need to figure out how I am going to insert a value at the given Index
-        let x = [...question.options];
+        /// I need to figure out how I am going to insert a value at the given Index4
+        const properQuestion = questions.filter(
+            (question: Question): boolean => question.id === targetId
+        );
+        const QuestionOptions = [...properQuestion[0].options];
+        QuestionOptions[targetOptionIndex] = newOption;
         const changeType = questions.map(
             (question: Question): Question =>
                 question.id === targetId
-                    ? { ...question, options: [...question.options] }
+                    ? { ...question, options: QuestionOptions }
                     : question
         );
         return changeType;
@@ -282,13 +286,15 @@ export function duplicateQuestionInArray(
     targetId: number,
     newId: number
 ): Question[] {
+    const questionsDupe = [...questions];
     const dupeOriginal = questions.filter(
         (question: Question): boolean => question.id !== targetId
     );
-    const dupe = duplicateQuestion(newId, dupeOriginal[0]);
+    const dupeQuestionHolder = dupeOriginal[0];
+    const dupe = duplicateQuestion(newId, dupeQuestionHolder);
     const originalIndex = questions.findIndex(
-        (question: Question): boolean => question === dupeOriginal[0]
+        (question: Question): boolean => question.id === targetId
     );
-    const returnarray = questions.splice(originalIndex + 1, 0, dupe);
+    const returnarray = questionsDupe.splice(originalIndex, 0, dupe);
     return returnarray;
 }
