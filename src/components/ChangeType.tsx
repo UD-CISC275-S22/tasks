@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import { isQuestion } from "../functions";
+//import { isQuestion } from "../functions";
 import { Question, QuestionType } from "../interfaces/question";
-import { getNonEmptyQuestions } from "../nested";
+//import { getNonEmptyQuestions } from "../nested";
 
 export function ChangeType(): JSX.Element {
     const [state, setState] = useState<QuestionType>("short_answer_question");
