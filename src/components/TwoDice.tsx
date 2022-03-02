@@ -10,6 +10,16 @@ import { Button } from "react-bootstrap";
 export function d6(): number {
     return 1 + Math.floor(Math.random() * 6);
 }
+export function result(left: number, right: number): string {
+    if (left === right) {
+        if (left === 1) {
+            return "Lose";
+        } else {
+            return "Win";
+        }
+    }
+    return "Not Equal";
+}
 
 export function TwoDice(): JSX.Element {
     const [left, setLeft] = useState<number>(4);
@@ -23,17 +33,7 @@ export function TwoDice(): JSX.Element {
                 <Button onClick={() => setRight(d6())}>Roll Right</Button>
                 rolled <span data-testid="right-die">{right}</span>
             </div>
-            <div>
-                {left === right ? (
-                    left === 1 ? (
-                        <span>Lose</span>
-                    ) : (
-                        <span>Win</span>
-                    )
-                ) : (
-                    <span>Not Equal</span>
-                )}
-            </div>
+            <div>{result(left, right)}</div>
         </div>
     );
 }
