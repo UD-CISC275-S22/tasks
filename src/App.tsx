@@ -4,7 +4,7 @@ import "./App.css";
 import { ChangeType } from "./components/ChangeType";
 import { RevealAnswer } from "./components/RevealAnswer";
 import { StartAttempt } from "./components/StartAttempt";
-import { TwoDice } from "./components/TwoDice";
+import { d6, TwoDice } from "./components/TwoDice";
 import { CycleHoliday } from "./components/CycleHoliday";
 import { Counter } from "./components/Counter";
 import { QuestionType } from "./interfaces/question";
@@ -19,16 +19,28 @@ function App(): JSX.Element {
     }
 
     // Functions for Start Attempt
+    const [numberAttempts, setNumberAttempts] = useState<number>(4);
+    const [inProgress, setInProgress] = useState<boolean>(false);
+
+    function swapInProgress() {
+        setInProgress(!inProgress);
+    }
+
+    function updateNumAttempts() {
+        setNumberAttempts(numberAttempts++);
+    }
 
     // functions for 2 dice
-    const [left_die, setLeftDiceValue] = d6());
-    const [right_die, setRightDiceValue] = d6());
+    const [left_die, setLeftDiceValue] = useState<number>(0);
+    const [right_die, setRightDiceValue] = useState<number>(0);
 
     function rollLeftDice() {
-
+        setLeftDiceValue(d6());
+        left_die;
     }
     function rollRightDice() {
-
+        setRightDiceValue(d6());
+        right_die;
     }
     // functions for Change Type
 
@@ -58,6 +70,8 @@ function App(): JSX.Element {
             {visible && <div>41</div>}
             <hr />
             <StartAttempt></StartAttempt>
+            <Button onClick={swapInProgress}>Start Quiz</Button>
+            <Button onClick={swapInProgress}>Stop Quiz</Button>
             <hr />
             <TwoDice></TwoDice>
             <Button onClick={rollLeftDice}>Roll Left</Button>
