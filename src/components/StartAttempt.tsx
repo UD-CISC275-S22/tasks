@@ -22,14 +22,13 @@ export function StartAttempt(): JSX.Element {
 
     function addAttempt() {
         // checks to make sure that the quiz is not active
-        if (inProgress === false) {
-            setNumberAttempts(numberAttempts + 1);
-        }
+        setNumberAttempts(numberAttempts + 1);
     }
 
     return (
         <div>
             <div>Start Attempt</div>
+            {<div>{numberAttempts}</div>}
             <Button onClick={startQuiz}>Start Quiz</Button>
             <Button onClick={stopQuiz}>Stop Quiz</Button>
             <Button onClick={addAttempt}>Mulligan</Button>

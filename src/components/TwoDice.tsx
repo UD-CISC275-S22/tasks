@@ -7,30 +7,30 @@ import { Button } from "react-bootstrap";
  * module (which returns a random decimal between 0 up until 1) in order
  * to produce a random integer between 1 and 6 (inclusive).
  */
-export function d6(): number {
-    return 1 + Math.floor(Math.random() * 6);
-}
+// export function d6(): number {
+//     return 1 + Math.floor(Math.random() * 6);
+// }
 
-const [left_die, setLeftDiceValue] = useState<number>(0);
-const [right_die, setRightDiceValue] = useState<number>(0);
+// const [left_die, setLeftDiceValue] = useState<number>(0);
+// const [right_die, setRightDiceValue] = useState<number>(0);
 
-function rollLeftDice() {
-    setLeftDiceValue(d6());
-    left_die;
-}
-function rollRightDice() {
-    setRightDiceValue(d6());
-    right_die;
-}
+// function rollLeftDice() {
+//     setLeftDiceValue(d6());
+//     left_die;
+// }
+// function rollRightDice() {
+//     setRightDiceValue(d6());
+//     right_die;
+/* // }
+            <Button onClick={rollLeftDice}>Roll Left</Button>;
+            {<span>{left_die}</span>}
+            <Button onClick={rollRightDice}>Roll Right</Button>;
+            {<span>{right_die}</span>}; */
 
 export function TwoDice(): JSX.Element {
     return (
         <div>
             <div>Two Dice</div>;
-            <Button onClick={rollLeftDice}>Roll Left</Button>;
-            {<span>{left_die}</span>}
-            <Button onClick={rollRightDice}>Roll Right</Button>;
-            {<span>{right_die}</span>}
         </div>
     );
 }
