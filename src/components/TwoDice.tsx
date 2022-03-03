@@ -32,7 +32,7 @@ export function TwoDice(): JSX.Element {
                 <span data-testid="right-die"> Right: {right}</span>
             </div>
             {left === 1 && right === 1 && <div>Lose</div>}
-            {(left !== 1 || right !== 1) && <div>Win</div>}
+            {(left !== 1 || right !== 1) && left === right && <div>Win</div>}
         </div>
     );
 }
