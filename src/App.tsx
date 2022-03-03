@@ -10,24 +10,30 @@ import { Counter } from "./components/Counter";
 import { QuestionType } from "./interfaces/question";
 
 function App(): JSX.Element {
-    // My functions for Reveal Answer
-    const [visible, setVisible] = useState<boolean>(true);
-
-    function flipVisibility(): void {
-        // Set visible to be the logical opposite of its previous value
-        setVisible(!visible);
-    }
-
     // Functions for Start Attempt
     const [numberAttempts, setNumberAttempts] = useState<number>(4);
     const [inProgress, setInProgress] = useState<boolean>(false);
 
-    function swapInProgress() {
-        setInProgress(!inProgress);
+    function startQuiz() {
+        // checks to make sure that the quiz isnt already active and to make sure we still have attempts left
+        if (inProgress === false && numberAttempts !== 0) {
+            setNumberAttempts(numberAttempts - 1);
+            setInProgress(!inProgress);
+        }
     }
 
-    function updateNumAttempts() {
-        setNumberAttempts(numberAttempts++);
+    function stopQuiz() {
+        // makes sure that we cannot activate stop quiz if quiz is not active
+        if (inProgress === true) {
+            setInProgress(!inProgress);
+        }
+    }
+
+    function addAttempt() {
+        // checks to make sure that the quiz is not active
+        if (inProgress === false) {
+            setNumberAttempts(numberAttempts + 1);
+        }
     }
 
     // functions for 2 dice
@@ -50,7 +56,7 @@ function App(): JSX.Element {
 
     function changeQuestionType() {
         setQuestionType(
-            questionType == "short_answer_question"
+            questionType === "short_answer_question"
                 ? "multiple_choice_question"
                 : "short_answer_question"
         );
@@ -66,22 +72,21 @@ function App(): JSX.Element {
             <Counter></Counter>
             <hr />
             <RevealAnswer></RevealAnswer>
-            <Button onClick={flipVisibility}>Show/Hide</Button>
-            {visible && <div>41</div>}
             <hr />
             <StartAttempt></StartAttempt>
-            <Button onClick={swapInProgress}>Start Quiz</Button>
-            <Button onClick={swapInProgress}>Stop Quiz</Button>
+            <Button onClick={startQuiz}>Start Quiz</Button>
+            <Button onClick={stopQuiz}>Stop Quiz</Button>
+            <Button onClick={addAttempt}>Mulligan</Button>
             <hr />
             <TwoDice></TwoDice>
             <Button onClick={rollLeftDice}>Roll Left</Button>
-            {<span></span>}
+            {<span>{left_die}</span>}
             <Button onClick={rollRightDice}>Roll Right</Button>
-            {<span></span>}
+            {<span>{right_die}</span>}
             <hr />
             <ChangeType></ChangeType>
             <Button onClick={changeQuestionType}>Change Type</Button>
-            {questionType == "short_answer_question" ? (
+            {questionType === "short_answer_question" ? (
                 <div> Short Answer </div>
             ) : (
                 <div> Multiple Choice </div>
