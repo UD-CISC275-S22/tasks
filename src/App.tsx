@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import { Container, Col, Row, Button } from "react-bootstrap";
 import { ChangeType } from "./components/ChangeType";
 import { RevealAnswer } from "./components/RevealAnswer";
 import { StartAttempt } from "./components/StartAttempt";
@@ -13,6 +14,41 @@ function App(): JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript
             </header>
+            <section className="section">
+                <h1>Aidan Tran</h1>
+                <div className="orangutan__img">
+                    <img
+                        src={require("./orangutan.png")}
+                        alt="picture of orangutan"
+                    />
+                </div>
+                <Container>
+                    <Row>
+                        <Col>
+                            <ul>
+                                <li>Orangutan</li>
+                                <li>Orangutan</li>
+                                <li>Orangutan</li>
+                            </ul>
+                            <div className="red_rectangle"></div>
+                        </Col>
+                        <Col>
+                            <Button
+                                onClick={() => {
+                                    console.log("Hello World!");
+                                }}
+                            >
+                                Log Hello World
+                            </Button>
+                            <div className="red_rectangle"></div>
+                        </Col>
+                    </Row>
+                </Container>
+                <p>
+                    Edit <code>src/App.tsx</code> and save. This page will
+                    automatically reload. Hello World!
+                </p>
+            </section>
             <hr></hr>
             <Counter></Counter>
             <hr />

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 
 /**
@@ -12,5 +12,34 @@ export function d6(): number {
 }
 
 export function TwoDice(): JSX.Element {
-    return <div>Two Dice</div>;
+    const [diceOne, setDiceOne] = useState<number>(1);
+    const [diceTwo, setDiceTwo] = useState<number>(2);
+
+    const handleRoll = (die: number) => {
+        if (die == 1) {
+            setDiceOne(d6());
+        } else {
+            setDiceTwo(d6());
+        }
+    };
+
+    // useEffect(() => {
+    //     updateGameState();
+    // }, [diceOne, diceTwo]);
+
+    return (
+        <div>
+            <p>
+                <span data-testid="left-die">{diceOne} </span>
+                <span data-testid="right-die">{diceTwo}</span>
+            </p>
+
+            <div>
+                <Button onClick={() => handleRoll(1)}>Roll Left</Button>
+                <Button onClick={() => handleRoll(2)}>Roll Right</Button>
+            </div>
+            {diceOne === diceTwo && diceOne === 1 && <p>Lose</p>}
+            {diceOne === diceTwo && diceOne !== 1 && <p>Win</p>}
+        </div>
+    );
 }
