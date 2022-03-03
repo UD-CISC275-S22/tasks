@@ -29,9 +29,18 @@ export function StartAttempt(): JSX.Element {
         <div>
             <div>Start Attempt</div>
             {<div>{numberAttempts}</div>}
-            <Button onClick={startQuiz}>Start Quiz</Button>
-            <Button onClick={stopQuiz}>Stop Quiz</Button>
-            <Button onClick={addAttempt}>Mulligan</Button>
+            <Button
+                disabled={inProgress || numberAttempts === 0}
+                onClick={startQuiz}
+            >
+                Start Quiz
+            </Button>
+            <Button disabled={!inProgress} onClick={stopQuiz}>
+                Stop Quiz
+            </Button>
+            <Button disabled={inProgress} onClick={addAttempt}>
+                Mulligan
+            </Button>
         </div>
     );
 }
