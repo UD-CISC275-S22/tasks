@@ -1,20 +1,28 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-//import { QuestionType } from "../interfaces/question";
+import { QuestionType } from "../interfaces/question";
 
 export function ChangeType(): JSX.Element {
-    // My functions for Reveal Answer 👺
-    const [visible, setVisible] = useState<boolean>(false);
+    const [questionType, setQuestionType] = useState<QuestionType>(
+        "short_answer_question"
+    );
 
-    function flipVisibility(): void {
-        // Set visible to be the logical opposite of its previous value
-        setVisible(!visible);
+    function changeQuestionType() {
+        setQuestionType(
+            questionType === "short_answer_question"
+                ? "multiple_choice_question"
+                : "short_answer_question"
+        );
     }
     return (
         <div>
             <div>Change Type</div>
-            <Button onClick={flipVisibility}>Reveal Answer</Button>
-            {visible && <div>42</div>}
+            <Button onClick={changeQuestionType}>Change Type</Button>
+            {questionType === "short_answer_question" ? (
+                <div> Short Answer </div>
+            ) : (
+                <div> Multiple Choice </div>
+            )}
         </div>
     );
 }
