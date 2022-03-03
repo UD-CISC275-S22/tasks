@@ -14,24 +14,13 @@ export function d6(): number {
 export function TwoDice(): JSX.Element {
     const [left, setLeft] = useState<number>(1);
     const [right, setRight] = useState<number>(6);
-    const [winlose, setWinLose] = useState<string>("Win");
-
-    function checkEquals(): void {
-        if (left === right) {
-            setWinLose("Lose");
-        } else {
-            setWinLose("Win");
-        }
-    }
 
     function rollLeft(): void {
         setLeft(d6);
-        checkEquals();
     }
 
     function rollRight(): void {
         setRight(d6);
-        checkEquals();
     }
 
     return (
@@ -42,7 +31,8 @@ export function TwoDice(): JSX.Element {
                 <span data-testid="left-die">Left: {left} </span>
                 <span data-testid="right-die"> Right: {right}</span>
             </div>
-            <div>{winlose}</div>
+            {left === 1 && right === 1 && <div>Lose</div>}
+            {(left !== 1 || right !== 1) && <div>Win</div>}
         </div>
     );
 }
