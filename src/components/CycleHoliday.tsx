@@ -7,44 +7,45 @@ type Holiday =
     | "Fourth of July"
     | "Halloween"
     | "Thanksgiving";
+
 export function CycleHoliday(): JSX.Element {
-    const [holiday1, setHoliday] = useState<Holiday>("Christmas");
-    function alphabetitical(): void {
-        if (holiday1 === "Christmas") {
+    const [holiday, setHoliday] = useState<Holiday>("Christmas");
+    function alphabetical(): void {
+        if (holiday === "Christmas") {
             setHoliday("Fourth of July");
-        } else if (holiday1 === "Fourth of July") {
+        } else if (holiday === "Fourth of July") {
             setHoliday("Halloween");
-        } else if (holiday1 === "Halloween") {
+        } else if (holiday === "Halloween") {
             setHoliday("Thanksgiving");
-        } else if (holiday1 === "Thanksgiving") {
+        } else if (holiday === "Thanksgiving") {
             setHoliday("Valentine's Day");
         } else {
             setHoliday("Christmas");
         }
     }
     function chronological(): void {
-        if (holiday1 === "Christmas") {
+        if (holiday === "Christmas") {
             setHoliday("Valentine's Day");
-        } else if (holiday1 === "Valentine's Day") {
+        } else if (holiday === "Valentine's Day") {
             setHoliday("Fourth of July");
-        } else if (holiday1 === "Fourth of July") {
+        } else if (holiday === "Fourth of July") {
             setHoliday("Halloween");
-        } else if (holiday1 === "Halloween") {
+        } else if (holiday === "Halloween") {
             setHoliday("Thanksgiving");
         } else {
             setHoliday("Christmas");
         }
     }
     function emoji(): string {
-        if (holiday1 === "Christmas") {
+        if (holiday === "Christmas") {
             return "🎄";
-        } else if (holiday1 === "Valentine's Day") {
+        } else if (holiday === "Valentine's Day") {
             return "❤️";
-        } else if (holiday1 === "Fourth of July") {
+        } else if (holiday === "Fourth of July") {
             return "🎆";
-        } else if (holiday1 === "Halloween") {
+        } else if (holiday === "Halloween") {
             return "🎃";
-        } else if (holiday1 === "Thanksgiving") {
+        } else if (holiday === "Thanksgiving") {
             return "🍠";
         } else {
             return "🎄";
@@ -55,7 +56,7 @@ export function CycleHoliday(): JSX.Element {
         <div>
             <span>Holiday: {emoji()}</span>
             <div>
-                <Button onClick={alphabetitical}>Advance by Alphabet</Button>
+                <Button onClick={alphabetical}>Advance by Alphabet</Button>
             </div>
             <div>
                 <Button onClick={chronological}>Advance by Year</Button>
