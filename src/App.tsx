@@ -1,7 +1,16 @@
 import React from "react";
 import "./App.css";
+<<<<<<< HEAD
 import { Button, Col, Container, Row } from "react-bootstrap";
 import catPic from "./assets/bella.jpg";
+=======
+import { ChangeType } from "./components/ChangeType";
+import { RevealAnswer } from "./components/RevealAnswer";
+import { StartAttempt } from "./components/StartAttempt";
+import { TwoDice } from "./components/TwoDice";
+import { CycleHoliday } from "./components/CycleHoliday";
+import { Counter } from "./components/Counter";
+>>>>>>> upstream/task-state
 
 function App(): JSX.Element {
     return (
@@ -12,6 +21,7 @@ function App(): JSX.Element {
                 Hello World. UD CISC275 with React Hooks and TypeScript. Sydney
                 Segear.
             </header>
+<<<<<<< HEAD
             Reasons I like my cat:
             <ul>
                 <li>She is cute</li>
@@ -47,6 +57,20 @@ function App(): JSX.Element {
                     </Col>
                 </Row>
             </Container>
+=======
+            <hr></hr>
+            <Counter></Counter>
+            <hr />
+            <RevealAnswer></RevealAnswer>
+            <hr />
+            <StartAttempt></StartAttempt>
+            <hr />
+            <TwoDice></TwoDice>
+            <hr />
+            <ChangeType></ChangeType>
+            <hr />
+            <CycleHoliday></CycleHoliday>
+>>>>>>> upstream/task-state
         </div>
     );
 }
