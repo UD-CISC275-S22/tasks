@@ -18,9 +18,15 @@ export function StartAttempt(): JSX.Element {
     return (
         <div>
             <div>
-                Current light: <span>{counter}</span>
+                # of Attempts: <span>{counter}</span>
             </div>
-            <div>{progress ? <span>cool</span> : <span>not cool</span>}</div>
+            <div>
+                {progress ? (
+                    <span>In Progress</span>
+                ) : (
+                    <span>Not In Progress</span>
+                )}
+            </div>
             <div>
                 <Button onClick={stuff} disabled={progress || counter === 0}>
                     Start Quiz

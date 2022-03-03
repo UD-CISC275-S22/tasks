@@ -18,9 +18,9 @@ export function TwoDice(): JSX.Element {
 
     function result(): string {
         if (leftdie === 1 && rightdie === 1) {
-            return "lose";
+            return "Lose";
         } else if (leftdie === rightdie) {
-            return "win";
+            return "Win";
         } else {
             return "";
         }
@@ -39,7 +39,7 @@ export function TwoDice(): JSX.Element {
                 <span data-testid="left-die"> Left: {leftdie}</span>
                 <span data-testid="right-die"> Right: {rightdie}</span>
             </div>
-            <span> result: {result()} </span>
+            <span> Result: {result()} </span>
         </div>
     );
 }
