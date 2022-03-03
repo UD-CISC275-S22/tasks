@@ -337,10 +337,7 @@ export function editOption(
         optionAdded = dcQuestions.map(
             (question: Question): Question =>
                 question.id === targetId
-                    ? {
-                          ...question,
-                          options: [...question.options, newOption]
-                      }
+                    ? { ...question, options: [...question.options, newOption] }
                     : { ...question }
         );
     } else {
