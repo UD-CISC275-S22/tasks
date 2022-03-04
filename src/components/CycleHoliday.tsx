@@ -62,8 +62,8 @@ export function CycleHoliday(): JSX.Element {
         <div>
             <div>Cycle Holiday</div>;
             <Button onClick={cycleByName}>Cycle by Alphabet</Button>
-            <Button onClick={cycleByDate}>Cycle by Date</Button>
-            {<div>{currentHoliday.Emogi}</div>}
+            <Button onClick={cycleByDate}>Cycle by Year</Button>
+            {<div>Holiday: {currentHoliday.Emogi}</div>}
         </div>
     );
 }
