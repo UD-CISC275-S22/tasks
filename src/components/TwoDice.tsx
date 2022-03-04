@@ -14,16 +14,16 @@ export function d6(): number {
 export function TwoDice(): JSX.Element {
     const [left_die, setLeftDiceValue] = useState<number>(-1);
     const [right_die, setRightDiceValue] = useState<number>(0);
-    const [gameOver, setGameOver] = useState<boolean>(false);
-    const [won, setWin] = useState<boolean>(null);
+    const [gameOver, setGameOver] = useState<boolean>();
+    const [won, setWin] = useState<boolean>();
 
     function rollLeftDice() {
         setLeftDiceValue(d6());
-        winCheck;
+        winCheck();
     }
     function rollRightDice() {
         setRightDiceValue(d6());
-        winCheck;
+        winCheck();
     }
 
     // checks to see if the game has been won
@@ -31,19 +31,18 @@ export function TwoDice(): JSX.Element {
         if (left_die === right_die) {
             // make it so game over == true
             setGameOver(true);
-            if (left_die === 1) {
+            if (left_die !== 1) {
                 // means won is false
-                setWin(false);
-            } else {
                 setWin(true);
+            } else {
+                setWin(false);
             }
             // means won is true
-        } else {
-            setGameOver(false);
         }
         // means it so game over == false
     }
 
+    // need to make it so that we do do the somparison until the game over thing is true
     return (
         <div>
             <div>Two Dice</div>;
@@ -53,8 +52,10 @@ export function TwoDice(): JSX.Element {
             {<span data-testid="right-die">{right_die}</span>};
             {gameOver && won === true ? (
                 <div>You Win!</div>
-            ) : (
+            ) : gameOver && won === false ? (
                 <div>You Lose.</div>
+            ) : (
+                <div>Match Undecided</div>
             )}
         </div>
     );
