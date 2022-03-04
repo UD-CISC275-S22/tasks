@@ -1,7 +1,7 @@
 import { createModuleResolutionCache, ObjectFlags } from "typescript";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
-import { makeBlankQuestion } from "./objects";
+import { makeBlankQuestion, duplicateQuestion } from "./objects";
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
@@ -167,7 +167,19 @@ export function changeQuestionTypeById(
     targetId: number,
     newQuestionType: QuestionType
 ): Question[] {
-    return [];
+    const qs = [...questions].map((q1) => ({ ...q1 }));
+    const target = qs.find((q1) => q1.id === targetId);
+
+    if (target === undefined) {
+        return [...questions];
+    } else if (
+        target.type === "multiple_choice_question" &&
+        newQuestionType !== "multiple_choice_question"
+    ) {
+        target.options = [];
+    }
+    target.type = newQuestionType;
+    return qs;
 }
 
 /**
@@ -186,7 +198,21 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ) {
-    return [];
+    const qs = [...questions].map((q1) => ({
+        ...q1,
+        options: [...q1.options]
+    }));
+    const target = qs.find((q1) => q1.id === targetId);
+    if (target !== undefined) {
+        const newloc =
+            targetOptionIndex === -1
+                ? target.options.length
+                : targetOptionIndex;
+        target.options.splice(newloc, 1, newOption);
+        return qs;
+    } else {
+        return questions;
+    }
 }
 
 /***
@@ -200,5 +226,11 @@ export function duplicateQuestionInArray(
     targetId: number,
     newId: number
 ): Question[] {
-    return [];
+    return [...questions].reduce(
+        (ans: Question[], q1: Question) =>
+            q1.id == targetId
+                ? [...ans, q1, duplicateQuestion(newId, q1)]
+                : [...ans, q1],
+        []
+    );
 }

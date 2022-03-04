@@ -665,7 +665,7 @@ describe("Testing the Question[] functions", () => {
             )
         ).toEqual([...TRIVIA_QUESTIONS, NEW_TRIVIA_QUESTION]);
     });
-    /*
+
     test("Testing the renameQuestionById function", () => {
         expect(renameQuestionById(BLANK_QUESTIONS, 1, "New Name")).toEqual([
             {
@@ -1227,7 +1227,7 @@ describe("Testing the Question[] functions", () => {
             }
         ]);
     });
-*/
+
     afterEach(() => {
         expect(BLANK_QUESTIONS).toEqual(BACKUP_BLANK_QUESTIONS);
         expect(SIMPLE_QUESTIONS).toEqual(BACKUP_SIMPLE_QUESTIONS);
