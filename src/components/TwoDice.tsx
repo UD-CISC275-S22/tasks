@@ -55,7 +55,7 @@ export function TwoDice(): JSX.Element {
             ) : gameOver && won === false ? (
                 <div>You Lose.</div>
             ) : (
-                <div>Match Undecided</div>
+                <div>Match Ongoing</div>
             )}
         </div>
     );
