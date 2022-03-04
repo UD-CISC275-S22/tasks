@@ -12,7 +12,7 @@ function App(): JSX.Element {
                 UD CISC275 with React Hooks and TypeScript
             </header>
             <p>Hello World, this is Eric Merritts Website</p>
-            Planet of the Apes:
+            The Planet of the Apes:
             <div></div>
             <img
                 src="https://th.bing.com/th/id/R.6c1ff2c14604c4264d98377eeb711f2d?rik=CVVLX9HwnbXE0Q&riu=http%3a%2f%2felelur.com%2fdata_images%2fmammals%2fape%2fape-06.jpg&ehk=xtRzgXT71NfxQdjCTf440Jra97%2f8ddXRMGrLA9tgfWQ%3d&risl=&pid=ImgRaw&r=0"
