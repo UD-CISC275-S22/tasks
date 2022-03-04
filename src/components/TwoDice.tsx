@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
@@ -12,5 +13,35 @@ export function d6(): number {
 }
 
 export function TwoDice(): JSX.Element {
-    return <div>Two Dice</div>;
+    const [leftDie, setLeftDie] = useState<number>(4);
+    const [rightDie, setRightDie] = useState<number>(2);
+
+    function rollLeft(): void {
+        setLeftDie(d6());
+    }
+    function rollRight(): void {
+        setRightDie(d6());
+    }
+
+    return (
+        <div>
+            <div>
+                <span data-testid="left-die">Left die: {leftDie} </span>
+                <span data-testid="right-die">Right die: {rightDie} </span>
+            </div>
+            <div>
+                <Button onClick={rollLeft}>Roll Left</Button>
+                <Button onClick={rollRight}>Roll Right</Button>
+            </div>
+            <div>
+                {leftDie === 1 && rightDie === 1 ? (
+                    <span>You lose, idiot!</span>
+                ) : leftDie === rightDie ? (
+                    <span>You win, smart individual!</span>
+                ) : (
+                    <></>
+                )}
+            </div>
+        </div>
+    );
 }
