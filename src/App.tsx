@@ -1,4 +1,5 @@
 import React from "react";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Button, Col, Container, Row } from "react-bootstrap";
 import "./App.css";
 import { ChangeType } from "./components/ChangeType";
