@@ -4,12 +4,7 @@ import { Button } from "react-bootstrap";
 export function StartAttempt(): JSX.Element {
     const [counter, setCounter] = useState<number>(4);
     const [progress, setProgress] = useState<boolean>(false);
-    const [visible, setVisible] = useState<boolean>(true);
 
-    function flipVisibility(): void {
-        // Set visible to be the logical opposite of its previous value
-        setVisible(!visible);
-    }
     function minusOne(): void {
         setCounter(counter - 1);
     }
@@ -23,9 +18,15 @@ export function StartAttempt(): JSX.Element {
     return (
         <div>
             <div>
-                Current light: <span>{counter}</span>
+                # of Attempts: <span>{counter}</span>
             </div>
-            <div>{progress ? <span>cool</span> : <span>not cool</span>}</div>
+            <div>
+                {progress ? (
+                    <span>In Progress</span>
+                ) : (
+                    <span>Not In Progress</span>
+                )}
+            </div>
             <div>
                 <Button onClick={stuff} disabled={progress || counter === 0}>
                     Start Quiz
