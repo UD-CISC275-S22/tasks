@@ -1,3 +1,4 @@
+import { isQuestion } from "./functions";
 import { Question, QuestionType } from "./interfaces/question";
 
 /**
@@ -38,16 +39,6 @@ export function isCorrect(question: Question, answer: string): boolean {
         return answer === question.expected;
     }
 }
-/**else if (answer.trim() === question.expected) {
-        return true;
-    } else if (answer.toLowerCase() === question.expected) {
-        return true;
-    } else if (answer === question.expected) {
-        return true;
-    } else {
-        return false;
-    } *\
-}
 
 /**
  * Consumes a question and a potential `answer`, and returns whether or not
@@ -56,7 +47,17 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
-    return false;
+    const arr = [...question.options];
+    if (question.type === "multiple_choice_question") {
+        const options = arr.filter((arr: string): boolean => arr === answer);
+        if (options.length === 0) {
+            return false;
+        } else {
+            return true;
+        }
+    } else {
+        return true;
+    }
 }
 
 /**
@@ -66,7 +67,9 @@ export function isValid(question: Question, answer: string): boolean {
  * name "My First Question" would become "9: My First Q".
  */
 export function toShortForm(question: Question): string {
-    return "";
+    const newName = question.name.substr(0, 10);
+    const str = question.id.toString() + ": " + newName;
+    return str;
 }
 
 /**
@@ -87,7 +90,12 @@ export function toShortForm(question: Question): string {
  * Check the unit tests for more examples of what this looks like!
  */
 export function toMarkdown(question: Question): string {
-    return "";
+    let result = "# " + question.name + "\n" + question.body;
+    if (question.type === "multiple_choice_question") {
+        const arr = question.options;
+        result += "\n- " + arr.join("\n- ");
+    }
+    return result;
 }
 
 /**
@@ -95,7 +103,8 @@ export function toMarkdown(question: Question): string {
  * `newName`.
  */
 export function renameQuestion(question: Question, newName: string): Question {
-    return question;
+    const myQuestion = { ...question, name: newName };
+    return myQuestion;
 }
 
 /**
@@ -104,7 +113,14 @@ export function renameQuestion(question: Question, newName: string): Question {
  * published; if it was published, now it should be not published.
  */
 export function publishQuestion(question: Question): Question {
-    return question;
+    let bool = question.published;
+    if (bool === true) {
+        bool = false;
+    } else {
+        bool = true;
+    }
+    const myQuestion = { ...question, published: bool };
+    return myQuestion;
 }
 
 /**
@@ -114,7 +130,15 @@ export function publishQuestion(question: Question): Question {
  * The `published` field should be reset to false.
  */
 export function duplicateQuestion(id: number, oldQuestion: Question): Question {
-    return oldQuestion;
+    console.log(oldQuestion);
+    const newQuestion = {
+        ...oldQuestion,
+        name: "Copy of " + oldQuestion.name,
+        published: false,
+        id: id
+    };
+    console.log(newQuestion);
+    return newQuestion;
 }
 
 /**
@@ -125,7 +149,10 @@ export function duplicateQuestion(id: number, oldQuestion: Question): Question {
  * Check out the subsection about "Nested Fields" for more information.
  */
 export function addOption(question: Question, newOption: string): Question {
-    return question;
+    const arr = [...question.options];
+    arr.splice(arr.length, 0, newOption);
+    const newQuestion = { ...question, options: arr };
+    return newQuestion;
 }
 
 /**
@@ -142,5 +169,15 @@ export function mergeQuestion(
     contentQuestion: Question,
     { points }: { points: number }
 ): Question {
-    return contentQuestion;
+    console.log(contentQuestion);
+    console.log(points);
+    const newQuestion = {
+        ...contentQuestion,
+        name: name,
+        points: points,
+        id: id,
+        published: false
+    };
+    console.log(newQuestion);
+    return newQuestion;
 }
