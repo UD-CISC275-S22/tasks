@@ -2,7 +2,7 @@
 /* eslint-disable prettier/prettier */
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import { isConstructorTypeNode } from "typescript";
+//import { isConstructorTypeNode } from "typescript";
 
 export function CycleHoliday(): JSX.Element {
     interface Holiday {
