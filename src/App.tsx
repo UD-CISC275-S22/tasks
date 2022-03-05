@@ -32,14 +32,14 @@ function App(): JSX.Element {
                             }}
                         ></div>
                     </Col>
-                    <p className="unorderedList">
+                    <div className="unorderedList">
                         Things in this picture
                         <ul>
                             <li>Fish</li>
                             <li>Water</li>
                             <li>some coral</li>
                         </ul>
-                    </p>
+                    </div>
                     <Col>
                         <div
                             style={{
