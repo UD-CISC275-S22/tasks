@@ -1,7 +1,9 @@
 .App {
     text-align: center;
 }
-
+.Task3 {
+    text-align: center;
+}
 .App-logo {
     height: 40vmin;
     pointer-events: none;
@@ -15,7 +17,7 @@
 
 .App-header {
     width: 100%;
-    background-color: #282c34;
+    background-color: #632488;
     min-height: 40vh;
     display: flex;
     flex-direction: column;
@@ -23,6 +25,22 @@
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
+}
+
+.Rectangle {
+    text-align: center;
+}
+
+.Rectangle1 {
+    width: 20%;
+    background-color: #c52020;
+    min-height: 20vh;
+}
+
+.Rectangle2 {
+    width: 20%;
+    background-color: #5c0a0a;
+    min-height: 20vh;
 }
 
 .App-link {
