@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import { QuestionType } from "../interfaces/question";
+//import { QuestionType } from "../interfaces/question";
 
 export function ChangeType(): JSX.Element {
     //simulates another editor for a quiz application that provides a way to change the type of a quiz
