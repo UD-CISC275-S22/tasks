@@ -2,20 +2,20 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
 export function StartAttempt(): JSX.Element {
-    const [attempts, setAttempts] = useState<number>(4);
+    const [attempt, setAttempts] = useState<number>(4);
     const [quizProgress, setProgress] = useState<boolean>(false);
 
     function changeAttempts(): void {
-        setAttempts(attempts + 1);
+        setAttempts(attempt + 1);
     }
     function startQuiz(): void {
         setProgress(true);
-        setAttempts(attempts - 1);
+        setAttempts(attempt - 1);
     }
     return (
         <div>
             <div>
-                <span>{attempts}</span>
+                <span>{attempt}</span>
             </div>
             <div>
                 <Button onClick={changeAttempts} disabled={quizProgress}>
@@ -25,7 +25,7 @@ export function StartAttempt(): JSX.Element {
             <div>
                 <Button
                     onClick={startQuiz}
-                    disabled={quizProgress || attempts === 0}
+                    disabled={quizProgress || attempt === 0}
                 >
                     Start Quiz
                 </Button>
