@@ -26,7 +26,7 @@ export function ChangeType(): JSX.Element {
                 {qtype === "short_answer_question" ? (
                     <span>Short Answer</span>
                 ) : (
-                    <span>Mutiple Choice</span>
+                    <span>Multiple Choice</span>
                 )}
             </div>
         </div>
