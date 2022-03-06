@@ -34,16 +34,12 @@ export function StartAttempt(): JSX.Element {
                 <Button onClick={putInProgress} disabled={inProgress}>
                     Start Quiz
                 </Button>
-            </div>
-            <div>
                 <Button
                     onClick={() => setinProgress(false)}
                     disabled={!inProgress}
                 >
                     Stop Quiz
                 </Button>
-            </div>
-            <div>
                 <Button
                     onClick={() => setAttempts(Attempts + 1)}
                     disabled={inProgress}
@@ -51,6 +47,7 @@ export function StartAttempt(): JSX.Element {
                     Mulligan
                 </Button>
             </div>
+            <div>Attempts: {Attempts}</div>
         </div>
     );
 }
