@@ -1,6 +1,3 @@
-import { type } from "os";
-import internal from "stream";
-import { isQuestion } from "./functions";
 import { Question, QuestionType } from "./interfaces/question";
 
 /**
