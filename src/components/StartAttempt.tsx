@@ -23,15 +23,23 @@ export function StartAttempt(): JSX.Element {
 
     function putInProgress(): void {
         //setinProgress to the opposite value of inProgress, so if it was false, it'll become true, and vice versa
+        //return true if it should be disabled
+        //will return true if inProgress, OR if attempts <=0
         setinProgress(!inProgress);
         //subtract the attmpts by 1
         setAttempts(Attempts - 1);
+        //const disabled: boolean = inProgress || Attempts <= 0;
+
+        // return disabled;
     }
 
     return (
         <div>
             <div>
-                <Button onClick={putInProgress} disabled={inProgress}>
+                <Button
+                    onClick={putInProgress}
+                    disabled={inProgress || Attempts <= 0}
+                >
                     Start Quiz
                 </Button>
                 <Button
