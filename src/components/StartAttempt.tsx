@@ -16,11 +16,11 @@ export function StartAttempt(): JSX.Element {
             >
                 {" "}
                 Start Quiz{" "}
-            </Button>
+            </Button>{" "}
             <Button onClick={() => setInProgress(false)} disabled={!inProgress}>
                 {" "}
                 Stop Quiz{" "}
-            </Button>
+            </Button>{" "}
             <Button
                 onClick={() => setAttempts(attempts + 1)}
                 disabled={inProgress}
