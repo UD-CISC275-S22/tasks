@@ -162,7 +162,7 @@ export function editOption(
     targetId: number,
     targetOptionIndex: number,
     newOption: string
-) {
+): Question[] {
     return [];
 }
 
