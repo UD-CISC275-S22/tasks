@@ -15,7 +15,8 @@
 
 .App-header {
     width: 100%;
-    background-color: #282c34;
+    background-color: #FF5733;
+    background-image: url("https://wallpapercave.com/wp/wp4676582.jpg");
     min-height: 40vh;
     display: flex;
     flex-direction: column;
@@ -28,6 +29,19 @@
 .App-link {
     color: #61dafb;
 }
+
+.C1{
+    background-color: #ff0000;
+    height: 200px;
+    width: 100px;
+}
+
+.C2{
+    background-color: #ff0000;
+    height: 200px;
+    width: 100px;
+}
+
 
 @keyframes App-logo-spin {
     from {
