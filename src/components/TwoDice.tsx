@@ -21,6 +21,17 @@ export function TwoDice(): JSX.Element {
     function rightRoll(): void {
         setNum2(d6());
     }
+    function result(): string {
+        if (num1 === num2) {
+            if (num1 === 1 && num2 === 1) {
+                return "Lose";
+            } else {
+                return "Win";
+            }
+        } else {
+            return "Neither";
+        }
+    }
 
     return (
         <div>
@@ -32,17 +43,7 @@ export function TwoDice(): JSX.Element {
                 <Button onClick={rightRoll}> Roll Right</Button>
                 <span data-testid="right-die">{num2}</span>
             </div>
-            <div>
-                {num1 === num2 ? (
-                    num1 !== 1 && num2 !== 1 ? (
-                        <span>Win</span>
-                    ) : (
-                        <span>Lose</span>
-                    )
-                ) : (
-                    <span>Neither</span>
-                )}
-            </div>
+            <div>{result()}</div>
         </div>
     );
 }
