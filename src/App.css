@@ -16,6 +16,7 @@
 .App-header {
     width: 100%;
     background-color: #FF5733;
+    background-image: url("https://wallpapercave.com/wp/wp4676582.jpg");
     min-height: 40vh;
     display: flex;
     flex-direction: column;
