@@ -34,12 +34,8 @@ export function TwoDice(): JSX.Element {
                 <span data-testid="right-die">{rightdie}</span>
             </div>
             <div>
-                {leftdie === rightdie && leftdie !== 1 && rightdie !== 1 ? (
-                    <span>You Win!</span>
-                ) : (
-                    ""
-                )}
-                {leftdie === 1 && rightdie === 1 ? <span>You Lose!</span> : ""}
+                {leftdie === rightdie && leftdie !== 1 && <span>You Win!</span>}
+                {leftdie === 1 && rightdie === 1 && <span>You Lose!</span>}
             </div>
         </div>
     );
