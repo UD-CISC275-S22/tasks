@@ -1,4 +1,4 @@
-import { isQuestion } from "./functions";
+//import { isQuestion } from "./functions";
 import { Question, QuestionType } from "./interfaces/question";
 
 /**
@@ -130,14 +130,12 @@ export function publishQuestion(question: Question): Question {
  * The `published` field should be reset to false.
  */
 export function duplicateQuestion(id: number, oldQuestion: Question): Question {
-    console.log(oldQuestion);
     const newQuestion = {
         ...oldQuestion,
         name: "Copy of " + oldQuestion.name,
         published: false,
         id: id
     };
-    console.log(newQuestion);
     return newQuestion;
 }
 
@@ -169,8 +167,6 @@ export function mergeQuestion(
     contentQuestion: Question,
     { points }: { points: number }
 ): Question {
-    console.log(contentQuestion);
-    console.log(points);
     const newQuestion = {
         ...contentQuestion,
         name: name,
@@ -178,6 +174,5 @@ export function mergeQuestion(
         id: id,
         published: false
     };
-    console.log(newQuestion);
     return newQuestion;
 }
