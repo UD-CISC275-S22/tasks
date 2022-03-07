@@ -10,6 +10,7 @@ import { DoubleHalf } from "./bad-components/DoubleHalf";
 import { ColoredBox } from "./bad-components/ColoredBox";
 import { ShoveBox } from "./bad-components/ShoveBox";
 import { ChooseTeam } from "./bad-components/ChooseTeam";
+import { TwoDice } from "./components/TwoDice";
 
 function App(): JSX.Element {
     return (
@@ -18,7 +19,7 @@ function App(): JSX.Element {
                 Cool Locations around the World by CISC275
             </header>
             <hr></hr>
-            {/* <DoubleHalf></DoubleHalf> */}
+            <DoubleHalf></DoubleHalf>
             <hr></hr>
             <ChooseTeam></ChooseTeam>
             <hr></hr>
