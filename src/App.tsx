@@ -14,7 +14,6 @@ function App(): JSX.Element {
             <header className="App-header">
                 Ocean Shen: UD CISC275 with React Hooks and TypeScript
             </header>
-<<<<<<< HEAD
             <h1>Hello World!</h1>
             <Button onClick={() => console.log("Hello World!")}>
                 Log Hello World
@@ -61,7 +60,6 @@ function App(): JSX.Element {
                     </Col>
                 </Row>
             </Container>
-=======
             <hr></hr>
             <Counter></Counter>
             <hr />
@@ -74,7 +72,6 @@ function App(): JSX.Element {
             <ChangeType></ChangeType>
             <hr />
             <CycleHoliday></CycleHoliday>
->>>>>>> upstream/task-state
         </div>
     );
 }
