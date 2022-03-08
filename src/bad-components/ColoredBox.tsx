@@ -25,7 +25,7 @@ export function ColoredBox(): JSX.Element {
                 style={{
                     width: "50px",
                     height: "50px",
-                    backgroundColor: COLORS[DEFAULT_COLOR_INDEX],
+                    backgroundColor: COLORS[colorIndex],
                     display: "inline-block",
                     verticalAlign: "bottom",
                     marginLeft: "5px"
