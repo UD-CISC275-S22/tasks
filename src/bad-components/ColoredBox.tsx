@@ -4,23 +4,34 @@ import { Button } from "react-bootstrap";
 export const COLORS = ["red", "blue", "green"];
 const DEFAULT_COLOR_INDEX = 0;
 
-function ChangeColor(): JSX.Element {
-    const [colorIndex, setColorIndex] = useState<number>(DEFAULT_COLOR_INDEX);
+// write an interface here that will hold the things I need for the functions
+interface handleColorSwap {
+    setColorIndex: (colorIndex: number) => void;
+    newColorIndex: number;
+}
+
+function ChangeColor({
+    setColorIndex,
+    newColorIndex
+}: handleColorSwap): JSX.Element {
     return (
-        <Button onClick={() => setColorIndex((1 + colorIndex) % COLORS.length)}>
+        <Button
+            onClick={() => setColorIndex((1 + newColorIndex) % COLORS.length)}
+        >
             Next Color
         </Button>
     );
 }
 
-function ColorPreview(): JSX.Element {
+function ColorPreview({ newColorIndex }: handleColorSwap): JSX.Element {
+    // I need have an index here that will iterate through the colors
     return (
         <div
             data-testid="colored-box"
             style={{
                 width: "50px",
                 height: "50px",
-                backgroundColor: COLORS[DEFAULT_COLOR_INDEX],
+                backgroundColor: COLORS[newColorIndex],
                 display: "inline-block",
                 verticalAlign: "bottom",
                 marginLeft: "5px"
@@ -30,13 +41,21 @@ function ColorPreview(): JSX.Element {
 }
 
 export function ColoredBox(): JSX.Element {
+    // I need to make 2 new interfaces like in the Peer components example
+    const [colorIndex, setColorIndex] = useState<number>(DEFAULT_COLOR_INDEX);
     return (
         <div>
             <h3>Colored Box</h3>
             <span>The current color is: {COLORS[DEFAULT_COLOR_INDEX]}</span>
             <div>
-                <ChangeColor></ChangeColor>
-                <ColorPreview></ColorPreview>
+                <ChangeColor
+                    newColorIndex={colorIndex}
+                    setColorIndex={setColorIndex}
+                ></ChangeColor>
+                <ColorPreview
+                    newColorIndex={colorIndex}
+                    setColorIndex={setColorIndex}
+                ></ColorPreview>
             </div>
         </div>
     );
