@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Form } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 
 type ChangeEvent = React.ChangeEvent<
     HTMLTextAreaElement | HTMLInputElement | HTMLSelectElement
@@ -18,8 +18,7 @@ export function EditMode(): JSX.Element {
                 id="is-editing-check"
                 label="Edit?"
                 checked={edit}
-                onChange={(e: any) => {
-                    // I know the use of any is bad but TypeScript is bugged and not working with ChangeEvent!
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                     setEdit(e.target.checked);
                 }}
             />
@@ -43,8 +42,7 @@ export function EditMode(): JSX.Element {
                         id="is-student"
                         label="Student?"
                         checked={student}
-                        onChange={(e: any) => {
-                            // I know the use of any is bad but TypeScript is bugged and not working with ChangeEvent!
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                             setStudent(e.target.checked);
                         }}
                     ></Form.Check>
