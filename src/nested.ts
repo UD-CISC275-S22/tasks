@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import { stringify } from "querystring";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
@@ -224,15 +225,15 @@ export function renameQuestionById(
         (question: Question): Question =>
             question.id === targetId
                 ? {
-                    id: question.id,
-                    name: newName,
-                    body: question.body,
-                    type: question.type,
-                    options: question.options,
-                    expected: question.expected,
-                    points: question.points,
-                    published: question.published
-                }
+                      id: question.id,
+                      name: newName,
+                      body: question.body,
+                      type: question.type,
+                      options: question.options,
+                      expected: question.expected,
+                      points: question.points,
+                      published: question.published
+                  }
                 : question
     );
     return idArray;
@@ -255,15 +256,15 @@ export function changeQuestionTypeById(
             (question: Question): Question =>
                 question.id === targetId
                     ? {
-                        id: question.id,
-                        name: question.name,
-                        body: question.body,
-                        type: newQuestionType,
-                        options: [],
-                        expected: question.expected,
-                        points: question.points,
-                        published: question.published
-                    }
+                          id: question.id,
+                          name: question.name,
+                          body: question.body,
+                          type: newQuestionType,
+                          options: [],
+                          expected: question.expected,
+                          points: question.points,
+                          published: question.published
+                      }
                     : question
         );
     } else {
@@ -271,15 +272,15 @@ export function changeQuestionTypeById(
             (question: Question): Question =>
                 question.id === targetId
                     ? {
-                        id: question.id,
-                        name: question.name,
-                        body: question.body,
-                        type: newQuestionType,
-                        options: question.options,
-                        expected: question.expected,
-                        points: question.points,
-                        published: question.published
-                    }
+                          id: question.id,
+                          name: question.name,
+                          body: question.body,
+                          type: newQuestionType,
+                          options: question.options,
+                          expected: question.expected,
+                          points: question.points,
+                          published: question.published
+                      }
                     : question
         );
     }
@@ -315,15 +316,15 @@ export function editOption(
             (question: Question): Question =>
                 question.id === targetId
                     ? {
-                        id: question.id,
-                        name: question.name,
-                        body: question.body,
-                        type: question.type,
-                        options: [...question.options, newOption],
-                        expected: question.expected,
-                        points: question.points,
-                        published: question.published
-                    }
+                          id: question.id,
+                          name: question.name,
+                          body: question.body,
+                          type: question.type,
+                          options: [...question.options, newOption],
+                          expected: question.expected,
+                          points: question.points,
+                          published: question.published
+                      }
                     : question
         );
     } else {
@@ -331,19 +332,19 @@ export function editOption(
             (question: Question): Question =>
                 question.id === targetId
                     ? {
-                        id: question.id,
-                        name: question.name,
-                        body: question.body,
-                        type: question.type,
-                        options: helperSplice(
-                            question.options,
-                            targetOptionIndex,
-                            newOption
-                        ),
-                        expected: question.expected,
-                        points: question.points,
-                        published: question.published
-                    }
+                          id: question.id,
+                          name: question.name,
+                          body: question.body,
+                          type: question.type,
+                          options: helperSplice(
+                              question.options,
+                              targetOptionIndex,
+                              newOption
+                          ),
+                          expected: question.expected,
+                          points: question.points,
+                          published: question.published
+                      }
                     : question
         );
         return mapper;
