@@ -1,50 +1,30 @@
 import React from "react";
-import { Button, Container, Row } from "react-bootstrap";
 import "./App.css";
-import { Col } from "react-bootstrap";
+import { ChangeType } from "./components/ChangeType";
+import { RevealAnswer } from "./components/RevealAnswer";
+import { StartAttempt } from "./components/StartAttempt";
+import { TwoDice } from "./components/TwoDice";
+import { CycleHoliday } from "./components/CycleHoliday";
+import { Counter } from "./components/Counter";
 
 function App(): JSX.Element {
     return (
         <div className="App">
-            <div
-                style={{
-                    border: "red",
-                    height: "500",
-                    width: "500",
-                    backgroundColor: "red"
-                }}
-            >
-                <Container>
-                    <Row>
-                        <Col>
-                            <header className="App-header">
-                                Ziyang Jiang UD CISC275 with React Hooks and
-                                TypeScript Hello World
-                            </header>
-                        </Col>
-                        <Col>
-                            <h2>I love you. Dr.Bart</h2>
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
-            <img
-                src="https://inews.gtimg.com/newsapp_bt/0/13184400729/1000"
-                alt="A picture of Iron Man"
-            />
-            <ul>
-                <li>one</li>
-                <li>two</li>
-                <li>three</li>
-            </ul>
-            <Button onClick={() => console.log("Hello World!")}>
-                Log Hello World
-            </Button>
-
-            <p>
-                Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload.
-            </p>
+            <header className="App-header">
+                UD CISC275 with React Hooks and TypeScript
+            </header>
+            <hr></hr>
+            <Counter></Counter>
+            <hr />
+            <RevealAnswer></RevealAnswer>
+            <hr />
+            <StartAttempt></StartAttempt>
+            <hr />
+            <TwoDice></TwoDice>
+            <hr />
+            <ChangeType></ChangeType>
+            <hr />
+            <CycleHoliday></CycleHoliday>
         </div>
     );
 }
