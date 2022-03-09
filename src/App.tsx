@@ -60,7 +60,18 @@ function App(): JSX.Element {
                     </Col>
                 </Row>
             </Container>
+<<<<<<< HEAD
 
+=======
+            <hr></hr>
+            <DoubleHalf></DoubleHalf>
+            <hr></hr>
+            <ChooseTeam></ChooseTeam>
+            <hr></hr>
+            <ColoredBox></ColoredBox>
+            <hr></hr>
+            <ShoveBox></ShoveBox>
+>>>>>>> solved-state
             <hr></hr>
             <Counter></Counter>
             <hr />
