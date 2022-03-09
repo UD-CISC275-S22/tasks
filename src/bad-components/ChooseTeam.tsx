@@ -52,7 +52,7 @@ export function ChooseTeam(): JSX.Element {
                     {team.map((member: string) => (
                         <li key={member}>{member}</li>
                     ))}
-                    <Button onClick={clearTeam}>Clear Team</Button>
+                    <Button onClick={clearTeam}> Clear Team </Button>
                 </Col>
             </Row>
         </div>
