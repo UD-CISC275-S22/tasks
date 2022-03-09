@@ -1,6 +1,12 @@
 import React from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import "./App.css";
+import { ChangeType } from "./components/ChangeType";
+import { RevealAnswer } from "./components/RevealAnswer";
+import { StartAttempt } from "./components/StartAttempt";
+import { TwoDice } from "./components/TwoDice";
+import { CycleHoliday } from "./components/CycleHoliday";
+import { Counter } from "./components/Counter";
 
 function App(): JSX.Element {
     return (
@@ -8,47 +14,18 @@ function App(): JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript
             </header>
-            <Container>
-                <Row>
-                    <Col>
-                        <h1>Meet my dogs</h1>
-                        <img
-                            src={require("./dogs.jpg")}
-                            style={{ height: "225px", width: "300px" }}
-                            alt="A cute picture of my dogs"
-                        />
-                        <div
-                            style={{
-                                width: "10px",
-                                height: "5px",
-                                backgroundColor: "red",
-                                margin: "auto"
-                            }}
-                        ></div>
-                    </Col>
-                    <Col>
-                        <p>My dogs:</p>
-                        <ul>
-                            <li>Valegro od Dalajskeho potoka</li>
-                            <li>Blueberry od Dalajskeho potoka</li>
-                            <li>Both are standard black schnauzers</li>
-                        </ul>
-                        <div
-                            style={{
-                                width: "10px",
-                                height: "5px",
-                                backgroundColor: "red",
-                                margin: "auto"
-                            }}
-                        ></div>
-                    </Col>
-                </Row>
-            </Container>
-            <Button onClick={() => console.log("Hello World!")}>
-                Log Hello World
-            </Button>
-            <p>Jan Ahmed</p>
-            <p>Hello World</p>
+            <hr></hr>
+            <Counter></Counter>
+            <hr />
+            <RevealAnswer></RevealAnswer>
+            <hr />
+            <StartAttempt></StartAttempt>
+            <hr />
+            <TwoDice></TwoDice>
+            <hr />
+            <ChangeType></ChangeType>
+            <hr />
+            <CycleHoliday></CycleHoliday>
         </div>
     );
 }
