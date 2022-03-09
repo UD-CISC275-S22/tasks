@@ -31,6 +31,7 @@ describe("ChooseTeam Component tests", () => {
     test("Clicking three team members works", () => {
         const [, second, third, , fifth] = screen.queryAllByRole("button");
         third.click();
+        third.click();
         second.click();
         fifth.click();
         const currentTeam = screen.queryAllByRole("listitem");
