@@ -1,5 +1,4 @@
 import React from "react";
-import { Container, Col, Row, Button } from "react-bootstrap";
 import "./App.css";
 import { ChangeType } from "./components/ChangeType";
 import { RevealAnswer } from "./components/RevealAnswer";
@@ -7,6 +6,12 @@ import { StartAttempt } from "./components/StartAttempt";
 import { TwoDice } from "./components/TwoDice";
 import { CycleHoliday } from "./components/CycleHoliday";
 import { Counter } from "./components/Counter";
+import { DoubleHalf } from "./bad-components/DoubleHalf";
+import { ColoredBox } from "./bad-components/ColoredBox";
+import { ShoveBox } from "./bad-components/ShoveBox";
+import { ChooseTeam } from "./bad-components/ChooseTeam";
+
+import { Container, Col, Row, Button } from "react-bootstrap";
 
 function App(): JSX.Element {
     return (
@@ -60,9 +65,7 @@ function App(): JSX.Element {
                     </Col>
                 </Row>
             </Container>
-<<<<<<< HEAD
 
-=======
             <hr></hr>
             <DoubleHalf></DoubleHalf>
             <hr></hr>
@@ -71,7 +74,6 @@ function App(): JSX.Element {
             <ColoredBox></ColoredBox>
             <hr></hr>
             <ShoveBox></ShoveBox>
->>>>>>> solved-state
             <hr></hr>
             <Counter></Counter>
             <hr />
