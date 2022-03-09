@@ -16,7 +16,7 @@ export function ChooseTeam(): JSX.Element {
 
     function chooseMember() {
         if (!team.includes(newMember)) {
-            setTeam(team.push(newMember));
+            team.push(newMember);
         }
     }
 
@@ -27,7 +27,7 @@ export function ChooseTeam(): JSX.Element {
     return (
         <div>
             <h3>Choose Team</h3>
-            <Row>
+            {/* <Row>
                 <Col>
                     {allOptions.map((option: string) => (
                         <div key={option} style={{ marginBottom: "4px" }}>
@@ -45,7 +45,7 @@ export function ChooseTeam(): JSX.Element {
                     ))}
                     <Button onClick={clearTeam}>Clear Team</Button>
                 </Col>
-            </Row>
+            </Row> */}
         </div>
     );
 }
