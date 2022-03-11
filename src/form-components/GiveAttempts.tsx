@@ -25,8 +25,16 @@ export function GiveAttempts(): JSX.Element {
     }
 
     function gainAttempt() {
-        const attempts = attemptsLeft + attemptsRequested || 0;
+        let attempts = attemptsLeft;
+        if (!Number.isInteger(attemptsRequested)) {
+            attempts = attemptsLeft;
+        } else {
+            attempts = attemptsLeft + attemptsRequested;
+        }
+
         setAttemptsLeft(attempts);
+        //const attempts = attemptsLeft + attemptsRequested || attemptsLeft;
+        //setAttemptsLeft(attempts);
     }
 
     return (
