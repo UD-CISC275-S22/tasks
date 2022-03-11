@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { GiveAttempts } from "./GiveAttempts";
 import userEvent from "@testing-library/user-event";
 
@@ -39,7 +39,7 @@ describe("GiveAttempts Component tests", () => {
     test("Cannot gain blank amounts", () => {
         const gain = screen.getByRole("button", { name: /gain/i });
         const amountToGive = screen.getByRole("spinbutton");
-        userEvent.type(amountToGive, "");
+        fireEvent.change(amountToGive, { target: { value: "" } });
         gain.click();
         expect(screen.getByText(/3/i)).toBeInTheDocument();
     });
