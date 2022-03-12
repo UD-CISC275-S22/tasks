@@ -26,6 +26,8 @@ export function TwoDice(): JSX.Element {
             <div>
                 {dice1 === dice2 && dice1 !== 1 ? (
                     <span>Win</span>
+                ) : dice1 !== dice2 ? (
+                    <span></span>
                 ) : (
                     <span>Lose</span>
                 )}
