@@ -12,8 +12,6 @@ export function MultipleChoiceQuestion({
     //displays whether they got it correct or incorrect
     //component takes in a parameter representing the expectedAnswer
     //and a parameter representing the list of options
-    
-
     //need state to represent the user's currently selected choice-
     //the initial state of the selected choice is the first element of the options list-
     //when the user's given answer matches the expectedAnswer, display check; otherwise x
