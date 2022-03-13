@@ -47,6 +47,7 @@ export function findQuestion(
     } else {
         return null;
     }
+    return null;
 }
 
 /**
