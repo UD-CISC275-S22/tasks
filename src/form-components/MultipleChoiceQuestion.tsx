@@ -29,6 +29,7 @@ export function MultipleChoiceQuestion({
                     </option>
                 ))}
             </Form.Select>
+            <option> Your answer is: </option>
             {answer === expectedAnswer ? "✔️" : "❌"}
         </div>
     );
