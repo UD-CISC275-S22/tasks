@@ -263,7 +263,7 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ) {
-    console.log(questions);
+    //console.log(questions);
     const backup_ques = [...questions];
     const ifTargetId = questions.filter(
         (question: Question): boolean => question.id !== targetId
