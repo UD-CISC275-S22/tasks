@@ -6,8 +6,8 @@ export function StartAttempt(): JSX.Element {
     const [attempts, setAttempt] = useState<number>(4);
     function manage(): boolean {
         let temp = false;
-        // eslint-disable-next-line prettier/prettier
-        attempts !== 0 && handler === false ? (temp = true) : temp;
+        // eslint-disable-next-line no-extra-parens
+        attempts !== 0 && handler == false ? (temp = true) : temp;
         return temp;
     }
     function startquiz() {
