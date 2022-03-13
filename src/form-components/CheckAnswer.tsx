@@ -22,28 +22,8 @@ export function CheckAnswer({
                 <Form.Label>Check your answer here: </Form.Label>
                 <Form.Control value={input} onChange={changeInput} />
             </Form.Group>
+            <option> Your answer is: </option>
             {input === expectedAnswer ? "✔️" : "❌"}
         </div>
     );
 }
-
-/*
-import React, { useState } from "react";
-
-    return (
-        <div>
-            <h3>Multiple Choice Question</h3>
-
-            <Form.Select value={answer} onChange={updateAnswer}>
-                {options.map((option: string) => (
-                    <option key={option} value={option}>
-                        {option}
-                    </option>
-                ))}
-            </Form.Select>
-            <option> Your answer is: </option>
-
-        </div>
-    );
-}
-*/
