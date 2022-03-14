@@ -58,9 +58,9 @@ export function EditMode(): JSX.Element {
                                 onChange={updateStudent}
                             />
                         </Form.Group>
-                    ) : 
-                        printMessage()
-                    }
+                    ) : (
+                        <div>{printMessage()}</div>
+                    )}
                 </div>
             </Form.Group>
         </div>
