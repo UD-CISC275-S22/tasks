@@ -44,26 +44,24 @@ export function EditMode(): JSX.Element {
                     checked={editMode}
                     onChange={updateEdit}
                 />
-                {editMode && (
-                    <>
-                        {" "}
-                        <Form.Label>What is your name?</Form.Label>
-                        <Form.Control
-                            value={name}
-                            onChange={updateName}
-                            disabled={!editMode}
-                        />
-                        <Form.Check
-                            type="switch"
-                            id="studentSwitch"
-                            label="Are you a student?"
-                            checked={isStudent}
-                            onChange={updateStudent}
-                            disabled={!editMode}
-                        />
-                    </>
-                )}
-                {!editMode ? printMessage() : <div></div>}
+                <div>
+                    {editMode ? (
+                        <Form.Group controlId="editModeForm">
+                            <Form.Label>Enter your name:</Form.Label>
+                            <Form.Control value={name} onChange={updateName} />
+                            <Form.Check
+                                type="switch"
+                                id="switch-isStudent"
+                                label="Are you a student?"
+                                name="student"
+                                checked={isStudent}
+                                onChange={updateStudent}
+                            />
+                        </Form.Group>
+                    ) : (
+                        printMessage()
+                    )}
+                </div>
             </Form.Group>
         </div>
     );
