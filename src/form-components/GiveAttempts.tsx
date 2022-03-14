@@ -20,8 +20,8 @@ export function GiveAttempts(): JSX.Element {
     const [attemptsRequested, setAttemptsRequested] = useState<number>(0);
 
     function loseAttempt() {
-        const attempts = attemptsLeft - 1 || 0;
-        setAttemptsLeft(attempts);
+        //const attempts = attemptsLeft - 1 || 0;
+        setAttemptsLeft(attemptsLeft - 1);
     }
 
     function gainAttempt() {
@@ -42,13 +42,14 @@ export function GiveAttempts(): JSX.Element {
         //<h3>Give Attempts</h3>
         //</div>
         <div>
+            <h3>Give Attempts</h3>
             <Form.Group controlId="Attempts">
                 <Form.Label>Attempts: {attemptsLeft}</Form.Label>
                 <Form.Control
                     type="number"
                     value={attemptsRequested}
                     onChange={(event: ChangeEvent) =>
-                        setAttemptsRequested(parseInt(event.target.value))
+                        setAttemptsRequested(parseInt(event.target.value) || 0)
                     }
                 />
             </Form.Group>
