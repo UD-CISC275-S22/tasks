@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
-interface RevealButtonProps {
-    setDhValue: (newVisibility: number) => void;
+interface DoubleAndHalf {
+    setDhValue: (initial: number) => void;
     dhValue: number;
 }
 
-function Doubler({ setDhValue, dhValue }: RevealButtonProps): JSX.Element {
+function Doubler({ setDhValue, dhValue }: DoubleAndHalf): JSX.Element {
     return (
         <div>
             <Button onClick={() => setDhValue(2 * dhValue)}>Double</Button>
@@ -14,7 +14,7 @@ function Doubler({ setDhValue, dhValue }: RevealButtonProps): JSX.Element {
     );
 }
 
-function Halver({ setDhValue, dhValue }: RevealButtonProps): JSX.Element {
+function Halver({ setDhValue, dhValue }: DoubleAndHalf): JSX.Element {
     return (
         <div>
             <Button onClick={() => setDhValue(0.5 * dhValue)}>Halve</Button>
@@ -23,15 +23,15 @@ function Halver({ setDhValue, dhValue }: RevealButtonProps): JSX.Element {
 }
 
 export function DoubleHalf(): JSX.Element {
-    const [dhValue, setDhValue] = useState<number>(10);
+    const [Value, setValue] = useState<number>(10);
     return (
         <div>
             <h3>Double Half</h3>
             <div>
-                The current value is: <span>{dhValue}</span>
+                The current value is: <span>{Value}</span>
             </div>
-            <Doubler setDhValue={setDhValue} dhValue={dhValue}></Doubler>
-            <Halver setDhValue={setDhValue} dhValue={dhValue}></Halver>
+            <Doubler setDhValue={setValue} dhValue={Value}></Doubler>
+            <Halver setDhValue={setValue} dhValue={Value}></Halver>
         </div>
     );
 }

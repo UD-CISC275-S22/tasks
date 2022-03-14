@@ -4,7 +4,7 @@
  *      C = (F - 32) * 5/9
  */
 export function fahrenheitToCelius(temperature: number): number {
-    return ((temperature - 32) * 5) / 9;
+    return (temperature - 32) * (5 / 9);
 }
 
 /**
@@ -12,31 +12,16 @@ export function fahrenheitToCelius(temperature: number): number {
  * if the number is greater than zero.
  */
 export function add3(first: number, second: number, third: number): number {
-    if (first > 0 && second > 0 && third > 0) {
-        return first + second + third;
+    if (first < 0) {
+        first = 0;
     }
-    if (first > 0 && second < 0 && third > 0) {
-        return first + third;
+    if (second < 0) {
+        second = 0;
     }
-    if (first > 0 && second > 0 && third < 0) {
-        return first + second;
+    if (third < 0) {
+        third = 0;
     }
-    if (first < 0 && second > 0 && third > 0) {
-        return second + third;
-    }
-    if (first < 0 && second < 0 && third > 0) {
-        return third;
-    }
-    if (first < 0 && second > 0 && third < 0) {
-        return second;
-    }
-    if (first > 0 && second < 0 && third < 0) {
-        return first;
-    }
-    if (first < 0 && second < 0 && third < 0) {
-        return 0;
-    }
-    return 0;
+    return first + second + third;
 }
 
 /**
@@ -52,7 +37,7 @@ export function shout(message: string): string {
  * mark. Do not use an `if` statement in solving this question.
  */
 export function isQuestion(message: string): boolean {
-    return message.endsWith("?");
+    return message.endsWith("?") ? true : false;
 }
 
 /**
@@ -61,14 +46,13 @@ export function isQuestion(message: string): boolean {
  * upper or lower case), then return `false`. Otherwise, return `null`.
  */
 export function convertYesNo(word: string): boolean | null {
-    if (word.toLowerCase() == "yes") {
+    if (word == "yes".toUpperCase() || word == "YES".toLowerCase()) {
         return true;
+    } else {
+        if (word == "no".toUpperCase() || word == "NO".toLowerCase()) {
+            return false;
+        } else {
+            return null;
+        }
     }
-    if (word.toLowerCase() == "no") {
-        return false;
-    }
-    if (word.toLowerCase() != "yes" && word.toLowerCase() != "no") {
-        return null;
-    }
-    return true;
 }
