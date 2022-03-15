@@ -11,9 +11,6 @@ export function makeBlankQuestion(
     name: string,
     type: QuestionType
 ): Question {
-    //id: number,
-    //name: string,
-    //type: QuestionType
     return {
         id: id,
         name: name,
@@ -51,23 +48,14 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
-    if (question.type === "multiple_choice_question") {
-        //check if answer is any of the string indexes
-        //prices.map((price: number): number => price*2)
-        /*for (let i = 0; i < question.options.length; i++) {
-            if (answer.toLowerCase === question.options[i].toLowerCase) {
-                return true;
-                break;
-            } else {
-                return false;
-            }
-        }
-        const newArray = question.options.map((option: string): string =>
-            option.toLowerCase()
-        );*/
-        return question.options.includes(answer);
-    } else if (question.type === "short_answer_question") {
+    if (question.type === "short_answer_question") {
         return true;
+    } else {
+        if (question.options.includes(answer)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
 
@@ -103,18 +91,13 @@ export function toShortForm(question: Question): string {
  * Check the unit tests for more examples of what this looks like!
  */
 export function toMarkdown(question: Question): string {
-    if (question.type === "short_answer_question") {
-        return "# " + question.name + "\n" + question.body;
-    } else if (question.type === "multiple_choice_question") {
-        const newArray = question.options.map(
-            (option: string): string => "- " + option + "\n"
-        );
-        let new_string = "# " + question.name + "\n" + question.body + "\n";
-        for (let i = 0; i < question.options.length; i++) {
-            new_string += newArray[i];
-        }
-        return new_string;
+    const firstline = "# " + question.name;
+    let newBody = question.body;
+    const questionOptions = question.options.join("\n" + "- ");
+    if (question.type === "multiple_choice_question") {
+        newBody = `${newBody}\n- ${questionOptions}`;
     }
+    return questionOptions;
 }
 
 /**
@@ -131,11 +114,8 @@ export function renameQuestion(question: Question, newName: string): Question {
  * published; if it was published, now it should be not published.
  */
 export function publishQuestion(question: Question): Question {
-    if (question.published === true) {
-        return { ...question, published: false };
-    } else if (question.published === false) {
-        return { ...question, published: true };
-    }
+    const invert = { ...question, published: !question.published };
+    return invert;
 }
 
 /**
