@@ -1,5 +1,6 @@
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
+import { duplicateQuestion } from "./objects";
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
@@ -18,7 +19,13 @@ export function getPublishedQuestions(questions: Question[]): Question[] {
  * `expected`, and an empty array for its `options`.
  */
 export function getNonEmptyQuestions(questions: Question[]): Question[] {
-    return [];
+    const newArray = questions.filter(
+        (question: Question): boolean =>
+            question.body !== "" ||
+            question.expected !== "" ||
+            question.options.length !== 0
+    );
+    return newArray;
 }
 
 /***
@@ -109,12 +116,10 @@ export function toCSV(questions: Question[]): string {
     const fileCSV = questions
         .map(
             (question: Question): string =>
-                `  ${question.id},${question.name},${question.options.length},${
-                    question.points
-                },${question.published ? "Seen" : "Not Seen"}`
+                `${question.id},${question.name},${question.options.length},${question.points},${question.published}`
         )
         .join("\n");
-    return fileCSV;
+    return "id,name,options,points,published" + "\n" + fileCSV;
 }
 
 /**
@@ -150,10 +155,16 @@ export function publishAll(questions: Question[]): Question[] {
  * are the same type. They can be any type, as long as they are all the SAME type.
  */
 export function sameType(questions: Question[]): boolean {
-    const booleanVariable = questions.reduce((a: Question, b: Question) => {
-        a.type === b.type ? true : false;
-    });
-    return booleanVariable;
+    //creating an array of just short answer questions
+    const shortType = questions.filter(
+        (question: Question) => question.type === "short_answer_question"
+    );
+    //comparing the length of short answer questions to array length
+    if (shortType.length === questions.length || shortType.length === 0) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 /***
@@ -202,7 +213,31 @@ export function changeQuestionTypeById(
     targetId: number,
     newQuestionType: QuestionType
 ): Question[] {
-    return [];
+    /*
+    const newArray = questions.map(
+        (question: Question): Question => ({
+            ...question,
+            type: !(question.id === targetId)? question.type :(question.type === "multiple_choice_question" && newQuestionType === "short_answer_question") ? newQuestionType & question.options = [] : newQuestionType
+        })
+    );
+    return newArray;
+    */
+    const newQuestion = questions.map(
+        (question: Question): Question => ({
+            ...question,
+            options: [...question.options]
+        })
+    );
+    const newArray = newQuestion.map((question: Question): Question => {
+        if (question.id === targetId) {
+            question.type = newQuestionType;
+            if (newQuestionType === "short_answer_question") {
+                question.options = [];
+            }
+        }
+        return question;
+    });
+    return newArray;
 }
 
 /**
@@ -215,13 +250,42 @@ export function changeQuestionTypeById(
  * Remember, if a function starts getting too complicated, think about how a helper function
  * can make it simpler! Break down complicated tasks into little pieces.
  */
+export function helperFunction(
+    questions: Question,
+    targetID: number,
+    targetOptionIndex: number,
+    newOption: string
+) {
+    let newArray;
+    if (questions.id === targetID) {
+        newArray = { ...questions, options: [...questions.options] };
+        newArray.options.splice(targetOptionIndex, 1, newOption);
+    } else {
+        newArray = { ...questions };
+    }
+    return newArray;
+}
 export function editOption(
     questions: Question[],
     targetId: number,
     targetOptionIndex: number,
     newOption: string
 ): Question[] {
-    return [];
+    let newArray;
+    if (targetOptionIndex === -1) {
+        newArray = questions.map(
+            (question: Question): Question =>
+                question.id === targetId
+                    ? { ...question, options: [...question.options, newOption] }
+                    : { ...question }
+        );
+    } else {
+        newArray = questions.map(
+            (question: Question): Question =>
+                helperFunction(question, targetId, targetOptionIndex, newOption)
+        );
+    }
+    return newArray;
 }
 
 /***
@@ -235,5 +299,13 @@ export function duplicateQuestionInArray(
     targetId: number,
     newId: number
 ): Question[] {
-    return [];
+    const clonedArray = questions.map(
+        (question: Question): Question => ({ ...question })
+    );
+    const targetIndex = clonedArray.findIndex(
+        (question: Question): boolean => question.id === targetId
+    );
+    const newArray = duplicateQuestion(newId, clonedArray[targetIndex]);
+    clonedArray.splice(targetIndex + 1, 0, newArray);
+    return clonedArray;
 }
