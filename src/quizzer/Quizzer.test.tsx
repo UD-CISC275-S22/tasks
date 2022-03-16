@@ -6,8 +6,8 @@ describe("Quizzer Tests", () => {
     beforeEach(() => {
         render(<Quizzer />);
     });
-    test("The Quizzer renders", () => {
-        // Up to you to decide what your tests are!
-        // Add more tests, more components, more test files!
+    test("The Quizzer renders the sketch", () => {
+        const imageShow = screen.getAllByAltText("App Sketch");
+        expect(imageShow).toEqual("App Sketch");
     });
 });
