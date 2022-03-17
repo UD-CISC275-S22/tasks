@@ -21,6 +21,7 @@ export function ShowHideTasks(): JSX.Element {
     const [visible, setVisible] = useState<boolean>(false);
     return (
         <div>
+            <Button onClick={() => setVisible(!visible)}>Show/Hide</Button>
             {visible && (
                 <div>
                     <CheckAnswer expectedAnswer="42"></CheckAnswer>
@@ -57,7 +58,6 @@ export function ShowHideTasks(): JSX.Element {
                     <CycleHoliday></CycleHoliday>
                 </div>
             )}
-            <Button onClick={() => setVisible(!visible)}>Show/Hide</Button>
         </div>
     );
 }

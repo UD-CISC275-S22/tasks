@@ -29,7 +29,7 @@ export function Question4(): JSX.Element {
 
     return (
         <div>
-            <h3>Question4</h3>
+            <h6>Question4</h6>
             <Row>
                 <Col>
                     {PEOPLE.map((member: string) => (
