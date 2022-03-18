@@ -1,17 +1,16 @@
-import React from "react";
-import { Question1 } from "./Question1";
-import { Question2 } from "./Question2";
-import { Question3 } from "./Question3";
-import { Question4 } from "./Question4";
+import React, { useState } from "react";
+import quizzer from "./quiz.json";
+import { QuizList } from "./QuizList";
+import { Quiz } from "./Quiz";
+import { Button } from "react-bootstrap";
+
+const QUIZZES = quizzer.map((quiz): Quiz => ({ ...quiz }));
 
 export function Quizzer(): JSX.Element {
+    const [quizzes, setQuizes] = useState<Quiz[]>(QUIZZES);
     return (
         <div>
-            <h3>Quizzer</h3>
-            <Question1></Question1>
-            <Question2></Question2>
-            <Question3></Question3>
-            <Question4></Question4>
+            <QuizList quiz={quizzes}></QuizList>
         </div>
     );
 }
