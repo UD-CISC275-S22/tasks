@@ -4,12 +4,12 @@ import { Button } from "react-bootstrap";
 export const COLORS = ["red", "blue", "green"];
 const DEFAULT_COLOR_INDEX = 0;
 
-interface colors {
+interface colorProps {
     setColorIndex: (index: number) => void;
     colorIndex: number;
 }
 
-function ChangeColor({ setColorIndex, colorIndex }: colors): JSX.Element {
+function ChangeColor({ setColorIndex, colorIndex }: colorProps): JSX.Element {
     return (
         <Button onClick={() => setColorIndex((1 + colorIndex) % COLORS.length)}>
             Next Color

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import { NumberLiteralType } from "typescript";
 
 interface boxProps {
     position: number;
