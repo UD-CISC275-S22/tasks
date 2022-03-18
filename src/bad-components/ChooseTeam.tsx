@@ -23,7 +23,11 @@ export function ChooseTeam(): JSX.Element {
             setTeam(newTeam);
         }
         //using setAllOptions ?
+<<<<<<< HEAD
         //test?
+=======
+        //test
+>>>>>>> 52f22726f886e8fefe261094c40ce3845b1c5b0f
         if (checkMember.length == 1000) {
             setAllOptions([]);
         }
