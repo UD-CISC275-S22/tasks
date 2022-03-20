@@ -295,19 +295,6 @@ export function duplicateQuestionInArray(
     targetId: number,
     newId: number
 ): Question[] {
-    /**const newQuestions = questions.map(
-        (question: Question): Question => ({ ...question })
-    );
-    const targetIndex: number = questions.findIndex(
-        (question: Question): boolean => question.id === targetId
-    );
-    const target = findQuestion(newQuestions, targetId);
-
-    if (target != null) {
-        const duplicate = duplicateQuestion(newId, target);
-        newQuestions.splice(targetIndex, 0, duplicate);
-    }*/
-    console.log(questions);
     let duplicate;
     const targetIndex: number = questions.findIndex(
         (question: Question): boolean => question.id === targetId
@@ -321,6 +308,5 @@ export function duplicateQuestionInArray(
     if (duplicate != undefined) {
         newQuestions.splice(targetIndex + 1, 0, duplicate);
     }
-    console.log(newQuestions);
     return newQuestions;
 }
