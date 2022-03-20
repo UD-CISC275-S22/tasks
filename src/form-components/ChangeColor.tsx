@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Form } from "react-bootstrap";
-import { isWhiteSpaceSingleLine } from "typescript";
+//import { isWhiteSpaceSingleLine } from "typescript";
 
 export function ChangeColor(): JSX.Element {
     const [color, setColor] = useState<string>("Red");
