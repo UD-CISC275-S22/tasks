@@ -237,6 +237,12 @@ export function changeQuestionTypeById(
             newQuestions.splice(targetIndex, 1, targetCopy);
         }
     }
+    /**const newQuestions = questions.map(
+        (question: Question): Question =>
+            targetId === question.id
+                ? question.id = targetId && question.type = newQuestionType 
+                : question
+    );*/
     return newQuestions;
 }
 export function editOptionArray(
@@ -246,7 +252,6 @@ export function editOptionArray(
 ): Question {
     const optionCopy = [...question.options];
     if (targetOptionIndex === -1) {
-        //optionCopy = [...question.options, newOption];
         return { ...question, options: [...question.options, newOption] };
     } else {
         optionCopy.splice(targetOptionIndex, 1, newOption);
@@ -270,34 +275,13 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ): Question[] {
-    console.log(questions);
-    console.log(newOption);
-    console.log(targetId);
-    /**  const newQuestions = questions.map(
-        (question: Question): Question => ({ ...question })
-    );
-    const targetIndex: number = newQuestions.findIndex(
-        (question: Question): boolean => question.id === targetId
-    );
-    
-    let targetCopy = { ...target };
-    targetCopy = editOptionArray(
-        questions,
-        targetId,
-        targetOptionIndex,
-        newOption
-    );
-
-    newQuestions.splice(targetIndex, 1, targetCopy);
-        */
-    questions.map(
+    const newQuestions = questions.map(
         (question: Question): Question =>
             targetId === question.id
                 ? editOptionArray(question, targetOptionIndex, newOption)
                 : question
     );
-    console.log(questions);
-    return questions;
+    return newQuestions;
 }
 
 /***
@@ -311,7 +295,7 @@ export function duplicateQuestionInArray(
     targetId: number,
     newId: number
 ): Question[] {
-    const newQuestions = questions.map(
+    /**const newQuestions = questions.map(
         (question: Question): Question => ({ ...question })
     );
     const targetIndex: number = questions.findIndex(
@@ -322,6 +306,21 @@ export function duplicateQuestionInArray(
     if (target != null) {
         const duplicate = duplicateQuestion(newId, target);
         newQuestions.splice(targetIndex, 0, duplicate);
+    }*/
+    console.log(questions);
+    let duplicate;
+    const targetIndex: number = questions.findIndex(
+        (question: Question): boolean => question.id === targetId
+    );
+    const newQuestions = questions.map(
+        (question: Question): Question =>
+            targetId === question.id
+                ? (duplicate = duplicateQuestion(newId, question)) && question
+                : question
+    );
+    if (duplicate != undefined) {
+        newQuestions.splice(targetIndex + 1, 0, duplicate);
     }
+    console.log(newQuestions);
     return newQuestions;
 }
