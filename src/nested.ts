@@ -1,7 +1,7 @@
 /* eslint-disable indent */
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
-import { makeBlankQuestion } from "./objects";
+import { duplicateQuestion, makeBlankQuestion } from "./objects";
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
@@ -366,16 +366,21 @@ export function duplicateQuestionInArray(
         (question: Question): boolean => question.id === targetId
     );
     const arrayHolder = [...questions];
-
-    arrayHolder.splice(idHolder + 1, 0, {
-        id: newId,
-        name: "Copy of " + questions[idHolder].name,
-        type: questions[idHolder].type,
+    const questionSpliced = {
+        id: questions[idHolder].id,
+        name: questions[idHolder].name,
         body: questions[idHolder].body,
-        expected: questions[idHolder].expected,
+        type: questions[idHolder].type,
         options: questions[idHolder].options,
+        expected: questions[idHolder].expected,
         points: questions[idHolder].points,
         published: questions[idHolder].published
-    });
+    };
+
+    arrayHolder.splice(
+        idHolder + 1,
+        0,
+        duplicateQuestion(newId, questionSpliced)
+    );
     return arrayHolder;
 }
