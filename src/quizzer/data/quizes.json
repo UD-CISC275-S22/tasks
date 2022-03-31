@@ -1,32 +1,69 @@
 [
     {
         "title": "Quiz 1",
-        "description": "This is the first quiz of the semester",
+        "description": "First quiz of the semester",
+        "numQuest": 1,
+        "questions": [
+            {
+                "type": "short_answer_question",
+                "points": 1,
+                "name": "Name",
+                "body": "What is your name?",
+                "correctAns": "Abbey",
+                "published": true
+            }
+        ]
+    }, 
+    {
+        "title":"Quiz 2",
+        "description": "second quiz of the semester",
+        "numQuest": 2,
+        "questions": [
+            {
+                "type": "short_answer_question",
+                "points": 2,
+                "name": "Date",
+                "body": "what is today's date?",
+                "correctAns": "March 31",
+                "published":true
+            },
+            {
+                "type": "short_answer_question",
+                "points": 3,
+                "name": "Age",
+                "body":"how old are you?",
+                "correctAns": "20",
+                "published": true
+            }
+        ]
+    },
+    {
+        "title":"Quiz 3",
+        "description": "third quiz of the semester",
         "numQuest": 3,
         "questions": [
             {
-                "name": "Question 1",
                 "type": "short_answer_question",
-                "pts": 2,
-                "body": "please enter your name",
-                "correctAns": "Abbey",
-                "published": true
-
-            },
-            {
-                "name": "Question 2",
-                "type": "short_answer_question",
-                "pts": 1,
-                "body": "please enter the date",
-                "correctAns": "March 31",
+                "points": 4,
+                "name": "Alphabet1",
+                "body": "What is the first letter in the alphabet?",
+                "correctAns": "A",
                 "published": true
             },
             {
-                "name": "Question 3",
                 "type": "short_answer_question",
-                "pts": 3,
-                "body": "how old are you?",
-                "correctAns": "20",
+                "points": 5, 
+                "name": "Alphabet2",
+                "body": "what is the last letter in the alphabet?",
+                "correctAns": "z",
+                "published": true
+            },
+            {
+                "type": "short_answer_question",
+                "points": 6,
+                "name": "Numbers",
+                "body": "What is 2+2?",
+                "correctAns": "4",
                 "published": true
             }
         ]
