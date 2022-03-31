@@ -6,7 +6,7 @@ export interface Question {
     body: string;
     type: string;
     points: number;
-    ans: string;
+    correctAns: string;
     //published: boolean;
     //inputanswer: Answer;
     //not sure if i'm going to need this or not

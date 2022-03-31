@@ -23,7 +23,7 @@
                 "points": 2,
                 "name": "Date",
                 "body": "what is today's date?",
-                "correctAns": "March 31",
+                "correctAns": "March 31"
             },
             {
                 "type": "short_answer_question",

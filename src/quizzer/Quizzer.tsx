@@ -1,7 +1,11 @@
-import React from "react";
+//have everything displayed here, similar to the "App.tsx" in the example
+
+import React, { useState } from "react";
+import quizzes from "./Data/quizes.json";
+import { Quiz } from "./Interfaces/quiz";
+
+const QUIZZES = quizzes.map((quiz): Quiz => ({ ...quiz }));
 export function Quizzer(): JSX.Element {
-    //all i want to do here is have everything displayed nice and neat
-    //include all buttons, the quizes, and the questions
-    //basically - make this like the "App.tsx" file in the example
+    const [quizzes, setQuizzes] = useState<Quiz[]>(QUIZZES);
     return <h3>Quizzer</h3>;
 }
