@@ -1,0 +1,34 @@
+[
+    {
+        "title": "Quiz 1",
+        "description": "This is the first quiz of the semester",
+        "numQuest": 3,
+        "questions": [
+            {
+                "name": "Question 1",
+                "type": "short_answer_question",
+                "pts": 2,
+                "body": "please enter your name",
+                "correctAns": "Abbey",
+                "published": true
+
+            },
+            {
+                "name": "Question 2",
+                "type": "short_answer_question",
+                "pts": 1,
+                "body": "please enter the date",
+                "correctAns": "March 31",
+                "published": true
+            },
+            {
+                "name": "Question 3",
+                "type": "short_answer_question",
+                "pts": 3,
+                "body": "how old are you?",
+                "correctAns": "20",
+                "published": true
+            }
+        ]
+    }
+]
