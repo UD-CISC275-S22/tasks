@@ -4,11 +4,11 @@
 export interface Question {
     name: string;
     body: string;
-    points: number;
-    published: boolean;
-    //inputanswer: Answer;
     type: string;
+    points: number;
+    ans: string;
+    //published: boolean;
+    //inputanswer: Answer;
     //not sure if i'm going to need this or not
-    correctAns: string;
     //correct: boolean;
 }

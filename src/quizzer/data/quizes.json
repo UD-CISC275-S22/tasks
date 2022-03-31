@@ -9,8 +9,7 @@
                 "points": 1,
                 "name": "Name",
                 "body": "What is your name?",
-                "correctAns": "Abbey",
-                "published": true
+                "correctAns": "Abbey"
             }
         ]
     }, 
@@ -25,15 +24,13 @@
                 "name": "Date",
                 "body": "what is today's date?",
                 "correctAns": "March 31",
-                "published":true
             },
             {
                 "type": "short_answer_question",
                 "points": 3,
                 "name": "Age",
                 "body":"how old are you?",
-                "correctAns": "20",
-                "published": true
+                "correctAns": "20"
             }
         ]
     },
@@ -47,24 +44,21 @@
                 "points": 4,
                 "name": "Alphabet1",
                 "body": "What is the first letter in the alphabet?",
-                "correctAns": "A",
-                "published": true
+                "correctAns": "A"
             },
             {
                 "type": "short_answer_question",
                 "points": 5, 
                 "name": "Alphabet2",
                 "body": "what is the last letter in the alphabet?",
-                "correctAns": "z",
-                "published": true
+                "correctAns": "z"
             },
             {
                 "type": "short_answer_question",
                 "points": 6,
                 "name": "Numbers",
                 "body": "What is 2+2?",
-                "correctAns": "4",
-                "published": true
+                "correctAns": "4"
             }
         ]
     }

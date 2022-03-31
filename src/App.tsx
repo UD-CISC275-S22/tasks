@@ -1,4 +1,3 @@
-import React from "react";
 //import { Button, Col, Container, Row } from "react-bootstrap";
 import "./App.css";
 //import { ChangeType } from "./components/ChangeType";
@@ -17,10 +16,11 @@ import "./App.css";
 //import { MultipleChoiceQuestion } from "./form-components/MultipleChoiceQuestion";
 //import { ChangeColor } from "./form-components/ChangeColor";
 import { Quizzer } from "./quizzer/Quizzer";
-import quizes from "./quizzer/Data/quizes.json";
-import { Quiz } from "./quizzer/Interfaces/quiz";
+//import quizes from "./quizzer/Data/quizes.json";
+//import { Quiz } from "./quizzer/Interfaces/quiz";
+//import React, { useState } from "react";
+import React from "react";
 
-const QUIZES = quizes.map((quiz): Quiz => ({ ...quiz }));
 function App(): JSX.Element {
     return (
         <div className="App">
@@ -29,6 +29,7 @@ function App(): JSX.Element {
             </header>
             <Quizzer></Quizzer>
             <hr></hr>
+            {/*<div>{QUIZES}</div>*/}
 
             {/* {<DoubleHalf></DoubleHalf>} 
             <CheckAnswer expectedAnswer="42"></CheckAnswer>
