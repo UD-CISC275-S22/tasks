@@ -7,6 +7,6 @@ import React from "react";
 
 //const QUIZZES = quizzes.map((quiz): Quiz => ({ ...quiz }));
 export function Quizzer(): JSX.Element {
-//    const [quizzes, setQuizzes] = useState<Quiz[]>(QUIZZES);
+    //    const [quizzes, setQuizzes] = useState<Quiz[]>(QUIZZES);
     return <h3>Quizzer</h3>;
 }

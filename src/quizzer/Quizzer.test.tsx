@@ -7,7 +7,7 @@ import { Quizzer } from "./Quizzer";
 //        render(<Quizzer />);
 //    });
 //    test("The Quizzer renders", () => {
-        // Up to you to decide what your tests are!
-        // Add more tests, more components, more test files!
+// Up to you to decide what your tests are!
+// Add more tests, more components, more test files!
 //    });
 //});
