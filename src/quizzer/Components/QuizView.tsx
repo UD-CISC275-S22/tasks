@@ -15,9 +15,14 @@ export function QuizView({
     editQuiz: (id: number, newQuiz: Quiz) => void;
 }): JSX.Element {
     const [editing, setEditing] = useState<boolean>(false);
+    const [select, setSelected] = useState<boolean>(false);
 
     function changeEditing() {
         setEditing(!editing);
+    }
+
+    function changeSelected() {
+        setSelected(!select);
     }
 
     return editing ? (
@@ -37,6 +42,7 @@ export function QuizView({
                     <p>Number of Questions: {quiz.numQuest}</p>
                     <RecordControls
                         changeEditing={changeEditing}
+                        changeSelected={changeSelected}
                     ></RecordControls>
                 </Col>
             </Row>
