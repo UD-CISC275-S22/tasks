@@ -1,7 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import {Container, Row, Col} from "react-bootstrap";
-import {Quiz} from "../Interfaces/quiz";
+import { Container, Row, Col } from "react-bootstrap";
+import { Quiz } from "../Interfaces/quiz";
+import { QuizEditor } from "./QuizEditor";
 
 export function QuizView({
     quiz,
@@ -14,10 +15,29 @@ export function QuizView({
 }): JSX.Element {
     const [editing, setEditing] = useState<boolean>(false);
 
-    function changeEditing(){
+    function changeEditing() {
         setEditing(!editing);
     }
 
     return editing ? (
+        <QuizEditor
+            changeEditing={changeEditing}
+            quiz={quiz}
+            editQuiz={editQuiz}
+            deleteQuiz={deleteQuiz}
+        ></QuizEditor>
+    ) : (
+        <Container>
+            <Row>
+                <Col>
+                    <h3>{quiz.title}</h3>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+                    <p>{quiz.description}</p>
+                </Col>
+            </Row>
+        </Container>
     );
 }

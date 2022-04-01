@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { QuizList } from "./Components/QuizList";
 import quizzes from "./Data/quizes.json";
 import { Quiz } from "./Interfaces/quiz";
 
@@ -21,5 +22,18 @@ export function Quizzer(): JSX.Element {
             quizzes.filter((quiz: Quiz): boolean => quiz.title !== title)
         );
     }
-    return <h3>Quizzer</h3>;
+    return (
+        <div>
+            <div>
+                <h3>Quizzer</h3>
+            </div>
+            <div>
+                <QuizList
+                    quizzes={quizzes}
+                    editQuiz={editQuiz}
+                    deleteQuiz={deleteQuiz}
+                ></QuizList>
+            </div>
+        </div>
+    );
 }
