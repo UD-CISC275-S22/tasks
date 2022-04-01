@@ -67,7 +67,6 @@ export function Quizzer(): JSX.Element {
             </div>
             <div>
                 <h3>Selected Quiz: {selected}</h3>
-
             </div>
         </div>
     );
