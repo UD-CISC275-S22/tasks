@@ -32,16 +32,12 @@ export function QuizView({
             <Row>
                 <Col>
                     <h3>{quiz.title}</h3>
+                    <p>{quiz.description}</p>
+                    {/*<MovieRating={movie.rating}></MovieRating*/}
+                    <p>Number of Questions: {quiz.numQuest}</p>
                     <RecordControls
                         changeEditing={changeEditing}
                     ></RecordControls>
-                    {/*<MovieRating={movie.rating}></MovieRating*/}
-                    <i>Number of Questions {quiz.numQuest}</i>
-                </Col>
-            </Row>
-            <Row>
-                <Col>
-                    <p>{quiz.description}</p>
                 </Col>
             </Row>
         </Container>

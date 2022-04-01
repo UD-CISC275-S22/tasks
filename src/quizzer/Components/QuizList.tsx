@@ -13,7 +13,7 @@ export function QuizList({
     editQuiz: (id: number, newQuiz: Quiz) => void;
 }): JSX.Element {
     return (
-        <Stack gap={3}>
+        <Stack gap={1}>
             {quizzes.map((quiz: Quiz) => (
                 <div key={quiz.id} className="bg-light border m-2 p-2">
                     <QuizView
