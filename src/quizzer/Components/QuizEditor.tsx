@@ -10,15 +10,15 @@ export function QuizEditor({
 }: {
     changeEditing: () => void;
     quiz: Quiz;
-    editQuiz: (title: string, newQuiz: Quiz) => void;
-    deleteQuiz: (title: string) => void;
+    editQuiz: (id: number, newQuiz: Quiz) => void;
+    deleteQuiz: (id: number) => void;
 }): JSX.Element {
     const [title, setTitle] = useState<string>(quiz.title);
     const [description, setDescription] = useState<string>(quiz.description);
     const [numQuest, setnumQuest] = useState<string>(quiz.numQuest.toString());
 
     function save() {
-        editQuiz(quiz.title, {
+        editQuiz(quiz.id, {
             ...quiz,
             title: title,
             description: description,
@@ -88,7 +88,7 @@ export function QuizEditor({
                         Cancel
                     </Button>
                     <Button
-                        onClick={() => deleteQuiz(quiz.title)}
+                        onClick={() => deleteQuiz(quiz.id)}
                         variant="danger"
                         className="me-8"
                     >
