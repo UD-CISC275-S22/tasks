@@ -23,6 +23,7 @@ export function QuizView({
 
     function changeSelected() {
         setSelected(!select);
+        quiz.select = true;
     }
 
     return editing ? (
@@ -38,11 +39,10 @@ export function QuizView({
                 <Col>
                     <h3>{quiz.title}</h3>
                     <p>{quiz.description}</p>
-                    {/*<MovieRating={movie.rating}></MovieRating*/}
                     <p>Number of Questions: {quiz.numQuest}</p>
                     <RecordControls
-                        changeEditing={changeEditing}
                         changeSelected={changeSelected}
+                        changeEditing={changeEditing}
                     ></RecordControls>
                 </Col>
             </Row>

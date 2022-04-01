@@ -19,7 +19,7 @@ export function AddQuizModal({
     function saveChanges() {
         addQuiz({
             id: 0,
-            title: "",
+            title: title,
             numQuest: 0,
             description: "",
             questions: questions.map(
@@ -33,7 +33,8 @@ export function AddQuizModal({
                     correctAns: "",
                     body: ""
                 })
-            )
+            ),
+            select: false
         });
         handleClose();
     }

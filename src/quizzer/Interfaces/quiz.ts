@@ -8,4 +8,5 @@ export interface Quiz {
     numQuest: number;
     //id: string;
     questions: Question[];
+    select: boolean;
 }

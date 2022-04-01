@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import { AddQuizModal } from "./Components/AddQuizModal";
 import { QuizList } from "./Components/QuizList";
 import quizzes from "./Data/quizes.json";
@@ -9,17 +9,11 @@ const QUIZZES = quizzes.map((quiz): Quiz => ({ ...quiz }));
 
 export function Quizzer(): JSX.Element {
     const [quizzes, setQuizzes] = useState<Quiz[]>(QUIZZES);
-    const [showAddModal, setShowAddModal] = useState(false);
-    const [selected, setSelected] = useState<Quiz>();
+    const [showAddModal, setShowAddModal] = useState<boolean>(false);
+    const [selectedQuiz, setSelectedQuiz] = useState<string>("");
 
-    function selectQuiz(id: number) {
-        const select = quizzes.find((quiz: Quiz): boolean => quiz.id === id);
-        if (select === undefined) {
-            //return 0;
-        } else {
-            setSelected(select);
-            //return 1;
-        }
+    function updateSelectedQuiz(event: React.ChangeEvent<HTMLSelectElement>) {
+        setSelectedQuiz(event.target.value);
     }
 
     function editQuiz(id: number, newQuiz: Quiz) {
@@ -71,7 +65,19 @@ export function Quizzer(): JSX.Element {
                 ></AddQuizModal>
             </div>
             <div>
-                <h3>Selected Quiz: {selected}</h3>
+                <Form.Group controlId="SelectAQuiz">
+                    <Form.Label>Please Select a Quiz</Form.Label>
+                    <Form.Select
+                        value={selectedQuiz}
+                        onChange={updateSelectedQuiz}
+                    >
+                        {QUIZZES.map((title: Quiz) => (
+                            <option key={title.title} value={title.title}>
+                                {title.title}
+                            </option>
+                        ))}
+                    </Form.Select>
+                </Form.Group>
             </div>
         </div>
     );
