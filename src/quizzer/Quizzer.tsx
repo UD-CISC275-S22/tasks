@@ -10,12 +10,12 @@ const QUIZZES = quizzes.map((quiz): Quiz => ({ ...quiz }));
 export function Quizzer(): JSX.Element {
     const [quizzes, setQuizzes] = useState<Quiz[]>(QUIZZES);
     const [showAddModal, setShowAddModal] = useState(false);
-    const [selected, setSelected] = useState<Quiz>();
+    //const [selected, setSelected] = useState<Quiz>();
 
-    function selectQuiz(id: number) {
-        const select = quizzes.find((quiz: Quiz): boolean => quiz.id === id);
-        setSelected(select);
-    }
+    //function selectQuiz(id: number) {
+    //const select = quizzes.find((quiz: Quiz): boolean => quiz.id === id);
+    //setSelected(select);
+    //}
 
     function editQuiz(id: number, newQuiz: Quiz) {
         setQuizzes(
@@ -65,9 +65,7 @@ export function Quizzer(): JSX.Element {
                     addQuiz={addQuiz}
                 ></AddQuizModal>
             </div>
-            <div>
-                <h3>Selected Quiz: {selected}</h3>
-            </div>
+            <div>{/*<h3>Selected Quiz: {selected}</h3>*/}</div>
         </div>
     );
 }
