@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { AddQuizModal } from "./Components/AddQuizModal";
-import { QuestionList } from "./Components/QuestionList";
 import { QuizList } from "./Components/QuizList";
 import { QuizSelected } from "./Components/QuizSelected";
 import quizzes from "./Data/quizes.json";
