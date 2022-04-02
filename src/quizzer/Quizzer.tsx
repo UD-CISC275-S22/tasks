@@ -3,7 +3,7 @@ import { Button, Form } from "react-bootstrap";
 import { AddQuizModal } from "./Components/AddQuizModal";
 import { QuizList } from "./Components/QuizList";
 import { QuizSelected } from "./Components/QuizSelected";
-import quizzes from "./Data/quizes.json";
+import quizzes from "./Data/quizzes.json";
 import { Quiz } from "./Interfaces/quiz";
 
 const QUIZZES = quizzes.map((quiz): Quiz => ({ ...quiz }));

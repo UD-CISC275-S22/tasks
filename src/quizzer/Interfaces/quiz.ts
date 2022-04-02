@@ -6,7 +6,5 @@ export interface Quiz {
     title: string;
     description: string;
     numQuest: number;
-    //id: string;
     questions: Question[];
-    select: boolean;
 }

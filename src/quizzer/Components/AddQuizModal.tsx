@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Modal, Form, Col, Row } from "react-bootstrap";
 import { Quiz } from "../Interfaces/quiz";
-import { Question } from "../Interfaces/question";
+//import { Question } from "../Interfaces/question";
 //import { setSyntheticLeadingComments } from "typescript";
 
 export function AddQuizModal({
@@ -14,7 +14,7 @@ export function AddQuizModal({
     addQuiz: (newQuiz: Quiz) => void;
 }) {
     const [title, setTitle] = useState<string>("");
-    const [questions] = useState<string[]>([]);
+    //const [questions] = useState<string[]>([]);
 
     function saveChanges() {
         addQuiz({
@@ -22,19 +22,7 @@ export function AddQuizModal({
             title: title,
             numQuest: 0,
             description: "",
-            questions: questions.map(
-                (question: string): Question => ({
-                    id: 0,
-                    name: question,
-                    points: 0,
-                    type: "",
-                    published: true,
-                    options: [],
-                    correctAns: "",
-                    body: ""
-                })
-            ),
-            select: false
+            questions: []
         });
         handleClose();
     }
