@@ -3,6 +3,7 @@ import { Button, Form } from "react-bootstrap";
 import { AddQuizModal } from "./Components/AddQuizModal";
 import { QuestionList } from "./Components/QuestionList";
 import { QuizList } from "./Components/QuizList";
+import { QuizSelected } from "./Components/QuizSelected";
 import quizzes from "./Data/quizes.json";
 import { Quiz } from "./Interfaces/quiz";
 
@@ -12,18 +13,9 @@ export function Quizzer(): JSX.Element {
     const [quizzes, setQuizzes] = useState<Quiz[]>(QUIZZES);
     const [showAddModal, setShowAddModal] = useState<boolean>(false);
     const [selectedTitle, setSelectedTitle] = useState<string>("");
-    const [selectedQuiz, setSelectedQuiz] = useState<Quiz>();
 
     function updateSelectedTitle(event: React.ChangeEvent<HTMLSelectElement>) {
         setSelectedTitle(event.target.value);
-        const quizzz = quizzes.find(
-            (quiz: Quiz): boolean => selectedTitle === quiz.title
-        );
-        if (quizzz !== undefined) {
-            setSelectedQuiz(quizzz);
-        } else {
-            setSelectedQuiz(QUIZZES[0]);
-        }
     }
 
     function editQuiz(id: number, newQuiz: Quiz) {
@@ -90,8 +82,14 @@ export function Quizzer(): JSX.Element {
                 </Form.Group>
             </div>
             <div>
-                <h3>You Selected: {selectedQuiz}</h3>
-                <QuestionList quiz={selectedQuiz || QUIZZES[0]}></QuestionList>
+                {selectedTitle ? (
+                    <QuizSelected
+                        selectedTitle={selectedTitle}
+                        quizzes={QUIZZES}
+                    ></QuizSelected>
+                ) : (
+                    <></>
+                )}
             </div>
         </div>
     );
