@@ -32,14 +32,11 @@ export function QuestionView({
             <Row>
                 <Col>
                     <h3>{question.name}</h3>
+                    <p>Points: {question.points}</p>
+                    <p>{question.body}</p>
                     <QuestionRecordControls
                         changeEditing={changeEditing}
                     ></QuestionRecordControls>
-                </Col>
-            </Row>
-            <Row>
-                <Col>
-                    <p>{question.body}</p>
                 </Col>
             </Row>
         </Container>

@@ -7,14 +7,13 @@ import { AddQuestionModal } from "./AddQuestionModal";
 
 export function QuestionList({
     //send a single quiz in
-    quiz
+    //quiz,
+    questionss
 }: {
-    quiz: Quiz;
+    //quiz: Quiz;
+    questionss: Question[];
 }): JSX.Element {
-    const QUESTIONS = quiz.questions.map(
-        (question): Question => ({ ...question })
-    );
-    const [questions, setQuestions] = useState<Question[]>(QUESTIONS);
+    const [questions, setQuestions] = useState<Question[]>(questionss);
     const [showAddModal, setShowAddModal] = useState<boolean>(false);
 
     function editQuestion(id: number, newQuestion: Question) {

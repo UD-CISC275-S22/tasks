@@ -12,9 +12,18 @@ export function Quizzer(): JSX.Element {
     const [quizzes, setQuizzes] = useState<Quiz[]>(QUIZZES);
     const [showAddModal, setShowAddModal] = useState<boolean>(false);
     const [selectedTitle, setSelectedTitle] = useState<string>("");
+    const [selectQuiz, setSelectedQuiz] = useState<Quiz>();
 
     function updateSelectedTitle(event: React.ChangeEvent<HTMLSelectElement>) {
         setSelectedTitle(event.target.value);
+
+        if (quizzes.map((Quiz) => Quiz.title).indexOf(selectedTitle) !== -1) {
+            setSelectedQuiz(
+                QUIZZES[
+                    QUIZZES.map((Quiz) => Quiz.title).indexOf(selectedTitle)
+                ]
+            );
+        }
     }
 
     function editQuiz(id: number, newQuiz: Quiz) {
@@ -79,16 +88,17 @@ export function Quizzer(): JSX.Element {
                         ))}
                     </Form.Select>
                 </Form.Group>
-            </div>
-            <div>
-                {selectedTitle ? (
-                    <QuizSelected
-                        selectedTitle={selectedTitle}
-                        quizzes={QUIZZES}
-                    ></QuizSelected>
-                ) : (
-                    <></>
-                )}
+                <div>
+                    {selectQuiz ? (
+                        <QuizSelected
+                            selectedTitle={selectedTitle}
+                            quizzes={QUIZZES}
+                            selectedQuiz={selectQuiz}
+                        ></QuizSelected>
+                    ) : (
+                        <></>
+                    )}
+                </div>
             </div>
         </div>
     );
