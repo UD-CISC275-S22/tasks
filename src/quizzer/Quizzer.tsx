@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { AddQuizModal } from "./Components/AddQuizModal";
+import { QuestionList } from "./Components/QuestionList";
 import { QuizList } from "./Components/QuizList";
 import quizzes from "./Data/quizes.json";
 import { Quiz } from "./Interfaces/quiz";
@@ -10,10 +11,19 @@ const QUIZZES = quizzes.map((quiz): Quiz => ({ ...quiz }));
 export function Quizzer(): JSX.Element {
     const [quizzes, setQuizzes] = useState<Quiz[]>(QUIZZES);
     const [showAddModal, setShowAddModal] = useState<boolean>(false);
-    const [selectedQuiz, setSelectedQuiz] = useState<string>("");
+    const [selectedTitle, setSelectedTitle] = useState<string>("");
+    const [selectedQuiz, setSelectedQuiz] = useState<Quiz>();
 
-    function updateSelectedQuiz(event: React.ChangeEvent<HTMLSelectElement>) {
-        setSelectedQuiz(event.target.value);
+    function updateSelectedTitle(event: React.ChangeEvent<HTMLSelectElement>) {
+        setSelectedTitle(event.target.value);
+        const quizzz = quizzes.find(
+            (quiz: Quiz): boolean => selectedTitle === quiz.title
+        );
+        if (quizzz !== undefined) {
+            setSelectedQuiz(quizzz);
+        } else {
+            setSelectedQuiz(QUIZZES[0]);
+        }
     }
 
     function editQuiz(id: number, newQuiz: Quiz) {
@@ -68,8 +78,8 @@ export function Quizzer(): JSX.Element {
                 <Form.Group controlId="SelectAQuiz">
                     <Form.Label>Please Select a Quiz</Form.Label>
                     <Form.Select
-                        value={selectedQuiz}
-                        onChange={updateSelectedQuiz}
+                        value={selectedTitle}
+                        onChange={updateSelectedTitle}
                     >
                         {QUIZZES.map((title: Quiz) => (
                             <option key={title.title} value={title.title}>
@@ -78,6 +88,10 @@ export function Quizzer(): JSX.Element {
                         ))}
                     </Form.Select>
                 </Form.Group>
+            </div>
+            <div>
+                <h3>You Selected: {selectedQuiz}</h3>
+                <QuestionList quiz={selectedQuiz || QUIZZES[0]}></QuestionList>
             </div>
         </div>
     );

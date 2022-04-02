@@ -4,7 +4,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Question } from "../Interfaces/question";
 import { QuestionEditor } from "./QuestionEditor";
 import { QuestionRecordControls } from "./QuestionRecordControls";
-//import {QuestionRecordControls} from "./QuestionRecordControls";
 
 export function QuestionView({
     question,
