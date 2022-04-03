@@ -1,29 +1,24 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { AddQuizModal } from "./Components/AddQuizModal";
+import { QuestionList } from "./Components/QuestionList";
 import { QuizList } from "./Components/QuizList";
-import { QuizSelected } from "./Components/QuizSelected";
 import quizzes from "./Data/quizzes.json";
 import { Quiz } from "./Interfaces/quiz";
 
 const QUIZZES = quizzes.map((quiz): Quiz => ({ ...quiz }));
+let totalPoints = 0;
 
 export function Quizzer(): JSX.Element {
     const [quizzes, setQuizzes] = useState<Quiz[]>(QUIZZES);
     const [showAddModal, setShowAddModal] = useState<boolean>(false);
+    const [selectedQuiz, setSelectedQuiz] = useState<Quiz>(quizzes[0]);
     const [selectedTitle, setSelectedTitle] = useState<string>("");
-    const [selectQuiz, setSelectedQuiz] = useState<Quiz>();
 
     function updateSelectedTitle(event: React.ChangeEvent<HTMLSelectElement>) {
         setSelectedTitle(event.target.value);
-
-        if (quizzes.map((Quiz) => Quiz.title).indexOf(selectedTitle) !== -1) {
-            setSelectedQuiz(
-                QUIZZES[
-                    QUIZZES.map((Quiz) => Quiz.title).indexOf(selectedTitle)
-                ]
-            );
-        }
+        const ind = quizzes.map((Quiz) => Quiz.title).indexOf(selectedTitle);
+        setSelectedQuiz(quizzes[ind]);
     }
 
     function editQuiz(id: number, newQuiz: Quiz) {
@@ -54,6 +49,13 @@ export function Quizzer(): JSX.Element {
                 <h3>Quizzer</h3>
             </div>
             <div>
+                {totalPoints === 1 ? (
+                    <h3>You have 1 point</h3>
+                ) : (
+                    <h3>You have {totalPoints} points</h3>
+                )}
+            </div>
+            <div>
                 <QuizList
                     quizzes={quizzes}
                     editQuiz={editQuiz}
@@ -75,29 +77,24 @@ export function Quizzer(): JSX.Element {
                 ></AddQuizModal>
             </div>
             <div>
-                <Form.Group controlId="SelectAQuiz">
+                <Form.Group controlId="selectedQuiz">
                     <Form.Label>Please Select a Quiz</Form.Label>
                     <Form.Select
                         value={selectedTitle}
                         onChange={updateSelectedTitle}
                     >
-                        {QUIZZES.map((title: Quiz) => (
-                            <option key={title.title} value={title.title}>
+                        {quizzes.map((title: Quiz) => (
+                            <option key={"Quiz"} value={title.title}>
                                 {title.title}
                             </option>
                         ))}
                     </Form.Select>
                 </Form.Group>
                 <div>
-                    {selectQuiz ? (
-                        <QuizSelected
-                            selectedTitle={selectedTitle}
-                            quizzes={QUIZZES}
-                            selectedQuiz={selectQuiz}
-                        ></QuizSelected>
-                    ) : (
-                        <></>
-                    )}
+                    <h3>You have Selected {selectedTitle}</h3>
+                    <QuestionList
+                        questionss={selectedQuiz.questions}
+                    ></QuestionList>
                 </div>
             </div>
         </div>
