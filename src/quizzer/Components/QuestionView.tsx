@@ -16,7 +16,6 @@ export function QuestionView({
 }): JSX.Element {
     const [editing, setEditing] = useState<boolean>(false);
     const [answer, setAnswer] = useState<string>("");
-    const [published, setPublished] = useState<boolean>(question.published);
 
     function changeEditing() {
         setEditing(!editing);
@@ -24,10 +23,6 @@ export function QuestionView({
 
     function updateAnswer(event: React.ChangeEvent<HTMLTextAreaElement>) {
         setAnswer(event.target.value);
-    }
-
-    function updatePublished() {
-        setPublished(!published);
     }
 
     return editing ? (
@@ -45,11 +40,16 @@ export function QuestionView({
                     <p>Points: {question.points}</p>
                     <p>{question.body}</p>
                     <QuestionRecordControls
-                        updatePublished={updatePublished}
+                        question={question}
                         updateAnswer={updateAnswer}
                         changeEditing={changeEditing}
                     ></QuestionRecordControls>
                 </Col>
+            </Row>
+            <Row>
+                {answer === question.correctAns
+                    ? "✔️That is Correct"
+                    : "❌Wrong Answer"}
             </Row>
         </Container>
     );

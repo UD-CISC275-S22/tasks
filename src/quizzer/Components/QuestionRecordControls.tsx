@@ -2,13 +2,14 @@
 //import { Button, Form } from "react-bootstrap";
 import React from "react";
 import { Button, Form } from "react-bootstrap";
+import { Question } from "../Interfaces/question";
 
 export function QuestionRecordControls({
-    updatePublished,
+    question,
     updateAnswer,
     changeEditing
 }: {
-    updatePublished: () => void;
+    question: Question;
     updateAnswer: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
     changeEditing: () => void;
 }): JSX.Element {
@@ -26,15 +27,6 @@ export function QuestionRecordControls({
                         onChange={updateAnswer}
                     />
                 </Form.Group>
-            </div>
-            <div>
-                <Button
-                    className="float-right"
-                    size="sm"
-                    onClick={updatePublished}
-                >
-                    Publish
-                </Button>
             </div>
         </div>
     );
