@@ -17,19 +17,30 @@ export function QuestionView({
     points: number;
 }): JSX.Element {
     const [editing, setEditing] = useState<boolean>(false);
-    const [shortanswer, setshortAnswer] = useState<string>("");
-    const [mc, setMC] = useState<string>("");
+    const [answer, setAnswer] = useState<string>("");
 
     function changeEditing() {
         setEditing(!editing);
     }
 
-    function updateShortAnswer(event: React.ChangeEvent<HTMLTextAreaElement>) {
-        setshortAnswer(event.target.value);
+    function updateAnswer(event: React.ChangeEvent<HTMLTextAreaElement>) {
+        setAnswer(event.target.value);
     }
 
-    function updateMC(event: React.ChangeEvent<HTMLSelectElement>) {
-        setMC(event.target.value);
+    function updateMCAnswer(event: React.ChangeEvent<HTMLSelectElement>) {
+        setAnswer(event.target.value);
+    }
+
+    function checkAnswer(question: Question, answer: string): boolean {
+        if (
+            question.correctAns.toLowerCase() === answer.toLowerCase() ||
+            answer === question.correctAns
+        ) {
+            points += question.points;
+            return true;
+        } else {
+            return false;
+        }
     }
     return editing ? (
         <QuestionEditor
@@ -47,20 +58,15 @@ export function QuestionView({
                     <p>{question.body}</p>
                     <QuestionRecordControls
                         question={question}
-                        updateAnswer={updateShortAnswer}
+                        updateAnswer={updateAnswer}
                         changeEditing={changeEditing}
-                        updateMC={updateMC}
-                        mc={mc}
+                        updateMC={updateMCAnswer}
+                        mc={answer}
                     ></QuestionRecordControls>
                 </Col>
             </Row>
-            <Row>
-                {" "}
-                {question.correctAns.toLowerCase() ===
-                    shortanswer.toLowerCase() || question.correctAns === mc
-                    ? "✅"
-                    : "❌"}
-            </Row>
+            <Row>{checkAnswer(question, answer) ? "✅" : "❌"}</Row>
+            <Row>You have {points} points</Row>
         </Container>
     );
 }
