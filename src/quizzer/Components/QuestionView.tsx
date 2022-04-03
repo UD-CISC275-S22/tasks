@@ -8,23 +8,29 @@ import { QuestionRecordControls } from "./QuestionRecordControls";
 export function QuestionView({
     question,
     deleteQuestion,
-    editQuestion
+    editQuestion,
+    points
 }: {
     question: Question;
     deleteQuestion: (id: number) => void;
     editQuestion: (id: number, newQuestion: Question) => void;
+    points: number;
 }): JSX.Element {
     const [editing, setEditing] = useState<boolean>(false);
-    const [answer, setAnswer] = useState<string>("");
+    const [shortanswer, setshortAnswer] = useState<string>("");
+    const [mc, setMC] = useState<string>("");
 
     function changeEditing() {
         setEditing(!editing);
     }
 
-    function updateAnswer(event: React.ChangeEvent<HTMLTextAreaElement>) {
-        setAnswer(event.target.value);
+    function updateShortAnswer(event: React.ChangeEvent<HTMLTextAreaElement>) {
+        setshortAnswer(event.target.value);
     }
 
+    function updateMC(event: React.ChangeEvent<HTMLSelectElement>) {
+        setMC(event.target.value);
+    }
     return editing ? (
         <QuestionEditor
             changeEditing={changeEditing}
@@ -41,15 +47,19 @@ export function QuestionView({
                     <p>{question.body}</p>
                     <QuestionRecordControls
                         question={question}
-                        updateAnswer={updateAnswer}
+                        updateAnswer={updateShortAnswer}
                         changeEditing={changeEditing}
+                        updateMC={updateMC}
+                        mc={mc}
                     ></QuestionRecordControls>
                 </Col>
             </Row>
             <Row>
-                {answer === question.correctAns
-                    ? "✔️That is Correct"
-                    : "❌Wrong Answer"}
+                {" "}
+                {question.correctAns.toLowerCase() ===
+                    shortanswer.toLowerCase() || question.correctAns === mc
+                    ? "✅"
+                    : "❌"}
             </Row>
         </Container>
     );

@@ -7,11 +7,15 @@ import { Question } from "../Interfaces/question";
 export function QuestionRecordControls({
     question,
     updateAnswer,
-    changeEditing
+    changeEditing,
+    updateMC,
+    mc
 }: {
     question: Question;
     updateAnswer: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
     changeEditing: () => void;
+    updateMC: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+    mc: string;
 }): JSX.Element {
     return (
         <div>
@@ -19,14 +23,27 @@ export function QuestionRecordControls({
                 Edit
             </Button>
             <div>
-                <Form.Group controlId="">
-                    <Form.Label>Short Answer</Form.Label>
-                    <Form.Control
-                        as="textarea"
-                        rows={3}
-                        onChange={updateAnswer}
-                    />
-                </Form.Group>
+                {question.type === "short_answer_question" ? (
+                    <Form.Group controlId="">
+                        <Form.Label>Short Answer</Form.Label>
+                        <Form.Control
+                            as="textarea"
+                            rows={3}
+                            onChange={updateAnswer}
+                        />
+                    </Form.Group>
+                ) : (
+                    <Form.Group controlId="multipleChoice">
+                        <Form.Label>Select an Answer</Form.Label>
+                        <Form.Select value={mc} onChange={updateMC}>
+                            {question.options.map((option: string) => (
+                                <option key={option} value={option}>
+                                    {option}
+                                </option>
+                            ))}
+                        </Form.Select>
+                    </Form.Group>
+                )}
             </div>
         </div>
     );

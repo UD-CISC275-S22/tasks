@@ -1,17 +1,19 @@
-import React, { ReactNodeArray, useState } from "react";
+import React, { useState } from "react";
 import { Question } from "../Interfaces/question";
 import { Button, Stack } from "react-bootstrap";
-import { Quiz } from "../Interfaces/quiz";
+//import { Quiz } from "../Interfaces/quiz";
 import { QuestionView } from "./QuestionView";
 import { AddQuestionModal } from "./AddQuestionModal";
 
 export function QuestionList({
     //send a single quiz in
     //quiz,
-    questionss
+    questionss,
+    points
 }: {
     //quiz: Quiz;
     questionss: Question[];
+    points: number;
 }): JSX.Element {
     const [questions, setQuestions] = useState<Question[]>(questionss);
     const [showAddModal, setShowAddModal] = useState<boolean>(false);
@@ -54,6 +56,7 @@ export function QuestionList({
                             question={question}
                             editQuestion={editQuestion}
                             deleteQuestion={deleteQuestion}
+                            points={points}
                         ></QuestionView>
                     </div>
                 ))}

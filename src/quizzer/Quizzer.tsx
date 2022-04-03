@@ -7,13 +7,14 @@ import quizzes from "./Data/quizzes.json";
 import { Quiz } from "./Interfaces/quiz";
 
 const QUIZZES = quizzes.map((quiz): Quiz => ({ ...quiz }));
-let totalPoints = 0;
 
 export function Quizzer(): JSX.Element {
     const [quizzes, setQuizzes] = useState<Quiz[]>(QUIZZES);
     const [showAddModal, setShowAddModal] = useState<boolean>(false);
     const [selectedQuiz, setSelectedQuiz] = useState<Quiz>(quizzes[0]);
     const [selectedTitle, setSelectedTitle] = useState<string>("");
+
+    const points = 0;
 
     function updateSelectedTitle(event: React.ChangeEvent<HTMLSelectElement>) {
         setSelectedTitle(event.target.value);
@@ -49,11 +50,7 @@ export function Quizzer(): JSX.Element {
                 <h3>Quizzer</h3>
             </div>
             <div>
-                {totalPoints === 1 ? (
-                    <h3>You have 1 point</h3>
-                ) : (
-                    <h3>You have {totalPoints} points</h3>
-                )}
+                <h3>You have {points} points</h3>
             </div>
             <div>
                 <QuizList
@@ -93,6 +90,7 @@ export function Quizzer(): JSX.Element {
                 <div>
                     <h3>You have Selected {selectedTitle}</h3>
                     <QuestionList
+                        points={points}
                         questionss={selectedQuiz.questions}
                     ></QuestionList>
                 </div>
