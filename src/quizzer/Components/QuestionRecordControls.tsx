@@ -6,6 +6,7 @@ import { Question } from "../Interfaces/question";
 
 export function QuestionRecordControls({
     question,
+    filterQuestions,
     changePublished,
     updateAnswer,
     changeEditing,
@@ -13,6 +14,7 @@ export function QuestionRecordControls({
     mc
 }: {
     question: Question;
+    filterQuestions: () => JSX.Element;
     changePublished: () => void;
     updateAnswer: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
     changeEditing: () => void;
@@ -65,6 +67,9 @@ export function QuestionRecordControls({
                         publish
                     </Button>
                 )}
+            </div>
+            <div>
+                
             </div>
         </div>
     );
