@@ -32,7 +32,7 @@ export function Quizzer(): JSX.Element {
 
     function addQuiz(newQuiz: Quiz) {
         const existing = quizzes.find(
-            (quiz: Quiz): boolean => quiz.id === newQuiz.id
+            (quiz: Quiz): boolean => quiz.title === newQuiz.title
         );
         if (existing === undefined) {
             setQuizzes([...quizzes, newQuiz]);
