@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "react-bootstrap";
-import { Question } from "../Interfaces/question";
+//import { Question } from "../Interfaces/question";
 
 export function MoreRecordControls({
     filter,

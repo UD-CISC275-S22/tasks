@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Stack } from "react-bootstrap";
+import { Stack } from "react-bootstrap";
 import { Question } from "../Interfaces/question";
 import { QuestionView } from "./QuestionView";
 
