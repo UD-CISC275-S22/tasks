@@ -32,7 +32,7 @@ export function QuestionList({
 
     function addQuestion(newQuestion: Question) {
         const existing = questions.find(
-            (question: Question): boolean => question.id === newQuestion.id
+            (question: Question): boolean => question.name === newQuestion.name
         );
         if (existing === undefined) {
             setQuestions([...questions, newQuestion]);
