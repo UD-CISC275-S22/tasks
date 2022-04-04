@@ -58,12 +58,6 @@ function App(): JSX.Element {
         );
     }
 
-    function editquiz(quizs: Quizzerinter) {
-        const newquiz = quiz.map((f) =>
-            quizs.question === f.question ? quizs : f
-        );
-        setquiz(newquiz);
-    }
     function deleteCounter(question: string) {
         setquiz(
             quiz.filter((f: Quizzerinter): boolean => f.question !== question)
@@ -81,7 +75,6 @@ function App(): JSX.Element {
                         <div style={{ textAlign: "center" }}>
                             <Quizzer
                                 quizer1={f}
-                                editquiz={editquiz}
                                 deleteCounter={deleteCounter}
                             ></Quizzer>
                         </div>
@@ -115,6 +108,7 @@ function App(): JSX.Element {
                     Users can filter the questions in a list so that only
                     published questions are shown
                 </li>
+                <li>Users can delete an existing quiz</li>
             </div>
             <hr></hr>
             <CheckAnswer expectedAnswer="42"></CheckAnswer>

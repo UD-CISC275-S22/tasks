@@ -4,18 +4,13 @@ import { Quizzerinter } from "../Quizzer-interfaces/Quizzerinter";
 
 interface Quizzers {
     quizer1: Quizzerinter;
-    editquiz: (quizs: Quizzerinter) => void;
     deleteCounter: (questionsort: string) => void;
 }
 
 type ChangeEvent = React.ChangeEvent<
     HTMLTextAreaElement | HTMLInputElement | HTMLSelectElement
 >;
-export function Quizzer({
-    quizer1,
-    editquiz,
-    deleteCounter
-}: Quizzers): JSX.Element {
+export function Quizzer({ quizer1, deleteCounter }: Quizzers): JSX.Element {
     const [published, ispublished] = useState<boolean>(quizer1.published);
     const [answer, setanswer] = useState<string>(quizer1.options[0]);
     const [getanswer, setanswers] = useState<string>("");
