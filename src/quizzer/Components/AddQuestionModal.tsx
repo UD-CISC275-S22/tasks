@@ -22,7 +22,10 @@ export function AddQuestionModal({
             correctAns: "",
             published: false,
             options: [],
-            type: ""
+            type: "",
+            correct: false,
+            answered: false,
+            inputAns: ""
         });
         handleClose();
     }

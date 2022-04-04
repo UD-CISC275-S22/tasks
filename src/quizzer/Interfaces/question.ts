@@ -12,4 +12,10 @@ export interface Question {
     points: number;
     correctAns: string;
     published: boolean;
+    //will be used to collect points
+    correct: boolean;
+    //will be used to determine if the question is answered or not
+    answered: boolean;
+    //will be used to hold the answer
+    inputAns: string;
 }

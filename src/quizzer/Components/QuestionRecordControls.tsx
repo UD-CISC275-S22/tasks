@@ -26,7 +26,7 @@ export function QuestionRecordControls({
             </Button>
             <div>
                 {question.type === "short_answer_question" ? (
-                    <Form.Group controlId="">
+                    <Form.Group controlId="saquestion">
                         <Form.Label>Short Answer</Form.Label>
                         <Form.Control
                             as="textarea"

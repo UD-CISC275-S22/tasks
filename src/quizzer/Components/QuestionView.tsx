@@ -36,16 +36,18 @@ export function QuestionView({
     }
 
     function checkAnswer(question: Question, answer: string): boolean {
+        question.inputAns = answer;
         if (
             question.correctAns.toLowerCase() === answer.toLowerCase() ||
             answer === question.correctAns
         ) {
-            //updatePoints(question.points);
+            question.correct = true;
             return true;
         } else {
             return false;
         }
     }
+
     return editing ? (
         <QuestionEditor
             changeEditing={changeEditing}

@@ -13,7 +13,10 @@
                 "options": [],
                 "points": 1,
                 "correctAns": "Woody",
-                "published": true
+                "published": true,
+                "correct": false,
+                "answered": false,
+                "inputAns": ""
             },
             {
                 "id": 1,
@@ -23,7 +26,10 @@
                 "options": ["1", "2", "3", "4", "5"],
                 "points": 1,
                 "correctAns": "1",
-                "published": true
+                "published": true,
+                "correct": false,
+                "answered": false,
+                "inputAns": ""
             }
         ]
     },
@@ -41,7 +47,10 @@
                 "options": ["pink", "purple", "orange"],
                 "points": 2,
                 "correctAns": "orange",
-                "published": true
+                "published": true,
+                "correct": false,
+                "answered": false,
+                "inputAns": ""
             },
             {
                 "id": 1,
@@ -51,7 +60,10 @@
                 "options": [],
                 "points": 1,
                 "correctAns": "7",
-                "published": true
+                "published": true,
+                "correct": false,
+                "answered": false,
+                "inputAns": ""
             },
             {
                 "id": 2,
@@ -61,7 +73,10 @@
                 "options": ["red", "blue", "yellow"],
                 "points": 1,
                 "correctAns": "blue",
-                "published": true
+                "published": true,
+                "correct": false,
+                "answered": false,
+                "inputAns": ""
             }
         ]
     },
@@ -79,7 +94,10 @@
                 "options": [],
                 "points": 0,
                 "correctAns": "YES",
-                "published": true
+                "published": true,
+                "correct": false,
+                "answered": false,
+                "inputAns": ""
             }
         ]
     }

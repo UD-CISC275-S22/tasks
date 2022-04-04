@@ -16,6 +16,24 @@ export function QuestionList({
     const [showAddModal, setShowAddModal] = useState<boolean>(false);
     const [filter, setFilter] = useState<boolean>(false);
 
+    function clearAnswer() {
+        //go through and set all the answers to nothing
+        //set correct to false
+        //set answered to false
+        setQuestions(
+            questions.map(
+                (question): Question => ({
+                    ...question,
+                    correct: false,
+                    answered: false,
+                    inputAns: ""
+                })
+            )
+        );
+        //setPoints to 0
+        //clear the answer boxes as well
+    }
+
     function updateFilter() {
         setFilter(!filter);
     }
@@ -53,6 +71,7 @@ export function QuestionList({
         <div>
             <div>
                 <MoreRecordControls
+                    clearAns={clearAnswer}
                     filter={filter}
                     filterQuestions={updateFilter}
                 ></MoreRecordControls>

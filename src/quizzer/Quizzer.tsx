@@ -6,6 +6,7 @@ import { QuizList } from "./Components/QuizList";
 import quizzes from "./Data/quizzes.json";
 import { Quiz } from "./Interfaces/quiz";
 
+//const QUIZZES = quizzes.map((quiz): Quiz => ({ ...quiz }));
 const QUIZZES = quizzes.map((quiz): Quiz => ({ ...quiz }));
 
 export function Quizzer(): JSX.Element {
