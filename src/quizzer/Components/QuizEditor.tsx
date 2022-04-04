@@ -72,7 +72,6 @@ export function QuizEditor({
                         </Form.Label>
                         <Col>
                             <Form.Control
-                                as={Row}
                                 value={numQuest}
                                 onChange={(
                                     event: React.ChangeEvent<HTMLInputElement>
