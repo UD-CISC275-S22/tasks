@@ -17,7 +17,6 @@ export function QuestionView({
     const [editing, setEditing] = useState<boolean>(false);
     const [answer, setAnswer] = useState<string>("");
     const [published, setPublished] = useState<boolean>(false);
-    const [filter, setFilter]=useState<boolean>(false);
 
     function changeEditing() {
         setEditing(!editing);
@@ -34,10 +33,6 @@ export function QuestionView({
 
     function updateMCAnswer(event: React.ChangeEvent<HTMLSelectElement>) {
         setAnswer(event.target.value);
-    }
-
-    function filterPublished(event: React.ChangeEvent<HTMLButtonElement>){
-        setFilter(event.target.value);
     }
 
     function checkAnswer(question: Question, answer: string): boolean {

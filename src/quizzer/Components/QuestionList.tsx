@@ -4,6 +4,8 @@ import { Button, Stack } from "react-bootstrap";
 //import { Quiz } from "../Interfaces/quiz";
 import { QuestionView } from "./QuestionView";
 import { AddQuestionModal } from "./AddQuestionModal";
+import { FilterPublishedQuestions } from "./FilterPublishedQuestions";
+import { MoreRecordControls } from "./MoreRecordControls";
 
 export function QuestionList({
     questionss
@@ -12,6 +14,11 @@ export function QuestionList({
 }): JSX.Element {
     const [questions, setQuestions] = useState<Question[]>(questionss);
     const [showAddModal, setShowAddModal] = useState<boolean>(false);
+    const [filter, setFilter] = useState<boolean>(false);
+
+    function updateFilter() {
+        setFilter(!filter);
+    }
 
     function editQuestion(id: number, newQuestion: Question) {
         setQuestions(
@@ -44,17 +51,36 @@ export function QuestionList({
 
     return (
         <div>
-            <Stack gap={1}>
-                {questions.map((question: Question) => (
-                    <div key={question.id} className="bg-light border m-2 p-2">
-                        <QuestionView
-                            question={question}
-                            editQuestion={editQuestion}
-                            deleteQuestion={deleteQuestion}
-                        ></QuestionView>
-                    </div>
-                ))}
-            </Stack>
+            <div>
+                <MoreRecordControls
+                    filter={filter}
+                    filterQuestions={updateFilter}
+                ></MoreRecordControls>
+            </div>
+            <div>
+                {filter ? (
+                    <FilterPublishedQuestions
+                        questions={questions}
+                        editQuestion={editQuestion}
+                        deleteQuestion={deleteQuestion}
+                    ></FilterPublishedQuestions>
+                ) : (
+                    <Stack gap={1}>
+                        {questions.map((question: Question) => (
+                            <div
+                                key={question.id}
+                                className="bg-light border m-2 p-2"
+                            >
+                                <QuestionView
+                                    question={question}
+                                    editQuestion={editQuestion}
+                                    deleteQuestion={deleteQuestion}
+                                ></QuestionView>
+                            </div>
+                        ))}
+                    </Stack>
+                )}
+            </div>
             <div>
                 <Button
                     variant="success"
