@@ -15,6 +15,7 @@ import { GiveAttempts } from "./form-components/GiveAttempts";
 import { EditMode } from "./form-components/EditMode";
 import { MultipleChoiceQuestion } from "./form-components/MultipleChoiceQuestion";
 import { ChangeColor } from "./form-components/ChangeColor";
+import image from "../src/images/Quizzer-1.png";
 
 function App(): JSX.Element {
     return (
@@ -22,6 +23,8 @@ function App(): JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript
             </header>
+            <hr></hr>
+            <img src={image} width="300" height="400"></img>
             <hr></hr>
             <DoubleHalf></DoubleHalf>
             <hr></hr>
