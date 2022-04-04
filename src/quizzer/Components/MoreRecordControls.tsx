@@ -11,7 +11,23 @@ export function MoreRecordControls({
 }): JSX.Element {
     return (
         <div>
-            <Button className="float-right" size="sm" onClick={filterQuestions}>Show Published Questions</Button>
+            {filter ? (
+                <Button
+                    className="float-right"
+                    size="sm"
+                    onClick={filterQuestions}
+                >
+                    Show All Questions
+                </Button>
+            ) : (
+                <Button
+                    className="float-right"
+                    size="sm"
+                    onClick={filterQuestions}
+                >
+                    Show Published Questions
+                </Button>
+            )}
         </div>
     );
 }
