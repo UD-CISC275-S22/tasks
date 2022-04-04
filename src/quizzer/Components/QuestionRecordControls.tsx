@@ -6,12 +6,14 @@ import { Question } from "../Interfaces/question";
 
 export function QuestionRecordControls({
     question,
+    changePublished,
     updateAnswer,
     changeEditing,
     updateMC,
     mc
 }: {
     question: Question;
+    changePublished: () => void;
     updateAnswer: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
     changeEditing: () => void;
     updateMC: (event: React.ChangeEvent<HTMLSelectElement>) => void;
@@ -43,6 +45,25 @@ export function QuestionRecordControls({
                             ))}
                         </Form.Select>
                     </Form.Group>
+                )}
+            </div>
+            <div>
+                {question.published ? (
+                    <Button
+                        className="float-right"
+                        size="sm"
+                        onClick={changePublished}
+                    >
+                        unpublish
+                    </Button>
+                ) : (
+                    <Button
+                        className="float-right"
+                        size="sm"
+                        onClick={changePublished}
+                    >
+                        publish
+                    </Button>
                 )}
             </div>
         </div>

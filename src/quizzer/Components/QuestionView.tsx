@@ -8,19 +8,23 @@ import { QuestionRecordControls } from "./QuestionRecordControls";
 export function QuestionView({
     question,
     deleteQuestion,
-    editQuestion,
-    points
+    editQuestion
 }: {
     question: Question;
     deleteQuestion: (id: number) => void;
     editQuestion: (id: number, newQuestion: Question) => void;
-    points: number;
 }): JSX.Element {
     const [editing, setEditing] = useState<boolean>(false);
     const [answer, setAnswer] = useState<string>("");
+    const [published, setPublished] = useState<boolean>(false);
 
     function changeEditing() {
         setEditing(!editing);
+    }
+
+    function changePublished() {
+        setPublished(!published);
+        question.published = published;
     }
 
     function updateAnswer(event: React.ChangeEvent<HTMLTextAreaElement>) {
@@ -36,7 +40,7 @@ export function QuestionView({
             question.correctAns.toLowerCase() === answer.toLowerCase() ||
             answer === question.correctAns
         ) {
-            points += question.points;
+            //updatePoints(question.points);
             return true;
         } else {
             return false;
@@ -62,11 +66,11 @@ export function QuestionView({
                         changeEditing={changeEditing}
                         updateMC={updateMCAnswer}
                         mc={answer}
+                        changePublished={changePublished}
                     ></QuestionRecordControls>
                 </Col>
             </Row>
             <Row>{checkAnswer(question, answer) ? "✅" : "❌"}</Row>
-            <Row>You have {points} points</Row>
         </Container>
     );
 }

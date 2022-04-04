@@ -14,8 +14,6 @@ export function Quizzer(): JSX.Element {
     const [selectedQuiz, setSelectedQuiz] = useState<Quiz>(quizzes[0]);
     const [selectedTitle, setSelectedTitle] = useState<string>("");
 
-    const points = 0;
-
     function updateSelectedTitle(event: React.ChangeEvent<HTMLSelectElement>) {
         setSelectedTitle(event.target.value);
         const ind = quizzes.map((Quiz) => Quiz.title).indexOf(selectedTitle);
@@ -50,7 +48,7 @@ export function Quizzer(): JSX.Element {
                 <h3>Quizzer</h3>
             </div>
             <div>
-                <h3>You have {points} points</h3>
+                <h3>You have points</h3>
             </div>
             <div>
                 <QuizList
@@ -90,7 +88,6 @@ export function Quizzer(): JSX.Element {
                 <div>
                     <h3>You have Selected {selectedTitle}</h3>
                     <QuestionList
-                        points={points}
                         questionss={selectedQuiz.questions}
                     ></QuestionList>
                 </div>

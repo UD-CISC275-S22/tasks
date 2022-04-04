@@ -6,14 +6,9 @@ import { QuestionView } from "./QuestionView";
 import { AddQuestionModal } from "./AddQuestionModal";
 
 export function QuestionList({
-    //send a single quiz in
-    //quiz,
-    questionss,
-    points
+    questionss
 }: {
-    //quiz: Quiz;
     questionss: Question[];
-    points: number;
 }): JSX.Element {
     const [questions, setQuestions] = useState<Question[]>(questionss);
     const [showAddModal, setShowAddModal] = useState<boolean>(false);
@@ -56,7 +51,6 @@ export function QuestionList({
                             question={question}
                             editQuestion={editQuestion}
                             deleteQuestion={deleteQuestion}
-                            points={points}
                         ></QuestionView>
                     </div>
                 ))}

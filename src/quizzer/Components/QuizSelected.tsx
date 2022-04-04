@@ -19,11 +19,10 @@ export function QuizSelected({
             <h3>You have Selected: {selectedTitle}</h3>
             <h3>Questions:</h3>
             <QuestionList
-                points={points}
                 questionss={selectedQuiz.questions.map(
                     (question: Question): Question => ({ ...question })
                 )}
             ></QuestionList>
         </div>
-    ); 
+    );
 }
