@@ -76,7 +76,9 @@ export function QuestionView({
                     ></QuestionRecordControls>
                 </Col>
             </Row>
-            <Row>{checkAnswer(question, answer) ? "✅" : "❌"}</Row>
+            <Row>
+                {answer ? checkAnswer(question, answer) ? "✅" : "❌" : <></>}
+            </Row>
         </Container>
     );
 }
