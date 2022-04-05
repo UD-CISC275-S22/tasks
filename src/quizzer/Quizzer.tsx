@@ -5,7 +5,6 @@ import { QuizList } from "./Components/QuizList";
 import quizzes from "./Data/quizzes.json";
 import { Quiz } from "./Interfaces/quiz";
 import { QuestionList } from "./Components/QuestionList";
-import { title } from "process";
 
 //const QUIZZES = quizzes.map((quiz): Quiz => ({ ...quiz }));
 const QUIZZES = quizzes.map((quiz): Quiz => ({ ...quiz }));
@@ -15,11 +14,9 @@ export function Quizzer(): JSX.Element {
     const [showAddModal, setShowAddModal] = useState<boolean>(false);
     const [selected, setSelected] = useState<string>("");
 
-    function updateSelectedTitle(event: React.ChangeEvent<HTMLSelectElement>){
+    function updateSelectedTitle(event: React.ChangeEvent<HTMLSelectElement>) {
         setSelected(event.target.value);
     }
-
-
 
     function editQuiz(id: number, newQuiz: Quiz) {
         setQuizzes(
