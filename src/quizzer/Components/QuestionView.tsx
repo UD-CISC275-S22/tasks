@@ -29,10 +29,14 @@ export function QuestionView({
 
     function updateAnswer(event: React.ChangeEvent<HTMLTextAreaElement>) {
         setAnswer(event.target.value);
+        question.answered = true;
+        question.inputAns = answer;
     }
 
     function updateMCAnswer(event: React.ChangeEvent<HTMLSelectElement>) {
         setAnswer(event.target.value);
+        question.answered = true;
+        question.inputAns = answer;
     }
 
     function checkAnswer(question: Question, answer: string): boolean {

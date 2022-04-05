@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { AddQuizModal } from "./Components/AddQuizModal";
-import { QuestionList } from "./Components/QuestionList";
 import { QuizList } from "./Components/QuizList";
 import quizzes from "./Data/quizzes.json";
 import { Quiz } from "./Interfaces/quiz";
+import { QuestionList } from "./Components/QuestionList";
+import { title } from "process";
 
 //const QUIZZES = quizzes.map((quiz): Quiz => ({ ...quiz }));
 const QUIZZES = quizzes.map((quiz): Quiz => ({ ...quiz }));
@@ -12,14 +13,13 @@ const QUIZZES = quizzes.map((quiz): Quiz => ({ ...quiz }));
 export function Quizzer(): JSX.Element {
     const [quizzes, setQuizzes] = useState<Quiz[]>(QUIZZES);
     const [showAddModal, setShowAddModal] = useState<boolean>(false);
-    const [selectedQuiz, setSelectedQuiz] = useState<Quiz>(quizzes[0]);
-    const [selectedTitle, setSelectedTitle] = useState<string>("");
+    const [selected, setSelected] = useState<string>("");
 
-    function updateSelectedTitle(event: React.ChangeEvent<HTMLSelectElement>) {
-        setSelectedTitle(event.target.value);
-        const ind = quizzes.map((Quiz) => Quiz.title).indexOf(selectedTitle);
-        setSelectedQuiz(quizzes[ind]);
+    function updateSelectedTitle(event: React.ChangeEvent<HTMLSelectElement>){
+        setSelected(event.target.value);
     }
+
+
 
     function editQuiz(id: number, newQuiz: Quiz) {
         setQuizzes(
@@ -76,7 +76,7 @@ export function Quizzer(): JSX.Element {
                 <Form.Group controlId="selectedQuiz">
                     <Form.Label>Please Select a Quiz</Form.Label>
                     <Form.Select
-                        value={selectedTitle}
+                        value={selected}
                         onChange={updateSelectedTitle}
                     >
                         {quizzes.map((title: Quiz) => (
@@ -87,11 +87,22 @@ export function Quizzer(): JSX.Element {
                     </Form.Select>
                 </Form.Group>
                 <div>
-                    <h3>You have Selected {selectedTitle}</h3>
-                    <QuestionList
-                        questionss={selectedQuiz.questions}
-                    ></QuestionList>
+                    <h3>You have Selected {selected}</h3>
                 </div>
+                {selected ? (
+                    <QuestionList
+                        questionss={
+                            quizzes[
+                                quizzes.findIndex(
+                                    (quiz: Quiz): boolean =>
+                                        quiz.title === selected
+                                )
+                            ].questions
+                        }
+                    ></QuestionList>
+                ) : (
+                    <></>
+                )}
             </div>
         </div>
     );

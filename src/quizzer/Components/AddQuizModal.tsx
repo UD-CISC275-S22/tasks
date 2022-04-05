@@ -32,7 +32,10 @@ export function AddQuizModal({
                     published: false,
                     options: [],
                     correctAns: "",
-                    body: ""
+                    body: "",
+                    correct: false,
+                    answered: false,
+                    inputAns: ""
                 })
             )
         });
