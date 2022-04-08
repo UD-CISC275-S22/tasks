@@ -18,7 +18,7 @@ export function ChangeColor(): JSX.Element {
     return (
         <div>
             <h3>Change Color</h3>
-            <div>The current color is:{"  "}</div>
+            <div>You Have Chosen:{"  "}</div>
             <span
                 data-testid="colored-box"
                 style={{ backgroundColor: selection }}
@@ -40,6 +40,7 @@ export function ChangeColor(): JSX.Element {
                             label={color}
                             value={color}
                             checked={selection == color}
+                            style={{ backgroundColor: color }}
                         />
                     ))}
                 </span>
