@@ -12,7 +12,10 @@ function App(): JSX.Element {
                 automatically reload.
             </p>
 
-            <h2>That's crazy, my name is Zachary England, and you're watching Disney Channel.</h2>
+            <h2>
+                That&apos;s crazy, my name is Zachary England, and you&apos;re
+                watching Disney Channel.
+            </h2>
         </div>
     );
 }
