@@ -14,7 +14,7 @@ function App(): JSX.Element {
 
             <h2>
                 That&apos;s crazy, my name is Zachary England, and you&apos;re
-                watching Disney Channel.
+                watching Disney Channel, Hello World!
             </h2>
         </div>
     );
