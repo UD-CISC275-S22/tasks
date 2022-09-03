@@ -11,6 +11,11 @@ function App(): JSX.Element {
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
             </p>
+
+            <h2>
+                That&apos;s crazy, my name is Zachary England, and you&apos;re
+                watching Disney Channel, Hello World!
+            </h2>
         </div>
     );
 }
