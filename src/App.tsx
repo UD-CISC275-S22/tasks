@@ -8,7 +8,7 @@ function App(): JSX.Element {
                 UD CISC275 with React Hooks and TypeScript
             </header>
             <p>
-                Victor <code>Ezekiel</code> Udo
+                Victor <code>Ezekiel</code> Umoren-Udo
             </p>
         </div>
     );
