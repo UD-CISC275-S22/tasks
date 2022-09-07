@@ -1,5 +1,16 @@
+html,
+body,
+#root {
+    height: 100%;
+    width: 100%;
+}
+
 .App {
+    height: 100%;
+    width: 100%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .App-logo {
@@ -14,19 +25,39 @@
 }
 
 .App-header {
+    flex: 1;
+    flex-grow: 1;
     width: 100%;
-    background-color: #282c34;
-    min-height: 40vh;
+    background-color: #d6dbdf;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: white;
+    color: black;
+}
+
+.Logo {
+    height: 50px;
+    width: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .App-link {
     color: #61dafb;
+}
+
+.Row-Container {
+    width: 150px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.Square {
+    height: 50px;
+    width: 50px;
+    background-color: red;
 }
 
 @keyframes App-logo-spin {
