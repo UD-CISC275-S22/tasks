@@ -1,3 +1,12 @@
+.redrect {
+    background-color: red;
+    height: 100px;
+    width: 400px;
+}
+img {
+    height: 500px;
+    width: 400px;
+}
 .App {
     text-align: center;
 }
@@ -15,7 +24,7 @@
 
 .App-header {
     width: 100%;
-    background-color: #282c34;
+    background-color: #61dafb;
     min-height: 40vh;
     display: flex;
     flex-direction: column;
