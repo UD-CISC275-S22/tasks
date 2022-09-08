@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import "./App.css";
-import "./IMG_0146.jpg";
+import yoda from "./IMG_0146.jpg";
 
 function App(): JSX.Element {
     return (
@@ -16,14 +16,7 @@ function App(): JSX.Element {
             <Container>
                 <Row>
                     <Col>
-                        <img
-                            src={
-                                "https://en.meming.world/images/en/thumb/d/df/There_Is_Another.jpg/300px-There_Is_Another.jpg"
-                            }
-                            alt="yoda"
-                            width="250"
-                            height="150"
-                        />
+                        <img src={yoda} alt="yoda" width="250" height="150" />
                         <div
                             style={{
                                 backgroundColor: "red",
