@@ -30,14 +30,10 @@ function App(): JSX.Element {
             <Container>
                 <Row>
                     <Col>
-                        return{" "}
-                        <div>
-                            This is
-                            <span style={{ color: "red" }}> colored text</span>
-                        </div>
+                        <div className="rectangle"> </div>
                     </Col>
                     <Col>
-                        <p>Second column paragraph test</p>
+                        <div className="rectangle"> </div>
                     </Col>
                 </Row>
             </Container>
