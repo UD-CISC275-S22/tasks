@@ -24,7 +24,7 @@ function App(): JSX.Element {
                 Log Hello World
             </Button>
             <img
-                src="https://images.app.goo.gl/s7GbZJr2apcWmFQ1A"
+                src="https://i.kym-cdn.com/entries/icons/original/000/016/546/hidethepainharold.jpg"
                 alt="A picture of a happy guy"
             />
             <Container>
