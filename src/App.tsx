@@ -37,7 +37,7 @@ function App(): JSX.Element {
                         </div>
                     </Col>
                     <Col>
-                        <p>Second column paragraph</p>
+                        <p>Second column paragraph test</p>
                     </Col>
                 </Row>
             </Container>
