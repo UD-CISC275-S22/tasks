@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import "./App.css";
-import hand from ".assets/images/Piano-Hand.jpg";
+import hand from "./assets/images/Piano-Hand.jpg";
 
 function App(): JSX.Element {
     return (
