@@ -1,0 +1,20 @@
+.listy {
+    text-align: left;
+    list-style-position: inside;
+    padding-left: 39%;
+}
+
+.buttony {
+    background-color: crimson;
+    outline-color: rgb(255, 0, 51);
+}
+
+.buttony:hover {
+    background-color: rgb(173, 0, 0);
+}
+
+.redrect {
+    background-color: red;
+    width: 20%;
+    height: 20%;
+}
