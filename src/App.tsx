@@ -20,7 +20,7 @@ function App(): JSX.Element {
                 </header>
                 <h1> New Header Text Goes here</h1>
                 <img
-                    src={require("../assets/randcake.png")}
+                    src={require("assets/randcake.png")}
                     alt="A cursed picture of cake"
                 />
                 <p>
