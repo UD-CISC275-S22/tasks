@@ -17,8 +17,8 @@ function App(): JSX.Element {
                 </ul>
                 <header className="App-header">
                     UD CISC275 with React Hooks and TypeScript
+                    <h1>New Header Text Goes here</h1>
                 </header>
-                <header>New Header Text Goes here</header>
                 <img
                     src={require("./assets/randcake.png")}
                     alt="A cursed picture of cake"
@@ -32,10 +32,10 @@ function App(): JSX.Element {
                 <Container>
                     <Row>
                         <Col className="col1">
-                            <h1 className="redbox"></h1>
+                            <p className="redbox"></p>
                         </Col>
                         <Col className="col2">
-                            <h1 className="redbox"></h1>
+                            <p className="redbox"></p>
                         </Col>
                     </Row>
                 </Container>
