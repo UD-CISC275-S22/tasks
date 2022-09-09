@@ -32,10 +32,10 @@ function App(): JSX.Element {
                 <Container>
                     <Row>
                         <Col className="col1">
-                            <h1 className="redbox"></h1>
+                            <h1 className="redbox">text</h1>
                         </Col>
                         <Col className="col2">
-                            <h1 className="redbox"></h1>
+                            <h1 className="redbox">text</h1>
                         </Col>
                     </Row>
                 </Container>
