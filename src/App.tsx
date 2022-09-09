@@ -18,7 +18,7 @@ function App(): JSX.Element {
                 <header className="App-header">
                     UD CISC275 with React Hooks and TypeScript
                 </header>
-                <h1 className="App-header"> New Header Text Goes here</h1>
+                <header>New Header Text Goes here</header>
                 <img
                     src={require("./assets/randcake.png")}
                     alt="A cursed picture of cake"
