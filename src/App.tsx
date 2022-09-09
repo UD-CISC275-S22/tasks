@@ -14,7 +14,7 @@ function App(): JSX.Element {
             {/* <img src={Hamster} alt="da funny hampster doe" /> */}
             <img
                 src="https://cdn.myanimelist.net/r/360x360/images/anime/10/27428.jpg?s=b357a474d645269c66680e709a78394d"
-                alt="Hamster CLub Promotional Art"
+                alt="Hamster Club Promotional Art"
             ></img>
             <Button
                 className="buttony"
@@ -40,7 +40,6 @@ function App(): JSX.Element {
                         <div className="redrect">omg wow</div>
                     </Col>
                     <Col>
-                        <img src="https://i.gifer.com/taB.gif" />
                         <div className="redrect">hampter</div>
                     </Col>
                 </Row>
