@@ -20,7 +20,7 @@ function App(): JSX.Element {
                 </header>
                 <h1> New Header Text Goes here</h1>
                 <img
-                    src="../assets/randcake.png"
+                    src={require("../assets/randcake.png")}
                     alt="A cursed picture of cake"
                 />
                 <p>
@@ -31,8 +31,12 @@ function App(): JSX.Element {
             <div className="newdiv">
                 <Container>
                     <Row>
-                        <Col className="col1">c1</Col>
-                        <Col className="col2">c2</Col>
+                        <Col className="col1">
+                            <h1 className="redbox"></h1>
+                        </Col>
+                        <Col className="col2">
+                            <h1 className="redbox"></h1>
+                        </Col>
                     </Row>
                 </Container>
             </div>

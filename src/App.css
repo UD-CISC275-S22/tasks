@@ -24,7 +24,7 @@
     font-size: calc(10px + 2vmin);
     color: white;
 }
-.App-newdiv {
+.App-redbox {
     width: 100%;
     height: 100%;
     background-color: #ff0000;
