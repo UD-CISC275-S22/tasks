@@ -3,13 +3,13 @@ import "./App.css";
 
 function App(): JSX.Element {
     return (
-        <div className="App / Zachariah Barraza">
+        <div className="App">
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript (Zachariah Barraza /
                 SamuraiZach)
             </header>
             <p>
-                <code>Zachariah Barraza (SamuraiZach)</code>
+                <code>Zachariah Barraza SamuraiZach</code>
             </p>
         </div>
     );
