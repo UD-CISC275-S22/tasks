@@ -9,7 +9,7 @@ function App(): JSX.Element {
                 SamuraiZach)
             </header>
             <p>
-                <code>Zachariah Barraza SamuraiZach Hello World</code>
+                <code>Zachariah Barraza SamuraiZach Hello World TESTING</code>
             </p>
         </div>
     );
