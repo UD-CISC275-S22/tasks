@@ -9,8 +9,7 @@ function App(): JSX.Element {
                 SamuraiZach)
             </header>
             <p>
-                Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload. Zachariah Barraza
+                <code>Zachariah Barraza (SamuraiZach)</code>
             </p>
         </div>
     );
