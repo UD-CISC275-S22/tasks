@@ -14,24 +14,27 @@ function App(): JSX.Element {
                         </header>
                         <p>Jason Hensley Hello World</p>
                     </div>
-                    <div>
-                        style=
-                        {{
-                            width: 100,
-                            length: 50,
-                            color: "red"
+                    <div
+                        style={{
+                            width: 572,
+                            height: 200,
+                            backgroundColor: "gold"
                         }}
-                    </div>
+                    ></div>
                 </Col>
                 <Col>
-                    <div>
-                        style=
-                        {{
+                    <div
+                        style={{
                             backgroundColor: "blue"
                         }}
+                    >
                         <h1>I swear I added a header.</h1>
                     </div>
-                    <img src={SSPoster} alt="My Summer Scholars Poster." />
+                    <img
+                        src={SSPoster}
+                        width={700}
+                        alt="My Summer Scholars Poster."
+                    />
                     <ul>
                         <li> My summer scholars poster is pictured above </li>
                         <li> I did data processing for a neuroscience lab </li>
@@ -42,14 +45,13 @@ function App(): JSX.Element {
                             Log Hello World
                         </Button>
                     </div>
-                    <div>
-                        style=
-                        {{
-                            width: 100,
-                            length: 50,
-                            color: "red"
+                    <div
+                        style={{
+                            width: 700,
+                            height: 200,
+                            backgroundColor: "gold"
                         }}
-                    </div>
+                    ></div>
                 </Col>
             </Row>
         </Container>
