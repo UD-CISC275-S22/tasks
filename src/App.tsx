@@ -13,7 +13,10 @@ function App(): JSX.Element {
                 TypeScript
             </header>
             <h1>This is header text</h1>;
-            <img src="/src/land.jpg" alt="A picture of land" />
+            <img
+                src="C:\Users\beamf\tasks\src\land.jpg"
+                alt="A picture of land"
+            />
             Ordered List:
             <ol>
                 <li>First thing</li>
