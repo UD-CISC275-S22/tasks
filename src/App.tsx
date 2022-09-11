@@ -14,5 +14,8 @@ function App(): JSX.Element {
         </div>
     );
 }
+export function Appheader(): JSX.Element {
+    return <h1>This is header text</h1>;
+}
 
 export default App;
