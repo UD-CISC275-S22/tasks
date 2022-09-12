@@ -6,7 +6,7 @@ import photo from "./images/IMG_4031.jpg";
 function App(): JSX.Element {
     return (
         <div className="App">
-            <h1 className="App-header">About me! CISC275</h1>
+            <h1 className="App-header">Hello world About me! CISC275</h1>
             <Container>
                 <Row>
                     <Col>
