@@ -13,8 +13,8 @@ function App(): JSX.Element {
             </header>
             <h1 style={{ color: "blue" }}>This is such an amazing header.</h1>
             <img src={pic1} alt="Everything is Fine" />;
-            <Button onClick={() => console.log("Everything is NOT Fine")}>
-                Everything is Fine
+            <Button onClick={() => console.log("Hello World!")}>
+                Log Hello World
             </Button>
             <ul>
                 <li>Everything</li>
