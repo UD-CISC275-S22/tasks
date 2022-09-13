@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-inferrable-types */
 /**
  * Consumes a single temperature in Fahrenheit (a number) and converts to Celsius
  * using this formula:
@@ -12,7 +13,7 @@ export function fahrenheitToCelius(temperature: number): number {
  * if the number is greater than zero.
  */
 export function add3(first: number, second: number, third: number): number {
-    let result = 0;
+    let result: number = 0;
 
     if (first > 0) {
         result += first;
@@ -34,7 +35,7 @@ export function add3(first: number, second: number, third: number): number {
  * mark added to the end.
  */
 export function shout(message: string): string {
-    let result = message.toUpperCase();
+    let result: string = message.toUpperCase();
     result = result + "!";
     return result;
 }
@@ -53,12 +54,11 @@ export function isQuestion(message: string): boolean {
  * upper or lower case), then return `false`. Otherwise, return `null`.
  */
 export function convertYesNo(word: string): boolean | null {
-    let result = null;
     if (word.toUpperCase() === "YES") {
-        result = true;
+        return true;
     }
     if (word.toUpperCase() === "NO") {
-        result = false;
+        return false;
     }
-    return result;
+    return null;
 }
