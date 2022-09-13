@@ -47,11 +47,5 @@ function App(): JSX.Element {
         </div>
     );
 }
-/* Add a header
-Add an image with alt text
-Add a list with at least three elements
-Change the background color of the header area
-Add a bootstrap button with the text Log Hello World
-Make the button log Hello World! when clicked
-*/
+
 export default App;
