@@ -9,6 +9,7 @@ function App(): JSX.Element {
             <div className="App">
                 <header className="App-header">
                     UD CISC275 with React Hooks and TypeScript- Jess Howley
+                    Hello World
                 </header>
                 <img
                     alt="DOG"
