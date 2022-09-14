@@ -60,14 +60,3 @@ export function convertYesNo(word: string): boolean | null {
         return null;
     }
 }
-function subtract(temperature: number, arg1: number): any {
-    throw new Error("Function not implemented.");
-}
-
-function multiply(num: void, arg1: number): any {
-    throw new Error("Function not implemented.");
-}
-
-function a(a: any, arg1: number[]) {
-    throw new Error("Function not implemented.");
-}
