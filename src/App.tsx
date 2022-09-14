@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import handshake from "/images/logo192.png";
+import handshake from "./logo192.png";
 import { Button, Col, Container, Row } from "react-bootstrap";
 
 console.log(handshake);
