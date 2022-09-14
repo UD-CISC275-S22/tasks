@@ -20,7 +20,25 @@ export function add3(first: number, second: number, third: number): number {
             }
             return first + second;
         }
+        if (second <= 0) {
+            if (third > 0) {
+                return first + third;
+            }
+        }
         return first;
+    }
+    if (first <= 0) {
+        if (second > 0) {
+            if (third > 0) {
+                return second + third;
+            }
+            return second;
+        }
+        if (second <= 0) {
+            if (third > 0) {
+                return third;
+            }
+        }
     }
     return 0;
 }

@@ -8,7 +8,6 @@ function App(): JSX.Element {
     return (
         <div className="App">
             <header className="App-header">
-                <h1>This is this Header</h1>
                 <p>
                     UD CISC275 with React Hooks and TypeScript (Wenhan Ying
                     Version)
@@ -17,7 +16,7 @@ function App(): JSX.Element {
                 !!!Hello World!!!
                 <img src={handshake} alt="Handshake!!!" />
                 <div>
-                    <Button onClick={() => console.log("Hello World")}>
+                    <Button onClick={() => console.log("Hello World!")}>
                         Log Hello World
                     </Button>
                 </div>
