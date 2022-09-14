@@ -1,6 +1,8 @@
 import React from "react";
 import "./App.css";
-import handshake from "./handshake.jpeg";
+import handshake from "/Users/gavinying/tasks/src/images/logo192.png";
+import { Button, Col, Container, Row } from "react-bootstrap";
+
 
 console.log(handshake);
 function App(): JSX.Element {
@@ -16,6 +18,11 @@ function App(): JSX.Element {
 
                 !!!Hello World!!!
                 <img src={handshake} alt="Handshake!!!" />
+                <div>
+                    <Button onClick={() => console.log("Hello World")}>
+                        Log Hello World
+                    </Button>
+                </div>
             </header>
             <h3>The list with three elements</h3>
             <ol>
@@ -27,6 +34,20 @@ function App(): JSX.Element {
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
             </p>
+            <div>
+                <Container
+                    style={{
+                        width: "400px",
+                        height: "400px",
+                        backgroundColor: "red"
+                    }}
+                >
+                    <Row>
+                        <Col>column 1</Col>
+                        <Col> column 2</Col>
+                    </Row>
+                </Container>
+            </div>
         </div>
     );
 }
