@@ -3,7 +3,6 @@ import "./App.css";
 import handshake from "/Users/gavinying/tasks/src/images/logo192.png";
 import { Button, Col, Container, Row } from "react-bootstrap";
 
-
 console.log(handshake);
 function App(): JSX.Element {
     return (
@@ -15,7 +14,6 @@ function App(): JSX.Element {
                     Version)
                 </p>
                 <br />
-
                 !!!Hello World!!!
                 <img src={handshake} alt="Handshake!!!" />
                 <div>
