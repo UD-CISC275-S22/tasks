@@ -13,12 +13,25 @@ export function fahrenheitToCelius(temperature: number): number {
  * if the number is greater than zero.
  */
 export function add3(first: number, second: number, third: number): number {
-    const nums = [first, second, third];
-    const numb = nums.filter((x) => x > 0);
-    const result = numb.reduce((accumulator, current) => {
-        return accumulator + current;
-    }, 0);
-    return result;
+    /**const nums = [first, second, third];
+     *const numb = nums.filter((x) => x > 0);
+     *const result = numb.reduce((accumulator, current) => {
+     *   return accumulator + current;
+     *}, 0);
+     *return result;
+     */
+    let age = 0;
+    if (first <= 0) {
+        first = 0;
+    }
+    if (second <= 0) {
+        second = 0;
+    }
+    if (third <= 0) {
+        third = 0;
+    }
+    age = first + second + third;
+    return age;
 }
 
 /**
