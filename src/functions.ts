@@ -1,10 +1,14 @@
+import { stringify } from "querystring";
+import { FirstInputPolyfillCallback } from "web-vitals";
+
 /**
  * Consumes a single temperature in Fahrenheit (a number) and converts to Celsius
  * using this formula:
  *      C = (F - 32) * 5/9
  */
 export function fahrenheitToCelius(temperature: number): number {
-    return 0;
+    console.log(((temperature - 32) * 5) / 9);
+    return ((temperature - 32) * 5) / 9;
 }
 
 /**
@@ -12,7 +16,12 @@ export function fahrenheitToCelius(temperature: number): number {
  * if the number is greater than zero.
  */
 export function add3(first: number, second: number, third: number): number {
-    return 0;
+    const nums = [first, second, third];
+    const numb = nums.filter((x) => x > 0);
+    const result = numb.reduce((accumulator, current) => {
+        return accumulator + current;
+    }, 0);
+    return result;
 }
 
 /**
@@ -20,7 +29,11 @@ export function add3(first: number, second: number, third: number): number {
  * mark added to the end.
  */
 export function shout(message: string): string {
-    return "";
+    const str = message;
+    const ex = "!";
+    const newstr = str.toUpperCase();
+    const str3 = newstr.concat(ex.toString());
+    return str3;
 }
 
 /**
@@ -28,7 +41,7 @@ export function shout(message: string): string {
  * mark. Do not use an `if` statement in solving this question.
  */
 export function isQuestion(message: string): boolean {
-    return true;
+    return message.endsWith("?");
 }
 
 /**
@@ -37,5 +50,24 @@ export function isQuestion(message: string): boolean {
  * upper or lower case), then return `false`. Otherwise, return `null`.
  */
 export function convertYesNo(word: string): boolean | null {
-    return true;
+    word === ("YES" || "yes") ? true : false;
+    word === ("NO" || "no") ? true : false;
+    if (word === "YES" || word === "yes") {
+        return true;
+    } else if (word === "NO" || word === "no") {
+        return false;
+    } else {
+        return null;
+    }
+}
+function subtract(temperature: number, arg1: number): any {
+    throw new Error("Function not implemented.");
+}
+
+function multiply(num: void, arg1: number): any {
+    throw new Error("Function not implemented.");
+}
+
+function a(a: any, arg1: number[]) {
+    throw new Error("Function not implemented.");
 }
