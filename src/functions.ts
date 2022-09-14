@@ -1,6 +1,3 @@
-import { stringify } from "querystring";
-import { FirstInputPolyfillCallback } from "web-vitals";
-
 /**
  * Consumes a single temperature in Fahrenheit (a number) and converts to Celsius
  * using this formula:
