@@ -13,7 +13,7 @@ export function fahrenheitToCelius(temperature: number): number {
  */
 export function add3(first: number, second: number, third: number): number {
     let total = 0;
-    total = first > 0 ? first + total : 0;
+    total = first > 0 ? first + total : total;
     total = second > 0 ? second + total : total;
     total = third > 0 ? third + total : total;
     return total;
