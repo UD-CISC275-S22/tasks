@@ -15,7 +15,7 @@
 
 .App-header {
     width: 100%;
-    background-color: #e92020;
+    background-color: #085e00;
     min-height: 40vh;
     display: flex;
     flex-direction: column;
@@ -38,14 +38,9 @@
     }
 }
 
-#rectangle_1 {
+.rect {
     width: 500px;
     height: 100px;
-    background-color: red
-}
-
-#rectangle_2 {
-    width: 500px;
-    height: 100px;
-    background-color: rgb(28, 85, 255)
+    background-color: red;
+    margin:auto;
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Container, Row, Col } from "react-bootstrap";
 import "./App.css";
+import Rainer from "./rainer.jpg";
 
 function App(): JSX.Element {
     return (
@@ -15,8 +16,9 @@ function App(): JSX.Element {
             </p>
             <div>
                 <img
-                    src="rainer.jpg"
+                    src={Rainer}
                     alt="A poster of mount rainer national park"
+                    width="400"
                 />
             </div>
             <div>
@@ -27,24 +29,29 @@ function App(): JSX.Element {
                     <li>7436</li>
                 </ol>
             </div>
-            <Button onClick={() => console.log("Hello World!")}>
-                Log Hello World
-            </Button>
+            <div>
+                <Button onClick={() => console.log("Hello World!")}>
+                    Log Hello World
+                </Button>
+            </div>
+            <br></br>
+            <div className="rect">
+                <Container>
+                    <Row>
+                        <Col>Rect 1</Col>
+                    </Row>
+                </Container>
+            </div>
             <Container>
                 <Row>
                     <Col>First Column</Col>
                     <Col>Second Column</Col>
                 </Row>
             </Container>
-            <div>
-                <Container id="rectangle_1">
+            <div className="rect">
+                <Container>
                     <Row>
-                        <Col>rectangle 1</Col>
-                    </Row>
-                </Container>
-                <Container id="rectangle_2">
-                    <Row>
-                        <Col>rectangle 2</Col>
+                        <Col>Rect 2</Col>
                     </Row>
                 </Container>
             </div>
