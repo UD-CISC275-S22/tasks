@@ -5,8 +5,11 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    numbers = [numbers[0], numbers[-1]];
-    return numbers;
+    if (numbers.length === 0) {
+        return [];
+    } else {
+        return [numbers[0], numbers[numbers.length - 1]];
+    }
 }
 
 /**
@@ -23,7 +26,9 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    const nownums: number[] = numbers.map((x) => parseInt(x));
+    const nownums: number[] = numbers.map((x: string) =>
+        isNaN(parseInt(x)) ? 0 : parseInt(x)
+    );
     return nownums;
 }
 
@@ -36,7 +41,9 @@ export function stringsToIntegers(numbers: string[]): number[] {
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
     amounts = amounts.map((x) => x.replace("$", ""));
-    const dols: number[] = amounts.map((x) => parseInt(x));
+    const dols: number[] = amounts.map((x: string) =>
+        isNaN(parseInt(x)) ? 0 : parseInt(x)
+    );
     return dols;
 };
 
@@ -107,20 +114,16 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    const negatives: number[] = values.filter((x: number) => x < 0);
-    let ind: number;
-    if (negatives.length === 0) {
-        ind = values.findIndex((num: number): boolean => num === negatives[0]);
-    } else {
-        ind = values.length;
-    }
+    let ind: number = values.findIndex((num: number): boolean => num < 0);
+    ind = ind === -1 ? values.length : ind;
     const sum: number = values
         .slice(0, ind)
         .reduce((s: number, num: number) => (s += num), 0);
-    if (negatives.length === 0) {
-        values = [...values, sum];
+    let withsum: number[] = [...values];
+    if (ind === values.length) {
+        withsum = [...withsum, sum];
     } else {
-        values = values.splice(ind, 0, sum);
+        withsum.splice(ind + 1, 0, sum);
     }
-    return values;
+    return withsum;
 }
