@@ -193,8 +193,16 @@ export function changeQuestionTypeById(
     targetId: number,
     newQuestionType: QuestionType
 ): Question[] {
-    return [];
-}
+    const quest: Question | undefined = questions.find(
+        (que: Question): boolean => que.id === targetId
+    );
+    const q: Question =
+        quest.type === "multiple_choice_question"
+            ? { ...quest, type: "short_answer_question", options: [] }
+            : { ...quest, type: "multiple_choice_question", options: [] };
+    const q2: Question[] = questions.map((qq) => (qq === quest ? q : qq));
+    return q2;
+} //fix the type error here
 
 /**
  * Consumes an array of Questions and produces a new array of Questions, where all
@@ -212,7 +220,15 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ): Question[] {
-    return [];
+    const quest: Question = questions.find(
+        (que: Question): boolean => que.id === targetId
+    );
+    const q: Question =
+        quest.type === "multiple_choice_question"
+            ? { ...quest, type: "short_answer_question", options: [] }
+            : { ...quest, type: "multiple_choice_question", options: [] };
+    const q2: Question[] = questions.map((qq) => (qq === quest ? q : qq));
+    return q2;
 }
 
 /***
