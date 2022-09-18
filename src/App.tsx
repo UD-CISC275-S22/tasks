@@ -14,7 +14,7 @@ function App(): JSX.Element {
             </header>
             <h1>This is header text</h1>;
             <img
-                src="C:\Users\beamf\tasks\src\land.jpg"
+                src="https://pixabay.com/images/search/sunset/"
                 alt="A picture of land"
             />
             Ordered List:
