@@ -48,11 +48,13 @@ export function isQuestion(message: string): boolean {
  * upper or lower case), then return `false`. Otherwise, return `null`.
  */
 export function convertYesNo(word: string): boolean | null {
+    word.toUpperCase();
     if (word === "yes") {
         return true;
     }
     if (word === "no") {
         return false;
+    } else {
+        return null;
     }
-    return true;
 }
