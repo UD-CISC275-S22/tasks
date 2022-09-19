@@ -1,3 +1,6 @@
+/* eslint-disable no-constant-condition */
+import { findAllByAltText } from "@testing-library/react";
+
 /**
  * Consume an array of numbers, and return a new array containing
  * JUST the first and last number. If there are no elements, return
@@ -5,7 +8,13 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    return numbers;
+    if (numbers.length > 1) {
+        return [numbers[0], numbers[-1]];
+    } else if ((numbers.length = 1)) {
+        return [numbers[-1], numbers[-1]];
+    } else {
+        return [];
+    }
 }
 
 /**
@@ -13,7 +22,7 @@ export function bookEndList(numbers: number[]): number[] {
  * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
-    return numbers;
+    return numbers.map((numbers: number): number => numbers * 3);
 }
 
 /**
@@ -21,7 +30,14 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    return [];
+    const arrofNum = [];
+    const result = numbers.map((str) => {
+        return Number(str);
+    });
+    numbers.forEach((str) => {
+        arrofNum.push(Number(str));
+    });
+    return result;
 }
 
 /**
@@ -49,7 +65,11 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return 0;
+    const lessLetter = words.filter(
+        (word: string): boolean => words.length < 4
+    );
+    const result = lessLetter.length;
+    return result;
 }
 
 /**
@@ -58,7 +78,15 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    return false;
+    if (colors.length >= 0) {
+        colors.every(
+            (color: string): boolean =>
+                color == "red" || color == "blue" || color == "green"
+        );
+        return true;
+    } else {
+        return false;
+    }
 }
 
 /**
@@ -69,7 +97,13 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    const sum = addends.reduce(
+        (currentTotal: number, num: number) => currentTotal + num,
+        0
+    );
+    const perRes = addends.map((num: number): string => num.toString());
+    const result = perRes.join("+");
+    return sum + "=" + result;
 }
 
 /**
@@ -82,5 +116,16 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    return [];
+    let sum = 0;
+    const numberInside = [...values];
+    const numberAtend = [...values, sum];
+    for (let i = 0; i < values.length; i++) {
+        if (values[i] > 0) {
+            sum += values[i];
+        } else {
+            numberInside.splice(values[i], 0, sum);
+        }
+        return numberInside;
+    }
+    return numberAtend;
 }
