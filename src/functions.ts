@@ -43,7 +43,7 @@ export function shout(message: string): string {
  */
 export function isQuestion(message: string): boolean {
     const length = message.length - 1;
-    if (message[length] == "?"){
+    if (message[length] == "?") {
         return true;
     } else {
         return false;
@@ -58,7 +58,7 @@ export function isQuestion(message: string): boolean {
 export function convertYesNo(word: string): boolean | null {
     if (word == "yes" || word == "YES") {
         return true;
-    } else if (word == "no" || word == "NO"){
+    } else if (word == "no" || word == "NO") {
         return false;
     } else {
         return null;
