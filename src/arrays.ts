@@ -95,7 +95,11 @@ export function allRGB(colors: string[]): boolean {
         (val: string): boolean =>
             !(val === "red" || val === "blue" || val === "green")
     );
-    colors.length === 0 ? (bl = true) : (bl = false);
+    if (colors.length === 0) {
+        bl = true;
+    } else {
+        bl = false;
+    }
     return bl;
 }
 
@@ -135,7 +139,9 @@ export function makeMath(addends: number[]): string {
 export function injectPositive(values: number[]): number[] {
     values = [...values];
     let negindex = values.findIndex((val: number): boolean => val < 0);
-    negindex === -1 ? (negindex = values.length) : negindex;
+    if (negindex === -1) {
+        negindex = values.length;
+    }
     let tempvalues = [...values];
     tempvalues = tempvalues.filter(
         (val: number): boolean => tempvalues.indexOf(val) < negindex

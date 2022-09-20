@@ -33,7 +33,11 @@ export function shout(message: string): string {
  */
 export function isQuestion(message: string): boolean {
     let b = false;
-    message.charAt(message.length - 1) === "?" ? (b = true) : (b = false);
+    if (message.charAt(message.length - 1) === "?") {
+        b = true;
+    } else {
+        b = false;
+    }
     return b;
 }
 
