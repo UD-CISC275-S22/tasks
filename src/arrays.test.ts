@@ -11,7 +11,7 @@ import {
 } from "./arrays";
 
 describe("Testing the array functions", () => {
-    //////////////////////////////////
+    /////////////////////////////////
     // bookEndList and tripleNumbers
 
     const NUMBERS_1 = [1, 2, 3];

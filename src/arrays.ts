@@ -1,5 +1,4 @@
 /* eslint-disable no-constant-condition */
-import { findAllByAltText } from "@testing-library/react";
 
 /**
  * Consume an array of numbers, and return a new array containing
@@ -9,9 +8,9 @@ import { findAllByAltText } from "@testing-library/react";
  */
 export function bookEndList(numbers: number[]): number[] {
     if (numbers.length > 1) {
-        return [numbers[0], numbers[-1]];
-    } else if ((numbers.length = 1)) {
-        return [numbers[-1], numbers[-1]];
+        return [numbers[0], numbers[numbers.length - 1]];
+    } else if (numbers.length === 1) {
+        return [numbers[numbers.length - 1], numbers[numbers.length - 1]];
     } else {
         return [];
     }
@@ -30,13 +29,9 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    const arrofNum = [];
-    const result = numbers.map((str) => {
-        return Number(str);
-    });
-    numbers.forEach((str) => {
-        arrofNum.push(Number(str));
-    });
+    const result = numbers.map((str: string): number =>
+        Number(str) ? Number(str) : 0
+    );
     return result;
 }
 
@@ -65,9 +60,7 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    const lessLetter = words.filter(
-        (word: string): boolean => words.length < 4
-    );
+    const lessLetter = words.filter((word: string): boolean => word.length < 4);
     const result = lessLetter.length;
     return result;
 }
@@ -78,11 +71,15 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    if (colors.length >= 0) {
+    if (colors.length === 0) {
+        return true;
+    }
+    if (
         colors.every(
             (color: string): boolean =>
                 color == "red" || color == "blue" || color == "green"
-        );
+        )
+    ) {
         return true;
     } else {
         return false;
@@ -97,6 +94,9 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
+    if (addends.length === 0) {
+        return "0=0";
+    }
     const sum = addends.reduce(
         (currentTotal: number, num: number) => currentTotal + num,
         0
