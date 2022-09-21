@@ -46,7 +46,12 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    return [];
+    const noDollar = amounts.map((word: string): number =>
+        isNaN(parseInt(word.replace("$", "")))
+            ? 0
+            : parseInt(word.replace("$", ""))
+    );
+    return noDollar;
 };
 
 /**
@@ -55,7 +60,13 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    return [];
+    const noQuestion = messages.filter(
+        (message: string): boolean => !message.includes("?")
+    );
+    const upperCase = noQuestion.map((word: string): string =>
+        word.at(word.length - 1) === "!" ? word.toUpperCase() : word
+    );
+    return upperCase;
 };
 
 /**
@@ -63,7 +74,8 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return 0;
+    const four = words.filter((word: string): boolean => word.length < 4);
+    return four.length;
 }
 
 /**
@@ -72,7 +84,12 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    return false;
+    const yes = colors.map(
+        (color: string): boolean =>
+            color === "red" || color === "blue" || color === "green"
+    );
+    const allTrue = yes.every((color: boolean): boolean => color);
+    return allTrue;
 }
 
 /**
@@ -83,7 +100,18 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    let math = "0";
+    if (addends.length === 0) {
+        math = "0";
+    } else {
+        math = addends.join("+");
+    }
+    const sum = addends.reduce(
+        (currentTotal: number, num: number) => currentTotal + num,
+        0
+    );
+    const output = sum + "=" + math;
+    return output;
 }
 
 /**
