@@ -46,13 +46,10 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    const temp = amounts.map((value: string): number =>
-        isNaN(Number(value.slice(1)))
-            ? 0
-            : value[0] === "$"
-            ? Number(value.slice(1))
-            : Number(value)
+    let temp = amounts.map((value: string): number =>
+        value[0] === "$" ? Number(value.slice(1)) : Number(value)
     );
+    temp = temp.map((value: number): number => (isNaN(value) ? 0 : value));
     return temp;
 };
 
@@ -135,7 +132,7 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    let temp = [...values];
+    const temp = [...values];
     if (temp.every((value: number): boolean => value > 0)) {
         temp.push(
             temp.reduce(
