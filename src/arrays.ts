@@ -43,7 +43,27 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    return [];
+    //Find a way to store the Number(str) values in an array and return that as your solution. Make sure to cover the cases where the result can't be an int.
+    /* const rmv = amounts.map((str: string): number[] => {
+        console.log(amounts);
+        if (str[0] != "$") {
+            result.push(Number(str));
+            if (isNaN(Number(str.slice(1)))) {
+                result.push(0);
+            }
+        } else if (!isNaN(Number(str.slice(1)))) {
+            result.push(Number(str.slice(1)));
+        }
+        console.log(result);
+        return result;
+    });
+    return result;
+    */
+    const preRes = amounts.map((str: string): string => str.replace("$", ""));
+    const result = preRes.map((str: string): number =>
+        Number(preRes) ? Number(str) : 0
+    );
+    return result;
 };
 
 /**
@@ -52,7 +72,10 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    return [];
+    return ["vahs", "bruh"];
+    /*1) Line that filters out strings that end in ?
+    2) Store new array without the strings that end in ?
+    3) Find a way to go through the new array that makes anything ending in ! ALL CAPS*/
 };
 
 /**
@@ -116,16 +139,25 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    let sum = 0;
     const numberInside = [...values];
-    const numberAtend = [...values, sum];
-    for (let i = 0; i < values.length; i++) {
-        if (values[i] > 0) {
-            sum += values[i];
-        } else {
-            numberInside.splice(values[i], 0, sum);
-        }
+    const findNe = values.findIndex((num: number): boolean => num < 0);
+    if (findNe < 0) {
+        const sum = values.reduce(
+            (currentTotal: number, num: number) => currentTotal + num,
+            0
+        );
+        const numberAtend = [...values, sum];
+        return numberAtend;
+        //numberInside.splice(values.length + 1, 0, sum);
+    } else {
+        const findPn = values.map((num: number): number =>
+            values.indexOf(num) < findNe ? num : 0
+        );
+        const sum2 = findPn.reduce(
+            (currentTotal: number, num: number) => currentTotal + num,
+            0
+        );
+        numberInside.splice(findNe + 1, 0, sum2);
         return numberInside;
     }
-    return numberAtend;
 }
