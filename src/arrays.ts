@@ -72,10 +72,16 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    return ["vahs", "bruh"];
     /*1) Line that filters out strings that end in ?
     2) Store new array without the strings that end in ?
     3) Find a way to go through the new array that makes anything ending in ! ALL CAPS*/
+    const findQm = messages.filter(
+        (str: string): boolean => str[str.length - 1] != "?"
+    );
+    const result = findQm.map((str: string): string =>
+        str[str.length - 1] === "!" ? str.toUpperCase() : str
+    );
+    return result;
 };
 
 /**
