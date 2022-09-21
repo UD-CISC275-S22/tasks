@@ -1,6 +1,5 @@
 import { privateDecrypt } from "crypto";
 import { arrayBuffer } from "stream/consumers";
-import { isNull } from "util";
 
 /**
  * Consume an array of numbers, and return a new array containing
