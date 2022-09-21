@@ -61,7 +61,7 @@ export const removeDollars = (amounts: string[]): number[] => {
     */
     const preRes = amounts.map((str: string): string => str.replace("$", ""));
     const result = preRes.map((str: string): number =>
-        Number(preRes) ? Number(str) : 0
+        Number(str) ? Number(str) : 0
     );
     return result;
 };
