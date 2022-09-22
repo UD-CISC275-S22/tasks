@@ -4,7 +4,10 @@
  *      C = (F - 32) * 5/9
  */
 export function fahrenheitToCelius(temperature: number): number {
-    return 0;
+    const div: number = 5 / 9;
+    const subtract = temperature - 32;
+    const celsius = subtract * div;
+    return celsius;
 }
 
 /**
@@ -12,7 +15,26 @@ export function fahrenheitToCelius(temperature: number): number {
  * if the number is greater than zero.
  */
 export function add3(first: number, second: number, third: number): number {
-    return 0;
+    let firstPositive: number;
+    let secondPositive: number;
+    let thirdPositive: number;
+    if (first > 0) {
+        firstPositive = first;
+    } else {
+        firstPositive = 0;
+    }
+    if (second > 0) {
+        secondPositive = second;
+    } else {
+        secondPositive = 0;
+    }
+    if (third > 0) {
+        thirdPositive = third;
+    } else {
+        thirdPositive = 0;
+    }
+    const sum = firstPositive + secondPositive + thirdPositive;
+    return sum;
 }
 
 /**
@@ -20,7 +42,8 @@ export function add3(first: number, second: number, third: number): number {
  * mark added to the end.
  */
 export function shout(message: string): string {
-    return "";
+    const newMessage = message.toUpperCase() + "!";
+    return newMessage;
 }
 
 /**
@@ -28,7 +51,11 @@ export function shout(message: string): string {
  * mark. Do not use an `if` statement in solving this question.
  */
 export function isQuestion(message: string): boolean {
-    return true;
+    if (message.slice(-1) === "?") {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 /**
@@ -37,5 +64,12 @@ export function isQuestion(message: string): boolean {
  * upper or lower case), then return `false`. Otherwise, return `null`.
  */
 export function convertYesNo(word: string): boolean | null {
-    return true;
+    if (word.toLowerCase() === "yes") {
+        return true;
+    }
+    if (word.toLowerCase() === "no") {
+        return false;
+    } else {
+        return null;
+    }
 }
