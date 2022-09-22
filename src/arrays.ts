@@ -102,7 +102,7 @@ export function makeMath(addends: number[]): string {
     const sum =
         addends.length === 0
             ? 0
-            : addends.reduce((current_total: number, num: number) => current_total += num);
+            : addends.reduce((current_total: number, num: number) => (current_total += num));
     const add_nums = addends.length === 0 ? "0" : addends.join("+");
     return sum.toString().concat("=", add_nums);
 }
@@ -117,13 +117,19 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    const sum_index = values.some((val: number): boolean => val < 0)
-        ? values.findIndex((val: number): boolean => val < 0)
-        : -1;
-    const half = values.slice(0, sum_index);
-    const sum_half = half.reduce(
-        (current_total: number, num: number) => (current_total += num)
-    );
-    const injected_array = values.splice(sum_index + 1, 0, sum_half);
+    const sum_index = values.findIndex((val: number): boolean => val < 0);
+    const half = sum_index === -1 ? values : values.slice(0, sum_index);
+    const sum_half =
+        half.length === 0
+            ? 0
+            : half.reduce(
+                (current_total: number, num: number) => (current_total += num)
+            );
+    const start = values.slice(0, sum_index + 1);
+    const end = values.slice(sum_index + 1);
+    const injected_array =
+        sum_index === -1 ? [...values, sum_half] : [...start, sum_half, ...end];
+    console.log(injected_array);
+    console.log(values);
     return injected_array;
 }
