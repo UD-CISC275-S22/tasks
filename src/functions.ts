@@ -10,7 +10,7 @@ export function fahrenheitToCelius(temperature: number): number {
 
 /**
  * Consumes three numbers and produces their sum. BUT you should only add a number
- * if the number is greater than zero.
+ * if the number is greater than zeroo.
  */
 export function add3(first: number, second: number, third: number): number {
     let sum = 0;
