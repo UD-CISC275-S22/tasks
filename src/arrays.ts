@@ -12,6 +12,7 @@ export function bookEndList(numbers: number[]): number[] {
     } else if (numbers.length === 0) {
         return [];
     }
+    return [];
 }
 
 /**
@@ -39,8 +40,9 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    const signRemoved = amounts.map((amount : string) => 
-        amount.includes("$") ? amount.slice(1) : amount);
+    const signRemoved = amounts.map((amount: string) =>
+        amount.includes("$") ? amount.slice(1) : amount
+    );
     return stringsToIntegers(signRemoved);
 };
 
@@ -50,8 +52,9 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-   const newList = messages.map((message: string) =>
-        message.endsWith("!") ? message.toUpperCase() : message);
+    const newList = messages.map((message: string) =>
+        message.endsWith("!") ? message.toUpperCase() : message
+    );
     return newList.filter((message: string) => !message.includes("?"));
 };
 
@@ -74,7 +77,8 @@ export function allRGB(colors: string[]): boolean {
         return true;
     } else {
         return colors.every((color: string): boolean =>
-        "red, blue, green".includes(color));
+            "red, blue, green".includes(color)
+        );
     }
 }
 
@@ -106,12 +110,13 @@ export function makeMath(addends: number[]): string {
 export function injectPositive(values: number[]): number[] {
     let num: number = values.findIndex((value: number): boolean => value < 0);
     num = num === -1 ? values.length : num;
-    const sum: number = values.slice(0, num)
+    const sum: number = values
+        .slice(0, num)
         .reduce((n: number, value: number) => (n += value), 0);
     let newVals: number[] = [...values];
-    if(num === values.length){
+    if (num === values.length) {
         newVals = [...newVals, sum];
-    } else{
+    } else {
         newVals.splice(num + 1, 0, sum);
     }
     return newVals;
