@@ -6,16 +6,17 @@
  */
 export function bookEndList(numbers: number[]): number[] {
     const size = numbers.length;
+    let book = [2];
     if (size == 0) {
-        return [numbers[size]];
+        book = [];
     }
     if (size == 1) {
-        return [numbers[0], numbers[0]];
+        book = [numbers[0], numbers[0]];
     }
     if (size > 1) {
-        return [numbers[0], numbers[size - 1]];
+        book = [numbers[0], numbers[size - 1]];
     }
-    return numbers;
+    return book;
 }
 
 /**
