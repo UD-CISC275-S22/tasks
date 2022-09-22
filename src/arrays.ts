@@ -1,6 +1,4 @@
 /* eslint-disable indent */
-import { debug } from "console";
-import { First } from "react-bootstrap/esm/PageItem";
 
 /**
  * Consume an array of numbers, and return a new array containing
