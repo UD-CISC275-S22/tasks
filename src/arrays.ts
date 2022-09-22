@@ -93,7 +93,7 @@ export function makeMath(addends: number[]): string {
     if (addends.length === 0) {
         return "0=0";
     }
-    const sum = addends.reduce((added: number, num: number) => added+num, 0);
+    const sum = addends.reduce((added: number, num: number) => added + num, 0);
     const line = addends.join("+");
     return sum + "=" + line;
 }
