@@ -23,7 +23,7 @@ function App(): JSX.Element {
                             First column.
                             <div className="rectangle"></div>
                             <img
-                                src="C:\Users\m4tth\OneDrive\Pictures\Saved Pictures\tower.jpg"
+                                src="https://www.planetware.com/photos-large/F/eiffel-tower.jpg"
                                 alt="A picture of the Eiffel tower"
                             />
                         </Col>
