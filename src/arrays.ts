@@ -29,7 +29,7 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    return numbers.map((q: number): numbers => (isNaN(+q) ? 0 : +q));
+    return numbers.map((q: string): number => (isNaN(+q) ? 0 : +q));
 }
 
 /**
@@ -64,7 +64,7 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return words.filter((word: string[]): string => word.length < 4).length;
+    return words.filter((word: string): boolean => word.length < 4).length;
 }
 
 /**
@@ -74,7 +74,7 @@ export function countShortWords(words: string[]): number {
  */
 export function allRGB(colors: string[]): boolean {
     return colors.every(
-        (color: number): boolean =>
+        (color: string): boolean =>
             color === "red" || color === "blue" || color === "green"
     );
 }
