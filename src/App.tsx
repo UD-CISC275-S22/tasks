@@ -35,7 +35,11 @@ function App(): JSX.Element {
                     >
                         <Col xs={6}>First column.</Col>
                     </div>
-                    <Col>Second column.</Col>
+                    <div
+                        className="2ndColStyle"
+                        style={{ border: "1px solid red", padding: "4px" }}
+                    ></div>
+                    <Col xs={6}>Second column.</Col>
                 </Row>
             </Container>
         </div>
