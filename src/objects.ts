@@ -1,6 +1,3 @@
-import { constants } from "buffer";
-import { check } from "prettier";
-import { stringify } from "querystring";
 import { Question, QuestionType } from "./interfaces/question";
 
 /**
