@@ -99,10 +99,14 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    const sum =
-        addends.length === 0
-            ? 0
-            : addends.reduce((current_total: number, num: number) => (current_total += num));
+    let sum = 0;
+    if (addends.length === 0) {
+        sum = 0;
+    } else {
+        sum = addends.reduce(
+            (current_total: number, num: number) => (current_total += num)
+        );
+    }
     const add_nums = addends.length === 0 ? "0" : addends.join("+");
     return sum.toString().concat("=", add_nums);
 }
@@ -119,12 +123,14 @@ export function makeMath(addends: number[]): string {
 export function injectPositive(values: number[]): number[] {
     const sum_index = values.findIndex((val: number): boolean => val < 0);
     const half = sum_index === -1 ? values : values.slice(0, sum_index);
-    const sum_half =
-        half.length === 0
-            ? 0
-            : half.reduce(
-                (current_total: number, num: number) => (current_total += num)
-            );
+    let sum_half = 0;
+    if (half.length === 0) {
+        sum_half = 0;
+    } else {
+        sum_half = half.reduce(
+            (current_total: number, num: number) => (current_total += num)
+        );
+    }
     const start = values.slice(0, sum_index + 1);
     const end = values.slice(sum_index + 1);
     const injected_array =
