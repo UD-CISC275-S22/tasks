@@ -133,7 +133,5 @@ export function injectPositive(values: number[]): number[] {
     const end = values.slice(sum_index + 1);
     const injected_array =
         sum_index === -1 ? [...values, sum_half] : [...start, sum_half, ...end];
-    console.log(injected_array);
-    console.log(values);
     return injected_array;
 }
