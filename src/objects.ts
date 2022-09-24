@@ -1,4 +1,3 @@
-import { shout } from "./functions";
 import { Question, QuestionType } from "./interfaces/question";
 
 /**
