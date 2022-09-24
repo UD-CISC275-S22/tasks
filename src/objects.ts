@@ -1,3 +1,4 @@
+import { shout } from "./functions";
 import { Question, QuestionType } from "./interfaces/question";
 
 /**
@@ -10,7 +11,16 @@ export function makeBlankQuestion(
     name: string,
     type: QuestionType
 ): Question {
-    return {};
+    return {
+        id: id,
+        name: name,
+        type: type,
+        body: "",
+        expected: "",
+        options: [],
+        points: 1,
+        published: false
+    };
 }
 
 /**
@@ -21,7 +31,13 @@ export function makeBlankQuestion(
  * HINT: Look up the `trim` and `toLowerCase` functions.
  */
 export function isCorrect(question: Question, answer: string): boolean {
-    return false;
+    const expect = question.expected.trim().toLowerCase();
+    const check = answer.trim().toLowerCase();
+    if (expect === check) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 /**
@@ -31,6 +47,18 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
+    if (question.type === "short_answer_question") {
+        return true;
+    }
+
+    const valid = question.options.filter(
+        (value: string): boolean => value === answer
+    );
+
+    if (valid.length > 0) {
+        return true;
+    }
+
     return false;
 }
 
@@ -41,7 +69,13 @@ export function isValid(question: Question, answer: string): boolean {
  * name "My First Question" would become "9: My First Q".
  */
 export function toShortForm(question: Question): string {
-    return "";
+    let temp = question.id.toString();
+
+    const beginning = question.name.slice(0, 10);
+
+    temp = temp + ": " + beginning;
+
+    return temp;
 }
 
 /**
@@ -62,7 +96,16 @@ export function toShortForm(question: Question): string {
  * Check the unit tests for more examples of what this looks like!
  */
 export function toMarkdown(question: Question): string {
-    return "";
+    let choices = "";
+    if (question.type === "multiple_choice_question") {
+        choices = question.options.reduce(
+            (total: string, addon: string) => (total = total + "\n- " + addon),
+            ""
+        );
+    }
+    const temp = "# " + question.name + "\n" + question.body + choices;
+
+    return temp;
 }
 
 /**
@@ -70,7 +113,8 @@ export function toMarkdown(question: Question): string {
  * `newName`.
  */
 export function renameQuestion(question: Question, newName: string): Question {
-    return question;
+    const temp = { ...question, name: newName };
+    return temp;
 }
 
 /**
@@ -79,7 +123,14 @@ export function renameQuestion(question: Question, newName: string): Question {
  * published; if it was published, now it should be not published.
  */
 export function publishQuestion(question: Question): Question {
-    return question;
+    const temp = { ...question };
+    if (temp.published === false) {
+        temp.published = true;
+    } else {
+        temp.published = false;
+    }
+
+    return temp;
 }
 
 /**
@@ -89,7 +140,15 @@ export function publishQuestion(question: Question): Question {
  * The `published` field should be reset to false.
  */
 export function duplicateQuestion(id: number, oldQuestion: Question): Question {
-    return oldQuestion;
+    const temp = { ...oldQuestion };
+
+    temp.name = "Copy of " + temp.name;
+
+    temp.published = false;
+
+    temp.id = id;
+
+    return temp;
 }
 
 /**
@@ -100,7 +159,9 @@ export function duplicateQuestion(id: number, oldQuestion: Question): Question {
  * Check out the subsection about "Nested Fields" for more information.
  */
 export function addOption(question: Question, newOption: string): Question {
-    return question;
+    const temp = { ...question, options: [...question.options] };
+    temp.options.push(newOption);
+    return temp;
 }
 
 /**
@@ -117,5 +178,13 @@ export function mergeQuestion(
     contentQuestion: Question,
     { points }: { points: number }
 ): Question {
-    return contentQuestion;
+    const temp = {
+        ...contentQuestion,
+        id: id,
+        name: name,
+        points: points,
+        published: false
+    };
+
+    return temp;
 }
