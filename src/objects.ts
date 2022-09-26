@@ -1,6 +1,3 @@
-import { type } from "os";
-import { ModalBody } from "react-bootstrap";
-import { isQuestion } from "./functions";
 import { Question, QuestionType } from "./interfaces/question";
 
 /**
@@ -105,7 +102,7 @@ export function renameQuestion(question: Question, newName: string): Question {
  * published; if it was published, now it should be not published.
  */
 export function publishQuestion(question: Question): Question {
-    return {...question, published: !question.published };
+    return { ...question, published: !question.published };
 }
 
 /**
@@ -123,7 +120,7 @@ export function duplicateQuestion(id: number, oldQuestion: Question): Question {
     };
 }
 
-/** 
+/**
  * Return a new version of the given question, with the `newOption` added to
  * the list of existing `options`. Remember that the new Question MUST have
  * its own separate copy of the `options` list, rather than the same reference
