@@ -1,4 +1,3 @@
-import { resourceUsage } from "process";
 import { Question, QuestionType } from "./interfaces/question";
 
 /**
