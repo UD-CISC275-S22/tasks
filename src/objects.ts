@@ -1,8 +1,3 @@
-import { join, parse } from "path";
-import Q from "q";
-import { idText, ScriptElementKindModifier } from "typescript";
-import { urlToHttpOptions } from "url";
-import { isQuestion } from "./functions";
 import { Question, QuestionType } from "./interfaces/question";
 
 /**
