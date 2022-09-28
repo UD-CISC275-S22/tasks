@@ -1,4 +1,3 @@
-import { type } from "os";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
 import { makeBlankQuestion, duplicateQuestion } from "./objects";
@@ -174,7 +173,7 @@ export function sameType(questions: Question[]): boolean {
             question.type === "short_answer_question"
     );
     const checkType = questions.every(
-        (question: Question): boolean => question.type === firstQues?.type //why this works????????
+        (question: Question): boolean => question.type === questions[0].type //why this works????????
     );
     return checkType;
 }
@@ -272,7 +271,25 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ): Question[] {
-    return [];
+    const checkIdfirst = questions.map((question: Question): Question => {
+        if (question.id === targetId) {
+            if (targetOptionIndex === -1) {
+                return {
+                    ...question,
+                    options: [...question.options, newOption]
+                };
+            } else {
+                const questionCopy = {
+                    ...question,
+                    options: [...question.options]
+                };
+                questionCopy.options.splice(targetOptionIndex, 1, newOption);
+                return questionCopy;
+            }
+        }
+        return question;
+    });
+    return checkIdfirst;
 }
 
 /***
@@ -286,14 +303,16 @@ export function duplicateQuestionInArray(
     targetId: number,
     newId: number
 ): Question[] {
-    const duoQues: Question = duplicateQuestion(newId, questions);
-    const checkId = questions.map(
-        (question: Question): Question =>
-            question.id != targetId ? question : { ...question }
+    //const duoQues: Question = duplicateQuestion(newId, questions);
+    const checkId = questions.find(
+        (question: Question): boolean => question.id === targetId
     );
-    checkId.push(duoQues);
-    return checkId;
-}
-function str(str: any, String: StringConstructor) {
-    throw new Error("Function not implemented.");
+    const checkIndex = questions.findIndex(
+        (question: Question): boolean => question.id === targetId
+    );
+    const storeArray = [...questions];
+    if (checkId != undefined) {
+        storeArray.splice(checkIndex + 1, 0, duplicateQuestion(newId, checkId));
+    }
+    return storeArray;
 }
