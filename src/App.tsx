@@ -1,6 +1,4 @@
 import React from "react";
-import { Button, Container, Row, Col } from "react-bootstrap";
-import logo from "./assets/logo500.png";
 
 import "./App.css";
 import { ChangeType } from "./components/ChangeType";
