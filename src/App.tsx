@@ -17,7 +17,7 @@ function App(): JSX.Element {
         <div className="App">
             <h1>CISC275</h1>
             <hr></hr>
-            {/* <DoubleHalf></DoubleHalf> */}
+            <DoubleHalf></DoubleHalf>
             <hr></hr>
             <ChooseTeam></ChooseTeam>
             <hr></hr>
