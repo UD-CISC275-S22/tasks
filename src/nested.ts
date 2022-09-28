@@ -167,11 +167,12 @@ export function publishAll(questions: Question[]): Question[] {
  * //make a const with the value of the type of the first question, then use the map to see if all question's types match the first one's.
  */
 export function sameType(questions: Question[]): boolean {
-    const firstQues = questions.find(
+    /*const firstQues = questions.find(
         (question: Question): boolean =>
             question.type === "multiple_choice_question" ||
             question.type === "short_answer_question"
     );
+    */
     const checkType = questions.every(
         (question: Question): boolean => question.type === questions[0].type //why this works????????
     );
