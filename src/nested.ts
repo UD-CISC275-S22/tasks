@@ -1,6 +1,6 @@
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
-import { makeBlankQuestion } from "./objects";
+import { duplicateQuestion, makeBlankQuestion } from "./objects";
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
@@ -35,7 +35,7 @@ export function findQuestion(
     id: number
 ): Question | null {
     const q: Question | undefined = questions.find(
-        (x: question): boolean => x.id === id
+        (x: Question): boolean => x.id === id
     );
     return q === undefined ? null : q;
 }
@@ -102,7 +102,7 @@ export function toCSV(questions: Question[]): string {
     str += questions
         .map(
             (q: Question): string =>
-                `  ${q.id},${
+                `${q.id},${
                     q.name
                 },${q.options.length.toString()},${q.points.toString()},${
                     q.published ? "true" : "false"
@@ -158,11 +158,8 @@ export function addNewQuestion(
     name: string,
     type: QuestionType
 ): Question[] {
-    questions = {
-        ...questions //,
-        //makeBlankQuestion(id, name, type)
-    };
-    return questions; // broken
+    questions = [...questions, makeBlankQuestion(id, name, type)];
+    return questions;
 }
 
 /***
@@ -193,16 +190,18 @@ export function changeQuestionTypeById(
     targetId: number,
     newQuestionType: QuestionType
 ): Question[] {
-    const quest: Question | undefined = questions.find(
+    const questnum: number = questions.findIndex(
+        // I didn't use find because it caused a type error, and since it seems like the question implies that the wanted
+        // question will always be in the array, I figured this would be easier than checking that kind of stuff
         (que: Question): boolean => que.id === targetId
     );
-    const q: Question =
-        quest.type === "multiple_choice_question"
-            ? { ...quest, type: "short_answer_question", options: [] }
-            : { ...quest, type: "multiple_choice_question", options: [] };
+    const quest: Question = questions[questnum];
+    const o: string[] =
+        quest.type === newQuestionType ? [...quest.options] : [];
+    const q: Question = { ...quest, type: newQuestionType, options: [...o] };
     const q2: Question[] = questions.map((qq) => (qq === quest ? q : qq));
     return q2;
-} //fix the type error here
+}
 
 /**
  * Consumes an array of Questions and produces a new array of Questions, where all
@@ -220,14 +219,21 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ): Question[] {
-    const quest: Question = questions.find(
+    const num: number = questions.findIndex(
         (que: Question): boolean => que.id === targetId
     );
-    const q: Question =
-        quest.type === "multiple_choice_question"
-            ? { ...quest, type: "short_answer_question", options: [] }
-            : { ...quest, type: "multiple_choice_question", options: [] };
-    const q2: Question[] = questions.map((qq) => (qq === quest ? q : qq));
+    let q: Question = {
+        ...questions[num],
+        options: [...questions[num].options]
+    };
+    if (targetOptionIndex === -1) {
+        q = { ...q, options: [...q.options, newOption] };
+    } else {
+        const o: string[] = [...q.options];
+        o.splice(targetOptionIndex, 1, newOption);
+        q = { ...q, options: o };
+    }
+    const q2: Question[] = questions.map((qq) => (qq.id === targetId ? q : qq));
     return q2;
 }
 
@@ -242,5 +248,11 @@ export function duplicateQuestionInArray(
     targetId: number,
     newId: number
 ): Question[] {
-    return [];
+    const q2: Question[] = [...questions];
+    const questnum: number = questions.findIndex(
+        (que: Question): boolean => que.id === targetId
+    );
+    const q: Question = duplicateQuestion(newId, questions[questnum]);
+    q2.splice(questnum + 1, 0, q);
+    return q2;
 }
