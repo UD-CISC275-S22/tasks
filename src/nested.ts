@@ -215,19 +215,16 @@ export function editOption(
         (q: Question): Question =>
             q.id === targetId
                 ? targetOptionIndex !== -1
-                    ? {
-                          ...q,
-                          options: [...q.options].splice(
-                              targetOptionIndex,
-                              1,
-                              newOption
-                          )
-                      }
+                    ? { ...q, options: q.options }
                     : addOption(q, newOption)
                 : q
     );
 }
-
+//].splice(
+//targetOptionIndex,
+//1,
+//newOption
+//)
 /***
  * Consumes an array of questions, and produces a new array based on the original array.
  * The only difference is that the question with id `targetId` should now be duplicated, with
