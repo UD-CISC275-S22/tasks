@@ -1,4 +1,3 @@
-import { urlToHttpOptions } from "url";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
 import { makeBlankQuestion } from "./objects";
@@ -9,7 +8,7 @@ import { duplicateQuestion } from "./objects";
  */
 export function getPublishedQuestions(questions: Question[]): Question[] {
     const publishedQuestions: Question[] = questions.filter(
-        (questions: Question): boolean => questions.published
+        (question: Question): boolean => question.published === true
     );
     return publishedQuestions;
 }
@@ -21,10 +20,10 @@ export function getPublishedQuestions(questions: Question[]): Question[] {
  */
 export function getNonEmptyQuestions(questions: Question[]): Question[] {
     const nonEmptyQuestions: Question[] = questions.filter(
-        (questions: Question): boolean =>
-            questions.body !== "" ||
-            questions.expected !== "" ||
-            questions.options.length != 0
+        (question: Question): boolean =>
+            question.body !== "" ||
+            question.expected !== "" ||
+            question.options.length !== 0
     );
     return nonEmptyQuestions;
 }
@@ -38,7 +37,7 @@ export function findQuestion(
     id: number
 ): Question | null {
     const question = questions.find(
-        (questions: Question): boolean => questions.id === id
+        (question: Question): boolean => question.id === id
     );
     return question || null;
 }
@@ -59,9 +58,7 @@ export function removeQuestion(questions: Question[], id: number): Question[] {
  * questions, as an array.
  */
 export function getNames(questions: Question[]): string[] {
-    const names = questions.map(
-        (questions: Question): string => questions.name
-    );
+    const names = questions.map((question: Question): string => question.name);
     return names;
 }
 
@@ -70,7 +67,7 @@ export function getNames(questions: Question[]): string[] {
  */
 export function sumPoints(questions: Question[]): number {
     const sum = questions.reduce(
-        (currSum: number, questions: Question) => currSum + questions.points,
+        (currSum: number, question: Question) => currSum + question.points,
         0
     );
     return sum;
@@ -105,8 +102,8 @@ id,name,options,points,published
 export function toCSV(questions: Question[]): string {
     const csv = questions
         .map(
-            (questions: Question): string =>
-                `${questions.id},${questions.name},${questions.options.length},${questions.points},${questions.published}`
+            (question: Question): string =>
+                `${question.id},${question.name},${question.options.length},${question.points},${question.published}`
         )
         .join("\n");
 
@@ -120,8 +117,8 @@ export function toCSV(questions: Question[]): string {
  */
 export function makeAnswers(questions: Question[]): Answer[] {
     const answers = questions.map(
-        (questions: Question): Answer => ({
-            questionId: questions.id,
+        (question: Question): Answer => ({
+            questionId: question.id,
             text: "",
             submitted: false,
             correct: false
@@ -157,9 +154,9 @@ export function sameType(questions: Question[]): boolean {
         (question: Question): boolean =>
             question.type === "short_answer_question"
     );
-    if (multiChoice) {
+    if (multiChoice === true) {
         return true;
-    } else if (shortAnswer) {
+    } else if (shortAnswer === true) {
         return true;
     } else {
         return false;
@@ -192,9 +189,9 @@ export function renameQuestionById(
     newName: string
 ): Question[] {
     const changeID = questions.map(
-        (questions: Question): Question => ({
-            ...questions,
-            name: questions.id === targetId ? newName : questions.name
+        (question: Question): Question => ({
+            ...question,
+            name: question.id === targetId ? newName : question.name
         })
     );
     return changeID;
@@ -213,14 +210,14 @@ export function changeQuestionTypeById(
     newQuestionType: QuestionType
 ): Question[] {
     const changeType = questions.map(
-        (questions: Question): Question => ({
-            ...questions,
-            type: questions.id === targetId ? newQuestionType : questions.type,
+        (question: Question): Question => ({
+            ...question,
+            type: question.id === targetId ? newQuestionType : question.type,
             options:
-                questions.id === targetId &&
+                question.id === targetId &&
                 newQuestionType !== "multiple_choice_question"
                     ? []
-                    : questions.options
+                    : question.options
         })
     );
     return changeType;
