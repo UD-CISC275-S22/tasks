@@ -1,4 +1,4 @@
-import { Answer } from "./interfaces/answer";
+import { Answer } from "./interfaces/answer"; 
 import { Question, QuestionType } from "./interfaces/question";
 import { makeBlankQuestion } from "./objects";
 import { duplicateQuestion } from "./objects";
