@@ -135,28 +135,22 @@ export function makeMath(addends: number[]): string {
 //data.slice()
 //reduce
 export function injectPositive(values: number[]): number[] {
-    const loc = values.findIndex((x) => x < 0);
-    //console.log(loc);
-    const begin = values.slice(0, loc);
-    //console.log(begin);
-    //const end = values.slice(loc, values.length);
-    //console.log(end);
+    const newVal = [...values];
+    const loc = newVal.findIndex((x) => x < 0);
+    const begin = newVal.slice(0, loc);
     if (loc === -1) {
-        const sum = values.reduce(
+        const sum = newVal.reduce(
             (currentTotal: number, num: number) => currentTotal + num,
             0
         );
-        return [...values, sum];
+        return [...newVal, sum];
     } else {
         const sum = begin.reduce(
             (currentTotal: number, num: number) => currentTotal + num,
             0
         );
-        values.splice(loc + 1, 0, sum);
-        console.log(values);
-        console.log([...values]);
-        return [...values];
-        // return [...begin, sum, ...end];
+        newVal.splice(loc + 1, 0, sum);
+        return newVal;
     }
     /* if (loc === -1) {
         console.log([...values, sum]);
