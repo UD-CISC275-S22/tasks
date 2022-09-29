@@ -30,7 +30,7 @@ export function tripleNumbers(numbers: number[]): number[] {
 export function stringsToIntegers(numbers: string[]): number[] {
     const remD = numbers.map((amt: string): number => +amt);
     const arr = remD.map((amt2: number): number => (isNaN(amt2) ? 0 : amt2));
-   
+
     return arr;
 }
 
@@ -42,7 +42,7 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    //remD removes the "$" sign 
+    //remD removes the "$" sign
     const remD = amounts.map((amt: string): number =>
         amt[0] === "$" ? +amt.slice(1) : +amt
     );
@@ -60,7 +60,7 @@ export const removeDollars = (amounts: string[]): number[] => {
 export const shoutIfExclaiming = (messages: string[]): string[] => {
     //Filter variable for " ? " char
     const remE = (ms: string): boolean => ms[ms.length - 1] !== "?";
-    // Creating filtered array 
+    // Creating filtered array
     const remA = messages.filter(remE);
     //
     const ret = remA.map((ms1: string): string =>
@@ -90,7 +90,7 @@ export function allRGB(colors: string[]): boolean {
     }
     const filt = (color: string): boolean =>
         color === "red" || color === "blue" || color === "green";
-    const newA= colors.filter(filt);
+    const newA = colors.filter(filt);
     if (newA.length === colors.length) {
         return true;
     }
@@ -130,7 +130,28 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    const filt = (num: number): boolean => num < 0;
+    const sum: number = values.reduce(
+        (total: number, num: number) => total + num,
+        0
+    );
+    let positivity: number[];
+    if (values.every((element: number): boolean => element > 0)) {
+        positivity = [...values, sum];
+    } else if (values.findIndex((value: number): boolean => value < 0) == 0) {
+        positivity = [...values];
+        positivity.splice(1, 0, 0);
+    } else {
+        positivity = [...values];
+        positivity.splice(
+            values.findIndex((value: number): boolean => value < 0) + 1,
+            0,
+            sum +
+                values[values.findIndex((value: number): boolean => value < 0)]
+        );
+    }
+    return positivity;
+
+    /*const filt = (num: number): boolean => num < 0;
     const NegA = values.filter(filt);
     if (NegA.length === 0) {
         //when no negative numbers in the list 
@@ -151,5 +172,5 @@ export function injectPositive(values: number[]): number[] {
     values.splice(idx + 1, 0, sum);
     const newA = [...values];
     //console.log(newA);
-    return values;
+    return values;*/
 }
