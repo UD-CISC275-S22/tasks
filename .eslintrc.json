@@ -42,7 +42,7 @@
             }
         ],
         "brace-style": ["error", "1tbs"],
-        "indent": ["error", 4],
+        "indent": "off",
         "quotes": ["error", "double"],
         "semi": ["error", "always"]
     }
