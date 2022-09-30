@@ -5,7 +5,14 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    return numbers;
+    //correct
+    if (numbers.length > 1) {
+        return [numbers[0], numbers[numbers.length - 1]];
+    } else if (numbers.length > 0) {
+        return [numbers[0], numbers[0]];
+    } else {
+        return [];
+    }
 }
 
 /**
@@ -13,7 +20,9 @@ export function bookEndList(numbers: number[]): number[] {
  * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
-    return numbers;
+    //correct
+    const tripled = numbers.map((ele) => ele * 3);
+    return tripled;
 }
 
 /**
@@ -21,7 +30,11 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    return [];
+    //correct
+    const integers = numbers.map((ele) =>
+        Number.isNaN(Number(ele)) ? 0 : parseInt(ele)
+    );
+    return integers;
 }
 
 /**
@@ -32,7 +45,15 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    return [];
+    //please tell me how to do this in one line I'm losing it
+    //also the ternary statement wouldn't let me get away without a :
+    //forgive my spaghetti code; it works I promise
+    const prices = amounts.map((ele) =>
+        ele.includes("$") ? ele.replace("$", "") : ele
+    );
+    const prices2 = prices.map((ele) => parseInt(ele));
+    const prices3 = prices2.map((ele) => (Number.isNaN(Number(ele)) ? 0 : ele));
+    return prices3;
 };
 
 /**
@@ -41,7 +62,14 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    return [];
+    //correct
+    const reciepts = messages.filter(
+        (message: string): boolean => !message.includes("?")
+    );
+    const theDMS = reciepts.map((ele) =>
+        ele.includes("!") ? (ele = ele.toUpperCase()) : ele
+    );
+    return theDMS;
 };
 
 /**
@@ -49,7 +77,9 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return 0;
+    //correct
+    const shorties = words.filter((word: string): boolean => word.length < 4);
+    return shorties.length;
 }
 
 /**
@@ -58,7 +88,21 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    return false;
+    if (colors.length == 0) {
+        return true;
+    }
+    const filterRed = colors.filter((color: string): boolean => color != "red");
+    const filterBlue = filterRed.filter(
+        (color: string): boolean => color != "blue"
+    );
+    const filterGreen = filterBlue.filter(
+        (color: string): boolean => color != "green"
+    );
+    if (filterGreen.length > 0) {
+        return false;
+    } else {
+        return true;
+    }
 }
 
 /**
@@ -69,7 +113,33 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    //if empty array
+    if (addends.length < 1) {
+        return "0=0";
+    }
+
+    //if only one element
+    if (addends.length == 1) {
+        return addends[0].toString() + "=" + addends[0].toString();
+    }
+
+    const sum = addends.reduce((a, b) => a + b, 0);
+
+    //forgive me for this code idk how to do it in one line
+
+    //convert to string
+    const answer = addends.map((ele) => ele.toString());
+    //add plus signs
+    const finalAnswer = answer.map((ele) => ele + "+");
+    //add equal sign and sum
+    finalAnswer.unshift(sum.toString() + "=");
+    //kill plus sign at the end
+    finalAnswer[finalAnswer.length - 1] = finalAnswer[
+        finalAnswer.length - 1
+    ].replace("+", "");
+    //put everything into one string without commas
+    const finalfinalAnswer = finalAnswer.join("");
+    return finalfinalAnswer;
 }
 
 /**
@@ -82,5 +152,25 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    return [];
+    let sum = 0;
+    let sumneg = 0;
+    let flag = false;
+    const injected = values.map((ele: number): number => {
+        if (ele < 0 && flag == false) {
+            flag = true;
+            sumneg = sum;
+            sum += ele;
+            return ele;
+        } else {
+            sum += ele;
+            return ele;
+        }
+    });
+    if (flag == false) {
+        injected.push(sum);
+    } else {
+        const negative = injected.findIndex((inject: number) => inject < 0);
+        injected.splice(negative + 1, 0, sumneg);
+    }
+    return injected;
 }
