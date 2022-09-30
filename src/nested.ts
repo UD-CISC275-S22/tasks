@@ -1,5 +1,6 @@
 //import { type } from "os";
 //import { resourceLimits } from "worker_threads";
+import { urlToHttpOptions } from "url";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
 import { duplicateQuestion, makeBlankQuestion } from "./objects";
@@ -315,7 +316,24 @@ export function editOption(
     //   options: question.id == targetId
     // })
     // );
-    return [];
+    const target = questions.filter(
+        (question: Question): Question => ({
+            ...question,
+            id: targetId
+        })
+    );
+    if (targetOptionIndex == -1) {
+        const result = target.map(
+            (element: Question): Question => ({
+                ...element,
+                options: [...element.options, newOption]
+            })
+        );
+        return result;
+    } else {
+        targetOptionIndex == parseInt(newOption);
+    }
+    return questions;
 }
 
 /***
