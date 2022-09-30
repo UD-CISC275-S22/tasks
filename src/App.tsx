@@ -16,7 +16,7 @@ function App(): JSX.Element {
                         <div className="rectangle"></div>
                         <ul>
                             <li>My Name is Bing</li>
-                            <li>unordered list I trying</li>
+                            <li>unordered lists I trying</li>
                             <li>totally not rhyming</li>
                         </ul>
                     </Col>
