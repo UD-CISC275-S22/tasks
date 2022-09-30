@@ -10,13 +10,14 @@ function App(): JSX.Element {
                 <h1>UD CISC275 with React Hooks and TypeScript</h1>
                 <img src={Oreo} width="200" height="200" alt="Oreo Burger" />
             </header>
+            <p>Hello World!</p>
             <Container>
                 <Row>
                     <Col>
                         <div className="rectangle"></div>
                         <ul>
                             <li>My Name is Bing</li>
-                            <li>unordered list I trying</li>
+                            <li>unordered lists I trying</li>
                             <li>totally not rhyming</li>
                         </ul>
                     </Col>
