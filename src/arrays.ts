@@ -5,7 +5,11 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    return numbers;
+    const newNumbers = [];
+    if (numbers.length > 0) {
+        newNumbers.push(numbers[0], numbers[numbers.length - 1]);
+    }
+    return newNumbers;
 }
 
 /**
@@ -13,6 +17,7 @@ export function bookEndList(numbers: number[]): number[] {
  * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
+    numbers = numbers.map((number: number): number => number * 3);
     return numbers;
 }
 
@@ -21,7 +26,10 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    return [];
+    const Integers = numbers.map((num: string): number =>
+        isNaN(Number(num)) ? 0 : parseInt(num)
+    );
+    return Integers;
 }
 
 /**
@@ -32,7 +40,14 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    return [];
+    const newAmounts = amounts.map((amount: string): string =>
+        amount.replace("$", "")
+    );
+
+    const numsAmount = newAmounts.map((num: string): number =>
+        isNaN(Number(num)) ? 0 : Number(num)
+    );
+    return numsAmount;
 };
 
 /**
@@ -41,7 +56,14 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    return [];
+    const newMessage = messages.map((message: string): string =>
+        message.endsWith("!") ? message.toUpperCase() : message
+    );
+
+    const moddedMessage = newMessage.filter(
+        (message: string): boolean => !message.endsWith("?")
+    );
+    return moddedMessage;
 };
 
 /**
@@ -49,7 +71,8 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return 0;
+    const newWords = words.filter((word: string): boolean => word.length < 4);
+    return newWords.length;
 }
 
 /**
@@ -58,7 +81,15 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    return false;
+    if (colors.length === 0) {
+        return true;
+    }
+    const isColor = colors.every(
+        (isColor: string): boolean =>
+            isColor === "red" || isColor === "blue" || isColor === "green"
+    );
+
+    return isColor;
 }
 
 /**
@@ -69,7 +100,19 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    if (addends.length === 0) {
+        return "0=0";
+    }
+    const sum = addends.reduce(
+        (total: number, num: number): number => (total += num)
+    );
+
+    const numSum: string[] = addends.map((num: number): string =>
+        num.toString()
+    );
+    let finalSum: string = numSum.join("+");
+    finalSum = sum + "=" + finalSum;
+    return finalSum;
 }
 
 /**
@@ -82,5 +125,26 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
+    if (values.length === 0) {
+        const answer = [0];
+        return answer;
+    }
+    const noNeg = values.every((num: number): boolean => num > 0);
+    if (noNeg) {
+        const sum = values.reduce(
+            (total: number, num: number): number => (total += num)
+        );
+        return [...values, sum];
+    } else {
+        const neg = values.findIndex((num: number): boolean => num < 0);
+        const tmp = values.slice(0, neg);
+        const sum = tmp.reduce(
+            (total: number, num: number): number => (total += num),
+            0
+        );
+        const final: number[] = [...values];
+        final.splice(neg + 1, 0, sum);
+        return final;
+    }
     return [];
 }
