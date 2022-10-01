@@ -1,4 +1,4 @@
-//import Q from "q";
+import Q from "q";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
 import { duplicateQuestion, addOption, makeBlankQuestion } from "./objects";
@@ -211,20 +211,21 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ): Question[] {
-    return questions.map(
-        (q: Question): Question =>
-            q.id === targetId
-                ? targetOptionIndex !== -1
-                    ? { ...q, options: q.options }
-                    : addOption(q, newOption)
-                : q
+    const opp = questions.findIndex(
+        (q: Question): boolean => q.id === targetId
     );
+    const newq = [...questions];
+    if (targetOptionIndex === -1) {
+        newq[opp] = {
+            ...newq[opp],
+            options: [...newq[opp].options, newOption]
+        };
+    } else {
+        newq[opp].options.splice(targetOptionIndex, 1, newOption);
+    }
+    return newq;
 }
-//].splice(
-//targetOptionIndex,
-//1,
-//newOption
-//)
+
 /***
  * Consumes an array of questions, and produces a new array based on the original array.
  * The only difference is that the question with id `targetId` should now be duplicated, with
