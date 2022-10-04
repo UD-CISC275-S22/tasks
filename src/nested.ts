@@ -226,23 +226,18 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ): Question[] {
-    const num: number = questions.findIndex(
-        (question: Question): boolean => question.id === targetId
+    const qs = questions.map(
+        (q: Question): Question => ({ ...q, options: [...q.options] })
     );
-    let q: Question = {
-        ...questions[num],
-        options: [...questions[num].options]
-    };
+    const index = qs.findIndex((q: Question): boolean => q.id == targetId);
     if (targetOptionIndex === -1) {
-        q = { ...q, options: [...q.options, newOption] };
+        qs[index].options.splice(qs[index].options.length, 0, newOption);
     } else {
-        const o: string[] = [...q.options];
-        o.splice(targetOptionIndex, 1, newOption);
-        q = { ...q, options: o };
+        qs[index].options.splice(targetOptionIndex, 1, newOption);
     }
-    return questions.map((qq) => (qq.id === targetId ? q : qq));
+    console.log(qs);
+    return qs;
 }
-
 /***
  * Consumes an array of questions, and produces a new array based on the original array.
  * The only difference is that the question with id `targetId` should now be duplicated, with
