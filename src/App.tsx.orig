@@ -1,0 +1,75 @@
+import React from "react";
+import "./App.css";
+<<<<<<< HEAD
+import { Button, Col, Container, Row } from "react-bootstrap";
+
+function App(): JSX.Element {
+    return (
+        <div>
+            <div className="App">
+                <Button onClick={() => console.log("Hello World!")}>
+                    Log Hello World
+                </Button>
+                Unordered List:
+                <ul>
+                    <li>Thing1</li>
+                    <li>Thing2</li>
+                    <li>Thing3</li>
+                </ul>
+                <header className="App-header">
+                    UD CISC275 with React Hooks and TypeScript
+                    <h1>New Header Text Goes here</h1>
+                </header>
+                <img
+                    src={require("./assets/randcake.png")}
+                    alt="A cursed picture of cake"
+                />
+                <p>
+                    Edit <code>src/App.tsx</code> and save. This page will
+                    automatically reload. Name: Sean OSullivan. Hello World!!
+                </p>
+            </div>
+            <div className="newdiv">
+                <Container>
+                    <Row>
+                        <Col className="col1">
+                            <p className="redbox"></p>
+                        </Col>
+                        <Col className="col2">
+                            <p className="redbox"></p>
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
+=======
+import { ChangeType } from "./components/ChangeType";
+import { RevealAnswer } from "./components/RevealAnswer";
+import { StartAttempt } from "./components/StartAttempt";
+import { TwoDice } from "./components/TwoDice";
+import { CycleHoliday } from "./components/CycleHoliday";
+import { Counter } from "./components/Counter";
+
+function App(): JSX.Element {
+    return (
+        <div className="App">
+            <header className="App-header">
+                UD CISC275 with React Hooks and TypeScript
+            </header>
+            <hr></hr>
+            <Counter></Counter>
+            <hr />
+            <RevealAnswer></RevealAnswer>
+            <hr />
+            <StartAttempt></StartAttempt>
+            <hr />
+            <TwoDice></TwoDice>
+            <hr />
+            <ChangeType></ChangeType>
+            <hr />
+            <CycleHoliday></CycleHoliday>
+>>>>>>> upstream/task-state
+        </div>
+    );
+}
+
+export default App;
