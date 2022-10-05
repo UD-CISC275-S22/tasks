@@ -13,7 +13,6 @@ function App(): JSX.Element {
         <div className="App">
             <header className="App-header">
                 Harleen Chahal + UD CISC275 with React Hooks and TypeScript.
-                Hello World
             </header>
             <hr></hr>
             <Counter></Counter>
@@ -27,7 +26,6 @@ function App(): JSX.Element {
             <ChangeType></ChangeType>
             <hr />
             <CycleHoliday></CycleHoliday>
->>>>>> upstream/task-state
         </div>
     );
 }
