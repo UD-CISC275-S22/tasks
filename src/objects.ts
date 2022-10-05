@@ -1,4 +1,4 @@
-import { count } from "console";
+//import { count } from "console";
 import { Question, QuestionType } from "./interfaces/question";
 
 /**
@@ -97,7 +97,7 @@ export function toShortForm(question: Question): string {
  * Check the unit tests for more examples of what this looks like!
  */
 export function toMarkdown(question: Question): string {
-    let count = 1;
+    //let count = 1;
     //let temp="";
     /*const str = addends.reduce(
         (cusS: string, num: number) => cusS + num.toString() + "+",
