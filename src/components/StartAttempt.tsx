@@ -10,23 +10,31 @@ export function StartAttempt(): JSX.Element {
     }
     return (
         <div>
-            <Button
-                onClick={startQuiz}
-                disabled={progress || numOfAttempts === 0}
-            >
-                Start Quiz
-            </Button>
-            ;
-            <Button
-                onClick={() => setnumOfAttempts(numOfAttempts + 1)}
-                disabled={progress}
-            >
-                Mulligan
-            </Button>
-            ;
-            <Button onClick={() => setProgress(false)} disabled={!progress}>
-                Stop Quiz
-            </Button>
+            <div>
+                <span>{numOfAttempts}</span>
+            </div>
+            <div>
+                <Button
+                    onClick={startQuiz}
+                    disabled={progress === true || numOfAttempts === 0}
+                >
+                    Start Quiz
+                </Button>
+                ;
+                <Button
+                    onClick={() => setnumOfAttempts(numOfAttempts + 1)}
+                    disabled={progress === true}
+                >
+                    Mulligan
+                </Button>
+                ;
+                <Button
+                    onClick={() => setProgress(false)}
+                    disabled={progress === false}
+                >
+                    Stop Quiz
+                </Button>
+            </div>
         </div>
     );
 }

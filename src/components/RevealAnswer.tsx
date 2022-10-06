@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-const [visible, setVisible] = useState<boolean>(true);
-function flipVisibility(): void {
-    setVisible(!visible);
-}
 export function RevealAnswer(): JSX.Element {
+    const [visible, setVisible] = useState<boolean>(true);
+    function flipVisibility(): void {
+        setVisible(!visible);
+    }
     return (
         <div>
-            <Button onClick={flipVisibility}>Show/Hide</Button>
-            {visible && <div>42</div>}
+            <Button onClick={flipVisibility}>Reveal Answer</Button>
+            {!visible && <div>42</div>}
         </div>
     );
 }
