@@ -214,7 +214,12 @@ export function editOption(
     const opp = questions.findIndex(
         (q: Question): boolean => q.id === targetId
     );
-    const newq = [...questions];
+    const newq = questions.map(
+        (q: Question): Question => ({
+            ...q,
+            options: [...q.options]
+        })
+    );
     if (targetOptionIndex === -1) {
         newq[opp] = {
             ...newq[opp],
