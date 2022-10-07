@@ -1,4 +1,5 @@
 import { BsPrefixProps } from "react-bootstrap/esm/helpers";
+import { sortAndDeduplicateDiagnostics } from "typescript";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
 import { duplicateQuestion, makeBlankQuestion } from "./objects";
@@ -252,22 +253,16 @@ export function editOption(
                 : { ...q }
         );
     } else {
-        newQ = questions.map((q: Question) =>
-            q.id === targetId
-                ? {
-                      ...q,
-                      options: q.options.splice(targetOptionIndex, 1, newOption)
-                  }
-                : { ...q }
-        );
+        newQ = questions.map((q: Question) => {
+            if (q.id === targetId) {
+                const q_c = { ...q, options: [...q.options] };
+                q_c.options.splice(targetOptionIndex, 1, newOption);
+                return q_c;
+            } else {
+                return { ...q };
+            }
+        });
     }
-    // const newArr: Question[] = newQ.map((question: Question) => {
-    //     question.id === targetId
-    //         ? targetOptionIndex === -1
-    //             ? [...question.options, newOption]
-    //             : question.options.splice(targetOptionIndex, 1, newOption)
-    //         : question;
-    // });
     return newQ;
 }
 
@@ -282,10 +277,15 @@ export function duplicateQuestionInArray(
     targetId: number,
     newId: number
 ): Question[] {
-    return [];
-    // return questions.map((question: Question) =>
-    //     question.id === targetId
-    //         ? questions.push(duplicateQuestion(newId, { ...question }))
-    //         : question
-    // );
+    let count = 0;
+    const newArr = [...questions];
+    questions.map((q: Question) => {
+        count++;
+        if (q.id === targetId) {
+            const unpackedQ = { ...q };
+            const dupQ = duplicateQuestion(newId, unpackedQ);
+            newArr.splice(count, 0, dupQ);
+        }
+    });
+    return newArr;
 }

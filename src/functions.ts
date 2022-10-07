@@ -31,7 +31,7 @@ export function add3(first: number, second: number, third: number): number {
  */
 export function shout(message: string): string {
     message = message.toUpperCase();
-    console.log(message);
+    //console.log(message);
     return message + "!";
 }
 

@@ -22,7 +22,7 @@ export function bookEndList(numbers: number[]): number[] {
  */
 export function tripleNumbers(numbers: number[]): number[] {
     const tripled = numbers.map((numbers): number => numbers * 3);
-    console.log(tripled);
+    //console.log(tripled);
     return tripled;
 }
 
@@ -110,7 +110,7 @@ export function allRGB(colors: string[]): boolean {
  */
 export function makeMath(addends: number[]): string {
     const theNums = addends.join("+");
-    console.log(theNums);
+    //console.log(theNums);
     const sum = addends.reduce((accumulaor, value) => {
         return accumulaor + value;
     }, 0);
