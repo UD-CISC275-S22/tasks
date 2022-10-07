@@ -8,11 +8,11 @@ interface i {
     index: number;
 }
 
-function ChangeColor({ setci, index }: i): JSX.Element {
+function ChangeColor({ setci }: i): JSX.Element {
     return <Button onClick={() => setci()}>Next Color</Button>;
 }
 
-function ColorPreview({ setci, index }: i): JSX.Element {
+function ColorPreview({ index }: i): JSX.Element {
     return (
         <div
             data-testid="colored-box"
