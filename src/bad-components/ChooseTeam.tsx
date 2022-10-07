@@ -11,7 +11,6 @@ const PEOPLE = [
 ];
 
 export function ChooseTeam(): JSX.Element {
-    const [allOptions, setAllOptions] = useState<string[]>(PEOPLE);
     const [team, setTeam] = useState<string[]>([]);
 
     function chooseMember(newMember: string) {
@@ -37,7 +36,7 @@ export function ChooseTeam(): JSX.Element {
             <h3>Choose Team</h3>
             <Row>
                 <Col>
-                    {allOptions.map((option: string) => (
+                    {PEOPLE.map((option: string) => (
                         // eslint-disable-next-line react/no-unknown-property
                         <div key={option} style={{ marginBottom: "4px" }}>
                             Add{" "}
