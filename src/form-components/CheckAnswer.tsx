@@ -12,12 +12,12 @@ export function CheckAnswer({
     }
 
     return (
-        <div>
+        <span>
             <Form.Group controlId="formCheckAns">
                 <Form.Label>Answer:</Form.Label>
                 <Form.Control value={ans} onChange={updateans} />
             </Form.Group>
-            <div>{ans === expectedAnswer ? "✔️" : "❌"}</div>
-        </div>
+            {ans === expectedAnswer ? "✔️" : "❌"}
+        </span>
     );
 }
