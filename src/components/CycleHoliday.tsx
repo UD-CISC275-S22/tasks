@@ -1,21 +1,51 @@
 import React, { useState } from "react";
-import { Button } from "react-bootstrap";
+import { Button, Col, Container, Row } from "react-bootstrap";
 
-function nxtalpha(h: string, harr: string[]): string {
-    const nxt: string = harr
-        .filter((x: string): boolean => x > h)
-        .reduce((s: string, x: string) => (s < x ? s : x), h);
-    return nxt;
-}
+const nxtalpha: Record<string, string> = {
+    "🇬🇱": "🐱",
+    "🐱": "♊",
+    "♊": "🔪",
+    "🔪": "☁️",
+    "☁️": "🇬🇱"
+};
 
-function nxtdate(h: string, harr: string[]): string {
-    const dates = { h1: 1 };
-    const nxt: string = harr
-        .filter((x: string): boolean => x > h)
-        .reduce((s: string, x: string) => (s < x ? s : x), h);
-    return nxt;
-}
+const nxtdate: Record<string, string> = {
+    "🇬🇱": "🐱",
+    "🐱": "🔪",
+    "🔪": "♊",
+    "♊": "☁️",
+    "☁️": "🇬🇱"
+};
+
+/*
+    "Leif Erikson day: 🇬🇱", // Oct 9
+    "National Cat day: 🐱", // Oct 29
+    "Box Cutter day: 🔪", // Nov 10 (Made this one up)
+    "National Twins day: ♊", // Dec 18
+    "Day of the Sky: ☁️" // Feb 5 (I made this one up as well)
+*/
 
 export function CycleHoliday(): JSX.Element {
-    const [holidays, setholidays] = useState<string[]>([""]);
+    const [holiday, setholiday] = useState<string>("🇬🇱");
+    return (
+        <span>
+            <Container>
+                <Row>
+                    <Col>
+                        <Button onClick={() => setholiday(nxtalpha[holiday])}>
+                            Advance by Alphabet
+                        </Button>
+                    </Col>
+                    <Col>
+                        <Button onClick={() => setholiday(nxtdate[holiday])}>
+                            Advance by Day of Year
+                        </Button>
+                    </Col>
+                </Row>
+                <Row>
+                    <span>Holiday: {holiday}</span>
+                </Row>
+            </Container>
+        </span>
+    );
 }
