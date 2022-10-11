@@ -37,3 +37,9 @@
         transform: rotate(360deg);
     }
 }
+
+.App-square {
+    height: 50px;
+    width: 100px;
+    background-color: red;
+}
