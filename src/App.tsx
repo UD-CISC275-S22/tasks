@@ -6,6 +6,12 @@ import { Col } from "react-bootstrap";
 //import { Rectangle } from "react-shapes";
 
 import "./App.css";
+import { ChangeType } from "./components/ChangeType";
+import { RevealAnswer } from "./components/RevealAnswer";
+import { StartAttempt } from "./components/StartAttempt";
+import { TwoDice } from "./components/TwoDice";
+import { CycleHoliday } from "./components/CycleHoliday";
+import { Counter } from "./components/Counter";
 
 function App(): JSX.Element {
     return (
@@ -14,49 +20,18 @@ function App(): JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript by Andrew Geraci
             </header>
-            <p>
-                Hello World! Edit <code>src/App.tsx</code> and save. This page
-                will automatically reload.
-            </p>
-            <p>
-                This is just a paragraph of text. It can go onto multiple lines,
-                if you want.
-            </p>{" "}
-            <div>
-                <Button onClick={() => console.log("Hello World!")}>
-                    Log Hello World
-                </Button>
-            </div>
-            <div style={{ border: "1px solid blue", padding: "4px" }}>
-                this will be surrounded by a border and padding.
-            </div>
-            <div>
-                This is <span style={{ color: "red" }}>colored text</span>.
-            </div>
-            <img
-                src="../assets/images/pet-ada.jpg"
-                alt="A picture of my dog Ada
-                "
-            />
-            <div>
-                <ol>
-                    <li>This is number One</li>
-                    <li>This is number Two</li>
-                    <li>This is number Three</li>
-                </ol>
-            </div>
-            <div>
-                <Container>
-                    <Row>
-                        <Col>
-                            <div className="rectangle"></div>
-                        </Col>
-                        <Col>
-                            <div className="rectangle"></div>
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
+            <hr></hr>
+            <Counter></Counter>
+            <hr />
+            <RevealAnswer></RevealAnswer>
+            <hr />
+            <StartAttempt></StartAttempt>
+            <hr />
+            <TwoDice></TwoDice>
+            <hr />
+            <ChangeType></ChangeType>
+            <hr />
+            <CycleHoliday></CycleHoliday>
         </div>
     );
 }
