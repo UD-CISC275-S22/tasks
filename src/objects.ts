@@ -86,7 +86,6 @@ export function toMarkdown(question: Question): string {
             currentString + "- " + opt + "\n",
         ""
     );
-    console.log((first_line + second_line + mc_options).trim());
     return (first_line + second_line + mc_options).trim();
 }
 
