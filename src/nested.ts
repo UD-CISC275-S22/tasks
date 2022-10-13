@@ -157,7 +157,8 @@ export function sameType(questions: Question[]): boolean {
         typ = questions[1].type;
     }
     const sameType = questions.filter((q: Question): boolean => q.type === typ);
-    //console.log(sameType);
+    console.log(sameType);
+    console.log(sameType);
     if (sameType.length === questions.length) {
         return true;
     } else {
@@ -280,19 +281,9 @@ export function editOption(
                 return q;
             }
         });
-        /*
-        const ret = questions.map((q) =>
-            !q === null
-                ? {
-                    ...q,
-                    options: q.options.splice(q.options.length, 0, newOption)
-                }
-                : q
-        );
-        return ret;
-        */
     }
     return newArr;
+  }
 }
 
 /***
