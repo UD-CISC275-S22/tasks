@@ -246,7 +246,7 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ): Question[] {
-    let newArr;
+    let newArr: Question[] = [];
     if (targetOptionIndex != -1) {
         newArr = questions.map((q: Question): Question => {
             if (q.id === targetId) {
