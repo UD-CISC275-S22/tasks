@@ -5,6 +5,7 @@ import {Button} from "react-bootstrap";
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 import Col from "react-bootstrap/esm/Col";
+import pic from "./assets/audrey.png";
 
 function App(): JSX.Element {
     return (
@@ -19,7 +20,7 @@ function App(): JSX.Element {
         </div>
         <div>
             <h1>This is header text.</h1>
-            <img src={require("./audrey.jfif")}/>
+            <img src={pic}/>
         </div>
         <div>
             <ul>
