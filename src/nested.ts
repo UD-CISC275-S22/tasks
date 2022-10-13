@@ -253,10 +253,8 @@ export function duplicateQuestionInArray(
     if (ind === -1) {
         return questions;
     }
-    console.log(questions, targetId, newId);
     const dup = duplicateQuestion(newId, questions[ind]);
     const new_arr = JSON.parse(JSON.stringify(questions));
     new_arr.splice(ind + 1, 0, dup);
-    console.log(new_arr);
     return new_arr;
 }
