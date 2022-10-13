@@ -269,8 +269,8 @@ export function editOption(
         });
     }
     return newArr;
-  }
 }
+
 
 /***
  * Consumes an array of questions, and produces a new array based on the original array.
