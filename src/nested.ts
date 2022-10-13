@@ -151,17 +151,22 @@ export function publishAll(questions: Question[]): Question[] {
  * are the same type. They can be any type, as long as they are all the SAME type.
  */
 export function sameType(questions: Question[]): boolean {
+    /*
     let typ: QuestionType;
     if (!questions === null) {
         typ = questions[1].type;
     }
     const sameType = questions.filter((q: Question): boolean => q.type === typ);
     console.log(sameType);
+    console.log(sameType);
     if (sameType.length === questions.length) {
         return true;
     } else {
         return false;
     }
+    */
+    const typ = questions.every((q:Question): boolean => q.type === questions[1].type);
+    return typ;
 }
 
 /***
@@ -255,27 +260,30 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ): Question[] {
+    let newArr;
     if (targetOptionIndex != -1) {
-        const ret = questions.map((q) =>
-            q.id === targetId
-                ? {
-                    ...q,
-                    options: q.options.splice(targetOptionIndex, 0, newOption)
-                }
-                : q
-        );
-        return ret;
+        newArr = questions.map((q: Question): Question => {
+            if (q.id === targetId) {
+                const newQ = { ...q, options: [...q.options] };
+                newQ.options.splice(targetOptionIndex, 1, newOption);
+                return newQ;
+            } else {
+                return q;
+            }
+        });
     } else {
-        const ret = questions.map((q) =>
-            !q === null
-                ? {
-                    ...q,
-                    options: q.options.splice(q.options.length, 0, newOption)
-                }
-                : q
-        );
-        return ret;
+        newArr = questions.map((q: Question): Question => {
+            if (q.id === targetId) {
+                const newQ = { ...q, options: [...q.options] };
+                newQ.options.splice(q.options.length, 1, newOption);
+                return newQ;
+            } else {
+                return q;
+            }
+        });
     }
+    return newArr;
+  }
 }
 
 /***
