@@ -9,7 +9,7 @@ import { Counter } from "./components/Counter";
 
 //from original branch
 //import { Button, Container, Row, Col } from "react-bootstrap";
-import {pic} from "C:\Users\madel\tasks\src\audrey.png";
+//import { pic } from "C:Usersmadel\taskssrcaudrey.png";
 
 function App(): JSX.Element {
     return (
