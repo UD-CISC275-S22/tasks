@@ -151,19 +151,6 @@ export function publishAll(questions: Question[]): Question[] {
  * are the same type. They can be any type, as long as they are all the SAME type.
  */
 export function sameType(questions: Question[]): boolean {
-    /*
-    let typ: QuestionType;
-    if (!questions === null) {
-        typ = questions[1].type;
-    }
-    const sameType = questions.filter((q: Question): boolean => q.type === typ);
-    //console.log(sameType);
-    if (sameType.length === questions.length) {
-        return true;
-    } else {
-        return false;
-    }
-    */
     const typ = questions.every(
         (q: Question): boolean => q.type === questions[1].type
     );
@@ -282,17 +269,6 @@ export function editOption(
                 return q;
             }
         });
-        /*
-        const ret = questions.map((q) =>
-            !q === null
-                ? {
-                    ...q,
-                    options: q.options.splice(q.options.length, 0, newOption)
-                }
-                : q
-        );
-        return ret;
-        */
     }
     return newArr;
 }
