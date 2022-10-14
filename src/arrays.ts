@@ -5,7 +5,18 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    return numbers;
+    if (numbers.length === 0) {
+        return [];
+    }
+    if (numbers.length === 1) {
+        const newNums = [...numbers];
+        newNums.splice(1, 0, newNums[0]);
+        return newNums;
+    }
+    const bookStart = numbers[0];
+    const bookEnd = numbers[numbers.length - 1];
+    const bookEnds = [bookStart, bookEnd];
+    return bookEnds;
 }
 
 /**
@@ -13,7 +24,8 @@ export function bookEndList(numbers: number[]): number[] {
  * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
-    return numbers;
+    const tripled = numbers.map((number: number): number => number * 3);
+    return tripled;
 }
 
 /**
@@ -21,7 +33,13 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    return [];
+    if (numbers.length === 0) {
+        return [];
+    }
+    const toInt = numbers.map((digit: string): number =>
+        isNaN(+digit) ? 0 : +digit
+    );
+    return toInt;
 }
 
 /**
@@ -32,7 +50,13 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    return [];
+    const removedDollar = amounts.map((digit: string): string =>
+        digit[0] === "$" ? digit.substring(1) : digit
+    );
+    const toInt = removedDollar.map((digit: string): number =>
+        isNaN(Number(digit)) ? 0 : Number(digit) === 0 ? 0 : parseInt(digit)
+    );
+    return toInt;
 };
 
 /**
@@ -41,7 +65,13 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    return [];
+    const isQuestion = (message: string): boolean =>
+        message[message.length - 1] != "?";
+    const noQuestions = messages.filter(isQuestion);
+    const allShouts = noQuestions.map((phrase: string): string =>
+        phrase[phrase.length - 1] === "!" ? phrase.toUpperCase() : phrase
+    );
+    return allShouts;
 };
 
 /**
@@ -49,7 +79,8 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return 0;
+    const shortWords = words.filter((word: string): boolean => word.length < 4);
+    return shortWords.length;
 }
 
 /**
@@ -58,7 +89,14 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    return false;
+    const RGB = ["red", "green", "blue"];
+    if (colors.length === 0) {
+        return true;
+    }
+    const allRGB = colors.every((color: string): boolean =>
+        RGB.includes(color)
+    );
+    return allRGB;
 }
 
 /**
@@ -69,7 +107,15 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    if (addends.length === 0) {
+        return "0=0";
+    }
+    const numbers = addends.join("+");
+    const makeSum = addends.reduce(
+        (currentTotal: number, num: number) => currentTotal + num,
+        0
+    );
+    return makeSum + "=" + numbers;
 }
 
 /**
@@ -82,5 +128,17 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    return [];
+    const loc = values.findIndex(
+        (negativeNum: number): boolean => negativeNum < 0
+    );
+    if (loc === -1) {
+        return values;
+    }
+    const begin = values.slice(values[0], loc);
+    const end = values.slice(loc, values[values.length - 1]);
+    const addSum = values.reduce(
+        (currentSum: number, num: number) => currentSum + num,
+        0
+    );
+    return [...begin, addSum, ...end];
 }
