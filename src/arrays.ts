@@ -149,5 +149,4 @@ export function injectPositive(values: number[]): number[] {
         injected.splice(negative + 1, 0, sum);
         return injected;
     }
-    return [];
 }
