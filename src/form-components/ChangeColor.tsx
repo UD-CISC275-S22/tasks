@@ -14,6 +14,7 @@ export function ChangeColor(): JSX.Element {
         "cyan"
     ];
     const default_color = COLORS[0];
+    // eslint-disable-next-line prettier/prettier
     type ChangeEvent = React.ChangeEvent< HTMLTextAreaElement | HTMLInputElement | HTMLSelectElement
     >;
     const [color, setColor] = useState<string>(default_color);
