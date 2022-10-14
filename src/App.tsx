@@ -12,11 +12,6 @@ import { CycleHoliday } from "./components/CycleHoliday";
 import { Counter } from "./components/Counter";
 
 function App(): JSX.Element {
-    const [counter, setCounter] = useState<number>(0);
-
-    function addOne(): void {
-        setCounter(counter + 1);
-    }
     return (
         <div className="App">
             <header className="App-header">
@@ -25,7 +20,14 @@ function App(): JSX.Element {
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
-                <Button onClick={addOne}>{counter}</Button>;
+                <div>
+                    <br></br>
+                    <br></br>
+                    Counter:<Counter></Counter>
+                </div>
+                <div>
+                    Reveal Answer:<RevealAnswer></RevealAnswer>
+                </div>
             </p>
         </div>
     );
