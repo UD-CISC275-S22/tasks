@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import "./App.css";
 import pic1 from "./pictures/pic1.jpg";
@@ -12,6 +12,11 @@ import { CycleHoliday } from "./components/CycleHoliday";
 import { Counter } from "./components/Counter";
 
 function App(): JSX.Element {
+    const [counter, setCounter] = useState<number>(0);
+
+    function addOne(): void {
+        setCounter(counter + 1);
+    }
     return (
         <div className="App">
             <header className="App-header">
@@ -20,6 +25,7 @@ function App(): JSX.Element {
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
+                <Button onClick={addOne}>{counter}</Button>;
             </p>
         </div>
     );
