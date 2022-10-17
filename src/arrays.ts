@@ -9,10 +9,14 @@ import { workerData } from "worker_threads";
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    const bookEnd: number[] = [];
-    if (numbers.length > 0) {
-        bookEnd.push(numbers[0]);
-        bookEnd.push(numbers[numbers.length - 1]);
+    const bookEnd = [...numbers];
+    if (bookEnd.length > 1) {
+        const firstLast = [bookEnd[0], bookEnd[bookEnd.length - 1]];
+        return firstLast;
+    }
+    if (bookEnd.length === 1) {
+        const oneElement = [bookEnd[0], bookEnd[0]];
+        return oneElement;
     }
     return bookEnd;
 }
