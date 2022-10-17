@@ -26,7 +26,12 @@ function App(): JSX.Element {
                     Counter:<Counter></Counter>
                 </div>
                 <div>
+                    <br></br>
                     Reveal Answer:<RevealAnswer></RevealAnswer>
+                </div>
+                <div>
+                    <br></br>
+                    Change Type:<ChangeType></ChangeType>
                 </div>
             </p>
         </div>
