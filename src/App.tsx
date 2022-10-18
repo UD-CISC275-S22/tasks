@@ -1,9 +1,6 @@
-import React, { useState } from "react";
-import { Button, Col, Container, Row } from "react-bootstrap";
+import React from "react";
 import "./App.css";
-import pic1 from "./pictures/pic1.jpg";
 
-console.log(pic1);
 import { ChangeType } from "./components/ChangeType";
 import { RevealAnswer } from "./components/RevealAnswer";
 import { StartAttempt } from "./components/StartAttempt";
@@ -20,20 +17,32 @@ function App(): JSX.Element {
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
-                <div>
-                    <br></br>
-                    <br></br>
-                    Counter:<Counter></Counter>
-                </div>
-                <div>
-                    <br></br>
-                    Reveal Answer:<RevealAnswer></RevealAnswer>
-                </div>
-                <div>
-                    <br></br>
-                    Change Type:<ChangeType></ChangeType>
-                </div>
             </p>
+            <div>
+                <br></br>
+                <br></br>
+                Counter:<Counter></Counter>
+            </div>
+            <div>
+                <br></br>
+                Reveal Answer:<RevealAnswer></RevealAnswer>
+            </div>
+            <div>
+                <br></br>
+                Change Type:<ChangeType></ChangeType>
+            </div>
+            <div>
+                <br></br>
+                Start Attempt:<StartAttempt></StartAttempt>
+            </div>
+            <div>
+                <br></br>
+                Two Dice:<TwoDice></TwoDice>
+            </div>
+            <div>
+                <br></br>
+                <CycleHoliday></CycleHoliday>
+            </div>
         </div>
     );
 }
