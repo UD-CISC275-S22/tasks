@@ -1,5 +1,4 @@
-/**
- * Consume an array of numbers, and return a new array containing
+/* Consume an array of numbers, and return a new array containing
  * JUST the first and last number. If there are no elements, return
  * an empty array. If there is one element, the resulting list should
  * the number twice.
