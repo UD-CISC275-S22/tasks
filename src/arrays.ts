@@ -133,6 +133,5 @@ export function injectPositive(values: number[]): number[] {
     } else {
         list.splice(b, 0, last);
     }
-
     return list;
 }

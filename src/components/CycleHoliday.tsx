@@ -28,11 +28,11 @@ export function CycleHoliday(): JSX.Element {
     };
 
     const emoji: Record<holiday, string> = {
-        Christmas_Day: "🎄",
-        New_Years_Day: "🕛",
-        Thanksgiving: "🦃",
-        Juneteenth: "🧑🏿‍🦱",
-        Presidents_Day: "👨‍💼"
+        Christmas_Day: "Christmas Day 🎄",
+        New_Years_Day: "New Years Day🕛",
+        Thanksgiving: "Thanksgiving 🦃",
+        Juneteenth: "Juneteenth 🧑🏿‍🦱",
+        Presidents_Day: "Presidents Day 👨‍💼"
     };
     return (
         <div>
