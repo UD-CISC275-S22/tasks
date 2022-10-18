@@ -181,6 +181,7 @@ What shape can you make with one line?
             points: 1,
             published: false
         });
+
         expect(publishQuestion(LETTER_QUESTION)).toEqual({
             id: 2,
             name: "Letters",
