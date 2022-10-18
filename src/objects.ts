@@ -1,4 +1,4 @@
-import { isQuestion } from "./functions";
+// import { isQuestion } from "./functions";
 import { Question, QuestionType } from "./interfaces/question";
 
 /**
