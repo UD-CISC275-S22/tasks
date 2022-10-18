@@ -1,0 +1,230 @@
+[
+    {
+        "id": 1,
+        "title": "Blank_Questions",
+        "body": "This quiz is full of blank questions and is not published",
+        "published": false,
+        "questionList": [
+            {
+                "id": 1,
+                "body": "",
+                "type": "multiple_choice_question",
+                "options": [],
+                "expected": "",
+                "points": 1,
+                "published": false
+            },
+            {
+                "id": 47,
+                "body": "",
+                "type": "multiple_choice_question",
+                "options": [],
+                "expected": "",
+                "points": 1,
+                "published": false
+            },
+            {
+                "id": 2,
+                "body": "",
+                "type": "short_answer_question",
+                "options": [],
+                "expected": "",
+                "points": 1,
+                "published": false
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Simple_Questions",
+        "body": "This quiz is full of simple questions and is published",
+        "published": true,
+        "questionList": [
+            {
+                "id": 1,
+                "body": "What is 2+2?",
+                "type": "short_answer_question",
+                "options": [],
+                "expected": "4",
+                "points": 1,
+                "published": true
+            },
+            {
+                "id": 2,
+                "body": "What is the last letter of the English alphabet?",
+                "type": "short_answer_question",
+                "options": [],
+                "expected": "Z",
+                "points": 1,
+                "published": false
+            },
+            {
+                "id": 5,
+                "body": "Which of these is a color?",
+                "type": "multiple_choice_question",
+                "options": ["red", "apple", "firetruck"],
+                "expected": "red",
+                "points": 1,
+                "published": true
+            },
+            {
+                "id": 9,
+                "body": "What shape can you make with one line?",
+                "type": "multiple_choice_question",
+                "options": ["square", "triangle", "circle"],
+                "expected": "circle",
+                "points": 2,
+                "published": false
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Trivia_Questions",
+        "body": "This quiz is full of trivia questions and is published",
+        "published": true,
+        "questionList": [
+            {
+                "id": 1,
+                "body": "What is the name of the UD Mascot?",
+                "type": "multiple_choice_question",
+                "options": ["Bluey", "YoUDee", "Charles the Wonder Dog"],
+                "expected": "YoUDee",
+                "points": 7,
+                "published": false
+            },
+            {
+                "id": 2,
+                "body": "What is the University of Delaware's motto?",
+                "type": "multiple_choice_question",
+                "options": [
+                    "Knowledge is the light of the mind",
+                    "Just U Do it",
+                    "Nothing, what's the motto with you?"
+                ],
+                "expected": "Knowledge is the light of the mind",
+                "points": 3,
+                "published": false
+            },
+            {
+                "id": 3,
+                "body": "How many goats are there usually on the Green?",
+                "type": "multiple_choice_question",
+                "options": [
+                    "Zero, why would there be goats on the green?",
+                    "18420",
+                    "Two"
+                ],
+                "expected": "Two",
+                "points": 10,
+                "published": false
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Empty_Questions",
+        "body": "This quiz is full of empty questions and is published",
+        "published": true,
+        "questionList": [
+            {
+                "id": 1,
+                "body": "This question is not empty, right?",
+                "type": "multiple_choice_question",
+                "options": ["correct", "it is", "not"],
+                "expected": "correct",
+                "points": 5,
+                "published": true
+            },
+            {
+                "id": 2,
+                "body": "",
+                "type": "multiple_choice_question",
+                "options": ["this", "one", "is", "not", "empty", "either"],
+                "expected": "one",
+                "points": 5,
+                "published": true
+            },
+            {
+                "id": 3,
+                "body": "This questions is not empty either!",
+                "type": "short_answer_question",
+                "options": [],
+                "expected": "",
+                "points": 5,
+                "published": true
+            },
+            {
+                "id": 4,
+                "body": "",
+                "type": "short_answer_question",
+                "options": [],
+                "expected": "Even this one is not empty",
+                "points": 5,
+                "published": true
+            },
+            {
+                "id": 5,
+                "body": "",
+                "type": "short_answer_question",
+                "options": [],
+                "expected": "",
+                "points": 5,
+                "published": false
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Simple_Questions2",
+        "body": "This quiz is the second full of simple questions and is published",
+        "published": true,
+        "questionList": [
+            {
+                "id": 478,
+                "body": "How many students are taking CISC275 this semester?",
+                "type": "short_answer_question",
+                "options": [],
+                "expected": "90",
+                "points": 53,
+                "published": true
+            },
+            {
+                "id": 1937,
+                "body": "On a scale of 1 to 10, how important is this quiz for them?",
+                "type": "short_answer_question",
+                "options": [],
+                "expected": "10",
+                "points": 47,
+                "published": true
+            },
+            {
+                "id": 479,
+                "body": "Is it technically possible for this quiz to become sentient?",
+                "type": "short_answer_question",
+                "options": [],
+                "expected": "Yes",
+                "points": 40,
+                "published": true
+            },
+            {
+                "id": 777,
+                "body": "If this quiz became sentient, would it pose a danger to others?",
+                "type": "short_answer_question",
+                "options": [],
+                "expected": "Yes",
+                "points": 60,
+                "published": true
+            },
+            {
+                "id": 1937,
+                "body": "Is this quiz listening to us right now?",
+                "type": "short_answer_question",
+                "options": [],
+                "expected": "Yes",
+                "points": 100,
+                "published": true
+            }
+        ]
+    }
+]

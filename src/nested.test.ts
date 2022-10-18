@@ -1,4 +1,5 @@
-import { Question } from "./interfaces/question";
+import { Question } from "./oldinterfaces/question";
+
 import {
     getPublishedQuestions,
     getNonEmptyQuestions,

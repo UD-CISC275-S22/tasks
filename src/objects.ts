@@ -1,4 +1,4 @@
-import { Question, QuestionType } from "./interfaces/question";
+import { Question, QuestionType } from "./oldinterfaces/question";
 
 /**
  * Create a new blank question with the given `id`, `name`, and `type. The `body` and

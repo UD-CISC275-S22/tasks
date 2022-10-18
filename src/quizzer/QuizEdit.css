@@ -1,0 +1,27 @@
+.edit_footer {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.save_edit_btn {
+    margin-right: 2rem;
+}
+
+.published_check {
+    align-self: center;
+}
+
+.title_published_flex {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.add_question_button {
+    display: block;
+    margin: 0 auto;
+}
+
+.type_dropdown {
+    min-width: 10rem;
+}

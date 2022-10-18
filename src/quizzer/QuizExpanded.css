@@ -1,0 +1,23 @@
+.title {
+    margin-right: 1rem;
+}
+
+.desc {
+    font-size: 1.25rem;
+}
+
+.esc_button {
+    height: 2.5rem;
+    margin-left: 2rem;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.score_report {
+    font-size: 2rem;
+    font-weight: 600;
+}
