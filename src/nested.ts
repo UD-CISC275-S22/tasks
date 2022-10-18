@@ -19,10 +19,10 @@ export function getPublishedQuestions(questions: Question[]): Question[] {
  * `expected`, and an empty array for its `options`.
  */
 export function getNonEmptyQuestions(questions: Question[]): Question[] {
-    const isEmpty = (question: Question): boolean =>
-        question.body === "" &&
-        question.expected === "" &&
-        question.options.length === 0;
+    // const isEmpty = (question: Question): boolean =>
+    //     question.body === "" &&
+    //     question.expected === "" &&
+    //     question.options.length === 0;
     const nonEmpties = questions.filter(
         (question: Question): boolean =>
             question.body === "" &&
@@ -132,7 +132,7 @@ export function toCSV(questions: Question[]): string {
             "," +
             question.published
     );
-    return "";
+    return CSV.join("");
 }
 
 /**
