@@ -15,8 +15,7 @@ function App(): JSX.Element {
                 <h1>Jessica-Howleys-Header</h1>
                 <div className="App">
                     <header className="App-header">
-                        UD CISC275 with React Hooks and TypeScript- Jess Howley
-                        Hello World
+                        React Hooks and TypeScript- Jess Howley Hello World
                     </header>
                     <img
                         alt="DOG"
@@ -57,19 +56,18 @@ function App(): JSX.Element {
                 </div>
             </>
             <div className="App">
-                <header className="App-header">
-                    UD CISC275 with React Hooks and TypeScript
-                </header>
+                <header>UD CISC275 with React Hooks and TypeScript</header>
                 <hr></hr>
                 <Counter></Counter>
                 <hr />
                 <RevealAnswer></RevealAnswer>
+                <hr></hr>
+                <ChangeType></ChangeType>
                 <hr />
                 <StartAttempt></StartAttempt>
                 <hr />
                 <TwoDice></TwoDice>
                 <hr />
-                <ChangeType></ChangeType>
                 <hr />
                 <CycleHoliday></CycleHoliday>
             </div>
