@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
-// import { Button, Container, Row, Col } from "react-bootstrap";
 import "./App.css";
 // import { ChangeType } from "./components/ChangeType";
 // import { RevealAnswer } from "./components/RevealAnswer";
@@ -18,6 +17,9 @@ function App(): JSX.Element {
     // Make a variable based on some State. No problem!
     return (
         <div className="App">
+            {/* <header className="App-header">
+                UD CISC275 with React Hooks and TypeScript Alejandro Silva
+            </header> */}
             <header>this is zoe test</header>
             <h1 className="App-header">
                 There is a header CISC275 Alejandro Silva
@@ -26,7 +28,7 @@ function App(): JSX.Element {
                 src="https://unsplash.com/photos/t_mt9LeOmPs"
                 alt="Scenic Architecture"
             />
-            Different Modern Buildings
+            <div>Different Modern Buildings</div>
             <ul>
                 <li>Falling Water</li>
                 <li>The Empire State Building</li>
