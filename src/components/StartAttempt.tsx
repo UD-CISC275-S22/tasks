@@ -18,7 +18,7 @@ export function StartAttempt(): JSX.Element {
     return (
         <>
             <Button
-                onClick={(event) => {
+                onClick={() => {
                     setProgress(true);
                     decreaseOne();
                 }}

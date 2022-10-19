@@ -25,13 +25,13 @@ export function TwoDice(): JSX.Element {
     function rollRight(): void {
         setDieTwo(d6());
     }
-    function isEqual(): void {
-        if (dieOne === dieTwo) {
-            console.log("YOU WIN!");
-        } else {
-            console.log("YOU LOSE!");
-        }
-    }
+    // function isEqual(): void {
+    //     if (dieOne === dieTwo) {
+    //         console.log("YOU WIN!");
+    //     } else {
+    //         console.log("YOU LOSE!");
+    //     }
+    // }
     return (
         <>
             <Button onClick={rollLeft}>Roll Left</Button>
