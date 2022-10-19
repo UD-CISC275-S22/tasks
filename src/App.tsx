@@ -1,13 +1,11 @@
-import React, { useState } from "react";
-import { Button, Container, Row, Col } from "react-bootstrap";
+import React from "react";
 import "./App.css";
 import { ChangeType } from "./components/ChangeType";
 import { RevealAnswer } from "./components/RevealAnswer";
 import { StartAttempt } from "./components/StartAttempt";
-import { d6, TwoDice } from "./components/TwoDice";
+import { TwoDice } from "./components/TwoDice";
 import { CycleHoliday } from "./components/CycleHoliday";
 import { Counter } from "./components/Counter";
-import { QuestionType } from "./interfaces/question";
 
 function App(): JSX.Element {
     // Make a variable based on some State. No problem!
@@ -28,6 +26,7 @@ function App(): JSX.Element {
             <ChangeType></ChangeType>
             <hr />
             <CycleHoliday></CycleHoliday>
+            <hr />
         </div>
     );
 }

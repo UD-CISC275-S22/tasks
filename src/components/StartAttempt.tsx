@@ -2,28 +2,35 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
 export function StartAttempt(): JSX.Element {
+    //Code for Start Attempt
     const [counter, setCounter] = useState<number>(4);
     const [progress, setProgress] = useState<boolean>(false);
-    const startButton = (): void => {
-        setCounter(counter - 1), setProgress(true);
-    };
+
+    function stopProgress(): void {
+        setProgress(false);
+    }
+    function decreaseOne(): void {
+        setCounter(counter - 1);
+    }
+    function addOne(): void {
+        setCounter(counter + 1);
+    }
     return (
-        <div>
-            <span>
-                <Button onClick={() => startButton()}>Start Quiz</Button>
-            </span>
-            <span>
-                <Button onClick={() => setProgress(false)}>Stop Quiz</Button>
-            </span>
-            <span>
-                <Button onClick={() => setCounter(counter + 1)}>
-                    Mulligan
-                </Button>
-            </span>
+        <>
+            <Button
+                onClick={() => {
+                    setProgress(true);
+                    decreaseOne();
+                }}
+            >
+                Start Quiz
+            </Button>
+            <div></div>
+            <Button onClick={stopProgress}>Stop Quiz</Button>
+            <div></div>
+            <Button onClick={addOne}>Mulligan</Button>
+            <div>Attempt Number: {counter}</div>
             {progress && <div>In Progress</div>}
-            <div>
-                Attempts Left: <span> {counter} </span>
-            </div>
-        </div>
+        </>
     );
 }

@@ -1,3 +1,4 @@
+// import { constants } from "perf_hooks";
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
@@ -18,22 +19,26 @@ const YEAR_HOLIDAYS: Record<Holiday, Holiday> = {
     JulyFourth: "Halloween",
     Halloween: "Christmas"
 };
-
 export function CycleHoliday(): JSX.Element {
+    //Code for Cycle Holiday
     const [holiday, setHoliday] = useState<Holiday>("Christmas");
-    const newAlphaHoliday = ALPHABET_HOLIDAYS[holiday];
-    const newYearHoliday = YEAR_HOLIDAYS[holiday];
+    function byAlphabet(): void {
+        const newAlphaHoliday = ALPHABET_HOLIDAYS[holiday];
+        setHoliday(newAlphaHoliday);
+    }
+    function byYear(): void {
+        const newYearHoliday = YEAR_HOLIDAYS[holiday];
+        setHoliday(newYearHoliday);
+    }
     return (
-        <div>
-            <Button onClick={() => setHoliday(newAlphaHoliday)}>
-                Alphabet Advance
-            </Button>
-            <Button onClick={() => setHoliday(newYearHoliday)}>
-                Year Advance
-            </Button>
+        <>
+            <div>
+                <Button onClick={byAlphabet}>Advance by Alphabet</Button>
+                <Button onClick={byYear}>Advance by Year</Button>
+            </div>
             <div>
                 Holiday: <span>{holiday}</span>
             </div>
-        </div>
+        </>
     );
 }
