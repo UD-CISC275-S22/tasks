@@ -96,7 +96,6 @@ export function makeMath(addends: number[]): string {
     );
     const addition = addends.join("+");
     const arrayToString = addends.length === 0 ? "0=0" : sum + "=" + addition;
-    console.log(arrayToString);
     return arrayToString;
 }
 
@@ -110,9 +109,20 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    /** WORK IN PROGRESS */
-    // console.log(values);
-    // const firstNegativeIndex = values.findIndex((value) => value < 0 ? ());
-    // console.log(firstNegativeIndex);
-    // return [];
+    const firstNegIndex = values.findIndex((value) => value < 0);
+    const findSum = values.reduce(
+        (currentTotal, newNum) => currentTotal + newNum,
+        0
+    );
+    let newValues = [...values];
+    if (values.every((element) => element > 0)) {
+        newValues = [...values, findSum];
+    } else if (firstNegIndex == 0) {
+        newValues.splice(1, 0, 0);
+    } else {
+        newValues.splice(firstNegIndex + 1, 0, findSum + values[firstNegIndex]);
+    }
+    console.log(values);
+    console.log(newValues);
+    return newValues;
 }
