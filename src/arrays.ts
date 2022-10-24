@@ -122,7 +122,5 @@ export function injectPositive(values: number[]): number[] {
     } else {
         newValues.splice(firstNegIndex + 1, 0, findSum + values[firstNegIndex]);
     }
-    console.log(values);
-    console.log(newValues);
     return newValues;
 }
