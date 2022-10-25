@@ -7,12 +7,16 @@ import { StartAttempt } from "./components/StartAttempt";
 import { TwoDice } from "./components/TwoDice";
 import { CycleHoliday } from "./components/CycleHoliday";
 import { Counter } from "./components/Counter";
+import { ColoredBox } from "./bad-components/ColoredBox";
+import { ShoveBox } from "./bad-components/ShoveBox";
+import { ChooseTeam } from "./bad-components/ChooseTeam";
+import { DoubleHalf } from "./bad-components/DoubleHalf";
 
 function App(): JSX.Element {
     return (
         <>
             <>
-                <h1>Jessica-Howleys-Header</h1>
+                <h1>Jessica-Howleys-Header CISC275</h1>
                 <div className="App">
                     <header className="App-header">
                         React Hooks and TypeScript- Jess Howley Hello World
@@ -56,7 +60,6 @@ function App(): JSX.Element {
                 </div>
             </>
             <div className="App">
-                <header>UD CISC275 with React Hooks and TypeScript</header>
                 <hr></hr>
                 <Counter></Counter>
                 <hr />
@@ -68,8 +71,18 @@ function App(): JSX.Element {
                 <hr />
                 <TwoDice></TwoDice>
                 <hr />
-                <hr />
                 <CycleHoliday></CycleHoliday>
+            </div>
+            <div className="App">
+                <hr></hr>
+                <DoubleHalf></DoubleHalf>
+                <hr />
+                <ChooseTeam></ChooseTeam>
+                <hr></hr>
+                <ColoredBox></ColoredBox>
+                <hr></hr>
+                <ShoveBox></ShoveBox>
+                <hr></hr>
             </div>
         </>
     );
