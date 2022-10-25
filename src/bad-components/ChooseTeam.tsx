@@ -10,11 +10,6 @@ const PEOPLE = [
     "Margaret Hamilton"
 ];
 
-/* interface changeOptionsProps {
-    allOptions: string[];
-    setAllOptions: (op: string[]) => void;
-} */
-
 interface changeTeamProps {
     team: string[];
     setTeam: (tm: string[]) => void;
