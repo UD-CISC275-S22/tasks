@@ -32,7 +32,11 @@ export function makeBlankQuestion(
  * HINT: Look up the `trim` and `toLowerCase` functions.
  */
 export function isCorrect(question: Question, answer: string): boolean {
-    return false;
+    const correct =
+        answer.trim().toLowerCase() === question.expected.trim().toLowerCase()
+            ? true
+            : false;
+    return correct;
 }
 
 /**
@@ -42,7 +46,11 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
-    return false;
+    const validity =
+        question.type === "short_answer_question"
+            ? true
+            : question.options.includes(answer);
+    return validity;
 }
 
 /**
@@ -52,7 +60,8 @@ export function isValid(question: Question, answer: string): boolean {
  * name "My First Question" would become "9: My First Q".
  */
 export function toShortForm(question: Question): string {
-    return "";
+    const shortForm = `${question.id}: ${question.name.slice(0, 10)}`;
+    return shortForm;
 }
 
 /**
@@ -73,7 +82,14 @@ export function toShortForm(question: Question): string {
  * Check the unit tests for more examples of what this looks like!
  */
 export function toMarkdown(question: Question): string {
-    return "";
+    let markedDown = "# " + question.name + "\n" + question.body;
+    if (question.type === "multiple_choice_question") {
+        markedDown += question.options.reduce(
+            (total, currentOption) => total + "\n- " + currentOption,
+            ""
+        );
+    }
+    return markedDown;
 }
 
 /**
@@ -81,7 +97,8 @@ export function toMarkdown(question: Question): string {
  * `newName`.
  */
 export function renameQuestion(question: Question, newName: string): Question {
-    return question;
+    const newVersion = { ...question, name: newName };
+    return newVersion;
 }
 
 /**
