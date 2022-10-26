@@ -18,39 +18,8 @@ function App(): JSX.Element {
             <header className="App-header">
                 UD CISC275 with Reaction Hooks and TypeScript
             </header>
-<<<<<<< HEAD
-            <p>
-                Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload.
-            </p>
-            <div>
-                <br></br>
-                <br></br>
-                Counter:<Counter></Counter>
-            </div>
-            <div>
-                <br></br>
-                Reveal Answer:<RevealAnswer></RevealAnswer>
-            </div>
-            <div>
-                <br></br>
-                Change Type:<ChangeType></ChangeType>
-            </div>
-            <div>
-                <br></br>
-                Start Attempt:<StartAttempt></StartAttempt>
-            </div>
-            <div>
-                <br></br>
-                Two Dice:<TwoDice></TwoDice>
-            </div>
-            <div>
-                <br></br>
-                <CycleHoliday></CycleHoliday>
-            </div>
-=======
             <hr></hr>
-            {/* <DoubleHalf></DoubleHalf> */}
+            <DoubleHalf></DoubleHalf>
             <hr></hr>
             <ChooseTeam></ChooseTeam>
             <hr></hr>
@@ -69,7 +38,6 @@ function App(): JSX.Element {
             <ChangeType></ChangeType>
             <hr />
             <CycleHoliday></CycleHoliday>
->>>>>>> upstream/task-components
         </div>
     );
 }
