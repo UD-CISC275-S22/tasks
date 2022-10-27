@@ -1,5 +1,7 @@
+import { urlToHttpOptions } from "url";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
+import { duplicateQuestion } from "./objects";
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
@@ -114,7 +116,17 @@ export function toCSV(questions: Question[]): string {
  * making the `text` an empty string, and using false for both `submitted` and `correct`.
  */
 export function makeAnswers(questions: Question[]): Answer[] {
-    return [];
+    const answers = [
+        ...questions.map(
+            (question): Answer => ({
+                questionId: question.id,
+                text: "",
+                submitted: false,
+                correct: false
+            })
+        )
+    ];
+    return answers;
 }
 
 /***
@@ -122,7 +134,11 @@ export function makeAnswers(questions: Question[]): Answer[] {
  * each question is now published, regardless of its previous published status.
  */
 export function publishAll(questions: Question[]): Question[] {
-    return [];
+    const nowPublished = questions.map((question) => ({
+        ...question,
+        published: true
+    }));
+    return nowPublished;
 }
 
 /***
@@ -130,7 +146,10 @@ export function publishAll(questions: Question[]): Question[] {
  * are the same type. They can be any type, as long as they are all the SAME type.
  */
 export function sameType(questions: Question[]): boolean {
-    return false;
+    const isSame = questions.every(
+        (question) => question.type === questions[0].type
+    );
+    return isSame;
 }
 
 /***
@@ -144,7 +163,18 @@ export function addNewQuestion(
     name: string,
     type: QuestionType
 ): Question[] {
-    return [];
+    const newBlankQuestion: Question = {
+        id: id,
+        name: name,
+        type: type,
+        body: "",
+        expected: "",
+        options: [],
+        points: 1,
+        published: false
+    };
+    const newArray = [...questions, newBlankQuestion];
+    return newArray;
 }
 
 /***
@@ -157,7 +187,12 @@ export function renameQuestionById(
     targetId: number,
     newName: string
 ): Question[] {
-    return [];
+    const newArray = [
+        ...questions.map((question) =>
+            question.id === targetId ? { ...question, name: newName } : question
+        )
+    ];
+    return newArray;
 }
 
 /***
@@ -172,7 +207,16 @@ export function changeQuestionTypeById(
     targetId: number,
     newQuestionType: QuestionType
 ): Question[] {
-    return [];
+    const newArray = [
+        ...questions.map((question) =>
+            question.id === targetId
+                ? newQuestionType != "multiple_choice_question"
+                    ? { ...question, type: newQuestionType, options: [] }
+                    : { ...question, type: newQuestionType }
+                : question
+        )
+    ];
+    return newArray;
 }
 
 /**
@@ -191,7 +235,25 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ): Question[] {
-    return [];
+    let newArray;
+    if (targetOptionIndex === -1) {
+        newArray = questions.map((question) =>
+            question.id === targetId
+                ? { ...question, options: [...question.options, newOption] }
+                : { ...question }
+        );
+    } else {
+        newArray = questions.map((question) => {
+            if (question.id === targetId) {
+                const temp = { ...question, options: [...question.options] };
+                temp.options.splice(targetOptionIndex, 1, newOption);
+                return temp;
+            } else {
+                return { ...question };
+            }
+        });
+    }
+    return newArray;
 }
 
 /***
@@ -205,5 +267,11 @@ export function duplicateQuestionInArray(
     targetId: number,
     newId: number
 ): Question[] {
-    return [];
+    const newArray = [...questions];
+    const dupeIndex = questions.findIndex(
+        (question) => question.id === targetId
+    );
+    const dupeQuestion = duplicateQuestion(newId, newArray[dupeIndex]);
+    newArray.splice(dupeIndex + 1, 0, dupeQuestion);
+    return newArray;
 }
