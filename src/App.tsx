@@ -15,6 +15,10 @@ import { GiveAttempts } from "./form-components/GiveAttempts";
 import { EditMode } from "./form-components/EditMode";
 import { MultipleChoiceQuestion } from "./form-components/MultipleChoiceQuestion";
 import { ChangeColor } from "./form-components/ChangeColor";
+import { ChooseTeam } from "./bad-components/ChooseTeam";
+import { DoubleHalf } from "./bad-components/DoubleHalf";
+import { ShoveBox } from "./bad-components/ShoveBox";
+import { ColoredBox } from "./bad-components/ColoredBox";
 
 function App(): JSX.Element {
     // Make a variable based on some State. No problem!
@@ -56,6 +60,14 @@ function App(): JSX.Element {
             <ChangeType></ChangeType>
             <hr />
             <CycleHoliday></CycleHoliday>
+            <hr />
+            <ChooseTeam></ChooseTeam>
+            <hr />
+            <ColoredBox></ColoredBox>
+            <hr />
+            <ShoveBox></ShoveBox>
+            <hr />
+            <DoubleHalf></DoubleHalf>
             <hr />
         </div>
     );
