@@ -11,6 +11,7 @@ const PEOPLE = [
 ];
 
 export function ChooseTeam(): JSX.Element {
+
     const [allOptions] = useState<string[]>(PEOPLE);
     const [team, setTeam] = useState<string[]>([]);
 
@@ -34,10 +35,12 @@ export function ChooseTeam(): JSX.Element {
                     {allOptions.map((option: string) => (
                         <div key={option} style={{ marginBottom: "4px" }}>
                             Add{" "}
+
                             <Button
                                 onClick={() => chooseMember(option)}
                                 size="sm"
                             >
+
                                 {option}
                             </Button>
                         </div>

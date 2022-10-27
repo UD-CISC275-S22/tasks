@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import { Form } from "react-bootstrap";
 
 export function EditMode(): JSX.Element {
@@ -45,5 +46,6 @@ export function EditMode(): JSX.Element {
                 {userName} {isStudent ? "is" : "is not"} a student
             </p>
         </>
+
     );
 }
