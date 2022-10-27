@@ -1,0 +1,29 @@
+.question {
+    padding: 20px 0;
+}
+
+.answer_box {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.submit_btn {
+    height: 2.5rem;
+    margin-top: auto;
+}
+
+.sub_check {
+    text-align: center;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.question_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}

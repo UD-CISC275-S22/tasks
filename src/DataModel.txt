@@ -1,0 +1,10 @@
+At the top level, there will be an array of Quizzes
+Each quiz has an id, title, description, whether it is published or not, and an array of Questions
+Each Question has an id, body, questionType, array of options (for mc), expectedanswer, points, and whether it is published or not.
+A questionType will have only two choices for now, multiple choice or short answer.
+
+The top level will have to pass down functionality for all of the lower components to use.
+
+How to handle total points?
+When a question form is changed, check whether it made the question incorrect or correct. If it changed something, then increase or decrease a 
+current point total handled by state.
