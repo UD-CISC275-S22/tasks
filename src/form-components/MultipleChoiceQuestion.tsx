@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 import { Form } from "react-bootstrap";
 
-
 export function MultipleChoiceQuestion({
     options,
     expectedAnswer
@@ -10,7 +9,6 @@ export function MultipleChoiceQuestion({
     options: string[];
     expectedAnswer: string;
 }): JSX.Element {
-
     const [choice, setChoice] = useState<string>(options[0]);
     const updateChoice = (event: React.ChangeEvent<HTMLInputElement>) => {
         setChoice(event.target.value);
@@ -27,7 +25,6 @@ export function MultipleChoiceQuestion({
                 />
             </Form.Group>
             Answer: {expectedAnswer === choice ? "✔️" : "❌"}
-
         </div>
     );
 }
