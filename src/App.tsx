@@ -4,7 +4,7 @@ import "./App.css";
 import { ChangeType } from "./components/ChangeType";
 import { RevealAnswer } from "./components/RevealAnswer";
 import { StartAttempt } from "./components/StartAttempt";
-import { TwoDice } from "./components/TwoDice";
+//import { TwoDice } from "./components/TwoDice";
 import { CycleHoliday } from "./components/CycleHoliday";
 import { Counter } from "./components/Counter";
 import { DoubleHalf } from "./bad-components/DoubleHalf";
@@ -50,7 +50,7 @@ function App(): JSX.Element {
                 </Container>
             </div>
             <hr></hr>
-            {/* <DoubleHalf></DoubleHalf> */}
+            <DoubleHalf></DoubleHalf>
             <hr></hr>
             <ChooseTeam></ChooseTeam>
             <hr></hr>
@@ -64,7 +64,6 @@ function App(): JSX.Element {
             <hr />
             <StartAttempt></StartAttempt>
             <hr />
-            <TwoDice></TwoDice>
             <hr />
             <ChangeType></ChangeType>
             <hr />
