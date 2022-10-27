@@ -47,7 +47,7 @@ function App(): JSX.Element {
             </Row>
             <img src={game} alt="A picture of my favourite game" />
             <hr></hr>
-            {/* <DoubleHalf></DoubleHalf> */}
+            <DoubleHalf></DoubleHalf>
             <hr></hr>
             <ChooseTeam></ChooseTeam>
             <hr></hr>
