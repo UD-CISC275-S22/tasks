@@ -6,7 +6,10 @@ import { Question, QuestionType } from "./interfaces/question";
  * that are `published`.
  */
 export function getPublishedQuestions(questions: Question[]): Question[] {
-    return [];
+    const newArray = questions.filter(
+        (question) => question.published === true
+    );
+    return newArray;
 }
 
 /**
@@ -15,7 +18,13 @@ export function getPublishedQuestions(questions: Question[]): Question[] {
  * `expected`, and an empty array for its `options`.
  */
 export function getNonEmptyQuestions(questions: Question[]): Question[] {
-    return [];
+    const newArray = questions.filter(
+        (question) =>
+            question.body.length != 0 ||
+            question.expected.length != 0 ||
+            question.options.length != 0
+    );
+    return newArray;
 }
 
 /***
@@ -26,7 +35,8 @@ export function findQuestion(
     questions: Question[],
     id: number
 ): Question | null {
-    return null;
+    const correctId = questions.find((question) => question.id === id);
+    return correctId === undefined ? null : correctId;
 }
 
 /**
@@ -34,16 +44,15 @@ export function findQuestion(
  * with the given `id`.
  */
 export function removeQuestion(questions: Question[], id: number): Question[] {
-    return [];
+    const newArray = questions.filter((question) => question.id != id);
+    return newArray;
 }
 
 /***
  * Consumes an array of questions and returns a new array containing just the names of the
  * questions, as an array.
  */
-export function getNames(questions: Question[]): string[] {
-    return [];
-}
+export function getNames(questions: Question[]): string[] {}
 
 /***
  * Consumes an array of questions and returns the sum total of all their points added together.
