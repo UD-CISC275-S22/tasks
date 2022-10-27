@@ -9,6 +9,7 @@ export function RevealAnswer(): JSX.Element {
     }
     return (
         <div>
+            <div>Reveal Answer</div>
             <Button onClick={flipVisibility}>Reveal Answer</Button>
             {visible && <div>42</div>}
         </div>

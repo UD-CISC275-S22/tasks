@@ -16,6 +16,7 @@ export function StartAttempt(): JSX.Element {
 
     return (
         <div>
+            <div>Start Attempt</div>
             <Button
                 id="start quiz"
                 onClick={startQuiz}
