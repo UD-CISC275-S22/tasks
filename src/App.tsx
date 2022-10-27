@@ -27,15 +27,6 @@ function App(): JSX.Element {
             <hr></hr>
             <ShoveBox></ShoveBox>
             <hr></hr>
-            {/* <DoubleHalf></DoubleHalf> */}
-            <hr></hr>
-            <ChooseTeam></ChooseTeam>
-            <hr></hr>
-            <ColoredBox></ColoredBox>
-            <hr></hr>
-            <ShoveBox></ShoveBox>
-            <hr></hr>
-            Hello World! <br></br>
             <Counter></Counter>
             <hr />
             <RevealAnswer></RevealAnswer>
@@ -47,6 +38,7 @@ function App(): JSX.Element {
             <ChangeType></ChangeType>
             <hr />
             <CycleHoliday></CycleHoliday>
+            <br></br>
             <img
                 src="https://www.thespruceeats.com/thmb/btLT5e97Xl3vBzNo37xPlUgfQcI=/3135x3900/filters:fill(auto,1)/GettyImages-90053856-588b7aff5f9b5874ee534b04.jpg"
                 alt="A cone of several scoops of different flavors of icecream stacked on top of eachother"

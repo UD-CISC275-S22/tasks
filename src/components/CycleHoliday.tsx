@@ -2,33 +2,33 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
 export function CycleHoliday(): JSX.Element {
-    const [holiday, setHoliday] = useState<string>("🎁");
+    const [holiday, setHoliday] = useState<string>("Christmas 🎁");
 
     function cycleByAlphabet(): void {
-        if (holiday == "🎁") {
-            setHoliday("🐰");
-        } else if (holiday == "🐰") {
-            setHoliday("🎃");
-        } else if (holiday == "🎃") {
-            setHoliday("🍀");
-        } else if (holiday == "🍀") {
-            setHoliday("💘");
+        if (holiday == "Christmas 🎁") {
+            setHoliday("Easter 🐰");
+        } else if (holiday == "Easter 🐰") {
+            setHoliday("Halloween 🎃");
+        } else if (holiday == "Halloween 🎃") {
+            setHoliday("St. Patricks Day 🍀");
+        } else if (holiday == "St. Patricks Day 🍀") {
+            setHoliday("Valentines Day 💘");
         } else {
-            setHoliday("🎁");
+            setHoliday("Christmas 🎁");
         }
     }
 
     function cycleByYear(): void {
-        if (holiday == "💘") {
-            setHoliday("🍀");
-        } else if (holiday == "🍀") {
-            setHoliday("🐰");
-        } else if (holiday == "🐰") {
-            setHoliday("🎃");
-        } else if (holiday == "🎃") {
-            setHoliday("🎁");
+        if (holiday == "Valentines Day 💘") {
+            setHoliday("St. Patricks Day 🍀");
+        } else if (holiday == "St. Patricks Day 🍀") {
+            setHoliday("Easter 🐰");
+        } else if (holiday == "Easter 🐰") {
+            setHoliday("Halloween 🎃");
+        } else if (holiday == "Halloween 🎃") {
+            setHoliday("Christmas 🎁");
         } else {
-            setHoliday("💘");
+            setHoliday("Valentines Day 💘");
         }
     }
 
