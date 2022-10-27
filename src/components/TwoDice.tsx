@@ -18,12 +18,22 @@ export function TwoDice(): JSX.Element {
 
     function rollLeft(): void {
         setDieOne(d6());
-        if (dieOne === dieTwo) {
-            console.log("YOU WIN!");
-        }
     }
     function rollRight(): void {
         setDieTwo(d6());
+    }
+    function isEqual(): string {
+        let temp = "";
+        if (dieOne === dieTwo) {
+            if (dieOne !== 1) {
+                temp = "You Win!";
+            } else {
+                temp = "You Lose!";
+            }
+        } else {
+            temp = "Reroll!";
+        }
+        return temp;
     }
     // function isEqual(): void {
     //     if (dieOne === dieTwo) {
@@ -38,11 +48,14 @@ export function TwoDice(): JSX.Element {
             <div></div>
             <Button onClick={rollRight}>Roll Right </Button>
             <div>
-                Left Die: <span data-testid="dieOne">{dieOne}</span>
+                Left Die:
+                <span data-testid="left-die">{dieOne}</span>
             </div>
             <div>
-                Right Die: <span data-testid="dieTwo">{dieTwo}</span>
+                Right Die:
+                <span data-testid="right-die">{dieTwo}</span>
             </div>
+            <div>{isEqual()}</div>
         </>
     );
 }

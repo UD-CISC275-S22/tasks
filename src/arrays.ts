@@ -131,13 +131,18 @@ export function injectPositive(values: number[]): number[] {
         (negativeNum: number): boolean => negativeNum < 0
     );
     if (loc === -1) {
-        return values;
+        const addSum = values.reduce(
+            (currentSum: number, num: number) => currentSum + num,
+            0
+        );
+        return [...values, addSum];
+    } else {
+        const begin = values.slice(0, loc);
+        const end = values.slice(loc + 1, values.length);
+        const addSum = begin.reduce(
+            (currentSum: number, num: number) => currentSum + num,
+            0
+        );
+        return [...begin, values[loc], addSum, ...end];
     }
-    const begin = values.slice(values[0], loc);
-    const end = values.slice(loc, values[values.length - 1]);
-    const addSum = values.reduce(
-        (currentSum: number, num: number) => currentSum + num,
-        0
-    );
-    return [...begin, addSum, ...end];
 }

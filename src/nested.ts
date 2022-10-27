@@ -1,7 +1,7 @@
 //NOT GOOGLE DOC VERSIONS
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
-import { makeBlankQuestion } from "./objects";
+import { duplicateQuestion, makeBlankQuestion } from "./objects";
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
@@ -26,9 +26,9 @@ export function getNonEmptyQuestions(questions: Question[]): Question[] {
     //     question.options.length === 0;
     const nonEmpties = questions.filter(
         (question: Question): boolean =>
-            question.body === "" &&
-            question.expected === "" &&
-            question.options.length === 0
+            question.body != "" ||
+            question.expected != "" ||
+            question.options.length != 0
     );
     return nonEmpties;
 }
@@ -56,11 +56,10 @@ export function findQuestion(
  * with the given `id`.
  */
 export function removeQuestion(questions: Question[], id: number): Question[] {
-    const findQuestion = questions.findIndex(
-        (question: Question): boolean => question.id === id
+    const questionRemoved = questions.filter(
+        (question: Question): boolean => question.id !== id
     );
-    const removeQuestion = questions.splice(findQuestion, 1);
-    return removeQuestion;
+    return questionRemoved;
 }
 
 /***
@@ -123,17 +122,17 @@ id,name,options,points,published
 export function toCSV(questions: Question[]): string {
     const CSV = questions.map(
         (question: Question): string =>
-            question.id.toString() +
+            question.id +
             "," +
             question.name +
             "," +
-            question.options.length.toString() +
+            question.options.length +
             "," +
-            question.points.toString() +
+            question.points +
             "," +
             question.published
     );
-    return CSV.join("");
+    return "id,name,options,points,published\n" + CSV.join("\n");
 }
 
 /**
@@ -172,11 +171,14 @@ export function publishAll(questions: Question[]): Question[] {
  * are the same type. They can be any type, as long as they are all the SAME type.
  */
 export function sameType(questions: Question[]): boolean {
-    const typeAtIndex = questions[0].type;
-    const isSameType = questions.every(
-        (question: Question): boolean => question.type === typeAtIndex
+    const checkingTypes = questions.filter(
+        (question: Question): boolean => questions[0].type === question.type
     );
-    return isSameType;
+    if (checkingTypes.length === questions.length) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 /***
@@ -191,7 +193,8 @@ export function addNewQuestion(
     type: QuestionType
 ): Question[] {
     const newQues: Question = makeBlankQuestion(id, name, type);
-    const newArray = questions.splice(questions.length - 1, 0, newQues);
+    const newArray = [...questions];
+    newArray.push(newQues);
     return newArray;
 }
 
@@ -285,18 +288,10 @@ export function duplicateQuestionInArray(
     targetId: number,
     newId: number
 ): Question[] {
-    const indexTarget = questions.findIndex(
+    const index = questions.findIndex(
         (question: Question): boolean => question.id === targetId
     );
-
-    const questionDup = questions.splice(
-        indexTarget,
-        0,
-        makeBlankQuestion(
-            newId,
-            questions[indexTarget].name,
-            questions[indexTarget].type
-        )
-    );
-    return questionDup;
+    const newArray = [...questions];
+    newArray.splice(index + 1, 0, duplicateQuestion(newId, questions[index]));
+    return newArray;
 }
