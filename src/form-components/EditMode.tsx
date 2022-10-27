@@ -46,6 +46,5 @@ export function EditMode(): JSX.Element {
                 {userName} {isStudent ? "is" : "is not"} a student
             </p>
         </>
-
     );
 }
