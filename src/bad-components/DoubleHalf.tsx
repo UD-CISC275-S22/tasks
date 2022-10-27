@@ -27,7 +27,6 @@ export function DoubleHalf(): JSX.Element {
 
             <Doubler value={dhValue} setValue={setDhValue}></Doubler>
             <Halver value={dhValue} setValue={setDhValue}></Halver>
-
         </div>
     );
 }
