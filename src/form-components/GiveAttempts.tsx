@@ -29,7 +29,7 @@ export function GiveAttempts(): JSX.Element {
             <Button
                 // Button to gain attempts
                 onClick={() =>
-                    setAttemptsLeft(attemptsLeft + parseInt(requestedAttempts))
+                    setAttemptsLeft(attemptsLeft + requestedAttempts)
                 }
             >
                 Gain

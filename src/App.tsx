@@ -15,6 +15,7 @@ import { GiveAttempts } from "./form-components/GiveAttempts";
 import { EditMode } from "./form-components/EditMode";
 import { MultipleChoiceQuestion } from "./form-components/MultipleChoiceQuestion";
 import { ChangeColor } from "./form-components/ChangeColor";
+import { Row, Button, Container, Col } from "react-bootstrap";
 
 function App(): JSX.Element {
     return (
@@ -64,6 +65,26 @@ function App(): JSX.Element {
                 height="325"
             />
             <br></br>
+            <Button onClick={() => console.log("Hello World!")}>
+                Log Hello World
+            </Button>
+            <Container>
+                <Row>
+                    <Col>
+                        Column 1:
+                        <ul>
+                            <li>Chocolate</li>
+                            <li>Vanilla</li>
+                            <li>Strawberry</li>
+                        </ul>
+                        <div className="rectangle"></div>
+                    </Col>
+                    <Col>
+                        Column 2:
+                        <div className="rectangle"></div>
+                    </Col>
+                </Row>
+            </Container>
         </div>
     );
 }
