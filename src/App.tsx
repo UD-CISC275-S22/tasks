@@ -34,26 +34,6 @@ function App(): JSX.Element {
                 height="325"
             />
             <br></br>
-            <Button onClick={() => console.log("Hello World!")}>
-                Log Hello World
-            </Button>
-            <Container>
-                <Row>
-                    <Col>
-                        Column 1:
-                        <ul>
-                            <li>Chocolate</li>
-                            <li>Vanilla</li>
-                            <li>Strawberry</li>
-                        </ul>
-                        <div className="rectangle"></div>
-                    </Col>
-                    <Col>
-                        Column 2:
-                        <div className="rectangle"></div>
-                    </Col>
-                </Row>
-            </Container>
         </div>
     );
 }
