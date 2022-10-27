@@ -14,7 +14,6 @@ function App(): JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript
             </header>
-<<<<<<< HEAD
             <h1>Welcome!</h1>
             Grace OLeary
             <p>Hello World</p>
@@ -46,7 +45,6 @@ function App(): JSX.Element {
                     </Row>
                 </Container>
             </div>
-=======
             <hr></hr>
             <Counter></Counter>
             <hr />
@@ -59,7 +57,6 @@ function App(): JSX.Element {
             <ChangeType></ChangeType>
             <hr />
             <CycleHoliday></CycleHoliday>
->>>>>>> upstream/task-state
         </div>
     );
 }
