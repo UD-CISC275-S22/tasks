@@ -6,6 +6,7 @@ export function ChangeType(): JSX.Element {
     const [questionType, setType] = useState<QuestionType>(
         "short_answer_question"
     );
+
     function changeQuestionType(): void {
         if (questionType === "short_answer_question") {
             setType("multiple_choice_question");
@@ -13,6 +14,7 @@ export function ChangeType(): JSX.Element {
             setType("short_answer_question");
         }
     }
+
     return (
         <div>
             <Button onClick={changeQuestionType}>Change Type</Button>
