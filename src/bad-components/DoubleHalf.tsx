@@ -5,7 +5,7 @@ export function DoubleHalf(): JSX.Element {
     const [dhValue, setDhValue] = useState<number>(10);
     return (
         <div>
-            <h3>Double Half</h3>
+            <h5>Double Half</h5>
             <span>
                 <Button onClick={() => setDhValue(0.5 * dhValue)}>Halve</Button>
             </span>
