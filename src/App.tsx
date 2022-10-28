@@ -14,6 +14,30 @@ function App(): JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript
             </header>
+            <Container>
+                <Row>
+                    <Col>
+                        <img
+                            src="https://www.animalspot.net/wp-content/uploads/2020/01/Types-of-Beetles.jpg"
+                            alt="different types of beetles"
+                            style={{ height: "400px" }}
+                        />
+                    </Col>
+                    <Col>
+                        <p>Types of beetles</p>
+                        <ul>
+                            <li>Cool ones</li>
+                            <li>Small ones</li>
+                            <li>Big ones</li>
+                            <li>Shiny ones</li>
+                        </ul>
+                    </Col>
+                </Row>
+            </Container>
+            <Button onClick={() => console.log("Hello World!")}>
+                Log Hello World
+            </Button>
+            <h1>Hello World</h1>
             <hr></hr>
             <Counter></Counter>
             <hr />
