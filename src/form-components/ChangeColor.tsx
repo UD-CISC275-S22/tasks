@@ -8,8 +8,8 @@ export function ChangeColor(): JSX.Element {
         "black",
         "green",
         "cyan",
-        "periwinkle",
-        "sage green",
+        "magenta",
+        "yellow",
         "white"
     ];
     const [color, setColor] = useState<string>("white");
