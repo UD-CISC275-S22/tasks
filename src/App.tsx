@@ -16,6 +16,7 @@ import { GiveAttempts } from "./form-components/GiveAttempts";
 import { EditMode } from "./form-components/EditMode";
 import { MultipleChoiceQuestion } from "./form-components/MultipleChoiceQuestion";
 import { ChangeColor } from "./form-components/ChangeColor";
+import { TwoDice } from "./components/TwoDice";
 
 function App(): JSX.Element {
     return (
@@ -87,6 +88,8 @@ function App(): JSX.Element {
             <ChangeType></ChangeType>
             <hr />
             <CycleHoliday></CycleHoliday>
+            <hr />
+            <TwoDice></TwoDice>
         </div>
     );
 }
