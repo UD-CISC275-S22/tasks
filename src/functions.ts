@@ -39,10 +39,7 @@ export function shout(message: string): string {
  * mark. Do not use an `if` statement in solving this question.
  */
 export function isQuestion(message: string): boolean {
-    let flag = false;
-    // eslint-disable-next-line prettier/prettier
-    message.slice(-1) === "?" ? (flag = true) : (flag = false);
-    return flag;
+    return message.slice(-1) === "?";
 }
 
 /**
