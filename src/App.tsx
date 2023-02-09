@@ -23,14 +23,32 @@ function App(): JSX.Element {
                 </Button>
             </div>
             <div>
-                <Container>
+                <Container fluid>
                     <Row>
-                        <Col>First column.</Col>
-                        <Col>
-                            Second column. You can put whatever you want in
-                            here, and it will be on the right side. Maybe try
-                            adding an image?
-                        </Col>
+                        <div
+                            style={{
+                                width: 600,
+                                height: 200,
+                                backgroundColor: "red",
+                                border: "5px solid blue",
+                                padding: "50px"
+                            }}
+                        >
+                            <Col>First column.</Col>
+                        </div>
+                        <div
+                            style={{
+                                width: 600,
+                                height: 200,
+                                backgroundColor: "red",
+                                border: "5px solid blue"
+                            }}
+                        >
+                            <Col>
+                                Second Column.
+                                <img src={photo} alt="UD Logo" />
+                            </Col>
+                        </div>
                     </Row>
                 </Container>
             </div>
