@@ -11,7 +11,7 @@ function App(): JSX.Element {
             </header>
             <h1>Header</h1>
             <p>Hello World! Testing HTML</p>
-            <img src={photo} />
+            <img src={photo} alt="UD Logo" />
             <ul>
                 <li>Hello</li>
                 <li>My Name Is Alex Peluso</li>
@@ -19,7 +19,7 @@ function App(): JSX.Element {
             </ul>
             <div>
                 <Button onClick={() => console.log("Hello World!")}>
-                    Click Me
+                    Log Hello World
                 </Button>
             </div>
             <div>
