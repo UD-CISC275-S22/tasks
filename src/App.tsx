@@ -44,10 +44,7 @@ function App(): JSX.Element {
                                 border: "5px solid blue"
                             }}
                         >
-                            <Col>
-                                Second Column.
-                                <img src={photo} alt="UD Logo" />
-                            </Col>
+                            <Col>Second Column.</Col>
                         </div>
                     </Row>
                 </Container>
