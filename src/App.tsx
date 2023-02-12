@@ -6,27 +6,32 @@ function App(): JSX.Element {
     return (
         <div className="App">
             <header className="App-header">
+                <h1>
+                    <span style={{ color: "red" }}>CISC275</span>
+                </h1>
                 <Button onClick={() => console.log("Hello World!")}>
                     Log Hello World
                 </Button>
             </header>
-            <h1>
-                <span style={{ color: "red" }}>CISC275</span>.
-            </h1>
+
             <div>
                 <Container>
                     <Row>
-                        <Col>Cars:</Col>
-                        <img
-                            src="\Users\pksto\OneDrive\Pictures\Getaway.png"
-                            alt="A car"
-                        />
-                        <Col>Prices:</Col>
-                        <ul>
-                            <li>$10,000</li>
-                            <li>$20,500</li>
-                            <li>$FREE</li>
-                        </ul>
+                        <Col>
+                            Cars:
+                            <img
+                                src="C:\Users\pksto\OneDrive\Pictures\Getaway.png"
+                                alt="A car"
+                            />
+                        </Col>
+                        <Col>
+                            Prices:
+                            <ul>
+                                <li>$10,000</li>
+                                <li>$20,500</li>
+                                <li>$FREE</li>
+                            </ul>
+                        </Col>
                     </Row>
                 </Container>
             </div>
