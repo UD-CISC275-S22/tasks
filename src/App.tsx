@@ -1,13 +1,36 @@
 import React from "react";
+import { Button, Col, Container, Row } from "react-bootstrap";
 import "./App.css";
 
 function App(): JSX.Element {
     return (
         <div className="App">
             <header className="App-header">
-                UD CISC275 with React Hooks and TypeScript
+                <Button onClick={() => console.log("Hello World!")}>
+                    Log Hello World
+                </Button>
             </header>
-            <p>Philip Stoyanov, This is a Struggle, Hello World</p>
+            <h1>
+                <span style={{ color: "red" }}>CISC275</span>.
+            </h1>
+            <div>
+                <Container>
+                    <Row>
+                        <Col>Cars:</Col>
+                        <img
+                            src="\Users\pksto\OneDrive\Pictures\Getaway.png"
+                            alt="A car"
+                        />
+                        <Col>Prices:</Col>
+                        <ul>
+                            <li>$10,000</li>
+                            <li>$20,500</li>
+                            <li>$FREE</li>
+                        </ul>
+                    </Row>
+                </Container>
+            </div>
+            <div className="Rectangle"></div>
         </div>
     );
 }
