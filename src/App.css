@@ -33,6 +33,7 @@
     background-color: red;
     width: 10%;
     height: 10vh;
+    text-align: center;
 }
 
 @keyframes App-logo-spin {
