@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import "./App.css";
-import img from "./Getaway.png";
+import image from "./Getaway.png";
 
 function App(): JSX.Element {
     return (
@@ -20,10 +20,7 @@ function App(): JSX.Element {
                     <Row>
                         <Col>
                             Cars:
-                            <img
-                                src="C:\Users\pksto\OneDrive\Pictures\Getaway.png"
-                                alt="Fast"
-                            />
+                            <img src={image} alt="Fast Car" />
                         </Col>
                         <Col>
                             Prices:
