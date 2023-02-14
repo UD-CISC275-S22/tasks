@@ -27,6 +27,9 @@ function App(): JSX.Element {
                 alt="A picture of a golden retriever puppy"
                 style={{ width: "200px", height: "200px" }}
             />
+            <Button onClick={() => console.log("Hello World!")}>
+                Hello World!
+            </Button>
             <Container>
                 <Row>
                     <div
@@ -48,12 +51,7 @@ function App(): JSX.Element {
                             padding: "50px"
                         }}
                     ></div>
-                    <Col>
-                        Column 2
-                        <Button onClick={() => console.log("Hello World!")}>
-                            Hello World!
-                        </Button>
-                    </Col>
+                    <Col>Column 2</Col>
                 </Row>
             </Container>
         </div>
