@@ -30,21 +30,21 @@ function App(): JSX.Element {
                 <Row>
                     <div
                         style={{
-                            width: 400,
+                            width: 600,
                             height: 200,
-                            backgroundColor: "green",
-                            border: "4px solid red",
-                            padding: "40px"
+                            backgroundColor: "red",
+                            border: "5px solid blue",
+                            padding: "50px"
                         }}
                     ></div>
                     <Col>Column 1</Col>
                     <div
                         style={{
-                            width: 400,
+                            width: 600,
                             height: 200,
-                            backgroundColor: "green",
-                            border: "4px solid red",
-                            padding: "40px"
+                            backgroundColor: "red",
+                            border: "5px solid blue",
+                            padding: "50px"
                         }}
                     ></div>
                     <Col>
