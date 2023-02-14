@@ -22,7 +22,10 @@ function App(): JSX.Element {
                 <li>I like video games</li>
                 <li>I like going to the gym</li>
             </ul>
-            <img src="dog.jpg" alt="A picture of a golden retriever puppy" />
+            <img
+                src="https://images.squarespace-cdn.com/content/v1/54e7a1a6e4b08db9da801ded/fdecc7f0-42bf-4696-bd4c-73a868e5d1d2/81.jpg?format=750w"
+                alt="A picture of a golden retriever puppy"
+            />
             <Container>
                 <Row>
                     <div
