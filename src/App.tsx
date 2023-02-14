@@ -6,6 +6,7 @@ function App(): JSX.Element {
     return (
         <div className="App">
             <header className="App-header">My CISC275 Webpage</header>
+            <h1>by Jonathan Ma</h1>
             <img className="Image" src={cmc} alt="Blood Meridian Fan Art" />
             <Container>
                 <Row>
