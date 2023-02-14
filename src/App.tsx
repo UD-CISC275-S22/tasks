@@ -25,6 +25,7 @@ function App(): JSX.Element {
             <img
                 src="https://images.squarespace-cdn.com/content/v1/54e7a1a6e4b08db9da801ded/fdecc7f0-42bf-4696-bd4c-73a868e5d1d2/81.jpg?format=750w"
                 alt="A picture of a golden retriever puppy"
+                style={{ width: "200px", height: "200px" }}
             />
             <Container>
                 <Row>
@@ -48,10 +49,9 @@ function App(): JSX.Element {
                         }}
                     ></div>
                     <Col>
-                        {" "}
                         Column 2
                         <Button onClick={() => console.log("Hello World!")}>
-                            Log Hello World
+                            Hello World!
                         </Button>
                     </Col>
                 </Row>
