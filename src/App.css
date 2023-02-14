@@ -15,7 +15,7 @@
 
 .App-header {
     width: 100%;
-    background-color: #282c34;
+    background-color: #0a0242;
     min-height: 40vh;
     display: flex;
     flex-direction: column;
@@ -36,4 +36,22 @@
     to {
         transform: rotate(360deg);
     }
+}
+
+.Book-list {
+    float: left;
+    position: relative;
+    text-align: left;
+}
+.Bootstrap-button {
+    float: right;
+    position: relative;
+}
+.Image {
+    max-width: 100%;
+}
+.Ugly-red-rectangle {
+    width: 50px;
+    height: 25px;
+    background-color: red;
 }
