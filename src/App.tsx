@@ -40,7 +40,17 @@ function App(): JSX.Element {
             <div>
                 <Container>
                     <Row>
-                        <Col>First column. Hello!</Col>
+                        <Col>
+                            {" "}
+                            <div>
+                                style =
+                                {{
+                                    width: "50px",
+                                    height: "75px",
+                                    background: "red"
+                                }}
+                            </div>
+                        </Col>
                         <Col>Second column. Welcome to the website!</Col>
                     </Row>
                 </Container>
