@@ -12,10 +12,7 @@ function App(): JSX.Element {
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload. Hello World
             </p>
-            <img
-                src="/Users/rachelsison/Downloads/cavapoo.jpg"
-                alt="A picture of a cavapoo"
-            />
+            <img src="public/cavapoo.jpg" alt="A picture of a cavapoo" />
             List of colors:
             <ul>
                 <li>red</li>
