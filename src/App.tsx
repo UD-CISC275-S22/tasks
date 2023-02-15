@@ -12,7 +12,7 @@ function App(): JSX.Element {
                 Hello World UD CISC275 with React Hooks and TypeScript Christian
                 Munley
             </header>
-            <h1>This is a heading!!!</h1>
+            <h1 id="theh1">This is a heading!!!</h1>
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
