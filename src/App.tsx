@@ -7,10 +7,9 @@ function App(): JSX.Element {
             <header className="App-header">
                 UD CISC275*React Hooks*TypeScript*Michael McCully
             </header>
-            <strong>Hello World!</strong>
+            <i>Hello World!</i>
             <p>
-                Hello World ! Edit <code>src/App.tsx</code> and save. This page
-                will automatically reload.
+                Edit <code>src/App.tsx</code> and save. This page reload.
             </p>
         </div>
     );
