@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "react-bootstrap";
 import "./App.css";
 
 function App(): JSX.Element {
@@ -35,6 +36,15 @@ function App(): JSX.Element {
                     <li>2 cookies</li>
                     <li>3 cookies</li>
                 </ol>
+            </div>
+            <div>
+                <Button>Log Hello World</Button>
+            </div>
+            ;
+            <div>
+                <Button onClick={() => console.log("Hello World!")}>
+                    Click Me
+                </Button>
             </div>
             ;
         </>
