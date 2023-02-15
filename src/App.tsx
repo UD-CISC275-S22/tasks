@@ -31,7 +31,7 @@ function App(): JSX.Element {
                     </Col>
                 </Row>
             </Container>
-            <ul style={{}}>
+            <ul>
                 <li>3 fun facts about me:</li>
                 <li>I am 6'6" and can backflip (on ground)</li>
                 <li>I often use adobe after effects to edit videos</li>
