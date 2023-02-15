@@ -52,6 +52,7 @@ function App(): JSX.Element {
                             ></div>
                         </Col>
                         <Col>
+                            Second Column.
                             <div
                                 style={{
                                     width: "100px",
