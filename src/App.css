@@ -15,7 +15,7 @@
 
 .App-header {
     width: 100%;
-    background-color: #a39dfd;
+    background-color: #a29bfd;
     min-height: 40vh;
     display: flex;
     flex-direction: column;
@@ -31,8 +31,8 @@
 
 .Rectangle {
     background-color: red;
-    width: 10%;
-    height: 10vh;
+    width: 50%;
+    height: 40vh;
     text-align: center;
 }
 

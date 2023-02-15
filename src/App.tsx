@@ -19,31 +19,39 @@ function App(): JSX.Element {
                 <Container>
                     <Row>
                         <Col>
-                            <div className="Rectangle"></div>
                             <div
                                 style={{
-                                    border: "1px solid blue",
-                                    padding: "9px"
+                                    border: "7px solid blue",
+                                    padding: "1px"
                                 }}
                             >
                                 <img src={image} alt="Purity" />
                             </div>
                         </Col>
                         <Col>
-                            <div className="Rectangle"></div>
-                            <div
-                                style={{
-                                    border: "1px #a29bfd",
-                                    padding: "9px"
-                                }}
-                            >
-                                Vibes
+                            <div className="Rectangle">
+                                <div
+                                    style={{
+                                        border: "7px solid lavender",
+                                        padding: "1px"
+                                    }}
+                                >
+                                    <h1>
+                                        <span style={{ color: "#a29bfd" }}>
+                                            NEON
+                                        </span>
+                                    </h1>
+                                </div>
+                                <ul>
+                                    <li>Nights</li>
+                                    <li>Stars</li>
+                                    <li>Traffic Lights</li>
+                                    <li>Music</li>
+                                    <li>Rain</li>
+                                    <li>Reflections</li>
+                                    <li>The Moon</li>
+                                </ul>
                             </div>
-                            <ul>
-                                <li>Nights</li>
-                                <li>Stars</li>
-                                <li>Traffic Lights</li>
-                            </ul>
                         </Col>
                     </Row>
                 </Container>
