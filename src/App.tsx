@@ -42,14 +42,13 @@ function App(): JSX.Element {
                     <Row>
                         <Col>
                             {" "}
-                            <div>
-                                style =
-                                {{
+                            <div
+                                style={{
                                     width: "50px",
                                     height: "75px",
                                     background: "red"
                                 }}
-                            </div>
+                            ></div>
                         </Col>
                         <Col>Second column. Welcome to the website!</Col>
                     </Row>
