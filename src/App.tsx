@@ -19,9 +19,11 @@ function App(): JSX.Element {
                 <Container>
                     <Row>
                         <Col>
+                            <div className="Rectangle"></div>
                             <img src={image} alt="Purity" />
                         </Col>
                         <Col>
+                            <div className="Rectangle"></div>
                             Prices:
                             <ul>
                                 <li>$10,000</li>
@@ -32,7 +34,6 @@ function App(): JSX.Element {
                     </Row>
                 </Container>
             </div>
-            <div className="Rectangle"></div>
         </div>
     );
 }

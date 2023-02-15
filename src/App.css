@@ -37,10 +37,8 @@
 }
 
 .img {
-    float: left;
-    width: 900;
-    height: 750;
-    object-fit: cover;
+    width: 2000px;
+    height: 2000px;
 }
 
 @keyframes App-logo-spin {
