@@ -1,7 +1,7 @@
 //Joshua Sean Marcos Taing
 import React from "react";
 import "./App.css";
-import bnuy_img from "../bnuy_chair.png";
+import bnuy_img from "bnuy_chair.png";
 import { Button } from "react-bootstrap";
 import { Container } from "react-bootstrap";
 import { Row } from "react-bootstrap";
