@@ -37,13 +37,10 @@ function App(): JSX.Element {
                     <li>3 cookies</li>
                 </ol>
             </div>
-            <div>
-                <Button>Log Hello World</Button>
-            </div>
             ;
             <div>
                 <Button onClick={() => console.log("Hello World!")}>
-                    Click Me
+                    Log Hello World
                 </Button>
             </div>
             ;
