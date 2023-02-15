@@ -37,3 +37,12 @@
         transform: rotate(360deg);
     }
 }
+
+li {
+    list-style: none;
+}
+
+.redBox {
+    display: flex;
+    margin-left: 220px;
+}
