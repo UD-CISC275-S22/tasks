@@ -22,6 +22,21 @@ function App(): JSX.Element {
                     page will automatically reload. Hello World
                 </p>
             </div>
+            <div>
+                Unordered List:
+                <ul>
+                    <li>3 cookies</li>
+                    <li>1 cookie</li>
+                    <li>2 cookies</li>
+                </ul>
+                Ordered List:
+                <ol>
+                    <li>1 cookie</li>
+                    <li>2 cookies</li>
+                    <li>3 cookies</li>
+                </ol>
+            </div>
+            ;
         </>
     );
 }
