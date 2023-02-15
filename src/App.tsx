@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import creature from "./assets/creature.png";
+import logo from "./baby.png";
 
 function App(): JSX.Element {
     return (
@@ -12,7 +13,7 @@ function App(): JSX.Element {
                 </header>
                 <div>
                     <h1>Hello World</h1>
-                    <img src="./assets/images/baby.png" alt="Baby" />
+                    <img src={logo} />
                 </div>
                 ;
                 <p>
