@@ -1,6 +1,5 @@
 import React from "react";
 import "./App.css";
-import creature from "./assets/creature.png";
 import logo from "./baby.png";
 
 function App(): JSX.Element {
