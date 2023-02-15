@@ -2,8 +2,6 @@ import React from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import "./App.css";
 import image from "./Getaway.png";
-import image2 from "./Vibes1.png";
-import image3 from "./Vibes2.png";
 
 function App(): JSX.Element {
     return (
@@ -22,8 +20,6 @@ function App(): JSX.Element {
                     <Row>
                         <Col>
                             <img src={image} alt="Purity" />
-                            <img src={image2} alt="Sunshine" />
-                            <img src={image3} alt="7/11" />
                         </Col>
                         <Col>
                             Prices:
