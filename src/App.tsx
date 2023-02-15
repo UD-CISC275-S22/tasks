@@ -41,16 +41,25 @@ function App(): JSX.Element {
                 <Container>
                     <Row>
                         <Col>
-                            {" "}
+                            {"i"}
+                            First Column.{"i"}
                             <div
                                 style={{
-                                    width: "50px",
-                                    height: "75px",
+                                    width: "100px",
+                                    height: "165px",
                                     background: "red"
                                 }}
                             ></div>
                         </Col>
-                        <Col>Second column. Welcome to the website!</Col>
+                        <Col>
+                            <div
+                                style={{
+                                    width: "100px",
+                                    height: "165px",
+                                    background: "yellow"
+                                }}
+                            ></div>
+                        </Col>
                     </Row>
                 </Container>
             </div>
