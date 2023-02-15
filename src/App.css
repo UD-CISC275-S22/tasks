@@ -15,7 +15,7 @@
 
 .App-header {
     width: 100%;
-    background-color: #282c34;
+    background-color: #4daadb;
     min-height: 40vh;
     display: flex;
     flex-direction: column;
@@ -24,7 +24,56 @@
     font-size: calc(10px + 2vmin);
     color: white;
 }
+.App-joke {
+    width: 100%;
+    background-color: #4daadb;
+    min-height: 25vh;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-style: oblique;
+    font-size: x-large;
+}
+.Image-header {
+    width: 100%;
+    background-color: #3085f4;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-style: oblique;
+    font-size: x-large;
+}
+.imgtxt {
+    font-family: arial;
+    font-size: 20px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 250px;
+}
+.forest-pic {
+    justify-content: left;
+    margin-right: 100%;
+}
 
+.rectangle1 {
+    width: auto;
+    height: 100px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+}
+.rectangle2 {
+    width: auto;
+    height: 100px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+}
 .App-link {
     color: #61dafb;
 }
