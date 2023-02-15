@@ -20,15 +20,29 @@ function App(): JSX.Element {
                     <Row>
                         <Col>
                             <div className="Rectangle"></div>
-                            <img src={image} alt="Purity" />
+                            <div
+                                style={{
+                                    border: "1px solid blue",
+                                    padding: "9px"
+                                }}
+                            >
+                                <img src={image} alt="Purity" />
+                            </div>
                         </Col>
                         <Col>
                             <div className="Rectangle"></div>
-                            Prices:
+                            <div
+                                style={{
+                                    border: "1px #a29bfd",
+                                    padding: "9px"
+                                }}
+                            >
+                                Vibes
+                            </div>
                             <ul>
-                                <li>$10,000</li>
-                                <li>$20,500</li>
-                                <li>$FREE</li>
+                                <li>Nights</li>
+                                <li>Stars</li>
+                                <li>Traffic Lights</li>
                             </ul>
                         </Col>
                     </Row>
