@@ -2,8 +2,8 @@ import React from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import "./App.css";
 import image from "./Getaway.png";
-import image2 from "./SRT.jpg";
-import image3 from "./Trap.jpg";
+import image2 from "./Vibes1.png";
+import image3 from "./Vibes2.png";
 
 function App(): JSX.Element {
     return (
@@ -21,9 +21,9 @@ function App(): JSX.Element {
                 <Container>
                     <Row>
                         <Col>
-                            <img src={image} alt="Fast Car" />
-                            <img src={image2} alt="Scary Car" />
-                            <img src={image3} alt="Trap Car" />
+                            <img src={image} alt="Purity" />
+                            <img src={image2} alt="Sunshine" />
+                            <img src={image3} alt="7/11" />
                         </Col>
                         <Col>
                             Prices:
