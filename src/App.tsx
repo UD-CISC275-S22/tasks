@@ -22,17 +22,13 @@ function App(): JSX.Element {
                 <li>orange</li>
                 <li>yellow</li>
             </ul>
-            <Container>
+            <Container> 
                 <Row>
                     <Col>
-                        <div>
-                            height: 200px; width: 50%; background-color:red;
-                        </div>
+                        <div className="Rectangle"></div>
                     </Col>
                     <Col>
-                        <div>
-                            height: 200px; width: 50%; background-color:red;
-                        </div>
+                        <div className="Rectangle"></div>
                     </Col>
                 </Row>
             </Container>
