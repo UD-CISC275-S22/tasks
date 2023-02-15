@@ -6,20 +6,20 @@ import userEvent from "@testing-library/user-event";
 describe("Some HTML Elements are added.", () => {
     test("There is a header", () => {
         render(<App />);
-        const header = screen.getByRole("heading");
+        const header = screen.getAllByRole("heading")[0];
         expect(header).toBeInTheDocument();
     });
 
     test("There is an image with alt text", () => {
         render(<App />);
-        const image = screen.getByRole("img");
+        const image = screen.getAllByRole("img")[0];
         expect(image).toBeInTheDocument();
         expect(image).toHaveAttribute("alt");
     });
 
     test("There is a list with at least three elements", () => {
         render(<App />);
-        const list = screen.getByRole("list");
+        const list = screen.getAllByRole("list")[0];
         expect(list).toBeInTheDocument();
         expect(list.children.length).toBeGreaterThanOrEqual(3);
     });
@@ -28,7 +28,7 @@ describe("Some HTML Elements are added.", () => {
 describe("Some basic CSS is added.", () => {
     test("The background color of the header area is different", () => {
         render(<App />);
-        const banner = screen.getByRole("banner");
+        const banner = screen.getAllByRole("banner")[0];
         expect(banner).not.toHaveStyle({
             "background-color": "rgb(40, 44, 52)"
         });
@@ -38,7 +38,9 @@ describe("Some basic CSS is added.", () => {
 describe("Some Bootstrap Elements are added", () => {
     test("There is one bootstrap button with the text 'Log Hello World'", () => {
         render(<App />);
-        const button = screen.getByRole("button", { name: /Log Hello World/i });
+        const button = screen.getAllByRole("button", {
+            name: /Log Hello World/i
+        })[0];
         expect(button).toBeInTheDocument();
         expect(button).toHaveClass("btn");
         expect(button).toHaveClass("btn-primary");
@@ -53,7 +55,9 @@ describe("Some Bootstrap Elements are added", () => {
     test("Clicking the bootstrap button logs 'Hello World!'", () => {
         const consoleSpy = jest.spyOn(console, "log");
         render(<App />);
-        const button = screen.getByRole("button", { name: /Log Hello World/i });
+        const button = screen.getAllByRole("button", {
+            name: /Log Hello World/i
+        })[0];
         userEvent.click(button);
         expect(consoleSpy).toHaveBeenCalledWith("Hello World!");
     });
