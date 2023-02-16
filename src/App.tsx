@@ -23,7 +23,7 @@ function App(): JSX.Element {
                                 height: "100px"
                             }}
                         >
-                            First column
+                            First column:
                         </div>
                     </Col>
                     <Col>
@@ -34,7 +34,7 @@ function App(): JSX.Element {
                                 height: "100px"
                             }}
                         >
-                            Second column
+                            Second column:
                         </div>
                     </Col>
                 </Row>
