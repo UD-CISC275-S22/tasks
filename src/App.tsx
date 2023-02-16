@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
-import { alignPropType } from "react-bootstrap/esm/types";
+// import { alignPropType } from "react-bootstrap/esm/types";
 import "./App.css";
 
 function App(): JSX.Element {
