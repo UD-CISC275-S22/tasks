@@ -12,7 +12,11 @@ function App(): JSX.Element {
                 <p>
                     Edit <code>src/App.tsx</code> and save. This page reload.
                 </p>
-                <header className="App-header">Current GOAT Rankings:</header>
+                <h1 className="Header">
+                    <span style={{ color: "White" }}>
+                        CURRENT G.O.A.T. RANKINGS
+                    </span>
+                </h1>
                 <Row>
                     <div className="Red-box"> </div>
                     <Col>
