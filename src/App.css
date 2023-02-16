@@ -13,9 +13,15 @@
     }
 }
 
+.App-box {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+}
+
 .App-header {
     width: 100%;
-    background-color: #282c34;
+    background-color: darkorchid;
     min-height: 40vh;
     display: flex;
     flex-direction: column;
