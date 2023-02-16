@@ -19,7 +19,7 @@ function App(): JSX.Element {
                 <li>orange</li>
                 <li>yellow</li>
             </ul>
-            <Container> 
+            <Container>
                 <Row>
                     <Col>
                         <div className="Rectangle"></div>
