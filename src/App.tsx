@@ -5,7 +5,7 @@ import "./App.css";
 function App(): JSX.Element {
     return (
         <div className="App">
-            <header className="App-header" background-color="pink">
+            <header className="App-header">
                 <h1>Rachel Sison UD CISC275 with React Hooks and TypeScript</h1>
             </header>
             <p>
