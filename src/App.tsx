@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import { Button, Container, Row, Col } from "react-bootstrap";
 
 function App(): JSX.Element {
     return (
@@ -11,6 +12,13 @@ function App(): JSX.Element {
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload. Hello World
             </p>
+            <Button onClick={() => console.log("I am logged")}>Click Me</Button>
+            <Container>
+                <Row>
+                    <Col>Hej</Col>
+                    <Col>How r u </Col>
+                </Row>
+            </Container>
         </div>
     );
 }
