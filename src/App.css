@@ -29,6 +29,12 @@
     color: #61dafb;
 }
 
+.rectangle{
+    width: 100px;
+    height: 50px;
+    background: red;
+}
+
 @keyframes App-logo-spin {
     from {
         transform: rotate(0deg);
