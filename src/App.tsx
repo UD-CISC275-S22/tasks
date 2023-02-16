@@ -13,7 +13,7 @@ function App(): JSX.Element {
                 automatically reload. Hello World
             </p>
             <img src="src/public/cavapoo.jpg" alt="A picture of a cavapoo" />
-            List of colors:
+            <p>List of colors:</p>
             <ul>
                 <li>red</li>
                 <li>orange</li>
