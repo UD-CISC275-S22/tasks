@@ -30,8 +30,8 @@
 }
 
 .Rectangle {
-    height: 200;
-    width: 500;
+    height: 200px;
+    width: 50%;
     background-color: red;
 }
 
