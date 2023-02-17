@@ -1,7 +1,7 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
-import Button from "react-bootstrap/esm/Button";
 import "./App.css";
+import { Button, Col, Container, Row } from "react-bootstrap";
+
 function App(): JSX.Element {
     return (
         <div className="App">
@@ -16,20 +16,17 @@ function App(): JSX.Element {
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
             </p>
-            <p>Things I like</p>
+            <p>List of Things I like</p>
             <ul>
-                <li>I like dogs</li>
-                <li>I like video games</li>
-                <li>I like going to the gym</li>
+                <li>Videogames</li>
+                <li>Dogs</li>
+                <li>Baseball</li>
             </ul>
             <img
                 src="https://images.squarespace-cdn.com/content/v1/54e7a1a6e4b08db9da801ded/fdecc7f0-42bf-4696-bd4c-73a868e5d1d2/81.jpg?format=750w"
-                alt="A picture of a golden retriever puppy"
-                style={{ width: "200px", height: "200px" }}
+                alt="Golden Retriever Puppy"
             />
-            <Button onClick={() => console.log("Hello World!")}>
-                Hello World!
-            </Button>
+
             <Container>
                 <Row>
                     <div
@@ -41,7 +38,8 @@ function App(): JSX.Element {
                             padding: "50px"
                         }}
                     ></div>
-                    <Col>Column 1</Col>
+                    <Col>First column.</Col>
+
                     <div
                         style={{
                             width: 600,
@@ -51,7 +49,14 @@ function App(): JSX.Element {
                             padding: "50px"
                         }}
                     ></div>
-                    <Col>Column 2</Col>
+                    <Col>
+                        Second column. You can put whatever you want in here,
+                        and it will be on the right side. Maybe try adding an
+                        image?
+                        <Button onClick={() => console.log("Hello World!")}>
+                            Log Hello World
+                        </Button>
+                    </Col>
                 </Row>
             </Container>
         </div>
