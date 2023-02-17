@@ -5,6 +5,7 @@
  */
 export function fahrenheitToCelius(temperature: number): number {
     let fahrenheit;
+    // eslint-disable-next-line prefer-const
     fahrenheit = (temperature - 32) * (5 / 9);
     return fahrenheit;
 }
