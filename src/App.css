@@ -15,7 +15,7 @@
 
 .App-header {
     width: 100%;
-    background-color: #282c34;
+    background-color: #0152f3;
     min-height: 40vh;
     display: flex;
     flex-direction: column;
@@ -27,6 +27,28 @@
 
 .App-link {
     color: #61dafb;
+}
+
+.App-rectangle {
+    width: 50px;
+    background-color: #5a0101;
+    min-height: 20vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-rectangle2 {
+    width: 50px;
+    background-color: #ffffff;
+    min-height: 20vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 @keyframes App-logo-spin {
