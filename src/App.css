@@ -24,6 +24,11 @@
     font-size: calc(10px + 2vmin);
     color: white;
 }
+.rectangle{
+    background: red;
+    width: 200px;
+    height: 100px;
+}
 
 .App-link {
     color: #61dafb;

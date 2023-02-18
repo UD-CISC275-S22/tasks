@@ -17,14 +17,14 @@ function App(): JSX.Element {
                         <Button onClick={() => console.log("Hello World!")}>
                             Log Hello World!
                         </Button>
-                        <div>width=5 height=10 backroundcolor = red</div>
+                        <div className="rectangle"></div>
                     </Col>
                     <Col>
                         <p>
                             Edit <code>src/App.tsx</code> and save. This page
                             automatically reload. Hello World
                         </p>
-                        <div>width=5 height=10 backroundcolor = red</div>
+                        <div className="rectangle"></div>
                     </Col>
                     <Col>
                         <ul>
@@ -32,8 +32,11 @@ function App(): JSX.Element {
                             <li>Football</li>
                             <li>Basketball</li>
                         </ul>
-                        <img src="i.png" alt="The New York Mets!" />
-                        <div>width=5 height=10 backroundcolor = red</div>
+                        <img
+                            src="https://www.mlbstatic.com/team-logos/team-cap-on-dark/121.svg"
+                            alt="The New York Mets!"
+                        />
+                        <div className="rectangle"></div>
                     </Col>
                 </Row>
             </Container>
