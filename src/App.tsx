@@ -17,70 +17,68 @@ function App(): JSX.Element {
                 </header>
 
                 <div>
-                    <div className="shift">
-                        <Container>
-                            <Row>
-                                <Col>
-                                    <div className="Rectangle">
-                                        <div
-                                            style={{
-                                                border: "7px solid #a29bfd",
-                                                padding: "1px"
-                                            }}
-                                        >
-                                            <div>
-                                                <div className="font-size">
-                                                    <span
-                                                        style={{
-                                                            color: "#a29bfd"
-                                                        }}
-                                                    >
-                                                        DAY
-                                                    </span>
-                                                </div>
+                    <Container>
+                        <Row>
+                            <Col>
+                                <div className="Rectangle">
+                                    <div
+                                        style={{
+                                            border: "7px solid #a29bfd",
+                                            padding: "1px"
+                                        }}
+                                    >
+                                        <div>
+                                            <div className="font-size">
+                                                <span
+                                                    style={{
+                                                        color: "#a29bfd"
+                                                    }}
+                                                >
+                                                    DAY
+                                                </span>
                                             </div>
                                         </div>
-                                        To be Filled
                                     </div>
-                                </Col>
-                                <Col>
-                                    <div className="Rectangle">
-                                        <div
-                                            style={{
-                                                border: "7px solid #a29bfd",
-                                                padding: "1px"
-                                            }}
-                                        >
-                                            <div>
-                                                <div className="font-size">
-                                                    <span
-                                                        style={{
-                                                            color: "#a29bfd"
-                                                        }}
-                                                    >
-                                                        NIGHT
-                                                    </span>
-                                                </div>
+                                    To be Filled
+                                </div>
+                            </Col>
+                            <Col>
+                                <div className="Rectangle">
+                                    <div
+                                        style={{
+                                            border: "7px solid #a29bfd",
+                                            padding: "1px"
+                                        }}
+                                    >
+                                        <div>
+                                            <div className="font-size">
+                                                <span
+                                                    style={{
+                                                        color: "#a29bfd"
+                                                    }}
+                                                >
+                                                    NIGHT
+                                                </span>
                                             </div>
                                         </div>
+                                    </div>
 
-                                        <ul>
-                                            <li>Nights</li>
-                                            <li>Stars</li>
-                                            <li>Traffic Lights</li>
-                                            <li>Music</li>
-                                            <li>Rain</li>
-                                            <li>Reflections</li>
-                                            <li>Moon</li>
-                                        </ul>
-                                    </div>
-                                </Col>
-                            </Row>
-                        </Container>
-                    </div>
-                    <div className="white-space"></div>
-                    <img src={image} alt="Purity" />
+                                    <ul>
+                                        <li>Nights</li>
+                                        <li>Stars</li>
+                                        <li>Traffic Lights</li>
+                                        <li>Music</li>
+                                        <li>Rain</li>
+                                        <li>Reflections</li>
+                                        <li>Moon</li>
+                                    </ul>
+                                </div>
+                            </Col>
+                        </Row>
+                    </Container>
                 </div>
+                <div className="white-space"></div>
+                <img src={image} alt="Purity" />
             </div>
         </div>
     );
