@@ -15,7 +15,7 @@
 
 .App-header {
     width: 100%;
-    background-color: rgb(64, 87, 132);
+    background-color: #282c34;
     min-height: 40vh;
     display: flex;
     flex-direction: column;
@@ -42,4 +42,8 @@
     width: 200px;
     height: 100px;
     background: rgb(255, 0, 0);
+}
+
+.h1 {
+    background-color: aquamarine;
 }

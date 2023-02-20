@@ -5,13 +5,16 @@ import img from "./assets/stubtoe.jpg";
 function App(): JSX.Element {
     return (
         <div className="App">
-            <h1 className="App-header">
-                Hello People! I have arrived, and I am William Sharp UD CISC275
-                I hope your day is wonderful!
+            <header className="App-header">
+                UD CISC275 with React Hooks and TypeScript
+            </header>
+            <h1>
+                Hello People! I have arrived, and I am William Sharp I hope your
+                day is wonderful!
             </h1>
             <img src={img} alt="A picture of a an alien dog" />
             <ul>
-                <li>Make the bread</li>
+                <li>Make the bread</li>66
                 <li>Spend the bread</li>
                 <li>Make the bread again</li>
             </ul>
