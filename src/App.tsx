@@ -28,7 +28,7 @@ function App(): JSX.Element {
                         <Col>
                             <div className="redrect">
                                 <img
-                                    src="C:UsersShawn\taskssrcimagesMJL.JPG"
+                                    src="images\MJL.JPG"
                                     alt="Picture of the 3 Greatest Dogs"
                                 />
                             </div>
