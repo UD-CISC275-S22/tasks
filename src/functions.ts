@@ -17,6 +17,8 @@ export function fahrenheitToCelius(temperature: number): number {
 export function add3(first: number, second: number, third: number): number {
     if (first > 0 && second > 0 && third > 0) {
         return first + second + third;
+    } else if (first > 0 && second > 0) {
+        return first + second;
     }
 }
 
@@ -25,7 +27,8 @@ export function add3(first: number, second: number, third: number): number {
  * mark added to the end.
  */
 export function shout(message: string): string {
-    return "";
+    const car = message.toUpperCase();
+    return car + "!";
 }
 
 /**
@@ -33,6 +36,7 @@ export function shout(message: string): string {
  * mark. Do not use an `if` statement in solving this question.
  */
 export function isQuestion(message: string): boolean {
+    message[-1] == "?";
     return true;
 }
 
