@@ -4,8 +4,7 @@
  *      C = (F - 32) * 5/9
  */
 export function fahrenheitToCelius(temperature: number): number {
-    const Celsius: number = (temperature - 32) * (5 / 9);
-    return Celsius;
+    return (temperature - 32) * (5 / 9);
 }
 
 /**
@@ -13,10 +12,18 @@ export function fahrenheitToCelius(temperature: number): number {
  * if the number is greater than zero.
  */
 export function add3(first: number, second: number, third: number): number {
-    if (first > 0 && second > 0 && third > 0) {
-        return first + second + third;
+    let sum = 0;
+
+    if (first > 0) {
+        sum += first;
     }
-    return 0;
+    if (second > 0) {
+        sum += second;
+    }
+    if (third > 0) {
+        sum += third;
+    }
+    return sum;
 }
 
 /**
