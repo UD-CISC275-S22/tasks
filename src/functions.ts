@@ -16,7 +16,7 @@ export function fahrenheitToCelius(temperature: number): number {
  */
 export function add3(first: number, second: number, third: number): number {
     let num = 0;
-    if(first > 0){
+    if (first > 0) {
         num = first + num;
     }
     if (second > 0) {
@@ -42,8 +42,7 @@ export function shout(message: string): string {
  * mark. Do not use an `if` statement in solving this question.
  */
 export function isQuestion(message: string): boolean {
-    message.endsWith("?");
-    return true;
+    return message[message.length - 1] === "?";
 }
 
 /**
