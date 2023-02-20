@@ -4,7 +4,6 @@ import { Col } from "react-bootstrap";
 import { Container } from "react-bootstrap";
 import { Row } from "react-bootstrap";
 import "./App.css";
-import city from "./assets/neonCity.jpg";
 
 function App(): JSX.Element {
     return (
@@ -32,7 +31,7 @@ function App(): JSX.Element {
                 {" "}
                 What a nice looking image!
             </h2>
-            <img src={city} alt="A Nice Neon City" />
+            <img src="./assets/neonCity.jpg" alt="A Nice Neon City" />
             <Button
                 style={{ color: "#01096E" }}
                 onClick={() => console.log("Hello World!")}
