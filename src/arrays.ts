@@ -111,7 +111,22 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    if (addends.length === 0) {
+        return "0=0";
+    }
+    // eslint-disable-next-line @typescript-eslint/no-inferrable-types
+    let finished_string: string = "";
+    const sum = addends.reduce(
+        (current: number, num: number) => current + num,
+        0
+    );
+    finished_string += sum.toString() + "=";
+
+    const str = addends.map((num: number): string => num.toString());
+    finished_string += str;
+    finished_string = finished_string.replace(/,/g, "+");
+
+    return finished_string;
 }
 
 /**
@@ -124,5 +139,7 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
+    //let sum: number = 0;
+    //values.map((num: number): number =>  )
     return [];
 }
