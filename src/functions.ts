@@ -23,7 +23,7 @@ export function add3(first: number, second: number, third: number): number {
     if (third > 0) {
         sum = sum + third;
     }
-    return 0;
+    return sum;
 }
 
 /**
