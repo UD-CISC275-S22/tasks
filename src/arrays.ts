@@ -13,6 +13,7 @@ export function bookEndList(numbers: number[]): number[] {
     } else {
         result = [numbers[0], numbers[-1]];
     }
+    console.log(result);
     return result;
 }
 
@@ -21,7 +22,10 @@ export function bookEndList(numbers: number[]): number[] {
  * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
-    return numbers;
+    let result = [...numbers];
+    result = numbers.map((elements: number): number => 3 * elements);
+    console.log(result);
+    return result;
 }
 
 /**
@@ -29,7 +33,9 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    return [];
+    const result = numbers.map((num: string): number => Number(num));
+    console.log(result);
+    return result;
 }
 
 /**
