@@ -42,7 +42,9 @@ export function shout(message: string): string {
  */
 export function isQuestion(message: string): boolean {
     let result: string = "";
-    result = message.includes("?");
+    //result = message.includes("?");
+    //result = message[message.length-1] === “?” ? true : false;
+    result = message.slice(-1) === '?' ? true : false;
     return result;
 }
 
