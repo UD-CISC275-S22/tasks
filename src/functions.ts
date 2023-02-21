@@ -4,8 +4,8 @@
  *      C = (F - 32) * 5/9
  */
 export function fahrenheitToCelius(temperature: number): number {
-    	let C: number = (temperature - 32) * 5/9;
-	return C;
+    const C: number = ((temperature - 32) * 5) / 9;
+    return C;
 }
 
 /**
@@ -13,17 +13,17 @@ export function fahrenheitToCelius(temperature: number): number {
  * if the number is greater than zero.
  */
 export function add3(first: number, second: number, third: number): number {
-    	let sum: number = 0;
-	if (first > 0) {
-		sum = sum + first;
-	}
-	if (second > 0) {
-		sum = sum + second;
-	}
-	if (third > 0) {
-		sum = sum + third;
-	}
-	return sum;
+    let sum = 0;
+    if (first > 0) {
+        sum = sum + first;
+    }
+    if (second > 0) {
+        sum = sum + second;
+    }
+    if (third > 0) {
+        sum = sum + third;
+    }
+    return sum;
 }
 
 /**
@@ -31,7 +31,7 @@ export function add3(first: number, second: number, third: number): number {
  * mark added to the end.
  */
 export function shout(message: string): string {
-    let shout: string = "";
+    let shout = "";
     shout = message.toUpperCase() + "!";
     return shout;
 }
@@ -41,10 +41,10 @@ export function shout(message: string): string {
  * mark. Do not use an `if` statement in solving this question.
  */
 export function isQuestion(message: string): boolean {
-    let result: string = "";
+    let result = true;
     //result = message.includes("?");
     //result = message[message.length-1] === “?” ? true : false;
-    result = message.slice(-1) === '?' ? true : false;
+    result = message.slice(-1) === "?" ? true : false;
     return result;
 }
 
@@ -54,15 +54,13 @@ export function isQuestion(message: string): boolean {
  * upper or lower case), then return `false`. Otherwise, return `null`.
  */
 export function convertYesNo(word: string): boolean | null {
-    if ((word === "yes") || (word === "YES") || (word === "Yes")) {
-	    return true;
-    }
-    else {
-	    if ((word === "no") || (word === "NO") || (word === "No")) {
-		    return false;
-	    }
-	    else {
-		    return null;
-	    }
+    if (word === "yes" || word === "YES" || word === "Yes") {
+        return true;
+    } else {
+        if (word === "no" || word === "NO" || word === "No") {
+            return false;
+        } else {
+            return null;
+        }
     }
 }
