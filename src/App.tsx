@@ -29,7 +29,11 @@ function App(): JSX.Element {
                 }
             >
                 Click for virus
+            
             </Button> */}
+            {/* data2 = data.map((Cow c1): Cow => {...a})
+             */}
+
             <div>
                 <Container>
                     <Row>
