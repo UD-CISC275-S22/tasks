@@ -44,6 +44,7 @@
         "brace-style": ["error", "1tbs"],
         "indent": ["error", 4],
         "quotes": ["error", "double"],
-        "semi": ["error", "always"]
+        "semi": ["error", "always"],
+        "@typescript-eslint/no-inferrable-types": "off"
     }
 }
