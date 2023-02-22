@@ -143,8 +143,7 @@ export function injectPositive(values: number[]): number[] {
     const copy = values.slice();
     if (index === -1) {
         const sum = values.reduce(
-            (soFar: number, curr: number): number =>
-                curr > 0 ? soFar + curr : soFar + 0,
+            (soFar: number, curr: number): number => soFar + curr,
             0
         );
         copy.splice(values.length, 0, sum);
