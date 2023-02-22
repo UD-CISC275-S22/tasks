@@ -40,7 +40,6 @@ export function shout(message: string): string {
 export function isQuestion(message: string): boolean {
     return message.at(-1) === "?";
 }
-
 /**
  * Consumes a word (a string) and returns either `true`, `false`, or `null`. If the string
  * is "yes" (upper or lower case), then return `true`. If the string is "no" (again, either
