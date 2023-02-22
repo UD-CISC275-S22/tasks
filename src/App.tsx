@@ -51,7 +51,6 @@ function App(): JSX.Element {
             <Button onClick={() => console.log("Hello World!")}>
                 Log Hello World
             </Button>
-            <p>Hello World</p>
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
