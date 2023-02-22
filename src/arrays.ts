@@ -139,7 +139,22 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    //let sum: number = 0;
-    //values.map((num: number): number =>  )
-    return [];
+    const index = values.findIndex((num: number): boolean => num < 0);
+    const copy = values.slice();
+    if (index === -1) {
+        const sum = values.reduce(
+            (soFar: number, curr: number): number =>
+                curr > 0 ? soFar + curr : soFar + 0,
+            0
+        );
+        copy.splice(values.length, 0, sum);
+    } else {
+        const sum = values.reduce(
+            (soFar: number, curr: number, i: number): number =>
+                curr > 0 && i < index ? soFar + curr : soFar,
+            0
+        );
+        copy.splice(index + 1, 0, sum);
+    }
+    return copy;
 }
