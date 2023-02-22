@@ -18,24 +18,25 @@ function App(): JSX.Element {
                     alt="Crazy Dog"
                 />
                 <div>
-                    <Button onClick={() => console.log("Log Hello World")}>
-                        Hello World!
+                    <Button onClick={() => console.log("Hello World!")}>
+                        Log Hello World
                     </Button>
                 </div>
-                <ol>
+                <ul>
+                    {" "}
                     <li>Test1</li>
                     <li>Test2</li>
                     <li>Test3</li>
-                </ol>
+                </ul>
                 <Container>
                     <Row>
                         <Col>
-                            <div id="rectangle"></div>
+                            <div className="rectangle"></div>
                             hello world
                         </Col>
                         <Col>
                             <div>
-                                <div id="rectangle"></div>
+                                <div className="rectangle"></div>
                                 Second column.
                             </div>
                         </Col>
@@ -49,5 +50,4 @@ function App(): JSX.Element {
         </div>
     );
 }
-
 export default App;
