@@ -32,9 +32,10 @@ export function tripleNumbers(numbers: number[]): number[] {
  * Consume an array of strings and convert them to integers. If
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
+// how to check if a number can be converted
 export function stringsToIntegers(numbers: string[]): number[] {
     const result = numbers.map((num: string): number => Number(num));
-    console.log(result);
+    //console.log(result);
     return result;
 }
 
@@ -46,7 +47,10 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    return [];
+    amounts = amounts.filter((money: string) : number => (money[0] != "$") ? money = money[1:]);
+    return Number(amounts[money]);
+    //console.log("All prices are low:", allLowPrices);
+    //return removed;
 };
 
 /**
@@ -72,7 +76,13 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    return false;
+    //let valid: boolean = true;
+    return colors.every(
+        (color: string): boolean => (color = "red" || "blue" || "green")
+    );
+    console.log("All elements are RGB:", all);
+
+    return valid;
 }
 
 /**

@@ -12,7 +12,10 @@ export function App(): JSX.Element {
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload. Hello World
             </p>
-            <img src="UDBooks.jpg" alt="University of Delaware" />
+            <img
+                src="https://sites.udel.edu/honors/files/2021/07/book-statue.jpg"
+                alt="University of Delaware"
+            />
             <ul>
                 <li> Red </li>
                 <li> Blue </li>
