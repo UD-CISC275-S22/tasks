@@ -5,6 +5,22 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
+    /* const first = numbers.splice()
+    const last = numbers.find(
+        (num: number): boolean => num === numbers[numbers.length - 1]
+    );
+    let result;
+    const fandlArray = [first, last];
+
+    if (numbers.length > 1) {
+        result = fandlArray;
+    } else if (numbers.length === 1) {
+        result = (numbers.length - 1) * 2;
+    } else {
+        result = [];
+    }
+    */
+
     return numbers;
 }
 
@@ -22,6 +38,10 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
+    /* const stringsToNumbers = [...numbers];
+
+    const num = stringsToNumbers.map((num) => parseInt(num));
+*/
     return [];
 }
 
@@ -60,7 +80,20 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    return false;
+    const red = "red";
+    const green = "green";
+    const blue = "blue";
+
+    const rgb = colors.every(
+        (color): boolean => color === red || color === green || color === blue
+    );
+    if (rgb) {
+        return true;
+    } else if (colors.length === 0) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 /**
