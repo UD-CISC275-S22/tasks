@@ -13,8 +13,8 @@ export function bookEndList(numbers: number[]): number[] {
  * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
-    numbers = numbers.map((num: number): number => num * 3);
-    return numbers;
+    const newNumbers = numbers.map((num: number): number => num * 3);
+    return newNumbers;
 }
 
 /**
@@ -50,7 +50,8 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return 0;
+    const result: string[] = words.filter((words) => words.length < 4);
+    return result.length;
 }
 
 /**
@@ -70,7 +71,19 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    const sum = addends.reduce(
+        (currentTotal: number, num: number) => currentTotal + num,
+        0
+    );
+
+    let result;
+    if (sum > 0) {
+        const num = addends.join("+");
+        result = `${sum}=${num}`;
+    } else {
+        result = `${sum}=0`;
+    }
+    return result;
 }
 
 /**
