@@ -1,10 +1,13 @@
+/* eslint-disable @typescript-eslint/no-inferrable-types */
+/* eslint-disable brace-style */
 /**
  * Consumes a single temperature in Fahrenheit (a number) and converts to Celsius
  * using this formula:
  *      C = (F - 32) * 5/9
  */
 export function fahrenheitToCelius(temperature: number): number {
-    return 0;
+    // eslint-disable-next-line prettier/prettier
+    return (5 / 9) * (temperature - 32);
 }
 
 /**
@@ -12,15 +15,27 @@ export function fahrenheitToCelius(temperature: number): number {
  * if the number is greater than zero.
  */
 export function add3(first: number, second: number, third: number): number {
-    return 0;
-}
+    let tot: number = 0;
+    if (first > 0) {
+        tot = tot + first;
+    }
+    if (second > 0) {
+        tot = tot + second;
+    }
+    if (third > 0) {
+        tot = tot + third;
+    } //end of if tree
+    return tot;
+} //end of add 3
 
 /**
  * Consumes a string and produces the same string in UPPERCASE and with an exclamation
  * mark added to the end.
  */
 export function shout(message: string): string {
-    return "";
+    let shouted: string = message + "!";
+    shouted = shouted.toUpperCase();
+    return shouted;
 }
 
 /**
@@ -28,7 +43,7 @@ export function shout(message: string): string {
  * mark. Do not use an `if` statement in solving this question.
  */
 export function isQuestion(message: string): boolean {
-    return true;
+    return message.endsWith("?");
 }
 
 /**
@@ -37,5 +52,11 @@ export function isQuestion(message: string): boolean {
  * upper or lower case), then return `false`. Otherwise, return `null`.
  */
 export function convertYesNo(word: string): boolean | null {
-    return true;
+    if (word == "YES" || word == "yes") {
+        return true;
+    } else if (word == "NO" || word == "no") {
+        return false;
+    } else {
+        return null;
+    }
 }
