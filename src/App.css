@@ -9,6 +9,10 @@
 .hbackground {
     background-color: green;
 }
+.imgAdjust {
+    width: 350px;
+    height: 150px;
+}
 .redrect {
     width: 400px;
     height: 200px;
