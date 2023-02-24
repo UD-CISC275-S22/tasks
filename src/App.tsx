@@ -4,7 +4,7 @@ import { Button } from "react-bootstrap";
 import { Container } from "react-bootstrap";
 import { Row } from "react-bootstrap";
 import { Col } from "react-bootstrap";
-//import dogs from "C:UsersShawn\taskssrcimagesMJL.JPG";
+//import dogs from "C:\Users\Shawn\tasks\src\images\MJL.JPG";
 function App(): JSX.Element {
     return (
         <div className="App">
@@ -28,7 +28,8 @@ function App(): JSX.Element {
                         <Col>
                             <div className="redrect">
                                 <img
-                                    src="images\MJL.JPG"
+                                    className="imgAdjust"
+                                    src={require("./images/MJL.JPG")}
                                     alt="Picture of the 3 Greatest Dogs"
                                 />
                             </div>
