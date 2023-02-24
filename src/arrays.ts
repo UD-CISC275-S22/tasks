@@ -47,10 +47,12 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    amounts = amounts.filter((money: string) : number => (money[0] != "$") ? money = money[1:]);
-    return Number(amounts[money]);
+    //let removed: number[] = [];
+    const removed = amounts.map((amt: string): number =>
+        amt.includes("?") ? Number(amt.slice(0)) : Number(amt)
+    );
     //console.log("All prices are low:", allLowPrices);
-    //return removed;
+    return removed;
 };
 
 /**
@@ -59,7 +61,11 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    return [];
+    const noQues = messages.map((msg: string): string => msg.slice(-1));
+    const allLoud = noQues.map(
+        (stmt: string): string => stmt.toUpperCase() + "!"
+    );
+    return allLoud;
 };
 
 /**
@@ -67,7 +73,9 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return 0;
+    const short = words.filter((word: string): boolean => word.length < 4);
+    const total = short.length;
+    return total;
 }
 
 /**
@@ -78,11 +86,9 @@ export function countShortWords(words: string[]): number {
 export function allRGB(colors: string[]): boolean {
     //let valid: boolean = true;
     return colors.every(
-        (color: string): boolean => (color = "red" || "blue" || "green")
+        (color: string): boolean =>
+            color == "red" || color == "blue" || color == "green"
     );
-    console.log("All elements are RGB:", all);
-
-    return valid;
 }
 
 /**
@@ -93,7 +99,16 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    if (addends.length == 0) {
+        return "0=0";
+    } else {
+        const total = addends.reduce((a, b) => a + b, 0);
+        return (
+            total +
+            "=" +
+            addends.every((num: number): string => num.toString() + "+")
+        );
+    }
 }
 
 /**
@@ -106,5 +121,13 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    return [];
+    let injected = [...values];
+    let total = 0;
+    injected.every((num: number): number => ? (num < 0) ? total = values.reduce((a, b) => a + b, 0): injected.push(total) , return injected;) ;
+        }
+    }
+    //for loop of values
+    // if values was less then 0 -> return injected.push(total)
+    // else total += values[i]
+    //return injected;
 }
