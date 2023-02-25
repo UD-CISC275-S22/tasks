@@ -9,6 +9,7 @@ function App(): JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript - Emma Frampton
             </header>
+            <h1>Header!</h1>
             <img src={milo} alt="A picture of my childhood dog Milo" />
             <p>
                 Hello World! Edit <code>src/App.tsx</code> and save. This page
@@ -17,6 +18,7 @@ function App(): JSX.Element {
             <ul>
                 <li>EDUC421</li>
                 <li>EDUC450</li>
+                <li>EDUC485</li>
             </ul>
             <Button onClick={() => console.log("Hello World!")}>
                 Log Hello World
