@@ -9,18 +9,12 @@ function App(): JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript - Emma Frampton
             </header>
-            <h1>This is a header!</h1>
             <img src={milo} alt="A picture of my childhood dog Milo" />
             <p>
                 Hello World! Edit <code>src/App.tsx</code> and save. This page
                 will automatically reload.
             </p>
-            <h2>Classes I am taking Spring 2023:</h2>
             <ul>
-                <li>CISC275</li>
-                <li>CISC320</li>
-                <li>CISC374</li>
-                <li>CISC355</li>
                 <li>EDUC421</li>
                 <li>EDUC450</li>
             </ul>
