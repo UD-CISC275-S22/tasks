@@ -5,13 +5,14 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    let result: number[] = [];
-    if (numbers.length == 1) {
+    let result: number[];
+    result = [...numbers];
+    if (numbers.length > 1) {
+        result = [numbers[0], numbers[numbers.length - 1]];
+    } else if (numbers.length == 1) {
         result = [numbers[0], numbers[0]];
-    } else if (numbers.length == 0) {
-        result = [];
     } else {
-        result = [numbers[0], numbers.lastIndexOf()];
+        result = []; //ending with an undefined??
     }
     console.log(result);
     return result;
@@ -24,7 +25,7 @@ export function bookEndList(numbers: number[]): number[] {
 export function tripleNumbers(numbers: number[]): number[] {
     let result = [...numbers];
     //result = numbers.map((elements: number): number => 3 * elements);
-    result = numbers.map((num: number): number => price * 3);
+    result = numbers.map((num: number): number => num * 3);
     console.log(result);
     return result;
 }
@@ -35,12 +36,10 @@ export function tripleNumbers(numbers: number[]): number[] {
  */
 // how to check if a number can be converted
 export function stringsToIntegers(numbers: string[]): number[] {
-    const result = numbers.map((num: string): number => Number(num));
-    (val: number): void => {
-        if (isNaN(val)) {
-            val = 0;
-        }
-    };
+    let result = numbers.map((num: string): number => Number(num));
+    result = result.map((val: number): number =>
+        isNaN(val) ? (val = 0) : val
+    );
     console.log(result);
     return result;
 }
@@ -53,15 +52,12 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    //let removed: number[] = [];
-    const removed = amounts.map((amt: string): number =>
-        amt.includes("?") ? Number(amt.slice(0)) : Number(amt)
+    let removed: number[] = [];
+
+    amounts = amounts.map((amts: string): string =>
+        amts.charAt(0) == "$" ? amts.substring(1) : amts
     );
-    (val: number): void => {
-        if (isNaN(val)) {
-            val = 0;
-        }
-    };
+    removed = stringsToIntegers(amounts);
     console.log(removed);
     return removed;
 };
@@ -72,18 +68,15 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    const stmts: string[] = [];
-    (msg: string): string => {
-        if (!msg.lastIndexOf("?", -1)) {
-            stmts.push(msg);
-        } else if (msg.lastIndexOf("!", -1)) {
-            msg.toUpperCase();
-            stmts.push(msg);
-        }
-        return msg;
-    };
-    console.log(stmts);
-    return stmts;
+    // adding "GREAT! " and a blank array ??
+    messages = messages.filter(
+        (msg: string): boolean => msg[msg.length - 1] != "?"
+    );
+    messages = messages.map((word: string): string =>
+        word[word.length - 1] == "!" ? word.toUpperCase() : word
+    );
+    console.log(messages);
+    return messages;
 };
 
 /**
@@ -126,7 +119,7 @@ export function makeMath(addends: number[]): string {
         return (
             total +
             "=" +
-            addends.map((num: number): string => num.toString() + "+")
+            addends.map((num: number): string => num.toString()).join("+")
         );
     }
 }
@@ -142,23 +135,29 @@ export function makeMath(addends: number[]): string {
  */
 export function injectPositive(values: number[]): number[] {
     // new array of same numbers
-    const injected = [...values];
-    let total = 0;
-    (num: number): number[] => {
-        if (num < 0) {
-            injected.splice(num, 0, total);
-            return injected;
-        } else {
-            total += num;
-        }
-    };
-    injected.splice(-1, 0, total);
-    return injected;
-    //if no negatives or negative was last push total
-    injected.push(total);
-    //for loop of values
-    // if values was less then 0 -> return injected.push(total)
-    // else total += values[i]
-    console.log(injected);
-    return injected;
+    //const injected = [...values];
+    //let total = 0;
+    const negative = values.findIndex((val: number): boolean => val < 0);
+    if (negative == -1) {
+        const total = values.reduce(
+            (curr: number, num: number) => curr + num,
+            0
+        );
+        return [...values, total];
+    }
+    //values previous of negative number
+    const prev = values.filter(
+        (val: number): boolean => values.indexOf(val) < negative
+    );
+    const after = values.filter(
+        (val: number): boolean => values.indexOf(val) > negative
+    );
+    //sum of values before negative
+    const sum = prev.reduce(
+        (currentTotal: number, num: number) => currentTotal + num,
+        0
+    );
+    const result = [...prev, values[negative], sum, ...after];
+    console.log(result);
+    return result;
 }
