@@ -140,7 +140,8 @@ export function makeMath(addends: number[]): string {
  */
 export function injectPositive(values: number[]): number[] {
     const index = values.findIndex((num: number): boolean => num < 0);
-    const copy = values.slice();
+    //const copy = values.slice();
+    const copy = [...values];
     if (index === -1) {
         const sum = values.reduce(
             (soFar: number, curr: number): number => soFar + curr,
