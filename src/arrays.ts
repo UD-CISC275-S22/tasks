@@ -5,7 +5,13 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    return numbers;
+    if (numbers.length === 0) {
+        return [];
+    } else if (numbers.length === 1) {
+        return [numbers[0], numbers[0]];
+    } else {
+        return [numbers[0], numbers[numbers.length - 1]];
+    }
 }
 
 /**
@@ -13,7 +19,8 @@ export function bookEndList(numbers: number[]): number[] {
  * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
-    return numbers;
+    const doubled = numbers.map((price: number): number => price * 3);
+    return doubled;
 }
 
 /**
@@ -21,7 +28,10 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    return [];
+    const integers = numbers.map((num: string): number =>
+        isNaN(parseInt(num)) ? 0 : parseInt(num)
+    );
+    return integers;
 }
 
 /**
@@ -32,7 +42,11 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    return [];
+    const output = amounts.map((num: string): number => {
+        const string = num.replace("$", "");
+        return isNaN(parseInt(string)) ? 0 : parseInt(string);
+    });
+    return output;
 };
 
 /**
@@ -41,7 +55,13 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    return [];
+    const newMessages = messages.filter(
+        (num: string): boolean => num[num.length - 1] !== "?"
+    );
+    const output = newMessages.map((message: string): string =>
+        message[message.length - 1] === "!" ? message.toUpperCase() : message
+    );
+    return output;
 };
 
 /**
@@ -49,7 +69,8 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return 0;
+    const shortWords = words.filter((word) => word.length < 4);
+    return shortWords.length;
 }
 
 /**
@@ -58,7 +79,11 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    return false;
+    const colorsBool = colors.every(
+        (color: string): boolean =>
+            color == "red" || color == "blue" || color == "green"
+    );
+    return colorsBool;
 }
 
 /**
@@ -69,7 +94,16 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    const sum = addends.reduce(
+        (currentTotal: number, num: number) => currentTotal + num,
+        0
+    );
+    const addendStr = addends.join("+");
+    if (addendStr === "") {
+        return `${sum}=0`;
+    } else {
+        return `${sum}=${addendStr}`;
+    }
 }
 
 /**
@@ -82,5 +116,27 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    return [];
+    let total = 0;
+    const firstNegative = values.findIndex((num: number): boolean => num < 0);
+    if (firstNegative === -1) {
+        total = values.reduce((acc, curr) => acc + curr, 0);
+        return [...values, total];
+    }
+    const valuesBefore = values.filter(
+        (num: number): boolean => values.indexOf(num) < firstNegative
+    );
+    const valuesAfter = values.filter(
+        (num: number): boolean => values.indexOf(num) > firstNegative
+    );
+    const sum = valuesBefore.reduce(
+        (currentTotal: number, num: number) => currentTotal + num,
+        0
+    );
+    const output = [
+        ...valuesBefore,
+        values[firstNegative],
+        sum,
+        ...valuesAfter
+    ];
+    return output;
 }
