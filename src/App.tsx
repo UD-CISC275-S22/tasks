@@ -13,7 +13,7 @@ export function App(): JSX.Element {
                 automatically reload. Hello World
             </p>
             <img
-                src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.udel.edu%2F&psig=AOvVaw2o0RdJmTlPrLZu49udOHTQ&ust=1676405165253000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCJCYhJCmk_0CFQAAAAAdAAAAABAD"
+                src="https://marvel-b1-cdn.bc0a.com/f00000000164722/www.udel.edu/content/udel/en/students/community-standards/_jcr_content/par_udel_panel/panelforpages_773500834/par_1/columngenerator_757391832/par_0/image.img.jpg/1675195206746.jpg"
                 alt="University of Delaware"
             />
             <ul>
