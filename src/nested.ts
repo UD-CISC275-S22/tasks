@@ -229,7 +229,7 @@ export function editOption(
             : oldOptions.splice(oldOptions.length, 1, newOption);
     const newQuestion: Question = {
         ...questions[index],
-        options: oldOptions !== [] ? oldOptions : newOptions
+        options: oldOptions.length !== 0 ? [...oldOptions] : [...newOptions]
     };
     newQuestions[index] = newQuestion;
     return newQuestions;
