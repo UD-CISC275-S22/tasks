@@ -10,7 +10,17 @@ export function makeBlankQuestion(
     name: string,
     type: QuestionType
 ): Question {
-    return {};
+    const blank = {
+        body: "",
+        expected: "",
+        id: id,
+        name: name,
+        options: [],
+        points: 1,
+        published: false,
+        type: type
+    };
+    return blank;
 }
 
 /**
@@ -21,6 +31,9 @@ export function makeBlankQuestion(
  * HINT: Look up the `trim` and `toLowerCase` functions.
  */
 export function isCorrect(question: Question, answer: string): boolean {
+    const copy = { ...question };
+    if (copy.expected.trim().toLowerCase() === answer.trim().toLowerCase())
+        return true;
     return false;
 }
 
@@ -31,7 +44,14 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
-    return false;
+    const copy = { ...question };
+    // eslint-disable-next-line @typescript-eslint/no-inferrable-types
+    let count: number = 0;
+    if (copy.type === "short_answer_question") return true;
+    copy.options.filter((option: string): number =>
+        answer === option ? (count += 1) : count
+    );
+    return count >= 1;
 }
 
 /**
@@ -41,7 +61,9 @@ export function isValid(question: Question, answer: string): boolean {
  * name "My First Question" would become "9: My First Q".
  */
 export function toShortForm(question: Question): string {
-    return "";
+    const copy = { ...question };
+    const name = copy.name.slice(0, 10);
+    return question.id + ": " + name;
 }
 
 /**
@@ -62,7 +84,13 @@ export function toShortForm(question: Question): string {
  * Check the unit tests for more examples of what this looks like!
  */
 export function toMarkdown(question: Question): string {
-    return "";
+    let formatted: string = "# " + question.name + "\n" + question.body;
+    if (question.type === "multiple_choice_question") {
+        question.options.filter(
+            (option: string): string => (formatted += "\n- " + option)
+        );
+    }
+    return formatted;
 }
 
 /**
@@ -70,7 +98,9 @@ export function toMarkdown(question: Question): string {
  * `newName`.
  */
 export function renameQuestion(question: Question, newName: string): Question {
-    return question;
+    const copy = { ...question };
+    copy.name = newName;
+    return copy;
 }
 
 /**
@@ -79,7 +109,9 @@ export function renameQuestion(question: Question, newName: string): Question {
  * published; if it was published, now it should be not published.
  */
 export function publishQuestion(question: Question): Question {
-    return question;
+    const copy = { ...question };
+    copy.published = !copy.published;
+    return copy;
 }
 
 /**
@@ -89,7 +121,17 @@ export function publishQuestion(question: Question): Question {
  * The `published` field should be reset to false.
  */
 export function duplicateQuestion(id: number, oldQuestion: Question): Question {
-    return oldQuestion;
+    const newQuestion = {
+        body: oldQuestion.body,
+        expected: oldQuestion.expected,
+        id: id,
+        name: "Copy of " + oldQuestion.name,
+        options: oldQuestion.options,
+        points: oldQuestion.points,
+        published: false,
+        type: oldQuestion.type
+    };
+    return newQuestion;
 }
 
 /**
