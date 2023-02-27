@@ -5,8 +5,12 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    const firstAndLast = numbers.map((x: number): number => x[x.length - 1]);
-    return firstAndLast;
+    if (numbers.length === 0) {
+        return [];
+    } else {
+        const firstAndLast = [numbers[0], numbers[numbers.length - 1]];
+        return firstAndLast;
+    }
 }
 
 /**
@@ -66,7 +70,7 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    const short = words.map((x: string): number => parseInt(x));
+    const short = words.filter((x: string): number => x[x.length] < 4);
     return short;
 }
 
