@@ -14,7 +14,9 @@ export function bookEndList(numbers: number[]): number[] {
 			return numberDouble;
 		}
 		else {
-			const numberAtStartEnd = numbers.slice(0, numbers.length -1);
+			const numberAtStart = numbers.slice(0, 1);
+			const numberAtEnd = numbers.slice((numbers.length)-1);
+			const numberAtStartEnd = [...numberAtStart, ...numberAtEnd];
 			return numberAtStartEnd;
 		}
 	}
@@ -34,7 +36,7 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    const toInts = numbers.map((strng: string): number => (isNaN(strng)) ? 0 : strng.parseInt();
+    const toInts = numbers.map((strng: string): number => (isNaN(strng)) ? 0 : parseInt(strng));
     return toInts;
 }
 
