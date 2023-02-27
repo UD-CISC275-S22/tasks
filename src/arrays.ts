@@ -11,7 +11,7 @@ export function bookEndList(numbers: number[]): number[] {
     } else if (numbers.length == 0) {
         result = [];
     } else {
-        result = [numbers[0], numbers[-1]];
+        result = [numbers[0], numbers.lastIndexOf()];
     }
     console.log(result);
     return result;
@@ -23,7 +23,8 @@ export function bookEndList(numbers: number[]): number[] {
  */
 export function tripleNumbers(numbers: number[]): number[] {
     let result = [...numbers];
-    result = numbers.map((elements: number): number => 3 * elements);
+    //result = numbers.map((elements: number): number => 3 * elements);
+    result = numbers.map((num: number): number => price * 3);
     console.log(result);
     return result;
 }
@@ -35,7 +36,12 @@ export function tripleNumbers(numbers: number[]): number[] {
 // how to check if a number can be converted
 export function stringsToIntegers(numbers: string[]): number[] {
     const result = numbers.map((num: string): number => Number(num));
-    //console.log(result);
+    (val: number): void => {
+        if (isNaN(val)) {
+            val = 0;
+        }
+    };
+    console.log(result);
     return result;
 }
 
@@ -51,7 +57,12 @@ export const removeDollars = (amounts: string[]): number[] => {
     const removed = amounts.map((amt: string): number =>
         amt.includes("?") ? Number(amt.slice(0)) : Number(amt)
     );
-    //console.log("All prices are low:", allLowPrices);
+    (val: number): void => {
+        if (isNaN(val)) {
+            val = 0;
+        }
+    };
+    console.log(removed);
     return removed;
 };
 
@@ -61,11 +72,18 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    const noQues = messages.map((msg: string): string => msg.slice(-1));
-    const allLoud = noQues.map(
-        (stmt: string): string => stmt.toUpperCase() + "!"
-    );
-    return allLoud;
+    const stmts: string[] = [];
+    (msg: string): string => {
+        if (!msg.lastIndexOf("?", -1)) {
+            stmts.push(msg);
+        } else if (msg.lastIndexOf("!", -1)) {
+            msg.toUpperCase();
+            stmts.push(msg);
+        }
+        return msg;
+    };
+    console.log(stmts);
+    return stmts;
 };
 
 /**
@@ -75,6 +93,7 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
 export function countShortWords(words: string[]): number {
     const short = words.filter((word: string): boolean => word.length < 4);
     const total = short.length;
+    console.log(total);
     return total;
 }
 
@@ -85,6 +104,7 @@ export function countShortWords(words: string[]): number {
  */
 export function allRGB(colors: string[]): boolean {
     //let valid: boolean = true;
+    //console.log(Boolean);
     return colors.every(
         (color: string): boolean =>
             color == "red" || color == "blue" || color == "green"
@@ -106,7 +126,7 @@ export function makeMath(addends: number[]): string {
         return (
             total +
             "=" +
-            addends.every((num: number): string => num.toString() + "+")
+            addends.map((num: number): string => num.toString() + "+")
         );
     }
 }
@@ -127,15 +147,18 @@ export function injectPositive(values: number[]): number[] {
     (num: number): number[] => {
         if (num < 0) {
             injected.splice(num, 0, total);
+            return injected;
         } else {
             total += num;
         }
-        return injected;
     };
+    injected.splice(-1, 0, total);
+    return injected;
     //if no negatives or negative was last push total
     injected.push(total);
     //for loop of values
     // if values was less then 0 -> return injected.push(total)
     // else total += values[i]
+    console.log(injected);
     return injected;
 }
