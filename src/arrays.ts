@@ -52,15 +52,13 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
     const isShout = (message: string): boolean =>
         message.charAt(message.length - 1) === "!";
 
-    messages = messages.filter(
-        (message: string): boolean => message.charAt(message.length - 1) === "?"
-    );
+    const isQuestion = (message: string): boolean =>
+        message.charAt(message.length - 1) === "?";
 
-    const shouts = [...messages];
-
-    return shouts.map((shout: string): string =>
-        isShout(shout) ? shout.toUpperCase() : shout
+    messages.map((message: string): string =>
+        isShout(message) ? message.toUpperCase() : message
     );
+    return messages.filter(isQuestion);
 };
 
 /**
@@ -68,7 +66,10 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return 0;
+    return words.reduce(
+        (count: number, word: string) => (word.length < 4 ? count + 1 : count),
+        0
+    );
 }
 
 /**
