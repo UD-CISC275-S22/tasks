@@ -121,13 +121,21 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    let injected = [...values];
+    // new array of same numbers
+    const injected = [...values];
     let total = 0;
-    injected.every((num: number): number => ? (num < 0) ? total = values.reduce((a, b) => a + b, 0): injected.push(total) , return injected;) ;
+    (num: number): number[] => {
+        if (num < 0) {
+            injected.splice(num, 0, total);
+        } else {
+            total += num;
         }
-    }
+        return injected;
+    };
+    //if no negatives or negative was last push total
+    injected.push(total);
     //for loop of values
     // if values was less then 0 -> return injected.push(total)
     // else total += values[i]
-    //return injected;
+    return injected;
 }
