@@ -28,7 +28,7 @@ export function tripleNumbers(numbers: number[]): number[] {
  */
 export function stringsToIntegers(numbers: string[]): number[] {
     const converted = numbers.map((x: string): number =>
-        parseInt(x) ? Number.isNaN(x) : 0
+        Number.isNaN(x) ? parseInt(x) : parseInt(x)
     );
     return converted;
 }
@@ -80,8 +80,11 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    const color = colors.map((x: string): boolean =>
-        x === "red" || x === "blue" || x === "green" ? true : true
+    if (colors.length === 0) {
+        return true;
+    }
+    const color = colors.every(
+        (x: string): boolean => x === "red" || x === "blue" || x === "green"
     );
     return color;
 }
@@ -94,8 +97,12 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    const adds = addends.map((x: number): string => " ");
-    return adds;
+    if (addends.length === 0) {
+        return "0=0";
+    } else {
+        const adds = addends.reduce((x, y) => x + y, 0);
+        return adds + "=" + addends.map((a: number): string => a.toString());
+    }
 }
 
 /**
