@@ -100,7 +100,7 @@ export function makeMath(addends: number[]): string {
     if (addends.length === 0) {
         return "0=0";
     } else {
-        const adds = addends.reduce((x, y) => x + y, 0);
+        const adds = addends.reduce((a, b) => a + b, 0);
         const plus = addends.join("+");
         return adds + "=" + plus;
     }
@@ -116,7 +116,13 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    const negative = values.find((x: number): boolean => x < 0);
-    const negativeIndex = values.findIndex((x: number): boolean => x < 0);
-    return negativeIndex;
-};
+    let check = true;
+    const negativeIndex = values.filter((x) =>
+        x < 0 ? (check = false) : x >= 0 && check
+    );
+    //const negativeIndex = values.filter((x: number): boolean => x >= 0);
+    const total = negativeIndex.reduce((a, b) => (a += b), 0);
+    const sum = [...values];
+    const final = sum.splice(negativeIndex.length + 1, 0, total);
+    return final;
+}
