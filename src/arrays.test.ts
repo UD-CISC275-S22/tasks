@@ -237,15 +237,15 @@ describe("Testing the array functions", () => {
     });
 
     test("Testing the allRGB function", () => {
-        expect(allRGB(COLORS_1)).toEqual(true);
-        expect(allRGB(COLORS_2)).toEqual(true);
-        expect(allRGB(COLORS_3)).toEqual(true);
-        expect(allRGB(COLORS_4)).toEqual(false);
-        expect(allRGB(COLORS_5)).toEqual(false);
-        expect(allRGB(COLORS_6)).toEqual(true);
-        expect(allRGB(COLORS_7)).toEqual(true);
-        expect(allRGB(COLORS_8)).toEqual(false);
-        expect(allRGB(COLORS_9)).toEqual(true);
+        expect(allRGB({ colors: COLORS_1 })).toEqual(true);
+        expect(allRGB({ colors: COLORS_2 })).toEqual(true);
+        expect(allRGB({ colors: COLORS_3 })).toEqual(true);
+        expect(allRGB({ colors: COLORS_4 })).toEqual(false);
+        expect(allRGB({ colors: COLORS_5 })).toEqual(false);
+        expect(allRGB({ colors: COLORS_6 })).toEqual(true);
+        expect(allRGB({ colors: COLORS_7 })).toEqual(true);
+        expect(allRGB({ colors: COLORS_8 })).toEqual(false);
+        expect(allRGB({ colors: COLORS_9 })).toEqual(true);
     });
 
     //////////////////////////////////
