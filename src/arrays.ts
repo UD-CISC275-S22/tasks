@@ -123,6 +123,6 @@ export function injectPositive(values: number[]): number[] {
     //const negativeIndex = values.filter((x: number): boolean => x >= 0);
     const total = negativeIndex.reduce((a, b) => (a += b), 0);
     const sum = [...values];
-    const final = sum.splice(negativeIndex.length + 1, 0, total);
-    return final;
+    sum.splice(negativeIndex.length + 1, 0, total);
+    return sum;
 }
