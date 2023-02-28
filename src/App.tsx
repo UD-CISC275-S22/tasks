@@ -36,6 +36,7 @@ function App(): JSX.Element {
                 src="https://content.sportslogos.net/logos/31/657/full/delaware_blue_hens_logo_primary_1999_sportslogosnet-4605.png"
                 alt="Italian Trulli"
             ></img>
+            <h3>Hello World</h3>
         </div>
     );
 }
