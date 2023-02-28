@@ -9,7 +9,7 @@ export function bookEndList(numbers: number[]): number[] {
     if (numbers.length === 0) {
         return [];
     } else if (numbers.length === 1) {
-        const num = numbers[0];
+        const num: number = numbers[0];
         return [num, num];
     } else {
         const first = numbers[0];
@@ -33,7 +33,11 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    return [];
+    const stringToInt: number[] = numbers.map((num: string): number =>
+        parseInt(num)
+    );
+    const newNum: number[] = stringToInt.map((num) => (isNaN(num) ? 0 : num));
+    return newNum;
 }
 
 /**
@@ -75,14 +79,11 @@ export function allRGB(colors: string[]): boolean {
     const green = "green";
     const blue = "blue";
 
-    const rgb = colors.every(
+    const rgb: boolean = colors.every(
         (color: string): boolean =>
             color === red || color === green || color === blue
     );
     if (rgb) {
-        return true;
-    }
-    if (colors.length === 0) {
         return true;
     } else {
         return false;
