@@ -1,3 +1,5 @@
+import { join } from "path";
+
 /**
  * Consume an array of numbers, and return a new array containing
  * JUST the first and last number. If there are no elements, return
@@ -70,8 +72,8 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    const short = words.filter((x: string): number => x[x.length] < 4);
-    return short;
+    const lessThan = words.filter((x: string): boolean => x.length < 4);
+    return lessThan.length;
 }
 
 /**
@@ -101,7 +103,11 @@ export function makeMath(addends: number[]): string {
         return "0=0";
     } else {
         const adds = addends.reduce((x, y) => x + y, 0);
-        return adds + "=" + addends.map((a: number): string => a.toString());
+        return (
+            adds +
+            "=" +
+            addends.map((x: number): string => x.toString().replace(",", "+"))
+        );
     }
 }
 
@@ -115,6 +121,6 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    const math = values.map((x: number): number => parseInt(x));
+    const math = values.map((x: number): number => (x < 0 ? x + x : x));
     return math;
 }
