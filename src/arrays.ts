@@ -52,13 +52,13 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
     const isShout = (message: string): boolean =>
         message.charAt(message.length - 1) === "!";
 
-    const isQuestion = (message: string): boolean =>
-        message.charAt(message.length - 1) === "?";
+    const filtQuestions = (message: string): boolean =>
+        message.charAt(message.length - 1) !== "?";
 
-    messages.map((message: string): string =>
-        isShout(message) ? message.toUpperCase() : message
+    const shouts = [...messages].map((message: string): string =>
+        isShout(message) === true ? message.toUpperCase() : message
     );
-    return messages.filter(isQuestion);
+    return shouts.filter(filtQuestions);
 };
 
 /**
@@ -115,5 +115,16 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    return [];
+    const positive = [...values];
+
+    const sum = (values: number[]): number =>
+        values.reduce((sum: number, n: number) => sum + n, 0);
+
+    const index: number = values.findIndex((n: number): boolean => n < 0);
+
+    if (index >= 0)
+        return values.splice(index + 1, 0, sum(values.slice(index - 1)));
+
+    values.push(sum(values));
+    return values;
 }
