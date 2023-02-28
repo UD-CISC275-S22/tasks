@@ -15,7 +15,7 @@
 
 .App-header {
     width: 100%;
-    background-color: #282c34;
+    background-color: blue;
     min-height: 40vh;
     display: flex;
     flex-direction: column;
@@ -36,4 +36,10 @@
     to {
         transform: rotate(360deg);
     }
+}
+
+.red_rec {
+    width: 20px;
+    height: 10px;
+    background-color: Red;
 }
