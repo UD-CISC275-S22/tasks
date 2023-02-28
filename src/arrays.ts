@@ -28,7 +28,15 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    return [];
+    if (numbers.length === 0) {
+        return [];
+    } else {
+        const multiArray = numbers.map(Number);
+        const numArray = multiArray.map((num: number): number =>
+            Number.isNaN(num) ? (num = 0) : num
+        );
+        return numArray;
+    }
 }
 
 /**
