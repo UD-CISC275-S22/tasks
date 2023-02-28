@@ -4,24 +4,19 @@
  * an empty array. If there is one element, the resulting list should
  * the number twice.
  */
+
 export function bookEndList(numbers: number[]): number[] {
-    /* const first = numbers.splice()
-    const last = numbers.find(
-        (num: number): boolean => num === numbers[numbers.length - 1]
-    );
-    let result;
-    const fandlArray = [first, last];
-
-    if (numbers.length > 1) {
-        result = fandlArray;
+    if (numbers.length === 0) {
+        return [];
     } else if (numbers.length === 1) {
-        result = (numbers.length - 1) * 2;
+        const num = numbers[0];
+        return [num, num];
     } else {
-        result = [];
+        const first = numbers[0];
+        const last = numbers[numbers.length - 1];
+        const fAndL: number[] = [first, last];
+        return fAndL;
     }
-    */
-
-    return numbers;
 }
 
 /**
@@ -38,10 +33,6 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    /* const stringsToNumbers = [...numbers];
-
-    const num = stringsToNumbers.map((num) => parseInt(num));
-*/
     return [];
 }
 
@@ -85,11 +76,13 @@ export function allRGB(colors: string[]): boolean {
     const blue = "blue";
 
     const rgb = colors.every(
-        (color): boolean => color === red || color === green || color === blue
+        (color: string): boolean =>
+            color === red || color === green || color === blue
     );
     if (rgb) {
         return true;
-    } else if (colors.length === 0) {
+    }
+    if (colors.length === 0) {
         return true;
     } else {
         return false;
