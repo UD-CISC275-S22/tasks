@@ -150,9 +150,29 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    /* const newValues: number[] = [...values];
-    const checkForNegative: number[] = newValues.ma(
-        (num: number): number => num
-    );*/
-    return [];
+    const newValues: number[] = [...values];
+    let added = 0;
+    let newArr: number[] = [];
+
+    const checkForNegative: number = newValues.findIndex(
+        (num: number): boolean => num < 0
+    );
+    if (checkForNegative === -1) {
+        if (values.length === 0) {
+            return [0];
+        }
+        added = values.reduce((current: number, val: number) => current + val);
+        newArr = [...values, added];
+    } else {
+        if (checkForNegative !== 0) {
+            const sliced = values.slice(0, checkForNegative);
+
+            added = sliced.reduce(
+                (current: number, val: number) => current + val
+            );
+        }
+        newArr = [...newValues];
+        newArr.splice(checkForNegative + 1, 0, added);
+    }
+    return newArr;
 }
