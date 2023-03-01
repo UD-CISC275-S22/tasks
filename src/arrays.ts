@@ -121,13 +121,9 @@ export function injectPositive(values: number[]): number[] {
         values.reduce((sum: number, n: number) => sum + n, 0);
 
     const index: number = values.findIndex((n: number): boolean => n < 0);
-    console.log(index);
-
-    console.log(positive);
 
     if (index >= 0) {
         positive.splice(index + 1, 0, sum(positive.slice(0, index)));
-        console.log(positive);
     } else {
         positive.push(sum(values));
     }
