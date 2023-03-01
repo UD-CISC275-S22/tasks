@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-inferrable-types */
 /**
  * Consume an array of numbers, and return a new array containing
  * JUST the first and last number. If there are no elements, return
@@ -5,15 +6,23 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    return numbers;
-}
+    if (numbers.length === 0) {
+        return [];
+    } else if (numbers.length === 1) {
+        return [numbers[0], numbers[0]];
+    } else {
+        return [numbers[0], numbers[numbers.length - 1]];
+    }
+    //return numbers;
+} //end of func1
 
 /**
  * Consume an array of numbers, and return a new array where each
  * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
-    return numbers;
+    const tripled = numbers.map((num: number): number => num * 3);
+    return tripled;
 }
 
 /**
@@ -21,7 +30,8 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    return [];
+    const toInt = numbers.map((num: string): number => parseInt(num) || 0);
+    return toInt;
 }
 
 /**
@@ -32,7 +42,11 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    return [];
+    // eslint-disable-next-line prettier/prettier
+    const toInt = amounts.map(
+        (num: string): number => parseInt(num.replace("$", "")) || 0
+    ); //maps the amounts string array to an array of Ints, removing the $. If the string cant be parsed, it turns to 0
+    return toInt;
 };
 
 /**
@@ -41,7 +55,13 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    return [];
+    const shouted = messages
+        .filter((message: string) => !message.endsWith("?"))
+        .map((message: string) =>
+            message.endsWith("!") ? message.toUpperCase() : message
+        ); //filters the messages to those without ?s and then maps those to uppercase versions if endswith !
+
+    return shouted;
 };
 
 /**
@@ -49,7 +69,8 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return 0;
+    const shorts = words.filter((word: string) => word.length < 4);
+    return shorts.length;
 }
 
 /**
@@ -58,8 +79,16 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    return false;
-}
+    const isRGB = colors.filter(
+        (color: string) =>
+            color !== "blue" && color !== "red" && color !== "green"
+    );
+    if (isRGB.length === 0) {
+        return true;
+    } else {
+        return false;
+    }
+} //end of rgb func
 
 /**
  * Consumes an array of numbers, and produces a string representation of the
@@ -69,7 +98,17 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    const summer: number = addends.reduce(
+        (currTot: number, sum: number) => currTot + sum,
+        0 //2nd parameter (prettier likes it this way ...)
+    );
+    let equation: string = "";
+    if (addends.length > 0) {
+        equation = addends.join("+"); //joins elements with + sign
+    } else {
+        equation = "0";
+    }
+    return `${summer}=${equation}`; //${summer} gives value of sumer (the sum), =, and then ${equation} gives element+element+...
 }
 
 /**
@@ -82,5 +121,20 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    return [];
+    //probably uses spread, filter
+    const firstNeg: number = values.findIndex((value: number) => value < 0); //finds index of first neg. num.
+    const summer = values.reduce(
+        (currVal: number, num: number) => currVal + num,
+        0 //2nd parameter
+    );
+    if (firstNeg == -1) {
+        //if no negatives, return sum after all elements
+        return [...values, summer];
+    } //end of if
+    const finArr = [...values]; //copies values array to finArr
+    const afterSum = values
+        .slice(firstNeg)
+        .reduce((currVal: number, num: number) => currVal + num); //finds sum of array AFTER firstNeg
+    finArr.splice(firstNeg + 1, 0, summer - afterSum); //inserts new value after firstNeg index, 0 deleted, and the value is the sum before firstNeg
+    return finArr;
 }
