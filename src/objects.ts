@@ -35,15 +35,15 @@ export function makeBlankQuestion(
  * HINT: Look up the `trim` and `toLowerCase` functions.
  */
 export function isCorrect(question: Question, answer: string): boolean {
-    /* const copyQuestionVal: Question = question;
-    const copyAnswerVal: string = answer;
-    copyAnswerVal.trim();
-    copyAnswerVal.toLowerCase();
-
-    if (copyQuestionVal) {
-        if (copyAnswerVal === ex)
-    } */
-    return false;
+    let copyAnswerVal: string = answer;
+    copyAnswerVal = copyAnswerVal.trim();
+    copyAnswerVal = copyAnswerVal.toLowerCase();
+    const copyQuestion = question.expected.toLowerCase();
+    if (copyQuestion === copyAnswerVal) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 /**
