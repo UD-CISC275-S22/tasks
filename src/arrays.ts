@@ -95,7 +95,7 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    if (addends.length > 0){
+    if (addends.length > 0) {
         return (
             addends.reduce((sum: number, n: number) => sum + n, 0).toString() +
             "=" +
@@ -121,10 +121,15 @@ export function injectPositive(values: number[]): number[] {
         values.reduce((sum: number, n: number) => sum + n, 0);
 
     const index: number = values.findIndex((n: number): boolean => n < 0);
+    console.log(index);
 
-    if (index >= 0)
-        return values.splice(index + 1, 0, sum(values.slice(index - 1)));
+    console.log(positive);
 
-    values.push(sum(values));
-    return values;
+    if (index >= 0) {
+        positive.splice(index + 1, 0, sum(positive.slice(0, index)));
+        console.log(positive);
+    } else {
+        positive.push(sum(values));
+    }
+    return positive;
 }
