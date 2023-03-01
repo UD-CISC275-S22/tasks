@@ -10,7 +10,21 @@ export function makeBlankQuestion(
     name: string,
     type: QuestionType
 ): Question {
-    return {};
+    const copyIDVal: number = id;
+    const copyNameVal: string = name;
+    const copyTypeVal: QuestionType = type;
+
+    const newQuestion: Question = {
+        id: copyIDVal,
+        name: copyNameVal,
+        type: copyTypeVal,
+        body: "",
+        expected: "",
+        options: [],
+        points: 1,
+        published: false
+    };
+    return newQuestion;
 }
 
 /**
@@ -21,6 +35,14 @@ export function makeBlankQuestion(
  * HINT: Look up the `trim` and `toLowerCase` functions.
  */
 export function isCorrect(question: Question, answer: string): boolean {
+    /* const copyQuestionVal: Question = question;
+    const copyAnswerVal: string = answer;
+    copyAnswerVal.trim();
+    copyAnswerVal.toLowerCase();
+
+    if (copyQuestionVal) {
+        if (copyAnswerVal === ex)
+    } */
     return false;
 }
 
