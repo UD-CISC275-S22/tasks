@@ -30,7 +30,7 @@ export function tripleNumbers(numbers: number[]): number[] {
     return newNumbers;
 }
 
-/**
+/*
  * Consume an array of strings and convert them to integers. If
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
