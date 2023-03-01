@@ -5,7 +5,20 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    return numbers;
+    const newNumbers = [...numbers];
+    if (newNumbers.length === 1) {
+        newNumbers.push(newNumbers[0]);
+        return newNumbers;
+    }
+    if (newNumbers.length === 0) {
+        return [];
+    } else {
+        return newNumbers.filter(
+            (num: number): boolean =>
+                newNumbers[0] === num ||
+                newNumbers[newNumbers.length - 1] === num
+        );
+    }
 }
 
 /**
@@ -13,7 +26,8 @@ export function bookEndList(numbers: number[]): number[] {
  * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
-    return numbers;
+    const triple = numbers.map((num: number): number => num * 3);
+    return triple;
 }
 
 /**
@@ -21,7 +35,11 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    return [];
+    const array = numbers.map((str: string): number => {
+        const parse = parseInt(str);
+        return isNaN(parse) ? 0 : parse;
+    });
+    return array;
 }
 
 /**
@@ -32,7 +50,11 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    return [];
+    const array = amounts.map((amount: string): number => {
+        const parse = parseInt(amount.replace("$", ""));
+        return isNaN(parse) ? 0 : parse;
+    });
+    return array;
 };
 
 /**
@@ -41,7 +63,13 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    return [];
+    const removeQ = messages.filter(
+        (message: string): boolean => message[message.length - 1] !== "?"
+    );
+    const shout = removeQ.map((loud: string): string =>
+        loud[loud.length - 1] === "!" ? loud.toUpperCase() : loud
+    );
+    return shout;
 };
 
 /**
@@ -49,7 +77,12 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return 0;
+    const short = words.reduce(
+        (sum: number, word: string) =>
+            word.length < 4 ? (sum = sum + 1) : (sum += 0),
+        0
+    );
+    return short;
 }
 
 /**
@@ -58,7 +91,13 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    return false;
+    if (colors.length === 0) {
+        return true;
+    }
+    return colors.every(
+        (color: string): boolean =>
+            color === "red" || color === "green" || color === "blue"
+    );
 }
 
 /**
@@ -69,7 +108,14 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    if (addends.length === 0) {
+        return "0=0";
+    }
+    const sum = addends.reduce(
+        (total: number, num: number) => (total += num),
+        0
+    );
+    return sum.toString() + "=" + addends.join("+");
 }
 
 /**
@@ -82,5 +128,24 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    return [];
+    let array: number[] = [];
+    let add = 0;
+    const negative = values.findIndex((val: number): boolean => val < 0);
+    if (negative === -1) {
+        if (values.length === 0) {
+            return [0];
+        }
+        add = values.reduce((current: number, val: number) => current + val);
+        array = [...values, add];
+    } else {
+        if (negative !== 0) {
+            const sliced = values.slice(0, negative);
+            add = sliced.reduce(
+                (current: number, val: number) => current + val
+            );
+        }
+        array = [...values];
+        array.splice(negative + 1, 0, add);
+    }
+    return array;
 }
