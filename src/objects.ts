@@ -53,8 +53,16 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
-    const copyQuestion = question.options;
-    const copyAnswerVal = [answer];
+    const copyQuestion = question.type;
+    const copyAnswerVal = answer;
+
+    if (copyQuestion === "short_answer_question") {
+        return true;
+    } else {
+        if (question.options.includes(copyAnswerVal)) {
+            return true;
+        }
+    }
     return false;
 }
 
@@ -65,7 +73,9 @@ export function isValid(question: Question, answer: string): boolean {
  * name "My First Question" would become "9: My First Q".
  */
 export function toShortForm(question: Question): string {
-    return "";
+    const copyQuestion1 = question.id;
+    const copyQuestion2 = question.name.slice(0, 10);
+    return `${copyQuestion1}: ${copyQuestion2}`;
 }
 
 /**
