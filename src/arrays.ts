@@ -154,6 +154,5 @@ export function injectPositive(values: number[]): number[] {
     );
     const injectedPositive = [...values];
     injectedPositive.splice(firstNegativeIndex + 1, 0, sum);
-    console.log(injectedPositive);
     return injectedPositive;
 }
