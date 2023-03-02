@@ -5,7 +5,15 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    return numbers;
+    let newArray: number[];
+    if (numbers.length === 0) {
+        newArray = [];
+    } else if (numbers.length === 1) {
+        newArray = [numbers[0], numbers[0]];
+    } else {
+        newArray = [numbers[0], numbers[numbers.length - 1]];
+    }
+    return newArray;
 }
 
 /**
@@ -13,7 +21,8 @@ export function bookEndList(numbers: number[]): number[] {
  * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
-    return numbers;
+    const newArray = numbers.map((number: number): number => number * 3);
+    return newArray;
 }
 
 /**
@@ -21,7 +30,11 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    return [];
+    let newArray = numbers.map((number: string): number => parseInt(number));
+    newArray = newArray.map((number: number): number =>
+        Number.isNaN(number) ? (number = 0) : number
+    );
+    return newArray;
 }
 
 /**
@@ -32,7 +45,14 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    return [];
+    const newArray = amounts.map((amount: string): string =>
+        amount.includes("$") ? amount.substring(1) : amount
+    );
+    let newArray2 = newArray.map((amount: string): number => parseInt(amount));
+    newArray2 = newArray2.map((amount: number): number =>
+        Number.isNaN(amount) ? (amount = 0) : amount
+    );
+    return newArray2;
 };
 
 /**
@@ -41,7 +61,13 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    return [];
+    let newArray = messages.map((message: string): string =>
+        message.includes("!") ? message.toUpperCase() : message
+    );
+    newArray = newArray.filter(
+        (message: string): boolean => !message.includes("?")
+    );
+    return newArray;
 };
 
 /**
@@ -49,7 +75,8 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return 0;
+    const newArray = words.filter((word: string): boolean => word.length < 4);
+    return newArray.length;
 }
 
 /**
@@ -58,7 +85,24 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    return false;
+    const newArray = colors.filter(
+        (color: string): boolean => color.includes("red") && color.length === 3
+    );
+    const newArray2 = colors.filter(
+        (color: string): boolean => color.includes("blue") && color.length === 4
+    );
+    const newArray3 = colors.filter(
+        (color: string): boolean =>
+            color.includes("green") && color.length === 5
+    );
+    if (
+        newArray.length + newArray2.length + newArray3.length ===
+        colors.length
+    ) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 /**
@@ -69,7 +113,20 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    const sum = addends.reduce(
+        (currentTotal: number, num: number) => currentTotal + num,
+        0
+    );
+    const newArray = addends;
+    const sum2 = newArray.map((price: number, num: number): string =>
+        num === 0 ? price.toString() : price.toString()
+    );
+    const sum3 = sum.toString() + "=";
+    if (addends.length === 0) {
+        return sum3 + sum;
+    } else {
+        return sum3 + sum2.join("+");
+    }
 }
 
 /**
@@ -82,5 +139,24 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    return [];
+    const firstNegative = values.findIndex(
+        (value: number): boolean => value < 0
+    );
+    let newArray: number[];
+    if (firstNegative !== -1) {
+        newArray = [...values].slice(0, firstNegative);
+    } else {
+        newArray = [...values];
+    }
+    const sum = newArray.reduce(
+        (currentTotal: number, num: number) => currentTotal + num,
+        0
+    );
+    let newArray2 = [...values];
+    if (firstNegative !== -1) {
+        newArray2.splice(firstNegative + 1, 0, sum);
+    } else {
+        newArray2 = [...values, sum];
+    }
+    return newArray2;
 }
