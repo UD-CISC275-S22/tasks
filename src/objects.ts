@@ -10,7 +10,17 @@ export function makeBlankQuestion(
     name: string,
     type: QuestionType
 ): Question {
-    return {};
+    const myQuestion: Question = {
+        id: id,
+        name: name,
+        body: "",
+        type: type,
+        options: [],
+        expected: "",
+        points: 1,
+        published: false
+    };
+    return myQuestion;
 }
 
 /**
@@ -21,7 +31,13 @@ export function makeBlankQuestion(
  * HINT: Look up the `trim` and `toLowerCase` functions.
  */
 export function isCorrect(question: Question, answer: string): boolean {
-    return false;
+    if (
+        answer.toLowerCase().trim() === question.expected.toLowerCase().trim()
+    ) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 /**
@@ -31,7 +47,15 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
-    return false;
+    if (question.type === "short_answer_question") {
+        return true;
+    } else {
+        if (question.options.includes(answer)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
 
 /**
@@ -41,7 +65,9 @@ export function isValid(question: Question, answer: string): boolean {
  * name "My First Question" would become "9: My First Q".
  */
 export function toShortForm(question: Question): string {
-    return "";
+    const stringID = question.id.toString();
+    const IDandName = stringID.concat(": ", question.name.slice(0, 10));
+    return IDandName;
 }
 
 /**
@@ -70,7 +96,17 @@ export function toMarkdown(question: Question): string {
  * `newName`.
  */
 export function renameQuestion(question: Question, newName: string): Question {
-    return question;
+    const newQuestion: Question = {
+        id: question.id,
+        name: newName,
+        body: question.body,
+        type: question.type,
+        options: question.options,
+        expected: question.expected,
+        points: question.points,
+        published: question.published
+    };
+    return newQuestion;
 }
 
 /**
