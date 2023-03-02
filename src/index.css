@@ -11,3 +11,9 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
         monospace;
 }
+
+#rectangle {
+    width: 100px;
+    height: 50px;
+    background: red;
+}
