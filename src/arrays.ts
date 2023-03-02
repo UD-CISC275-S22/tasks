@@ -5,6 +5,7 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
+    let numbers1 = numbers[numbers.length - 1];
     return numbers;
 }
 
@@ -21,6 +22,8 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
+    let newArr = numbers[numbers.length - 1];
+
     return [];
 }
 
@@ -41,6 +44,7 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
+    const doubled = messages.map((cloned: number): number => price * 2);
     return [];
 };
 
