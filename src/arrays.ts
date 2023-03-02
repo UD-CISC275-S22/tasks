@@ -7,7 +7,7 @@
 export function bookEndList(numbers: number[]): number[] {
     const numbers2 = [...numbers];
     const numbers3 = [numbers2[0], numbers2[-1]];
-
+    console.log(numbers3);
     return numbers3;
 }
 
@@ -26,7 +26,10 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    let newArr = numbers[numbers.length - 1];
+    const numbers2 = [...numbers];
+    const triple = numbers2.map((price: number[]): number[] =>
+        price.charCodeAt()
+    );
 
     return [];
 }
@@ -48,7 +51,8 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    const doubled = messages.map((cloned: number): number => price * 2);
+    const numbers2 = [...messages];
+
     return [];
 };
 
@@ -57,6 +61,10 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
+    const numbers2 = [...words];
+    const numbers3 = numbers2.map((words: string[]): string[] =>
+        words < 4 ? 2 * price : price
+    );
     return 0;
 }
 
