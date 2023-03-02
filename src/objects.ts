@@ -38,7 +38,7 @@ export function isCorrect(question: Question, answer: string): boolean {
     let copyAnswerVal: string = answer;
     copyAnswerVal = copyAnswerVal.trim();
     copyAnswerVal = copyAnswerVal.toLowerCase();
-    const copyQuestion = question.expected.toLowerCase();
+    const copyQuestion: string = question.expected.toLowerCase();
     if (copyQuestion === copyAnswerVal) {
         return true;
     } else {
@@ -53,6 +53,8 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
+    const copyQuestion = question.options;
+    const copyAnswerVal = [answer];
     return false;
 }
 
@@ -122,7 +124,11 @@ export function duplicateQuestion(id: number, oldQuestion: Question): Question {
  * Check out the subsection about "Nested Fields" for more information.
  */
 export function addOption(question: Question, newOption: string): Question {
-    return question;
+    const newQuestion: Question = {
+        ...question,
+        options: [...question.options, newOption]
+    };
+    return newQuestion;
 }
 
 /**
@@ -139,5 +145,12 @@ export function mergeQuestion(
     contentQuestion: Question,
     { points }: { points: number }
 ): Question {
-    return contentQuestion;
+    const newQuestion: Question = {
+        ...contentQuestion,
+        id: id,
+        name: name,
+        points: points,
+        published: false
+    };
+    return newQuestion;
 }
