@@ -5,10 +5,10 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    // const numbers2 = [...numbers];
-    // const numbers3 = [numbers2[0], numbers2[-1]];
+    const numbers2 = [...numbers];
+    const numbers3 = [numbers2[0], numbers2[-1]];
 
-    return numbers;
+    return numbers3;
 }
 
 /**
@@ -17,7 +17,8 @@ export function bookEndList(numbers: number[]): number[] {
  */
 export function tripleNumbers(numbers: number[]): number[] {
     const numbers2 = [...numbers];
-    return numbers;
+    const triple = numbers2.map((price: number): number => price * 3);
+    return triple;
 }
 
 /**
