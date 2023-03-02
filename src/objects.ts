@@ -180,7 +180,8 @@ export function mergeQuestion(
     };
     return merger;
 }
-
+/*
 function trim(question: Question) {
     throw new Error("Function not implemented.");
 }
+*/
