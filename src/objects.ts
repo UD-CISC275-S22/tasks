@@ -33,8 +33,7 @@ export function makeBlankQuestion(
 export function isCorrect(question: Question, answer: string): boolean {
     const trimExpected = question.expected.trim().toLowerCase();
     const trimAnswer = answer.trim().toLowerCase();
-    const isRight = trimExpected === trimAnswer ? true : false;
-    return isRight;
+    return trimExpected === trimAnswer ? true : false;
 }
 
 /**
@@ -44,7 +43,10 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
-    return false;
+    if (question.type === "short_answer_question") {
+        return true;
+    }
+    return question.options.includes(answer);
 }
 
 /**
