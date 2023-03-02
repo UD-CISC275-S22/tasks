@@ -6,8 +6,7 @@
  */
 export function bookEndList(numbers: number[]): number[] {
     const numbers2 = [...numbers];
-    const numbers3 = [numbers2[0], numbers2[-1]];
-    console.log(numbers3);
+    const numbers3 = [numbers2[0], numbers2[numbers2.length - 1]];
     return numbers3;
 }
 
