@@ -96,7 +96,20 @@ export function toShortForm(question: Question): string {
  * Check the unit tests for more examples of what this looks like!
  */
 export function toMarkdown(question: Question): string {
-    return "";
+    const qName = "# " + question.name + "\n";
+    const qBody = question.body;
+    let newOptions = "";
+
+    if (question.type === "multiple_choice_question") {
+        newOptions = question.options.reduce(
+            (Total: string, currVal: string) => (Total += "\n- " + currVal),
+            ""
+        );
+    }
+
+    const addVal = qName + qBody + newOptions;
+
+    return addVal;
 }
 
 /**
