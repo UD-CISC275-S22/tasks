@@ -85,9 +85,11 @@ export function toMarkdown(question: Question): string {
     let result = "# " + copyQues.name + "\n" + copyQues.body;
     //let answer: string;
     if (copyQues.type == "multiple_choice_question") {
-        return (result += copyQues.options.map(
-            (str: string): string => "\n- " + str
-        ));
+        return (result +=
+            "\n" +
+            copyQues.options
+                .map((str: string): string => "- " + str)
+                .join("\n"));
     }
     return result;
 }
@@ -137,9 +139,9 @@ export function duplicateQuestion(id: number, oldQuestion: Question): Question {
  * Check out the subsection about "Nested Fields" for more information.
  */
 export function addOption(question: Question, newOption: string): Question {
-    const newQues = question;
+    const newQues = { ...question };
     newQues.options = [...newQues.options, newOption];
-    return question;
+    return newQues;
 }
 
 /**
