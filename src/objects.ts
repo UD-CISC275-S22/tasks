@@ -26,10 +26,10 @@ export function makeBlankQuestion(
  * HINT: Look up the `trim` and `toLowerCase` functions.
  */
 export function isCorrect(question: Question, answer: string): boolean {
-    const copyQues = question;
+    const newQues = { ...question, options: [...question.options] };
     answer = answer.toLowerCase();
     answer = answer.trim();
-    return answer == copyQues.expected;
+    return newQues.expected.toLowerCase() == answer;
 }
 
 /**
@@ -39,11 +39,12 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
-    if (question.type == "short_answer_question") {
+    const newQues = { ...question, options: [...question.options] };
+    if (newQues.type == "short_answer_question") {
         return true;
     } else if (
-        question.type == "multiple_choice_question" &&
-        question.options.find((x) => x === answer)
+        newQues.type == "multiple_choice_question" &&
+        newQues.options.find((x) => x === answer)
     ) {
         return true;
     } else {
@@ -58,7 +59,8 @@ export function isValid(question: Question, answer: string): boolean {
  * name "My First Question" would become "9: My First Q".
  */
 export function toShortForm(question: Question): string {
-    return question.id + ": " + question.name.slice(0, 10);
+    const newQues = { ...question };
+    return newQues.id + ": " + newQues.name.slice(0, 10);
 }
 
 /**
@@ -79,16 +81,15 @@ export function toShortForm(question: Question): string {
  * Check the unit tests for more examples of what this looks like!
  */
 export function toMarkdown(question: Question): string {
-    const copyQues = question;
-    const answer = "";
+    const copyQues = { ...question, options: [...question.options] };
+    let result = "# " + copyQues.name + "\n" + copyQues.body;
+    //let answer: string;
     if (copyQues.type == "multiple_choice_question") {
-        console.log("print statement");
-        //console.log("# " + copyQues.name + "\n" + copyQues.body);
-        for (let i = 0; i < copyQues.options.length; i++) {
-            console.log(answer.concat("- ", question.options[i]));
-        }
+        return (result += copyQues.options.map(
+            (str: string): string => "\n- " + str
+        ));
     }
-    return "# " + copyQues.name + "\n" + copyQues.body;
+    return result;
 }
 
 /**
@@ -96,8 +97,9 @@ export function toMarkdown(question: Question): string {
  * `newName`.
  */
 export function renameQuestion(question: Question, newName: string): Question {
-    question.name = newName;
-    return question;
+    const newQues = { ...question, options: [...question.options] };
+    newQues.name = newName;
+    return newQues;
 }
 
 /**
@@ -106,7 +108,7 @@ export function renameQuestion(question: Question, newName: string): Question {
  * published; if it was published, now it should be not published.
  */
 export function publishQuestion(question: Question): Question {
-    const newQues = question;
+    const newQues = { ...question, options: [...question.options] };
     newQues.published = !newQues.published;
     return newQues;
 }
@@ -118,10 +120,11 @@ export function publishQuestion(question: Question): Question {
  * The `published` field should be reset to false.
  */
 export function duplicateQuestion(id: number, oldQuestion: Question): Question {
+    const newQues = { ...oldQuestion };
     return {
-        ...oldQuestion,
+        ...newQues,
         id: id,
-        name: "Copy of " + oldQuestion.name,
+        name: "Copy of " + newQues.name,
         published: false
     };
 }
@@ -153,5 +156,12 @@ export function mergeQuestion(
     contentQuestion: Question,
     { points }: { points: number }
 ): Question {
-    return contentQuestion;
+    const newQues = {
+        ...contentQuestion,
+        id: id,
+        name: name,
+        published: false,
+        points: points
+    };
+    return newQues;
 }
