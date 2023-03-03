@@ -31,9 +31,12 @@ export function makeBlankQuestion(
  * HINT: Look up the `trim` and `toLowerCase` functions.
  */
 export function isCorrect(question: Question, answer: string): boolean {
-    const short = answer.trim();
-    const lower = answer.toLowerCase();
-    return false;
+    const lower = answer.trim();
+    const short = lower.toLowerCase();
+    const elower = question.expected.trim();
+    const eshort = elower.toLowerCase();
+    const result = eshort === short;
+    return result;
 }
 
 /**
@@ -43,7 +46,12 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
-    return false;
+    //let multiple_choice_question;
+    if ("multiple_choice_question" === question.type) {
+        return question.options.includes(answer) //;
+    } else {
+        return true;
+    }
 }
 
 /**
@@ -76,7 +84,30 @@ export function toShortForm(question: Question): string {
  * Check the unit tests for more examples of what this looks like!
  */
 export function toMarkdown(question: Question): string {
-    return "";
+    if ("multiple_choice_question" === question.type) {
+        const names = "# " + question.name;
+        const bodys = question.body;
+        const optio = question.options[0];
+        const option1 = question.options[1];
+        const option2 = question.options[2] //;
+        return (
+            names +
+            "\n" +
+            bodys +
+            "\n" +
+            "- " +
+            optio +
+            "\n" +
+            "- " +
+            option1 +
+            "\n" +
+            "- " +
+            option2 
+        );
+    }
+    const names = "# " + question.name;
+    const bodys = question.body;
+    return names + "\n" + bodys;
 }
 
 /**
@@ -103,7 +134,13 @@ export function publishQuestion(question: Question): Question {
  * The `published` field should be reset to false.
  */
 export function duplicateQuestion(id: number, oldQuestion: Question): Question {
-    return oldQuestion;
+    const new1 = {
+        ...oldQuestion,
+        id : id,
+        published : false,
+        name : "Copy of " + oldQuestion.name
+    }
+    return new1;
 }
 
 /**
