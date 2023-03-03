@@ -115,7 +115,11 @@ export function toMarkdown(question: Question): string {
  * `newName`.
  */
 export function renameQuestion(question: Question, newName: string): Question {
-    return question;
+    const new1 = {
+        ...question,
+        name: newName
+    };
+    return new1;
 }
 
 /**
@@ -139,7 +143,7 @@ export function duplicateQuestion(id: number, oldQuestion: Question): Question {
         id: id,
         published: false,
         name: "Copy of " + oldQuestion.name
-    }
+    };
     return new1;
 }
 
