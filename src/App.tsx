@@ -13,8 +13,9 @@ export function App(): JSX.Element {
                 automatically reload. Hello World
             </p>
             <img
-                src="https://sites.udel.edu/honors/files/2021/07/book-statue.jpg"
+                src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.udel.edu%2F&psig=AOvVaw2o0RdJmTlPrLZu49udOHTQ&ust=1676405165253000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCJCYhJCmk_0CFQAAAAAdAAAAABAD"
                 alt="University of Delaware"
+                width={"50%"}
             />
             <ul>
                 <li> Red </li>
