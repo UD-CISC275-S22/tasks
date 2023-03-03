@@ -89,7 +89,7 @@ export function toMarkdown(question: Question): string {
         const bodys = question.body;
         const optio = question.options[0];
         const option1 = question.options[1];
-        const option2 = question.options[2] //;
+        const option2 = question.options[2];
         return (
             names +
             "\n" +
@@ -102,7 +102,7 @@ export function toMarkdown(question: Question): string {
             option1 +
             "\n" +
             "- " +
-            option2 
+            option2
         );
     }
     const names = "# " + question.name;
