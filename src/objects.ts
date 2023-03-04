@@ -128,7 +128,15 @@ export function renameQuestion(question: Question, newName: string): Question {
  * published; if it was published, now it should be not published.
  */
 export function publishQuestion(question: Question): Question {
-    return question;
+    const new1 = {
+        ...question
+    };
+    if (question.published) {
+        new1.published = false;
+    } else {
+        new1.published = true;
+    }
+    return new1;
 }
 
 /**
@@ -155,7 +163,13 @@ export function duplicateQuestion(id: number, oldQuestion: Question): Question {
  * Check out the subsection about "Nested Fields" for more information.
  */
 export function addOption(question: Question, newOption: string): Question {
-    return question;
+    const new1 = {
+        ...question,
+        id: id,
+        published: false,
+        name: "Copy of " + question.name
+    };
+    return new1;
 }
 
 /**
