@@ -165,9 +165,7 @@ export function duplicateQuestion(id: number, oldQuestion: Question): Question {
 export function addOption(question: Question, newOption: string): Question {
     const new1 = {
         ...question,
-        id: id,
-        published: false,
-        name: "Copy of " + question.name
+        options: [...question.options, newOption]
     };
     return new1;
 }
