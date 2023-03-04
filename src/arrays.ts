@@ -7,7 +7,12 @@
 export function bookEndList(numbers: number[]): number[] {
     const numbers2 = [...numbers];
     const numbers3 = [numbers2[0], numbers2[numbers2.length - 1]];
-    return numbers3;
+    // if (numbers2.length === 0) {
+    //     return [];
+    // }
+    // const numbers4 = (numbers: number[]): boolean => numbers2.length === 10;
+    // numbers2.length === 0 ? 0 : [];
+    return numbers2.length === 0 ? [] : numbers3;
 }
 
 /**
@@ -61,9 +66,12 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  */
 export function countShortWords(words: string[]): number {
     const numbers2 = [...words];
-    const numbers3 = numbers2.map((words: string[]): string[] =>
-        words < 4 ? 2 * price : price
-    );
+    const less4 = (price: number[]): boolean => price.length < 4;
+    const less42 = numbers2.filter(less4);
+    // const numbers3 = numbers2.map((words: string[]): string[] =>
+    //     words < 4 ? 2 * price : price
+    // );
+    // numbers2length < 2 ? [] : numbers3;
     return 0;
 }
 
@@ -73,7 +81,8 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    return false;
+    const colors2 = [...colors];
+    return colors2.length === 0 ? true: colors2.every(color => ['red', 'blue', 'green'].includes(color));
 }
 
 /**
@@ -84,7 +93,8 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    const outcome = 0;
+    return ""outcome = ;
 }
 
 /**
