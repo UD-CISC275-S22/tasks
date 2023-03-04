@@ -48,7 +48,7 @@ export function isCorrect(question: Question, answer: string): boolean {
 export function isValid(question: Question, answer: string): boolean {
     //let multiple_choice_question;
     if ("multiple_choice_question" === question.type) {
-        return question.options.includes(answer) //;
+        return question.options.includes(answer);
     } else {
         return true;
     }
