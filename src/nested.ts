@@ -6,7 +6,10 @@ import { Question, QuestionType } from "./interfaces/question";
  * that are `published`.
  */
 export function getPublishedQuestions(questions: Question[]): Question[] {
-    return [];
+    const newArray = getPublishedQuestions.map(
+        (movie: Question[]): boolean => !movie.publishAll
+    );
+    return newArray;
 }
 
 /**
@@ -42,14 +45,18 @@ export function removeQuestion(questions: Question[], id: number): Question[] {
  * questions, as an array.
  */
 export function getNames(questions: Question[]): string[] {
-    return [];
+    const names = questions.map((justName): string => justName.name);
+    return names;
 }
 
 /***
  * Consumes an array of questions and returns the sum total of all their points added together.
  */
 export function sumPoints(questions: Question[]): number {
-    return 0;
+    const movieTitles = questions.map(
+        (movie: questions): number => movie.sumAll
+    );
+    return movieTitles;
 }
 
 /***
