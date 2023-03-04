@@ -124,22 +124,43 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
+    let newVals = [...values];
     const findIndex = values.findIndex((values: number): boolean => values < 0);
-    let currentSum = 0;
-    const newValues = [...values];
-    values.map((value: number) => {
+    if (findIndex == -1) {
+        const noneg = values.reduce((sum: number, num: number) => sum + num, 0);
+        newVals = [...values, noneg];
+    } else {
+        const yesneg = values.map((value: number) => {
+            let sum = 0;
+            if (values.indexOf(value) < findIndex) {
+                sum += value;
+            } else {
+                return sum;
+            }
+            return sum;
+        });
+        const sum = yesneg.reduce((sum: number, num: number) => sum + num, 0);
+        newVals.splice(findIndex + 1, 0, sum);
+        console.log(newVals);
+        /**
+    const sum = values.map((value: number) => {
+        let currentSum = 0;
         if (values.indexOf(value) > findIndex) {
             currentSum += 0;
         } else if (values.indexOf(value) == findIndex) {
             return currentSum;
-        } else if (values.indexOf(value) != findIndex) {
+        } else if (values.indexOf(value) < findIndex) {
             currentSum += value;
         }
+        return currentSum;
     });
     if (findIndex == -1) {
-        return [...newValues, currentSum];
+        return [...newValues, sum[0]];
     } else {
-        newValues.splice(findIndex, currentSum);
+        newValues.splice(findIndex, sum[0]);
     }
-    return newValues;
+    console.log(newValues.splice(findIndex, sum[0]));
+*/
+    }
+    return newVals;
 }
