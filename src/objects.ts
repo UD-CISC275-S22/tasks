@@ -60,7 +60,8 @@ export function isValid(question: Question, answer: string): boolean {
  * name "My First Question" would become "9: My First Q".
  */
 export function toShortForm(question: Question): string {
-    return question.id.toString() + ": " + question.name.substring(0, 10);
+    const newQ = { ...question };
+    return newQ.id.toString() + ": " + newQ.name.substring(0, 10);
 }
 
 /**
@@ -107,8 +108,9 @@ export function toMarkdown(question: Question): string {
  * `newName`.
  */
 export function renameQuestion(question: Question, newName: string): Question {
-    question.name = newName;
-    return question;
+    const newQ = { ...question };
+    newQ.name = newName;
+    return newQ;
 }
 
 /**
@@ -117,14 +119,11 @@ export function renameQuestion(question: Question, newName: string): Question {
  * published; if it was published, now it should be not published.
  */
 export function publishQuestion(question: Question): Question {
-    console.log(question.name);
-    const newQ = { ...question };
-    if (newQ.published == true) {
-        newQ.published = false;
+    if (question.published == true) {
+        return { ...question, published: false };
     } else {
-        newQ.published = true;
+        return { ...question, published: true };
     }
-    return newQ;
 }
 
 /**
