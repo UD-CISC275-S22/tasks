@@ -17,8 +17,21 @@ export function getPublishedQuestions(questions: Question[]): Question[] {
  * considered "non-empty". An empty question has an empty string for its `body` and
  * `expected`, and an empty array for its `options`.
  */
+const validQuestions = (question: Question): boolean => {
+    if (
+        question.body === "" &&
+        question.expected === "" &&
+        question.options.length === 0
+    ) {
+        return false;
+    }
+    return true;
+};
 export function getNonEmptyQuestions(questions: Question[]): Question[] {
-    return [];
+    const nonEmptyBody = questions.filter((question: Question): boolean =>
+        validQuestions(question)
+    );
+    return nonEmptyBody;
 }
 
 /***
@@ -29,7 +42,14 @@ export function findQuestion(
     questions: Question[],
     id: number
 ): Question | null {
-    return null;
+    const foundQuestion = questions.find(
+        (question: Question): boolean => question.id === id
+    );
+    if (foundQuestion) {
+        return foundQuestion;
+    } else {
+        return null;
+    }
 }
 
 /**
@@ -37,7 +57,11 @@ export function findQuestion(
  * with the given `id`.
  */
 export function removeQuestion(questions: Question[], id: number): Question[] {
-    return [];
+    const improvedQuestions = questions.filter(
+        (question: Question): boolean => question.id !== id
+    );
+
+    return improvedQuestions;
 }
 
 /***
