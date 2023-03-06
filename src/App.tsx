@@ -14,13 +14,10 @@ function App(): JSX.Element {
                 Hello World! Edit <code>src/App.tsx</code> and save. This page
                 will automatically reload.
             </p>
-            <h2>Classes I am taking Spring 2023:</h2>
             <ul>
-                <li>CISC320</li>
-                <li>CISC374</li>
-                <li>CISC355</li>
                 <li>EDUC421</li>
                 <li>EDUC450</li>
+                <li>EDUC485</li>
             </ul>
             <Button onClick={() => console.log("Hello World!")}>
                 Log Hello World
