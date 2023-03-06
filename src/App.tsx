@@ -10,6 +10,7 @@ function App(): JSX.Element {
                 UD CISC275 React Hooks and TypeScript - Emma Frampton
             </header>
             <img src={milo} alt="A picture of my childhood dog Milo" />
+            <h1>another header</h1>
             <p>
                 Hello World! Edit <code>src/App.tsx</code> and save. This page
                 will automatically reload.
@@ -18,6 +19,7 @@ function App(): JSX.Element {
                 <li>EDUC421</li>
                 <li>EDUC450</li>
                 <li>EDUC485</li>
+                <li>Other EDUC classes</li>
             </ul>
             <Button onClick={() => console.log("Hello World!")}>
                 Log Hello World
