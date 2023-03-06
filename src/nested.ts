@@ -223,13 +223,13 @@ export function editOption(
         (question: Question) => question.id === targetId
     );
     const oldOptions: string[] = [...newQuestions[index].options];
-    const newOptions: string[] =
-        targetOptionIndex !== -1
-            ? oldOptions.splice(targetOptionIndex, 1, newOption)
-            : oldOptions.splice(oldOptions.length, 1, newOption);
+    const startIndex =
+        targetOptionIndex == -1 ? oldOptions.length : targetOptionIndex;
+    oldOptions.splice(startIndex, 1, newOption);
+
     const newQuestion: Question = {
         ...questions[index],
-        options: oldOptions.length !== 0 ? [...oldOptions] : [...newOptions]
+        options: oldOptions
     };
     newQuestions[index] = newQuestion;
     return newQuestions;
