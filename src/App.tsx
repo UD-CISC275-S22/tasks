@@ -7,9 +7,8 @@ function App(): JSX.Element {
     return (
         <div className="App">
             <header className="App-header">
-                UD CISC275 with React Hooks and TypeScript - Emma Frampton
+                UD CISC275 React Hooks and TypeScript - Emma Frampton
             </header>
-            <h1>Header!</h1>
             <img src={milo} alt="A picture of my childhood dog Milo" />
             <p>
                 Hello World! Edit <code>src/App.tsx</code> and save. This page
