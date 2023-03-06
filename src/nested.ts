@@ -32,8 +32,13 @@ export function findQuestion(
     questions: Question[],
     id: number
 ): Question | null {
-    const final = questions ? id : null;
-    return final;
+    const newArray = questions.find((q): boolean => q.id === id);
+    if (newArray != null) {
+        return newArray;
+    } else {
+        return null;
+    }
+    //return newArray;
 }
 
 /**
@@ -69,7 +74,12 @@ export function sumPoints(questions: Question[]): number {
  * Consumes an array of questions and returns the sum total of the PUBLISHED questions.
  */
 export function sumPublishedPoints(questions: Question[]): number {
-    return 0;
+    const names = questions.map((justName): number => justName.published);
+    const total = names.reduce(
+        (currentSum: number, add: number) => currentSum + add,
+        0
+    );
+    return total;
 }
 
 /***
@@ -90,6 +100,16 @@ id,name,options,points,published
  * Check the unit tests for more examples!
  */
 export function toCSV(questions: Question[]): string {
+    const final = questions.map(
+        (justName): number =>
+            justName.id +
+            "," +
+            justName.name +
+            "," +
+            justName.options +
+            "," +
+            justName.points
+    );
     return "";
 }
 
@@ -107,6 +127,7 @@ export function makeAnswers(questions: Question[]): Answer[] {
  * each question is now published, regardless of its previous published status.
  */
 export function publishAll(questions: Question[]): Question[] {
+    const newArray = questions.find((q): boolean => q.published);
     return [];
 }
 
