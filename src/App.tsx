@@ -28,6 +28,10 @@ function App(): JSX.Element {
                         <div id="rectangle"></div>
                     </Col>
                     <Col>
+                        Here is a picture from my trip to hawaii!
+                        <div id="rectangle"></div>
+                    </Col>
+                    <Col>
                         <div id="rectangle"></div>
                     </Col>
                 </Row>
