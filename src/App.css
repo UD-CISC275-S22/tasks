@@ -15,7 +15,7 @@
 
 .App-header {
     width: 100%;
-    background-color: #282c34;
+    background-color: #00b7ff;
     min-height: 40vh;
     display: flex;
     flex-direction: column;
@@ -36,4 +36,10 @@
     to {
         transform: rotate(360deg);
     }
+}
+
+#rectangle{
+    width: 100px;
+    height: 50px;
+    background: red;
 }
