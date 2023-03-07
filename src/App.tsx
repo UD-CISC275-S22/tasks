@@ -1,7 +1,9 @@
 import React from "react";
 import "./App.css";
 import { Button, Col, Container, Row } from "react-bootstrap";
+
 import beanpicture from "./images/bean_pic.jpg";
+
 
 function App(): JSX.Element {
     return (
@@ -12,9 +14,11 @@ function App(): JSX.Element {
             <h1> Big Boy </h1>
             <img
                 src={beanpicture}
+
                 alt= "this is my cat"
                 width="200"
                 height="200"
+
             />
             <ul>
                 <li> He's a </li>
@@ -24,10 +28,17 @@ function App(): JSX.Element {
             <Container>
                 <Row>
                     <Col>
+
                         I spent my winter in hawaii!
                         <div id="rectangle"></div>
                     </Col>
                     <Col>
+
+                        Here is a picture from my trip to hawaii!
+                        <div id="rectangle"></div>
+                    </Col>
+                    <Col>
+                        
                         <div id="rectangle"></div>
                     </Col>
                 </Row>
