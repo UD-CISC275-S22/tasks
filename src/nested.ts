@@ -230,13 +230,13 @@ export function modify_list(
     return targetIndex === -1
         ? [...target, newOption]
         : iota.reduce(
-              (ret: string[], x) =>
-                  (ret =
+            (ret: string[], x) =>
+                (ret =
                       x.index === targetIndex
                           ? [...ret, newOption]
                           : [...ret, x.option]),
-              []
-          );
+            []
+        );
 }
 export function editOption(
     questions: Question[],
@@ -249,13 +249,13 @@ export function editOption(
             (x =
                 x.id === targetId
                     ? {
-                          ...x,
-                          options: modify_list(
-                              x.options,
-                              targetOptionIndex,
-                              newOption
-                          )
-                      }
+                        ...x,
+                        options: modify_list(
+                            x.options,
+                            targetOptionIndex,
+                            newOption
+                        )
+                    }
                     : { ...x })
     );
 }
