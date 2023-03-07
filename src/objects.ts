@@ -1,4 +1,3 @@
-import { brotliCompressSync } from "zlib";
 import { Question, QuestionType } from "./interfaces/question";
 
 /**
