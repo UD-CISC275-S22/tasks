@@ -82,24 +82,12 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    const empty: string[] = [];
-    colors = colors["colors"];
-    if (colors.length === 0) {
-        return true;
-    }
-    console.log(typeof colors, colors.constructor, JSON.stringify(colors));
-    const lowers = colors.map((color: string): string => color.toLowerCase());
-    console.log(lowers);
-    const allReds = lowers.some((color: string): boolean => color === "red");
-    const allBlues = lowers.some((color: string): boolean => color === "blue");
-    const allGreens = lowers.some(
-        (color: string): boolean => color === "green"
+    if (colors.length === 0) return true;
+    const allColors = colors.every(
+        (color: string): boolean =>
+            color === "red" || color === "blue" || color === "green"
     );
-    const allDiff = lowers.some(
-        (color: string): boolean => !["red", "blue", "green"].includes(color)
-    );
-    console.log(allReds, allBlues, allGreens, allDiff);
-    return (allReds || allGreens || allBlues) && !allDiff;
+    return allColors;
 }
 
 /**
