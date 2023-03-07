@@ -53,7 +53,7 @@ export function removeQuestion(questions: Question[], id: number): Question[] {
  * questions, as an array.
  */
 export function getNames(questions: Question[]): string[] {
-    const fin = questions.map((x: Question): string => (x = x.name));
+    const fin = questions.map((question) => question.name);
     return fin;
 }
 
