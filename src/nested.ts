@@ -174,7 +174,14 @@ export function renameQuestionById(
     targetId: number,
     newName: string
 ): Question[] {
-    return [];
+    const new1 = [...questions];
+    const index = questions.findIndex((q) => q.id === targetId);
+    const new2 = {
+        ...questions[index],
+        name: newName
+    };
+    new1[index] = new2;
+    return new1;
 }
 
 /***
