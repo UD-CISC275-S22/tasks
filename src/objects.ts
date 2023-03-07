@@ -101,7 +101,8 @@ export function toMarkdown(question: Question): string {
          "\n" +
          questionOptions[2]
      );
- }
+    }
+
 
 /**
  * Return a new version of the given question, except the name should now be
@@ -160,6 +161,6 @@ export function mergeQuestion(
     name: string,
     contentQuestion: Question,
     { points }: { points: number }
-): Question {
+): Question{
     return { ...contentQuestion, published: false, points, id, name };
 }
