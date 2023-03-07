@@ -1,5 +1,5 @@
-import { tripleNumbers } from "./arrays";
-import { isQuestion } from "./functions";
+//import { tripleNumbers } from "./arrays";
+//import { isQuestion } from "./functions";
 import { Question, QuestionType } from "./interfaces/question";
 
 /**
