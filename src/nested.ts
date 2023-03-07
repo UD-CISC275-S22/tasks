@@ -102,16 +102,18 @@ id,name,options,points,published
  */
 export function toCSV(questions: Question[]): string {
     const final = questions.map(
-        (justName): number =>
+        (justName): string =>
             justName.id +
             "," +
             justName.name +
             "," +
-            justName.options +
+            justName.options.length +
             "," +
-            justName.points
+            justName.points +
+            "," +
+            justName.published
     );
-    return "";
+    return "id,name,options,points,published\n" + final.join("\n");
 }
 
 /**
