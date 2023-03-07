@@ -189,7 +189,18 @@ export function changeQuestionTypeById(
     targetId: number,
     newQuestionType: QuestionType
 ): Question[] {
-    return [];
+    const new1 = [...questions];
+    const index = questions.findIndex((q) => q.id === targetId);
+    const new2 = {
+        ...questions[index],
+        type: newQuestionType,
+        options:
+            newQuestionType !== "multiple_choice_question"
+                ? []
+                : new1[index].options
+    };
+    new1[index] = new2;
+    return new1;
 }
 
 /**
