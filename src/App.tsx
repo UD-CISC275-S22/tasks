@@ -12,12 +12,12 @@ function App(): JSX.Element {
             <h1> Big Boy </h1>
             <img
                 src={beanpicture}
-                alt= "this is my cat"
+                alt="this is my cat"
                 width="200"
                 height="200"
             />
             <ul>
-                <li> He's a </li>
+                <li> He is a </li>
                 <li> Very </li>
                 <li> Cute Cat </li>
             </ul>
