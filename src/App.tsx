@@ -2,6 +2,19 @@ import React from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import "./App.css";
 import pickle from "./pickle.jpeg";
+/*
+function myButton(): JSX.Element {
+    const [data, setData] = useState<number>(3);
+    return {
+        <div>
+            <Button onClick={() => setData(data +1 )}>
+                {"Log Hello World " + data}
+            </Button>
+        </div>
+    };
+
+}
+*/
 
 function App(): JSX.Element {
     return (
