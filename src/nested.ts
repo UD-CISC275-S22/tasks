@@ -18,7 +18,13 @@ export function getPublishedQuestions(questions: Question[]): Question[] {
  * `expected`, and an empty array for its `options`.
  */
 export function getNonEmptyQuestions(questions: Question[]): Question[] {
-    return [];
+    console.log(questions);
+    return questions.filter(
+        (question: Question): boolean =>
+            question.body !== "" &&
+            question.expected !== "" &&
+            question.options.length !== 0
+    );
 }
 
 /***
@@ -29,7 +35,11 @@ export function findQuestion(
     questions: Question[],
     id: number
 ): Question | null {
-    return null;
+    const found = questions.findIndex(
+        (question: Question): boolean => question.id === id
+    );
+    if (found < 0) return null;
+    return questions[found];
 }
 
 /**
