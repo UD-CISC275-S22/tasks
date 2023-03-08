@@ -151,10 +151,10 @@ export function duplicateQuestion(id: number, oldQuestion: Question): Question {
  * Check out the subsection about "Nested Fields" for more information.
  */
 export function addOption(question: Question, newOption: string): Question {
-    const newQ: Question = { ...question };
-    const newOps: string[] = newQ.options;
-    newOps.push(newOption);
-    return { ...newQ, options: newOps };
+    const newQ: Question = {
+        ...question
+    };
+    return { ...newQ, options: [...question.options, newOption] };
 }
 
 /**
