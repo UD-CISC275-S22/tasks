@@ -32,8 +32,10 @@ export function makeBlankQuestion(
  * HINT: Look up the `trim` and `toLowerCase` functions.
  */
 export function isCorrect(question: Question, answer: string): boolean {
-    const ignoreCaseAns: string = answer.toLowerCase(); //lowercase answer
-    const ignoreCaseQ: string = question.expected.toLowerCase(); // lowercase expected attribute
+    const copyQ: Question = { ...question };
+    const copyA: string = answer;
+    const ignoreCaseAns: string = copyA.toLowerCase(); //lowercase answer
+    const ignoreCaseQ: string = copyQ.expected.toLowerCase(); // lowercase expected attribute
     if (ignoreCaseAns.trim() === ignoreCaseQ.trim()) {
         return true;
     }
@@ -47,9 +49,11 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
-    if (question.type === "short_answer_question") {
+    const copyQ: Question = { ...question };
+    const copyA: string = answer;
+    if (copyQ.type === "short_answer_question") {
         return true;
-    } else if (question.options.includes(answer)) {
+    } else if (copyQ.options.includes(copyA)) {
         return true;
     }
     return false;
@@ -87,10 +91,11 @@ export function toShortForm(question: Question): string {
  * Check the unit tests for more examples of what this looks like!
  */
 export function toMarkdown(question: Question): string {
-    const line1: string = `# ${question.name}`;
-    const line2: string = `${question.body}`;
-    if (question.type === "multiple_choice_question") {
-        const options: string[] = question.options.map(
+    const copyQ: Question = { ...question };
+    const line1: string = `# ${copyQ.name}`;
+    const line2: string = `${copyQ.body}`;
+    if (copyQ.type === "multiple_choice_question") {
+        const options: string[] = copyQ.options.map(
             (str: string): string => `- ${str}` //maps each option to be formatted
         );
         const markedDown: string[] = [line1, line2, ...options];
@@ -132,8 +137,10 @@ export function publishQuestion(question: Question): Question {
  * The `published` field should be reset to false.
  */
 export function duplicateQuestion(id: number, oldQuestion: Question): Question {
-    const newName: string = `Copy of ${oldQuestion.name}`;
-    return { ...oldQuestion, name: newName, published: false, id: id };
+    const copyQ: Question = { ...oldQuestion };
+    const oldName: string = copyQ.name;
+    const newName: string = `Copy of ${oldName}`;
+    return { ...copyQ, name: newName, published: false, id: id };
 }
 
 /**
@@ -147,7 +154,7 @@ export function addOption(question: Question, newOption: string): Question {
     const newQ: Question = { ...question };
     const newOps: string[] = newQ.options;
     newOps.push(newOption);
-    return { ...question, options: newOps };
+    return { ...newQ, options: newOps };
 }
 
 /**
@@ -164,12 +171,5 @@ export function mergeQuestion(
     contentQuestion: Question,
     { points }: { points: number }
 ): Question {
-    const finQ: Question = {
-        ...contentQuestion,
-        points: points,
-        id: id,
-        name: name,
-        published: false
-    };
-    return finQ;
+    return { ...contentQuestion, id, name, points, published: false };
 }
