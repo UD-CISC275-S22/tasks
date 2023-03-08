@@ -244,7 +244,25 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ): Question[] {
-    return [];
+    const foundTarget = questions.findIndex(
+        (question: Question): boolean => question.id === targetId
+    );
+
+    const targetOptions = [...questions[foundTarget].options];
+    targetOptionIndex === -1
+        ? targetOptions.push(newOption)
+        : targetOptions.splice(targetOptionIndex, 1, newOption);
+
+    const changingTargetOptions = questions.map(
+        (question: Question): Question => ({
+            ...question,
+            options: [...question.options]
+        })
+    );
+
+    changingTargetOptions[foundTarget].options = targetOptions;
+
+    return changingTargetOptions;
 }
 
 /***
