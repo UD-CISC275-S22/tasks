@@ -249,7 +249,19 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ): Question[] {
-    return [];
+    const new1 = [...questions];
+    const index = questions.findIndex((q) => q.id === targetId);
+    const new2 = [...new1[index].options];
+    const splitOne =
+        targetOptionIndex !== -1
+            ? new2.splice(targetOptionIndex, 1, newOption)
+            : new2.splice(new2.length, 1, newOption);
+    const finish1 = {
+        ...questions[index],
+        options: new2.length !== 0 ? [...new2] : [...splitOne]
+    };
+    new1[index] = finish1;
+    return new1;
 }
 
 /***
