@@ -3,6 +3,7 @@ export type QuestionType = "multiple_choice_question" | "short_answer_question";
 
 /** A representation of a Question in a quizzing application */
 export interface Question {
+    filter(arg0: (question: number) => any): unknown;
     /** A unique identifier for the question */
     id: number;
     /** The human-friendly title of the question */
