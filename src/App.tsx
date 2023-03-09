@@ -1,9 +1,5 @@
 import React from "react";
 import "./App.css";
-import { Button } from "react-bootstrap";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 
 function App(): JSX.Element {
     return (
@@ -28,16 +24,6 @@ function App(): JSX.Element {
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
             </p>
-            <p>Hello World</p>
-            <p>Gregory Mensah</p>
-            <Button onClick={() => console.log("Hello World!")}>
-                Log Hello world
-            </Button>
-            <ul>
-                <li> Mustang</li>
-                <li>Dodge</li>
-                <li>Camero</li>
-            </ul>
         </div>
     );
 }
