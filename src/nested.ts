@@ -1,4 +1,4 @@
-import { stringify } from "querystring";
+// import { stringify } from "querystring";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
 
