@@ -5,7 +5,13 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    return numbers;
+    if (numbers.length === 0) {
+        return [];
+    } else if (numbers.length === 1) {
+        return [numbers[0], numbers[0]];
+    } else {
+        return [numbers[0], numbers[numbers.length - 1]];
+    }
 }
 
 /**
@@ -13,7 +19,13 @@ export function bookEndList(numbers: number[]): number[] {
  * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
-    return numbers;
+    const new_array = [];
+    let i = 0;
+    while (i <= numbers.length - 1) {
+        new_array.push(numbers[i] * 3);
+        i += 1;
+    }
+    return new_array;
 }
 
 /**
@@ -21,7 +33,12 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    return [];
+    const int: number[] = [];
+    for (let i = 0; i < numbers.length; i++) {
+        const parsedInt: number = parseInt(numbers[i], 10);
+        int.push(isNaN(parsedInt) ? 0 : parsedInt);
+    }
+    return int;
 }
 
 /**
@@ -32,7 +49,12 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    return [];
+    const int: number[] = [];
+    for (let i = 0; i < amounts.length; i++) {
+        const parsedInt: number = parseInt(amounts[i].replace(/^\$/, ""));
+        int.push(isNaN(parsedInt) ? 0 : parsedInt);
+    }
+    return int;
 };
 
 /**
@@ -41,7 +63,17 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    return [];
+    const new_messages: string[] = [];
+    for (const message of messages) {
+        if (message.endsWith("?")) {
+            continue;
+        } else if (message.endsWith("!")) {
+            new_messages.push(message.toUpperCase());
+        } else {
+            new_messages.push(message);
+        }
+    }
+    return new_messages;
 };
 
 /**
@@ -49,7 +81,13 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return 0;
+    let count = 0;
+    for (const word of words) {
+        if (word.length < 4) {
+            count += 1;
+        }
+    }
+    return count;
 }
 
 /**
@@ -58,7 +96,15 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    return false;
+    if (colors.length === 0) {
+        return true;
+    }
+    for (const color of colors) {
+        if (color !== "red" && color !== "blue" && color !== "green") {
+            return false;
+        }
+    }
+    return true;
 }
 
 /**
@@ -69,7 +115,16 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    let sum = 0;
+    let numbersStr = "";
+    for (let i = 0; i < addends.length; i++) {
+        sum += addends[i];
+        numbersStr += `${addends[i]}`;
+        if (i !== addends.length - 1) {
+            numbersStr += "+";
+        }
+    }
+    return `${sum}=${numbersStr || "0"}`;
 }
 
 /**
@@ -82,5 +137,16 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    return [];
+    if (values.length === 0) {
+        return [0];
+    }
+    const new_array = [...values];
+    let neg = new_array.findIndex((x: number): boolean => x < 0);
+    if (neg === -1) {
+        neg = new_array.length;
+    }
+    const sliced = new_array.slice(0, neg);
+    const sum = sliced.reduce((total: number, num: number) => total + num, 0);
+    new_array.splice(neg + 1, 0, sum);
+    return new_array;
 }
