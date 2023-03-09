@@ -183,12 +183,10 @@ export function renameQuestionById(
     newName: string
 ): Question[] {
     let copy = [...questions];
-    console.log(newName);
     copy = copy.map(
         (question: Question): Question =>
             question.id === targetId ? { ...question, name: newName } : question
     );
-    console.log(newName);
     return copy;
 }
 
