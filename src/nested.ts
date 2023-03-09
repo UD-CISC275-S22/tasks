@@ -236,16 +236,21 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ): Question[] {
-    //const index = [...questions].findIndex((question: Question): boolean => question.type === target)
-    /*let copy = [...questions];
-    let count = 0;
-    copy.map((question: Question): number =>
-        question.id !== targetId ? count++ : count
-    );
-    if (targetOptionIndex === -1) {
-        copy.op;
-    }*/
-    return [];
+    return [...questions].map((question: Question): Question => {
+        if (question.id === targetId) {
+            const opcopy = [...question.options];
+            if (targetOptionIndex === -1) {
+                opcopy.push(newOption);
+            } else {
+                opcopy.splice(targetOptionIndex, 1, newOption);
+            }
+            return {
+                ...question,
+                options: opcopy
+            };
+        }
+        return question;
+    });
 }
 
 /***
@@ -262,13 +267,6 @@ export function duplicateQuestionInArray(
     const index = [...questions].findIndex(
         (question: Question): boolean => question.id === targetId
     );
-    /*let copy = [...questions];
-    copy = copy.map(
-        (question: Question): Question =>
-            question.id === targetId
-                ? duplicateQuestion(newId, questions[index])
-                : question
-    );*/
     return [
         ...questions.slice(0, index + 1),
         duplicateQuestion(newId, questions[index]),
