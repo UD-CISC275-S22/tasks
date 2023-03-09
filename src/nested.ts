@@ -81,9 +81,7 @@ export function sumPublishedPoints(questions: Question[]): number {
     const anotherArr = newArr.filter(
         (element: Question): boolean => element.published == true
     );
-
     if (anotherArr.length === 0) {
-        console.log("inside if");
         return 0;
     }
     //Reduce to implement counter functionallity
@@ -92,7 +90,6 @@ export function sumPublishedPoints(questions: Question[]): number {
             (currentTotal += qAmount.points),
         0
     );
-
     return sumArr;
 }
 
@@ -114,7 +111,15 @@ id,name,options,points,published
  * Check the unit tests for more examples!
  */
 export function toCSV(_questions: Question[]): string {
-    return "";
+    const csVReturn =
+        "id,name,options,points,published\n" +
+        _questions
+            .map(
+                (question: Question): string =>
+                    `${question.id},${question.name},${question.options.length},${question.points},${question.published}`
+            )
+            .join("\n");
+    return csVReturn;
 }
 
 /**
@@ -123,7 +128,15 @@ export function toCSV(_questions: Question[]): string {
  * making the `text` an empty string, and using false for both `submitted` and `correct`.
  */
 export function makeAnswers(_questions: Question[]): Answer[] {
-    return [];
+    const arrAnswer = _questions.map(
+        (question: Question): Answer => ({
+            questionId: question.id,
+            text: "",
+            submitted: false,
+            correct: false
+        })
+    );
+    return arrAnswer;
 }
 
 /***
@@ -131,7 +144,7 @@ export function makeAnswers(_questions: Question[]): Answer[] {
  * each question is now published, regardless of its previous published status.
  */
 export function publishAll(_questions: Question[]): Question[] {
-    const publishAll = _questions.map(
+    const publishAll: Question[] = _questions.map(
         (question: Question): Question => ({ ...question, published: true })
     );
     return publishAll;
