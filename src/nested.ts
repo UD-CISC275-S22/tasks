@@ -319,20 +319,23 @@ export function editOption(
     const copyEditOption = questions.map(
         (question: Question): Question => ({ ...question })
     );
-    return copyEditOption.map((question: Question): Question => {
-        if (question.id === targetId) {
-            let new_option = [];
-            if (targetOptionIndex === -1) {
-                new_option = [...question.options, newOption];
-                return { ...question, options: new_option };
+    const questionWithNewOption = copyEditOption.map(
+        (question: Question): Question => {
+            let new_options = [];
+            if (question.id === targetId) {
+                if (targetOptionIndex === -1) {
+                    new_options = [...question.options, newOption];
+                    return { ...question, options: new_options };
+                } else {
+                    new_options = [...question.options];
+                    return { ...question, options: new_options };
+                }
             } else {
-                new_option = [...question.options];
-                return { ...question, options: new_option };
+                return question;
             }
-        } else {
-            return question;
         }
-    });
+    );
+    return questionWithNewOption;
 }
 
 /***
