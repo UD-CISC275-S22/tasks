@@ -23,7 +23,7 @@ export function TwoDice(): JSX.Element {
             <Button onClick={() => setDieLeft(d6())}>Roll Left</Button>
             <Button onClick={() => setDieRight(d6())}>Roll Right</Button>
             <div>
-                {dieLeft === dieRight ? (dieLeft === 1 ? "Lose" : "Win") : ""}
+                {dieLeft !== dieRight ? "" : dieLeft === 1 ? "Lose" : "Win"}
             </div>
         </div>
     );
