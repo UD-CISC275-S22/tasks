@@ -155,15 +155,22 @@ export function publishAll(questions: Question[]): Question[] {
  * are the same type. They can be any type, as long as they are all the SAME type.
  */
 export function sameType(questions: Question[]): boolean {
-    if (questions.length === 0) {
+    if (questions.length <= 1) {
+        // If there's only one or fewer questions, they must be of the same type
         return true;
     }
 
     const firstType = questions[0].type;
 
-    return questions.reduce((prevSameType, question) => {
-        return prevSameType && question.type === firstType;
-    }, true);
+    // Iterate over the rest of the questions and compare their types to the first question's type
+    for (let i = 1; i < questions.length; i++) {
+        if (questions[i].type !== firstType) {
+            return false;
+        }
+    }
+
+    // If we made it through the loop without returning false, all the questions have the same type
+    return true;
 }
 
 /***
