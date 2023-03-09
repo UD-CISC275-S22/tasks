@@ -328,6 +328,7 @@ export function editOption(
                     return { ...question, options: new_options };
                 } else {
                     new_options = [...question.options];
+                    new_options.splice(targetOptionIndex, 1, newOption);
                     return { ...question, options: new_options };
                 }
             } else {
