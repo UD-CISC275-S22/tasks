@@ -2,49 +2,7 @@ import React, { useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import "./App.css";
 import pickle from "./pickle.jpeg";
-/*
-export function CycleHoliday(): JSX.Element {
-    // Holidays: 😘, 🥚, 🇲🇽, 🎃, 🎄 (date)
-    // Holidays: 🎄, 🇲🇽, 🥚, 🎃, 😘(alphabetical)
-    const [holiday, setHoliday] = useState<string>("😘");
-    function alphaHoliday(): void {
-        const newEmoji = aHRec[holiday];
-        setHoliday(newEmoji);
-    }
-    function dateHoliday(): void {
-        const newEmoji = dHRec[holiday];
-        setHoliday(newEmoji);
-    }
-    🎉, ☘️, 🇺🇸, 🎃, 🎄
-    const aHRec: Record<string, string> = {
-        "😘": "🎄",
-        "🥚": "🎃",
-        "🇲🇽": "🥚",
-        "🎃": "😘",
-        "🎄": "🇲🇽"
-    };
-    const dHRec: Record<string, string> = {
-        "😘": "🥚",
-        "🥚": "🇲🇽",
-        "🇲🇽": "🎃",
-        "🎃": "🎄",
-        "🎄": "😘"
-    };
-    return (
-        <>
-            <span>
-                <Button onClick={alphaHoliday}>Advance by Alphabet</Button>
-            </span>
-            <span>
-                <Button onClick={dateHoliday}>Advance by Year</Button>
-            </span>
-            <span>Holiday: {holiday}</span>
-        </>
-    );
-*/
 type QuestionType = "multiple_choice_question" | "short_answer_question";
-type A_Holiday = "🎄" | "🇺🇸" | "🎃" | "🎉" | "☘️";
-type D_Holiday = "🎉" | "☘️" | "🇺🇸" | "🎃" | "🎄";
 
 // Maps the Old state -> New State
 const QUESTIONTYPE_TRANSITIONS: Record<QuestionType, QuestionType> = {
@@ -167,13 +125,13 @@ function App(): JSX.Element {
                     </Button>
                     {d2}
                 </span>
-                {d1 === d2 && d1 !== 1 ? (
+                {d1 === d2 && d1 !== 1 ? 
                     <span> Win</span>
-                ) : d1 === 1 && d2 === 1 ? (
+                 : d1 === 1 && d2 === 1 ? 
                     <span> Lose</span>
-                ) : (
+                 : 
                     <span></span>
-                )}
+                }
             </div>
             <div>
                 <span>
