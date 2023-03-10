@@ -125,13 +125,13 @@ function App(): JSX.Element {
                     </Button>
                     {d2}
                 </span>
-                {d1 === d2 && d1 !== 1 ? 
+                {d1 === d2 && d1 !== 1 ? (
                     <span> Win</span>
-                 : d1 === 1 && d2 === 1 ? 
+                ) : d1 === 1 && d2 === 1 ? (
                     <span> Lose</span>
-                 : 
+                ) : (
                     <span></span>
-                }
+                )}
             </div>
             <div>
                 <span>
