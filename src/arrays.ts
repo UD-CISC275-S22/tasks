@@ -14,7 +14,6 @@ export function bookEndList(numbers: number[]): number[] {
     } else {
         result = []; //ending with an undefined??
     }
-    console.log(result);
     return result;
 }
 
@@ -26,7 +25,6 @@ export function tripleNumbers(numbers: number[]): number[] {
     let result = [...numbers];
     //result = numbers.map((elements: number): number => 3 * elements);
     result = numbers.map((num: number): number => num * 3);
-    console.log(result);
     return result;
 }
 
@@ -40,7 +38,6 @@ export function stringsToIntegers(numbers: string[]): number[] {
     result = result.map((val: number): number =>
         isNaN(val) ? (val = 0) : val
     );
-    console.log(result);
     return result;
 }
 
@@ -58,7 +55,6 @@ export const removeDollars = (amounts: string[]): number[] => {
         amts.charAt(0) == "$" ? amts.substring(1) : amts
     );
     removed = stringsToIntegers(amounts);
-    console.log(removed);
     return removed;
 };
 
@@ -75,7 +71,6 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
     messages = messages.map((word: string): string =>
         word[word.length - 1] == "!" ? word.toUpperCase() : word
     );
-    console.log(messages);
     return messages;
 };
 
@@ -86,7 +81,6 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
 export function countShortWords(words: string[]): number {
     const short = words.filter((word: string): boolean => word.length < 4);
     const total = short.length;
-    console.log(total);
     return total;
 }
 
@@ -158,6 +152,5 @@ export function injectPositive(values: number[]): number[] {
         0
     );
     const result = [...prev, values[negative], sum, ...after];
-    console.log(result);
     return result;
 }
