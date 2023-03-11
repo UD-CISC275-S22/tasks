@@ -31,11 +31,9 @@ export function tripleNumbers(numbers: number[]): number[] {
  */
 export function stringsToIntegers(numbers: string[]): number[] {
     const numbers2 = [...numbers];
-    const triple = numbers2.map((price: number[]): number[] =>
-        price.charCodeAt()
-    );
+    const numbers3 = numbers2.map((str) => (parseInt(str) ? parseInt(str) : 0));
 
-    return [];
+    return numbers3;
 }
 
 /**
@@ -46,7 +44,10 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    return [];
+    const amounts2 = [...amounts];
+    return amounts2.map((str) =>
+        str.startsWith("$") ? parseInt(str.slice(1)) || 0 : parseInt(str) || 0
+    );
 };
 
 /**
@@ -56,8 +57,9 @@ export const removeDollars = (amounts: string[]): number[] => {
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
     const numbers2 = [...messages];
-
-    return [];
+    return numbers2
+        .filter((num) => !num.endsWith("?"))
+        .map((num) => (num.endsWith("!") ? num.toUpperCase() : num));
 };
 
 /**
@@ -66,13 +68,10 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  */
 export function countShortWords(words: string[]): number {
     const numbers2 = [...words];
-    const less4 = (price: number[]): boolean => price.length < 4;
-    const less42 = numbers2.filter(less4);
-    // const numbers3 = numbers2.map((words: string[]): string[] =>
-    //     words < 4 ? 2 * price : price
-    // );
-    // numbers2length < 2 ? [] : numbers3;
-    return 0;
+    return numbers2.reduce(
+        (count, word) => (word.length < 4 ? count + 1 : count),
+        0
+    );
 }
 
 /**
@@ -82,7 +81,10 @@ export function countShortWords(words: string[]): number {
  */
 export function allRGB(colors: string[]): boolean {
     const colors2 = [...colors];
-    // return colors2.length === 0 ? true: colors2.every(color => ['red', 'blue', 'green'].includes(color));
+    const colors3 = colors2.every((color) =>
+        ["red", "blue", "green"].includes(color)
+    );
+    return colors2.length === 0 ? true : colors3;
 }
 
 /**
@@ -93,8 +95,11 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    const outcome = 0;
-    return ""outcome = ;
+    // const outcome = 0;
+    const addends2 = [...addends];
+    const addends3 = addends2.reduce((num1, num2) => num1 + num2, 0);
+    // const together = addends2.map((num, index);
+    return addends2.length > 0 ? `${addends3}=${addends2.join("+")}` : "0=0";
 }
 
 /**
@@ -107,5 +112,34 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    return [];
+    let sum = 0;
+    let negativeFound = false;
+    const values2 = [...values];
+    const result: number[] = [];
+    // values2.map((numbers: number): number =>
+    //     numbers < 0 && !negativeFound
+    //         ? result.push(numbers) && result.push(sum) && (sum += numbers)
+    //         : result.push(numbers) && (sum += numbers)
+    // );
+
+    // If the price is less than 10, double the price, otherwise use the price unchanged
+
+    for (let i = 0; i < values2.length; i++) {
+        if (values2[i] < 0 && !negativeFound) {
+            negativeFound = true;
+            result.push(values2[i]);
+            result.push(sum);
+        } else {
+            result.push(values2[i]);
+        }
+
+        sum += values2[i];
+    }
+
+    !negativeFound ? result.push(sum) : result;
+    return result;
+}
+
+function index(value: number, index: number, array: number[]): unknown {
+    throw new Error("Function not implemented.");
 }
