@@ -8,6 +8,10 @@ import { StartAttempt } from "./components/StartAttempt";
 import { TwoDice } from "./components/TwoDice";
 import { CycleHoliday } from "./components/CycleHoliday";
 import { Counter } from "./components/Counter";
+import { DoubleHalf } from "./bad-components/DoubleHalf";
+import { ColoredBox } from "./bad-components/ColoredBox";
+import { ShoveBox } from "./bad-components/ShoveBox";
+import { ChooseTeam } from "./bad-components/ChooseTeam";
 
 function App(): JSX.Element {
     return (
@@ -45,6 +49,51 @@ function App(): JSX.Element {
                     <Col></Col>
                 </Row>
             </Container>
+            {/* <DoubleHalf></DoubleHalf> */}
+            <hr></hr>
+            <ChooseTeam></ChooseTeam>
+            <hr></hr>
+            <ColoredBox></ColoredBox>
+            <hr></hr>
+            <ShoveBox></ShoveBox>
+            <Container>
+                <Row>
+                    <Col>
+                        <div className="Book-list">
+                            My favorite books which I&apos;ve read this year:
+                            <ol>
+                                <li>
+                                    <i>Blood Meridian</i>, Cormac McCarthy
+                                </li>
+                                <li>
+                                    <i>Dune Messiah</i>, Frank Herbert
+                                </li>
+                                <li>
+                                    <i>Neuromancer</i>, William Gibson
+                                </li>
+                                <li>
+                                    <i>A Game of Thrones</i>, George R.R. Martin
+                                </li>
+                                <li>
+                                    <i>
+                                        For Whom the Bell Tolls, Ernest
+                                        Hemingway
+                                    </i>
+                                </li>
+                            </ol>
+                        </div>
+                    </Col>
+                    <Col></Col>
+                </Row>
+            </Container>
+            {/* <DoubleHalf></DoubleHalf> */}
+            <hr></hr>
+            <ChooseTeam></ChooseTeam>
+            <hr></hr>
+            <ColoredBox></ColoredBox>
+            <hr></hr>
+            <ShoveBox></ShoveBox>
+            <hr></hr>
             <Counter></Counter>
             <hr />
             <RevealAnswer></RevealAnswer>
