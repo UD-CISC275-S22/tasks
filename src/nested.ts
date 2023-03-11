@@ -1,4 +1,3 @@
-import { urlToHttpOptions } from "url";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
 import { makeBlankQuestion, duplicateQuestion } from "./objects";
@@ -224,40 +223,41 @@ export function modify_list(
                 option: string;
             }[],
             x
-        ) => (ret = [...ret, { index: i++, option: x }]),
+        ) => {
+            ret = [...ret, { index: i++, option: x }];
+            return ret;
+        },
         []
     );
-    return targetIndex === -1
-        ? [...target, newOption]
-        : iota.reduce(
-            (ret: string[], x) =>
-                (ret =
-                      x.index === targetIndex
-                          ? [...ret, newOption]
-                          : [...ret, x.option]),
-            []
-        );
+    if (targetIndex === -1) {
+        return [...target, newOption];
+    } else {
+        return iota.reduce((ret: string[], x) => {
+            if (x.index === targetIndex) {
+                return [...ret, newOption];
+            } else {
+                return [...ret, x.option];
+            }
+        }, []);
+    }
 }
+
 export function editOption(
     questions: Question[],
     targetId: number,
     targetOptionIndex: number,
     newOption: string
 ): Question[] {
-    return questions.map(
-        (x) =>
-            (x =
-                x.id === targetId
-                    ? {
-                        ...x,
-                        options: modify_list(
-                            x.options,
-                            targetOptionIndex,
-                            newOption
-                        )
-                    }
-                    : { ...x })
-    );
+    return questions.map((x) => {
+        if (x.id === targetId) {
+            return {
+                ...x,
+                options: modify_list(x.options, targetOptionIndex, newOption)
+            };
+        } else {
+            return { ...x };
+        }
+    });
 }
 
 /***
