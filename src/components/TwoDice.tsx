@@ -17,12 +17,12 @@ export function TwoDice(): JSX.Element {
 
     return (
         <div>
-            <span>
+            <div>
                 <Button onClick={() => setLeftDie(d6())}>Roll Left</Button>
-            </span>
-            <span>
+            </div>
+            <div>
                 <Button onClick={() => setRightDie(d6())}>Roll Right</Button>
-            </span>
+            </div>
             <span data-testid="left-die">{leftDie}</span>
             <span data-testid="right-die">{rightDie}</span>
             <span>
