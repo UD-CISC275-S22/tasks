@@ -1,7 +1,5 @@
 import React from "react";
-import { Button, Col, Container, Row } from "react-bootstrap";
 import "./App.css";
-import dog from "./Dog_Breeds.jpg";
 import { ChangeType } from "./components/ChangeType";
 import { RevealAnswer } from "./components/RevealAnswer";
 import { StartAttempt } from "./components/StartAttempt";
@@ -13,7 +11,7 @@ function App(): JSX.Element {
     return (
         <div className="App">
             <header className="App-header">
-                UD CISC275 with React Hooks and TypeScript - Alexander Marshall
+                UD CISC275 with React Hooks and TypeScript
             </header>
             <hr></hr>
             <Counter></Counter>
