@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
 import { duplicateQuestion, makeBlankQuestion } from "./objects";
@@ -306,14 +307,12 @@ export function duplicateQuestionInArray(
         })
     );
     deepCopy.map(
-        (question: Question): Question =>
-            question.id === targetId
-                ? deepCopy.splice(
-                    deepCopy.indexOf(question) + 1,
-                    0,
-                    duplicateQuestion(newId, question)
-                )
-                : question
+        (question: Question): Question => {
+            if (question.id === targetId) {
+                deepCopy.splice(deepCopy.indexOf(question) + 1, 0, duplicateQuestion(newId, question));
+            }
+            return { ...question };
+        }
     );
     return deepCopy;
 }
