@@ -26,6 +26,7 @@ function App(): JSX.Element {
             <ChangeType></ChangeType>
             <hr />
             <CycleHoliday></CycleHoliday>
+            <br></br>
         </div>
     );
 }
