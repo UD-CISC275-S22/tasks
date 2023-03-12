@@ -24,7 +24,7 @@ export function TwoDice(): JSX.Element {
             </div>
             <div>
                 <Button onClick={() => setLeftDie(d6)}>Roll Left</Button>
-                <Button onClick={() => setRightDie(d6)}>Roll Right </Button>
+                <Button onClick={() => setRightDie(d6)}>Roll Right</Button>
             </div>
             <div>
                 {leftDie === 1 && rightDie === 1 ? (
