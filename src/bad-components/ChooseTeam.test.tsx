@@ -58,4 +58,13 @@ describe("ChooseTeam Component tests", () => {
         expect(currentTeam).toHaveLength(1);
         expect(currentTeam[0].textContent).toEqual(fourth.textContent);
     });
+    test("Can only add a member to a team once", () => {
+        const [first] = screen.queryAllByRole("button");
+        first.click();
+        let currentTeam = screen.queryAllByRole("listitem");
+        expect(currentTeam).toHaveLength(1);
+        first.click();
+        currentTeam = screen.queryAllByRole("listitem");
+        expect(currentTeam).toHaveLength(1);
+    });
 });
