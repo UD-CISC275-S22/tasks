@@ -273,5 +273,5 @@ export function duplicateQuestionInArray(
             );
         }
     });
-    return duplicate;
+    return duplicate; //worked with mbiet uko
 }
