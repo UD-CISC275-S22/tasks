@@ -1,8 +1,9 @@
 /* eslint-disable prettier/prettier */
-import { type } from "@testing-library/user-event/dist/type";
+//import { type } from "@testing-library/user-event/dist/type";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
 import { duplicateQuestion, makeBlankQuestion } from "./objects";
+//import { Console } from "console";
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
@@ -207,7 +208,7 @@ export function renameQuestionById(
     const targetIndex: number = _questions.findIndex(
         (question: Question): boolean => question.id === _targetId
     );
-    
+
     if (questionTarget != null) {
         const copyTarget = { ...questionTarget, name: _newName };
         newQuestions.splice(targetIndex, 1, copyTarget);
