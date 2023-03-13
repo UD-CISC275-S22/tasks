@@ -24,7 +24,7 @@ export function getNonEmptyQuestions(questions: Question[]): Question[] {
             question.body != "" ||
             question.expected != "" ||
             question.options.length != 0
-    );
+    ); //new array of only non-empty questions
 
     return nEmpty;
 }
