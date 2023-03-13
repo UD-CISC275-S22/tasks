@@ -59,12 +59,41 @@ describe("ChooseTeam Component tests", () => {
         expect(currentTeam[0].textContent).toEqual(fourth.textContent);
     });
     test("Can only add a member to a team once", () => {
-        const [first] = screen.queryAllByRole("button");
+        const [first, second, third, fourth, fifth] =
+            screen.queryAllByRole("button");
         first.click();
         let currentTeam = screen.queryAllByRole("listitem");
         expect(currentTeam).toHaveLength(1);
         first.click();
         currentTeam = screen.queryAllByRole("listitem");
         expect(currentTeam).toHaveLength(1);
+
+        second.click();
+        currentTeam = screen.queryAllByRole("listitem");
+        expect(currentTeam).toHaveLength(2);
+        second.click();
+        currentTeam = screen.queryAllByRole("listitem");
+        expect(currentTeam).toHaveLength(2);
+
+        third.click();
+        currentTeam = screen.queryAllByRole("listitem");
+        expect(currentTeam).toHaveLength(3);
+        third.click();
+        currentTeam = screen.queryAllByRole("listitem");
+        expect(currentTeam).toHaveLength(3);
+
+        fourth.click();
+        currentTeam = screen.queryAllByRole("listitem");
+        expect(currentTeam).toHaveLength(4);
+        fourth.click();
+        currentTeam = screen.queryAllByRole("listitem");
+        expect(currentTeam).toHaveLength(4);
+
+        fifth.click();
+        currentTeam = screen.queryAllByRole("listitem");
+        expect(currentTeam).toHaveLength(5);
+        fifth.click();
+        currentTeam = screen.queryAllByRole("listitem");
+        expect(currentTeam).toHaveLength(5);
     });
 });
