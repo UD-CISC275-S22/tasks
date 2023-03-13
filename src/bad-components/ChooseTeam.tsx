@@ -9,15 +9,12 @@ const PEOPLE = [
     "Barbara Liskov",
     "Margaret Hamilton"
 ];
-interface teamProps {
-    team: string[];
-}
 
 export function ChooseTeam(): JSX.Element {
     const [allOptions] = useState<string[]>(PEOPLE);
     const [team, setTeam] = useState<string[]>([]);
 
-    function chooseMember(option: string, team: string[]) {
+    function chooseMember(option: string) {
         setTeam([...team, option]);
     }
 
@@ -31,20 +28,26 @@ export function ChooseTeam(): JSX.Element {
                 <Col>
                     {allOptions.map((option: string) => (
                         <div key={option} style={{ marginBottom: "4px" }}>
-                            Add{" "}
-                            <Button
-                                onClick={() => chooseMember(option, team)}
-                                size="sm"
-                            >
-                                {option}
-                            </Button>
+                            {!team.includes(option) && (
+                                <div className="card">
+                                    Add{" "}
+                                    <Button
+                                        onClick={() => chooseMember(option)}
+                                        size="sm"
+                                    >
+                                        {option}
+                                    </Button>
+                                </div>
+                            )}
                         </div>
                     ))}
                 </Col>
                 <Col>
                     <strong>Team:</strong>
                     {team.map((member: string) => (
-                        <li key={member}>{member}</li>
+                        <li className="card" key={member}>
+                            {member}
+                        </li>
                     ))}
                     <Button onClick={clearTeam}>Clear Team</Button>
                 </Col>
