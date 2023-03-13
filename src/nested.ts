@@ -1,5 +1,8 @@
+/* eslint-disable prettier/prettier */
+import { type } from "@testing-library/user-event/dist/type";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
+import { duplicateQuestion, makeBlankQuestion } from "./objects";
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
@@ -155,7 +158,18 @@ export function publishAll(_questions: Question[]): Question[] {
  * are the same type. They can be any type, as long as they are all the SAME type.
  */
 export function sameType(_questions: Question[]): boolean {
-    return false;
+    const len = _questions.length;
+    const sameType = _questions.filter(
+        (questions: Question): boolean =>
+            questions.type === "short_answer_question"
+    );
+    if (len === sameType.length) {
+        return true;
+    } else if (sameType.length === 0) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 /***
@@ -169,7 +183,9 @@ export function addNewQuestion(
     _name: string,
     _type: QuestionType
 ): Question[] {
-    return [];
+    const newArr = makeBlankQuestion(_id, _name, _type);
+    const anotherArr = [..._questions, newArr];
+    return anotherArr;
 }
 
 /***
@@ -182,7 +198,22 @@ export function renameQuestionById(
     _targetId: number,
     _newName: string
 ): Question[] {
-    return [];
+    const newQuestions = _questions.map(
+        (question: Question): Question => ({ ...question })
+    );
+
+    const questionTarget = findQuestion(newQuestions, _targetId);
+
+    const targetIndex: number = _questions.findIndex(
+        (question: Question): boolean => question.id === _targetId
+    );
+    
+    if (questionTarget != null) {
+        const copyTarget = { ...questionTarget, name: _newName };
+        newQuestions.splice(targetIndex, 1, copyTarget);
+    }
+
+    return newQuestions;
 }
 
 /***
@@ -197,7 +228,21 @@ export function changeQuestionTypeById(
     _targetId: number,
     _newQuestionType: QuestionType
 ): Question[] {
-    return [];
+    if (_newQuestionType != "multiple_choice_question") {
+        return _questions.map(
+            (question: Question): Question =>
+                question.id === _targetId
+                    ? { ...question, type: _newQuestionType, options: [] }
+                    : { ...question }
+        );
+    } else {
+        return _questions.map(
+            (question: Question): Question =>
+                question.id === _targetId
+                    ? { ...question, type: _newQuestionType }
+                    : { ...question }
+        );
+    }
 }
 
 /**
@@ -216,7 +261,29 @@ export function editOption(
     _targetOptionIndex: number,
     _newOption: string
 ): Question[] {
-    return [];
+    const spliceFunction = (question: Question) => {
+        const newArray = [...question.options];
+        newArray.splice(_targetOptionIndex, 1, _newOption);
+        return newArray;
+    };
+    if (_targetOptionIndex === -1) {
+        return _questions.map(
+            (question: Question): Question =>
+                question.id === _targetId
+                    ? {
+                        ...question,
+                        options: [...question.options, _newOption]
+                    }
+                    : { ...question }
+        );
+    } else {
+        return _questions.map(
+            (question: Question): Question =>
+                question.id === _targetId
+                    ? { ...question, options: spliceFunction(question) }
+                    : { ...question }
+        );
+    }
 }
 
 /***
@@ -230,5 +297,13 @@ export function duplicateQuestionInArray(
     _targetId: number,
     _newId: number
 ): Question[] {
-    return [];
+    const index = _questions.findIndex(({ id }) => _targetId === id);
+    const duplication = [..._questions];
+    duplication.splice(
+        index + 1,
+        0,
+        duplicateQuestion(_newId, _questions[index])
+    );
+
+    return duplication;
 }
