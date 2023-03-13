@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
 import { Button, Row, Col } from "react-bootstrap";
-import { updateTypeParameterDeclaration } from "typescript";
+// import { updateTypeParameterDeclaration } from "typescript";
 
 const PEOPLE = [
     "Alan Turing",
