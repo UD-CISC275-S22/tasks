@@ -172,7 +172,7 @@ export function addNewQuestion(
     name: string,
     type: QuestionType
 ): Question[] {
-    return [];
+    return [...questions, makeBlankQuestion(id, name, type)]; //resuses Task 6's makeBlankQ function to add a blank Q to the array
 }
 
 /***
@@ -185,7 +185,11 @@ export function renameQuestionById(
     targetId: number,
     newName: string
 ): Question[] {
-    return [];
+    const sameId = questions.map(
+        (question: Question): Question =>
+            question.id == targetId ? { ...question, name: newName } : question //ternary indicating that a Q with the targetID will get a new name, else Q stays the same
+    );
+    return sameId;
 }
 
 /***
@@ -200,7 +204,18 @@ export function changeQuestionTypeById(
     targetId: number,
     newQuestionType: QuestionType
 ): Question[] {
-    return [];
+    const sameType = questions.map(
+        (question: Question): Question => ({
+            ...question,
+            type: question.id === targetId ? newQuestionType : question.type,
+            options:
+                question.id === targetId &&
+                newQuestionType !== "multiple_choice_question"
+                    ? []
+                    : question.options //ternaries for situations for type changing as well options changing
+        })
+    );
+    return sameType;
 }
 
 /**
@@ -219,7 +234,22 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ): Question[] {
-    return [];
+    return questions.map((question: Question): Question => {
+        if (question.id === targetId) {
+            if (targetOptionIndex === -1) {
+                return {
+                    ...question,
+                    options: [...question.options, newOption] //returns array of options plus new option if it's -1
+                };
+            } else {
+                const newArray = [...question.options];
+                newArray.splice(targetOptionIndex, 1, newOption);
+                return { ...question, options: newArray }; //returns copy of questions except the options are from the newArray
+            }
+        } else {
+            return { ...question };
+        }
+    });
 }
 
 /***
@@ -233,5 +263,15 @@ export function duplicateQuestionInArray(
     targetId: number,
     newId: number
 ): Question[] {
-    return [];
+    const duplicate = [...questions]; //the new array
+    duplicate.map((question: Question): void => {
+        if (question.id === targetId) {
+            duplicate.splice(
+                duplicate.indexOf(question) + 1, //inserting dupl.
+                0,
+                duplicateQuestion(newId, question) //object.ts function that duplicates a given Q
+            );
+        }
+    });
+    return duplicate;
 }
