@@ -9,34 +9,33 @@ const PEOPLE = [
     "Barbara Liskov",
     "Margaret Hamilton"
 ];
+interface teamProps {
+    team: string[];
+}
 
 export function ChooseTeam(): JSX.Element {
-    const [allOptions, setAllOptions] = useState<string[]>(PEOPLE);
+    const [allOptions] = useState<string[]>(PEOPLE);
     const [team, setTeam] = useState<string[]>([]);
 
-    function chooseMember() {
-        /*
-        if (!team.includes(newMember)) {
-            team.push(newMember);
-        }
-        */
+    function chooseMember(option: string, team: string[]) {
+        setTeam([...team, option]);
     }
 
     function clearTeam() {
-        /*
-        team = [];
-        */
+        setTeam([]);
     }
-
     return (
-        <div>
+        <div className="container">
             <h3>Choose Team</h3>
             <Row>
                 <Col>
                     {allOptions.map((option: string) => (
                         <div key={option} style={{ marginBottom: "4px" }}>
                             Add{" "}
-                            <Button onClick={chooseMember} size="sm">
+                            <Button
+                                onClick={() => chooseMember(option, team)}
+                                size="sm"
+                            >
                                 {option}
                             </Button>
                         </div>

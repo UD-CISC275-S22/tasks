@@ -49,44 +49,8 @@ function App(): JSX.Element {
                     <Col></Col>
                 </Row>
             </Container>
-            {/* <DoubleHalf></DoubleHalf> */}
-            <hr></hr>
-            <ChooseTeam></ChooseTeam>
-            <hr></hr>
-            <ColoredBox></ColoredBox>
-            <hr></hr>
-            <ShoveBox></ShoveBox>
-            <Container>
-                <Row>
-                    <Col>
-                        <div className="Book-list">
-                            My favorite books which I&apos;ve read this year:
-                            <ol>
-                                <li>
-                                    <i>Blood Meridian</i>, Cormac McCarthy
-                                </li>
-                                <li>
-                                    <i>Dune Messiah</i>, Frank Herbert
-                                </li>
-                                <li>
-                                    <i>Neuromancer</i>, William Gibson
-                                </li>
-                                <li>
-                                    <i>A Game of Thrones</i>, George R.R. Martin
-                                </li>
-                                <li>
-                                    <i>
-                                        For Whom the Bell Tolls, Ernest
-                                        Hemingway
-                                    </i>
-                                </li>
-                            </ol>
-                        </div>
-                    </Col>
-                    <Col></Col>
-                </Row>
-            </Container>
-            {/* <DoubleHalf></DoubleHalf> */}
+
+            <DoubleHalf></DoubleHalf>
             <hr></hr>
             <ChooseTeam></ChooseTeam>
             <hr></hr>
