@@ -114,10 +114,10 @@ id,name,options,points,published
 ` *
  * Check the unit tests for more examples!
  */
-export function toCSV(_questions: Question[]): string {
+export function toCSV(questions: Question[]): string {
     const csVReturn =
         "id,name,options,points,published\n" +
-        _questions
+        questions
             .map(
                 (question: Question): string =>
                     `${question.id},${question.name},${question.options.length},${question.points},${question.published}`
@@ -131,8 +131,8 @@ export function toCSV(_questions: Question[]): string {
  * Answers. Each Question gets its own Answer, copying over the `id` as the `questionId`,
  * making the `text` an empty string, and using false for both `submitted` and `correct`.
  */
-export function makeAnswers(_questions: Question[]): Answer[] {
-    const arrAnswer = _questions.map(
+export function makeAnswers(questions: Question[]): Answer[] {
+    const arrAnswer = questions.map(
         (question: Question): Answer => ({
             questionId: question.id,
             text: "",
@@ -147,8 +147,8 @@ export function makeAnswers(_questions: Question[]): Answer[] {
  * Consumes an array of Questions and produces a new array of questions, where
  * each question is now published, regardless of its previous published status.
  */
-export function publishAll(_questions: Question[]): Question[] {
-    const publishAll: Question[] = _questions.map(
+export function publishAll(questions: Question[]): Question[] {
+    const publishAll: Question[] = questions.map(
         (question: Question): Question => ({ ...question, published: true })
     );
     return publishAll;
@@ -158,9 +158,9 @@ export function publishAll(_questions: Question[]): Question[] {
  * Consumes an array of Questions and produces whether or not all the questions
  * are the same type. They can be any type, as long as they are all the SAME type.
  */
-export function sameType(_questions: Question[]): boolean {
-    const len = _questions.length;
-    const sameType = _questions.filter(
+export function sameType(questions: Question[]): boolean {
+    const len = questions.length;
+    const sameType = questions.filter(
         (questions: Question): boolean =>
             questions.type === "short_answer_question"
     );
@@ -179,13 +179,13 @@ export function sameType(_questions: Question[]): boolean {
  * you defined in the `objects.ts` file.
  */
 export function addNewQuestion(
-    _questions: Question[],
-    _id: number,
-    _name: string,
-    _type: QuestionType
+    questions: Question[],
+    id: number,
+    name: string,
+    type: QuestionType
 ): Question[] {
-    const newArr = makeBlankQuestion(_id, _name, _type);
-    const anotherArr = [..._questions, newArr];
+    const newArr = makeBlankQuestion(id, name, type);
+    const anotherArr = [...questions, newArr];
     return anotherArr;
 }
 
@@ -195,22 +195,22 @@ export function addNewQuestion(
  * Question should be the same EXCEPT that its name should now be `newName`.
  */
 export function renameQuestionById(
-    _questions: Question[],
-    _targetId: number,
-    _newName: string
+    questions: Question[],
+    targetId: number,
+    newName: string
 ): Question[] {
-    const newQuestions = _questions.map(
+    const newQuestions = questions.map(
         (question: Question): Question => ({ ...question })
     );
 
-    const questionTarget = findQuestion(newQuestions, _targetId);
+    const questionTarget = findQuestion(newQuestions, targetId);
 
-    const targetIndex: number = _questions.findIndex(
-        (question: Question): boolean => question.id === _targetId
+    const targetIndex: number = questions.findIndex(
+        (question: Question): boolean => question.id === targetId
     );
 
     if (questionTarget != null) {
-        const copyTarget = { ...questionTarget, name: _newName };
+        const copyTarget = { ...questionTarget, name: newName };
         newQuestions.splice(targetIndex, 1, copyTarget);
     }
 
@@ -225,22 +225,22 @@ export function renameQuestionById(
  * must be set to an empty list.
  */
 export function changeQuestionTypeById(
-    _questions: Question[],
-    _targetId: number,
-    _newQuestionType: QuestionType
+    questions: Question[],
+    targetId: number,
+    newQuestionType: QuestionType
 ): Question[] {
-    if (_newQuestionType != "multiple_choice_question") {
-        return _questions.map(
+    if (newQuestionType != "multiple_choice_question") {
+        return questions.map(
             (question: Question): Question =>
-                question.id === _targetId
-                    ? { ...question, type: _newQuestionType, options: [] }
+                question.id === targetId
+                    ? { ...question, type: newQuestionType, options: [] }
                     : { ...question }
         );
     } else {
-        return _questions.map(
+        return questions.map(
             (question: Question): Question =>
-                question.id === _targetId
-                    ? { ...question, type: _newQuestionType }
+                question.id === targetId
+                    ? { ...question, type: newQuestionType }
                     : { ...question }
         );
     }
@@ -257,30 +257,30 @@ export function changeQuestionTypeById(
  * can make it simpler! Break down complicated tasks into little pieces.
  */
 export function editOption(
-    _questions: Question[],
-    _targetId: number,
-    _targetOptionIndex: number,
-    _newOption: string
+    questions: Question[],
+    targetId: number,
+    targetOptionIndex: number,
+    newOption: string
 ): Question[] {
     const spliceFunction = (question: Question) => {
         const newArray = [...question.options];
-        newArray.splice(_targetOptionIndex, 1, _newOption);
+        newArray.splice(targetOptionIndex, 1, newOption);
         return newArray;
     };
-    if (_targetOptionIndex === -1) {
-        return _questions.map(
+    if (targetOptionIndex === -1) {
+        return questions.map(
             (question: Question): Question =>
-                question.id === _targetId
+                question.id === targetId
                     ? {
                         ...question,
-                        options: [...question.options, _newOption]
+                        options: [...question.options, newOption]
                     }
                     : { ...question }
         );
     } else {
-        return _questions.map(
+        return questions.map(
             (question: Question): Question =>
-                question.id === _targetId
+                question.id === targetId
                     ? { ...question, options: spliceFunction(question) }
                     : { ...question }
         );
@@ -294,16 +294,16 @@ export function editOption(
  * function you defined previously; the `newId` is the parameter to use for the duplicate's ID.
  */
 export function duplicateQuestionInArray(
-    _questions: Question[],
-    _targetId: number,
-    _newId: number
+    questions: Question[],
+    targetId: number,
+    newId: number
 ): Question[] {
-    const index = _questions.findIndex(({ id }) => _targetId === id);
-    const duplication = [..._questions];
+    const index = questions.findIndex(({ id }) => targetId === id);
+    const duplication = [...questions];
     duplication.splice(
         index + 1,
         0,
-        duplicateQuestion(_newId, _questions[index])
+        duplicateQuestion(newId, questions[index])
     );
 
     return duplication;
