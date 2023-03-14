@@ -2,27 +2,32 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import { QuestionType } from "../interfaces/question";
 
+{
+    /* 3/4 test cases passed*/
+}
+
 export function ChangeType(): JSX.Element {
     const [visible, setVisible] = useState<boolean>(true);
-    const [type, setType] = useState<QuestionType>("short_answer_question");
+    // eslint-disable-next-line prefer-const
+    let [type, setType] = useState<QuestionType>("short_answer_question");
 
-    type QuestionType = "multiple_choice_question" | "short_answer_question";
+    type QuestionType = "short_answer_question" | "multiple_choice_question";
+    function changingType(): void {
+        if (type === "short_answer_question") {
+            type = "multiple_choice_question";
+        } else {
+            type = "short_answer_question";
+        }
+        setType(type);
+    }
     return (
         <div>
-            <div>
-                <Button
-                    onClick={() => setType("short_answer_question")}
-                    disabled={visible}
-                >
-                    Short Answer
-                </Button>
-                <Button
-                    onClick={() => setType("multiple_choice_question")}
-                    disabled={!visible}
-                >
-                    Multiple Choice
-                </Button>
-            </div>
+            <Button onClick={changingType}>Change Type</Button>
+            {type === "short_answer_question" ? (
+                <div> Short Answer </div>
+            ) : (
+                <div>Multiple Choice </div>
+            )}
         </div>
     );
 }

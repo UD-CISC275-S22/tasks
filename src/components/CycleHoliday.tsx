@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
+{
+    /* 1/4 test cases passed*/
+}
+
 export function CycleHoliday(): JSX.Element {
     // eslint-disable-next-line prefer-const
-    let [holiday, setHoliday] = useState<string>("");
+    let [holiday, setHoliday] = useState<string>("Christmas🎄");
+    const [visible, setVisible] = useState<boolean>(true);
     type holiday =
         | "4thofJuly 🎆"
         | "St Patty's Day ☘️"
@@ -38,15 +43,21 @@ export function CycleHoliday(): JSX.Element {
     return (
         <>
             <div>
+                <Button
+                    onClick={() => setHoliday("Christmas 🎄")}
+                    disabled={visible}
+                ></Button>
+            </div>
+            <div>
                 Holiday: <span>{holiday}</span>
                 <Button onClick={holidayChronological}>
-                    Holiday through the Year
+                    Holiday Through the Year
                 </Button>
             </div>
             <div>
                 Holiday: <span>{holiday}</span>
                 <Button onClick={holidayAlphabetical}>
-                    Holiday Alphabetical
+                    Holiday in Alphabetical Order
                 </Button>
             </div>
         </>
