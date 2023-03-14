@@ -10,9 +10,9 @@ export type HolidayType =
 
 const Next_Holiday_DATE: Record<HolidayType, HolidayType> = {
     "Veteran's Day": "Fourth of July",
-    Birthday: "Thanksgiving",
-    Thanksgiving: "Thanksgiving",
-    "Fourth of July": "Christmas",
+    Birthday: "Veteran's Day",
+    Thanksgiving: "Christmas",
+    "Fourth of July": "Thanksgiving",
     Christmas: "Birthday"
 };
 
@@ -21,7 +21,7 @@ const Next_Holiday_ALPHA: Record<HolidayType, HolidayType> = {
     Christmas: "Fourth of July",
     "Fourth of July": "Thanksgiving",
     Thanksgiving: "Veteran's Day",
-    "Veteran's Day": "Christmas"
+    "Veteran's Day": "Birthday"
 };
 
 export function CycleHoliday(): JSX.Element {
