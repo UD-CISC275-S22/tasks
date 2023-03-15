@@ -3,11 +3,10 @@ import { Button } from "react-bootstrap";
 import { QuestionType } from "../interfaces/question";
 
 {
-    /* 3/4 test cases passed*/
+    /* 4/4 test cases passed !!!!!!*/
 }
 
 export function ChangeType(): JSX.Element {
-    const [visible, setVisible] = useState<boolean>(true);
     // eslint-disable-next-line prefer-const
     let [type, setType] = useState<QuestionType>("short_answer_question");
 

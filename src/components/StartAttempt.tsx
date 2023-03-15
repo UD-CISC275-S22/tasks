@@ -16,15 +16,13 @@ export function StartAttempt(): JSX.Element {
         <>
             <div>
                 <Button>Start Quiz</Button>
-                <Button onClick={() => setProgress(true)} disabled={!progress}>
-                    Start
-                </Button>
+                <Button onClick={() => setProgress(true)}>Start Quiz</Button>
                 {/* if attempts is less than 4 start cannot be clicked */}
                 <Button onClick={() => setAttempts(attempts - 1)}></Button>
             </div>
             <div>
                 <Button>Stop Quiz</Button>
-                <Button onClick={() => setProgress(true)} disabled={progress}>
+                <Button onClick={() => setProgress(true)} disabled={!progress}>
                     Stop Quiz
                 </Button>
             </div>
