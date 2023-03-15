@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
 {
-    /* 6 / 13 passing tests */
+    /* 11 / 13 passing tests */
 }
 
 export function StartAttempt(): JSX.Element {
@@ -15,19 +15,24 @@ export function StartAttempt(): JSX.Element {
     return (
         <>
             <div>
-                <Button>Start Quiz</Button>
-                <Button onClick={() => setProgress(true)}>Start Quiz</Button>
+                <Button
+                    onClick={() => setAttempts(attempts - 1)}
+                    disabled={progress}
+                >
+                    Start Quiz
+                </Button>
                 {/* if attempts is less than 4 start cannot be clicked */}
-                <Button onClick={() => setAttempts(attempts - 1)}></Button>
             </div>
             <div>
-                <Button>Stop Quiz</Button>
-                <Button onClick={() => setProgress(true)} disabled={!progress}>
+                <Button onClick={flipProgress} disabled={!progress}>
                     Stop Quiz
                 </Button>
             </div>
             <span>
-                <Button onClick={() => setAttempts(attempts + 1)}>
+                <Button
+                    onClick={() => setAttempts(attempts + 1)}
+                    disabled={progress}
+                >
                     Mulligan
                 </Button>
                 to {attempts}.

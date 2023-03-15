@@ -10,14 +10,14 @@ type Holiday =
     | "Christmas 🎄"
     | "New Year's ✨"
     | "Birthday 🎁";
-const holiday_Chronological: Record<Holiday, Holiday> = {
+const holidayChronological: Record<Holiday, Holiday> = {
     "St Patty's Day ☘️": "4thofJuly 🎆",
     "4thofJuly 🎆": "Birthday 🎁",
     "Birthday 🎁": "Christmas 🎄",
     "Christmas 🎄": "New Year's ✨",
     "New Year's ✨": "St Patty's Day ☘️"
 };
-const holiday_alphabetical: Record<Holiday, Holiday> = {
+const holidayAlphabetical: Record<Holiday, Holiday> = {
     "Birthday 🎁": "Christmas 🎄",
     "Christmas 🎄": "4thofJuly 🎆",
     "4thofJuly 🎆": "New Year's ✨",
@@ -30,11 +30,11 @@ export function CycleHoliday(): JSX.Element {
     let [holiday, setHoliday] = useState<string>("Birthday 🎁");
 
     function changeByYear(): void {
-        const newHoliday = holiday_Chronological[holiday];
+        const newHoliday = holidayChronological[holiday];
         setHoliday(newHoliday);
     }
     function changeByAlphabet(): void {
-        const newHoliday = holiday_alphabetical[holiday];
+        const newHoliday = holidayAlphabetical[holiday];
         setHoliday(newHoliday);
     }
 
