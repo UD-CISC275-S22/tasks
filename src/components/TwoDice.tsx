@@ -15,9 +15,10 @@ export function TwoDice(): JSX.Element {
     /* Each die’s value should be rendered in the View in a span tag of
      their own, with the first dice having the data-testid of left-die 
      and the second dice having the data-testid of right-die. */
-    const [left_die, setDice] = useState<number>(d6);
+    let [left_die, setDice] = useState<number>(d6);
     const [right_die, setDice2] = useState<number>(d6);
     const [progress, setProgress] = useState<boolean>(true);
+
     return (
         <>
             <div>
@@ -28,6 +29,9 @@ export function TwoDice(): JSX.Element {
                 >
                     Roll Left
                 </Button>
+                <div>
+                    <span data-testid="left-die">{left_die}</span>
+                </div>
             </div>
             <div>
                 <Button
@@ -37,6 +41,9 @@ export function TwoDice(): JSX.Element {
                 >
                     Roll Right
                 </Button>
+            </div>
+            <div>
+                <span data-testid="right-die">24</span>.
             </div>
             <div>
                 {left_die === right_die && progress ? (
