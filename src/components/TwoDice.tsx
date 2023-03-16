@@ -21,10 +21,22 @@ export function TwoDice(): JSX.Element {
     return (
         <>
             <div>
-                <Button onClick={() => setDice(d6)}>Roll Left</Button>
+                <Button
+                    onClick={() => {
+                        setDice(d6);
+                    }}
+                >
+                    Roll Left
+                </Button>
             </div>
             <div>
-                <Button onClick={() => setDice2(d6)}>Roll Right</Button>
+                <Button
+                    onClick={() => {
+                        setDice2(d6);
+                    }}
+                >
+                    Roll Right
+                </Button>
             </div>
             <div>
                 {left_die === right_die && progress ? (

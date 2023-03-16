@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
 {
-    /* 11 / 13 passing tests */
+    /* 13 / 13 passing tests !!! */
 }
 
 export function StartAttempt(): JSX.Element {
@@ -24,7 +24,6 @@ export function StartAttempt(): JSX.Element {
                 >
                     Start Quiz
                 </Button>
-                {/* if attempts is less than 4 start cannot be clicked */}
             </div>
             <div>
                 <Button onClick={() => flipProgress()} disabled={!progress}>
