@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
 {
-    /* 2/4 test cases passed*/
+    /* 4/4 test cases passed*/
 }
 type Holiday =
     | "4thofJuly 🎆"
@@ -27,7 +27,7 @@ const holidayAlphabetical: Record<Holiday, Holiday> = {
 
 export function CycleHoliday(): JSX.Element {
     // eslint-disable-next-line prefer-const
-    let [holiday, setHoliday] = useState<string>("Birthday 🎁");
+    let [holiday, setHoliday] = useState<Holiday>("Birthday 🎁");
 
     function changeByYear(): void {
         const newHoliday = holidayChronological[holiday];
