@@ -166,9 +166,11 @@ export function sameType(questions: Question[]): boolean {
         return true;
     }
     const matchType = questions[0].type;
-    return questions.reduce((prevType, newQues) => {
-        return prevType && newQues.type === matchType;
-    }, true);
+    return questions.reduce(
+        (prevType: boolean, newQues: Question): boolean =>
+            prevType && newQues.type === matchType,
+        true
+    );
 }
 
 /***
