@@ -21,7 +21,6 @@ import { ChangeColor } from "./form-components/ChangeColor";
 function App(): JSX.Element {
     return (
         <div className="App">
-<<<<<<< HEAD
             <header className="App-header">My CISC275 Webpage</header>
             <h1>by Jonathan Ma</h1>
             <img className="Image" src={cmc} alt="Blood Meridian Fan Art" />
@@ -55,12 +54,6 @@ function App(): JSX.Element {
                     <Col></Col>
                 </Row>
             </Container>
-
-            <DoubleHalf></DoubleHalf>
-=======
-            <header className="App-header">
-                UD CISC275 with React Hooks and TypeScript
-            </header>
             <hr></hr>
             <CheckAnswer expectedAnswer="42"></CheckAnswer>
             <hr></hr>
@@ -75,8 +68,7 @@ function App(): JSX.Element {
                 expectedAnswer="b"
             ></MultipleChoiceQuestion>
             <hr></hr>
-            {/* <DoubleHalf></DoubleHalf> */}
->>>>>>> upstream/task-forms
+            <DoubleHalf></DoubleHalf>
             <hr></hr>
             <ChooseTeam></ChooseTeam>
             <hr></hr>
