@@ -13,22 +13,25 @@ export function StartAttempt(): JSX.Element {
         setProgress(!progress);
     }
     return (
-        <>
+        <div>
             <div>
                 <Button
-                    onClick={() => setAttempts(attempts - 1)}
-                    disabled={progress}
+                    onClick={() => {
+                        flipProgress();
+                        setAttempts(attempts - 1);
+                    }}
+                    disabled={attempts <= 0 || progress}
                 >
                     Start Quiz
                 </Button>
                 {/* if attempts is less than 4 start cannot be clicked */}
             </div>
             <div>
-                <Button onClick={flipProgress} disabled={!progress}>
+                <Button onClick={() => flipProgress()} disabled={!progress}>
                     Stop Quiz
                 </Button>
             </div>
-            <span>
+            <div>
                 <Button
                     onClick={() => setAttempts(attempts + 1)}
                     disabled={progress}
@@ -36,7 +39,7 @@ export function StartAttempt(): JSX.Element {
                     Mulligan
                 </Button>
                 to {attempts}.
-            </span>
-        </>
+            </div>
+        </div>
     );
 }
