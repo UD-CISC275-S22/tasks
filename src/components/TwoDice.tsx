@@ -15,43 +15,33 @@ export function TwoDice(): JSX.Element {
     /* Each die’s value should be rendered in the View in a span tag of
      their own, with the first dice having the data-testid of left-die 
      and the second dice having the data-testid of right-die. */
-    let [left_die, setDice] = useState<number>(d6);
-    const [right_die, setDice2] = useState<number>(d6);
-    const [progress, setProgress] = useState<boolean>(true);
+    const [left_die, setDice] = useState<number>(4);
+    const [right_die, setDice2] = useState<number>(2);
 
     return (
-        <>
+        <div>
+            <span>
+                <Button onClick={() => setDice(d6)}>Roll Left</Button>
+            </span>
+            <span>
+                <Button onClick={() => setDice2(d6)}>Roll Right</Button>
+            </span>
             <div>
-                <Button
-                    onClick={() => {
-                        setDice(d6);
-                    }}
-                >
-                    Roll Left
-                </Button>
-                <div>
-                    <span data-testid="left-die">{left_die}</span>
-                </div>
+                <span data-testid="left-die">{left_die}</span>
+                <span data-testid="right-die">{right_die}</span>.
             </div>
             <div>
-                <Button
-                    onClick={() => {
-                        setDice2(d6);
-                    }}
-                >
-                    Roll Right
-                </Button>
-            </div>
-            <div>
-                <span data-testid="right-die">24</span>.
-            </div>
-            <div>
-                {left_die === right_die && progress ? (
-                    <div>WIN!! </div>
+                {left_die === 1 && left_die === right_die ? (
+                    <span>Lose </span>
                 ) : (
-                    <span>!progress</span>
+                    <span> </span>
+                )}
+                {left_die !== 1 && left_die === right_die ? (
+                    <span>Win </span>
+                ) : (
+                    <span> </span>
                 )}
             </div>
-        </>
+        </div>
     );
 }
