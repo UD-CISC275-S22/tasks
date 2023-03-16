@@ -17,17 +17,21 @@ export function TwoDice(): JSX.Element {
      and the second dice having the data-testid of right-die. */
     const [left_die, setDice] = useState<number>(d6);
     const [right_die, setDice2] = useState<number>(d6);
+    const [progress, setProgress] = useState<boolean>(true);
     return (
         <>
             <div>
-                <Button>Roll Left</Button>
                 <Button onClick={() => setDice(d6)}>Roll Left</Button>
             </div>
-            <span>
-                <Button onClick={() => setDice2(d6)}>Roll Right</Button>
-            </span>
             <div>
-                {left_die === right_die ? <span>Lose!</span> : <span>Win</span>}
+                <Button onClick={() => setDice2(d6)}>Roll Right</Button>
+            </div>
+            <div>
+                {left_die === right_die && progress ? (
+                    <div>WIN!! </div>
+                ) : (
+                    <span>!progress</span>
+                )}
             </div>
         </>
     );
