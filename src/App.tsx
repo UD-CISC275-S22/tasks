@@ -19,7 +19,7 @@ function App(): JSX.Element {
             </header>
             <h1> Hello World </h1>
             <hr></hr>
-            {/* <DoubleHalf></DoubleHalf> */}
+            {<DoubleHalf></DoubleHalf>}
             <hr></hr>
             <ChooseTeam></ChooseTeam>
             <hr></hr>

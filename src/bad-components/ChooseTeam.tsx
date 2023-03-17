@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import { Button, Row, Col } from "react-bootstrap";
 
+interface teams {
+    setTeam: (team: string[]) => void;
+    team: string[];
+}
+
 const PEOPLE = [
     "Alan Turing",
     "Grace Hopper",
@@ -10,33 +15,28 @@ const PEOPLE = [
     "Margaret Hamilton"
 ];
 
+function chooseMember(newMember: string, { team, setTeam }: teams) {
+    setTeam(!team.includes(newMember) ? [...team, newMember] : [...team]);
+}
+
 export function ChooseTeam(): JSX.Element {
-    const [allOptions, setAllOptions] = useState<string[]>(PEOPLE);
+    //const [allOptions, setAllOptions] = useState<string[]>(PEOPLE);
     const [team, setTeam] = useState<string[]>([]);
-
-    function chooseMember() {
-        /*
-        if (!team.includes(newMember)) {
-            team.push(newMember);
-        }
-        */
-    }
-
-    function clearTeam() {
-        /*
-        team = [];
-        */
-    }
-
+    const clearTeam = () => setTeam([]);
     return (
         <div>
             <h3>Choose Team</h3>
             <Row>
                 <Col>
-                    {allOptions.map((option: string) => (
+                    {PEOPLE.map((option: string) => (
                         <div key={option} style={{ marginBottom: "4px" }}>
                             Add{" "}
-                            <Button onClick={chooseMember} size="sm">
+                            <Button
+                                onClick={() =>
+                                    chooseMember(option, { team, setTeam })
+                                }
+                                size="sm"
+                            >
                                 {option}
                             </Button>
                         </div>
