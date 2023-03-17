@@ -43,13 +43,11 @@ export function CycleHoliday(): JSX.Element {
             <div> Holiday: {holiday}</div>
             <div>
                 <Button onClick={changeByYear}>Holiday Through the Year</Button>
-                {<div>{holiday}</div>}
             </div>
             <div>
                 <Button onClick={changeByAlphabet}>
                     Holiday in Alphabetical Order
                 </Button>
-                {<div>{holiday}</div>}
             </div>
         </>
     );
