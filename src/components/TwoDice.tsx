@@ -1,4 +1,6 @@
+//eslint - disable - next - line;
 import React, { useState } from "react";
+//eslint - disable - next - line;
 import { Button } from "react-bootstrap";
 
 /**
@@ -12,5 +14,26 @@ export function d6(): number {
 }
 
 export function TwoDice(): JSX.Element {
-    return <div>Two Dice</div>;
+    const [leftValue, leftState] = useState<number>(1);
+    const [rightValue, rightState] = useState<number>(2);
+    return (
+        <div>
+            <span>
+                <Button onClick={() => leftState(d6())}>Roll Left</Button>
+            </span>
+            <span>
+                <Button onClick={() => rightState(d6())}>Roll Right</Button>
+            </span>
+
+            <div>
+                <span data-testid="left-die">{leftValue}</span>
+                <span data-testid="right-die">{rightValue}</span>
+            </div>
+
+            {leftValue + rightValue == 2 && <div>Lose</div>}
+            {leftValue == rightValue && leftValue + rightValue != 2 && (
+                <div>Win</div>
+            )}
+        </div>
+    );
 }
