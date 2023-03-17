@@ -26,7 +26,7 @@ export function TwoDice(): JSX.Element {
             </span>
 
             <div>
-                <span data-testid="left-die">{leftValue}</span>
+                <span data-testid="left-die">{leftValue} </span>
                 <span data-testid="right-die">{rightValue}</span>
             </div>
 
