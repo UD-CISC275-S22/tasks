@@ -1,8 +1,3 @@
-//eslint - disable - next - line;
-import React, { useState } from "react";
-//eslint - disable - next - line;
-import { Button } from "react-bootstrap";
-
 export function StartAttempt(): JSX.Element {
     const [attempts, addAttempt] = useState<number>(4);
     const [progress, setState] = useState<boolean>(true);
