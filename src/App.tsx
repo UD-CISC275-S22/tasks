@@ -1,9 +1,5 @@
 import React from "react";
 import "./App.css";
-import { Button } from "react-bootstrap";
-import { Container } from "react-bootstrap";
-import { Row } from "react-bootstrap";
-import { Col } from "react-bootstrap";
 //import dogs from "C:\Users\Shawn\tasks\src\images\MJL.JPG";
 import { ChangeType } from "./components/ChangeType";
 import { RevealAnswer } from "./components/RevealAnswer";
