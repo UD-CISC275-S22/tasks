@@ -33,7 +33,6 @@ describe("StartAttempt Component tests", () => {
     });
     test("The Number of attempts is more than 0", () => {
         const attemptNumber = extractDigits(screen.getByText(/(\d+)/));
-        console.log(attemptNumber);
         expect(attemptNumber).toBeGreaterThan(0);
     });
     test("The Number of attempts is less than 10", () => {
