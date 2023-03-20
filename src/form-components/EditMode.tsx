@@ -17,8 +17,8 @@ export function EditMode(): JSX.Element {
                 id="edit-switch"
                 label="Edit Mode"
                 checked={editMode}
-                onChange={(e: ChangeEvent) =>
-                    setEdit((e.target as HTMLInputElement).checked)
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                    setEdit(e.target.checked)
                 }
             />
             {editMode && (
