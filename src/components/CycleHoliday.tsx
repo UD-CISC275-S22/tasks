@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
 export function CycleHoliday(): JSX.Element {
-    const [Hol, setHol] = useState<string>("New Years");
+    const [Hol, setHol] = useState<string>("New Years"); //worked with mbiet uko
 
     function In_order() {
         if (Hol === "New Years") {
