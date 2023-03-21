@@ -30,7 +30,8 @@ export function makeBlankQuestion(
  * HINT: Look up the `trim` and `toLowerCase` functions.
  */
 export function isCorrect(question: Question, answer: string): boolean {
-    const expected = question.expected.trim().toLowerCase();
+    const newquest = { ...question };
+    const expected = newquest.expected.trim().toLowerCase();
     const theanswer = answer.trim().toLowerCase();
     return expected === theanswer;
 }
@@ -42,9 +43,10 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
-    const findAns = question.options.find((x) => x === answer);
+    const newquest = { ...question };
+    const findAns = newquest.options.find((x) => x === answer);
     const theanswer = findAns === undefined ? false : true;
-    return question.type === "short_answer_question" ? true : theanswer;
+    return newquest.type === "short_answer_question" ? true : theanswer;
 }
 
 /**
@@ -78,10 +80,11 @@ export function toShortForm(question: Question): string {
  * Check the unit tests for more examples of what this looks like!
  */
 export function toMarkdown(question: Question): string {
-    let markdown = `# ${question.name}\n${question.body}\n`;
+    const newques = { ...question };
+    let markdown = `# ${newques.name}\n${newques.body}\n`;
 
-    if (question.type === "multiple_choice_question") {
-        question.options.forEach((option) => {
+    if (newques.type === "multiple_choice_question") {
+        newques.options.forEach((option) => {
             markdown += `- ${option}\n`;
         });
     }
