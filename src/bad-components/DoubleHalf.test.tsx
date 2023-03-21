@@ -38,7 +38,7 @@ describe("DoubleHalf Component tests", () => {
         expect(screen.getByText("20")).toBeInTheDocument();
         expect(screen.queryByText("10")).not.toBeInTheDocument();
         double.click();
-        expect(screen.getByText("40")).toBeInTheDocument();
+        expect(screen.getByText("40")).toBeInTheDocument(); //fail
         expect(screen.queryByText("20")).not.toBeInTheDocument();
         halve.click();
         expect(screen.getByText("20")).toBeInTheDocument();

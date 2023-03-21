@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
+{
+    /* 2/3 passing tests */
+}
+
 function ShoveBoxButton({
     position,
     setPosition
@@ -37,14 +41,14 @@ export function ShoveBox(): JSX.Element {
     return (
         <div>
             <h3>Shove Box</h3>
-            {/* <span>The box is at: {box.position}</span>
+            {/* <span>The box is at: {position}</span>
             <div>
                 <ShoveBoxButton
                     position={box.position}
                     setPosition={box.setPosition}
                 ></ShoveBoxButton>
                 {box}
-            </div> */}
+            </div>{" "} */}
         </div>
     );
 }
