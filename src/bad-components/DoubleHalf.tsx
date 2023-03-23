@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap";
 //import { dhValue, setDhValue } from "./DoubleHalfState";
 
 {
-    /* 4/5 passing tests */
+    /* 5/5 passing tests */
 }
 interface Answer {
     setDhValue: (setDhValue: number) => void;
