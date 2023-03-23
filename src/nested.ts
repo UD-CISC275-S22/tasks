@@ -1,5 +1,5 @@
-import { type } from "os";
-import { idText, isPropertyAccessOrQualifiedName } from "typescript";
+//import { type } from "os";
+//import { idText, isPropertyAccessOrQualifiedName } from "typescript";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
 import { makeBlankQuestion } from "./objects";
