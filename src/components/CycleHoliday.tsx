@@ -26,8 +26,7 @@ const holidayAlphabetical: Record<Holiday, Holiday> = {
 };
 
 export function CycleHoliday(): JSX.Element {
-    // eslint-disable-next-line prefer-const
-    let [holiday, setHoliday] = useState<Holiday>("Birthday 🎁");
+    const [holiday, setHoliday] = useState<Holiday>("Birthday 🎁");
 
     function changeByYear(): void {
         const newHoliday = holidayChronological[holiday];
