@@ -305,10 +305,6 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ): Question[] {
-    const deepCopy = questions.map(
-        (question: Question): Question => ({ ...question })
-    );
-
     const newOptions = (question: Question) => {
         const copy = [...question.options];
         copy.splice(targetOptionIndex, 1, newOption);
