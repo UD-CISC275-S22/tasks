@@ -2,12 +2,6 @@ import React from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import "./App.css";
 import image from "./Getaway.png";
-import { ChangeType } from "./components/ChangeType";
-import { RevealAnswer } from "./components/RevealAnswer";
-import { StartAttempt } from "./components/StartAttempt";
-import { TwoDice } from "./components/TwoDice";
-import { CycleHoliday } from "./components/CycleHoliday";
-import { Counter } from "./components/Counter";
 
 function App(): JSX.Element {
     return (
@@ -21,6 +15,7 @@ function App(): JSX.Element {
                         Log Hello World
                     </Button>
                 </header>
+
                 <div>
                     <Container>
                         <Row>
@@ -28,7 +23,7 @@ function App(): JSX.Element {
                                 <div className="Rectangle">
                                     <div
                                         style={{
-                                            border: "7px solid #000000",
+                                            border: "7px solid #a29bfd",
                                             padding: "1px"
                                         }}
                                     >
@@ -36,7 +31,7 @@ function App(): JSX.Element {
                                             <div className="font-size">
                                                 <span
                                                     style={{
-                                                        color: "black"
+                                                        color: "#a29bfd"
                                                     }}
                                                 >
                                                     DAY
@@ -48,13 +43,10 @@ function App(): JSX.Element {
                                 </div>
                             </Col>
                             <Col>
-                                <div
-                                    className="Rectangle"
-                                    style={{ textAlign: "center" }}
-                                >
+                                <div className="Rectangle">
                                     <div
                                         style={{
-                                            border: "7px solid black",
+                                            border: "7px solid #a29bfd",
                                             padding: "1px"
                                         }}
                                     >
@@ -62,7 +54,7 @@ function App(): JSX.Element {
                                             <div className="font-size">
                                                 <span
                                                     style={{
-                                                        color: "black"
+                                                        color: "#a29bfd"
                                                     }}
                                                 >
                                                     NIGHT
@@ -70,6 +62,7 @@ function App(): JSX.Element {
                                             </div>
                                         </div>
                                     </div>
+
                                     <ul>
                                         <li>Nights</li>
                                         <li>Stars</li>
@@ -86,20 +79,6 @@ function App(): JSX.Element {
                 </div>
                 <div className="white-space"></div>
                 <img src={image} alt="Purity" />
-            </div>
-            <div className="shift">
-                <hr></hr>
-                <Counter></Counter>
-                <hr />
-                <RevealAnswer></RevealAnswer>
-                <hr />
-                <StartAttempt></StartAttempt>
-                <hr />
-                <TwoDice></TwoDice>
-                <hr />
-                <ChangeType></ChangeType>
-                <hr />
-                <CycleHoliday></CycleHoliday>
             </div>
         </div>
     );
