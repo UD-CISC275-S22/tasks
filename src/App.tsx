@@ -28,7 +28,7 @@ function App(): JSX.Element {
                                 <div className="Rectangle">
                                     <div
                                         style={{
-                                            border: "7px solid #a29bfd",
+                                            border: "7px solid #000000",
                                             padding: "1px"
                                         }}
                                     >
@@ -36,7 +36,7 @@ function App(): JSX.Element {
                                             <div className="font-size">
                                                 <span
                                                     style={{
-                                                        color: "#a29bfd"
+                                                        color: "black"
                                                     }}
                                                 >
                                                     DAY
@@ -54,7 +54,7 @@ function App(): JSX.Element {
                                 >
                                     <div
                                         style={{
-                                            border: "7px solid #a29bfd",
+                                            border: "7px solid black",
                                             padding: "1px"
                                         }}
                                     >
@@ -62,7 +62,7 @@ function App(): JSX.Element {
                                             <div className="font-size">
                                                 <span
                                                     style={{
-                                                        color: "#a29bfd"
+                                                        color: "black"
                                                     }}
                                                 >
                                                     NIGHT
