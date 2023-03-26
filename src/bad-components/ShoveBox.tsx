@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
 {
-    /* 0/3 passing tests */
+    /* 3/3 passing tests */
 }
 
 function ShoveBoxButton({
