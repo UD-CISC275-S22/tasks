@@ -33,7 +33,7 @@ export function nextAlphabetical(holiday_name: string): string {
 
 export function nextChronological(holiday_name: string): string {
     const currentIndex = holidays.findIndex(
-        (holiday) => holiday.name === holiday_name
+        (holiday: Holiday) => holiday.name === holiday_name
     );
     const sortedHolidays = holidays.sort((a, b) => {
         const [aMonth, aDay] = a.date.split("/");
@@ -50,12 +50,6 @@ export function nextChronological(holiday_name: string): string {
 
 export function CycleHoliday(): JSX.Element {
     const [holiday, setHoliday] = useState<string>(holidays[0].name);
-
-    /*const holiday_emoji = (
-        holidays.find((holiday_e) => holiday_e.name === holiday) || {
-            emoji: ""
-        }
-    ).emoji;*/
 
     function setAlphabetical() {
         setHoliday(nextAlphabetical(holiday));
