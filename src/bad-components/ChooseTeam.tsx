@@ -11,13 +11,12 @@ const PEOPLE = [
 ];
 
 export function ChooseTeam(): JSX.Element {
-    const [allOptions, setAllOptions] = useState<string[]>(PEOPLE);
     const [team, setTeam] = useState<string[]>([]);
 
     function chooseMember(newMember: string) {
         if (
-            allOptions.includes(newMember) &&
-            newMember != "" &&
+            PEOPLE.includes(newMember) &&
+            newMember !== "" &&
             !team.includes(newMember)
         ) {
             const newTeam = [...team, newMember];
@@ -36,7 +35,7 @@ export function ChooseTeam(): JSX.Element {
             </div>
             <Row>
                 <Col>
-                    {allOptions.map((option: string) => (
+                    {PEOPLE.map((option: string) => (
                         <div key={option} style={{ marginBottom: "4px" }}>
                             Add{" "}
                             <Button
