@@ -3,21 +3,20 @@ import { Form } from "react-bootstrap";
 
 export function EditMode(): JSX.Element {
     const [isStudent, setIsStudent] = useState<boolean>(true);
+
+    function updateStudent(event: React.ChangeEvent<HTMLInputElement>) {
+        setIsStudent(event.target.checked);
+    }
+
     return (
         <div>
             <h3>Edit Mode</h3>
-        // This is the Control
-        function updateHappiness(event: React.ChangeEvent<HTMLInputElement>) {
-            setIsHappy(event.target.checked)
-        }
-
-        // This is the View
             <Form.Check
-                type="checkbox"
+                type="switch"
                 id="is-happy-check"
                 label="Happy?"
-                checked={isHappy}
-                onChange={updateHappiness}
+                checked={isStudent}
+                onChange={updateStudent}
             />
         </div>
     );

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 
 {
-    /* 4/6 passing */
+    /* 6/6 passing */
 }
 
 export function CheckAnswer({
