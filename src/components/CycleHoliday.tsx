@@ -15,7 +15,13 @@ export function CycleHoliday(): JSX.Element {
     );
 
     const nextHolidayByLetter = (holiday: Holiday): Holiday => {
-        const holidays = Object.keys(Holiday).map((key) => Holiday[key]);
+        const holidays = [
+            Holiday.Halloween,
+            Holiday.Thanksgiving,
+            Holiday.Valentines,
+            Holiday.Christmas,
+            Holiday.NewYear
+        ];
         const currentIndex = holidays.findIndex((h) => h === holiday);
         const nextIndex = (currentIndex + 1) % holidays.length;
         return holidays[nextIndex];
@@ -47,8 +53,8 @@ export function CycleHoliday(): JSX.Element {
     return (
         <div>
             <div>Holiday: {currentHoliday}</div>
-            <Button onClick={handleClickAlphabet}>Advance by Alphabet</Button>
-            <Button onClick={handleClickYear}>Advance by Year</Button>
+            <button onClick={handleClickAlphabet}>Advance by Alphabet</button>
+            <button onClick={handleClickYear}>Advance by Year</button>
         </div>
     );
 }
