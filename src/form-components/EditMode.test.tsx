@@ -4,7 +4,9 @@ import { EditMode } from "./EditMode";
 import userEvent from "@testing-library/user-event";
 
 describe("EditMode Component tests", () => {
-    beforeEach(() => render(<EditMode />));
+    beforeEach(() => {
+        render(<EditMode />);
+    });
     test("There is one checkbox and no textboxes", () => {
         const switchButton = screen.getByRole("checkbox");
         expect(switchButton).toBeInTheDocument();
