@@ -24,12 +24,13 @@ export function ChangeColor(): JSX.Element {
             {colors.map((col: string) => (
                 <Form.Check
                     inline
-                    key={col}
                     type="radio"
+                    onChange={updateColor}
+                    id="color-id"
+                    key={col}
                     label={col}
                     value={col}
                     checked={color === col}
-                    onChange={updateColor}
                 />
             ))}
             <Form.Group data-testid="colored-box">
