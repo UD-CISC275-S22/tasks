@@ -82,29 +82,27 @@ export function toShortForm(question: Question): string {
  * Check the unit tests for more examples of what this looks like!
  */
 export function toMarkdown(question: Question): string {
- const questionName = "# " + question.name;
- const questionBody = question.body;
- const questionOptions = question.options.map(
-     (message: string): string => "- " + message
- );
- if (question.type === "short_answer_question") {
-     return questionName + "\n" + questionBody;
- } else {
-     return (
-         questionName +
-         "\n" +
-         questionBody +
-         "\n" +
-         questionOptions[0] +
-         "\n" +
-         questionOptions[1] +
-         "\n" +
-         questionOptions[2]
-     );
+    const questionName = "# " + question.name;
+    const questionBody = question.body;
+    const questionOptions = question.options.map(
+        (message: string): string => "- " + message
+    );
+    if (question.type === "short_answer_question") {
+        return questionName + "\n" + questionBody;
+    } else {
+        return (
+            questionName +
+            "\n" +
+            questionBody +
+            "\n" +
+            questionOptions[0] +
+            "\n" +
+            questionOptions[1] +
+            "\n" +
+            questionOptions[2]
+        );
     }
-};
-
-
+}
 /**
  * Return a new version of the given question, except the name should now be
  * `newName`.
