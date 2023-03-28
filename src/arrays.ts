@@ -21,8 +21,8 @@ export function bookEndList(numbers: number[]): number[] {
  * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
-    const tripled = numbers.map((triple: number): number => triple * 3);
-    return numbers;
+    const tripled = numbers.map((nums: number): number => nums * 3);
+    return tripled;
 }
 
 /**
@@ -30,14 +30,10 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    const arrNums = numbers.map((element: string): number => {
-        if (isNaN(parseInt(element))) {
-            return 0;
-        } else {
-            return parseInt(element);
-        }
-    });
-    return [];
+    const convertString = numbers.map((nums: string): number =>
+        parseInt(nums) ? parseInt(nums) : 0
+    );
+    return convertString;
 }
 
 /**
@@ -48,21 +44,10 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    const firstArr = amounts.map(
-        (element: string): string =>
-            element.includes("$") ? element.replace("$", "") : element //this line checks to see if there is a is a dollar sign in the array and if there is, then it will return a empty string
+    const nonDollar = amounts.map((nums: string): number =>
+        parseInt(nums.replace("$", "")) ? parseInt(nums.replace("$", "")) : 0
     );
-    let secondArr = firstArr.map((element: string): number =>
-        parseInt(element)
-    );
-    secondArr = secondArr.map((element: number): number => {
-        if (isNaN(Number(element))) {
-            return 0;
-        } else {
-            return Number(element);
-        }
-    });
-    return [];
+    return nonDollar;
 };
 
 /**
@@ -71,14 +56,10 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    let arrMessages = messages.map(
-        (message: string): string =>
-            message.endsWith("!") ? message.toUpperCase() : message //checks to see if the message ends with an ! and if it does, then make that string uppercase
+    const words = messages.filter((s: string): boolean => !s.endsWith("?"));
+    return words.map((s: string): string =>
+        s.endsWith("!") ? s.toUpperCase() : s
     );
-    arrMessages = arrMessages.filter(
-        (message: string): boolean => message.charAt(message.length - 1) !== "?" //if the string ends with a question mark, then the string is not included in the new array
-    );
-    return [];
 };
 
 /**
@@ -86,8 +67,8 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    words = words.filter((letter: string): boolean => letter.length < 4); //This will give you number of words in the array that have a length less than 4 and then it will return the new array
-    return 0;
+    const short = words.filter((word: string): boolean => word.length < 4);
+    return short.length;
 }
 
 /**
@@ -96,15 +77,10 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    let arrColor = false;
-    if (arrColor === null) {
-        return true;
-    }
-    arrColor = colors.every(
+    return colors.every(
         (color: string): boolean =>
             color === "red" || color === "blue" || color === "green"
     );
-    return false;
 }
 
 /**
@@ -116,14 +92,15 @@ export function allRGB(colors: string[]): boolean {
  */
 export function makeMath(addends: number[]): string {
     if (addends.length === 0) {
-        addends = [...addends, 0];
+        return "0=0";
+    } else {
+        const sum = addends.reduce(
+            (total: number, num: number) => total + num,
+            0
+        );
+        const word = addends.join("+");
+        return sum.toString() + "=" + word;
     }
-    const sum = addends.reduce(
-        (total: number, nums: number) => total + nums,
-        0
-    );
-    const add = addends.join("+");
-    return "";
 }
 
 /**
