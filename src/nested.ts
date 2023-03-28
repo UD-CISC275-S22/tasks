@@ -1,12 +1,17 @@
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
+import { duplicateQuestion, makeBlankQuestion } from "./objects";
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
  * that are `published`.
  */
 export function getPublishedQuestions(questions: Question[]): Question[] {
-    return [];
+    let newQuestions = JSON.parse(JSON.stringify(questions));
+    newQuestions = questions.filter(
+        (questions: Question): boolean => questions.published
+    );
+    return newQuestions;
 }
 
 /**
@@ -15,7 +20,21 @@ export function getPublishedQuestions(questions: Question[]): Question[] {
  * `expected`, and an empty array for its `options`.
  */
 export function getNonEmptyQuestions(questions: Question[]): Question[] {
-    return [];
+    let newQuestions = JSON.parse(JSON.stringify(questions));
+    newQuestions = newQuestions.filter(
+        (newQuestions: Question): boolean =>
+            newQuestions.body != "" && newQuestions.expected != "" //&&
+        //questions.type == "multiple_choice_question" &&
+        //questions.options.length != 0
+    );
+    // for (let i = 0; i < newQuestions.length; i++) {
+    //     if (newQuestions[i].type == "multiple_choice_question") {
+    //         if (newQuestions[i].options.length == 0) {
+    //             newQuestions.splice(i, 1);
+    //         }
+    //     }
+    // }
+    return newQuestions;
 }
 
 /***
@@ -26,7 +45,15 @@ export function findQuestion(
     questions: Question[],
     id: number
 ): Question | null {
-    return null;
+    const newQuestions = JSON.parse(JSON.stringify(questions));
+    const copy = newQuestions.filter(
+        (newQuestions: Question): boolean => newQuestions.id == id
+    );
+    const SpecQ = copy[0];
+    if (SpecQ == undefined) {
+        return null;
+    }
+    return SpecQ;
 }
 
 /**
@@ -34,7 +61,11 @@ export function findQuestion(
  * with the given `id`.
  */
 export function removeQuestion(questions: Question[], id: number): Question[] {
-    return [];
+    let newQuestions = JSON.parse(JSON.stringify(questions));
+    newQuestions = newQuestions.filter(
+        (newQuestions: Question): boolean => newQuestions.id != id
+    );
+    return newQuestions;
 }
 
 /***
@@ -42,21 +73,39 @@ export function removeQuestion(questions: Question[], id: number): Question[] {
  * questions, as an array.
  */
 export function getNames(questions: Question[]): string[] {
-    return [];
+    const newQuestions = JSON.parse(JSON.stringify(questions));
+    let names = [];
+    names = newQuestions.map(
+        (newQuestions: Question): string => newQuestions.name
+    );
+    return names;
 }
 
 /***
  * Consumes an array of questions and returns the sum total of all their points added together.
  */
 export function sumPoints(questions: Question[]): number {
-    return 0;
+    const newQuestions = JSON.parse(JSON.stringify(questions));
+    let sum = 0;
+    for (let i = 0; i < newQuestions.length; i++) {
+        sum += newQuestions[i].points;
+    }
+    return sum;
 }
 
 /***
  * Consumes an array of questions and returns the sum total of the PUBLISHED questions.
  */
 export function sumPublishedPoints(questions: Question[]): number {
-    return 0;
+    let newQuestions = JSON.parse(JSON.stringify(questions));
+    newQuestions = newQuestions.filter(
+        (newQuestions: Question): boolean => newQuestions.published
+    );
+    let sum = 0;
+    for (let i = 0; i < newQuestions.length; i++) {
+        sum += newQuestions[i].points;
+    }
+    return sum;
 }
 
 /***
@@ -77,7 +126,14 @@ id,name,options,points,published
  * Check the unit tests for more examples!
  */
 export function toCSV(questions: Question[]): string {
-    return "";
+    let message = questions
+        .map(
+            (questions: Question): string =>
+                `${questions.id},${questions.name},${questions.options.length},${questions.points},${questions.published}`
+        )
+        .join("\n");
+    message = "id,name,options,points,published\n".concat(message);
+    return message;
 }
 
 /**
@@ -86,7 +142,15 @@ export function toCSV(questions: Question[]): string {
  * making the `text` an empty string, and using false for both `submitted` and `correct`.
  */
 export function makeAnswers(questions: Question[]): Answer[] {
-    return [];
+    const answers = questions.map(
+        (questions: Question): Answer => ({
+            questionId: questions.id,
+            text: "",
+            submitted: false,
+            correct: false
+        })
+    );
+    return answers;
 }
 
 /***
@@ -94,7 +158,19 @@ export function makeAnswers(questions: Question[]): Answer[] {
  * each question is now published, regardless of its previous published status.
  */
 export function publishAll(questions: Question[]): Question[] {
-    return [];
+    const newQuestions = questions.map(
+        (questions: Question): Question => ({
+            id: questions.id,
+            name: questions.name,
+            type: questions.type,
+            body: questions.body,
+            expected: questions.expected,
+            options: questions.options,
+            points: questions.points,
+            published: true
+        })
+    );
+    return newQuestions;
 }
 
 /***
@@ -102,7 +178,14 @@ export function publishAll(questions: Question[]): Question[] {
  * are the same type. They can be any type, as long as they are all the SAME type.
  */
 export function sameType(questions: Question[]): boolean {
-    return false;
+    let bool = true;
+    const typ = questions[0];
+    for (let i = 0; i < questions.length; i++) {
+        if (typ.type != questions[i].type) {
+            bool = false;
+        }
+    }
+    return bool;
 }
 
 /***
@@ -116,7 +199,10 @@ export function addNewQuestion(
     name: string,
     type: QuestionType
 ): Question[] {
-    return [];
+    const blank = makeBlankQuestion(id, name, type);
+    const newQuestions = JSON.parse(JSON.stringify(questions));
+    newQuestions.push(blank);
+    return newQuestions;
 }
 
 /***
@@ -129,7 +215,13 @@ export function renameQuestionById(
     targetId: number,
     newName: string
 ): Question[] {
-    return [];
+    const newQuestions = JSON.parse(JSON.stringify(questions));
+    for (let i = 0; i < newQuestions.length; i++) {
+        if (newQuestions[i].id == targetId) {
+            newQuestions[i].name = newName;
+        }
+    }
+    return newQuestions;
 }
 
 /***
@@ -144,7 +236,16 @@ export function changeQuestionTypeById(
     targetId: number,
     newQuestionType: QuestionType
 ): Question[] {
-    return [];
+    const newQuestions = JSON.parse(JSON.stringify(questions));
+    for (let i = 0; i < newQuestions.length; i++) {
+        if (newQuestions[i].id == targetId) {
+            newQuestions[i].type = newQuestionType;
+            if (newQuestionType == "short_answer_question") {
+                newQuestions[i].options = [];
+            }
+        }
+    }
+    return newQuestions;
 }
 
 /**
@@ -163,7 +264,18 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ): Question[] {
-    return [];
+    const newQuestions = JSON.parse(JSON.stringify(questions));
+    for (let i = 0; i < newQuestions.length; i++) {
+        if (newQuestions[i].id == targetId) {
+            if (targetOptionIndex == -1){
+                const ind = newQuestions[i].options.length;
+                newQuestions[i].options[ind] = newOption;
+            } else {
+                newQuestions[i].options[targetOptionIndex] = newOption;
+            }
+        }
+    }
+    return newQuestions;
 }
 
 /***
@@ -177,5 +289,12 @@ export function duplicateQuestionInArray(
     targetId: number,
     newId: number
 ): Question[] {
-    return [];
+    const newQuestions = JSON.parse(JSON.stringify(questions));
+    for (let i = 0; i < newQuestions.length; i++) {
+        if (newQuestions[i].id == targetId) {
+            const dup = duplicateQuestion(newId, newQuestions[i]);
+            newQuestions.splice(i + 1, 0, dup);
+        }
+    }
+    return newQuestions;
 }
