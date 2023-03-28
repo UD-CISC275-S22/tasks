@@ -33,9 +33,18 @@ export function ChangeColor(): JSX.Element {
                     checked={color === col}
                 />
             ))}
-            <Form.Group data-testid="colored-box">
-                <Form.Control style={{ backgroundColor: color }} />
-            </Form.Group>
+            <div>
+                You chose{" "}
+                <span
+                    data-testid="colored-box"
+                    style={{
+                        backgroundColor: color,
+                        color: "white"
+                    }}
+                >
+                    {color}
+                </span>
+            </div>
         </div>
     );
 }
