@@ -5,7 +5,6 @@ export function RevealAnswer(): JSX.Element {
     const [visible, setVisible] = useState<boolean>(false);
 
     function flipVisibility(): void {
-        // Set visible to be the logical opposite of its previous value
         setVisible(!visible);
     }
     return (
@@ -14,5 +13,4 @@ export function RevealAnswer(): JSX.Element {
             {visible && <div>42</div>}
         </div>
     );
-    //return <div>Reveal Answer</div>;
 }
