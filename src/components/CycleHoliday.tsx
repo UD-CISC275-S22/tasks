@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
+
 enum Holiday {
     valentines,
     halloween,
@@ -74,4 +75,5 @@ export function CycleHoliday(): JSX.Element {
             </Button>
         </>
     );
+
 }

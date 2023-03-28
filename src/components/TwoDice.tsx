@@ -12,6 +12,7 @@ export function d6(): number {
 }
 
 export function TwoDice(): JSX.Element {
+
     const [leftDie, setleftDie] = useState<number>(1);
     const [rightDie, setrightDie] = useState<number>(2);
 
@@ -29,4 +30,5 @@ export function TwoDice(): JSX.Element {
             </div>
         </div>
     );
+
 }
