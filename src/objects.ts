@@ -32,8 +32,10 @@ export function makeBlankQuestion(
  */
 export function isCorrect(question: Question, answer: string): boolean {
     let newAnswer = answer.trim();
+    const newQuestion = JSON.parse(JSON.stringify(question));
     newAnswer = newAnswer.toLowerCase();
-    if (newAnswer == question.expected) {
+    newQuestion.expected = newQuestion.expected.toLowerCase();
+    if (newAnswer == newQuestion.expected) {
         return true;
     }
     return false;
@@ -65,7 +67,8 @@ export function isValid(question: Question, answer: string): boolean {
  * name "My First Question" would become "9: My First Q".
  */
 export function toShortForm(question: Question): string {
-    return question.id + ": " + question.name.slice(0, 10);
+    const newQuestion = JSON.parse(JSON.stringify(question));
+    return newQuestion.id + ": " + newQuestion.name.slice(0, 10);
 }
 
 /**
@@ -86,11 +89,14 @@ export function toShortForm(question: Question): string {
  * Check the unit tests for more examples of what this looks like!
  */
 export function toMarkdown(question: Question): string {
-    let message =
-        question.id + ": " + question.name + "\n" + question.body + "\n";
+    let message = "# " + question.name + "\n" + question.body;
     if (question.type == "multiple_choice_question") {
+        message = message.concat("\n");
         for (let i = 0; i < question.options.length; i++) {
-            message = message.concat(question.options[i] + "\n");
+            message = message.concat("- " + question.options[i]);
+            if (i < question.options.length - 1) {
+                message = message.concat("\n");
+            }
         }
     }
     return message;
@@ -101,7 +107,7 @@ export function toMarkdown(question: Question): string {
  * `newName`.
  */
 export function renameQuestion(question: Question, newName: string): Question {
-    const newQuestion = question;
+    const newQuestion = JSON.parse(JSON.stringify(question));
     newQuestion.name = newName;
     return newQuestion;
 }
@@ -112,7 +118,7 @@ export function renameQuestion(question: Question, newName: string): Question {
  * published; if it was published, now it should be not published.
  */
 export function publishQuestion(question: Question): Question {
-    const newQuestion = question;
+    const newQuestion = JSON.parse(JSON.stringify(question));
     newQuestion.published = !question.published;
     return newQuestion;
 }
@@ -124,9 +130,10 @@ export function publishQuestion(question: Question): Question {
  * The `published` field should be reset to false.
  */
 export function duplicateQuestion(id: number, oldQuestion: Question): Question {
-    const newQuestion = oldQuestion;
-    newQuestion.name = "Copy of ".concat(oldQuestion.name);
+    const newQuestion = JSON.parse(JSON.stringify(oldQuestion));
+    newQuestion.name = "Copy of ".concat(newQuestion.name);
     newQuestion.published = false;
+    newQuestion.id = id;
     return newQuestion;
 }
 
@@ -138,7 +145,7 @@ export function duplicateQuestion(id: number, oldQuestion: Question): Question {
  * Check out the subsection about "Nested Fields" for more information.
  */
 export function addOption(question: Question, newOption: string): Question {
-    const newQuestion = question;
+    const newQuestion = JSON.parse(JSON.stringify(question));
     newQuestion.options = [...question.options, newOption];
     return newQuestion;
 }
@@ -157,8 +164,10 @@ export function mergeQuestion(
     contentQuestion: Question,
     { points }: { points: number }
 ): Question {
-    const newQuestion = contentQuestion;
+    const newQuestion = JSON.parse(JSON.stringify(contentQuestion));
     newQuestion.points = points;
     newQuestion.published = false;
+    newQuestion.id = id;
+    newQuestion.name = name;
     return newQuestion;
 }
