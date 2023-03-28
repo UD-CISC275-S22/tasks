@@ -17,12 +17,12 @@ import { CheckAnswer } from "./form-components/CheckAnswer";
 import { EditMode } from "./form-components/EditMode";
 import { GiveAttempts } from "./form-components/GiveAttempts";
 import { MultipleChoiceQuestion } from "./form-components/MultipleChoiceQuestion";
+
 function App(): JSX.Element {
     return (
         <div className="App">
             <header className="App-header">
-                Hello World, UD CISC275 with React Hooks and TypeScript - Arjun
-                Manikyath
+                Hello World, UD CISC275 - Arjun Manikyath
             </header>
             <div className="App-header">
                 <h1>Welcome to 275</h1>
@@ -41,6 +41,7 @@ function App(): JSX.Element {
                 src="https://images.squarespace-cdn.com/content/v1/54e7a1a6e4b08db9da801ded/fdecc7f0-42bf-4696-bd4c-73a868e5d1d2/81.jpg?format=750w"
                 alt="Golden Retriever Puppy"
             />
+
             <Container>
                 <Row>
                     <div
@@ -74,7 +75,6 @@ function App(): JSX.Element {
                 </Row>
             </Container>
             <hr></hr>
-            <DoubleHalf></DoubleHalf>
             <CheckAnswer expectedAnswer="42"></CheckAnswer>
             <hr></hr>
             <GiveAttempts></GiveAttempts>
