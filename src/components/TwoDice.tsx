@@ -18,13 +18,11 @@ export function TwoDice(): JSX.Element {
     const win = leftDie === 1 ? "Lose" : "Win";
     return (
         <div>
-            Left Die: <span>{leftDie}</span>
-            Right Die: <span>{rightDie}</span>
+            Left Die: <span data-testid={"left-die"}>{leftDie}</span>
+            Right Die: <span data-testid={"right-die"}>{rightDie}</span>
             <div>
                 <Button onClick={() => setleftDie(d6())}>Roll Left</Button>
                 <Button onClick={() => setrightDie(d6())}>Roll Right</Button>
-                <span data-testid={"left-die"}>{leftDie}</span>
-                <span data-testid={"right-die"}>{rightDie}</span>
                 <div>{leftDie === rightDie ? win : ""}</div>
             </div>
         </div>
