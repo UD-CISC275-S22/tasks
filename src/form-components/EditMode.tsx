@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, FormLabel } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 
 export function EditMode(): JSX.Element {
     const [isEditMode, setIsEditMode] = useState<boolean>(false);
