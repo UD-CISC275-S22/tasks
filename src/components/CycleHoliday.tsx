@@ -75,5 +75,4 @@ export function CycleHoliday(): JSX.Element {
             </Button>
         </>
     );
-
 }
