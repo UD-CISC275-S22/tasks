@@ -30,69 +30,68 @@ function App(): JSX.Element {
                         Log Hello World
                     </Button>
                 </header>
-                <div>
-                    <Container>
-                        <Row>
-                            <Col>
-                                <div className="Rectangle">
-                                    <div
-                                        style={{
-                                            border: "7px solid #000000",
-                                            padding: "1px"
-                                        }}
-                                    >
-                                        <div>
-                                            <div className="font-size">
-                                                <span
-                                                    style={{
-                                                        color: "black"
-                                                    }}
-                                                >
-                                                    DAY
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    To be Filled
-                                </div>
-                            </Col>
-                            <Col>
+
+                <Container>
+                    <Row>
+                        <Col md="1"></Col>
+                        <Col>
+                            <div className="Rectangle">
                                 <div
-                                    className="Rectangle"
-                                    style={{ textAlign: "center" }}
+                                    style={{
+                                        border: "7px solid #000000",
+                                        padding: "1px"
+                                    }}
                                 >
-                                    <div
-                                        style={{
-                                            border: "7px solid black",
-                                            padding: "1px"
-                                        }}
-                                    >
-                                        <div>
-                                            <div className="font-size">
-                                                <span
-                                                    style={{
-                                                        color: "black"
-                                                    }}
-                                                >
-                                                    NIGHT
-                                                </span>
-                                            </div>
+                                    <div>
+                                        <div className="font-size">
+                                            <span
+                                                style={{
+                                                    color: "black"
+                                                }}
+                                            >
+                                                DAY
+                                            </span>
                                         </div>
                                     </div>
-                                    <ul>
-                                        <li>Nights</li>
-                                        <li>Stars</li>
-                                        <li>Traffic Lights</li>
-                                        <li>Music</li>
-                                        <li>Rain</li>
-                                        <li>Reflections</li>
-                                        <li>Moon</li>
-                                    </ul>
                                 </div>
-                            </Col>
-                        </Row>
-                    </Container>
-                </div>
+                                💀
+                            </div>
+                        </Col>
+                        <Col md="2"></Col>
+                        <Col>
+                            <div
+                                className="Rectangle"
+                                style={{ textAlign: "center" }}
+                            >
+                                <div
+                                    style={{
+                                        border: "7px solid black",
+                                        padding: "1px"
+                                    }}
+                                >
+                                    <div>
+                                        <div className="font-size">
+                                            <span
+                                                style={{
+                                                    color: "black"
+                                                }}
+                                            >
+                                                NIGHT
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul>
+                                    <li>Nights</li>
+                                    <li>Stars</li>
+                                    <li>Moon</li>
+                                </ul>
+                            </div>
+                        </Col>
+                        <Col md="1"></Col>
+                    </Row>
+                </Container>
+
                 <div className="white-space"></div>
                 <img src={image} alt="Purity" />
             </div>
