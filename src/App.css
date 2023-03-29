@@ -6,7 +6,18 @@
     height: 40vmin;
     pointer-events: none;
 }
-
+.hbackground {
+    background-color: green;
+}
+.imgAdjust {
+    width: 350px;
+    height: 150px;
+}
+.redrect {
+    width: 400px;
+    height: 200px;
+    background-color: red;
+}
 @media (prefers-reduced-motion: no-preference) {
     .App-logo {
         animation: App-logo-spin infinite 20s linear;
@@ -24,7 +35,6 @@
     font-size: calc(10px + 2vmin);
     color: white;
 }
-
 .App-link {
     color: #61dafb;
 }
