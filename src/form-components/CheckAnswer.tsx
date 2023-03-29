@@ -28,7 +28,7 @@ export function CheckAnswer({
     return (
         <div>
             <h3>Check Answer</h3>
-            <h5>expectedAnswer={expectedAnswer}</h5>
+            <h5>expectedAnswer = {expectedAnswer}</h5>
             <div>
                 <Form.Group controlId="answerCheck">
                     <Form.Label>Enter your answer</Form.Label>
