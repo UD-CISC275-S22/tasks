@@ -8,6 +8,10 @@ import { TwoDice } from "./components/TwoDice";
 import { CycleHoliday } from "./components/CycleHoliday";
 import { Counter } from "./components/Counter";
 import React, { useState } from "react";
+import { DoubleHalf } from "./bad-components/DoubleHalf";
+import { ColoredBox } from "./bad-components/ColoredBox";
+import { ShoveBox } from "./bad-components/ShoveBox";
+import { ChooseTeam } from "./bad-components/ChooseTeam";
 
 type QuestionType = "multiple_choice_question" | "short_answer_question";
 
@@ -92,6 +96,33 @@ function App(): JSX.Element {
             <div>
                 <span>Attempts: {attempts}</span>
             </div>
+
+            {/* <div className="App">
+                <header className="App-header">
+                    UD CISC275 with React Hooks and TypeScript
+                </header>
+                <hr></hr>
+                <DoubleHalf></DoubleHalf>
+                <hr></hr>
+                <ChooseTeam></ChooseTeam>
+                <hr></hr>
+                <ColoredBox></ColoredBox>
+                <hr></hr>
+                <ShoveBox></ShoveBox>
+                <hr></hr>
+                <Counter></Counter>
+                <hr />
+                <RevealAnswer></RevealAnswer>
+                <hr />
+                <StartAttempt></StartAttempt>
+                <hr />
+                <TwoDice></TwoDice>
+                <hr />
+                <ChangeType></ChangeType>
+                <hr />
+                <CycleHoliday></CycleHoliday>
+            </div>
+        </div> */}
         </div>
     );
 }
