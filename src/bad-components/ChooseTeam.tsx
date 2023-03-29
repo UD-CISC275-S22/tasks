@@ -14,14 +14,8 @@ export function ChooseTeam(): JSX.Element {
     const [team, setTeam] = useState<string[]>([]);
 
     function chooseMember(newMember: string) {
-        if (
-            PEOPLE.includes(newMember) &&
-            newMember !== "" &&
-            !team.includes(newMember)
-        ) {
-            const newTeam = [...team, newMember];
-            setTeam(newTeam);
-        }
+        const newTeam = [...team, newMember];
+        setTeam(newTeam);
     }
 
     function clearTeam() {
@@ -42,6 +36,7 @@ export function ChooseTeam(): JSX.Element {
                                 onClick={() => chooseMember(option)}
                                 size="sm"
                                 variant="outline-dark"
+                                disabled={team.includes(option)}
                             >
                                 {option}
                             </Button>

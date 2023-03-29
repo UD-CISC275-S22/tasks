@@ -43,9 +43,7 @@ export function EditMode(): JSX.Element {
                         />
                     </Col>
                 </Form.Group>
-            ) : (
-                ""
-            )}
+            ) : null}
             <div>
                 {editMode === true ? (
                     <Form.Check
@@ -56,9 +54,7 @@ export function EditMode(): JSX.Element {
                         onChange={updateIsStudent}
                         style={{ textAlign: "center" }}
                     />
-                ) : (
-                    ""
-                )}
+                ) : null}
             </div>
             <div>
                 {editMode === false && userName !== ""
