@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 {
-    /* 2/3 passing tests */
+    /* 3/3 passing tests */
 }
 
 export const COLORS = ["red", "blue", "green"];
