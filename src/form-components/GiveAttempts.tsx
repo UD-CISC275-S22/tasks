@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 
-//type ChangeEvent = React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>;
-
 export function GiveAttempts(): JSX.Element {
     const [attemptsLeft, setAttemptsLeft] = useState<number>(3);
     const [attemptsReq, setAttemptsReq] = useState<number>(0);
