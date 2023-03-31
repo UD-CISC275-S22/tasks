@@ -1,4 +1,3 @@
-import { type } from "os";
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import { QuestionType } from "../interfaces/question";

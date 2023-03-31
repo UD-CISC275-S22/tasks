@@ -6,24 +6,30 @@ type ChangeEvent = React.ChangeEvent<
 >;
 
 export function EditMode(): JSX.Element {
-    const [name, setName] = useState<string>("");
-    const [enrolled, setEnrolled] = useState<boolean>(true);
+    // State
+    const [name, setName] = useState<string>("Your name");
+    const [isStudent, setIsStudent] = useState<boolean>(true);
     const [editMode, setEditMode] = useState<boolean>(false);
 
-    function updateEnrolled(event: React.ChangeEvent<HTMLInputElement>) {
-        setEnrolled(event.target.checked);
-    }
-    function updateName(event: React.ChangeEvent<HTMLInputElement>) {
-        setName(event.target.value);
-    }
+    // Control
     function updateEditMode(event: React.ChangeEvent<HTMLInputElement>) {
         setEditMode(event.target.checked);
     }
 
+    function updateIsStudent(event: React.ChangeEvent<HTMLInputElement>) {
+        setIsStudent(event.target.checked);
+    }
+
+    function updateName(event: ChangeEvent) {
+        setName(event.target.value);
+    }
+
+    //View
     return (
         <div>
+            <h1>Edit Mode</h1>
             <div>
-                {enrolled ? (
+                {isStudent ? (
                     <span>{name} is a student </span>
                 ) : (
                     <span> {name} is not a student </span>
@@ -54,8 +60,8 @@ export function EditMode(): JSX.Element {
                                 type="switch"
                                 id="is-student-check"
                                 label="Is Student?"
-                                checked={enrolled}
-                                onChange={updateEnrolled}
+                                checked={isStudent}
+                                onChange={updateIsStudent}
                                 disabled={!editMode}
                                 hidden={!editMode}
                             />
