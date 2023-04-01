@@ -257,7 +257,7 @@ export function editOption(
  * Consumes an array of questions, and produces a new array based on the original array.
  * The only difference is that the question with id `targetId` should now be duplicated, with
  * the duplicate inserted directly after the original question. Use the `duplicateQuestion`
- * function you defined previously; the `newId` is the parameter to use for the duplicate's ID.
+ * function you defined previousl; the `newId` is the parameter to use for the duplicate's ID.
  */
 export function duplicateQuestionInArray(
     questions: Question[],
