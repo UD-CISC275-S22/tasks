@@ -18,10 +18,10 @@ export function TwoDice(): JSX.Element {
     return (
         <div>
             <div>
-                <span datatest-id="left-die">{leftDie}</span>
+                <span data-testid="left-die">{leftDie}</span>
             </div>
             <div>
-                <span datatest-id="right-die">{rightDie}</span>
+                <span data-testid="right-die">{rightDie}</span>
             </div>
             <div>
                 <Button onClick={() => changeDie1(d6)}>Roll Left</Button>
