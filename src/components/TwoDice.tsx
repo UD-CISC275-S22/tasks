@@ -12,8 +12,8 @@ export function d6(): number {
 }
 
 export function TwoDice(): JSX.Element {
-    const [leftDie, nowleftDie] = useState(d6());
-    const [rightDie, nowrightDie] = useState(d6());
+    const [leftDie, nowleftDie] = useState(2);
+    const [rightDie, nowrightDie] = useState(3);
 
     const rollLeftDie = () => {
         nowleftDie(d6());
