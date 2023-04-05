@@ -3,7 +3,6 @@ import { Button, Col, Container, Row } from "react-bootstrap";
 import "./App.css";
 import logo from "./images/Bonzo.png";
 
-//hi
 console.log(logo);
 
 function App(): JSX.Element {
