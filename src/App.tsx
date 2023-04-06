@@ -7,7 +7,10 @@ import { StartAttempt } from "./components/StartAttempt";
 import { TwoDice } from "./components/TwoDice";
 import { CycleHoliday } from "./components/CycleHoliday";
 import { Counter } from "./components/Counter";
-
+import { ChooseTeam } from "./bad-components/ChooseTeam";
+import { ColoredBox } from "./bad-components/ColoredBox";
+import { DoubleHalf } from "./bad-components/DoubleHalf";
+import { ShoveBox } from "./bad-components/ShoveBox";
 function App(): JSX.Element {
     return (
         <>
@@ -29,6 +32,14 @@ function App(): JSX.Element {
                     <ChangeType></ChangeType>
                     <hr />
                     <CycleHoliday></CycleHoliday>
+                    <hr />
+                    <ChooseTeam></ChooseTeam>
+                    <hr />
+                    <ColoredBox></ColoredBox>
+                    <hr />
+                    <DoubleHalf></DoubleHalf>
+                    <hr />
+                    <ShoveBox></ShoveBox>
                     <div>
                         <img
                             src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/22935cd4-b5b4-4716-98f8-bb6d00156232/de3qhpq-ac4700a1-0404-46d5-9f6f-ad55eda89f6d.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzIyOTM1Y2Q0LWI1YjQtNDcxNi05OGY4LWJiNmQwMDE1NjIzMlwvZGUzcWhwcS1hYzQ3MDBhMS0wNDA0LTQ2ZDUtOWY2Zi1hZDU1ZWRhODlmNmQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.nm2goVv_zI3gqXErAWbJPbVK6-KLhr-6HsvU2IzvQ7M"
@@ -51,6 +62,7 @@ function App(): JSX.Element {
                 </div>
                 ;
                 <div>
+                    <h1>Hello world button</h1>
                     <Button onClick={() => console.log("Hello World!")}>
                         Log Hello World
                     </Button>

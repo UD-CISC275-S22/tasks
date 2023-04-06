@@ -26,7 +26,7 @@ export function CycleHoliday(): JSX.Element {
     };
 
     const [holiday, setHoliday] = useState<Holidays>("New Years: 🍷");
-    const [driving, setDriving] = useState<boolean>(false);
+    // const [driving, setDriving] = useState<boolean>(false);
 
     function changeHolidayYear(): void {
         const newHoliday = HOLIDAY_TRANSITIONS_YEAR[holiday];
