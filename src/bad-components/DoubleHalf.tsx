@@ -1,13 +1,5 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-// function Doubler(): JSX.Element {
-//     return <Button onClick={() => setDhValue(2 * dhValue)}>Double</Button>;
-// }
-
-// function Halver(): JSX.Element {
-//     return <Button onClick={() => setDhValue(dhValue / 2)}>Halve</Button>;
-// }
-
 export function DoubleHalf(): JSX.Element {
     const [dhValue, setDhValue] = useState<number>(10);
 

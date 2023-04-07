@@ -11,6 +11,11 @@ import { ChooseTeam } from "./bad-components/ChooseTeam";
 import { ColoredBox } from "./bad-components/ColoredBox";
 import { DoubleHalf } from "./bad-components/DoubleHalf";
 import { ShoveBox } from "./bad-components/ShoveBox";
+import { CheckAnswer } from "./form-components/CheckAnswer";
+import { GiveAttempts } from "./form-components/GiveAttempts";
+import { EditMode } from "./form-components/EditMode";
+import { ChangeColor } from "./form-components/ChangeColor";
+import { MultipleChoiceQuestion } from "./form-components/MultipleChoiceQuestion";
 function App(): JSX.Element {
     return (
         <>
@@ -20,6 +25,20 @@ function App(): JSX.Element {
                     <header className="App-header">
                         UD CISC275 with React Hooks and TypeScriptS
                     </header>
+                    <hr></hr>
+                    <CheckAnswer expectedAnswer="42"></CheckAnswer>
+                    <hr></hr>
+                    <GiveAttempts></GiveAttempts>
+                    <hr></hr>
+                    <EditMode></EditMode>
+                    <hr></hr>
+                    <ChangeColor></ChangeColor>
+                    <hr></hr>
+                    <MultipleChoiceQuestion
+                        options={["a", "b", "c"]}
+                        expectedAnswer="b"
+                    ></MultipleChoiceQuestion>
+                    <hr></hr>
                     <hr></hr>
                     <Counter></Counter>
                     <hr />
