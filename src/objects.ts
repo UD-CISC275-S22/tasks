@@ -89,7 +89,6 @@ export function toMarkdown(question: Question): string {
         });
     }
     markdown = markdown.trim();
-    console.log(markdown);
     return markdown;
 }
 
