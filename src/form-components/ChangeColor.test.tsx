@@ -15,6 +15,7 @@ describe("ChangeColor Component tests", () => {
         radios[0].click();
         let coloredBox = screen.getByTestId("colored-box");
         expect(coloredBox).toHaveTextContent(radios[0].value);
+        console.log(radios[0].value);
         expect(coloredBox).toHaveStyle({ backgroundColor: radios[0].value });
         // Switch to third
         radios[2].click();
