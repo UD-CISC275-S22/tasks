@@ -1,10 +1,10 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { ChangeColor } from "./EditMode";
+import { EditMode } from "./EditMode";
 import userEvent from "@testing-library/user-event";
 
 describe("EditMode Component tests", () => {
-    beforeEach(() => render(<ChangeColor />));
+    beforeEach(() => render(<EditMode />));
     test("There is one checkbox and no textboxes", () => {
         const switchButton = screen.getByRole("checkbox");
         expect(switchButton).toBeInTheDocument();

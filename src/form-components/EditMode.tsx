@@ -1,42 +1,46 @@
 import React, { useState } from "react";
 import { Form } from "react-bootstrap";
-const COLORS = ["red", "blue", "green", "orange", "purple", "yellow"];
 
-export function ChangeColor(): JSX.Element {
-    const [chosen, setChosen] = useState<string>("red");
-
+export function EditMode(): JSX.Element {
+    function changeName(event: React.ChangeEvent<HTMLInputElement>) {
+        setName(event.target.value);
+    }
+    const [student, setStudent] = useState<boolean>(true);
+    const [name, setName] = useState<string>("Your Name");
+    const [edit, setEdit] = useState<boolean>(false);
     return (
         <div>
-            <h1>Change Color</h1>
-            <div>
-                <p>
-                    <span>
-                        The current color is{" "}
-                        <span
-                            data-testid="colored-box"
-                            style={{ backgroundColor: chosen, color: "white" }}
-                        >
-                            {chosen}
-                        </span>
-                    </span>
-                </p>
-                {COLORS.map((color: string) => (
-                    <Form.Check
-                        key={color}
-                        inline
-                        type="radio"
-                        name="colors"
-                        onChange={(
-                            event: React.ChangeEvent<HTMLInputElement>
-                        ) => setChosen(event.target.value)}
-                        id={"colors-choice-" + color}
-                        label={color}
-                        style={{ backgroundColor: color }}
-                        value={color}
-                        checked={chosen === color}
-                    />
-                ))}
-            </div>
+            <h3>Edit Mode</h3>
+            <Form.Switch
+                checked={edit}
+                type="switch"
+                label="Click to edit!"
+                id="check-edit"
+                onChange={() => setEdit(!edit)}
+            />
+            {edit ? (
+                <Form.Check
+                    checked={student}
+                    type="checkbox"
+                    label="Is this a Student?"
+                    id="check-student"
+                    onChange={() => setStudent(!student)}
+                />
+            ) : (
+                <></>
+            )}
+
+            {edit ? (
+                <Form.Group>
+                    <Form.Label>Enter Name of Student</Form.Label>
+                    <Form.Control value={name} onChange={changeName} />
+                </Form.Group>
+            ) : (
+                <></>
+            )}
+            <p>
+                {name} is {!student ? "not" : ""} a Student
+            </p>
         </div>
     );
 }
