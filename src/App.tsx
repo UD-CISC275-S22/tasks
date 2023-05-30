@@ -1,3 +1,4 @@
+//Joshua Sean Marcos Taing
 import React from "react";
 import "./App.css";
 
@@ -9,7 +10,7 @@ function App(): JSX.Element {
             </header>
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload.
+                automatically reload. Joshua Taing. Hello World
             </p>
         </div>
     );
