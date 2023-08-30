@@ -9,7 +9,7 @@ function App(): JSX.Element {
             </header>
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload. Don Daniels.
+                automatically reload. Don Daniels."Hello World"
             </p>
         </div>
     );
