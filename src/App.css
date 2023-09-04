@@ -37,3 +37,8 @@
         transform: rotate(360deg);
     }
 }
+.App-rectangles {
+    height: 100px;
+    width: 200px;
+    background-color: red;
+}
