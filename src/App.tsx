@@ -3,7 +3,7 @@ import { Button, Col, Container, Row } from "react-bootstrap";
 import "./App.css";
 
 export function App(): JSX.Element {
-    return <h1>"Hello World" CISC275</h1>;
+    return <h1></h1>;
     return (
         <div>
             <h1>Hello World</h1>
