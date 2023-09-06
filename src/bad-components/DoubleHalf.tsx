@@ -13,7 +13,7 @@ export function DoubleHalf(): JSX.Element {
     }
     return (
         <div>
-            <h3>Double Half</h3>
+            <h3>DoubleHalf</h3>
             <div>
                 The current value is: <span>{dhValue}</span>
             </div>
