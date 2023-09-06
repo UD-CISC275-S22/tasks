@@ -15,7 +15,7 @@
 
 .App-header {
     width: 100%;
-    background-color: #282c34;
+    background-color: tan;
     min-height: 40vh;
     display: flex;
     flex-direction: column;
@@ -36,4 +36,18 @@
     to {
         transform: rotate(360deg);
     }
+}
+
+.lists {
+    text-align: left;
+}
+.lists2 {
+    text-align: center;
+}
+
+.CoL {
+    background-color: red;
+    width: 100px;
+    height: 300px;
+    margin: 30px;
 }
