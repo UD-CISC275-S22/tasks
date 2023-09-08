@@ -3,7 +3,7 @@ import { Button, Col, Container, Row } from "react-bootstrap";
 import "./App.css";
 
 export function App(): JSX.Element {
-    return <h1>CISC275 Hello World</h1>;
+    return <h1>CISC275 Hello World HTML</h1>;
     return (
         <div>
             <h1>Hello World</h1>
@@ -56,6 +56,17 @@ export function App(): JSX.Element {
             </p>
         </div>
     );
+    return <div>
+        <ol>
+            <li>pen</li>
+            <li>sharpener</li>
+            <li>ruler</li>
+        </ol>
+    </div>;
+    return <div>
+        <h1>This is a capybara</h1>
+        <image src=""
+    </div>
 }
 
 export default App;
