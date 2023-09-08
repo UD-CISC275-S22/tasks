@@ -58,5 +58,4 @@ function App(): JSX.Element {
         </div>
     );
 }
-console.log;
 export default App;
