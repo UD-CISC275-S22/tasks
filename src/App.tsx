@@ -12,7 +12,7 @@ function App(): JSX.Element {
                 <br></br>
                 Hello World!
             </header>
-            <h1>Cool things</h1>
+            <h1 style={{ backgroundColor: "#FFDBAC" }}>Cool things</h1>
             <Button onClick={() => console.log("Hello World!")}>
                 Log Hello World
             </Button>
@@ -38,7 +38,7 @@ function App(): JSX.Element {
                         <img
                             src={shiny_chansey}
                             width="200"
-                            height="200"
+                            height="auto"
                             alt="My favorite shiny Pokemon"
                         />
                         <div
@@ -58,5 +58,5 @@ function App(): JSX.Element {
         </div>
     );
 }
-
+console.log;
 export default App;
