@@ -80,11 +80,14 @@ export function App(): JSX.Element {
         <Container>
             <Row>
                 <Col>First column
-                <div> class="bx"</div>
+                <div id="bx"></div>
+            
+                
                 </Col>
                 <Col>
+                <div id="bx"></div>
                 Hello world
-                <div> class="bx"</div>
+                
                 </Col>
             </Row>
         </Container>
