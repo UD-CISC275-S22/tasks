@@ -63,10 +63,32 @@ export function App(): JSX.Element {
             <li>ruler</li>
         </ol>
     </div>;
+    
     return <div>
-        <h1>This is a capybara</h1>
-        <image src=""
+        <h1>This is a Capybara</h1>
+        <img src="https://dsc.cloud/50757d/Capybara.jpg.webp" alt="This is a Capybara" />
+    </div>;
+
+    return <div>
+        <Button> Log Hello World</Button>
     </div>
+
+    return <div>
+        <Button onClick={ () => console.log("Hello World!")}>Log Hello World</Button>
+    </div>;
+    return <div>
+        <Container>
+            <Row>
+                <Col>First column
+                <div> class="bx"</div>
+                </Col>
+                <Col>
+                Hello world
+                <div> class="bx"</div>
+                </Col>
+            </Row>
+        </Container>
+    </div>;
 }
 
 export default App;
