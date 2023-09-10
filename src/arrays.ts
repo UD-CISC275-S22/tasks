@@ -19,12 +19,17 @@ export function tripleNumbers(numbers: number[]): number[] {
     return doubled;
 }
 
+export const toNum = (str: string): number => {
+    const ret = !Number.isNaN(parseInt(str)) ? parseInt(str) : 0;
+    return ret;
+};
 /**
  * Consume an array of strings and convert them to integers. If
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    return [];
+    const parsedInts = numbers.map(toNum);
+    return parsedInts;
 }
 
 /**
