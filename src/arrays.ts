@@ -113,7 +113,6 @@ export function injectPositive(values: number[]): number[] {
     let firstNeg = values.findIndex((num: number): boolean => num < 0);
     const hasNeg = firstNeg === -1 ? false : true;
     firstNeg = hasNeg ? firstNeg : values.length - 1;
-    console.log(hasNeg);
     const newArr = values.slice(0, hasNeg ? firstNeg : firstNeg + 1);
     const sum = newArr.reduce((total: number, num: number) => total + num, 0);
     const newValues = [...values];
