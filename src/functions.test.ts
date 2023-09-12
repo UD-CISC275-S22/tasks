@@ -56,4 +56,11 @@ describe("Testing the basic functions", () => {
         expect(convertYesNo("Yesterday")).toBe(null);
         expect(convertYesNo("Maybe")).toBe(null);
     });
+
+    /*
+    test("Testing the averageTotal function", () => {
+        expect(averageTotal(6,0,0)).toBe(2);
+        expect(averageTotal(4,8,10).toBe())
+    });
+    */
 });

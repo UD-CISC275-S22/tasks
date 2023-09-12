@@ -5,7 +5,15 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    return numbers;
+    if (numbers.length === 0) {
+        return [];
+        // eslint-disable-next-line prettier/prettier
+    } else {
+        const firstLast: number[] = [];
+        firstLast.splice(0, 0, numbers[0]);
+        firstLast.splice(1, 0, numbers[numbers.length - 1]);
+        return firstLast;
+    }
 }
 
 /**
@@ -13,7 +21,8 @@ export function bookEndList(numbers: number[]): number[] {
  * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
-    return numbers;
+    const tripled = numbers.map((value: number): number => value * 3);
+    return tripled;
 }
 
 /**
@@ -21,7 +30,10 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    return [];
+    const integers = numbers.map((int: string): number =>
+        Number.isNaN(parseInt(int)) ? 0 : parseInt(int)
+    );
+    return integers;
 }
 
 /**
@@ -32,7 +44,13 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
+    //const values = amounts.map((value: string): number =>
+    //value[0] === "$" || Number.isNaN(parseInt(value)) );
     return [];
+    /** maybe do "if" statements rather than whats taught
+     * since need to check if "$" is in string then get rid of it
+     * as well as seeing if string is able to parse
+     */
 };
 
 /**
@@ -41,7 +59,14 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    return [];
+    const noQuestions = messages.filter(
+        (text: string): boolean => text.includes("?") === false
+    );
+    const shouting = noQuestions.map((sentence: string): string =>
+        sentence.includes("!") ? sentence.toUpperCase() : sentence
+    );
+    noQuestions;
+    return shouting;
 };
 
 /**
