@@ -51,7 +51,7 @@ export function isQuestion(message: string): boolean {
  */
 export function convertYesNo(word: string): boolean | null {
     word = word.toLowerCase();
-    if (word === "ye") {
+    if (word === "yes") {
         return true;
     } else if (word === "no") {
         return false;
