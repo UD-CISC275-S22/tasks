@@ -5,9 +5,7 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    return numbers.length === 0
-        ? []
-        : [numbers[0], numbers[numbers.length - 1]];
+    return !numbers.length ? [] : [numbers[0], numbers[numbers.length - 1]];
 }
 
 /**
@@ -43,8 +41,7 @@ export const removeDollars = (amounts: string[]): number[] => {
     const noDollar = amounts.map((str: string): string =>
         str[0] === "$" ? str.slice(1) : str
     );
-    const parsedInts = noDollar.map(toNum);
-    return parsedInts;
+    return noDollar.map(toNum);
 };
 
 /**
@@ -70,8 +67,7 @@ export function countShortWords(words: string[]): number {
     const short = words.filter(
         (message: string): boolean => message.length < 4
     );
-    const count = short.length;
-    return count;
+    return short.length;
 }
 
 /**
@@ -83,8 +79,7 @@ export function allRGB(colors: string[]): boolean {
     const notRGB = colors.filter(
         (color: string): boolean => !["red", "blue", "green"].includes(color)
     );
-    const length = notRGB.length;
-    return !length;
+    return !notRGB.length;
 }
 
 /**
@@ -110,12 +105,11 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    let firstNeg = values.findIndex((num: number): boolean => num < 0);
-    const hasNeg = firstNeg === -1 ? false : true;
-    firstNeg = hasNeg ? firstNeg : values.length - 1;
-    const newArr = values.slice(0, hasNeg ? firstNeg : firstNeg + 1);
+    const firstNeg = values.findIndex((num: number): boolean => num < 0);
+    let ind = firstNeg !== -1 ? firstNeg : values.length;
+    const newArr = values.slice(0, ind++);
     const sum = newArr.reduce((total: number, num: number) => total + num, 0);
     const newValues = [...values];
-    newValues.splice(firstNeg + 1, 0, sum);
+    newValues.splice(ind, 0, sum);
     return newValues;
 }
