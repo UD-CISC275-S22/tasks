@@ -12,7 +12,9 @@ export function fahrenheitToCelius(temperature: number): number {
  * if the number is greater than zero.
  */
 export function add3(first: number, second: number, third: number): number {
-    let total: number = 0;
+    //had let total: number =0;
+    //got message saying it was redundant and did not deploy on GitHub
+    let total = 0;
     first > 0 ? (total += first) : (total += 0);
     second > 0 ? (total += second) : (total += 0);
     third > 0 ? (total += third) : (total += 0);
@@ -41,7 +43,9 @@ export function isQuestion(message: string): boolean {
  * upper or lower case), then return `false`. Otherwise, return `null`.
  */
 export function convertYesNo(word: string): boolean | null {
-    let updateMSG: string = word.toLowerCase();
+    //Had let updateMSG: string = word.toLowerCase();
+    //Told to make constant because variable is not changed. Making adjustment to see if problem with GitHub deployment
+    const updateMSG: string = word.toLowerCase();
     if (updateMSG == "yes" || updateMSG == "no") {
         return updateMSG == "yes" ? true : false;
     }
