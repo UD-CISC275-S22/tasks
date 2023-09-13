@@ -24,9 +24,7 @@ export function add3(first: number, second: number, third: number): number {
  * mark added to the end.
  */
 export function shout(message: string): string {
-    let finalString: string = message + "!";
-    string.toUpperCase(finalString);
-    return finalString;
+    return message.toUpperCase() + "!";
 }
 
 /**
