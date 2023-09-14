@@ -44,9 +44,14 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    //const values = amounts.map((value: string): number =>
-    //value[0] === "$" || Number.isNaN(parseInt(value)) );
-    return [];
+    const values = amounts.map((value: string): string =>
+        value[0] === "$" ? value.replace("$", "") : value
+    );
+    const integers = values.map((int: string): number =>
+        Number.isNaN(parseInt(int)) ? 0 : parseInt(int)
+    );
+    values;
+    return integers;
     /** maybe do "if" statements rather than whats taught
      * since need to check if "$" is in string then get rid of it
      * as well as seeing if string is able to parse
@@ -74,7 +79,8 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return 0;
+    const shortWords = words.filter((word: string): boolean => word.length < 4);
+    return shortWords.length;
 }
 
 /**
@@ -83,7 +89,14 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    return false;
+    const isRGB = colors.every(
+        (color: string): boolean =>
+            color === "red" ||
+            color === "blue" ||
+            color === "green" ||
+            color.length === 0
+    );
+    return isRGB;
 }
 
 /**
