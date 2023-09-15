@@ -54,3 +54,19 @@ export function convertYesNo(word: string): boolean | null {
     }
     return null;
 }
+
+export function containsDollarSign(word: string): boolean {
+    return word.includes("$");
+}
+
+export function squareNumber(number: number): number {
+    return number * number;
+}
+
+export function firstAndThirdLetter(word: string): string {
+    if (word.length < 3) {
+        return word[0];
+    } else {
+        return word[0] + word[2];
+    }
+}

@@ -3,7 +3,10 @@ import {
     fahrenheitToCelius,
     shout,
     isQuestion,
-    convertYesNo
+    convertYesNo,
+    containsDollarSign,
+    squareNumber,
+    firstAndThirdLetter
 } from "./functions";
 
 describe("Testing the basic functions", () => {
@@ -55,5 +58,22 @@ describe("Testing the basic functions", () => {
         expect(convertYesNo("Nope")).toBe(null);
         expect(convertYesNo("Yesterday")).toBe(null);
         expect(convertYesNo("Maybe")).toBe(null);
+    });
+
+    test("Testing the containsDollarSign function", () => {
+        expect(containsDollarSign("$2.50")).toBe(true);
+        expect(containsDollarSign("BIG MONEY $$$$$")).toBe(true);
+        expect(containsDollarSign("no money :(")).toBe(false);
+    });
+
+    test("Testing the squareNumber function", () => {
+        expect(squareNumber(2)).toBe(4);
+        expect(squareNumber(1)).toBe(1);
+        expect(squareNumber(0)).toBe(0);
+    });
+
+    test("Testing the firstAndLastLetter function", () => {
+        expect(firstAndThirdLetter("an")).toBe("a");
+        expect(firstAndThirdLetter("three")).toBe("tr");
     });
 });
