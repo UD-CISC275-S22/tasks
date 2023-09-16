@@ -61,6 +61,20 @@ describe("Testing the basic functions", () => {
     test("Testing the averageTotal function", () => {
         expect(averageTotal(6,0,0)).toBe(2);
         expect(averageTotal(4,8,10).toBe())
+        expect(averageTotal(2,4).toBe(3))
+        expect(averageTotal(0,0,0,0,0).toBe(0))
+        expect(averageTotal(1,2,3,4,5).toBe(3))
     });
+
+    test("Testing the hasBanana function", () => {
+        expect(hasBanana("apple","banana","orange").toBe(true));
+        expect(hasBanana("Apple","Banana","Orange").toBe(true));
+        expect(hasBanana("APPLE","BANANA","ORANGE").toBe(true));
+        expect(hasBanana("").toBe(false));
+    }
+
+    test("Testing the  function", () => {
+        
+    }
     */
 });

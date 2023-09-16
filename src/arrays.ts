@@ -107,7 +107,15 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    if (addends.length === 0) {
+        return "0=0";
+    } else {
+        const sum = addends.reduce(
+            (value: number, total: number): number => (total = total + value)
+        );
+        const adding = addends.join("+");
+        return sum + "=" + adding;
+    }
 }
 
 /**
@@ -120,5 +128,51 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    return [];
+    const locateNegative = values.findIndex(
+        (value: number): boolean => value < 0
+    );
+    if (values.length === 0) {
+        return [0];
+    }
+    if (locateNegative >= 0) {
+        //problem in totalBeforeNegative
+        const beforeNegative = values.slice(0, locateNegative);
+        if (beforeNegative.length !== 0) {
+            const totalBeforeNegative = beforeNegative.reduce(
+                (value: number, total: number): number =>
+                    (total = total + value)
+            );
+            //all above is good, splice is fucky :/
+            const addBeforeNegative = [...values];
+            addBeforeNegative.splice(
+                locateNegative + 1,
+                0,
+                totalBeforeNegative
+            );
+            return addBeforeNegative;
+        }
+        if (locateNegative === 0) {
+            const addingAfterNeg = [...values];
+            addingAfterNeg.splice(1, 0, 0);
+            return addingAfterNeg;
+        } else {
+            return [];
+        }
+
+        //const test = [...values, 9, 10];
+        //return test;
+    }
+    if (locateNegative < 0) {
+        const sum = values.reduce(
+            (value: number, total: number): number => (total = total + value)
+        );
+        const addToEnd = [...values, sum];
+        return addToEnd;
+    }
+    /*
+    const totalBeforeNegative = values.reduce(
+        (beforeNeg: number, total: number): number =>
+            beforeNeg !== locateNegative ? (total += beforeNeg) : beforeNeg
+    );
+    */
 }
