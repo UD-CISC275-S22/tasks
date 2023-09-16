@@ -161,8 +161,7 @@ export function injectPositive(values: number[]): number[] {
 
         //const test = [...values, 9, 10];
         //return test;
-    }
-    if (locateNegative < 0) {
+    } else {
         const sum = values.reduce(
             (value: number, total: number): number => (total = total + value)
         );
