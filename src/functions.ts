@@ -49,3 +49,11 @@ export function convertYesNo(word: string): boolean | null {
     }
     return null;
 }
+
+export function SumArr(Sum: Array<number>): number {
+    let rur = 0;
+    for (let i = 0; i < Sum.length; i++) {
+        rur = rur + Sum[i];
+    }
+    return rur;
+}

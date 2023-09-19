@@ -3,7 +3,8 @@ import {
     fahrenheitToCelius,
     shout,
     isQuestion,
-    convertYesNo
+    convertYesNo,
+    SumArr
 } from "./functions";
 
 describe("Testing the basic functions", () => {
@@ -55,5 +56,9 @@ describe("Testing the basic functions", () => {
         expect(convertYesNo("Nope")).toBe(null);
         expect(convertYesNo("Yesterday")).toBe(null);
         expect(convertYesNo("Maybe")).toBe(null);
+    });
+    test("testing sum of array", () => {
+        expect(SumArr([1, 2, 3, 4, 5])).toBe(15);
+        expect(SumArr([])).toBe(0);
     });
 });
