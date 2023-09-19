@@ -4,15 +4,14 @@ import "./App.css";
 
 export function App(): JSX.Element {
     return <h1>CISC275 Hello World HTML</h1>;
-    return (
-        <div>
+    return <div>
             <h1>Hello World</h1>
             <img
                 src="../assets/images/pet-ada.jpg"
                 alt="A picture of my dog Ada"
             />
-        </div>
-    );
+        </div>;
+        
     return (
         <div>
             <Button>Log Hello World</Button>
