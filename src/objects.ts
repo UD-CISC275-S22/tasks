@@ -30,7 +30,12 @@ export function makeBlankQuestion(
  * HINT: Look up the `trim` and `toLowerCase` functions.
  */
 export function isCorrect(question: Question, answer: string): boolean {
-    return false;
+    if (question.expected && question.expected.trim() !== "") {
+        const normalizedAnswer = answer.toLowerCase().trim();
+        const normalizedExpected = question.expected.toLowerCase().trim();
+        return normalizedAnswer === normalizedExpected;
+    }
+    return answer.trim() === "";
 }
 
 /**
@@ -40,7 +45,13 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
-    return false;
+    if (question.type === "short_answer_question") {
+        return true;
+    } else if (question.type === "multiple_choice_question") {
+        return question.options.includes(answer);
+    } else {
+        return false;
+    }
 }
 
 /**
