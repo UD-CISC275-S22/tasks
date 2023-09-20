@@ -10,7 +10,17 @@ export function makeBlankQuestion(
     name: string,
     type: QuestionType
 ): Question {
-    return {};
+    const blankQuestion = {
+        id,
+        name,
+        type,
+        body: "",
+        expected: "",
+        options: [],
+        points: 1,
+        published: false
+    };
+    return blankQuestion;
 }
 
 /**
@@ -21,7 +31,13 @@ export function makeBlankQuestion(
  * HINT: Look up the `trim` and `toLowerCase` functions.
  */
 export function isCorrect(question: Question, answer: string): boolean {
-    return false;
+    const trimedAnswer = answer.trim();
+    const modifiedAnswer = trimedAnswer.toLowerCase();
+    if (modifiedAnswer === question.expected.toLowerCase()) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 /**
@@ -41,7 +57,8 @@ export function isValid(question: Question, answer: string): boolean {
  * name "My First Question" would become "9: My First Q".
  */
 export function toShortForm(question: Question): string {
-    return "";
+    const slicedAnswer = question.name.slice(0, 10);
+    return question.id.toString() + ": " + slicedAnswer;
 }
 
 /**
@@ -62,7 +79,13 @@ export function toShortForm(question: Question): string {
  * Check the unit tests for more examples of what this looks like!
  */
 export function toMarkdown(question: Question): string {
-    return "";
+    const prompt = "# " + question.name + "\n" + question.body;
+    if (question.options.length !== 0) {
+        const promptOption = prompt + "\n- " + question.options.join("\n- ");
+        return promptOption;
+    } else {
+        return prompt;
+    }
 }
 
 /**
@@ -70,7 +93,8 @@ export function toMarkdown(question: Question): string {
  * `newName`.
  */
 export function renameQuestion(question: Question, newName: string): Question {
-    return question;
+    const updatedName = { ...question, name: newName };
+    return updatedName;
 }
 
 /**
@@ -79,7 +103,13 @@ export function renameQuestion(question: Question, newName: string): Question {
  * published; if it was published, now it should be not published.
  */
 export function publishQuestion(question: Question): Question {
-    return question;
+    if (question.published === true) {
+        const trueToFalse = { ...question, published: false };
+        return trueToFalse;
+    } else {
+        const falseToTrue = { ...question, published: true };
+        return falseToTrue;
+    }
 }
 
 /**
