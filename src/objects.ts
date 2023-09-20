@@ -47,7 +47,19 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
-    return false;
+    //what is short_answer_question?
+    // "short_answer_question refers to the question.type"
+    if (
+        question.type === "multiple_choice_question" &&
+        question.options.includes(answer)
+    ) {
+        return true;
+    }
+    if (question.type === "short_answer_question") {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 /**
@@ -119,7 +131,13 @@ export function publishQuestion(question: Question): Question {
  * The `published` field should be reset to false.
  */
 export function duplicateQuestion(id: number, oldQuestion: Question): Question {
-    return oldQuestion;
+    const copyOfQuestion = {
+        ...oldQuestion,
+        name: "Copy of " + oldQuestion.name,
+        id: id,
+        published: false
+    };
+    return copyOfQuestion;
 }
 
 /**
@@ -130,7 +148,11 @@ export function duplicateQuestion(id: number, oldQuestion: Question): Question {
  * Check out the subsection about "Nested Fields" for more information.
  */
 export function addOption(question: Question, newOption: string): Question {
-    return question;
+    const addedOption = {
+        ...question,
+        options: [...question.options, newOption]
+    };
+    return addedOption;
 }
 
 /**
@@ -147,5 +169,12 @@ export function mergeQuestion(
     contentQuestion: Question,
     { points }: { points: number }
 ): Question {
-    return contentQuestion;
+    const newQuestion = {
+        ...contentQuestion,
+        id: id,
+        name: name,
+        points,
+        published: false
+    };
+    return newQuestion;
 }
