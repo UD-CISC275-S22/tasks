@@ -97,7 +97,22 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    return false;
+    if (colors.length == 0) {
+        return true;
+    }
+
+    const isRBG = colors.map((values: string): boolean =>
+        //come back to
+        values === "blue" || values === "red" || values === "green"
+            ? true
+            : false
+    );
+
+    const testing = isRBG.every((values: boolean): boolean =>
+        values ? true : false
+    );
+
+    return testing;
 }
 
 /**
