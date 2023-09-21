@@ -269,5 +269,12 @@ describe("Testing the array functions", () => {
         expect(injectPositive(NUMBERS_5)).toEqual([100, 199, 1, -5, 300, 7, 3]);
         expect(injectPositive(NUMBERS_6)).toEqual([-100, 0, -200, 100, 200]);
         expect(injectPositive(NUMBERS_7)).toEqual([199, 1, 550, 50, 200, 1000]);
+        /*const NUMBERS_1 = [1, 2, 3];
+    const NUMBERS_2 = [100, 300, 200];
+    const NUMBERS_3 = [5];
+    const NUMBERS_4: number[] = [];
+    const NUMBERS_5 = [100, 199, 1, -5, 7, 3];
+    const NUMBERS_6 = [-100, -200, 100, 200];
+    const NUMBERS_7 = [199, 1, 550, 50, 200];*/
     });
 });
