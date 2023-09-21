@@ -86,16 +86,17 @@ export function toShortForm(question: Question): string {
 export function toMarkdown(question: Question): string {
     let formattedString = "";
 
-    formattedString += `|# ${question.name}\n`;
-    formattedString += `|${question.body}\n`;
+    formattedString += `# ${question.name}\n`;
+    formattedString += `${question.body}`;
 
     if (question.type === "multiple_choice_question" && question.options) {
         for (const option of question.options) {
-            formattedString += `|- ${option}\n`;
+            formattedString += `\n- ${option}`;
         }
     }
 
-    formattedString += "------------------";
+    //formattedString += "------------------";
+    console.log(formattedString);
 
     return formattedString;
 }
