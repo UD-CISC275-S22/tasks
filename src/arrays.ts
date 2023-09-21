@@ -102,7 +102,6 @@ export function allRGB(colors: string[]): boolean {
     }
 
     const isRBG = colors.map((values: string): boolean =>
-        //come back to
         values === "blue" || values === "red" || values === "green"
             ? true
             : false
@@ -123,7 +122,15 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    if (addends.length == 0) {
+        addends = [0];
+    }
+    const words: string =
+        addends.reduce((total: number, num: number) => total + num, 0) +
+        "=" +
+        addends.toString().replaceAll(",", "+");
+
+    return words;
 }
 
 /**
