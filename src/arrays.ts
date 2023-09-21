@@ -31,10 +31,19 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
+
+
+const value = numbers.map((words: string): number => !Number.isNaN(parseInt(words)) ? parseInt(words) : 0);
+
+
+
     return [];
 }
 
 /**
+ * 
+ * 
+ * 
  * Consume an array of strings and return them as numbers. Note that
  * the strings MAY have "$" symbols at the beginning, in which case
  * those should be removed. If the result cannot be parsed as an integer,
@@ -42,7 +51,10 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    return [];
+    
+    const dollarSign = 
+
+    //return [];
 };
 
 /**
@@ -59,6 +71,9 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
+
+
+
     return 0;
 }
 
@@ -68,6 +83,11 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
+
+    if( colors.length==0){
+        return true;
+    }
+
     return false;
 }
 
@@ -79,7 +99,8 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+
+    return "" ;
 }
 
 /**
