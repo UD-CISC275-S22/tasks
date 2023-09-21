@@ -10,7 +10,7 @@ export function makeBlankQuestion(
     name: string,
     type: QuestionType
 ): Question {
-    let question = {
+    const question = {
         id: id,
         name: name,
         body: "",
@@ -96,7 +96,7 @@ export function toMarkdown(question: Question): string {
  * `newName`.
  */
 export function renameQuestion(question: Question, newName: string): Question {
-    let rur = { ...question, name: newName };
+    const rur = { ...question, name: newName };
     return rur;
 }
 
@@ -106,7 +106,7 @@ export function renameQuestion(question: Question, newName: string): Question {
  * published; if it was published, now it should be not published.
  */
 export function publishQuestion(question: Question): Question {
-    let rur = { ...question, published: !question.published };
+    const rur = { ...question, published: !question.published };
     return rur;
 }
 
@@ -117,7 +117,7 @@ export function publishQuestion(question: Question): Question {
  * The `published` field should be reset to false.
  */
 export function duplicateQuestion(id: number, oldQuestion: Question): Question {
-    let rur = {
+    const rur = {
         ...oldQuestion,
         name: "Copy of " + oldQuestion.name,
         published: false,
@@ -134,7 +134,7 @@ export function duplicateQuestion(id: number, oldQuestion: Question): Question {
  * Check out the subsection about "Nested Fields" for more information.
  */
 export function addOption(question: Question, newOption: string): Question {
-    let rur = { ...question, options: [...question.options, newOption] };
+    const rur = { ...question, options: [...question.options, newOption] };
     return rur;
 }
 
@@ -152,7 +152,7 @@ export function mergeQuestion(
     contentQuestion: Question,
     { points }: { points: number }
 ): Question {
-    let rur = {
+    const rur = {
         id: id,
         name: name,
         body: contentQuestion.body,
