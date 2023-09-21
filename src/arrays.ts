@@ -31,19 +31,17 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
+    const value = numbers.map((words: string): number =>
+        !Number.isNaN(parseInt(words)) ? parseInt(words) : 0
+    );
 
-
-const value = numbers.map((words: string): number => !Number.isNaN(parseInt(words)) ? parseInt(words) : 0);
-
-
-
-    return [];
+    return value;
 }
 
 /**
- * 
- * 
- * 
+ *
+ *
+ *
  * Consume an array of strings and return them as numbers. Note that
  * the strings MAY have "$" symbols at the beginning, in which case
  * those should be removed. If the result cannot be parsed as an integer,
@@ -51,10 +49,13 @@ const value = numbers.map((words: string): number => !Number.isNaN(parseInt(word
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    
-    const dollarSign = 
-
-    //return [];
+    const hasSign = amounts.map((values: string): string =>
+        values.charAt(0) == "$" ? values.slice(1) : values
+    );
+    const result = hasSign.map((words: string): number =>
+        !Number.isNaN(parseInt(words)) ? parseInt(words) : 0
+    );
+    return result;
 };
 
 /**
@@ -63,7 +64,14 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    return [];
+    const fixedList = messages.filter((values: string): boolean =>
+        values.charAt(values.length - 1) != "?" ? true : false
+    );
+
+    const shouting = fixedList.map((values: string): string =>
+        values.charAt(values.length - 1) == "!" ? values.toUpperCase() : values
+    );
+    return shouting;
 };
 
 /**
@@ -71,10 +79,16 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
+    const bigOrSmall = words.map((values: string): number =>
+        values.length < 4 ? 1 : 0
+    );
 
+    const totalSmall = bigOrSmall.reduce(
+        (Total: number, value: number) => Total + value,
+        0
+    );
 
-
-    return 0;
+    return totalSmall;
 }
 
 /**
@@ -83,11 +97,6 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-
-    if( colors.length==0){
-        return true;
-    }
-
     return false;
 }
 
@@ -99,8 +108,7 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-
-    return "" ;
+    return "";
 }
 
 /**
