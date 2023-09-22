@@ -1,3 +1,4 @@
+import { urlToHttpOptions } from "url";
 import { Question, QuestionType } from "./interfaces/question";
 
 /**
@@ -99,7 +100,22 @@ export function toShortForm(question: Question): string {
  * Check the unit tests for more examples of what this looks like!
  */
 export function toMarkdown(question: Question): string {
-    return "";
+    const newQuestion = { ...question };
+    let finalString: string;
+    if (newQuestion.type == "multiple_choice_question") {
+        finalString =
+            "# " +
+            newQuestion.name +
+            "\n" +
+            newQuestion.body +
+            "\n" +
+            newQuestion.options
+                .map((values: string): string => "- " + values)
+                .join("\n");
+        return finalString;
+    }
+    finalString = "# " + newQuestion.name + "\n" + newQuestion.body;
+    return finalString;
 }
 
 /**
