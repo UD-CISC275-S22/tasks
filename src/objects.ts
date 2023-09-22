@@ -44,18 +44,15 @@ export function isCorrect(question: Question, answer: string): boolean {
  * any answer is valid. But for a `multiple_choice_question`, the `answer` must
  * be exactly one of the options.
  */
-// export function isValid(question: Question, answer: string): boolean {
-//     if (question.type === "short_answer_question") {
-//         return true;
-//     } else if (question.type === "multiple_choice_question") {
-//         const normalizedAnswer = answer.trim().toLowerCase();
-//         return question.options.some(
-//             (option) => option.toLowerCase() === normalizedAnswer
-//         );
-//     } else {
-//         return false;
-//     }
-// }
+export function isValid(question: Question, answer: string): boolean {
+    if (question.type === "short_answer_question") {
+        return true;
+    } else {
+        // const normalizedAnswer = answer.trim().toLowerCase();
+        //console.log(question.options, normalizedAnswer);
+        return question.options.includes(answer);
+    }
+}
 
 /**
  * Consumes a question and produces a string representation combining the
@@ -88,18 +85,19 @@ export function toShortForm(question: Question): string {
  * ------------------------------
  * Check the unit tests for more examples of what this looks like!
  */
-function toMarkdown(question: Question): string {
+export function toMarkdown(question: Question): string {
     const { name, body, options } = question;
 
-    let markdown = `# ${name}\n${body}\n`;
+    let markdown = `# ${name}\n${body}`;
 
     if (options && options.length > 0) {
         for (const option of options) {
-            markdown += `- ${option}\n`;
+            markdown += `\n- ${option}`;
         }
     }
 
     return markdown;
+    //return "";
 }
 
 /**
