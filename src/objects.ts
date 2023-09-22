@@ -51,7 +51,19 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
-    return false;
+    const newQuestion = { ...question };
+    let correct: boolean;
+
+    if (newQuestion.type == "short_answer_question") {
+        correct = true;
+        return correct;
+    }
+
+    const isReal = newQuestion.options.some((value: string): boolean =>
+        value === answer ? true : false
+    );
+    correct = isReal;
+    return correct;
 }
 
 /**
