@@ -224,7 +224,20 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ): Question[] {
-    return [];
+    const ind = questions.findIndex(
+        (question: Question): boolean => question.id === targetId
+    );
+    const newQuestions = [...questions];
+    const newOptions = [...questions[ind].options];
+    targetOptionIndex === -1
+        ? newOptions.push(newOption)
+        : newOptions.splice(targetOptionIndex, 1, newOption);
+    const newQuestion = {
+        ...questions[ind],
+        options: newOptions
+    };
+    newQuestions.splice(ind, 1, newQuestion);
+    return newQuestions;
 }
 
 /***
