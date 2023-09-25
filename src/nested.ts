@@ -168,6 +168,17 @@ export function publishAll(questions: Question[]): Question[] {
  * are the same type. They can be any type, as long as they are all the SAME type.
  */
 export function sameType(questions: Question[]): boolean {
+    const start: QuestionType[] = questions.map(
+        (question: Question): QuestionType => question.type
+    );
+
+    if (
+        questions.every(
+            (question: Question): boolean => question.type === start[0]
+        )
+    ) {
+        return true;
+    }
     return false;
 }
 
