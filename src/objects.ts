@@ -3,7 +3,7 @@ import { Question, QuestionType } from "./interfaces/question";
 /**
  * Create a new blank question with the given `id`, `name`, and `type. The `body` and
  * `expected` should be empty strings, the `options` should be an empty list, the `points`
- * should default to 1, and `published` should default to false.
+ * should default to 1, and `published` should default to false. Mann Was here
  */
 export function makeBlankQuestion(
     id: number,
@@ -56,10 +56,7 @@ export function isValid(question: Question, answer: string): boolean {
  * separated by ": ". So for example, the question with id 9 and the
  * name "My First Question" would become "9: My First Q".
  */
-type question = {
-    id: number;
-    name: string;
-};
+
 export function toShortForm(question: Question): string {
     const shortName = question.name.slice(0, 10);
     return `${question.id}: ${shortName}`;
