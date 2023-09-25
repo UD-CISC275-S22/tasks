@@ -1,3 +1,4 @@
+import { text } from "stream/consumers";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
 
@@ -139,16 +140,16 @@ export function toCSV(questions: Question[]): string {
 export function makeAnswers(questions: Question[]): Answer[] {
     const ids = questions.map((question: Question): number => question.id);
 
-    let answer: Answer;
-
-    const finish = ids.map(
-        (value: number): Answer => (answer.questionId = value),
-        (answer.text = ""),
-        (answer.submitted = false),
-        (answer.correct = false)
-    );
-
-    return [];
+    const newAnswer = ids.map((value: number): Answer => {
+        const Answersheet: Answer = {
+            questionId: value,
+            text: "",
+            submitted: false,
+            correct: false
+        };
+        return Answersheet;
+    });
+    return newAnswer;
 }
 
 /***
