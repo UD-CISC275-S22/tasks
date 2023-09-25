@@ -212,7 +212,15 @@ export function renameQuestionById(
     targetId: number,
     newName: string
 ): Question[] {
-    return [];
+    const newList = questions.map(
+        (question: Question): Question => ({ ...question })
+    );
+
+    newList.map((question: Question): string =>
+        question.id == targetId ? (question.name = newName) : question.name
+    );
+
+    return newList;
 }
 
 /***
