@@ -6,11 +6,9 @@ import { Button, Col, Container, Row } from "react-bootstrap";
 function App(): JSX.Element {
     return (
         <div className="App">
-            <header
-                className="App-header"
-                style={{ backgroundColor: "yellowgreen" }}
-            ></header>
-            UM COS420 with React Hooks and TypeScript
+            <header className="App-header">
+                UM COS420 with React Hooks and TypeScript
+            </header>
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
