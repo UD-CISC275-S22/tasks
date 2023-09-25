@@ -70,9 +70,9 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    let modifiedMessages = [];
+    const modifiedMessages = [];
 
-    for (let message of messages) {
+    for (const message of messages) {
         if (message.endsWith("!")) {
             modifiedMessages.push(message.toUpperCase());
         } else if (!message.endsWith("?")) {
@@ -90,7 +90,7 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
 export function countShortWords(words: string[]): number {
     let count = 0;
 
-    for (let word of words) {
+    for (const word of words) {
         if (word.length < 4) {
             count++;
         }
@@ -109,7 +109,7 @@ export function allRGB(colors: string[]): boolean {
         return true;
     }
 
-    for (let color of colors) {
+    for (const color of colors) {
         if (color !== "red" && color !== "blue" && color !== "green") {
             return false;
         }
