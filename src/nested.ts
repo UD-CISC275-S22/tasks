@@ -279,18 +279,6 @@ export function editOption(
     const newList = questions.map(
         (question: Question): Question => ({ ...question })
     );
-    if (targetOptionIndex == -1) {
-        /* newList.map((question: Question): number =>
-            targetId == question.id ? question.options.push(newOption) : 0
-        );
-        return newList;*/
-    } else {
-        newList.map((question: Question): string =>
-            question.id == targetId
-                ? (question.options[targetOptionIndex] = newOption)
-                : question.options[targetOptionIndex]
-        );
-    }
 
     return [];
 }
