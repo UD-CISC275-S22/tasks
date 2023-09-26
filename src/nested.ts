@@ -2,6 +2,7 @@ import { text } from "stream/consumers";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
 import { duplicateQuestion, makeBlankQuestion } from "./objects";
+import { kMaxLength } from "buffer";
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
@@ -269,6 +270,23 @@ export function changeQuestionTypeById(
  *
  * Remember, if a function starts getting too complicated, think about how a helper function
  * can make it simpler! Break down complicated tasks into little pieces.
+ * 
+ * 
+ *     const newList = questions.map(
+        (question: Question): Question => ({ ...question })
+    );
+
+    const addToEnd: string[] = [];
+    const IDX = questions.findIndex(
+        (question: Question): boolean => question.id == targetId
+    );
+
+    if (targetOptionIndex != -1) {
+        newList[IDX].options[targetOptionIndex] = newOption;
+    } else {
+        addToEnd[0] = newOption;
+        newList[IDX].options = newList[IDX].options.concat(addToEnd);
+    }
  */
 export function editOption(
     questions: Question[],
@@ -276,11 +294,25 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ): Question[] {
+    const holder: string[] = [newOption];
     const newList = questions.map(
         (question: Question): Question => ({ ...question })
     );
+    if (targetOptionIndex != -1) {
+        newList.map((question: Question): string =>
+            question.id == targetId
+                ? (question.options[targetOptionIndex] = newOption)
+                : ""
+        );
+    } else {
+        newList.map((question: Question): string[] =>
+            question.id == targetId
+                ? question.options.concat(holder)
+                : question.options
+        );
+    }
 
-    return [];
+    return newList;
 }
 
 /***
@@ -294,13 +326,17 @@ export function duplicateQuestionInArray(
     targetId: number,
     newId: number
 ): Question[] {
-    const IDX = questions.findIndex(
+    const newList = questions.map(
+        (question: Question): Question => ({ ...question })
+    );
+
+    const IDX = newList.findIndex(
         (question: Question): boolean => question.id == targetId
     );
 
-    const firstHalf: Question[] = questions.slice(0, IDX + 1);
-    const secondHalf: Question[] = questions.slice(IDX + 1);
-    firstHalf.push(duplicateQuestion(newId, questions[IDX]));
+    const firstHalf: Question[] = newList.slice(0, IDX + 1);
+    const secondHalf: Question[] = newList.slice(IDX + 1);
+    firstHalf.push(duplicateQuestion(newId, newList[IDX]));
     const finalList = firstHalf.concat(secondHalf);
 
     return finalList;
