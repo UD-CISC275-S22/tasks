@@ -96,7 +96,6 @@ export function toMarkdown(question: Question): string {
     }
 
     //formattedString += "------------------";
-    console.log(formattedString);
 
     return formattedString;
 }
