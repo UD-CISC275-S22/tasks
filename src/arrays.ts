@@ -134,7 +134,6 @@ export function injectPositive(values: number[]): number[] {
     const values2 = [...values];
     const values3 = [...values];
     const negativeFound = index === -1 ? false : true;
-    console.log(index);
     if (negativeFound) {
         const index2 = values2.slice(0, index);
         sum += index2.reduce(
@@ -142,7 +141,6 @@ export function injectPositive(values: number[]): number[] {
             0
         );
         const end = values3.slice(index + 1, values.length);
-        console.log(sum, end);
         return [...index2, values[index], sum, ...end];
     } else {
         sum += values.reduce(
@@ -151,16 +149,4 @@ export function injectPositive(values: number[]): number[] {
         );
         return [...values, sum];
     }
-    // for (const value of values) {
-    //     if (negativeFound) {
-    //         result.push(value);
-    //     } else if (value < 0) {
-    //         result.push(sum);
-    //         result.push(value);
-    //         negativeFound = true;
-    //     } else {
-    //         sum += value;
-    //         result.push(value);
-    //     }
-    // }
 }
