@@ -1,6 +1,12 @@
 import React from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import "./App.css";
+import { ChangeType } from "./components/ChangeType";
+import { RevealAnswer } from "./components/RevealAnswer";
+import { StartAttempt } from "./components/StartAttempt";
+import { TwoDice } from "./components/TwoDice";
+import { CycleHoliday } from "./components/CycleHoliday";
+import { Counter } from "./components/Counter";
 
 function App(): JSX.Element {
     return (
@@ -8,53 +14,18 @@ function App(): JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript
             </header>
-            <h1> This is the header </h1>
-            <img
-                src="https://upload.wikimedia.org/wikipedia/commons/f/f1/2ChocolateChipCookies.jpg"
-                alt="My favorite cookies "
-                width="200"
-                height="200"
-            />
-            <ol>
-                <li> milk </li>
-                <li> eggs</li>
-                <li>flour</li>
-                <li>sugar </li>
-            </ol>
-            <Button onClick={() => console.log("Hello World!")}>
-                {" "}
-                Log Hello World{" "}
-            </Button>{" "}
-            <Container>
-                <Row>
-                    <Col>
-                        {" "}
-                        First column
-                        <div
-                            style={{
-                                height: 200,
-                                width: 100,
-                                backgroundColor: "red"
-                            }}
-                        ></div>
-                    </Col>
-                    <Col>
-                        {" "}
-                        Second column{" "}
-                        <div
-                            style={{
-                                height: 200,
-                                width: 100,
-                                backgroundColor: "red"
-                            }}
-                        ></div>
-                    </Col>
-                </Row>
-            </Container>
-            <p>
-                Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload. Don Daniels. {"Hello World"}
-            </p>
+            <hr></hr>
+            <Counter></Counter>
+            <hr />
+            <RevealAnswer></RevealAnswer>
+            <hr />
+            <StartAttempt></StartAttempt>
+            <hr />
+            <TwoDice></TwoDice>
+            <hr />
+            <ChangeType></ChangeType>
+            <hr />
+            <CycleHoliday></CycleHoliday>
         </div>
     );
 }
