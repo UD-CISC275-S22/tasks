@@ -99,6 +99,16 @@ export function toMarkdown(question: Question): string {
     return markdown;
     //return "";
 }
+toMarkdown({
+    id: 0,
+    name: "",
+    body: "",
+    type: "multiple_choice_question",
+    options: [],
+    expected: "",
+    points: 0,
+    published: false
+});
 
 /**
  * Return a new version of the given question, except the name should now be
@@ -175,9 +185,7 @@ export function mergeQuestion(
         name: name,
         body: contentQuestion.body,
         type: contentQuestion.type,
-        options: contentQuestion.options
-            ? [...contentQuestion.options]
-            : undefined,
+        options: [...contentQuestion.options],
         expected: contentQuestion.expected,
         points: points,
         published: false
