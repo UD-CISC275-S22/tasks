@@ -130,25 +130,23 @@ export function makeMath(addends: number[]): string {
  */
 export function injectPositive(values: number[]): number[] {
     let sum = 0;
-    let negativeFound = false;
-    const result: number[] = [];
-
-    for (const value of values) {
-        if (negativeFound) {
-            result.push(value);
-        } else if (value < 0) {
-            result.push(sum);
-            result.push(value);
-            negativeFound = true;
-        } else {
-            sum += value;
-            result.push(value);
-        }
+    const index = values.findIndex((value: number): boolean => value < 0);
+    const values2 = [...values];
+    const values3 = [...values];
+    const negativeFound = index === -1 ? false : true;
+    if (negativeFound) {
+        const index2 = values2.slice(0, index);
+        sum += index2.reduce(
+            (currentTotal: number, num: number) => currentTotal + num,
+            0
+        );
+        const end = values3.slice(index + 1, values.length);
+        return [...index2, values[index], sum, ...end];
+    } else {
+        sum += values.reduce(
+            (currentTotal: number, num: number) => currentTotal + num,
+            0
+        );
+        return [...values, sum];
     }
-
-    if (!negativeFound) {
-        result.push(sum);
-    }
-
-    return result;
 }
