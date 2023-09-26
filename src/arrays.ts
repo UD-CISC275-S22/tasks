@@ -79,7 +79,6 @@ export function allRGB(colors: string[]): boolean {
     if (colors.length === 0) {
         return true;
     }
-
     return colors.every((color) => ["red", "blue", "green"].includes(color));
 }
 

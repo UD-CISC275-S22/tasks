@@ -48,7 +48,9 @@ export function removeQuestion(questions: Question[], id: number): Question[] {
  * questions, as an array.
  */
 export function getNames(questions: Question[]): string[] {
-    return questions.map((question) => question.body);
+    const names: string[] = questions.map((question) => question.name);
+
+    return names;
 }
 
 /***
@@ -172,7 +174,17 @@ export function changeQuestionTypeById(
     targetId: number,
     newQuestionType: QuestionType
 ): Question[] {
-    return [];
+    return questions.map((question) => {
+        if (question.id === targetId) {
+            if (newQuestionType !== "multiple_choice_question") {
+                return { ...question, type: newQuestionType, options: [] };
+            } else {
+                return { ...question, type: newQuestionType };
+            }
+        } else {
+            return question;
+        }
+    });
 }
 
 /**
@@ -191,7 +203,24 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ): Question[] {
-    return [];
+    return questions.map((question) => {
+        if (question.id === targetId) {
+            const updatedOptions = [...question.options];
+
+            if (targetOptionIndex === -1) {
+                updatedOptions.push(newOption);
+            } else if (
+                targetOptionIndex >= 0 &&
+                targetOptionIndex < updatedOptions.length
+            ) {
+                updatedOptions[targetOptionIndex] = newOption;
+            }
+
+            return { ...question, options: updatedOptions };
+        } else {
+            return question;
+        }
+    });
 }
 
 /***
@@ -200,10 +229,28 @@ export function editOption(
  * the duplicate inserted directly after the original question. Use the `duplicateQuestion`
  * function you defined previously; the `newId` is the parameter to use for the duplicate's ID.
  */
+
 export function duplicateQuestionInArray(
     questions: Question[],
     targetId: number,
     newId: number
 ): Question[] {
-    return [];
+    return questions.flatMap((question) => {
+        if (question.id === targetId) {
+            const duplicate: Question = {
+                id: newId,
+                name: "Copy of " + question.name,
+                type: question.type,
+                options: [...question.options],
+                points: question.points,
+                published: question.published,
+                body: question.body,
+                expected: question.expected
+            };
+            console.log(question);
+            return [question, duplicate];
+        } else {
+            return [question];
+        }
+    });
 }
