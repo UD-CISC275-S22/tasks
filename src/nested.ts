@@ -256,7 +256,7 @@ export function editOption(
 ): Question[] {
     return questions.map((question: Question): Question => {
         if (question.id === targetId) {
-            let updatedOptions = [...question.options];
+            const updatedOptions = [...question.options];
             if (targetOptionIndex === -1) {
                 updatedOptions.push(newOption);
             } else {
@@ -282,7 +282,7 @@ export function duplicateQuestionInArray(
     targetId: number,
     newId: number
 ): Question[] {
-    let newquestions = [...questions];
+    const newquestions = [...questions];
     const index: number = questions.findIndex(
         (questions: Question): boolean => targetId === questions.id
     );
