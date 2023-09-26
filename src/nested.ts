@@ -1,8 +1,8 @@
-import { text } from "stream/consumers";
+//import { text } from "stream/consumers";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
 import { duplicateQuestion, makeBlankQuestion } from "./objects";
-import { kMaxLength } from "buffer";
+//import { kMaxLength } from "buffer";
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
