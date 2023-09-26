@@ -1,7 +1,7 @@
 import { text } from "stream/consumers";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
-import { makeBlankQuestion } from "./objects";
+import { duplicateQuestion, makeBlankQuestion } from "./objects";
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
@@ -276,6 +276,22 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ): Question[] {
+    const newList = questions.map(
+        (question: Question): Question => ({ ...question })
+    );
+    if (targetOptionIndex == -1) {
+        /* newList.map((question: Question): number =>
+            targetId == question.id ? question.options.push(newOption) : 0
+        );
+        return newList;*/
+    } else {
+        newList.map((question: Question): string =>
+            question.id == targetId
+                ? (question.options[targetOptionIndex] = newOption)
+                : question.options[targetOptionIndex]
+        );
+    }
+
     return [];
 }
 
@@ -290,5 +306,14 @@ export function duplicateQuestionInArray(
     targetId: number,
     newId: number
 ): Question[] {
-    return [];
+    const IDX = questions.findIndex(
+        (question: Question): boolean => question.id == targetId
+    );
+
+    const firstHalf: Question[] = questions.slice(0, IDX + 1);
+    const secondHalf: Question[] = questions.slice(IDX + 1);
+    firstHalf.push(duplicateQuestion(newId, questions[IDX]));
+    const finalList = firstHalf.concat(secondHalf);
+
+    return finalList;
 }
