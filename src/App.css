@@ -6,7 +6,10 @@
     height: 40vmin;
     pointer-events: none;
 }
-
+.Blueheader {
+    color: blue;
+    background-color: red;
+}
 @media (prefers-reduced-motion: no-preference) {
     .App-logo {
         animation: App-logo-spin infinite 20s linear;
@@ -24,7 +27,11 @@
     font-size: calc(10px + 2vmin);
     color: white;
 }
-
+.uglysquare {
+    height: 100px;
+    width: 150px;
+    background-color: red;
+}
 .App-link {
     color: #61dafb;
 }
