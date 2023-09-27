@@ -19,13 +19,14 @@ export function StartAttempt(): JSX.Element {
     }
     return (
         <div>
-            <Button onClick={update} disabled={!inProgress || attempts === -1}>
+            <p>{attempts} attemps</p>
+            <Button onClick={update} disabled={inProgress && attempts > 0}>
                 Start Quiz
             </Button>
-            <Button onClick={update} disabled={inProgress}>
+            <Button onClick={update} disabled={!inProgress}>
                 Stop Quiz
             </Button>
-            <Button onClick={addAttempts} disabled={!inProgress}>
+            <Button onClick={addAttempts} disabled={inProgress}>
                 Mulligan
             </Button>
         </div>
