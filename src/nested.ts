@@ -270,23 +270,6 @@ export function changeQuestionTypeById(
  *
  * Remember, if a function starts getting too complicated, think about how a helper function
  * can make it simpler! Break down complicated tasks into little pieces.
- * 
- * 
- *     const newList = questions.map(
-        (question: Question): Question => ({ ...question })
-    );
-
-    const addToEnd: string[] = [];
-    const IDX = questions.findIndex(
-        (question: Question): boolean => question.id == targetId
-    );
-
-    if (targetOptionIndex != -1) {
-        newList[IDX].options[targetOptionIndex] = newOption;
-    } else {
-        addToEnd[0] = newOption;
-        newList[IDX].options = newList[IDX].options.concat(addToEnd);
-    }
  */
 export function editOption(
     questions: Question[],
@@ -296,7 +279,10 @@ export function editOption(
 ): Question[] {
     const holder: string[] = [newOption];
     const newList = questions.map(
-        (question: Question): Question => ({ ...question })
+        (question: Question): Question => ({
+            ...question,
+            options: [...question.options]
+        })
     );
     if (targetOptionIndex != -1) {
         newList.map((question: Question): string =>
@@ -307,7 +293,7 @@ export function editOption(
     } else {
         newList.map((question: Question): string[] =>
             question.id == targetId
-                ? question.options.concat(holder)
+                ? (question.options = question.options.concat(holder))
                 : question.options
         );
     }
@@ -327,7 +313,10 @@ export function duplicateQuestionInArray(
     newId: number
 ): Question[] {
     const newList = questions.map(
-        (question: Question): Question => ({ ...question })
+        (question: Question): Question => ({
+            ...question,
+            options: [...question.options]
+        })
     );
 
     const IDX = newList.findIndex(
