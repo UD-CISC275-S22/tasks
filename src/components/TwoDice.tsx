@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
 /**
@@ -42,8 +42,8 @@ export function TwoDice(): JSX.Element {
         <div>
             <div data-testid="left-die">{leftDice}</div>
             <div data-testid="right-die">{rightDice}</div>
-            <button onClick={rollLeftDice}>Roll Left</button>
-            <button onClick={rollRightDice}>Roll Right</button>
+            <Button onClick={rollLeftDice}>Roll Left</Button>
+            <Button onClick={rollRightDice}>Roll Right</Button>
             {gameOutcome && <div>{gameOutcome}</div>}
         </div>
     );
