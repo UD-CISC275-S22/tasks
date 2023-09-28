@@ -13,7 +13,7 @@ export function CycleHoliday(): JSX.Element {
             cycleHoliday("🦃");
         } else if (currHoliday === "🦃") {
             cycleHoliday("🎅🏻");
-        } else if (currHoliday === "🎅🏻") {
+        } else {
             cycleHoliday("🧧");
         }
     }
@@ -27,7 +27,7 @@ export function CycleHoliday(): JSX.Element {
             cycleHoliday("🎃");
         } else if (currHoliday === "🎃") {
             cycleHoliday("🦃");
-        } else if (currHoliday === "🦃") {
+        } else {
             cycleHoliday("🧧");
         }
     }
