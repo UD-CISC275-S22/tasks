@@ -1,3 +1,4 @@
+import { create } from "domain";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
 
@@ -20,9 +21,9 @@ export function getPublishedQuestions(questions: Question[]): Question[] {
 export function getNonEmptyQuestions(questions: Question[]): Question[] {
     const nonEmpty = questions.filter(
         (question: Question): boolean =>
-            question.body !== "" &&
-            question.expected !== "" &&
-            question.options.length <= 0
+            question.body !== "" ||
+            question.expected !== "" ||
+            question.options.length !== 0
     );
     return nonEmpty;
     //needs to be done properly!
@@ -155,7 +156,14 @@ export function publishAll(questions: Question[]): Question[] {
  * are the same type. They can be any type, as long as they are all the SAME type.
  */
 export function sameType(questions: Question[]): boolean {
-    return false;
+    //const constent = questions[0].type;
+    if (questions.length === 0) {
+        return true;
+    }
+    const allSame = questions.every(
+        (question: Question): boolean => question.type === questions[0].type
+    );
+    return allSame;
 }
 
 /***
@@ -193,7 +201,13 @@ export function renameQuestionById(
     targetId: number,
     newName: string
 ): Question[] {
-    return [];
+    const findTarget = questions.map(
+        (question: Question): Question => ({
+            ...question,
+            name: question.id === targetId ? newName : question.name
+        })
+    );
+    return findTarget;
 }
 
 /***
@@ -208,7 +222,18 @@ export function changeQuestionTypeById(
     targetId: number,
     newQuestionType: QuestionType
 ): Question[] {
-    return [];
+    const findTarget = questions.map(
+        (question: Question): Question => ({
+            ...question,
+            options:
+                question.id === targetId &&
+                question.type === "multiple_choice_question"
+                    ? []
+                    : question.options,
+            type: question.id === targetId ? newQuestionType : question.type
+        })
+    );
+    return findTarget;
 }
 
 /**
@@ -222,12 +247,49 @@ export function changeQuestionTypeById(
  * can make it simpler! Break down complicated tasks into little pieces.
  */
 export function editOption(
-    questions: Question[],
+    inputQuestions: Question[],
     targetId: number,
     targetOptionIndex: number,
     newOption: string
 ): Question[] {
-    return [];
+    const deepCopy = inputQuestions.map(
+        (question: Question): Question => ({
+            ...question,
+            options: question.options
+        })
+    );
+    const findIndex: number = deepCopy.findIndex(
+        (question: Question): boolean => question.id === targetId
+    );
+    if (targetOptionIndex === -1) {
+        const negativePush = deepCopy.map((question: Question): Question => {
+            if (question.id === targetId) {
+                const append: Question = {
+                    ...question,
+                    options: [...question.options, newOption]
+                };
+                //question.options.push(newOption);
+                return append;
+            } else {
+                return question;
+            }
+        });
+        return negativePush;
+    } else {
+        const replaceQuestion = deepCopy.map((question: Question): Question => {
+            if (question.id === targetId) {
+                const replace: Question = {
+                    ...question,
+                    options: [...question.options]
+                };
+                replace.options.splice(targetOptionIndex, 1, newOption);
+                return replace;
+            } else {
+                return question;
+            }
+        });
+        return replaceQuestion;
+    }
 }
 
 /***
@@ -236,10 +298,33 @@ export function editOption(
  * the duplicate inserted directly after the original question. Use the `duplicateQuestion`
  * function you defined previously; the `newId` is the parameter to use for the duplicate's ID.
  */
+export function duplicateQuestion(id: number, oldQuestion: Question): Question {
+    const copyOfQuestion = {
+        ...oldQuestion,
+        name: "Copy of " + oldQuestion.name,
+        id: id,
+        published: false
+    };
+    return copyOfQuestion;
+}
+
 export function duplicateQuestionInArray(
     questions: Question[],
     targetId: number,
     newId: number
 ): Question[] {
-    return [];
+    const deepCopy = questions.map(
+        (question: Question): Question => ({
+            ...question,
+            options: question.options
+        })
+    );
+    const targetIndex = deepCopy.map((question: Question): Question[] =>
+        question.id === targetId
+            ? [{ ...question }, duplicateQuestion(newId, question)]
+            : [question]
+    );
+    return targetIndex.flat();
 }
+//do another git pull after git pull --upstream
+//task 8
