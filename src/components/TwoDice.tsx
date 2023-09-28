@@ -29,12 +29,12 @@ export function TwoDice(): JSX.Element {
     return (
         <div>
             <h2>Two Dice</h2>
-            <button onClick={rollDie1} data-testid="roll-left">
+            <Button onClick={rollDie1} data-testid="roll-left">
                 Roll Left
-            </button>
-            <button onClick={rollDie2} data-testid="roll-right">
+            </Button>
+            <Button onClick={rollDie2} data-testid="roll-right">
                 Roll Right
-            </button>
+            </Button>
             <p>
                 Die 1: <span data-testid="left-die">{die1Result}</span>
             </p>

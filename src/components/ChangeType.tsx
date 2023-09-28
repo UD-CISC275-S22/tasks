@@ -21,7 +21,7 @@ export function ChangeType(): JSX.Element {
         <div>
             <h2>Change Type</h2>
             <p>Current Type: {currentType}</p>
-            <button onClick={handleChangeType}>Change Type</button>
+            <Button onClick={handleChangeType}>Change Type</Button>
             {currentType === "multiple_choice_question"
                 ? "Multiple Choice"
                 : "Short Answer"}
