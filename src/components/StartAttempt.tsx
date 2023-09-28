@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import { scryRenderedDOMComponentsWithClass } from "react-dom/test-utils";
+//import { scryRenderedDOMComponentsWithClass } from "react-dom/test-utils";
 
 export function StartAttempt(): JSX.Element {
     const [run, toggleRun] = useState<boolean>(true);
