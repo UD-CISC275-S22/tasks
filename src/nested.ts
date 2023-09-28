@@ -1,4 +1,3 @@
-import { create } from "domain";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
 
@@ -257,9 +256,6 @@ export function editOption(
             ...question,
             options: question.options
         })
-    );
-    const findIndex: number = deepCopy.findIndex(
-        (question: Question): boolean => question.id === targetId
     );
     if (targetOptionIndex === -1) {
         const negativePush = deepCopy.map((question: Question): Question => {
