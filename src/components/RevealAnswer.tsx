@@ -5,7 +5,7 @@ export function RevealAnswer(): JSX.Element {
     const [visible, setVisible] = useState<boolean>(false);
 
     function changeVisible(): void {
-        setVisible(visible);
+        setVisible(!visible);
     }
 
     return (
