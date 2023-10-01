@@ -133,7 +133,7 @@ export function duplicateQuestion(id: number, oldQuestion: Question): Question {
         name: `Copy of ${oldQuestion.name}`,
         body: oldQuestion.body,
         type: oldQuestion.type,
-        options: oldQuestion.options ? [...oldQuestion.options] : undefined,
+        options: [...oldQuestion.options],
         expected: oldQuestion.expected,
         points: oldQuestion.points,
         published: false
@@ -175,9 +175,7 @@ export function mergeQuestion(
         name,
         body: contentQuestion.body,
         type: contentQuestion.type,
-        options: contentQuestion.options
-            ? [...contentQuestion.options]
-            : undefined,
+        options: [...contentQuestion.options],
         expected: contentQuestion.expected,
         points,
         published: false
