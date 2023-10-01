@@ -298,20 +298,14 @@ export function duplicateQuestionInArray(
         abc.options = [...question.options];
         return abc;
     });
-
-    // Find the index of the question with targetId
     const index = updatedQuestions.findIndex(
         (question: Question): boolean => question.id === targetId
     );
 
     if (index !== -1) {
-        // Duplicate the question with a new ID
         const oldQuestion = updatedQuestions[index];
         const newQuestion = duplicateQuestion(newId, oldQuestion);
-
-        // Insert the duplicate directly after the original question
         updatedQuestions.splice(index + 1, 0, newQuestion);
     }
-
     return updatedQuestions;
 }

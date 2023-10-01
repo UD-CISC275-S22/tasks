@@ -1,6 +1,15 @@
 import React from "react";
 import "./App.css";
+<<<<<<< HEAD
 import { Button, Col, Container, Row } from "react-bootstrap";
+=======
+import { ChangeType } from "./components/ChangeType";
+import { RevealAnswer } from "./components/RevealAnswer";
+import { StartAttempt } from "./components/StartAttempt";
+import { TwoDice } from "./components/TwoDice";
+import { CycleHoliday } from "./components/CycleHoliday";
+import { Counter } from "./components/Counter";
+>>>>>>> upstream/task-state
 
 function App(): JSX.Element {
     return (
@@ -10,53 +19,22 @@ function App(): JSX.Element {
                 <p>Alex M</p>
                 <p>Hello World</p>
             </header>
-            <Container>
-                <Row>
-                    <Col
-                        style={{
-                            backgroundColor: "red",
-                            width: "100px",
-                            height: "300px",
-                            margin: "30px"
-                        }}
-                    >
-                        <div>
-                            <h1>This is my header!</h1>
-                            <img
-                                src={require("./images.png")}
-                                alt={"Capital Letter A"}
-                            />
-                        </div>
-                    </Col>
-                    <Col
-                        style={{
-                            backgroundColor: "red",
-                            width: "100px",
-                            height: "300px",
-                            margin: "30px"
-                        }}
-                    >
-                        <div>
-                            <ol>
-                                <li className="lists">This</li>
-                                <li className="lists">Is</li>
-                                <li className="lists">My</li>
-                                <li className="lists">Website</li>
-                            </ol>
-                            <Button onClick={() => console.log("Hello World!")}>
-                                Log Hello World
-                            </Button>
-                        </div>
-                    </Col>
-                </Row>
-            </Container>
-            <br />
-            <br />
+<<<<<<< HEAD
 
-            <p>
-                Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload.
-            </p>
+=======
+            <hr></hr>
+            <Counter></Counter>
+            <hr />
+            <RevealAnswer></RevealAnswer>
+            <hr />
+            <StartAttempt></StartAttempt>
+            <hr />
+            <TwoDice></TwoDice>
+            <hr />
+            <ChangeType></ChangeType>
+            <hr />
+            <CycleHoliday></CycleHoliday>
+>>>>>>> upstream/task-state
         </div>
     );
 }
