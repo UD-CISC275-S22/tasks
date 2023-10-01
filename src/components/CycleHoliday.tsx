@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
@@ -18,8 +19,8 @@ export function CycleHoliday(): JSX.Element {
         <div>
             <h1>Cycle Holidays</h1>
             <p>Holiday: {holidayEmojis[currentHoliday]}</p>
-            <button onClick={advanceAlphabetically}>Advance by Alphabet</button>
-            <button onClick={advanceByYear}>Advance by Year</button>
+            <Button onClick={advanceAlphabetically}>Advance by Alphabet</Button>
+            <Button onClick={advanceByYear}>Advance by Year</Button>
         </div>
     );
 }

@@ -24,7 +24,7 @@ export function ChangeType(): JSX.Element {
             ) : (
                 <p>Short Answer</p>
             )}
-            <button onClick={handleChangeType}>Change Type</button>
+            <Button onClick={handleChangeType}>Change Type</Button>
         </div>
     );
 }

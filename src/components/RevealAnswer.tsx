@@ -13,7 +13,7 @@ export function RevealAnswer(): JSX.Element {
             <h1>Quiz Application</h1>
             <p>The answer is:</p>
             {isAnswerVisible && <p>42</p>}
-            <button onClick={handleRevealAnswer}>Reveal Answer</button>
+            <Button onClick={handleRevealAnswer}>Reveal Answer</Button>
         </div>
     );
 }

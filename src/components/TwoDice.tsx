@@ -43,15 +43,15 @@ export function TwoDice(): JSX.Element {
             <h1>Two Dice Game</h1>
             <div>
                 <span data-testid="left-die">{leftDie}</span>
-                <button onClick={rollLeftDie} data-testid="roll-left">
+                <Button onClick={rollLeftDie} data-testid="roll-left">
                     Roll Left
-                </button>
+                </Button>
             </div>
             <div>
                 <span data-testid="right-die">{rightDie}</span>
-                <button onClick={rollRightDie} data-testid="roll-right">
+                <Button onClick={rollRightDie} data-testid="roll-right">
                     Roll Right
-                </button>
+                </Button>
             </div>
             {gameResult && <p>{gameResult}</p>}
         </div>
