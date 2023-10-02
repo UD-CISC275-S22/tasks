@@ -7,7 +7,11 @@ export function ChangeType(): JSX.Element {
 
     function changeType(): void {
         //need help changing type!
-        currentType(type);
+        currentType(
+            type === "short_answer_question"
+                ? "multiple_choice_question"
+                : "short_answer_question"
+        );
     }
     return (
         <div>

@@ -14,6 +14,7 @@ export function StartAttempt(): JSX.Element {
     }
     return (
         <div>
+            <div>{attempts}</div>
             <div>
                 <Button
                     onClick={startQuiz}
@@ -21,8 +22,6 @@ export function StartAttempt(): JSX.Element {
                 >
                     Start Quiz
                 </Button>
-            </div>
-            <div>
                 <Button onClick={stopQuiz} disabled={!progress}>
                     Stop Quiz
                 </Button>
