@@ -2,12 +2,6 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
 // Holidays ["Easter", "Thanksgiving", "Halloween", "Christmas", "New Years"]
-type Holiday =
-    | "Easter"
-    | "Thanksgiving"
-    | "Halloween"
-    | "Christmas"
-    | "New Years";
 
 export function CycleHoliday(): JSX.Element {
     const [holiday, setHoliday] = useState<string>("Easter");
