@@ -28,20 +28,16 @@ export function TwoDice(): JSX.Element {
                 <Button onClick={rollLeft}>Roll Right</Button>
             </div>
             <div>
-                <span data-testid="right-die">{rightDice}</span>
-                <span data-testid="left-die">{leftDice}</span>
+                <span data-testid="left-die">{rightDice}</span>
+                <span data-testid="right-die">{leftDice}</span>
             </div>
             <div>
-                {leftDice === rightDice && leftDice === 1 ? (
+                {(leftDice === rightDice && leftDice === 1 && (
                     <span>Lose</span>
-                ) : (
-                    <span></span>
-                )}
-                {leftDice === rightDice && leftDice !== 1 ? (
-                    <span>Win</span>
-                ) : (
-                    <span></span>
-                )}
+                )) ||
+                    (leftDice === rightDice && leftDice !== 1 && (
+                        <span>Win</span>
+                    ))}
             </div>
         </div>
     );

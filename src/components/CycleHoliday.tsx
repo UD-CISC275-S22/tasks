@@ -65,13 +65,13 @@ export function CycleHoliday(): JSX.Element {
                     Advance by Alphabet
                 </Button>
                 <Button onClick={changeYearly}>Advance by Year</Button>
-                <div>
-                    {holiday === "Easter" && <span>Holiday: 🥚</span>}
-                    {holiday === "Thanksgiving" && <span>Holiday: 🦃</span>}
-                    {holiday === "Halloween" && <span>Holiday: 🎃</span>}
-                    {holiday === "Christmas" && <span>Holiday: 🎁</span>}
-                    {holiday === "New Years" && <span>Holiday: 🎉</span>}
-                </div>
+            </div>
+            <div>
+                {(holiday === "Easter" && <span>Holiday: 🥚</span>) ||
+                    (holiday === "Thanksgiving" && <span>Holiday: 🦃</span>) ||
+                    (holiday === "Halloween" && <span>Holiday: 🎃</span>) ||
+                    (holiday === "Christmas" && <span>Holiday: 🎁</span>) ||
+                    (holiday === "New Years" && <span>Holiday: 🎉</span>)}
             </div>
         </div>
     );
