@@ -32,6 +32,7 @@ function App(): JSX.Element {
                 This is just a paragraph of text. It can go onto multiple lines,
                 if you want.
             </p>
+            <span>40</span>
             <div>
                 <img
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv8lgDc1gGlVqn3UjDqKslOP6HrrUissH8xw&usqp=CAU"
@@ -60,7 +61,7 @@ function App(): JSX.Element {
             <div className="rectangle"> </div>
             <p>All squares are rectangles but not all rectangles are squares</p>
             <hr></hr>
-            {/* <DoubleHalf></DoubleHalf> */}
+            {<DoubleHalf></DoubleHalf>}
             <hr></hr>
             <ChooseTeam></ChooseTeam>
             <hr></hr>
