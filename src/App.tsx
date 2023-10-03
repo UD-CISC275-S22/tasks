@@ -27,7 +27,7 @@ function App(): JSX.Element {
                 automatically reload. Brandon Marafino test
             </p>
             <hr></hr>
-            {/* <DoubleHalf></DoubleHalf> */}
+            {<DoubleHalf></DoubleHalf>}
             <hr></hr>
             <ChooseTeam></ChooseTeam>
             <hr></hr>
