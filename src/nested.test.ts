@@ -33,10 +33,10 @@ const {
 
 // We have backup versions of the data to make sure all changes are immutable
 const {
-    BLANK_QUESTIONS: BACKUP_BLANK_QUESTIONS,
+    // BLANK_QUESTIONS: BACKUP_BLANK_QUESTIONS,
     SIMPLE_QUESTIONS: BACKUP_SIMPLE_QUESTIONS,
     TRIVIA_QUESTIONS: BACKUP_TRIVIA_QUESTIONS,
-    EMPTY_QUESTIONS: BACKUP_EMPTY_QUESTIONS,
+    //  EMPTY_QUESTIONS: BACKUP_EMPTY_QUESTIONS,
     SIMPLE_QUESTIONS_2: BACKUP_SIMPLE_QUESTIONS_2
 }: Record<string, Question[]> = backupQuestionData as Record<
     string,
