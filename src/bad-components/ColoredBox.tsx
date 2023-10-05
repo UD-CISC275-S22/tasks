@@ -2,10 +2,14 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
 export const COLORS = ["red", "blue", "green"];
-const DEFAULT_COLOR_INDEX = 0;
+//const DEFAULT_COLOR_INDEX = 0;
 
-function ChangeColor(): JSX.Element {
-    const [colorIndex, setColorIndex] = useState<number>(DEFAULT_COLOR_INDEX);
+interface props {
+    colorIndex: number;
+    setColorIndex: (newValue: number) => void;
+}
+
+function ChangeColor({ colorIndex, setColorIndex }: props): JSX.Element {
     return (
         <Button onClick={() => setColorIndex((1 + colorIndex) % COLORS.length)}>
             Next Color
@@ -13,14 +17,14 @@ function ChangeColor(): JSX.Element {
     );
 }
 
-function ColorPreview(): JSX.Element {
+function ColorPreview({ colorIndex }: props): JSX.Element {
     return (
         <div
             data-testid="colored-box"
             style={{
                 width: "50px",
                 height: "50px",
-                backgroundColor: COLORS[DEFAULT_COLOR_INDEX],
+                backgroundColor: COLORS[colorIndex],
                 display: "inline-block",
                 verticalAlign: "bottom",
                 marginLeft: "5px"
@@ -30,13 +34,22 @@ function ColorPreview(): JSX.Element {
 }
 
 export function ColoredBox(): JSX.Element {
+    const [colorIndex, setColorIndex] = useState<number>(0);
     return (
         <div>
             <h3>Colored Box</h3>
-            <span>The current color is: {COLORS[DEFAULT_COLOR_INDEX]}</span>
+            <span>The current color is: {COLORS[colorIndex]}</span>
             <div>
-                <ChangeColor></ChangeColor>
-                <ColorPreview></ColorPreview>
+                <ChangeColor
+                    colorIndex={colorIndex}
+                    setColorIndex={setColorIndex}
+                />
+                <ColorPreview
+                    colorIndex={colorIndex}
+                    setColorIndex={function (): void {
+                        throw new Error("Function not implemented.");
+                    }}
+                />
             </div>
         </div>
     );
