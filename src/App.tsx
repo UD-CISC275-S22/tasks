@@ -60,7 +60,7 @@ function App(): JSX.Element {
             <div className="rectangle"> </div>
             <p>All squares are rectangles but not all rectangles are squares</p>
             <hr></hr>
-            {/* <DoubleHalf></DoubleHalf> */}
+            {<DoubleHalf></DoubleHalf>}
             <hr></hr>
             <ChooseTeam></ChooseTeam>
             <hr></hr>
