@@ -22,24 +22,29 @@ export function ChangeColor(): JSX.Element {
             <h3>Change Color</h3>
             <Form.Group controlId="choosenColor">
                 {colors.map((colour: string) => (
-                    // eslint-disable-next-line react/jsx-key
-                    <Form.Check
-                        inline
-                        type="radio"
-                        name="choice"
-                        onChange={updateColor}
-                        id="color-check"
-                        label={colour}
-                        value={colour}
-                        checked={currColor === colour}
-                        style={{ backgroundColor: colour }}
-                    />
+                    <span key={colour}>
+                        <Form.Check
+                            inline
+                            type="radio"
+                            name="choice"
+                            onChange={updateColor}
+                            id={colour}
+                            label={colour}
+                            value={colour}
+                            checked={currColor === colour}
+                        />
+                    </span>
                 ))}
             </Form.Group>
             <div>
-                current color is:
-                <div style={{ backgroundColor: currColor }}>{currColor}</div>
+                <div
+                    data-testid="colored-box"
+                    style={{ backgroundColor: currColor }}
+                >
+                    Current colo is: {currColor}
+                </div>
             </div>
         </div>
     );
 }
+//not passing all test cases
