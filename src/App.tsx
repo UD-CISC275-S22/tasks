@@ -66,9 +66,6 @@ function App(): JSX.Element {
             <div className="rectangle"> </div>
             <p>All squares are rectangles but not all rectangles are squares</p>
             <hr></hr>
-<<<<<<< HEAD
-            {<DoubleHalf></DoubleHalf>}
-=======
             <CheckAnswer expectedAnswer="42"></CheckAnswer>
             <hr></hr>
             <GiveAttempts></GiveAttempts>
@@ -83,7 +80,6 @@ function App(): JSX.Element {
             ></MultipleChoiceQuestion>
             <hr></hr>
             {/* <DoubleHalf></DoubleHalf> */}
->>>>>>> upstream/task-forms
             <hr></hr>
             <ChooseTeam></ChooseTeam>
             <hr></hr>
