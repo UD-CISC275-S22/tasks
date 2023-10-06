@@ -8,11 +8,31 @@ export function GiveAttempts(): JSX.Element {
     function updateRequest(event: React.ChangeEvent<HTMLInputElement>) {
         setRequest(event.target.value);
     }
-    function addAttempts(): void {
-        setAttempts(attempts + parseInt(request) || attempts + 0);
+    function gainAttempts(): void {
+        //testing
+        if (attempts + parseInt(request) != 0) {
+            //used for checking value of attempts
+            console.log(attempts + parseInt(request));
+            //^^used for checking value of attempts
+            setAttempts(attempts + parseInt(request) || attempts);
+        } else {
+            console.log(attempts);
+            setAttempts(attempts + 1);
+        }
     }
-    function deleteAttempts(): void {
-        setAttempts(attempts - parseInt(request) || attempts - 0);
+    //failing on use attempts
+    //go to lab hours
+    //wont go past 1 on website
+    function useAttempts(): void {
+        if (attempts - parseInt(request) >= 0) {
+            //used for checking value of attempts
+            console.log(attempts - parseInt(request));
+            //^^used for checking value of attempts
+            setAttempts(attempts - parseInt(request) || attempts);
+        } else {
+            console.log(attempts);
+            setAttempts(attempts - 1);
+        }
     }
 
     return (
@@ -25,8 +45,8 @@ export function GiveAttempts(): JSX.Element {
                     value={request}
                     onChange={updateRequest}
                 ></Form.Control>
-                <Button onClick={addAttempts}>gain</Button>
-                <Button onClick={deleteAttempts} disabled={attempts === 0}>
+                <Button onClick={gainAttempts}>gain</Button>
+                <Button onClick={useAttempts} disabled={attempts <= 0}>
                     use
                 </Button>
             </Form.Group>
