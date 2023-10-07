@@ -33,35 +33,11 @@ export function CycleHoliday(): JSX.Element {
     function cycleAlphabet(): void {
         const newHAlpha = ALPHABET_TRANSITIONS[holidayAlphabet];
         setHolidayAlphabet(newHAlpha);
-        /*
-            holidayAlphabet === "Christmas"
-                ? "Halloween"
-                : holidayAlphabet === "Halloween"
-                ? "IndependenceDay"
-                : holidayAlphabet === "IndependenceDay"
-                ? "NewYears"
-                : holidayAlphabet === "NewYears"
-                ? "ThanksGiving"
-                : "Christmas"
-        );
-        */
     }
 
     function cycleHolidayNext(): void {
         const newHYear = YEAR_TRANSITIONS[holidayNext];
         setHolidayNext(newHYear);
-        /*
-            holidayNext === "Halloween"
-                ? "ThanksGiving"
-                : holidayNext === "ThanksGiving"
-                ? "Christmas"
-                : holidayNext === "Christmas"
-                ? "NewYears"
-                : holidayNext === "NewYears"
-                ? "IndependenceDay"
-                : "Halloween"
-        );
-        */
     }
     return (
         <div>
@@ -72,16 +48,3 @@ export function CycleHoliday(): JSX.Element {
         </div>
     );
 }
-/*
-{holidayAlphabet === "Christmas"
-                    ? "🎄"
-                    : holidayAlphabet === "Halloween"
-                    ? "🎃"
-                    : holidayAlphabet === "IndependenceDay"
-                    ? "🇺🇸"
-                    : holidayAlphabet === "NewYears"
-                    ? "🎆"
-                    : holidayAlphabet === "ThanksGiving"
-                    ? "🦃"
-                    : "🎄"}
-*/
