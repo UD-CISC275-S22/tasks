@@ -18,7 +18,7 @@ export function MultipleChoiceQuestion({
     return (
         <div>
             <Form.Group controlId="favoriteColors">
-                <Form.Label>What is your favorite color?</Form.Label>
+                <Form.Label>Answer:</Form.Label>
                 <Form.Select
                     style={{ textAlign: "center" }}
                     value={userChoice}
