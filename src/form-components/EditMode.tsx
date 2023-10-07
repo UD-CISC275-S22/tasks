@@ -44,6 +44,7 @@ export function EditMode(): JSX.Element {
                         label="student"
                         checked={isStudent == true}
                         onChange={setStudent}
+                        aria-label="student"
                     ></Form.Check>
                 </div>
             )}
