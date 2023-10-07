@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 
 function UseAttempt(props: {
-    requesting: number;
     onClick: () => void;
     disable: boolean;
 }): JSX.Element {
@@ -13,30 +12,27 @@ function UseAttempt(props: {
             </Button>
         );
     }
-    return <Button onClick={props.onClick}>Use</Button>;
+    return <Button onClick={props.onClick}>use</Button>;
 }
 
-function GainAttempt(props: {
-    requesting: number;
-    onClick: () => void;
-}): JSX.Element {
-    return <Button onClick={props.onClick}>Gain</Button>;
+function GainAttempt(props: { onClick: () => void }): JSX.Element {
+    return <Button onClick={props.onClick}>gain</Button>;
 }
 
 export function GiveAttempts(): JSX.Element {
     const [attempts, setAttempts] = useState<number>(3);
-    const [requesting, setRequesting] = useState<string>("1");
+    const [requesting, setRequesting] = useState<string>("");
     const finalNum = parseInt(requesting) || 0;
 
-    const request = (value: string) => {
+    function request(value: string) {
         setRequesting(value);
-    };
+    }
 
     const gain = () => {
         setAttempts(attempts + finalNum);
     };
     const lose = () => {
-        setAttempts(attempts - finalNum < 0 ? 0 : attempts - finalNum);
+        setAttempts(attempts - 1 < 0 ? 0 : attempts - 1);
     };
 
     return (
@@ -49,6 +45,7 @@ export function GiveAttempts(): JSX.Element {
                     <Form.Control
                         type="number"
                         value={requesting}
+                        role="spinbutton"
                         onChange={(
                             event: React.ChangeEvent<HTMLInputElement>
                         ) => request(event.target.value)}
@@ -56,12 +53,8 @@ export function GiveAttempts(): JSX.Element {
                 </Form.Group>
             </div>
             <div>
-                <UseAttempt
-                    requesting={finalNum}
-                    onClick={lose}
-                    disable={attempts <= 0}
-                ></UseAttempt>
-                <GainAttempt requesting={finalNum} onClick={gain}></GainAttempt>
+                <UseAttempt onClick={lose} disable={attempts <= 0}></UseAttempt>
+                <GainAttempt onClick={gain}></GainAttempt>
             </div>
         </div>
     );
