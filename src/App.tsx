@@ -11,6 +11,9 @@ function App(): JSX.Element {
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload. Miryam Ramirez
             </p>
+            <p>Josh Babbitt</p>
+            <p>Nyllise Graham</p>
+            <p>Nicole Kinsella</p>
         </div>
     );
 }
