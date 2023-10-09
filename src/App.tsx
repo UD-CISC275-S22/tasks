@@ -5,10 +5,7 @@ function App(): JSX.Element {
     return (
         <div className="App">
             <header className="App-header">Final Project</header>
-            <p>
-                Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload.
-            </p>
+            <p>James Lloyd, name2, name3, name4, name5</p>
         </div>
     );
 }
