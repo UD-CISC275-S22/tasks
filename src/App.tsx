@@ -8,6 +8,7 @@ function App(): JSX.Element {
                 CISC275 FInal Project: Scheduler
             </header>
             <p>Avinash Chouhan</p>
+            <p>Suhas Bolledula</p>
         </div>
     );
 }
