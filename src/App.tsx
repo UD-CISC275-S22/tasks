@@ -11,7 +11,7 @@ function App(): JSX.Element {
             <header>Matthew Mestre</header>
             <header>Bryant Ferguson </header>
             <header>Ava West</header>
-            <header className="App-header">Malika Iyer</header>
+            <header>Malika Iyer</header>
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
