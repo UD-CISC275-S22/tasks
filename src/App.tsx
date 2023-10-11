@@ -9,6 +9,11 @@ function App(): JSX.Element {
                 <p>CISC275 Final-Project</p>
             </header>
             <header>Ava West</header>
+            <header className="App-header">Malika Iyer</header>
+            <p>
+                Edit <code>src/App.tsx</code> and save. This page will
+                automatically reload.
+            </p>
         </div>
     );
 }
