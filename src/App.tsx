@@ -5,8 +5,6 @@ function App(): JSX.Element {
     return (
         <div>
             <p>Andrew Fonseca</p>
-            <p>Mann Patel</p>
-            <p>Devlan Horner</p>
         </div>
     );
 }
