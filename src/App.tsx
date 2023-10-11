@@ -14,7 +14,6 @@ function App(): JSX.Element {
             <p>Josh Babbitt</p>
             <p>Nyllise Graham</p>
             <p>Nicole Kinsella</p>
-            <p>Lizzy Kalfas</p>
         </div>
     );
 }
