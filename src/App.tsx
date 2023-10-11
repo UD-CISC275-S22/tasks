@@ -10,6 +10,9 @@ function App(): JSX.Element {
             <p>
                 Aidan Bell Edit <code>src/App.tsx</code> and save. This page
                 will automatically reload.
+                <p>Lawrence Collins </p>
+                <code>src/App.tsx</code> and save. This page will automatically
+                reload.
             </p>
         </div>
     );
