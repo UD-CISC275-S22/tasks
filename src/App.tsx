@@ -6,6 +6,7 @@ function App(): JSX.Element {
         <div>
             <p>Andrew Fonseca</p>
             <p>Mann Patel</p>
+            <p>Devlan Horner</p>
         </div>
     );
 }
