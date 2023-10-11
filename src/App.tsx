@@ -12,6 +12,7 @@ function App(): JSX.Element {
             <header>Bryant Ferguson </header>
             <header>Ava West</header>
             <header>Malika Iyer</header>
+            <header>Dina Dawood</header>
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
