@@ -4,7 +4,7 @@ import "./App.css";
 function App(): JSX.Element {
     return (
         <div>
-            <p>Andrew Fonseca</p>
+            <p>Andrew Fonseca, Shrey Patel</p>
         </div>
     );
 }
