@@ -1,0 +1,9 @@
+.quiz_view_card {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.title {
+    margin-right: 1rem;
+}

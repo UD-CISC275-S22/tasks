@@ -1,0 +1,10 @@
+.quizzer {
+    background-color: cadetblue;
+    padding: 30px 0;
+}
+
+.completedList {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+}
