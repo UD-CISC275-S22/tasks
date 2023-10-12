@@ -1,0 +1,12 @@
+.quiz_list {
+    padding: 20px 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.add_btn {
+    width: 10rem;
+    align-self: center;
+}
