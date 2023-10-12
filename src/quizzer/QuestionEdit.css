@@ -1,0 +1,78 @@
+.edit_title_row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.edit_title_box {
+    display: flex;
+    align-items: center;
+}
+
+.edit_title_box > h4 {
+    margin-bottom: 0.25rem;
+}
+
+.title_input {
+    margin-left: 1rem;
+    text-align: center;
+}
+
+.edit_question {
+    padding: 20px 0;
+}
+
+.edit_answer_box {
+    width: 50%;
+}
+
+.edit_question_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.center_section {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.points_input {
+    width: 4rem;
+    margin-right: 0.5rem;
+}
+
+.swap_button_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.swap_button {
+    padding: 0.25rem;
+    height: 2rem;
+}
+
+.swap_button + .swap_button {
+    margin-top: 0.5rem;
+}
+
+.radio_question_box {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.type_form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    width: 50%;
+}
+
+.num_choices {
+    width: 3.25rem;
+}
