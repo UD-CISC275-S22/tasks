@@ -1,0 +1,52 @@
+[
+    {
+        "ticker": "CISC108",
+        "name": "Introduction to Computer Science I",
+        "credits": "3"
+    },
+    {
+        "ticker": "CISC181",
+        "name": "Introduction to Computer Science II",
+        "credits": "3"
+    },
+    {
+        "ticker": "CISC210",
+        "name": "Introduction to Systems Programming",
+        "credits": "3"
+    },
+    {
+        "ticker": "CISC220",
+        "name": "Data Structures",
+        "credits": "3"
+    },
+    {
+        "ticker": "CISC275",
+        "name": "Introduction to Software Engineering",
+        "credits": "3"
+    },
+    {
+        "ticker": "CISC355",
+        "name": "Computers Ethics & Society",
+        "credits": "3"
+    },
+    {
+        "ticker": "EGGG101",
+        "name": "Introduction to Engineering (FYE)",
+        "credits": "2"
+    },
+    {
+        "ticker": "ENGL110",
+        "name": "Seminar in Composition",
+        "credits": "3"
+    },
+    {
+        "ticker": "MATH241",
+        "name": "Analytic Geometry & Calculus A",
+        "credits": "4"
+    },
+    {
+        "ticker": "MATH242",
+        "name": "Analytic Geometry & Calculus B",
+        "credits": "4"
+    }
+]
