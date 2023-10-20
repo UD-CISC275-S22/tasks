@@ -1,9 +1,6 @@
 import React from "react";
 import "./App.css";
-import { ChangeType } from "./components/ChangeType";
 import { RevealAnswer } from "./components/RevealAnswer";
-import { TwoDice } from "./components/TwoDice";
-import { CycleHoliday } from "./components/CycleHoliday";
 import { Counter } from "./components/Counter";
 import { DoubleHalf } from "./bad-components/DoubleHalf";
 import { ColoredBox } from "./bad-components/ColoredBox";
@@ -71,11 +68,11 @@ function App(): JSX.Element {
             <RevealAnswer></RevealAnswer>
             <hr />
             <hr />
-            <TwoDice></TwoDice>
+            {/* <TwoDice></TwoDice> */}
             <hr />
-            <ChangeType></ChangeType>
+            {/* <ChangeType></ChangeType> */}
             <hr />
-            <CycleHoliday></CycleHoliday>
+            {/* <CycleHoliday></CycleHoliday> */}
         </div>
     );
 }

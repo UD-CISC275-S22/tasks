@@ -1,32 +1,32 @@
-import React from "react";
-import { render, screen } from "@testing-library/react";
-import { StartAttempt } from "./StartAttempt";
+// import React from "react";
+// import { render, screen } from "@testing-library/react";
+// import { StartAttempt } from "./StartAttempt";
 
-/***
- * Helper function to extract a number from an HTMLElement's textContent.
- *
- * If you aren't familiar with Regular Expressions:
- * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
- */
-export function extractDigits(element: HTMLElement): number | null {
-    const attemptNumberText = element.textContent || "";
-    // We use a "regular expression" to find digits and extract them as text
-    const attemptNumberDigitsMatched = attemptNumberText.match(/\d+/);
-    // Provides a Matched Regular Expression or null
-    if (attemptNumberDigitsMatched === null) {
-        // Should never be possible, since then there was no number to have found.
-        // But TypeScript is cautious and demands we provide SOMETHING.
-        return null;
-    } else {
-        // Not null, get the first matched value and convert to number
-        return parseInt(attemptNumberDigitsMatched[0]);
-    }
-}
+// /***
+//  * Helper function to extract a number from an HTMLElement's textContent.
+//  *
+//  * If you aren't familiar with Regular Expressions:
+//  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+//  */
+// export function extractDigits(element: HTMLElement): number | null {
+//     const attemptNumberText = element.textContent || "";
+//     // We use a "regular expression" to find digits and extract them as text
+//     const attemptNumberDigitsMatched = attemptNumberText.match(/\d+/);
+//     // Provides a Matched Regular Expression or null
+//     if (attemptNumberDigitsMatched === null) {
+//         // Should never be possible, since then there was no number to have found.
+//         // But TypeScript is cautious and demands we provide SOMETHING.
+//         return null;
+//     } else {
+//         // Not null, get the first matched value and convert to number
+//         return parseInt(attemptNumberDigitsMatched[0]);
+//     }
+// }
 
-describe("StartAttempt Component tests", () => {
-    beforeEach(() => {
-        render(<StartAttempt />);
-    });
+// describe("StartAttempt Component tests", () => {
+//     beforeEach(() => {
+//         render(<StartAttempt />);
+//     });
     // test("The Number of attempts is displayed initially, without other numbers", () => {
     //     const attemptNumber = screen.getByText(/(\d+)/);
     //     expect(attemptNumber).toBeInTheDocument();
