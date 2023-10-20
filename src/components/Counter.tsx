@@ -6,7 +6,7 @@ export function Counter(): JSX.Element {
 
     return (
         <span>
-            <Button onClick={() => setValue(value + 1)}>Add One</Button> 
+            <Button onClick={() => setValue(value + 1)}>Add One</Button>
             to {value}
         </span>
     );
