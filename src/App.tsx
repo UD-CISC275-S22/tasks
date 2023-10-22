@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import Image1 from "./Images/Delaware-Blue-Hens-Logo.png";
+//import { AddClass } from "./semester-modification/AddClass";
 import Image2 from "./Images/Udel-Crest.png";
 
 function App(): JSX.Element {
@@ -11,6 +12,7 @@ function App(): JSX.Element {
                 <h1 className="Title">Udel CS Course Scheduler</h1>
                 <img src={Image2} className="logo" />
             </header>
+            <div></div>
         </div>
     );
 }
