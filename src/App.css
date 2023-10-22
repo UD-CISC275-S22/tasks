@@ -1,4 +1,4 @@
-*{
+* {
 }
 
 .App {
@@ -24,7 +24,7 @@
     align-items: center;
     justify-content: space-between;
     color: white;
-    padding: 30px 30px 30px 30px
+    padding: 30px 30px 30px 30px;
 }
 
 .App-link {
@@ -38,9 +38,10 @@
 .Title {
     font-size: 65px;
     font-family: "greycliff";
+    text-align: left;
 }
 
-.Line{
+.Line {
     color: yellow;
 }
 @keyframes App-logo-spin {
