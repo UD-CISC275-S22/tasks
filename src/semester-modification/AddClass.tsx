@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import { classes } from "../Interface/classes";
 import { dateTime } from "../Interface/dateTime";
+import { semester } from "../Interface/semester";
 
 //set up forms to enter information then press button to add information to schedule
 
@@ -26,7 +27,8 @@ function Adding(
     };
     return working;
 }
-
-// export function AddClass(schedule: schedule): JSX.Element {
-//     return <div>Hello</div>;
-// }
+//button that takes answers from forms then runs Adding to create a new course
+//after add the class to the end of the semester array
+export function AddClass(): JSX.Element {
+    return <div>Hello</div>;
+}
