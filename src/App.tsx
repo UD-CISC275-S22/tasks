@@ -1,7 +1,10 @@
 import React from "react";
 import "./App.css";
 import Image1 from "./Images/Delaware-Blue-Hens-Logo.png";
-//import { AddClass } from "./semester-modification/AddClass";
+import { Button } from "react-bootstrap";
+import { AddClass } from "./semester-modification/AddClass";
+import { classes } from "./Interface/classes";
+import { semester } from "./Interface/semester";
 
 function App(): JSX.Element {
     return (
@@ -10,7 +13,6 @@ function App(): JSX.Element {
                 <img src={Image1} className="logo" />
                 <h1 className="Title">Udel Course Scheduler</h1>
             </header>
-            <div></div>
         </div>
     );
 }
