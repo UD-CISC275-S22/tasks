@@ -1,12 +1,13 @@
 [
     {
+        "fullTime": true,
         "classList": [
             {
                 "code": "CISC108",
                 "title": "Introduction to Computer Science I",
                 "credits": 3,
                 "preReq": [],
-                "schedule": { "day": "Tuesday", "time": "9:35AM - 10:55AM" },
+                "schedule": { "day": ["Tuesday"], "time": "9:35AM - 10:55AM" },
                 "location": "Gore208",
                 "instructor": "Bart,Austin Cory"
             },
@@ -16,15 +17,18 @@
                 "credits": 3,
                 "preReq": ["CISC108"],
                 "schedule": {
-                    "day": "Thursday",
-                    "time": "9:35AM - 10:55AM"
+                    "day": ["Tuesday", "Thursday"],
+                    "time": "3:55PM - 5:15PM"
                 },
                 "location": "Gore318",
                 "instructor": "Gibbons, Bert"
             }
-        ]
+        ],
+        "totalCredits": 6,
+        "season": "Fall 2023"
     },
     {
+        "fullTime": true,
         "classList": [
             {
                 "code": "CISC210",
@@ -32,7 +36,7 @@
                 "credits": 3,
                 "preReq": ["CISC108"],
                 "schedule": {
-                    "day": "Thursday",
+                    "day": ["Thursday"],
                     "time": "2:20PM - 3:40PM"
                 },
                 "location": "ONLINE",
@@ -44,12 +48,14 @@
                 "credits": 3,
                 "preReq": ["CISC210"],
                 "schedule": {
-                    "day": "Monday",
+                    "day": ["Monday", "Wednesday", "Friday"],
                     "time": "12:40PM - 1:35PM"
                 },
                 "location": "Gore203",
                 "instructor": "Hsu,Leighanne Chungan"
             }
-        ]
+        ],
+        "totalCredits": 6,
+        "season": "Spring 2023"
     }
 ]
