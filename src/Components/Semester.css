@@ -1,0 +1,12 @@
+.Fall {
+    text-align: center;
+    min-height: 50vh; /*Can change height later depending on deployment*/
+    min-width: 30vh; /*Can change width later depending on deployment*/
+    display: flex;
+    flex-direction: column; /*I think row will be good but check on deployment because the courses should span downwards not across*/
+    align-items: center;
+    justify-content: center;
+    background-color: #a87b32; /*Can change color for asethetic later if dislike*/
+    font-family:'Times New Roman', Times, serif;
+    font-size: calc(8px + 2vmin); /*Can change size later depending on deployment*/
+}
