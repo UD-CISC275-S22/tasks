@@ -21,7 +21,8 @@
                 "CISC181": ["CISC108"],
                 "CISC210": ["CISC108"],
                 "CISC220": ["CISC210"],
-                "CISC275": ["CISC181", "CISC220"]
+                "CISC275": ["CISC181", "CISC220"],
+                "MATH242": ["MATH241"]
             }
         }
     ]
