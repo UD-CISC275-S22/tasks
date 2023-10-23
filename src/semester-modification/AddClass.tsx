@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button } from "react-bootstrap";
 import { classes } from "../Interface/classes";
-import { dateTime } from "../Interface/dateTime";
 import { semester } from "../Interface/semester";
 
 //set up forms to enter information then press button to add information to schedule
