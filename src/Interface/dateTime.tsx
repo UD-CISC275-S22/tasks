@@ -1,6 +1,6 @@
 export type day = "Monday" | "Tuesday" | "wednesday" | "Thursday" | "Friday";
 
 export interface dateTime {
-    day: day;
+    day: day[];
     time: string;
 }

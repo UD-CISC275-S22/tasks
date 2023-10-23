@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 import Image1 from "./Images/Delaware-Blue-Hens-Logo.png";
-//import { AddClass } from "./semester-modification/AddClass";
 //import { MainButtons } from "./MainScreen/MainButtons";
 import Image2 from "./Images/Udel-Crest.png";
 import { MainButtons } from "./MainScreen/MainButtons";

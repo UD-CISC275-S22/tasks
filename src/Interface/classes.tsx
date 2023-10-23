@@ -9,12 +9,3 @@ export interface classes {
     location: string;
     instructor: string;
 }
-
-// Course code
-// Course title
-// Credits
-// Pre req
-// Available time (Spring Fall)
-// Class time (date/time)?
-// Location
-// Instructor
