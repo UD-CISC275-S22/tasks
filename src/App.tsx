@@ -1,14 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
-import { GenerateCSV } from "./generateCSV";
+import { GenerateCSV, ImportCSV } from "./CSV";
 
-const data: string[][] = [
-    ["Last Name, First Name"],
-    ["Nicky", "Reigel"],
-    ["Aidan", "Bell"]
-];
+const data: string[][] = [["Last Name, First Name"], ["Nicky", "Reigel"]];
 
 function App(): JSX.Element {
+    const [importData, setImportData] = useState<string[][]>([[]]);
+
     return (
         <div className="App">
             <header className="App-header">
@@ -23,7 +21,13 @@ function App(): JSX.Element {
                 <p>Melvin Rau</p>
                 <p>Victor Vasquez</p>
             </p>
-            <GenerateCSV data={data} filename="testexport"></GenerateCSV>
+            {data}
+            {importData}
+            <GenerateCSV
+                data={importData ? importData : data}
+                filename="testexport"
+            ></GenerateCSV>
+            <ImportCSV setImportData={setImportData} />
         </div>
     );
 }
