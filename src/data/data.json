@@ -1,0 +1,55 @@
+[
+    {
+        "classList": [
+            {
+                "code": "CISC108",
+                "title": "Introduction to Computer Science I",
+                "credits": 3,
+                "preReq": [],
+                "schedule": { "day": "Tuesday", "time": "9:35AM - 10:55AM" },
+                "location": "Gore208",
+                "instructor": "Bart,Austin Cory"
+            },
+            {
+                "code": "CISC181",
+                "title": "Introduction to Computer Science II",
+                "credits": 3,
+                "preReq": ["CISC108"],
+                "schedule": {
+                    "day": "Thursday",
+                    "time": "9:35AM - 10:55AM"
+                },
+                "location": "Gore318",
+                "instructor": "Gibbons, Bert"
+            }
+        ]
+    },
+    {
+        "classList": [
+            {
+                "code": "CISC210",
+                "title": "Introduction to Systems Programming",
+                "credits": 3,
+                "preReq": ["CISC108"],
+                "schedule": {
+                    "day": "Thursday",
+                    "time": "2:20PM - 3:40PM"
+                },
+                "location": "ONLINE",
+                "instructor": "Roosen,Andrew Robert"
+            },
+            {
+                "code": "CISC220",
+                "title": "Data Structures",
+                "credits": 3,
+                "preReq": ["CISC210"],
+                "schedule": {
+                    "day": "Monday",
+                    "time": "12:40PM - 1:35PM"
+                },
+                "location": "Gore203",
+                "instructor": "Hsu,Leighanne Chungan"
+            }
+        ]
+    }
+]
