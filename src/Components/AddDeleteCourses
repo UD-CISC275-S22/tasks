@@ -1,0 +1,19 @@
+import React, { useState } from "react";
+import { Class } from "./interefaces/class";
+
+export function AddDeleteCourses(): JSX.Element {
+    // const [title, setTitle] = useState(""); //Course Title
+    // const [code, setCode] = useState(""); //Course Code
+    // const [preReq, setPreReq] = useState([]); //PreReq's
+    // const [credits, setCredits] = useState(0);
+    // const [semester, setSemester] = useState("");
+    // const [year, setYear] = useState(0);
+    const [inputValues, setInputValues] = useState<{ [x:string]: string}>();
+
+    const handleChange: (e: any) => {
+        e.preventDefault();
+        this.setState({ [e.target.name]: e.target.value} as Class);
+    }; 
+
+    return <div>Hello</div>;
+}
