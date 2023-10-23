@@ -22,11 +22,13 @@ export function SemesterTable(): JSX.Element {
     return (
         <div className="semesterTable">
             <h2>Semester Schedule</h2>
-            {semesters.map((sem, semIndex) => (
-                <div key={semIndex}>
-                    <SemesterView semester={sem}></SemesterView>
-                </div>
-            ))}
+            {semesters.map((sem, semIndex) => {
+                return (
+                    <div key={semIndex}>
+                        <SemesterView semester={sem}></SemesterView>
+                    </div>
+                );
+            })}
         </div>
     );
 }
