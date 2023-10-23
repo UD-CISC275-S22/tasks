@@ -1,0 +1,50 @@
+[
+    {
+        "season": "Fall",
+        "name": "Freshman year: Fall",
+        "year": "Freshman",
+        "courses": []
+    },
+    {
+        "season": "Spring",
+        "name": "Freshman year: Spring",
+        "year": "Freshman",
+        "courses": []
+    },
+    {
+        "season": "Fall",
+        "name": "Sophomore year: Fall",
+        "year": "Sophomore",
+        "courses": []
+    },
+    {
+        "season": "Spring",
+        "name": "Sophomore year: Spring",
+        "year": "Sophomore",
+        "courses": []
+    },
+    {
+        "season": "Fall",
+        "name": "Junior year: Fall",
+        "year": "Junior",
+        "courses": []
+    },
+    {
+        "season": "Spring",
+        "name": "Junior year: Spring",
+        "year": "Junior",
+        "courses": []
+    },
+    {
+        "season": "Fall",
+        "name": "Senior year: Fall",
+        "year": "Senior",
+        "courses": []
+    },
+    {
+        "season": "Spring",
+        "name": "Senior year: Spring",
+        "year": "Senior",
+        "courses": []
+    }
+]
