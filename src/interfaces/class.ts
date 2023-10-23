@@ -1,4 +1,4 @@
-export interface Quiz {
+export interface Class {
     title: string;
     courseCode: string;
     preReq: [];
