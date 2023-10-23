@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import { generateCSV } from "./generateCSV";
 
 function App(): JSX.Element {
     return (
@@ -15,6 +16,7 @@ function App(): JSX.Element {
                 <p>Melvin Rau</p>
                 <p>Victor Vasquez</p>
             </p>
+            <generateCSV data="" filename="test"></generateCSV>
         </div>
     );
 }
