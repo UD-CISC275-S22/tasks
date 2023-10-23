@@ -1,3 +1,6 @@
+* {
+}
+
 .App {
     text-align: center;
 }
@@ -15,20 +18,32 @@
 
 .App-header {
     width: 100%;
-    background-color: #282c34;
-    min-height: 40vh;
+    background-color: #005aad;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
+    justify-content: space-between;
     color: white;
+    padding: 30px 30px 30px 30px;
 }
 
 .App-link {
     color: #61dafb;
 }
 
+.logo {
+    height: 120px;
+}
+
+.Title {
+    font-size: 65px;
+    font-family: "greycliff";
+    text-align: left;
+}
+
+.Line {
+    color: yellow;
+}
 @keyframes App-logo-spin {
     from {
         transform: rotate(0deg);
