@@ -1,4 +1,5 @@
 * {
+    border: black;
 }
 
 .App {
@@ -22,7 +23,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     color: white;
     padding: 30px 30px 30px 30px;
 }
@@ -38,7 +39,6 @@
 .Title {
     font-size: 65px;
     font-family: "greycliff";
-    text-align: left;
 }
 
 .Line {
