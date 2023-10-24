@@ -1,7 +1,7 @@
 export interface Class {
-    title: string;
+    courseTitle: string;
     courseCode: string;
-    preReq: [];
+    preReqs: string[];
     credits: number;
     semester: "Fall" | "Winter" | "Spring" | "Summer";
     year: number;

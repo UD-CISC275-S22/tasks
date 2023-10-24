@@ -1,0 +1,10 @@
+[
+    {
+        "courseTitle": "Introduction to Computer Science I",
+        "courseCode": "CISC108",
+        "credits": 3,
+        "preReqs": [""],
+        "semester": "",
+        "year": 0
+    }
+]
