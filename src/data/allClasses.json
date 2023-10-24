@@ -1,10 +1,81 @@
 [
     {
+        "courseTitle": "Principles of Computing",
+        "courseCode": "CISC101",
+        "credits": 3,
+        "numPreReqs": 0,
+        "preReqs": [],
+        "semester": "",
+        "year": 0,
+        "taken": false
+    },
+    {
+        "courseTitle": "Introduction to Computer Science with Web Applications",
+        "courseCode": "CISC103",
+        "credits": 3,
+        "numPreReqs": 0,
+        "preReqs": [],
+        "semester": "",
+        "year": 0,
+        "taken": false
+    },
+    {
+        "courseTitle": "Introduction to Programming in Games",
+        "courseCode": "CISC104",
+        "credits": 3,
+        "numPreReqs": 0,
+        "preReqs": [],
+        "semester": "",
+        "year": 0,
+        "taken": false
+    },
+    {
+        "courseTitle": "General Computer Science for Engineers",
+        "courseCode": "CISC106",
+        "credits": 3,
+        "numPreReqs": 0,
+        "preReqs": [],
+        "semester": "",
+        "year": 0,
+        "taken": false
+    },
+    {
         "courseTitle": "Introduction to Computer Science I",
         "courseCode": "CISC108",
         "credits": 3,
-        "preReqs": [""],
+        "numPreReqs": 0,
+        "preReqs": [],
         "semester": "",
-        "year": 0
+        "year": 0,
+        "taken": false
+    },
+    {
+        "courseTitle": "Introduction to Computer Science II",
+        "courseCode": "CISC181",
+        "credits": 3,
+        "preReqs": ["CISC106", "CISC181"],
+        "semester": "",
+        "year": 0,
+        "taken": false
+    },
+    {
+        "courseTitle": "Vertically Integrated Projects I",
+        "courseCode": "CISC187",
+        "credits": 1,
+        "numPreReqs": 0,
+        "preReqs": [],
+        "semester": "",
+        "year": 0,
+        "taken": false
+    },
+    {
+        "courseTitle": "",
+        "courseCode": "",
+        "credits": 3,
+        "numPreReqs": 0,
+        "preReqs": [],
+        "semester": "",
+        "year": 0,
+        "taken": false
     }
 ]
