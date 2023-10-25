@@ -5,6 +5,13 @@ import { Button } from "react-bootstrap";
 import { usePapaParse, useCSVReader } from "react-papaparse";
 import { ParseResult } from "papaparse";
 
+/*  GenerateCSV
+Params:
+    data: string[][]
+        The data to export into the csv
+    filename: string
+        filename to save as
+*/
 export function GenerateCSV({
     data,
     filename
@@ -19,6 +26,11 @@ export function GenerateCSV({
     );
 }
 
+/*  ImportCSV() (Nicky's import, will probably be swapped for the other one)
+Params:
+  setImportData: (data: string[][]) => void
+      The setter for the import data state
+*/
 export function ImportCSV({
     setImportData
 }: {
@@ -38,13 +50,16 @@ export function ImportCSV({
 
     return (
         <CSVReader onUploadAccepted={handleImport}>
-            {({
-                getRootProps,
-                acceptedFile,
-                ProgressBar,
-                getRemoveFileProps
-            }: any) => (
-                <div>
+            {(
+                {
+                    getRootProps,
+                    acceptedFile,
+                    ProgressBar,
+                    getRemoveFileProps
+                }: /*eslint-disable-next-line @typescript-eslint/no-explicit-any */
+                any /*eslint-disable-next-line no-extra-parens*/
+            ) => (
+                <>
                     <div>
                         <button type="button" {...getRootProps()}>
                             Browse file
@@ -53,7 +68,7 @@ export function ImportCSV({
                         <button {...getRemoveFileProps()}>Remove</button>
                     </div>
                     <ProgressBar></ProgressBar>
-                </div>
+                </>
             )}
         </CSVReader>
     );
