@@ -69,6 +69,106 @@
         "taken": false
     },
     {
+        "courseTitle": "Introduction to Game Development",
+        "courseCode": "CISC204",
+        "credits": 3,
+        "numPreReqs": 0,
+        "preReqs": [],
+        "semester": "",
+        "year": 0,
+        "taken": false
+    },
+    {
+        "courseTitle": "Introduction to Systems Programming",
+        "courseCode": "CISC210",
+        "credits": 3,
+        "numPreReqs": 1,
+        "preReqs": ["CISC106", "CISC108"],
+        "semester": "",
+        "year": 0,
+        "taken": false
+    },
+    {
+        "courseTitle": "Data Structures",
+        "courseCode": "CISC220",
+        "credits": 3,
+        "numPreReqs": 1,
+        "preReqs": ["CISC210"],
+        "semester": "",
+        "year": 0,
+        "taken": false
+    },
+    {
+        "courseTitle": "Business Telecommunication Networks",
+        "courseCode": "CISC250",
+        "credits": 3,
+        "numPreReqs": 1,
+        "preReqs": ["CISC108", "MISY160"],
+        "semester": "",
+        "year": 0,
+        "taken": false
+    },
+    {
+        "courseTitle": "Machine Organization and Assembly Language",
+        "courseCode": "CISC260",
+        "credits": 3,
+        "numPreReqs": 1,
+        "preReqs": ["CISC210"],
+        "semester": "",
+        "year": 0,
+        "taken": false
+    },
+    {
+        "courseTitle": "Introduction to Software Engineering",
+        "courseCode": "CISC275",
+        "credits": 3,
+        "numPreReqs": 2,
+        "preReqs": ["CISC181", "CISC220"],
+        "semester": "",
+        "year": 0,
+        "taken": false
+    },
+    {
+        "courseTitle": "Vertically Integrated Projects II",
+        "courseCode": "CISC287",
+        "credits": 2,
+        "numPreReqs": 0,
+        "preReqs": [],
+        "semester": "",
+        "year": 0,
+        "taken": false
+    },
+    {
+        "courseTitle": "Automata Theory",
+        "courseCode": "CISC303",
+        "credits": 3,
+        "numPreReqs": 2,
+        "preReqs": ["MATH210", "CISC220"],
+        "semester": "",
+        "year": 0,
+        "taken": false
+    },
+    {
+        "courseTitle": "Logic for Programming",
+        "courseCode": "CISC304",
+        "credits": 3,
+        "numPreReqs": 2,
+        "preReqs": ["CISC220", "MATH210"],
+        "semester": "",
+        "year": 0,
+        "taken": false
+    },
+    {
+        "courseTitle": "Introduction to Algorithms",
+        "courseCode": "CISC320",
+        "credits": 3,
+        "numPreReqs": 1,
+        "preReqs": ["CISC220"],
+        "semester": "",
+        "year": 0,
+        "taken": false
+    },
+    {
         "courseTitle": "",
         "courseCode": "",
         "credits": 3,
