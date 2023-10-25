@@ -1,231 +1,242 @@
 [
     {
-        "courseTitle": "Principles of Computing",
-        "courseCode": "CISC101",
-        "credits": 3,
-        "numPreReqs": 0,
-        "preReqs": [],
-        "semester": "",
-        "year": 0,
-        "taken": false
-    },
-    {
-        "courseTitle": "Introduction to Computer Science with Web Applications",
-        "courseCode": "CISC103",
-        "credits": 3,
-        "numPreReqs": 0,
-        "preReqs": [],
-        "semester": "",
-        "year": 0,
-        "taken": false
-    },
-    {
-        "courseTitle": "Introduction to Programming in Games",
-        "courseCode": "CISC104",
-        "credits": 3,
-        "numPreReqs": 0,
-        "preReqs": [],
-        "semester": "",
-        "year": 0,
-        "taken": false
-    },
-    {
         "courseTitle": "General Computer Science for Engineers",
         "courseCode": "CISC106",
         "credits": 3,
+        "canEditCredits": false,
         "numPreReqs": 0,
         "preReqs": [],
         "semester": "",
         "year": 0,
-        "taken": false
+        "taken": false,
+        "note": "Students who received credit in CISC108 are not eligible to take this course without permission"
     },
     {
         "courseTitle": "Introduction to Computer Science I",
         "courseCode": "CISC108",
         "credits": 3,
+        "canEditCredits": false,
         "numPreReqs": 0,
         "preReqs": [],
         "semester": "",
         "year": 0,
-        "taken": false
+        "taken": false,
+        "note": "Students who received credit in CISC106 are not eligible to take this course without permission"
     },
     {
         "courseTitle": "Introduction to Computer Science II",
         "courseCode": "CISC181",
         "credits": 3,
-        "preReqs": ["CISC106", "CISC181"],
+        "canEditCredits": false,
+        "numPreReqs": 1,
+        "preReqs": ["CISC106", "CISC108"],
         "semester": "",
         "year": 0,
-        "taken": false
+        "taken": false,
+        "note": ""
     },
     {
         "courseTitle": "Vertically Integrated Projects I",
         "courseCode": "CISC187",
         "credits": 1,
+        "canEditCredits": false,
         "numPreReqs": 0,
         "preReqs": [],
         "semester": "",
         "year": 0,
-        "taken": false
+        "taken": false,
+        "note": ""
     },
     {
         "courseTitle": "Introduction to Game Development",
         "courseCode": "CISC204",
-        "credits": 4,
-        "numPreReqs": 0,
-        "preReqs": [],
+        "credits": 3,
+        "canEditCredits": false,
+        "numPreReqs": 2,
+        "preReqs": ["GAME201", "CISC104", "CISC106", "CISC108"],
         "semester": "",
         "year": 0,
-        "taken": false
+        "taken": false,
+        "note": ""
     },
     {
         "courseTitle": "Introduction to Systems Programming",
         "courseCode": "CISC210",
         "credits": 3,
+        "canEditCredits": false,
         "numPreReqs": 1,
         "preReqs": ["CISC106", "CISC108"],
         "semester": "",
         "year": 0,
-        "taken": false
+        "taken": false,
+        "note": ""
     },
     {
         "courseTitle": "Data Structures",
         "courseCode": "CISC220",
         "credits": 3,
+        "canEditCredits": false,
         "numPreReqs": 1,
         "preReqs": ["CISC210"],
         "semester": "",
         "year": 0,
-        "taken": false
+        "taken": false,
+        "note": ""
     },
     {
         "courseTitle": "Business Telecommunication Networks",
         "courseCode": "CISC250",
         "credits": 3,
+        "canEditCredits": false,
         "numPreReqs": 1,
         "preReqs": ["CISC108", "MISY160"],
         "semester": "",
         "year": 0,
-        "taken": false
+        "taken": false,
+        "note": ""
     },
     {
         "courseTitle": "Machine Organization and Assembly Language",
         "courseCode": "CISC260",
         "credits": 3,
+        "canEditCredits": false,
         "numPreReqs": 1,
         "preReqs": ["CISC210"],
         "semester": "",
         "year": 0,
-        "taken": false
+        "taken": false,
+        "note": ""
     },
     {
         "courseTitle": "Introduction to Software Engineering",
         "courseCode": "CISC275",
         "credits": 3,
+        "canEditCredits": false,
         "numPreReqs": 2,
         "preReqs": ["CISC181", "CISC220"],
         "semester": "",
         "year": 0,
-        "taken": false
+        "taken": false,
+        "note": ""
     },
     {
         "courseTitle": "Vertically Integrated Projects II",
         "courseCode": "CISC287",
         "credits": 2,
+        "canEditCredits": true,
         "numPreReqs": 0,
         "preReqs": [],
         "semester": "",
         "year": 0,
-        "taken": false
+        "taken": false,
+        "note": "Can choose 1-2 credits"
     },
     {
         "courseTitle": "Automata Theory",
         "courseCode": "CISC303",
         "credits": 3,
+        "canEditCredits": false,
         "numPreReqs": 2,
         "preReqs": ["MATH210", "CISC220"],
         "semester": "",
         "year": 0,
-        "taken": false
+        "taken": false,
+        "note": ""
     },
     {
         "courseTitle": "Logic for Programming",
         "courseCode": "CISC304",
         "credits": 3,
+        "canEditCredits": false,
         "numPreReqs": 2,
         "preReqs": ["CISC220", "MATH210"],
         "semester": "",
         "year": 0,
-        "taken": false
+        "taken": false,
+        "note": ""
     },
     {
         "courseTitle": "Introduction to Algorithms",
         "courseCode": "CISC320",
         "credits": 3,
-        "numPreReqs": 1,
-        "preReqs": ["CISC220"],
+        "canEditCredits": false,
+        "numPreReqs": 2,
+        "preReqs": ["MATH210", "CISC220"],
         "semester": "",
         "year": 0,
-        "taken": false
+        "taken": false,
+        "note": ""
     },
     {
         "courseTitle": "Computers, Ethics and Society",
         "courseCode": "CISC355",
         "credits": 3,
+        "canEditCredits": false,
         "numPreReqs": 0,
         "preReqs": [],
         "semester": "",
         "year": 0,
-        "taken": false
+        "taken": false,
+        "note": ""
     },
     {
         "courseTitle": "Intellectual Property in the Digital Age",
         "courseCode": "CISC356",
         "credits": 3,
+        "canEditCredits": false,
         "numPreReqs": 0,
         "preReqs": [],
         "semester": "",
         "year": 0,
-        "taken": false
+        "taken": false,
+        "note": "Junior or Senior standing"
+    },
+    {
+        "courseTitle": "Engaging Youth in Computing",
+        "courseCode": "CISC357",
+        "credits": 3,
+        "canEditCredits": true,
+        "numPreReqs": 1,
+        "preReqs": ["CISC101", "CISC103", "CISC106", "CISC108"],
+        "semester": "",
+        "year": 0,
+        "taken": false,
+        "note": "Can choose 1-3 credits\nStudent must have sufficient time in their schedule to visit schools weekly between 9am and 3pm\n Students must pass a background check that clears them for teaching"
+    },
+    {
+        "courseTitle": "Introduction to Computer Science Research",
+        "courseCode": "CISC358",
+        "credits": 3,
+        "canEditCredits": false,
+        "numPreReqs": 1,
+        "preReqs": ["CISC220"],
+        "semester": "",
+        "year": 0,
+        "taken": false,
+        "note": ""
+    },
+    {
+        "courseTitle": "Computer Architecture",
+        "courseCode": "CISC360",
+        "credits": 3,
+        "canEditCredits": false,
+        "numPreReqs": 2,
+        "preReqs": ["CISC220", "CISC260"],
+        "semester": "",
+        "year": 0,
+        "taken": false,
+        "note": ""
     },
     {
         "courseTitle": "",
         "courseCode": "",
         "credits": 3,
+        "canEditCredits": false,
         "numPreReqs": 0,
         "preReqs": [],
         "semester": "",
         "year": 0,
-        "taken": false
-    },
-    {
-        "courseTitle": "",
-        "courseCode": "",
-        "credits": 3,
-        "numPreReqs": 0,
-        "preReqs": [],
-        "semester": "",
-        "year": 0,
-        "taken": false
-    },
-    {
-        "courseTitle": "",
-        "courseCode": "",
-        "credits": 3,
-        "numPreReqs": 0,
-        "preReqs": [],
-        "semester": "",
-        "year": 0,
-        "taken": false
-    },
-    {
-        "courseTitle": "",
-        "courseCode": "",
-        "credits": 3,
-        "numPreReqs": 0,
-        "preReqs": [],
-        "semester": "",
-        "year": 0,
-        "taken": false
+        "taken": false,
+        "note": ""
     }
 ]
