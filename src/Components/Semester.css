@@ -1,12 +1,57 @@
 .Semester {
     text-align: center;
-    min-height: 50vh; /*Can change height later depending on deployment*/
-    min-width: 30vh; /*Can change width later depending on deployment*/
+    min-height: 100%; /*Can change height later depending on deployment*/
+    min-width: 100%; /*Can change width later depending on deployment*/
     display: flex;
-    flex-direction: column; /*I think row will be good but check on deployment because the courses should span downwards not across*/
+    flex-direction: row; /*I think row will be good but check on deployment because the semesters should span across not down*/
     align-items: center;
     justify-content: center;
-    background-color: #a87b32; /*Can change color for asethetic later if dislike*/
+    background-color: white;
+}
+
+.Fall {
+    padding: 10px; /*for the course elements within the semester*/
+    margin-right: 10px; /*all "margins" are for the other semester elements in the larger container*/
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    text-align: center;
+    min-height: 80%; /*Can change height later depending on deployment*/
+    min-width: 40%; /*Can change width later depending on deployment*/
+    display: flex;
+    flex-direction: column; /*Actual singular semester should span downwards - column like courses*/
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(251, 207, 142);
     font-family:'Times New Roman', Times, serif;
     font-size: calc(8px + 2vmin); /*Can change size later depending on deployment*/
+}
+
+.Spring {
+    padding: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    text-align: center;
+    min-height: 80%; /*Can change height later depending on deployment*/
+    min-width: 40%; /*Can change width later depending on deployment*/
+    display: flex;
+    flex-direction: column; /*Actual singular semester should span downwards - column like courses*/
+    align-items: center;
+    justify-content: center;
+    background-color: #a4d39e; /*Can change color for asethetic later if dislike*/
+    font-family:'Times New Roman', Times, serif;
+    font-size: calc(8px + 2vmin); /*Can change size later depending on deployment*/
+}
+
+.Course {
+    min-width: 100%;
+    border: 1px solid black;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    font-family:'Times New Roman', Times, serif;
 }
