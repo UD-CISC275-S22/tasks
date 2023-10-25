@@ -10,6 +10,14 @@ export function DoubleHalf(): JSX.Element {
 
     function Halver(): void {
         setDhValue(dhValue.valueOf() * 0.5);
+export function DoubleHalf(): JSX.Element {
+    const [dhValue, setDhValue] = useState<number>(10);
+    function Doubler(): void {
+        setDhValue(2 * dhValue);
+    }
+
+    function Halver(): void {
+        setDhValue(0.5 * dhValue);
     }
     return (
         <div>
