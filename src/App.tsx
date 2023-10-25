@@ -21,16 +21,6 @@ function App(): JSX.Element {
                 <p>Melvin Rau</p>
                 <p>Victor Vasquez</p>
             </p>
-            <ul>
-                {/*eslint-disable-next-line no-extra-parens*/}
-                {importData.map((arr: string[]) => (
-                    <li key={arr[0]}>
-                        {arr.map((a: string) => {
-                            a + " ";
-                        })}
-                    </li>
-                ))}
-            </ul>
             <GenerateCSV
                 data={importData ? importData : data}
                 filename="testexport"
