@@ -1,6 +1,24 @@
 import React from "react";
 import "./App.css";
-
+import { Semester } from "./viewCouseComponents";
+import { Col, Row } from "react-bootstrap";
+const testSemester = {
+    season: "winter",
+    name: "Quarter 22",
+    year: "2022",
+    courses: [
+        {
+            ticker: "Cis275",
+            name: "intro to software",
+            credits: 3
+        },
+        {
+            ticker: "Cis275",
+            name: "intro to software",
+            credits: 3
+        }
+    ]
+};
 function App(): JSX.Element {
     const handleCreatePlan = () => {
         console.log("Create plan button clicked");
@@ -22,6 +40,11 @@ function App(): JSX.Element {
                 </button>
                 <button onClick={handleImportCSV}>Import CSV</button>
             </div>
+            <Row>
+                <Col>
+                    <Semester {...testSemester}></Semester>
+                </Col>
+            </Row>
         </div>
     );
 }

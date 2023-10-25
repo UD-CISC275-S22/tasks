@@ -1,6 +1,6 @@
 import { Course } from "./course";
 
-export interface Semester {
+export interface SemesterI {
     season: string;
     name: string;
     year: string;
