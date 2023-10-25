@@ -3,48 +3,54 @@
         "season": "Fall",
         "name": "Freshman year: Fall",
         "year": "Freshman",
-        "courses": []
+        "courses": [
+            {
+                "ticker": "CISC108",
+                "name": "Introduction to Computer Science I",
+                "credits": "3"
+            },
+            {
+                "ticker": "EGGG101",
+                "name": "Introduction to Engineering (FYE)",
+                "credits": "2"
+            },
+            {
+                "ticker": "ENGL110",
+                "name": "Seminar in Composition",
+                "credits": "3"
+            },
+            {
+                "ticker": "MATH241",
+                "name": "Analytic Geometry & Calculus A",
+                "credits": "4"
+            }
+        ]
     },
     {
         "season": "Spring",
         "name": "Freshman year: Spring",
         "year": "Freshman",
-        "courses": []
-    },
-    {
-        "season": "Fall",
-        "name": "Sophomore year: Fall",
-        "year": "Sophomore",
-        "courses": []
-    },
-    {
-        "season": "Spring",
-        "name": "Sophomore year: Spring",
-        "year": "Sophomore",
-        "courses": []
-    },
-    {
-        "season": "Fall",
-        "name": "Junior year: Fall",
-        "year": "Junior",
-        "courses": []
-    },
-    {
-        "season": "Spring",
-        "name": "Junior year: Spring",
-        "year": "Junior",
-        "courses": []
-    },
-    {
-        "season": "Fall",
-        "name": "Senior year: Fall",
-        "year": "Senior",
-        "courses": []
-    },
-    {
-        "season": "Spring",
-        "name": "Senior year: Spring",
-        "year": "Senior",
-        "courses": []
+        "courses": [
+            {
+                "ticker": "CISC181",
+                "name": "Introduction to Computer Science II",
+                "credits": "3"
+            },
+            {
+                "ticker": "CISC210",
+                "name": "Introduction to Systems Programming",
+                "credits": "3"
+            },
+            {
+                "ticker": "CISC355",
+                "name": "Computers Ethics & Society",
+                "credits": "3"
+            },
+            {
+                "ticker": "MATH242",
+                "name": "Analytic Geometry & Calculus B",
+                "credits": "4"
+            }
+        ]
     }
 ]
