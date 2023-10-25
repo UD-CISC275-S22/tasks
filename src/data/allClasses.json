@@ -169,6 +169,56 @@
         "taken": false
     },
     {
+        "courseTitle": "Computers, Ethics and Society",
+        "courseCode": "CISC355",
+        "credits": 3,
+        "numPreReqs": 0,
+        "preReqs": [],
+        "semester": "",
+        "year": 0,
+        "taken": false
+    },
+    {
+        "courseTitle": "Intellectual Property in the Digital Age",
+        "courseCode": "CISC356",
+        "credits": 3,
+        "numPreReqs": 0,
+        "preReqs": [],
+        "semester": "",
+        "year": 0,
+        "taken": false
+    },
+    {
+        "courseTitle": "",
+        "courseCode": "",
+        "credits": 3,
+        "numPreReqs": 0,
+        "preReqs": [],
+        "semester": "",
+        "year": 0,
+        "taken": false
+    },
+    {
+        "courseTitle": "",
+        "courseCode": "",
+        "credits": 3,
+        "numPreReqs": 0,
+        "preReqs": [],
+        "semester": "",
+        "year": 0,
+        "taken": false
+    },
+    {
+        "courseTitle": "",
+        "courseCode": "",
+        "credits": 3,
+        "numPreReqs": 0,
+        "preReqs": [],
+        "semester": "",
+        "year": 0,
+        "taken": false
+    },
+    {
         "courseTitle": "",
         "courseCode": "",
         "credits": 3,
