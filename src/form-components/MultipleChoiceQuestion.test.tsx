@@ -9,6 +9,7 @@ describe("MultipleChoiceQuestion Component tests", () => {
             <MultipleChoiceQuestion
                 expectedAnswer="2"
                 options={["1", "2", "3"]}
+                title="Hello"
             />
         );
         expect(screen.getByRole("combobox")).toBeInTheDocument();
@@ -18,6 +19,7 @@ describe("MultipleChoiceQuestion Component tests", () => {
             <MultipleChoiceQuestion
                 expectedAnswer="2"
                 options={["1", "2", "3"]}
+                title="Hello"
             />
         );
         expect(screen.getByText(/❌/i)).toBeInTheDocument();
@@ -28,6 +30,7 @@ describe("MultipleChoiceQuestion Component tests", () => {
             <MultipleChoiceQuestion
                 expectedAnswer="2"
                 options={["1", "2", "3"]}
+                title="Hello"
             />
         );
         const select = screen.getByRole("combobox");
@@ -40,6 +43,7 @@ describe("MultipleChoiceQuestion Component tests", () => {
             <MultipleChoiceQuestion
                 expectedAnswer="2"
                 options={["1", "2", "3"]}
+                title="Hello"
             />
         );
         const select = screen.getByRole("combobox");
@@ -55,6 +59,7 @@ describe("MultipleChoiceQuestion Component tests", () => {
             <MultipleChoiceQuestion
                 expectedAnswer="Alpha"
                 options={["Alpha", "Beta", "Gamma"]}
+                title="Hello"
             />
         );
         const select = screen.getByRole("combobox");
@@ -67,6 +72,7 @@ describe("MultipleChoiceQuestion Component tests", () => {
             <MultipleChoiceQuestion
                 expectedAnswer="World"
                 options={["Hello", "World"]}
+                title="Hello"
             />
         );
         expect(screen.getByText(/❌/i)).toBeInTheDocument();

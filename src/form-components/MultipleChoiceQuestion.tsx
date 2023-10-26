@@ -3,10 +3,12 @@ import { Form } from "react-bootstrap";
 
 export function MultipleChoiceQuestion({
     options,
-    expectedAnswer
+    expectedAnswer,
+    title
 }: {
     options: string[];
     expectedAnswer: string;
+    title: string;
 }): JSX.Element {
     const [allOptions] = useState<string[]>(options);
     const [expected] = useState<string>(expectedAnswer);
@@ -17,8 +19,8 @@ export function MultipleChoiceQuestion({
     }
     return (
         <div>
-            <Form.Group controlId="favoriteColors">
-                <Form.Label>What is your favorite color?</Form.Label>
+            <Form.Group>
+                <Form.Label>{title}</Form.Label>
                 <Form.Select
                     style={{ textAlign: "center" }}
                     value={userChoice}
