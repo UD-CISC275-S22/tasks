@@ -1,0 +1,42 @@
+[
+    {
+        "id": "CISC108",
+        "name": "Introduction to Computer Science I",
+        "description": "Computing and principles of programming with an emphasis on systematic program design. Topics include functional programming, data abstraction, procedural abstraction, use of control and state, recursion, testing, and object-oriented programming concepts. Requires no prior programming experience, open to any major, but intended primarily for majors and minors in computer science or mathematics.",
+        "credits": 3,
+        "semester": "Both",
+        "department": "COE",
+        "prereq": [],
+        "requirement": ["University Breadth", "CAS Breadth"]
+    },
+    {
+        "id": "CISC181",
+        "name": "Introduction to Computer Science II",
+        "description": "Principles of computer science illustrated and applied through programming in an object oriented language. Programming projects illustrate computational problems, styles and issues that arise in computer systems development and in all application areas of computation.",
+        "credits": 3,
+        "semester": "Both",
+        "department": "COE",
+        "prereq": ["CISC108"],
+        "requirements": ["University Breadth", "CAS Breadth"]
+    },
+    {
+        "id": "CISC210",
+        "name": "Introduction to Systems Programming",
+        "description": "Principles of computer systems programming for software and hardware platforms to achieve efficient resource usage. Topics include the C programming language, memory management, and awareness of system constraints and interfacing. Projects include programming embedded systems and interactive objects.",
+        "credits": 3,
+        "semester": "Both",
+        "department": "COE",
+        "prereq": ["CISC108"],
+        "requirements": []
+    },
+    {
+        "id": "CISC220",
+        "name": "Data Structures",
+        "description": "",
+        "credits": 3,
+        "semester": "Both",
+        "department": "COE",
+        "prereq": ["CISC210"],
+        "requirements": []
+    }
+]
