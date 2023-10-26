@@ -19,6 +19,12 @@ function App(): JSX.Element {
                 <p>Melvin Rau</p>
                 <p>Victor Vasquez</p>
             </p>
+            <div className="App-blockleft">
+                <p>sample block</p>
+            </div>
+            <div className="App-blockright">
+                <p>sample block</p>
+            </div>
         </div>
     );
 }

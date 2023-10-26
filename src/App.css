@@ -31,7 +31,7 @@
     justify-content: right;
     font-size: calc(10px + 2vmin);
     color: black;
-}   
+}
 .App-blockleft {
     width: 100%;
     background-color: gray;
@@ -39,7 +39,7 @@
     justify-content: left;
     font-size: calc(10px + 2vmin);
     color: black;
-}  
+}
 
 .App-link {
     color: #61dafb;
