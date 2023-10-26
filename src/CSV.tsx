@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ChangeEvent, useRef, useState } from "react";
 import "./App.css";
 import { CSVLink } from "react-csv";
 import { Button } from "react-bootstrap";
@@ -26,11 +26,48 @@ export function GenerateCSV({
     );
 }
 
+export function ImportButton({
+    setImportData
+}: {
+    setImportData: (data: string) => void;
+}): JSX.Element {
+    const uploadReference = useRef<HTMLInputElement>(null);
+
+    const handleUpload = (e: ChangeEvent<HTMLInputElement>): void => {
+        if (e.target.files == null || !e.target.files[0]) {
+            console.error("File upload error");
+            return;
+        }
+
+        const file = e.target.files[0];
+
+        if (!file.name.endsWith(".csv")) {
+            console.error("Please upload a .csv file");
+            return;
+        }
+
+        const fileReader = new FileReader();
+        fileReader.onload = (e: ProgressEvent<FileReader>): void => {
+            const contents = String(e?.target?.result);
+            setImportData(contents);
+        };
+        e.target.value = "";
+        fileReader.readAsText(file);
+    };
+
+    return (
+        <>
+            <input type="file" onChange={handleUpload} />
+        </>
+    );
+} /*
+
+/*
 /*  ImportCSV() (Nicky's import, will probably be swapped for the other one)
 Params:
   setImportData: (data: string[][]) => void
       The setter for the import data state
-*/
+
 export function ImportCSV({
     setImportData
 }: {
@@ -56,8 +93,8 @@ export function ImportCSV({
                     acceptedFile,
                     ProgressBar,
                     getRemoveFileProps
-                }: /*eslint-disable-next-line @typescript-eslint/no-explicit-any */
-                any /*eslint-disable-next-line no-extra-parens*/
+                }: /*eslint-disable-next-line @typescript-eslint/no-explicit-any */ /*
+any; /*eslint-disable-next-line no-extra-parens*/ /*
             ) => (
                 <>
                     <div>
@@ -73,3 +110,4 @@ export function ImportCSV({
         </CSVReader>
     );
 }
+*/

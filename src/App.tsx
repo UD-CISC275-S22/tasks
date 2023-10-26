@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "./App.css";
-import { GenerateCSV, ImportCSV } from "./CSV";
+import { GenerateCSV, ImportButton } from "./CSV";
 
 const data: string[][] = [["Last Name, First Name"], ["Nicky", "Reigel"]];
 
 function App(): JSX.Element {
-    const [importData, setImportData] = useState<string[][]>([[]]);
+    const [importData, setImportData] = useState<string>("");
 
     return (
         <div className="App">
@@ -21,11 +21,11 @@ function App(): JSX.Element {
                 <p>Melvin Rau</p>
                 <p>Victor Vasquez</p>
             </p>
-            <GenerateCSV
-                data={importData ? importData : data}
-                filename="testexport"
-            ></GenerateCSV>
-            <ImportCSV setImportData={setImportData} />
+            {importData}
+            <div />
+            <GenerateCSV data={data} filename="testexport" />
+            <div />
+            <ImportButton setImportData={setImportData} />
         </div>
     );
 }
