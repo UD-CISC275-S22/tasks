@@ -10,20 +10,25 @@ function App(): JSX.Element {
                 <p>
                     <WelcomeMessage></WelcomeMessage>
                 </p>
+                <p>
+                    <ul className="horizontal-list">
+                        <li> Aidan Bell </li>
+                        <li>Lawrence Collins </li>
+                        <li>Nicky Reigel</li>
+                        <li>Melvin Rau</li>
+                        <li>Victor Vasquez</li>
+                    </ul>
+                </p>
             </header>
             <p>
-                Aidan Bell Edit <code>src/App.tsx</code> and save. This page
-                will automatically reload.
-                <p>Lawrence Collins </p>
-                <p>Nicky Reigel</p>
-                <p>Melvin Rau</p>
-                <p>Victor Vasquez</p>
+                <code>src/App.tsx</code> and save. This page will automatically
+                reload.
             </p>
             <div className="App-blockleft">
-                <p>sample block</p>
+                <p>sample block left</p>
             </div>
             <div className="App-blockright">
-                <p>sample block</p>
+                <p>sample block right</p>
             </div>
         </div>
     );
