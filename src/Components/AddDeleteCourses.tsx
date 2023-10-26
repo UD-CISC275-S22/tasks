@@ -2,7 +2,7 @@
 import React, { useState, ChangeEvent, FC } from "react";
 import { Class } from "../interfaces/class";
 
-export const CourseForm: React.FC<{}> = () => {
+export const CourseForm: React.FC<{ courses: unknown }> = () => {
     const [courseInfo, setCourseInfo] = useState<Class>({
         courseTitle: "",
         courseCode: "",
@@ -112,7 +112,7 @@ export const CourseForm: React.FC<{}> = () => {
 function AddDeleteCourses(): JSX.Element {
     return (
         <div>
-            <CourseForm></CourseForm>
+            <CourseForm courses={undefined}></CourseForm>
         </div>
     );
 }
