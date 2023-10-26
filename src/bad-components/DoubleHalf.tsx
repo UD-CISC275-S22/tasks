@@ -3,15 +3,6 @@ import { Button } from "react-bootstrap";
 
 export function DoubleHalf(): JSX.Element {
     const [dhValue, setDhValue] = useState<number>(10);
-
-    function Doubler(): void {
-        setDhValue(dhValue.valueOf() * 2);
-    }
-
-    function Halver(): void {
-        setDhValue(dhValue.valueOf() * 0.5);
-export function DoubleHalf(): JSX.Element {
-    const [dhValue, setDhValue] = useState<number>(10);
     function Doubler(): void {
         setDhValue(2 * dhValue);
     }

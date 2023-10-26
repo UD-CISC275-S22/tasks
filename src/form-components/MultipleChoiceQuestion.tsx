@@ -9,10 +9,6 @@ export function MultipleChoiceQuestion({
     options: string[];
     expectedAnswer: string;
     title: string;
-    expectedAnswer
-}: {
-    options: string[];
-    expectedAnswer: string;
 }): JSX.Element {
     const [allOptions] = useState<string[]>(options);
     const [expected] = useState<string>(expectedAnswer);
