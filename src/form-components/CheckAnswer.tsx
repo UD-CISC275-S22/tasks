@@ -7,6 +7,9 @@ export function CheckAnswer({
 }: {
     expectedAnswer: string;
     title: string;
+    expectedAnswer
+}: {
+    expectedAnswer: string;
 }): JSX.Element {
     const [name, setName] = useState<string>("");
     const [yesOrNo, setYesOrNo] = useState<boolean>(false);
