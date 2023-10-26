@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import { SeeSingleSemester } from "./Components/SeeSingleSemester";
 
 function App(): JSX.Element {
     return (
@@ -9,12 +10,10 @@ function App(): JSX.Element {
             </header>
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload. Miryam Ramirez
+                automatically reload.
             </p>
-            <p>Josh Babbitt</p>
-            <p>Nyllise Graham</p>
-            <p>Nicole Kinsella</p>
-            <p>Lizzy Kalfas</p>
+            <hr></hr>
+            <SeeSingleSemester></SeeSingleSemester>
         </div>
     );
 }
