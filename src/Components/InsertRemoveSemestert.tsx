@@ -1,22 +1,42 @@
 import React, { useState } from "react";
 import { Class } from "../interfaces/class";
-import { Form } from "react-bootstrap";
+import { semester } from "../interfaces/semster";
+
+import { Button, Form } from "react-bootstrap";
 import sample from "../data/allClasses.json";
 
-
 export function InsertRemoveSemestert(): JSX.Element {
-    const SEMESTER = sample.map();
+    const [semesters, setSemesters] = useState<semester[]>([
+        { id: 0, classes: [] }
+    ]); //creating a semester list with just the semester 0 with no classes
 
-    const [semester, setSemester] = useState<Class[]>(SEMESTER);
-
-    function addSemester(courseCode: string) {
-
+    function addSemester() {
+        setSemesters([...semesters, { id: semesters.length + 1, classes: [] }]); //id growing by 1
+        //if it  gets complex, then I might need to deep copy
     }
 
-    function removeSemester(courseCode: string) {
-        setSemester(semester.filter((q: Class): boolean => courseCode !== q.courseCode));
+    function removeSemester(id: number) {
+        setSemesters(semesters.filter((q: semester): boolean => id !== q.id));
     }
 
+    //return is the buttons
+    //slpit the two seperate, add and the remove function
+    //where the button will update the semester list
+    //----------------------------------------------------------------------------------------
+    //when pushing to main branch, push to git push orgin HEAD
+    //github, pull request, go to my main branch and push it, then let the team know so they can push it to the main branch
 
-    return ();
+    return (
+        <div></div>
+        /*
+        <div>
+            {semesters.map(() =>
+                <div key={}>
+                    {" "}
+                    <Button onClick={() => addSemester()}> {} </Button>{" "}
+                </div>
+            )}
+        </div>
+        */
+    );
 }
