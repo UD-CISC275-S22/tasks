@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Computer Science (BA)",
+        "concentration": "None",
+        "RequiredCourseList": ["CISC106", "CISC108"]
+    },
+    {
+        "name": "Computer Science (BS) ",
+        "concentration": "None",
+        "RequiredCourseList": ["CISC210", "CISC220"]
+    }
+]

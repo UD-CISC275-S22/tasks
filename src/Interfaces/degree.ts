@@ -5,20 +5,18 @@ import { Course } from "./course";
 export interface Degree {
     /* degree name */
     name: string;
-    /* degree length */
-    length: number;
-    /* degree type, eg: masters, associates etc */
-    type: string;
     /* concentration type */
-    concetration: string;
+    concentration: string;
+    /* List of courses required within the degree */
+    RequiredCourseList: Course[];
     /*List of University wide requirements */
-    UniversityRequirements: Course[];
+    // UniversityRequirements: Course[];
     /*list of college specific requirements*/
-    CollegeRequirements: string;
-    CISCore: string;
-    LabScienceRequirements: string;
-    CapstoneRequirements: string;
-    AdditionalRequirements: string;
-    ConcentrationRequirements: string;
-    CISCElective: string[];
+    // CollegeRequirements: string;
+    // CISCore: string;
+    // LabScienceRequirements: string;
+    // CapstoneRequirements: string;
+    // AdditionalRequirements: string;
+    // ConcentrationRequirements: string;
+    // CISCElective: string[];
 }
