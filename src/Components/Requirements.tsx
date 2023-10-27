@@ -17,10 +17,18 @@ function isPrereq(course1: Course, course2: Course): boolean {
     }
 }
 
+
 /* To determine if a course fulfills a degree requirement
 "CISC220 is a required course for all degrees"
-"The degree must have at least 3 technical electives */
-// function degreeReq() {}
+"The degree must have at least 3 restrcited electives */
+
+function fulfillsDegreeReq(course: Course, degree: Degree): boolean {   
+    if (course.id in degree.RequiredCourseList && degree.RequiredCourseList.length >= 3){
+        return true;
+    }
+
+    return false;
+}
 
 export default function YourComponent() {
     // Use the isPrereq function and courses data as needed

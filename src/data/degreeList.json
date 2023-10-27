@@ -2,11 +2,15 @@
     {
         "name": "Computer Science (BA)",
         "concentration": "None",
-        "RequiredCourseList": ["CISC106", "CISC108"]
+        "RequiredCourseList": ["CISC106", "CISC108"],
+        "RestrictedElectiveLists":[] 
+
+
     },
     {
-        "name": "Computer Science (BS) ",
-        "concentration": "None",
-        "RequiredCourseList": ["CISC210", "CISC220"]
+        "name": "Computer Science (BS) Systems and Networks",
+        "concentration": "Systems and Networks",
+        "RequiredCourseList": ["CISC210", "CISC220"],
+        "RestrictedElectiveLists":["CISC304", "CISC436","CISC437"] 
     }
 ]
