@@ -15,7 +15,7 @@ export function WelcomeMessage(): JSX.Element {
                 <Form.Control value={name} onChange={updateName} />
             </Form.Group>
             <div>
-                Welcome {name} here you will create you potential class
+                Welcome {name}, here you will create you potential class
                 schedule.
             </div>
         </div>
