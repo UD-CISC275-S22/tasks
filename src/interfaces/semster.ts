@@ -1,5 +1,5 @@
 import { Class } from "../interfaces/class";
 
-export interface Semester {
+export interface semester {
     classes: Class[];
 }
