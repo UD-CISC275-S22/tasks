@@ -24,11 +24,15 @@ function App(): JSX.Element {
                 <code>src/App.tsx</code> and save. This page will automatically
                 reload.
             </p>
-            <div className="App-blockleft">
-                <p>sample block left</p>
+            <div className="div-alightleft">
+                <div className="App-blockleft">
+                    <p>sample block left</p>
+                </div>
             </div>
-            <div className="App-blockright">
-                <p>sample block right</p>
+            <div className="div-alignright">
+                <div className="App-blockright">
+                    <p>sample block right</p>
+                </div>
             </div>
         </div>
     );
