@@ -42,6 +42,11 @@ function App(): JSX.Element {
             </div>
             <Row>
                 <Col>
+                    <h3>Winter</h3>
+                    <Semester {...testSemester}></Semester>
+                </Col>
+                <Col>
+                    <h3>Spring</h3>
                     <Semester {...testSemester}></Semester>
                 </Col>
             </Row>
