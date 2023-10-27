@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Class } from "../interfaces/class";
+//import { Class } from "../interfaces/class";
 import { semester } from "../interfaces/semster";
 
-import { Button, Form } from "react-bootstrap";
-import sample from "../data/allClasses.json";
+//import { Button, Form } from "react-bootstrap";
+//import sample from "../data/allClasses.json";
 
 export function InsertRemoveSemestert(): JSX.Element {
     const [semesters, setSemesters] = useState<semester[]>([
