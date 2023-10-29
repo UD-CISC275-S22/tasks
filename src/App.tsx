@@ -29,9 +29,9 @@ export function App(): JSX.Element {
     return (
         <div>
             <ol>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>TypeScript</li>
+                <li>one</li>
+                <li>two</li>
+                <li>three</li>
             </ol>
         </div>
     );
