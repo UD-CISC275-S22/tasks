@@ -25,6 +25,7 @@ export function AddClass({
     );
 }
 //Paste function into file using AddClass
+//updates a state with a semeter object to have the new updated list of classes
 // function onAddClass(updatedSchedule: semester) {
 //     setSampleSemester(updatedSchedule);
 // }
