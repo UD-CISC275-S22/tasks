@@ -1,4 +1,5 @@
-*{
+* {
+    border: black;
 }
 
 .App {
@@ -22,9 +23,9 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     color: white;
-    padding: 30px 30px 30px 30px
+    padding: 30px 30px 30px 30px;
 }
 
 .App-link {
@@ -40,7 +41,7 @@
     font-family: "greycliff";
 }
 
-.Line{
+.Line {
     color: yellow;
 }
 @keyframes App-logo-spin {
