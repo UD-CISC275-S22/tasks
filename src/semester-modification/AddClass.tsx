@@ -1,17 +1,21 @@
 import React from "react";
-import { Button } from "react-bootstrap";
 import { classes } from "../Interface/classes";
 import { semester } from "../Interface/semester";
+import { Button } from "react-bootstrap";
 
-//set up forms to enter information then press button to add information to schedule
-
-//after add the class to the end of the semester array
-export function AddClass(schedule: semester, newClass: classes): JSX.Element {
+export function AddClass({
+    schedule,
+    newClass,
+    onAddClass
+}: {
+    schedule: semester;
+    newClass: classes;
+    onAddClass: (updatedSchedule: semester) => void;
+}): JSX.Element {
     function addNewClass() {
-        const holder = schedule;
-        holder.classList.push(newClass);
-
-        schedule.classList = holder.classList;
+        const updatedSchedule = { ...schedule };
+        updatedSchedule.classList = updatedSchedule.classList.concat(newClass);
+        onAddClass(updatedSchedule);
     }
 
     return (
@@ -20,3 +24,7 @@ export function AddClass(schedule: semester, newClass: classes): JSX.Element {
         </div>
     );
 }
+//Paste function into file using AddClass
+// function onAddClass(updatedSchedule: semester) {
+//     setSampleSemester(updatedSchedule);
+// }
