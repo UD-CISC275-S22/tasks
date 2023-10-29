@@ -29,3 +29,25 @@ export function AddClass({
 // function onAddClass(updatedSchedule: semester) {
 //     setSampleSemester(updatedSchedule);
 // }
+
+// const [sampleSemester, setSampleSemester] = useState({
+//     classList: [
+//         /* your initial class list here */
+//     ],
+//     totalCredits: 0, // Update this based on the initial data
+//     season: "Fall 2023"
+// });
+
+{
+    /* <AddClass
+    schedule={sampleSemester}
+    newClass={{
+        code: "PHYS101",
+        title: "Physics for Beginners",
+        credits: 4,
+        preReq: [],
+        instructor: "Professor Anderson"
+    }}
+    onAddClass={handleAddClass}
+/>; */
+}

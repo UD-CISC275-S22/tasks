@@ -25,6 +25,23 @@ export function RemoveClass({
 }
 
 //Paste function into file using RemoveClass
+//updates a state with a semeter object to have the new updated list of classes
 // function onRemoveClass(updatedSchedule: semester) {
 //     setSampleSemester(updatedSchedule);
 // }
+
+// const [sampleSemester, setSampleSemester] = useState({
+//     classList: [
+//         /* your initial class list here */
+//     ],
+//     totalCredits: 0, // Update this based on the initial data
+//     season: "Fall 2023"
+// });
+
+{
+    /* <RemoveClass
+    schedule={sampleSemester}
+    removeName="Physics for Beginners"
+    onRemoveClass={onRemoveClass}
+/>; */
+}
