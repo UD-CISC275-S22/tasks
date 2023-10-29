@@ -16,9 +16,10 @@ function App(): JSX.Element {
                 <h1 className="Title">Udel CS Course Scheduler</h1>
                 <img src={Image2} className="logo" />
             </header>
-            <div>
+            {/*<div>
                 <SemesterTable></SemesterTable>
             </div>
+    */}
             <hr></hr>
             <MainButtons></MainButtons>
         </div>

@@ -1,6 +1,8 @@
 import React from "react";
 import { Button, Container, Row, Col } from "react-bootstrap";
 import { useState } from "react";
+import { SemesterTable } from "../semester/SemesterTable";
+import { FilteringSearch } from "../FilteringSearch/FilteringSearch";
 
 export function MainButtons(): JSX.Element {
     const [semesterSchedule, setSemesterSchedule] = useState<boolean>(true);
@@ -15,10 +17,18 @@ export function MainButtons(): JSX.Element {
                             <Button
                                 onClick={() => {
                                     setSemesterSchedule(!semesterSchedule);
+                                    <SemesterTable></SemesterTable>;
                                 }}
                             >
                                 Schedule Semester
                             </Button>
+                            <div
+                                style={{
+                                    display: semesterSchedule ? "block" : "none"
+                                }}
+                            >
+                                <SemesterTable></SemesterTable>
+                            </div>
                             <div>
                                 Click Here to create your schedule for the
                                 upcoming and future semesters by adding your
@@ -35,6 +45,7 @@ export function MainButtons(): JSX.Element {
                             >
                                 Current Plan
                             </Button>
+                            <FilteringSearch></FilteringSearch>
                         </div>
                     </Col>
                     <Col>
