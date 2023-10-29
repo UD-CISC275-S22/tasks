@@ -8,13 +8,30 @@ const testSemester = {
     year: "2022",
     courses: [
         {
-            ticker: "Cis275",
-            name: "intro to software",
+            ticker: "Math220",
+            name: "Discrete Math",
             credits: 3
         },
         {
             ticker: "Cis275",
-            name: "intro to software",
+            name: "Intro to Software Eng.",
+            credits: 3
+        }
+    ]
+};
+const testSemester2 = {
+    season: "spring",
+    name: "Quarter 22",
+    year: "2023",
+    courses: [
+        {
+            ticker: "Cis304",
+            name: "Computer Logic",
+            credits: 3
+        },
+        {
+            ticker: "Cis220",
+            name: "Data Structures",
             credits: 3
         }
     ]
@@ -47,7 +64,7 @@ function App(): JSX.Element {
                 </Col>
                 <Col>
                     <h3>Spring</h3>
-                    <Semester {...testSemester}></Semester>
+                    <Semester {...testSemester2}></Semester>
                 </Col>
             </Row>
         </div>
