@@ -1,3 +1,4 @@
+/* eslint-disable no-extra-parens */
 import React, { useState, useEffect } from "react";
 
 const WelcomeMessage: React.FC = () => {
@@ -13,10 +14,10 @@ const WelcomeMessage: React.FC = () => {
     const handleShowWelcome = () => {
         if (name.trim() !== "") {
             setShowWelcome(false);
-            const newInactiveTimeout = setTimeout(() => {
-                setShowWelcome(true);
-                setName("");
-            }, 5 * 60 * 1000);
+            // const newInactiveTimeout = setTimeout(() => {
+            //     setShowWelcome(true);
+            //     setName("");
+            // }, 5 * 60 * 1000);
         } else {
             alert("Please enter a valid name.");
         }
