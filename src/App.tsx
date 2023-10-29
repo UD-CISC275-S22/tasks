@@ -18,9 +18,10 @@ function App(): JSX.Element {
                 <img src={Image2} className="logo" />
             </header>
             <WelcomeMessage></WelcomeMessage>
-            <div>
+            {/*<div>
                 <SemesterTable></SemesterTable>
             </div>
+    */}
             <hr></hr>
             <MainButtons></MainButtons>
         </div>
