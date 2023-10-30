@@ -4,7 +4,7 @@ import { semester } from "../interfaces/semster";
 import { Button } from "react-bootstrap";
 import { degreePlanProps } from "../interfaces/degreePlan";
 
-export function RemoveSemestert({
+export function RemoveSemester({
     degreePlan,
     setDegreePlan
 }: degreePlanProps): JSX.Element {
@@ -41,7 +41,7 @@ export function RemoveSemestert({
     );
 }
 
-export function InsertSemestert({
+export function InsertSemester({
     degreePlan,
     setDegreePlan
 }: degreePlanProps): JSX.Element {
