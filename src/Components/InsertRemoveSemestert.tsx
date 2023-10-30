@@ -1,3 +1,4 @@
+/* eslint-disable no-extra-parens */
 import React, { useState } from "react";
 import { semester } from "../interfaces/semster";
 import { Button } from "react-bootstrap";
