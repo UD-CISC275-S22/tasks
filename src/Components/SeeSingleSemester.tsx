@@ -47,6 +47,10 @@ export function SeeSingleSemester(): JSX.Element {
                         <Col>7</Col>
                         <Col>7.1</Col>
                     </Row>
+                    <Row>
+                        <Col>8</Col>
+                        <Col>8.1</Col>
+                    </Row>
                 </Col>
                 End Semester
             </div>
