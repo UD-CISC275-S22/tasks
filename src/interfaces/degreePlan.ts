@@ -1,4 +1,3 @@
-import { Class } from "./class";
 import { semester } from "./semster";
 
 export interface degreePlan {

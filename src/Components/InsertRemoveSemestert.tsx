@@ -2,11 +2,12 @@
 import React, { useState } from "react";
 import { semester } from "../interfaces/semster";
 import { Button } from "react-bootstrap";
-import { degreePlan, degreePlanProps } from "../interfaces/degreePlan";
+import { degreePlanProps } from "../interfaces/degreePlan";
 
-//import sample from "../data/allClasses.json";
-
-export function RemoveSemestert(): JSX.Element {
+export function RemoveSemestert({
+    degreePlan,
+    setDegreePlan
+}: degreePlanProps): JSX.Element {
     const [semesters, setSemesters] = useState<semester[]>([
         { id: 0, classes: [], name: "" }
     ]); //creating a semester list with just the semester 0 with no classes
