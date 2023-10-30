@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { semester } from "../interfaces/semster";
 import { Button } from "react-bootstrap";
 
-//import { Button, Form } from "react-bootstrap";
 //import sample from "../data/allClasses.json";
 
 export function InsertRemoveSemestert(): JSX.Element {
@@ -28,7 +27,7 @@ export function InsertRemoveSemestert(): JSX.Element {
 
     return (
         <div>
-            {semesters.map((semester) => (
+            {semesters.map((semester: semester) => (
                 <div key={semester.id}>
                     <span>Semester {semester.id}</span>
                     <Button onClick={() => removeSemester(semester.id)}>
