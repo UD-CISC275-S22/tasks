@@ -1,6 +1,5 @@
-import React, { useState } from "react";
-import { semester } from "../interfaces/semster";
-import { degreePlan, degreePlanProps } from "../interfaces/degreePlan";
+import React from "react";
+import { degreePlanProps } from "../interfaces/degreePlan";
 
 import { Button } from "react-bootstrap";
 
