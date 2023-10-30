@@ -1,3 +1,4 @@
+/* eslint-disable no-extra-parens */
 import React, { useState } from "react";
 import { semester } from "../interfaces/semster";
 import { Button } from "react-bootstrap";
@@ -28,7 +29,7 @@ export function InsertRemoveSemestert(): JSX.Element {
 
     return (
         <div>
-            {semesters.map((semester) => (
+            {semesters.map((semester: semester) => (
                 <div key={semester.id}>
                     <span>Semester {semester.id}</span>
                     <Button onClick={() => removeSemester(semester.id)}>
@@ -36,7 +37,9 @@ export function InsertRemoveSemestert(): JSX.Element {
                     </Button>
                 </div>
             ))}
-            <Button onClick={addSemester}>Add Semester</Button>
+            <div>
+                <Button onClick={addSemester}>Add Semester</Button>
+            </div>
         </div>
     );
 }
