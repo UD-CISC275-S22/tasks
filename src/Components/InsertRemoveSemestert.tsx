@@ -1,18 +1,15 @@
+/* eslint-disable no-extra-parens */
 import React, { useState } from "react";
 import { semester } from "../interfaces/semster";
 import { Button } from "react-bootstrap";
+import { degreePlan, degreePlanProps } from "../interfaces/degreePlan";
 
 //import sample from "../data/allClasses.json";
 
-export function InsertRemoveSemestert(): JSX.Element {
+export function RemoveSemestert(): JSX.Element {
     const [semesters, setSemesters] = useState<semester[]>([
-        { id: 0, classes: [] }
+        { id: 0, classes: [], name: "" }
     ]); //creating a semester list with just the semester 0 with no classes
-
-    function addSemester() {
-        setSemesters([...semesters, { id: semesters.length + 1, classes: [] }]); //id growing by 1
-        //if it  gets complex, then I might need to deep copy
-    }
 
     function removeSemester(id: number) {
         setSemesters(semesters.filter((q: semester): boolean => id !== q.id));
@@ -35,6 +32,26 @@ export function InsertRemoveSemestert(): JSX.Element {
                     </Button>
                 </div>
             ))}
+        </div>
+    );
+}
+
+export function InsertSemestert({
+    degreePlan,
+    setDegreePlan
+}: degreePlanProps): JSX.Element {
+    function addSemester() {
+        setDegreePlan({
+            ...degreePlan,
+            semesters: [
+                ...degreePlan.semesters,
+                { id: degreePlan.semesters.length + 1, classes: [], name: "" }
+            ]
+        }); //id growing by 1
+        //if it  gets complex, then I might need to deep copy
+    }
+    return (
+        <div>
             <Button onClick={addSemester}>Add Semester</Button>
         </div>
     );

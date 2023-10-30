@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import { semester } from "../interfaces/semster";
+import { degreePlan, degreePlanProps } from "../interfaces/degreePlan";
+
 import { Button } from "react-bootstrap";
 
-export function clearSemesters(): JSX.Element {
-    const [semesters, setSemesters] = useState<semester[]>([
-        { id: 0, classes: [] }
-    ]);
-
+export function clearSemesters({
+    degreePlan,
+    setDegreePlan
+}: degreePlanProps): JSX.Element {
     function clear() {
-        setSemesters([]);
+        setDegreePlan({ ...degreePlan, semesters: [] });
     }
 
     return (
