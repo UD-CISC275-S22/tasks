@@ -1,7 +1,16 @@
 /* eslint-disable no-extra-parens */
 import React, { useState, useEffect } from "react";
+import "./welcome.css";
 
-const WelcomeMessage: React.FC = () => {
+interface WelcomeMessage {
+    showHomePage: () => void;
+    getName: (name: string) => void;
+}
+
+const WelcomeMessage: React.FC<WelcomeMessage> = ({
+    showHomePage,
+    getName
+}) => {
     const [name, setName] = useState("");
     const [showWelcome, setShowWelcome] = useState(true);
     const [inactiveTimeout, setInactiveTimeout] =
@@ -60,8 +69,15 @@ const WelcomeMessage: React.FC = () => {
                     <button onClick={handleShowWelcome}>OK</button>
                 </div>
             ) : (
-                <div className="WelcomeUser">Welcome, {name}!</div>
+                <div>
+                    {showHomePage()}
+                    {getName(name)}
+                </div>
             )}
+            <img
+                id="picture"
+                src="https://i.pinimg.com/originals/04/07/0b/04070b3cf387c55c7eadbf84eceedcfe.jpg"
+            ></img>
         </div>
     );
 };
