@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
-import { Semester } from "./viewCouseComponents";
-import { Col, Row } from "react-bootstrap";
+import { Semester, Year } from "./viewCourseComponents";
+import { Col, Row, Table } from "react-bootstrap";
+import { yearI } from "./interfaces/semester";
+import { EditCourseModal } from "./EditModal";
+import { Course } from "./interfaces/course";
+
 const testSemester = {
     season: "winter",
     name: "Quarter 22",
@@ -36,7 +40,31 @@ const testSemester2 = {
         }
     ]
 };
+
 function App(): JSX.Element {
+    const yearOneStart = {
+        name: "Year1",
+        firstsemester: testSemester,
+        secondsemester: testSemester2
+    };
+    const [yearOne, updateYearOne] = useState<yearI>(yearOneStart);
+    const [showEditModal, updateEditMogal] = useState<boolean>(false);
+    const handleCloseAddModal = () => updateEditMogal(false);
+    const handleShowAddModal = () => updateEditMogal(true);
+    const [editSelected, setEdit] = useState<Course>({
+        ticker: "",
+        name: "",
+        credits: 0
+    });
+
+    function setCurrentCourseEdit(course: Course) {
+        setEdit(course);
+        updateEditMogal(true);
+    }
+    const db = {
+        Courseplan: yearOne,
+        stateSetter: updateYearOne
+    };
     const handleCreatePlan = () => {
         console.log("Create plan button clicked");
     };
@@ -57,16 +85,13 @@ function App(): JSX.Element {
                 </button>
                 <button onClick={handleImportCSV}>Import CSV</button>
             </div>
-            <Row>
-                <Col>
-                    <h3>Winter</h3>
-                    <Semester {...testSemester}></Semester>
-                </Col>
-                <Col>
-                    <h3>Spring</h3>
-                    <Semester {...testSemester2}></Semester>
-                </Col>
-            </Row>
+            <Year year={yearOne} editCourse={setCurrentCourseEdit}></Year>
+            <EditCourseModal
+                show={showEditModal}
+                handleClose={handleCloseAddModal}
+                currentCourse={editSelected}
+                cRUD={db}
+            ></EditCourseModal>
         </div>
     );
 }
