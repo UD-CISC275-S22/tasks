@@ -81,7 +81,7 @@ export function SeeSingleSemester(): JSX.Element {
                                 type="radio"
                                 name="semesters"
                                 onChange={updateSemester2}
-                                id="color-check-??????????????"
+                                id="semseter-buttons"
                                 label={sem}
                                 value={sem}
                             />
