@@ -14,6 +14,7 @@ export function InsertRemoveSemestert(): JSX.Element {
     function addSemester() {
         setSemesters([...semesters, { id: semesters.length + 1, classes: [] }]); //id growing by 1
         //if it  gets complex, then I might need to deep copy
+        //
     }
 
     function removeSemester(id: number) {
