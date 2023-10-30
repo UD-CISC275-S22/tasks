@@ -13,7 +13,11 @@ export function RemoveSemestert({
     ]); //creating a semester list with just the semester 0 with no classes
 
     function removeSemester(id: number) {
-        setSemesters(semesters.filter((q: semester): boolean => id !== q.id));
+        const update = semesters.filter((q: semester): boolean => id !== q.id);
+        setSemesters(update);
+        setDegreePlan({ ...degreePlan, semesters: update });
+
+        //setSemesters(semesters.filter((q: semester): boolean => id !== q.id));
     }
 
     //return is the buttons
