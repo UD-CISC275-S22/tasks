@@ -74,19 +74,21 @@ export function SeeSingleSemester(): JSX.Element {
                 <Button onClick={() => addSemLabel(semester1)}>Enter</Button>
                 <Form.Control value={semester1} onChange={updateSemester1} />
                 <Col>
-                    {semArr.map((sem: string) => (
-                        <div key={sem} style={{ marginBottom: "4px" }}>
-                            <Form.Check
-                                inline
-                                type="radio"
-                                name="semesters"
-                                onChange={updateSemester2}
-                                id="semseter-buttons"
-                                label={sem}
-                                value={sem}
-                            />
-                        </div>
-                    ))}
+                    {semArr.map((sem: string) => {
+                        return (
+                            <div key={sem} style={{ marginBottom: "4px" }}>
+                                <Form.Check
+                                    inline
+                                    type="radio"
+                                    name="semesters"
+                                    onChange={updateSemester2}
+                                    id="semseter-buttons"
+                                    label={sem}
+                                    value={sem}
+                                />
+                            </div>
+                        );
+                    })}
                     <div></div>
                 </Col>
             </Form.Group>
