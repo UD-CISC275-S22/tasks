@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import React, { useState, ChangeEvent, FC } from "react";
+import React, { useState } from "react";
 import { Class } from "../interfaces/class";
 
 export const CourseForm: React.FC<{ courses: unknown }> = () => {
