@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-//import { Class } from "../interfaces/class";
+import { Class } from "../interfaces/class";
 import { /*Button,*/ Row, Col, Form, Button } from "react-bootstrap";
 
 export function SeeSingleSemester(): JSX.Element {
@@ -7,7 +7,32 @@ export function SeeSingleSemester(): JSX.Element {
     const [semArr, setSemArr] = useState<string[]>([]);
     const [semester2, setSemester2] = useState<string>("");
     const [clicked, setClicked] = useState<boolean>(false);
-    //const [semesterClasses, setSemesterClasses] = useState<string[]>([]);
+    const [semesterClasses, setSemesterClasses] = useState<Class[]>([
+        {
+            courseTitle: "Introduction to Algorithms",
+            courseCode: "CISC320",
+            credits: 3,
+            canEditCredits: false,
+            numPreReqs: 2,
+            preReqs: ["MATH210", "CISC220"],
+            semester: "Fall",
+            year: "Junior",
+            taken: false,
+            note: ""
+        },
+        {
+            courseTitle: "Computers, Ethics and Society",
+            courseCode: "CISC355",
+            credits: 3,
+            canEditCredits: false,
+            numPreReqs: 0,
+            preReqs: [],
+            semester: "Spring",
+            year: "Senior",
+            taken: false,
+            note: ""
+        }
+    ]);
     function addtable() {
         return (
             <div>
@@ -16,16 +41,28 @@ export function SeeSingleSemester(): JSX.Element {
                         <u>{semester2}</u>
                     </h4>
                     <Row>
-                        <Col>Course</Col>
-                        <Col>Number of Credits</Col>
+                        <Col>
+                            <u>Course</u>
+                        </Col>
+                        <Col>
+                            <u>Number of Credits</u>
+                        </Col>
                     </Row>
                     <Row>
-                        <Col>1</Col>
-                        <Col>1.1</Col>
+                        <Col>
+                            {semesterClasses[0].courseCode}
+                            {": "}
+                            {semesterClasses[0].courseTitle}
+                        </Col>
+                        <Col>{semesterClasses[0].credits}</Col>
                     </Row>
                     <Row>
-                        <Col>2</Col>
-                        <Col>2.1</Col>
+                        <Col>
+                            {semesterClasses[1].courseCode}
+                            {": "}
+                            {semesterClasses[1].courseTitle}
+                        </Col>
+                        <Col>{semesterClasses[1].credits}</Col>
                     </Row>
                     <Row>
                         <Col>3</Col>
