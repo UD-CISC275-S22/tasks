@@ -1,5 +1,6 @@
 import React, { ChangeEvent, useRef, useState } from "react";
 import "./App.css";
+//I needed to download the package using "npm install @types/react-csv"
 import { CSVLink } from "react-csv";
 import { Button } from "react-bootstrap";
 
