@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import "./welcome.css";
 import { Button, Form } from "react-bootstrap";
-import Image3 from "./Images/BlueHenScene.jpeg";
+import Image3 from "./Images/UDFallScene.png";
 
 interface WelcomeMessage {
     showHomePage: () => void;
