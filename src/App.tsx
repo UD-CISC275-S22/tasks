@@ -1,6 +1,8 @@
 import React from "react";
 import "./App.css";
 import { WelcomeMessage } from "./Name";
+import { Import } from "./ImportExport";
+import { createEmptyDegreePlan } from "./createDelete";
 
 function App(): JSX.Element {
     return (
@@ -34,6 +36,10 @@ function App(): JSX.Element {
                     <p>sample block right</p>
                 </div>
             </div>
+            <div>
+                <Import></Import>
+            </div>
+            <div>{createEmptyDegreePlan}</div>
         </div>
     );
 }
