@@ -25,6 +25,13 @@
     color: white;
 }
 
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
 .App-link {
     color: #61dafb;
 }
@@ -36,4 +43,9 @@
     to {
         transform: rotate(360deg);
     }
+}
+.tight{
+    padding: 0;
+    margin:0;
+
 }
