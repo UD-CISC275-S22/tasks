@@ -6,3 +6,9 @@ export interface SemesterI {
     year: string;
     courses: Course[];
 }
+
+export interface yearI {
+    name: string;
+    firstsemester: SemesterI;
+    secondsemester: SemesterI;
+}

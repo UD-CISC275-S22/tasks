@@ -1,36 +1,73 @@
 import { Table } from "react-bootstrap";
-import { SemesterI } from "./interfaces/semester";
+import { SemesterI, yearI } from "./interfaces/semester";
 import { Course } from "./interfaces/course";
-import React from "react";
+import React, { useState } from "react";
+import "./App.css";
+import { JsxAttribute } from "typescript";
 
-export function Semester(rendSemester: SemesterI): JSX.Element {
+export function Semester({
+    rendSemester,
+    edit
+}: {
+    rendSemester: SemesterI;
+    edit: (course: Course) => void;
+}): JSX.Element {
     return (
-        <div className="d-inline-flex p-2">
-            <Table striped bordered hover>
+        <Table striped bordered hover className="tight">
+            <thead>
+                <tr>
+                    <th>Course ID</th> <th>Name</th>
+                    <th>Credits</th>
+                </tr>
+            </thead>
+            <tbody>
+                {rendSemester.courses.map((rendCourse: Course): JSX.Element => {
+                    return (
+                        <tr
+                            onClick={() => {
+                                edit(rendCourse);
+                            }}
+                            key={rendCourse.ticker}
+                        >
+                            <td>{rendCourse.ticker}</td>
+                            <td>{rendCourse.name}</td>
+                            <td>{rendCourse.credits}</td>
+                        </tr>
+                    );
+                })}
+            </tbody>
+        </Table>
+    );
+}
+
+export function Year({
+    year,
+    editCourse
+}: {
+    year: yearI;
+    editCourse: (course: Course) => void;
+}): JSX.Element {
+    return (
+        <div className="d-inline-flex">
+            <Table striped bordered hover table-bordered className="tight">
                 <thead>
-                    <tr>
-                        <th>Course ID</th> <th>Name</th>
-                        <th>Credits</th>
-                    </tr>
+                    <th>{year.firstsemester.season}</th>
+                    <th>{year.secondsemester.season}</th>
                 </thead>
-                <tbody>
-                    {rendSemester.courses.map(
-                        (rendCourse: Course): JSX.Element => {
-                            return (
-                                <tr
-                                    onClick={() => {
-                                        alert("You clicked a course");
-                                    }}
-                                    key={rendCourse.ticker}
-                                >
-                                    <td>{rendCourse.ticker}</td>
-                                    <td>{rendCourse.name}</td>
-                                    <td>{rendCourse.credits}</td>
-                                </tr>
-                            );
-                        }
-                    )}
-                </tbody>
+                <tr>
+                    <td>
+                        <Semester
+                            rendSemester={year.firstsemester}
+                            edit={editCourse}
+                        ></Semester>
+                    </td>
+                    <td>
+                        <Semester
+                            rendSemester={year.secondsemester}
+                            edit={editCourse}
+                        ></Semester>
+                    </td>
+                </tr>
             </Table>
         </div>
     );
