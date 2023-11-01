@@ -26,7 +26,7 @@ function App(): JSX.Element {
                 <code>src/App.tsx</code> and save. This page will automatically
                 reload.
             </p>
-            <div className="div-alightleft">
+            <div className="div-alignleft">
                 <div className="App-blockleft">
                     <p>sample block left</p>
                 </div>

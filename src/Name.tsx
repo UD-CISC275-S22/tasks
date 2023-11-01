@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 
 export function WelcomeMessage(): JSX.Element {
-    const [name, setName] = useState<string>("new student");
+    const [name, setName] = useState<string>("New Student");
 
     function updateName(event: React.ChangeEvent<HTMLInputElement>) {
         setName(event.target.value);
