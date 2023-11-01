@@ -28,7 +28,7 @@
     max-width: 50%;
     width: 100%;
     background-color: yellow;
-    text-align: right;
+    text-align: center;
     font-size: calc(10px + 2vmin);
     color: black;
 }
@@ -36,7 +36,7 @@
     max-width: 50%;
     width: 100%;
     background-color: lightblue;
-    text-align: left;
+    text-align: center;
     font-size: calc(10px + 2vmin);
     color: black;
 }
