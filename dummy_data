@@ -1,0 +1,100 @@
+[
+    {
+        "id": 1,
+        "title": "Degree Plan 1",
+        "totalCredits": 12,
+        "semestersList": [
+            {
+                "title": "Fall 2023",
+                "totalCredits": 6,
+                "classesList": [
+                    {
+                        "classTitle": "CISC220",
+                        "classCode": 124,
+                        "credits": 3,
+                        "degreeRequirements": [
+                            "CISC core requirement",
+                            "CISC220 is a required course for all degrees"
+                        ],
+                        "coursePrereq": []
+                    },
+                    {
+                        "classTitle": "CISC108",
+                        "classCode": 170,
+                        "credits": 3,
+                        "degreeRequirements": ["CISC core requirement"],
+                        "coursePrereq": [
+                            "CISC108 serves as a prereq for CISC210"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Spring 2023",
+                "totalCredits": 6,
+                "classesList": [
+                    {
+                        "classTitle": "CISC205",
+                        "classCode": 121,
+                        "credits": 3,
+                        "degreeRequirements": [
+                            "CISC core requirement",
+                            "CISC205 is a required course for all degrees"
+                        ],
+                        "coursePrereq": []
+                    },
+                    {
+                        "classTitle": "CISC210",
+                        "classCode": 193,
+                        "credits": 3,
+                        "degreeRequirements": ["CISC core requirement"],
+                        "coursePrereq": [
+                            "CISC210 serves as a prereq for CISC320"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Degree Plan 2",
+        "totalCredits": 6,
+        "semestersList": [
+            {
+                "title": "Fall 2023",
+                "totalCredits": 3,
+                "classesList": [
+                    {
+                        "classTitle": "CISC220",
+                        "classCode": 124,
+                        "credits": 3,
+                        "degreeRequirements": [
+                            "CISC core requirement",
+                            "CISC220 is a required course for all degrees"
+                        ],
+                        "coursePrereq": [
+                            "CISC220 serves as a prereq for CISC405"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Spring 2023",
+                "totalCredits": 3,
+                "classesList": [
+                    {
+                        "classTitle": "CISC205",
+                        "classCode": 121,
+                        "credits": 3,
+                        "degreeRequirements": [
+                            "CISC core requirement",
+                            "CISC205 is a required course for all degrees"
+                        ],
+                        "coursePrereq": []
+                    }
+                ]
+            }
+        ]
+    }
+]

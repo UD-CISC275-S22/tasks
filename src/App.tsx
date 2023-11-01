@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import { GenerateCSV, Import } from "./CSV";
-
-const data: string[][] = [["Last Name, First Name"], ["Nicky", "Reigel"]];
+import { WelcomeMessage } from "./Name";
 
 function App(): JSX.Element {
     const [importData, setImportData] = useState<string>("");
@@ -10,21 +9,36 @@ function App(): JSX.Element {
     return (
         <div className="App">
             <header className="App-header">
-                UD CISC275 with React Hooks and TypeScript
+                University of Delaware Computer Science Degree Plan
+                <p>
+                    <WelcomeMessage></WelcomeMessage>
+                </p>
+                <p>
+                    <ul className="horizontal-list">
+                        <li> Aidan Bell </li>
+                        <li>Lawrence Collins </li>
+                        <li>Nicky Reigel</li>
+                        <li>Melvin Rau</li>
+                        <li>Victor Vasquez</li>
+                    </ul>
+                </p>
             </header>
-            <p>
-                Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload.
-                <p>Aidan Bell </p>
-                <p>Lawrence Collins </p>
-                <p>Nicky Reigel</p>
-                <p>Melvin Rau</p>
-                <p>Victor Vasquez</p>
-            </p>
+        
             <div />
-            <GenerateCSV data={data} filename="testexport" />
+            <GenerateCSV data={[["First Name", "Last Name"], ["Nicky", "Reigel"], ["Aidan", "Bell"]]} filename="testexport" />
             <div />
             <Import importData={importData} setImportData={setImportData} />
+        
+            <div className="div-alightleft">
+                <div className="App-blockleft">
+                    <p>sample block left</p>
+                </div>
+            </div>
+            <div className="div-alignright">
+                <div className="App-blockright">
+                    <p>sample block right</p>
+                </div>
+            </div>
         </div>
     );
 }
