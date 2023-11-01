@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
+import { GenerateCSV, Import } from "./CSV";
 import { WelcomeMessage } from "./Name";
 
 function App(): JSX.Element {
+    const [importData, setImportData] = useState<string>("");
+
     return (
         <div className="App">
             <header className="App-header">
@@ -20,10 +23,12 @@ function App(): JSX.Element {
                     </ul>
                 </p>
             </header>
-            <p>
-                <code>src/App.tsx</code> and save. This page will automatically
-                reload.
-            </p>
+        
+            <div />
+            <GenerateCSV data={[["First Name", "Last Name"], ["Nicky", "Reigel"], ["Aidan", "Bell"]]} filename="testexport" />
+            <div />
+            <Import importData={importData} setImportData={setImportData} />
+        
             <div className="div-alightleft">
                 <div className="App-blockleft">
                     <p>sample block left</p>
