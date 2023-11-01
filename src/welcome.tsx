@@ -56,7 +56,7 @@ const WelcomeMessage: React.FC<WelcomeMessage> = ({
     return (
         <div className="App">
             {showWelcome ? (
-                <div className="WelcomeMessage">
+                <div className="WelcomeMessage" style={{ marginTop: "2.5%" }}>
                     <h5>
                         Welcome to the University of Delaware Course Scheduler!
                     </h5>
@@ -74,10 +74,12 @@ const WelcomeMessage: React.FC<WelcomeMessage> = ({
                     {getName(name)}
                 </div>
             )}
-            <img
-                id="picture"
-                src="https://i.pinimg.com/originals/04/07/0b/04070b3cf387c55c7eadbf84eceedcfe.jpg"
-            ></img>
+            <div>
+                <img
+                    id="picture"
+                    src="https://i.pinimg.com/originals/04/07/0b/04070b3cf387c55c7eadbf84eceedcfe.jpg"
+                ></img>
+            </div>
         </div>
     );
 };
