@@ -23,12 +23,17 @@ function App(): JSX.Element {
                     </ul>
                 </p>
             </header>
-        
             <div />
-            <GenerateCSV data={[["First Name", "Last Name"], ["Nicky", "Reigel"], ["Aidan", "Bell"]]} filename="testexport" />
+            <GenerateCSV
+                data={[
+                    ["First Name", "Last Name"],
+                    ["Nicky", "Reigel"],
+                    ["Aidan", "Bell"]
+                ]}
+                filename="testexport"
+            />
             <div />
             <Import importData={importData} setImportData={setImportData} />
-        
             <div className="div-alightleft">
                 <div className="App-blockleft">
                     <p>sample block left</p>
