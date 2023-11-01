@@ -1,4 +1,4 @@
-import React from "react";
+//import React from "react";
 import { yearI } from "./interfaces/semester";
 import { Course } from "./interfaces/course";
 export interface dbMangement {

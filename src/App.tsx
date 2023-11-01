@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
 import "./App.css";
-import { Semester, Year } from "./viewCourseComponents";
-import { Col, Row, Table } from "react-bootstrap";
+import { Year } from "./viewCourseComponents";
 import { yearI } from "./interfaces/semester";
 import { EditCourseModal } from "./EditModal";
 import { Course } from "./interfaces/course";
@@ -50,7 +50,7 @@ function App(): JSX.Element {
     const [yearOne, updateYearOne] = useState<yearI>(yearOneStart);
     const [showEditModal, updateEditMogal] = useState<boolean>(false);
     const handleCloseAddModal = () => updateEditMogal(false);
-    const handleShowAddModal = () => updateEditMogal(true);
+    //const handleShowAddModal = () => updateEditMogal(true);
     const [editSelected, setEdit] = useState<Course>({
         ticker: "",
         name: "",
