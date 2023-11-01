@@ -51,13 +51,12 @@ export function ImportButton({
             const contents = String(e?.target?.result);
             setImportData(contents);
         };
-        e.target.value = "";
         fileReader.readAsText(file);
     };
 
     return (
         <>
-            <input type="file" onChange={handleUpload} />
+            <input type="file" accept=".csv" onChange={handleUpload} />
         </>
     );
 } /*

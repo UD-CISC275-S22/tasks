@@ -21,7 +21,7 @@ function App(): JSX.Element {
                 <p>Melvin Rau</p>
                 <p>Victor Vasquez</p>
             </p>
-            {importData}
+            <p>{importData}</p>
             <div />
             <GenerateCSV data={data} filename="testexport" />
             <div />
