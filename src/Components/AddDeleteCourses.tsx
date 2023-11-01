@@ -34,6 +34,8 @@ export const CourseForm: React.FC<{ courses: unknown }> = () => {
         // Submission Logic. Where does it go?
     };
 
+    //PreReqs turns the screen white when you input something, might delete and use the
+    //prereq database instead
     return (
         <form onSubmit={handleSubmit}>
             <div>
@@ -41,7 +43,7 @@ export const CourseForm: React.FC<{ courses: unknown }> = () => {
                 <input
                     type="text"
                     id="title"
-                    name="title"
+                    name="courseTitle"
                     value={courseInfo.courseTitle}
                     onChange={handleInputChange}
                 />
@@ -61,7 +63,7 @@ export const CourseForm: React.FC<{ courses: unknown }> = () => {
                 <input
                     type="text"
                     id="preReq"
-                    name="preReq"
+                    name="preReqs"
                     value={courseInfo.preReqs.join(", ")}
                     onChange={handleInputChange}
                 />
