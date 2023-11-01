@@ -11,6 +11,7 @@ interface Course {
 interface Semester {
     name: string;
     courses: Course[];
+    skip: boolean;
 }
 
 interface SemesterCoursesProps {
@@ -22,7 +23,13 @@ const SemesterCourses: React.FC<SemesterCoursesProps> = ({ semesters }) => {
         <div className="semester-courses">
             {semesters.map((semester, index) => (
                 <div key={index}>
-                    <h2>{semester.name}</h2>
+                    {semester.skip ? (
+                        <h2>{semester.name}(Skipped)</h2>
+                    ) : (
+                        <h2>
+                            <h2>{semester.name}</h2>
+                        </h2>
+                    )}
                     <table>
                         <thead>
                             <tr>
