@@ -36,7 +36,7 @@ export const CourseForm: React.FC<{ courses: unknown }> = () => {
     return (
         <form onSubmit={handleSubmit}>
             <div>
-                <label htmlFor="title">Course Title:</label>
+                <label htmlFor="title">Course Title: </label>
                 <input
                     type="text"
                     id="title"
@@ -46,7 +46,7 @@ export const CourseForm: React.FC<{ courses: unknown }> = () => {
                 />
             </div>
             <div>
-                <label htmlFor="courseCode">Course Code:</label>
+                <label htmlFor="courseCode">Course Code: </label>
                 <input
                     type="text"
                     id="courseCode"
@@ -56,7 +56,7 @@ export const CourseForm: React.FC<{ courses: unknown }> = () => {
                 />
             </div>
             <div>
-                <label htmlFor="preReq">Pre Requisite:</label>
+                <label htmlFor="preReq">Pre Requisite: </label>
                 <input
                     type="text"
                     id="preReq"
@@ -66,7 +66,7 @@ export const CourseForm: React.FC<{ courses: unknown }> = () => {
                 />
             </div>
             <div>
-                <label htmlFor="credits">Credits:</label>
+                <label htmlFor="credits">Credits: </label>
                 <input
                     type="number"
                     id="credits"
@@ -91,17 +91,12 @@ export const CourseForm: React.FC<{ courses: unknown }> = () => {
             </div>
             <div>
                 <label htmlFor="year">Year:</label>
-                <select
+                <input
                     id="year"
                     name="year"
                     value={courseInfo.year}
                     onChange={handleInputChange}
-                >
-                    <option value="Freshman">Freshman</option>
-                    <option value="Sophomore">Sophomore</option>
-                    <option value="Junior">Junior</option>
-                    <option value="Senior">Senior</option>
-                </select>
+                ></input>
             </div>
 
             <button type="submit">Submit</button>
