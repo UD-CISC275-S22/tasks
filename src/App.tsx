@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import { GenerateCSV, ImportButton } from "./CSV";
+import { GenerateCSV, Import } from "./CSV";
 
 const data: string[][] = [["Last Name, First Name"], ["Nicky", "Reigel"]];
 
@@ -21,11 +21,10 @@ function App(): JSX.Element {
                 <p>Melvin Rau</p>
                 <p>Victor Vasquez</p>
             </p>
-            <p>{importData}</p>
             <div />
             <GenerateCSV data={data} filename="testexport" />
             <div />
-            <ImportButton setImportData={setImportData} />
+            <Import importData={importData} setImportData={setImportData} />
         </div>
     );
 }
