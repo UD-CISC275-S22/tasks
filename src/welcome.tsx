@@ -1,6 +1,8 @@
 /* eslint-disable no-extra-parens */
 import React, { useState, useEffect } from "react";
 import "./welcome.css";
+import { Button, Form } from "react-bootstrap";
+import Image3 from "./Images/BlueHenScene.jpeg";
 
 interface WelcomeMessage {
     showHomePage: () => void;
@@ -65,8 +67,17 @@ const WelcomeMessage: React.FC<WelcomeMessage> = ({
                         semester plans, and submit your desired course plans.
                     </h6>
                     <p>Please enter your name:</p>
-                    <input type="text" onChange={handleNameChange} />
-                    <button onClick={handleShowWelcome}>OK</button>
+                    <div>
+                        <Form.Group className="d-flex justify-content-center">
+                            <Form.Control
+                                type="text"
+                                onChange={handleNameChange}
+                                placeholder="Please Enter Valid Name"
+                                className="w-25"
+                            />
+                            <Button onClick={handleShowWelcome}>OK</Button>
+                        </Form.Group>
+                    </div>
                 </div>
             ) : (
                 <div>
@@ -74,12 +85,7 @@ const WelcomeMessage: React.FC<WelcomeMessage> = ({
                     {getName(name)}
                 </div>
             )}
-            <div>
-                <img
-                    id="picture"
-                    src="https://i.pinimg.com/originals/04/07/0b/04070b3cf387c55c7eadbf84eceedcfe.jpg"
-                ></img>
-            </div>
+            <img id="picture" src={Image3}></img>
         </div>
     );
 };
