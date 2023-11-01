@@ -14,7 +14,8 @@ function App(): JSX.Element {
                 },
                 { code: "MATH201", name: "Calculus I", credits: 4 },
                 { code: "ENGL101", name: "English Composition", credits: 3 }
-            ]
+            ],
+            skip: true
         },
         {
             name: "Spring 2023",
@@ -22,7 +23,8 @@ function App(): JSX.Element {
                 { code: "CISC201", name: "Data Structures", credits: 3 },
                 { code: "MATH202", name: "Calculus II", credits: 4 },
                 { code: "PHYS101", name: "Physics I", credits: 4 }
-            ]
+            ],
+            skip: false
         }
         // Add more semesters and courses as needed
     ];
