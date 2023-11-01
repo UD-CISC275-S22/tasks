@@ -1,9 +1,11 @@
+import React from "react";
 import { Table } from "react-bootstrap";
 import { SemesterI, yearI } from "./interfaces/semester";
 import { Course } from "./interfaces/course";
-import React, { useState } from "react";
+//import React, { useState } from "react";
 import "./App.css";
-import { JsxAttribute } from "typescript";
+//import { JsxAttribute } from "typescript";
+//const [CurrentModalCourse, setCurrentModalCourse] = useState<Course>();
 
 export function Semester({
     rendSemester,
@@ -39,7 +41,6 @@ export function Semester({
         </Table>
     );
 }
-
 export function Year({
     year,
     editCourse
