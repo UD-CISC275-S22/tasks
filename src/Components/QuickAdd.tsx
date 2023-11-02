@@ -10,6 +10,8 @@ function CourseSearch(): JSX.Element {
     const [year, setYear] = useState("");
     const [semester, setSemester] = useState("");
 
+    const [courseFound, setCourseFound] = useState(true);
+
     const handleCourseCodeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setCourseCode(e.target.value);
     };
@@ -26,8 +28,10 @@ function CourseSearch(): JSX.Element {
                 year: ""
             };
             setCourseInfo(newCourse);
+            setCourseFound(true);
         } else {
             setCourseInfo(null); //Course not found, must use full form
+            setCourseFound(false);
         }
     };
 
@@ -45,6 +49,7 @@ function CourseSearch(): JSX.Element {
 
     return (
         <div>
+            <h3>Quick Search</h3>
             <label htmlFor="courseCode">Course Code: </label>
             <input
                 type="text"
@@ -94,9 +99,9 @@ function CourseSearch(): JSX.Element {
                         </div>
                     ) : null}
                 </div>
-            ) : (
-                <p>No course found with provided code. Please use form.</p>
-            )}
+            ) : courseFound === false ? (
+                <p>No Course Found. Please Try Again or Use The Form</p>
+            ) : null}
         </div>
     );
 }

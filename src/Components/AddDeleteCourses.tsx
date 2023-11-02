@@ -35,6 +35,7 @@ export const CourseForm: React.FC<{ courses: unknown }> = () => {
     return (
         <form onSubmit={handleSubmit}>
             <div className="form-group">
+                <h3>Full Form</h3>
                 <label htmlFor="title">Course Title: </label>
                 <input
                     type="text"
