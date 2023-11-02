@@ -1,5 +1,3 @@
-/* eslint-disable prettier/prettier */
-//Testing --set-upstream
 import React, { useState } from "react";
 import { Class } from "../interfaces/class";
 
@@ -34,11 +32,9 @@ export const CourseForm: React.FC<{ courses: unknown }> = () => {
         // Submission Logic. Where does it go?
     };
 
-    //PreReqs turns the screen white when you input something, might delete and use the
-    //prereq database instead
     return (
         <form onSubmit={handleSubmit}>
-            <div>
+            <div className="form-group">
                 <label htmlFor="title">Course Title: </label>
                 <input
                     type="text"
@@ -48,7 +44,8 @@ export const CourseForm: React.FC<{ courses: unknown }> = () => {
                     onChange={handleInputChange}
                 />
             </div>
-            <div>
+
+            <div className="form-group">
                 <label htmlFor="courseCode">Course Code: </label>
                 <input
                     type="text"
@@ -58,7 +55,8 @@ export const CourseForm: React.FC<{ courses: unknown }> = () => {
                     onChange={handleInputChange}
                 />
             </div>
-            <div>
+
+            <div className="form-group">
                 <label htmlFor="preReq">Pre Requisite: </label>
                 <input
                     type="text"
@@ -68,7 +66,8 @@ export const CourseForm: React.FC<{ courses: unknown }> = () => {
                     onChange={handleInputChange}
                 />
             </div>
-            <div>
+
+            <div className="form-group">
                 <label htmlFor="credits">Credits: </label>
                 <input
                     type="number"
@@ -78,7 +77,8 @@ export const CourseForm: React.FC<{ courses: unknown }> = () => {
                     onChange={handleInputChange}
                 />
             </div>
-            <div>
+
+            <div className="form-group">
                 <label htmlFor="semester">Semester:</label>
                 <select
                     id="semester"
@@ -92,14 +92,15 @@ export const CourseForm: React.FC<{ courses: unknown }> = () => {
                     <option value="Summer">Summer</option>
                 </select>
             </div>
-            <div>
+
+            <div className="form-group">
                 <label htmlFor="year">Year:</label>
                 <input
                     id="year"
                     name="year"
                     value={courseInfo.year}
                     onChange={handleInputChange}
-                ></input>
+                />
             </div>
 
             <button type="submit">Submit</button>

@@ -3,10 +3,10 @@ export interface Class {
     courseCode: string;
     numPreReqs: number;
     preReqs: string[];
+    semester: string;
+    year: string;
     credits: number;
     canEditCredits: boolean;
-    semester: "Fall" | "Winter" | "Spring" | "Summer";
-    year: "Freshman" | "Sophomore" | "Junior" | "Senior";
     taken: boolean;
     note: string;
 }
