@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Class } from "../interfaces/class";
+//import { Class } from "../interfaces/class";
 import { /*Button,*/ Row, Col, Form, Button } from "react-bootstrap";
 // import { degreePlan } from "../interfaces/degreePlan";
 // import { semester } from "../interfaces/semster";
