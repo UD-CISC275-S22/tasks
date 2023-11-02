@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { SeeSingleSemester } from "./Components/SeeSingleSemester";
+import { SingleMultipleSemester } from "./Components/SingleMultipleSemester";
 import AddDeleteCourses from "./Components/AddDeleteCourses";
 
 function App(): JSX.Element {
@@ -10,7 +10,7 @@ function App(): JSX.Element {
                 UD CISC275 with React Hooks and TypeScript
             </header>
             <AddDeleteCourses></AddDeleteCourses>
-            <SeeSingleSemester></SeeSingleSemester>
+            <SingleMultipleSemester></SingleMultipleSemester>
         </div>
     );
 }
