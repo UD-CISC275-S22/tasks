@@ -1,68 +1,33 @@
 import React, { useState } from "react";
 import { Class } from "../interfaces/class";
 import { /*Button,*/ Row, Col, Form, Button } from "react-bootstrap";
+// import { degreePlan } from "../interfaces/degreePlan";
+// import { semester } from "../interfaces/semster";
 
-export function SeeSingleSemester(): JSX.Element {
+export function SingleMultipleSemester(): JSX.Element {
     const [semester1, setSemester1] = useState<string>("");
     const [semArr, setSemArr] = useState<string[]>([]);
-    const [semester2, setSemester2] = useState<string>("");
+    const [semArrClicked, setSemArrClicked] = useState<string[]>(semArr);
     const [clicked, setClicked] = useState<boolean>(false);
-    const [semesterClasses, setSemesterClasses] = useState<Class[]>([
-        {
-            courseTitle: "Introduction to Algorithms",
-            courseCode: "CISC320",
-            credits: 3,
-            canEditCredits: false,
-            numPreReqs: 2,
-            preReqs: ["MATH210", "CISC220"],
-            semester: "Fall",
-            year: "Junior",
-            taken: false,
-            note: ""
-        },
-        {
-            courseTitle: "Computers, Ethics and Society",
-            courseCode: "CISC355",
-            credits: 3,
-            canEditCredits: false,
-            numPreReqs: 0,
-            preReqs: [],
-            semester: "Spring",
-            year: "Senior",
-            taken: false,
-            note: ""
-        }
-    ]);
-    function addtable() {
+    //const [semesterClasses, setSemesterClasses] = useState<Class[]>([]);
+    function addtable(semester: string) {
         return (
             <div>
                 <Col>
                     <h4>
-                        <u>{semester2}</u>
+                        <u>{semester}</u>
                     </h4>
                     <Row>
-                        <Col>
-                            <u>Course</u>
-                        </Col>
-                        <Col>
-                            <u>Number of Credits</u>
-                        </Col>
+                        <Col>Course</Col>
+                        <Col>Number of Credits</Col>
                     </Row>
                     <Row>
-                        <Col>
-                            {semesterClasses[0].courseCode}
-                            {": "}
-                            {semesterClasses[0].courseTitle}
-                        </Col>
-                        <Col>{semesterClasses[0].credits}</Col>
+                        <Col>1</Col>
+                        <Col>1.1</Col>
                     </Row>
                     <Row>
-                        <Col>
-                            {semesterClasses[1].courseCode}
-                            {": "}
-                            {semesterClasses[1].courseTitle}
-                        </Col>
-                        <Col>{semesterClasses[1].credits}</Col>
+                        <Col>2</Col>
+                        <Col>2.1</Col>
                     </Row>
                     <Row>
                         <Col>3</Col>
@@ -89,16 +54,28 @@ export function SeeSingleSemester(): JSX.Element {
                         <Col>8.1</Col>
                     </Row>
                 </Col>
-                End Semester
             </div>
         );
+    }
+    function addForClicked(clickedArr: string[]) {
+        const tables = clickedArr.map(
+            (clickedSem: string): JSX.Element =>
+                clickedSem ? addtable(clickedSem) : addtable(clickedSem)
+        );
+        return tables;
     }
     function updateSemester1(event: React.ChangeEvent<HTMLInputElement>) {
         setSemester1(event.target.value);
     }
-    function updateSemester2(event: React.ChangeEvent<HTMLInputElement>) {
-        setSemester2(event.target.value);
+    function updateSemClicked(event: React.ChangeEvent<HTMLInputElement>) {
         setClicked(true);
+        //setSemester2(event.target.value);
+        const sem = event.target.value;
+        if (semArrClicked.includes(sem)) {
+            setSemArrClicked(semArrClicked.filter((e) => e !== sem));
+        } else {
+            setSemArrClicked([...semArrClicked, sem]);
+        }
     }
 
     function addSemLabel(semester: string) {
@@ -120,9 +97,9 @@ export function SeeSingleSemester(): JSX.Element {
                             <div key={sem} style={{ marginBottom: "4px" }}>
                                 <Form.Check
                                     inline
-                                    type="radio"
+                                    type="checkbox"
                                     name="semesters"
-                                    onChange={updateSemester2}
+                                    onChange={updateSemClicked}
                                     id="semseter-buttons"
                                     label={sem}
                                     value={sem}
@@ -135,20 +112,9 @@ export function SeeSingleSemester(): JSX.Element {
             </Form.Group>
             <div>
                 {clicked
-                    ? addtable()
-                    : "Enter and Click semester to view classes"}
+                    ? addForClicked(semArrClicked)
+                    : "Enter and Click semester(s) to view classes"}
             </div>
-            {/* <Col>
-                {semester2}
-                <Row>
-                    <Col style={{ border: "3px solid rgb(0, 0, 0)" }}>
-                        Hello
-                    </Col>
-                    <Col style={{ border: "3px solid rgb(0, 0, 0)" }}>
-                        world
-                    </Col>
-                </Row>
-            </Col> */}
         </div>
     );
 }
