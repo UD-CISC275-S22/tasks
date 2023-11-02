@@ -5,8 +5,9 @@ export interface Class {
     preReqs: string[];
     credits: number;
     canEditCredits: boolean;
-    semester: "Fall" | "Winter" | "Spring" | "Summer";
-    year: "Freshman" | "Sophomore" | "Junior" | "Senior";
+    semester: "Fall" | "Winter" | "Spring" | "Summer" | "";
+    //Semester can be "" for default value reasons
+    year: "";
     taken: boolean;
     note: string;
 }
