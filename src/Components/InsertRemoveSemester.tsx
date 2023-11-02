@@ -1,23 +1,22 @@
 /* eslint-disable no-extra-parens */
 import React, { useState } from "react";
 import { semester } from "../interfaces/semster";
-import { Button } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import { degreePlanProps } from "../interfaces/degreePlan";
 
 export function RemoveSemester({
     degreePlan,
     setDegreePlan
 }: degreePlanProps): JSX.Element {
-    const [semesters, setSemesters] = useState<semester[]>([
-        { id: 0, classes: [], name: "" }
-    ]); //creating a semester list with just the semester 0 with no classes
-
-    function removeSemester(id: number) {
-        const update = semesters.filter((q: semester): boolean => id !== q.id);
-        setSemesters(update);
+    /*function removeSemester(id: number) {
+        const update = degreePlan.semesters.filter(
+            (q: semester): boolean => id !== q.id
+        ); */
+    function removeSemester(name: string) {
+        const update = degreePlan.semesters.filter(
+            (q: semester): boolean => name !== q.name
+        );
         setDegreePlan({ ...degreePlan, semesters: update });
-
-        //setSemesters(semesters.filter((q: semester): boolean => id !== q.id));
     }
 
     //return is the buttons
@@ -29,10 +28,10 @@ export function RemoveSemester({
 
     return (
         <div>
-            {semesters.map((semester: semester) => (
+            {degreePlan.semesters.map((semester: semester) => (
                 <div key={semester.id}>
-                    <span>Semester {semester.id}</span>
-                    <Button onClick={() => removeSemester(semester.id)}>
+                    <span>Semester {semester.name}</span>
+                    <Button onClick={() => removeSemester(semester.name)}>
                         Remove Semester
                     </Button>
                 </div>
@@ -45,18 +44,31 @@ export function InsertSemester({
     degreePlan,
     setDegreePlan
 }: degreePlanProps): JSX.Element {
+    const [newSem, setNewSem] = useState<semester>({
+        name: "",
+        classes: [],
+        id: degreePlan.semesters.length
+    });
+
     function addSemester() {
         setDegreePlan({
             ...degreePlan,
-            semesters: [
-                ...degreePlan.semesters,
-                { id: degreePlan.semesters.length + 1, classes: [], name: "" }
-            ]
+            semesters: [...degreePlan.semesters, newSem]
         }); //id growing by 1
         //if it  gets complex, then I might need to deep copy
     }
     return (
         <div>
+            <Form.Label>Title: </Form.Label>
+            <Form.Control
+                value={newSem.name}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                    setNewSem({
+                        ...newSem,
+                        name: e.target.value
+                    })
+                }
+            ></Form.Control>
             <Button onClick={addSemester}>Add Semester</Button>
         </div>
     );
