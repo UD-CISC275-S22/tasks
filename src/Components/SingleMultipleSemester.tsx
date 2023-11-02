@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-//import { Class } from "../interfaces/class";
+import { Class } from "../interfaces/class";
 import { /*Button,*/ Row, Col, Form, Button } from "react-bootstrap";
 // import { degreePlan } from "../interfaces/degreePlan";
 // import { semester } from "../interfaces/semster";
@@ -9,7 +9,32 @@ export function SingleMultipleSemester(): JSX.Element {
     const [semArr, setSemArr] = useState<string[]>([]);
     const [semArrClicked, setSemArrClicked] = useState<string[]>(semArr);
     const [clicked, setClicked] = useState<boolean>(false);
-    //const [semesterClasses, setSemesterClasses] = useState<Class[]>([]);
+    const [semesterClasses, setSemesterClasses] = useState<Class[]>([
+        {
+            courseTitle: "Introduction to Algorithms",
+            courseCode: "CISC320",
+            credits: 3,
+            canEditCredits: false,
+            numPreReqs: 2,
+            preReqs: ["MATH210", "CISC220"],
+            semester: "Fall",
+            year: "Freshman",
+            taken: false,
+            note: ""
+        },
+        {
+            courseTitle: "Computers, Ethics and Society",
+            courseCode: "CISC355",
+            credits: 3,
+            canEditCredits: false,
+            numPreReqs: 0,
+            preReqs: [],
+            semester: "Fall",
+            year: "Freshman",
+            taken: false,
+            note: ""
+        }
+    ]);
     function addtable(semester: string) {
         return (
             <div>
@@ -22,12 +47,12 @@ export function SingleMultipleSemester(): JSX.Element {
                         <Col>Number of Credits</Col>
                     </Row>
                     <Row>
-                        <Col>1</Col>
-                        <Col>1.1</Col>
+                        <Col>{semesterClasses[0].courseTitle}</Col>
+                        <Col>{semesterClasses[0].credits}</Col>
                     </Row>
                     <Row>
-                        <Col>2</Col>
-                        <Col>2.1</Col>
+                        <Col>{semesterClasses[1].courseTitle}</Col>
+                        <Col>{semesterClasses[1].credits}</Col>
                     </Row>
                     <Row>
                         <Col>3</Col>
@@ -69,7 +94,6 @@ export function SingleMultipleSemester(): JSX.Element {
     }
     function updateSemClicked(event: React.ChangeEvent<HTMLInputElement>) {
         setClicked(true);
-        //setSemester2(event.target.value);
         const sem = event.target.value;
         if (semArrClicked.includes(sem)) {
             setSemArrClicked(semArrClicked.filter((e) => e !== sem));
