@@ -37,3 +37,8 @@
         transform: rotate(360deg);
     }
 }
+
+.separator {
+    border-right: 1px solid #000; /* Black Line */
+    height: 100%;
+}

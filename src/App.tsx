@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import { SingleMultipleSemester } from "./Components/SingleMultipleSemester";
 import AddDeleteCourses from "./Components/AddDeleteCourses";
+import QuickAdd from "./Components/QuickAdd";
 
 function App(): JSX.Element {
     return (
@@ -9,7 +10,18 @@ function App(): JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript
             </header>
-            <AddDeleteCourses></AddDeleteCourses>
+            <div>
+                <h4>Search for your course, or manually input your course.</h4>
+                <div style={{ display: "flex", justifyContent: "center" }}>
+                    <div style={{ marginRight: "5px" }}>
+                        <QuickAdd />
+                    </div>
+                    <div className="separator"></div>
+                    <div style={{ marginLeft: "5px" }}>
+                        <AddDeleteCourses />
+                    </div>
+                </div>
+            </div>
             <SingleMultipleSemester></SingleMultipleSemester>
         </div>
     );
