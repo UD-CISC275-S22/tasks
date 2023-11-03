@@ -2,10 +2,12 @@
 import React from "react";
 import { useState } from "react";
 import { Form } from "react-bootstrap";
+import realData from "../data/camelData.json";
+import { classes } from "../Interface/classes";
 
 //import { ComboBoxComponent } from "@syncfusion/ej2-react-dropdowns";
 
-const courses = [
+/*const courses = [
     { courseID: "CISC304", id: 1 },
     { courseID: "MATH242", id: 2 },
     { courseID: "CISC181", id: 3 },
@@ -32,17 +34,25 @@ const courses = [
     { courseID: "GEOL107", id: 24 },
     { courseID: "CISC110", id: 25 }
 ];
+*/
 export function FilteringSearch(): JSX.Element {
+    /*const realData = rawData.map((course: any):classes => {
+        return { ...course, code: course.code.replace(" ", "") };
+    });
+    */
     const [searchAttribute, setSearchAttribute] = useState("");
-    const [filteredCourses, setFilteredCourses] = useState(courses);
+    const [filteredCourses, setFilteredCourses] = useState(realData);
     const [visible, setVisible] = useState<boolean>(false);
 
     const inputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const searchValue = event.target.value;
         setSearchAttribute(searchValue);
 
-        const filteredClasses = courses.filter((course) =>
-            course.courseID.toLowerCase().startsWith(searchValue.toLowerCase())
+        const filteredClasses = realData.filter((course) =>
+            course.courseCode
+                .replace(" ", "")
+                .toLowerCase()
+                .startsWith(searchValue.toLowerCase())
         );
         setFilteredCourses(filteredClasses);
     };
@@ -60,7 +70,7 @@ export function FilteringSearch(): JSX.Element {
             <Form.Group controlId="formFilterSearch">
                 <Form.Control
                     type="text"
-                    value={searchAttribute}
+                    value={searchAttribute.replace(" ", "")}
                     onChange={inputChange}
                     placeholder="Search by Course Code"
                     onClick={flipVisibility}
@@ -78,13 +88,13 @@ export function FilteringSearch(): JSX.Element {
                     {filteredCourses.map((course) => {
                         return (
                             <div
-                                onClick={() => handleClick(course.courseID)}
+                                onClick={() => handleClick(course.courseCode)}
                                 style={{
                                     cursor: "pointer"
                                 }}
-                                key={course.id}
+                                key={course.courseCode}
                             >
-                                {course.courseID}
+                                {course.courseCode.replace(" ", "")}
                             </div>
                         );
                     })}

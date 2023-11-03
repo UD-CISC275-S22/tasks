@@ -58,7 +58,7 @@ const WelcomeMessage: React.FC<WelcomeMessage> = ({
     return (
         <div className="App">
             {showWelcome ? (
-                <div className="WelcomeMessage" style={{ marginTop: "2.5%" }}>
+                <div className="WelcomeMessage" style={{ marginTop: "1.5%" }}>
                     <h5>
                         Welcome to the University of Delaware Course Scheduler!
                     </h5>
