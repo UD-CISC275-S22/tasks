@@ -1,5 +1,5 @@
 import React from "react";
-import { degreePlan, degreePlanProps } from "../interfaces/degreePlan";
+import { degreePlan } from "../interfaces/degreePlan";
 
 export const degreePlanView = ({
     degreePlan
