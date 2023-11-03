@@ -15,6 +15,10 @@ export function AddClass({
     function addNewClass() {
         const updatedSchedule = { ...schedule };
         updatedSchedule.classList = updatedSchedule.classList.concat(newClass);
+        updatedSchedule.totalCredits = updatedSchedule.classList.reduce(
+            (total: number, adding: classes) => total + adding.credits,
+            0
+        );
         onAddClass(updatedSchedule);
     }
 

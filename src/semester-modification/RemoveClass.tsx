@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import { semester } from "../Interface/semester";
+import { classes } from "../Interface/classes";
 
 export function RemoveClass({
     schedule,
@@ -18,6 +19,11 @@ export function RemoveClass({
                 (course) => course.title !== removeName
             )
         };
+
+        newSchedule.totalCredits = newSchedule.classList.reduce(
+            (total: number, adding: classes) => total + adding.credits,
+            0
+        );
         onRemoveClass(newSchedule);
     }
 
