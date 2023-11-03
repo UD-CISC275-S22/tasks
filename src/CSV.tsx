@@ -1,4 +1,5 @@
-import React, { ChangeEvent, useRef, useState } from "react";
+/* eslint-disable no-extra-parens */
+import React, { useState } from "react";
 import "./App.css";
 //I needed to download the package using "npm install @types/react-csv"
 import { CSVLink } from "react-csv";
@@ -68,8 +69,7 @@ export function Import({
             </form>
             {isImported && importData && (
                 <div>
-                    <h2>Imported Plan:</h2>
-                    <pre>{importData}</pre>
+                    <h2>Imported Plan:</h2> <pre>{importData}</pre>
                 </div>
             )}
         </div>
