@@ -58,6 +58,12 @@ function App(): JSX.Element {
             <div />
             <Import importData={importData} setImportData={setImportData} />
             <div className="div-alightleft">
+            <p>
+                <code>src/App.tsx</code> and save. This page will automatically
+                reload.
+            </p>
+            <div className="div-alignleft">
+
                 <div className="App-blockleft">
                     <p>sample block left</p>
                 </div>
