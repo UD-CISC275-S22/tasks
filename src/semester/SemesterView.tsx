@@ -1,15 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { semester } from "../Interface/semester";
-import "./SemesterView.css";
 
 export function SemesterView({
-    semester
+    semester,
+    clearSemester
 }: {
     semester: semester;
+    clearSemester: (id: number) => void;
 }): JSX.Element {
+    const [currentSemester, setSemester] = useState<semester>(semester);
+    function clearCourses(semester: semester): void {
+        setSemester({ ...semester, classList: [] });
+    }
     return (
         <div>
-            <h1>{semester.season}</h1>
+            <div>
+                <h3>{currentSemester.season}</h3>
+            </div>
             <table className="table table-hover table-dark">
                 <thead>
                     <tr>
@@ -17,13 +24,14 @@ export function SemesterView({
                         <th scope="col">Course Title</th>
                         <th scope="col">Credits</th>
                         <th scope="col">Prerequisites</th>
-                        <th scope="col">Schedule</th>
+                        {/*<th scope="col">Schedule</th>
                         <th scope="col">Location</th>
                         <th scope="col">Instructor</th>
+    */}
                     </tr>
                 </thead>
                 <tbody>
-                    {semester.classList.map((classItem, classIndex) => {
+                    {currentSemester.classList.map((classItem, classIndex) => {
                         return (
                             <tr key={classIndex}>
                                 <td>{classItem.code}</td>
@@ -34,19 +42,39 @@ export function SemesterView({
                                         ? "None"
                                         : classItem.preReq}
                                 </td>
-                                <td>
-                                    {classItem.schedule.day.map(
-                                        (dayItem) => dayItem
-                                    )}
-                                    , {classItem.schedule.time}
+                                {/*<td>
+                                    {classItem.schedule.day.join(", ")},{" "}
+                                    {classItem.schedule.time}
                                 </td>
                                 <td>{classItem.location}</td>
                                 <td>{classItem.instructor}</td>
+                                    */}
                             </tr>
                         );
                     })}
                 </tbody>
             </table>
+            <div>
+                {" "}
+                <button
+                    type="button"
+                    className="btn btn-outline-danger"
+                    onClick={() => {
+                        clearCourses(currentSemester);
+                    }}
+                >
+                    Clear Courses
+                </button>
+                <button
+                    type="button"
+                    className="btn btn-outline-danger"
+                    onClick={() => {
+                        clearSemester(currentSemester.id);
+                    }}
+                >
+                    Clear Semester
+                </button>
+            </div>
         </div>
     );
 }
