@@ -3,7 +3,7 @@ import React from "react";
 import { useState } from "react";
 import { Form } from "react-bootstrap";
 import realData from "../data/camelData.json";
-import { classes } from "../Interface/classes";
+//import { classes } from "../Interface/classes";
 
 //import { ComboBoxComponent } from "@syncfusion/ej2-react-dropdowns";
 
