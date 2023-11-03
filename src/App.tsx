@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { SingleMultipleSemester } from "./Components/SingleMultipleSemester";
-import AddDeleteCourses from "./Components/AddDeleteCourses";
+import SlowAdd from "./Components/SlowAdd";
 import QuickAdd from "./Components/QuickAdd";
 
 function App(): JSX.Element {
@@ -18,7 +18,7 @@ function App(): JSX.Element {
                     </div>
                     <div className="separator"></div>
                     <div style={{ marginLeft: "5px" }}>
-                        <AddDeleteCourses />
+                        <SlowAdd />
                     </div>
                 </div>
             </div>

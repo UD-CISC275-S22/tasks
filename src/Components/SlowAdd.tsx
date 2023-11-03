@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Class } from "../interfaces/class";
 
+//Full Course Form Fillout
+
 export const CourseForm: React.FC<{ courses: unknown }> = () => {
     const [courseInfo, setCourseInfo] = useState<Class>({
         courseTitle: "",
@@ -109,7 +111,7 @@ export const CourseForm: React.FC<{ courses: unknown }> = () => {
     );
 };
 
-function AddDeleteCourses(): JSX.Element {
+function SlowAdd(): JSX.Element {
     return (
         <div>
             <CourseForm courses={undefined}></CourseForm>
@@ -117,4 +119,4 @@ function AddDeleteCourses(): JSX.Element {
     );
 }
 
-export default AddDeleteCourses;
+export default SlowAdd;
