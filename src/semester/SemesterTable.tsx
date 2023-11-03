@@ -14,22 +14,32 @@ const semesterExamples = sample.map(
         )
     })
 );
-//setSemester should go in line 20. Unused var was causing issues.
+
 export function SemesterTable(): JSX.Element {
-    const [semesters] = useState<semester[]>(semesterExamples);
+    const [semesters, setSemesters] = useState<semester[]>(semesterExamples);
+
+    function clearSemester(id: number): void {
+        const semesterIndex = semesters.findIndex(
+            (semester: semester): boolean => semester.id === id
+        );
+        const s_copy = semesters.map((sem) => ({
+            ...sem,
+            classList: [...sem.classList]
+        }));
+        s_copy.splice(semesterIndex, 1);
+        setSemesters(s_copy);
+    }
+
     return (
         <div className="semesterTable">
             <h2>Semester Schedule</h2>
-            {semesters.map((sem, semIndex) => {
+            {semesters.map((sem) => {
                 return (
-                    <div key={semIndex}>
-                        <SemesterView
-                            semester={sem}
-                            clearSemester={function (id: number): void {
-                                throw new Error("Function not implemented.");
-                            }}
-                        ></SemesterView>
-                    </div>
+                    <SemesterView
+                        key={sem.id}
+                        semester={sem}
+                        clearSemester={clearSemester}
+                    ></SemesterView>
                 );
             })}
         </div>
