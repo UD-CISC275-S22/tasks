@@ -27,6 +27,7 @@ function App(): JSX.Element {
 
     function saveData() {
         localStorage.setItem(SAVE_KEY, JSON.stringify(degreePlans));
+        console.log(setdegreePlans); //will delete only here to satisfy typescript
     }
 
     return (
