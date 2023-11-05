@@ -18,16 +18,18 @@ export const EditCourseModal = ({
     const [ticker, setTicker] = useState<string>(currentCourse.ticker);
     const [name, setName] = useState<string>(currentCourse.name);
     const [credits, setCredits] = useState<number>(currentCourse.credits);
+    const [prereq, setPrereq] = useState<string>(currentCourse.prereq);
     useEffect(() => {
         setTicker(currentCourse.ticker);
         setName(currentCourse.name);
         setCredits(currentCourse.credits);
+        setPrereq(currentCourse.prereq);
     }, [currentCourse]);
 
     const saveChanges = () => {
         updateCourse(
             cRUD,
-            { ticker: ticker, name: name, credits: credits },
+            { ticker: ticker, name: name, credits: credits, prereq: prereq },
             currentCourse.ticker
         );
         handleClose();
