@@ -7,22 +7,26 @@
             {
                 "ticker": "CISC108",
                 "name": "Introduction to Computer Science I",
-                "credits": "3"
+                "credits": 3,
+                "prereq": "N/A"
             },
             {
                 "ticker": "EGGG101",
                 "name": "Introduction to Engineering (FYE)",
-                "credits": "2"
+                "credits": 2,
+                "prereq": "N/A"
             },
             {
                 "ticker": "ENGL110",
                 "name": "Seminar in Composition",
-                "credits": "3"
+                "credits": 3,
+                "prereq": "N/A"
             },
             {
                 "ticker": "MATH241",
                 "name": "Analytic Geometry & Calculus A",
-                "credits": "4"
+                "credits": 4,
+                "prereq": "MATH117 or Exam Score"
             }
         ]
     },
@@ -34,22 +38,26 @@
             {
                 "ticker": "CISC181",
                 "name": "Introduction to Computer Science II",
-                "credits": "3"
+                "credits": 3,
+                "prereq": "CISC106 or CISC108"
             },
             {
                 "ticker": "CISC210",
                 "name": "Introduction to Systems Programming",
-                "credits": "3"
+                "credits": 3,
+                "prereq": "CISC106 or CISC108"
             },
             {
                 "ticker": "CISC355",
-                "name": "Computers Ethics & Society",
-                "credits": "3"
+                "name": "Computers, Ethics & Society",
+                "credits": 3,
+                "prereq": "N/A"
             },
             {
                 "ticker": "MATH242",
                 "name": "Analytic Geometry & Calculus B",
-                "credits": "4"
+                "credits": 4,
+                "prereq": "MATH241 or MATH232"
             }
         ]
     }

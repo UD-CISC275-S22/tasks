@@ -7,36 +7,64 @@ import { EditCourseModal } from "./EditModal";
 import { Course } from "./interfaces/course";
 
 const testSemester = {
-    season: "winter",
-    name: "Quarter 22",
-    year: "2022",
+    season: "Fall",
+    name: "Freshman year: Fall",
+    year: "Freshman",
     courses: [
         {
-            ticker: "Math220",
-            name: "Discrete Math",
-            credits: 3
+            ticker: "CISC108",
+            name: "Introduction to Computer Science I",
+            credits: 3,
+            prereq: "N/A"
         },
         {
-            ticker: "Cis275",
-            name: "Intro to Software Eng.",
-            credits: 3
+            ticker: "EGGG101",
+            name: "Introduction to Engineering (FYE)",
+            credits: 2,
+            prereq: "N/A"
+        },
+        {
+            ticker: "ENGL110",
+            name: "Seminar in Composition",
+            credits: 3,
+            prereq: "N/A"
+        },
+        {
+            ticker: "MATH241",
+            name: "Analytic Geometry & Calculus A",
+            credits: 4,
+            prereq: "MATH117 or Exam Score"
         }
     ]
 };
 const testSemester2 = {
-    season: "spring",
-    name: "Quarter 22",
-    year: "2023",
+    season: "Spring",
+    name: "Sophomore year: Spring",
+    year: "Sophomore",
     courses: [
         {
-            ticker: "Cis304",
-            name: "Computer Logic",
-            credits: 3
+            ticker: "CISC181",
+            name: "Introduction to Computer Science II",
+            credits: 3,
+            prereq: "CISC106 or CISC108"
         },
         {
-            ticker: "Cis220",
-            name: "Data Structures",
-            credits: 3
+            ticker: "CISC210",
+            name: "Introduction to Systems Programming",
+            credits: 3,
+            prereq: "CISC106 or CISC108"
+        },
+        {
+            ticker: "CISC355",
+            name: "Computers, Ethics & Society",
+            credits: 3,
+            prereq: "N/A"
+        },
+        {
+            ticker: "MATH242",
+            name: "Analytic Geometry & Calculus B",
+            credits: 4,
+            prereq: "MATH241 or MATH232"
         }
     ]
 };
@@ -54,7 +82,8 @@ function App(): JSX.Element {
     const [editSelected, setEdit] = useState<Course>({
         ticker: "",
         name: "",
-        credits: 0
+        credits: 0,
+        prereq: ""
     });
 
     function setCurrentCourseEdit(course: Course) {
