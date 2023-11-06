@@ -2,6 +2,6 @@ import { Class } from "../interfaces/class";
 
 export interface semester {
     classes: Class[];
-    id: number;
+    //id: number;
     name: string;
 }
