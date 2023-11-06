@@ -4,6 +4,8 @@ import { Class } from "../interfaces/class";
 
 import allClasses from "../data/allClasses.json";
 
+//Quick Course Search and Add to Semester
+
 function CourseSearch(): JSX.Element {
     const [courseCode, setCourseCode] = useState("");
     const [courseInfo, setCourseInfo] = useState<Class | null>(null);
