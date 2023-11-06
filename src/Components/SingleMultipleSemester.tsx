@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Class } from "../interfaces/class";
+
 import { /*Button,*/ Row, Col, Form, Button } from "react-bootstrap";
 // import { degreePlan } from "../interfaces/degreePlan";
 // import { semester } from "../interfaces/semster";
@@ -8,10 +9,37 @@ import SlowAdd from "./SlowAdd";
 
 export function SingleMultipleSemester(): JSX.Element {
     const [semester1, setSemester1] = useState<string>("");
+    const [year1, setYear1] = useState<string>("");
     const [semArr, setSemArr] = useState<string[]>([]);
     const [semArrClicked, setSemArrClicked] = useState<string[]>(semArr);
     const [clicked, setClicked] = useState<boolean>(false);
-    //const [semesterClasses, setSemesterClasses] = useState<Class[]>([]);
+    //const [degreePlan, setDegreePlan] = useState<degreePlan>();
+    const [semesterClasses /*, setSemesterClasses*/] = useState<Class[]>([
+        {
+            courseTitle: "Introduction to Algorithms",
+            courseCode: "CISC320",
+            credits: 3,
+            canEditCredits: false,
+            numPreReqs: 2,
+            preReqs: ["MATH210", "CISC220"],
+            semester: "Fall",
+            year: "Freshman",
+            taken: false,
+            note: ""
+        },
+        {
+            courseTitle: "Computers, Ethics and Society",
+            courseCode: "CISC355",
+            credits: 3,
+            canEditCredits: false,
+            numPreReqs: 0,
+            preReqs: [],
+            semester: "Fall",
+            year: "Freshman",
+            taken: false,
+            note: ""
+        }
+    ]);
     function addtable(semester: string) {
         return (
             <div>
@@ -105,9 +133,11 @@ export function SingleMultipleSemester(): JSX.Element {
     function updateSemester1(event: React.ChangeEvent<HTMLInputElement>) {
         setSemester1(event.target.value);
     }
+    function updateYear1(event: React.ChangeEvent<HTMLInputElement>) {
+        setYear1(event.target.value);
+    }
     function updateSemClicked(event: React.ChangeEvent<HTMLInputElement>) {
         setClicked(true);
-        //setSemester2(event.target.value);
         const sem = event.target.value;
         if (semArrClicked.includes(sem)) {
             setSemArrClicked(semArrClicked.filter((e) => e !== sem));
@@ -116,9 +146,10 @@ export function SingleMultipleSemester(): JSX.Element {
         }
     }
 
-    function addSemLabel(semester: string) {
-        if (!semArr.includes(semester)) {
-            const sems = [...semArr, semester];
+    function addSemLabel(sem1: string, year1: string) {
+        const semYearCombined = sem1 + " " + year1;
+        if (!semArr.includes(semYearCombined)) {
+            const sems = [...semArr, semYearCombined];
             setSemArr(sems);
         }
     }
@@ -127,8 +158,13 @@ export function SingleMultipleSemester(): JSX.Element {
             <h3>Single Semester</h3>
             <Form.Group controlId="formCreateSemester">
                 <Form.Label>Input Semester:</Form.Label>
-                <Button onClick={() => addSemLabel(semester1)}>Enter</Button>
+                <Button onClick={() => addSemLabel(semester1, year1)}>
+                    Enter
+                </Button>
                 <Form.Control value={semester1} onChange={updateSemester1} />
+                Semester
+                <Form.Control value={year1} onChange={updateYear1} />
+                Year
                 <Col>
                     {semArr.map((sem: string) => {
                         return (
@@ -153,6 +189,7 @@ export function SingleMultipleSemester(): JSX.Element {
                     ? addForClicked(semArrClicked)
                     : "Enter and Click semester(s) to view classes"}
             </div>
+            {/* <div>{RemoveSemester()}</div> */}
         </div>
     );
 }
