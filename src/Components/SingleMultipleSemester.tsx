@@ -14,36 +14,36 @@ export function SingleMultipleSemester(): JSX.Element {
     const [semArrClicked, setSemArrClicked] = useState<string[]>(semArr);
     const [clicked, setClicked] = useState<boolean>(false);
     //const [degreePlan, setDegreePlan] = useState<degreePlan>();
-    const [semesterClasses /*, setSemesterClasses*/] = useState<Class[]>([
-        {
-            courseTitle: "Introduction to Algorithms",
-            courseCode: "CISC320",
-            credits: 3,
-            canEditCredits: false,
-            numPreReqs: 2,
-            preReqs: ["MATH210", "CISC220"],
-            semester: "Fall",
-            year: "Freshman",
-            taken: false,
-            note: ""
-        },
-        {
-            courseTitle: "Computers, Ethics and Society",
-            courseCode: "CISC355",
-            credits: 3,
-            canEditCredits: false,
-            numPreReqs: 0,
-            preReqs: [],
-            semester: "Fall",
-            year: "Freshman",
-            taken: false,
-            note: ""
-        }
-    ]);
+    // const [semesterClasses /*, setSemesterClasses*/] = useState<Class[]>([
+    //     {
+    //         courseTitle: "Introduction to Algorithms",
+    //         courseCode: "CISC320",
+    //         credits: 3,
+    //         canEditCredits: false,
+    //         numPreReqs: 2,
+    //         preReqs: ["MATH210", "CISC220"],
+    //         semester: "Fall",
+    //         year: "Freshman",
+    //         taken: false,
+    //         note: ""
+    //     },
+    //     {
+    //         courseTitle: "Computers, Ethics and Society",
+    //         courseCode: "CISC355",
+    //         credits: 3,
+    //         canEditCredits: false,
+    //         numPreReqs: 0,
+    //         preReqs: [],
+    //         semester: "Fall",
+    //         year: "Freshman",
+    //         taken: false,
+    //         note: ""
+    //     }
+    // ]);
     function addtable(semester: string) {
         return (
             <div>
-                <div>
+                {/* <div>
                     <h4>
                         Search for your course, or manually input your course.
                     </h4>
@@ -75,7 +75,8 @@ export function SingleMultipleSemester(): JSX.Element {
                             />
                         </div>
                     </div>
-                </div>
+                </div> */}
+                {/* github is not letting me push it when this is active, uncomment when ready to work */}
                 <div>
                     <Col>
                         <h4>

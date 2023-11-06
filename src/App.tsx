@@ -1,9 +1,9 @@
 import React from "react";
 import "./App.css";
 import { SingleMultipleSemester } from "./Components/SingleMultipleSemester";
-import SlowAdd from "./Components/SlowAdd";
-import QuickAdd from "./Components/QuickAdd";
-import { Class } from "./interfaces/class";
+// import SlowAdd from "./Components/SlowAdd";
+// import QuickAdd from "./Components/QuickAdd";
+// import { Class } from "./interfaces/class";
 
 function App(): JSX.Element {
     return (
