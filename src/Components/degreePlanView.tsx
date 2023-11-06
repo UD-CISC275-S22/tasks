@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { degreePlan } from "../interfaces/degreePlan";
+import { SingleMultipleSemester } from "./SingleMultipleSemester";
 
 export const degreePlanView = ({
-    degreePlan
+    degreePlan,
+    removeSemester
 }: {
     degreePlan: degreePlan;
+    removeSemester: () => void;
 }): JSX.Element => {
-    //const
+    const [sem, setSem] = useState<degreePlan>();
 
-    return <div> </div>;
+    return <div className="Semester_display"></div>;
 };
