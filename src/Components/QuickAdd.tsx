@@ -6,7 +6,13 @@ import allClasses from "../data/allClasses.json";
 
 //Quick Course Search and Add to Semester
 
-function CourseSearch(): JSX.Element {
+interface QuickAddProps {
+    onCourseInfo: (
+        courseInfo: Class & { semester: string; year: string }
+    ) => void;
+}
+
+function CourseSearch(props: QuickAddProps): JSX.Element {
     const [courseCode, setCourseCode] = useState("");
     const [courseInfo, setCourseInfo] = useState<Class | null>(null);
     const [year, setYear] = useState("");
@@ -46,7 +52,9 @@ function CourseSearch(): JSX.Element {
     };
 
     const handleAddCourse = () => {
-        //Figure out tomorrow
+        if (courseInfo) {
+            props.onCourseInfo({ ...courseInfo, semester, year });
+        }
     };
 
     return (
@@ -107,5 +115,4 @@ function CourseSearch(): JSX.Element {
         </div>
     );
 }
-
 export default CourseSearch;

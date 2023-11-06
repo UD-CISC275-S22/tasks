@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Class } from "../interfaces/class";
-import { Row, Col, Form, Button } from "react-bootstrap";
+
+import { /*Button,*/ Row, Col, Form, Button } from "react-bootstrap";
 // import { degreePlan } from "../interfaces/degreePlan";
 // import { semester } from "../interfaces/semster";
-// import { RemoveSemester } from "../Components/InsertRemoveSemester";
-// import { semester } from "../interfaces/semster";
-// import { degreePlan } from "../interfaces/degreePlan";
+import QuickAdd from "./QuickAdd";
+import SlowAdd from "./SlowAdd";
 
 export function SingleMultipleSemester(): JSX.Element {
     const [semester1, setSemester1] = useState<string>("");
@@ -43,55 +43,82 @@ export function SingleMultipleSemester(): JSX.Element {
     function addtable(semester: string) {
         return (
             <div>
-                <Col>
+                <div>
                     <h4>
-                        <u>{semester}</u>
+                        Search for your course, or manually input your course.
                     </h4>
-                    <Row>
-                        <Col>Course</Col>
-                        <Col>Number of Credits</Col>
-                    </Row>
-                    <Row>
-                        <Col>
-                            {semesterClasses[0].courseCode +
-                                ": " +
-                                semesterClasses[0].courseTitle}
-                        </Col>
-                        <Col>{semesterClasses[0].credits}</Col>
-                    </Row>
-                    <Row>
-                        <Col>
-                            {semesterClasses[1].courseCode +
-                                ": " +
-                                semesterClasses[1].courseTitle}
-                        </Col>
-                        <Col>{semesterClasses[1].credits}</Col>
-                    </Row>
-                    <Row>
-                        <Col>3</Col>
-                        <Col>3.1</Col>
-                    </Row>
-                    <Row>
-                        <Col>4</Col>
-                        <Col>4.1</Col>
-                    </Row>
-                    <Row>
-                        <Col>5</Col>
-                        <Col>5.1</Col>
-                    </Row>
-                    <Row>
-                        <Col>6</Col>
-                        <Col>6.1</Col>
-                    </Row>
-                    <Row>
-                        <Col>7</Col>
-                        <Col>7.1</Col>
-                    </Row>
-                    <Row>
-                        <Col>8</Col>
-                        <Col>8.1</Col>
-                    </Row>
-                </Col>
+                    <div style={{ display: "flex", justifyContent: "center" }}>
+                        <div style={{ marginRight: "5px" }}>
+                            <QuickAdd
+                                onCourseInfo={function (
+                                    courseInfo: Class & {
+                                        semester: string;
+                                        year: string;
+                                    }
+                                ): void {
+                                    throw new Error(
+                                        "Function not implemented."
+                                    );
+                                }}
+                            />
+                        </div>
+                        <div className="separator"></div>
+                        <div style={{ marginLeft: "5px" }}>
+                            <SlowAdd
+                                onCourseInfo={function (
+                                    courseInfo: Class
+                                ): void {
+                                    throw new Error(
+                                        "Function not implemented."
+                                    );
+                                }}
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <Col>
+                        <h4>
+                            <u>{semester}</u>
+                        </h4>
+                        <Row>
+                            <Col>Course</Col>
+                            <Col>Number of Credits</Col>
+                        </Row>
+                        <Row>
+                            <Col>1</Col>
+                            <Col>1.1</Col>
+                        </Row>
+                        <Row>
+                            <Col>2</Col>
+                            <Col>2.1</Col>
+                        </Row>
+                        <Row>
+                            <Col>3</Col>
+                            <Col>3.1</Col>
+                        </Row>
+                        <Row>
+                            <Col>4</Col>
+                            <Col>4.1</Col>
+                        </Row>
+                        <Row>
+                            <Col>5</Col>
+                            <Col>5.1</Col>
+                        </Row>
+                        <Row>
+                            <Col>6</Col>
+                            <Col>6.1</Col>
+                        </Row>
+                        <Row>
+                            <Col>7</Col>
+                            <Col>7.1</Col>
+                        </Row>
+                        <Row>
+                            <Col>8</Col>
+                            <Col>8.1</Col>
+                        </Row>
+                    </Col>
+                </div>
             </div>
         );
     }
