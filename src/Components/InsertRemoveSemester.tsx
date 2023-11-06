@@ -29,7 +29,7 @@ export function RemoveSemester({
     return (
         <div>
             {degreePlan.semesters.map((semester: semester) => (
-                <div key={semester.id}>
+                <div key={semester.name}>
                     <span>Semester {semester.name}</span>
                     <Button onClick={() => removeSemester(semester.name)}>
                         Remove Semester
@@ -46,8 +46,8 @@ export function InsertSemester({
 }: degreePlanProps): JSX.Element {
     const [newSem, setNewSem] = useState<semester>({
         name: "",
-        classes: [],
-        id: degreePlan.semesters.length
+        classes: [] /*,*/
+        //id: degreePlan.semesters.length
     });
 
     function addSemester() {
