@@ -4,4 +4,5 @@ export interface Course {
     credits: number;
     degreeRequirements: string[];
     coursePrereq: string[];
+    courseDescription: string;
 }

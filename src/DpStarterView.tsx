@@ -2,7 +2,7 @@
 //this will be the dp table shower
 import React from "react";
 import { useState } from "react";
-import { Button, Table, Container, Row, Col } from "react-bootstrap";
+import { Button, Table, Container, Row, Col, Tab } from "react-bootstrap";
 import { DegreePlan } from "./interfaces/degreeplan";
 import { Semester } from "./interfaces/semester";
 import { Course } from "./interfaces/course";
@@ -19,9 +19,7 @@ export function DpStarterView({
             <Container>
                 <Row>
                     <Col>
-                        <h1>
-                            <h1>{dp.title}</h1>
-                        </h1>
+                        <h1>{dp.title}</h1>
                     </Col>
                 </Row>
                 <Row>
@@ -53,7 +51,35 @@ export function DpStarterView({
                                     {semester.courseList.map(
                                         (course: Course) => (
                                             <div key={course.courseCode}>
-                                                {course.title}
+                                                <p>{course.title}</p>
+                                                <Table striped bordered>
+                                                    <tbody>
+                                                        <td>
+                                                            <p>
+                                                                Course Credits:{" "}
+                                                                {course.credits}
+                                                            </p>
+                                                            <p>
+                                                                Course Code:{" "}
+                                                                {
+                                                                    course.courseCode
+                                                                }
+                                                            </p>
+                                                            <p
+                                                                style={{
+                                                                    textAlign:
+                                                                        "center"
+                                                                }}
+                                                            >
+                                                                Course
+                                                                Description:{" "}
+                                                                {
+                                                                    course.courseDescription
+                                                                }
+                                                            </p>
+                                                        </td>
+                                                    </tbody>
+                                                </Table>
                                             </div>
                                         )
                                     )}
