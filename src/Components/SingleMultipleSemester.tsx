@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import { Class } from "../interfaces/class";
+//import { Class } from "../interfaces/class";
 
 import { /*Button,*/ Row, Col, Form, Button } from "react-bootstrap";
 // import { degreePlan } from "../interfaces/degreePlan";
 // import { semester } from "../interfaces/semster";
-import QuickAdd from "./QuickAdd";
-import SlowAdd from "./SlowAdd";
+// import QuickAdd from "./QuickAdd";
+// import SlowAdd from "./SlowAdd";
+
+//UNCOMMENT SLOW, QUICK, CLASS WHEN READY TO WORK ON THEM
 
 export function SingleMultipleSemester(): JSX.Element {
     const [semester1, setSemester1] = useState<string>("");
