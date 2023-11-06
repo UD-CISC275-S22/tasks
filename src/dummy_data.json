@@ -7,10 +7,10 @@
             {
                 "title": "Fall 2023",
                 "totalCredits": 6,
-                "classesList": [
+                "courseList": [
                     {
-                        "classTitle": "CISC220",
-                        "classCode": 124,
+                        "title": "CISC220",
+                        "courseCode": 124,
                         "credits": 3,
                         "degreeRequirements": [
                             "CISC core requirement",
@@ -19,8 +19,8 @@
                         "coursePrereq": []
                     },
                     {
-                        "classTitle": "CISC108",
-                        "classCode": 170,
+                        "title": "CISC108",
+                        "courseCode": 170,
                         "credits": 3,
                         "degreeRequirements": ["CISC core requirement"],
                         "coursePrereq": [
@@ -32,10 +32,10 @@
             {
                 "title": "Spring 2023",
                 "totalCredits": 6,
-                "classesList": [
+                "courseList": [
                     {
-                        "classTitle": "CISC205",
-                        "classCode": 121,
+                        "title": "CISC205",
+                        "courseCode": 121,
                         "credits": 3,
                         "degreeRequirements": [
                             "CISC core requirement",
@@ -44,8 +44,8 @@
                         "coursePrereq": []
                     },
                     {
-                        "classTitle": "CISC210",
-                        "classCode": 193,
+                        "title": "CISC210",
+                        "courseCode": 193,
                         "credits": 3,
                         "degreeRequirements": ["CISC core requirement"],
                         "coursePrereq": [
@@ -64,10 +64,10 @@
             {
                 "title": "Fall 2023",
                 "totalCredits": 3,
-                "classesList": [
+                "courseList": [
                     {
-                        "classTitle": "CISC220",
-                        "classCode": 124,
+                        "title": "CISC220",
+                        "courseCode": 124,
                         "credits": 3,
                         "degreeRequirements": [
                             "CISC core requirement",
@@ -82,10 +82,10 @@
             {
                 "title": "Spring 2023",
                 "totalCredits": 3,
-                "classesList": [
+                "courseList": [
                     {
-                        "classTitle": "CISC205",
-                        "classCode": 121,
+                        "title": "CISC205",
+                        "courseCode": 121,
                         "credits": 3,
                         "degreeRequirements": [
                             "CISC core requirement",

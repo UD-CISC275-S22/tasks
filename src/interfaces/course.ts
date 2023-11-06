@@ -1,6 +1,6 @@
-export interface Class {
-    classTitle: string;
-    classCode: number;
+export interface Course {
+    title: string;
+    courseCode: number;
     credits: number;
     degreeRequirements: string[];
     coursePrereq: string[];

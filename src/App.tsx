@@ -1,3 +1,4 @@
+/* eslint-disable no-extra-parens */
 import React, { useState } from "react";
 import "./App.css";
 import { GenerateCSV, Import } from "./CSV";
@@ -5,6 +6,7 @@ import { WelcomeMessage } from "./Name";
 import { DegreePlan } from "./interfaces/degreeplan";
 import degreeplan_json from "./dummy_data.json";
 import { Button } from "react-bootstrap";
+import { DpStarterSample } from "./DpStarterSample";
 
 function App(): JSX.Element {
     //load in json data
@@ -47,6 +49,9 @@ function App(): JSX.Element {
                     </ul>
                 </p>
             </header>
+            {previousData === null && (
+                <DpStarterSample jsonDp={degreePlans}></DpStarterSample>
+            )}
             <div />
             <GenerateCSV
                 data={[
