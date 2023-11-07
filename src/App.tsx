@@ -5,6 +5,7 @@ import { Year } from "./viewCourseComponents";
 import { yearI } from "./interfaces/semester";
 import { EditCourseModal } from "./EditModal";
 import { Course } from "./interfaces/course";
+import { AddCourseModal } from "./AddCourseModal";
 
 const testSemester = {
     season: "Fall",
@@ -78,6 +79,10 @@ function App(): JSX.Element {
     const [yearOne, updateYearOne] = useState<yearI>(yearOneStart);
     const [showEditModal, updateEditMogal] = useState<boolean>(false);
     const handleCloseAddModal = () => updateEditMogal(false);
+    const [showAddCourseModal, setShowAddCourseModal] =
+        useState<boolean>(false);
+    const handleShowAddCourseModal = () => setShowAddCourseModal(true);
+    const handleCloseAddCourseModal = () => setShowAddCourseModal(false);
     //const handleShowAddModal = () => updateEditMogal(true);
     const [editSelected, setEdit] = useState<Course>({
         ticker: "",
@@ -85,7 +90,25 @@ function App(): JSX.Element {
         credits: 0,
         prereq: ""
     });
+    const handleAddNewCourse = (
+        newCourse: Course,
+        semester: "firstsemester" | "secondsemester"
+    ) => {
+        if (yearOne[semester].courses.length >= 5) {
+            console.error("Cannot add more than 5 courses per semester");
+            return;
+        }
 
+        const updatedCourses = [...yearOne[semester].courses, newCourse];
+
+        const updatedSemester = {
+            ...yearOne[semester],
+            courses: updatedCourses
+        };
+
+        updateYearOne({ ...yearOne, [semester]: updatedSemester });
+        handleCloseAddCourseModal();
+    };
     function setCurrentCourseEdit(course: Course) {
         setEdit(course);
         updateEditMogal(true);
@@ -104,7 +127,7 @@ function App(): JSX.Element {
 
     return (
         <div className="App">
-            <h1 className="App-title">CIS scheduler</h1>
+            <h1 className="App-title">CIS Scheduler</h1>
             <header className="App-header">
                 Adam Beck, Zach Reggio, Sam Ferguson, Brandon Marafino, Adam Liu
             </header>
@@ -113,6 +136,7 @@ function App(): JSX.Element {
                     Create New Plan
                 </button>
                 <button onClick={handleImportCSV}>Import CSV</button>
+                <button onClick={handleShowAddCourseModal}>Add Course</button>
             </div>
             <Year year={yearOne} editCourse={setCurrentCourseEdit}></Year>
             <EditCourseModal
@@ -121,6 +145,11 @@ function App(): JSX.Element {
                 currentCourse={editSelected}
                 cRUD={db}
             ></EditCourseModal>
+            <AddCourseModal
+                show={showAddCourseModal}
+                handleClose={handleCloseAddCourseModal}
+                addCourse={handleAddNewCourse}
+            ></AddCourseModal>
         </div>
     );
 }
