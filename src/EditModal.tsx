@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Button, Modal, Form } from "react-bootstrap";
-import { dbMangement } from "./DBmanage";
+import { dbMangement, deleteCourse } from "./DBmanage";
 import { Course } from "./interfaces/course";
 import { updateCourse } from "./DBmanage";
 
@@ -34,7 +34,10 @@ export const EditCourseModal = ({
         );
         handleClose();
     };
-
+    const handleDelete = () => {
+        deleteCourse(cRUD, currentCourse.ticker);
+        handleClose();
+    };
     return (
         <div>
             <Modal show={show} onHide={handleClose} animation={true}>
@@ -67,13 +70,11 @@ export const EditCourseModal = ({
                     </Form.Group>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button
-                        variant="secondary"
-                        onClick={() => {
-                            handleClose();
-                        }}
-                    >
+                    <Button variant="secondary" onClick={handleClose}>
                         Close
+                    </Button>
+                    <Button variant="danger" onClick={handleDelete}>
+                        Delete Course
                     </Button>
                     <Button variant="primary" onClick={saveChanges}>
                         Save Changes
