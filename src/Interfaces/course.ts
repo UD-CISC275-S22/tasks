@@ -28,8 +28,6 @@ export interface Course {
     semester: SemesterOffered;
     /*Department: eg: College of Engineering */
     department: Department;
-    /* prerequesite to take this course */
-    prereq: Course[];
-    /*Requirements covered, eg: capstone, core, honors*/
-    requirements: string[];
+    /* prerequesite to take this course - an array course id */
+    prereq: string[];
 }

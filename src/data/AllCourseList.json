@@ -6,8 +6,7 @@
         "credits": 3,
         "semester": "Both",
         "department": "COE",
-        "prereq": [],
-        "requirement": ["University Breadth", "CAS Breadth"]
+        "prereq": []
     },
     {
         "id": "CISC181",
@@ -16,8 +15,7 @@
         "credits": 3,
         "semester": "Both",
         "department": "COE",
-        "prereq": ["CISC108"],
-        "requirements": ["University Breadth", "CAS Breadth"]
+        "prereq": ["CISC108"]
     },
     {
         "id": "CISC210",
@@ -26,8 +24,7 @@
         "credits": 3,
         "semester": "Both",
         "department": "COE",
-        "prereq": ["CISC108"],
-        "requirements": []
+        "prereq": ["CISC108"]
     },
     {
         "id": "CISC220",
@@ -36,7 +33,6 @@
         "credits": 3,
         "semester": "Both",
         "department": "COE",
-        "prereq": ["CISC210"],
-        "requirements": []
+        "prereq": ["CISC210"]
     }
 ]

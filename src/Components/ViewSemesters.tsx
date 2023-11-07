@@ -4,8 +4,9 @@
 //task 4: insert or remove a course in a semester
 
 import React, { useState } from "react";
+import courseList from "../data/AllCourseList.json";
 import "./Semester.css";
-import { Course } from "../Interfaces/course";
+import { Course, SemesterOffered, Department } from "../Interfaces/course";
 import { Button } from "react-bootstrap";
 
 //SemType: mostly here to change the semester type and show that there are these many options (can add Winter and Summer later)
@@ -13,23 +14,19 @@ const SemType = ["Fall", "Spring"];
 //set the default semester to Fall
 const DEFAULT_SEMTYPE = SemType[0];
 
-//create an intial course for testing (will eventually replace this with actual courses)
-const initialCourse: Course = {
-    id: "CISC 275",
-    name: "Intro to Software Engineering",
-    description: "Sample description of CISC275",
-    credits: 3,
-    semester: "Both",
-    department: "COE",
-    requirement: ["CISC108"]
-};
-//now initial the array of courses for useState constant (that way you can use that state to iterate through a list of courses you pass it)
-const initCourseArray: Course[] = [initialCourse];
+//create an intial course for testing (will eventually replace this with actual courses) - from json
+const COURSE_LIST = courseList.map(
+    (course): Course => ({
+        ...course,
+        semester: course.semester as SemesterOffered,
+        department: course.department as Department
+    })
+);
 
 export function ViewSemester(): JSX.Element {
     //need a state for an array of courses for fall and spring and the semestertype that the user wants to see (Fall or Spring Semester) and the number of semesters they want to view
-    const [fallcourse] = useState<Course[]>(initCourseArray); //an array of courses (NOTE FOR MICHAEL: add back setFallCourses)
-    const [springcourse] = useState<Course[]>(initCourseArray); //add back setSpringCourses later (NOTE FOR MICHAEL: add back setSpringCourses)
+    const [fallcourse] = useState<Course[]>(COURSE_LIST); //an array of courses (NOTE FOR MICHAEL: add back setFallCourses)
+    const [springcourse] = useState<Course[]>(COURSE_LIST); //add back setSpringCourses later (NOTE FOR MICHAEL: add back setSpringCourses)
     const [SemesterType, setSemesterType] = useState<string>(DEFAULT_SEMTYPE); //set default to Fall
     const [SemCount, setSemCount] = useState<number>(1); //default is showing one semester, can do 1-2 (if more than 2 than that goes beyond a year) and can later go back to show 0 semesters
 
