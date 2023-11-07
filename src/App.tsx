@@ -7,11 +7,11 @@ function App(): JSX.Element {
         <div className="App">
             <header className="App-header">
                 UD CISC275 - Degree Planner
-                <p>Matthew Mestre</p>
-                <p>Bryant Ferguson</p>
-                <p>Ava West</p>
-                <p>Malika Iyer</p>
-                <p>Dina Dawood</p>
+                <h6>Matthew Mestre</h6>
+                <h6>Bryant Ferguson</h6>
+                <h6>Ava West</h6>
+                <h6>Malika Iyer</h6>
+                <h6>Dina Dawood</h6>
             </header>
             <p>
                 Welcome to your personal Degree Planner! Some basic tools have
