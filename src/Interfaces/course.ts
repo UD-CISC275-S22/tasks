@@ -16,8 +16,10 @@ Honors:
 export type Department = "CANR" | "CAS" | "CEOE" | "CEHD" | "COE" | "CHS" | "LBE" | "BPPA";
 
 export interface Course {
-    /*Course number, eg CISC275 */
-    id: string;
+    /*random id number for each course*/
+    id: number;
+    /*Course ID number; eg acisc108*/
+    title: string;
     /*Course Name, eg: Introduction to Software Engineering */
     name: string;
     /*Course description*/
@@ -29,5 +31,10 @@ export interface Course {
     /*Department: eg: College of Engineering */
     department: Department;
     /* prerequesite to take this course - an array course id */
+    //prereq: Course[];
     prereq: string[];
+    /* corequesites to take with this course*/
+    coreq: Course[];
+    /*Requirements covered, eg: capstone, core, honors*/
+    requirements: string[];
 }
