@@ -3,6 +3,8 @@ it also includes university and college breadth requirements.
 Displayed order is slightly different from catalog, scroll down
 to see breadths.*/
 
+//CONVERT THESE TO ID NUMBERS
+
 /*Core Class Requirements */
 /*CSBA*/
 export const CoreBA = [

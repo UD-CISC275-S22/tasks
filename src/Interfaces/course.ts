@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 //needs: title, prereqs, semesters offered, credits, department, ID, description, what section of requirement (Ex. "capstone", "core", "lab science"...)
-export type SemesterOffered = "Fall" | "Spring" | "Both" | "Depends"
+
 /* 
 CANR:
 CAS
@@ -27,14 +27,13 @@ export interface Course {
     /*number of credits, Eg: 3*/
     credits: number;
     /*semester offered, eg: Spring, Fall, Both*/
-    semester: SemesterOffered;
+    semester: string[]; //made this a string because in the AllCourses json file there is summer, fall, spring, all three, only two, etc. too many variables to account for
     /*Department: eg: College of Engineering */
     department: Department;
     /* prerequesite to take this course - an array course id */
-    //prereq: Course[];
     prereq: string[];
     /* corequesites to take with this course*/
-    coreq: Course[];
+    coreq: string[];
     /*Requirements covered, eg: capstone, core, honors*/
     requirements: string[];
 }
