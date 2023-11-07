@@ -1,8 +1,5 @@
 /* eslint-disable prettier/prettier */
-//task 1: shows a single semester (DONE)
-//task 2: shows multiple semesters (DONE)
-//task 3: clear out semester
-//task 4: insert or remove a course in a semester
+//for visualization of semesters and altering the courses within them
 
 import React, { useState } from "react";
 import { courseList } from "./course";
@@ -11,9 +8,9 @@ import { Course } from "../Interfaces/course";
 import { Button } from "react-bootstrap";
 import { Semester } from "../Interfaces/semester";
 
-//create an intial course for testing (will eventually replace this with actual courses) - from json
+//create an intial course for testing (will eventually replace this with actual courses from a default setting) - from course.tsx
 const COURSE_LIST = courseList;
-//create initial semesters for testing
+//create initial semester for testing
 const SEM1: Semester = {
     type: ["Fall"],
     year: 2024,
@@ -21,16 +18,18 @@ const SEM1: Semester = {
     courseList: COURSE_LIST
 };
 
+//states as globals
+const [fallSemester] = useState<Semester>(SEM1);
+const [springSemester] = useState<Semester>(SEM1);
+//will add more semesters later
+const [SemesterType, setSemesterType] = useState<string>("Fall"); //set default to Fall for now
+const [SemCount, setSemCount] = useState<number>(1); //default shows 1 semester
+
 export function ViewSemester(): JSX.Element {
-    //need a state for an array of courses for fall and spring and the semestertype that the user wants to see (Fall or Spring Semester) and the number of semesters they want to view
-    const [fallSemester] = useState<Semester>(SEM1); //an array of courses (NOTE FOR MICHAEL: add back setFallCourses)
-    const [springSemester] = useState<Semester>(SEM1); //add back setSpringCourses later (NOTE FOR MICHAEL: add back setSpringCourses)
-    const [SemesterType, setSemesterType] = useState<string>("Fall"); //set default to Fall
-    const [SemCount, setSemCount] = useState<number>(1); //default is showing one semester, can do 1-2 (if more than 2 than that goes beyond a year) and can later go back to show 0 semesters
 
     //NOTE FOR MICHAEL: Here is where you can add your add courses and remove courses functions
 
-    //functin to change number of semesters shown (can be either 1 or 2 only - can add 0 semesters later)
+    //functin to change number of semesters shown (can be either 1 or 2 only - can add 0 or more semesters later)
     function changeSemCount(): void {
         if (SemCount == 2) {
             setSemCount(1);
@@ -43,9 +42,9 @@ export function ViewSemester(): JSX.Element {
     function changeSemester(): void {
         let newSemType = "Default";
         if (SemesterType == "Fall") {
-            newSemType = "Spring"; //spring
+            newSemType = "Spring";
         } else {
-            newSemType = "Fall"; //fall
+            newSemType = "Fall";
         }
         setSemesterType(newSemType); //set the new semester type to display
         /* ADD OTHER TYPES OF SEMESTERS LATER */
@@ -61,8 +60,7 @@ export function ViewSemester(): JSX.Element {
                     (course: Course): JSX.Element => (
                         <div className="Course" key={course.id}>
                             <span key={course.id}>
-                                {course.id} {course.credits} {course.department}{" "}
-                                {course.name}
+                                {course.title}{" - "}{course.name}
                             </span>
                         </div>
                     )
@@ -81,8 +79,7 @@ export function ViewSemester(): JSX.Element {
                     (course: Course): JSX.Element => (
                         <div className="Course" key={course.id}>
                             <span key={course.id}>
-                                {course.id} {course.credits} {course.department}{" "}
-                                {course.name}
+                                {course.title}{" - "}{course.name}
                             </span>
                         </div>
                     )
@@ -102,8 +99,7 @@ export function ViewSemester(): JSX.Element {
                         (course: Course): JSX.Element => (
                             <div className="Course" key={course.id}>
                                 <span key={course.id}>
-                                    {course.id} {course.credits}{" "}
-                                    {course.department} {course.name}
+                                    {course.title}{" - "}{course.name}
                                 </span>
                             </div>
                         )
@@ -116,8 +112,7 @@ export function ViewSemester(): JSX.Element {
                         (course: Course): JSX.Element => (
                             <div className="Course" key={course.id}>
                                 <span key={course.id}>
-                                    {course.id} {course.credits}{" "}
-                                    {course.department} {course.name}
+                                    {course.title}{" - "}{course.name}
                                 </span>
                             </div>
                         )

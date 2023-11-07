@@ -1,6 +1,7 @@
 //look at cisc udel degree requirement examples
 //ex. what does the core need, capstone, options for lab science, etc.
-import { Semester } from "./semester";
+//only need ONE degree interface
+//types of degrees will be functions in the requirements.tsx file
 
 export interface Degree {
     /* degree name */
@@ -9,17 +10,19 @@ export interface Degree {
     concentration: string;
     /* I didn't add univ req because that can be a separate function but let me know what you think */
     /* I didn't add college req because that can be a separate function but let me know what you think */
-    //this list shouldn't change so if there is a section that you need for a particular degree let me know
-    //have to be strings for parsing errors with json
-    ciscoreReq: number[];
-    capstoneReq: number[];
-    labReq: number[];
-    additionalReq: number[];
-    concentrationReq: number[];
-    probabilityReq: number[];
-    systemsReq: number[];
-    restrictedReq: number[];
+    //let me know if these are too many types or if there should be an added one
+    ciscoreReq: string[];
+    capstoneReq: string[];
+    labReq: string[];
+    additionalReq: string[];
+    concentrationReq: string[];
+    probabilityReq: string[];
+    systemsReq: string[];
+    restrictedReq: string[];
+    /* 
+    semesterSchedule is kind of like a plan - can change later
     semesterSchedule: Semester[];
-    /* List of courses required within the degree */
+    */
+    //number of total credits needed in the degree
     credits: number;
 }

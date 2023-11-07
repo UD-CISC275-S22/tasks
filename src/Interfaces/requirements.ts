@@ -3,8 +3,6 @@ it also includes university and college breadth requirements.
 Displayed order is slightly different from catalog, scroll down
 to see breadths.*/
 
-//CONVERT THESE TO ID NUMBERS
-
 /*Core Class Requirements */
 /*CSBA*/
 export const CoreBA = [
@@ -41,8 +39,7 @@ export const CoreBS = [
 /*University and College Requirements*/
 export const math = ["MATH205", "MATH350"];
 export const secondWriting = ["ENGL312", "ENGL410"];
-export const capstoneOp1 = ["CISC498", "CISC499"];
-export const capstoneOp2 = ["UNIV401", "UNIV402"];
+export const capstone = ["CISC498", "CISC499", "UNIV401", "UNIV402"];
 export const additionalReqs = ["CISC304", "MATH349"];
 export const labSciences = [
     "BISC207",
