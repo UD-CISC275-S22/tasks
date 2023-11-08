@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { semester } from "../Interface/semester";
-import { AddClass } from "../semester-modification/AddClass";
 import { RemoveClass } from "../semester-modification/RemoveClass";
 
 export function SemesterView({
