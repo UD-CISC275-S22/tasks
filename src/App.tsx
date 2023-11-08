@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { ViewSemester } from "./Components/ViewSemesters";
+import { ViewSemester } from "./Components/Semester";
 
 function App(): JSX.Element {
     return (
