@@ -16,8 +16,10 @@ Honors:
 export type Department = "CANR" | "CAS" | "CEOE" | "CEHD" | "COE" | "CHS" | "LBE" | "BPPA";
 
 export interface Course {
+    /*unique identifier for each course*/
+    id: number;
     /*Course number, eg CISC275 */
-    id: string;
+    title: string;
     /*Course Name, eg: Introduction to Software Engineering */
     name: string;
     /*Course description*/

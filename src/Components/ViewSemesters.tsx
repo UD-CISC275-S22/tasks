@@ -21,7 +21,7 @@ const initialCourse: Course = {
     credits: 3,
     semester: "Both",
     department: "COE",
-    requirement: ["CISC108"]
+    requirements: ["CISC108"]
 };
 //now initial the array of courses for useState constant (that way you can use that state to iterate through a list of courses you pass it)
 const initCourseArray: Course[] = [initialCourse];

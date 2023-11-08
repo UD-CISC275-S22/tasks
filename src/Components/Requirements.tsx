@@ -8,7 +8,7 @@ import courseList from "../data/AllCourseList.json";
 import { Course } from "../Interfaces/course";
 import { Degree } from "../Interfaces/degree";
 
-/** Determines if a course is a pre */
+/** Determines if a course is a prereq of another */
 function isPrereq(course1: Course, course2: Course): boolean {
     if (course1.id in course2.prereq) {
         return true;
