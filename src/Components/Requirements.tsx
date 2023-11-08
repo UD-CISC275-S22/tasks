@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 
 import React, { useState } from "react";
-import { Course } from "../Interfaces/course";
+//import { Course } from "../Interfaces/course";
 import { Degree } from "../Interfaces/degree";
 
 //EXAMPLE usage of the requirements ts
