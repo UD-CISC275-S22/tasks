@@ -18,15 +18,13 @@ const SEM1: Semester = {
     courseList: COURSE_LIST
 };
 
-//states as globals
-const [fallSemester] = useState<Semester>(SEM1);
-const [springSemester] = useState<Semester>(SEM1);
-//will add more semesters later
-const [SemesterType, setSemesterType] = useState<string>("Fall"); //set default to Fall for now
-const [SemCount, setSemCount] = useState<number>(1); //default shows 1 semester
-
 export function ViewSemester(): JSX.Element {
-
+    //states as globals
+    const [fallSemester] = useState<Semester>(SEM1);
+    const [springSemester] = useState<Semester>(SEM1);
+    //will add more semesters later
+    const [SemesterType, setSemesterType] = useState<string>("Fall"); //set default to Fall for now
+    const [SemCount, setSemCount] = useState<number>(1); //default shows 1 semester
     //NOTE FOR MICHAEL: Here is where you can add your add courses and remove courses functions
 
     //functin to change number of semesters shown (can be either 1 or 2 only - can add 0 or more semesters later)
@@ -60,7 +58,9 @@ export function ViewSemester(): JSX.Element {
                     (course: Course): JSX.Element => (
                         <div className="Course" key={course.id}>
                             <span key={course.id}>
-                                {course.title}{" - "}{course.name}
+                                {course.title}
+                                {" - "}
+                                {course.name}
                             </span>
                         </div>
                     )
@@ -79,7 +79,9 @@ export function ViewSemester(): JSX.Element {
                     (course: Course): JSX.Element => (
                         <div className="Course" key={course.id}>
                             <span key={course.id}>
-                                {course.title}{" - "}{course.name}
+                                {course.title}
+                                {" - "}
+                                {course.name}
                             </span>
                         </div>
                     )
@@ -99,7 +101,9 @@ export function ViewSemester(): JSX.Element {
                         (course: Course): JSX.Element => (
                             <div className="Course" key={course.id}>
                                 <span key={course.id}>
-                                    {course.title}{" - "}{course.name}
+                                    {course.title}
+                                    {" - "}
+                                    {course.name}
                                 </span>
                             </div>
                         )
@@ -112,7 +116,9 @@ export function ViewSemester(): JSX.Element {
                         (course: Course): JSX.Element => (
                             <div className="Course" key={course.id}>
                                 <span key={course.id}>
-                                    {course.title}{" - "}{course.name}
+                                    {course.title}
+                                    {" - "}
+                                    {course.name}
                                 </span>
                             </div>
                         )

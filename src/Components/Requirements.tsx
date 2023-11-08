@@ -12,16 +12,17 @@ import { additionalReqs } from "../Interfaces/requirements";
 import { ArtificialIntelligence } from "../Interfaces/requirements";
 import { math } from "../Interfaces/requirements";
 
-const [degree, setDegree] = useState<string>("AI");
+const [degree] = useState<string>("AI"); //add back set degree
 
 /** Determines if a course is a pre */
 function isPrereq(course1: Course, course2: Course): boolean {
-    if (course1.id in course2.prereq) {
+    if (course1.title in course2.prereq) {
         return true;
     } else {
         return false;
     }
 }
+
 
 //EXAMPLE of a degree function
 export function AI_Degree(): Degree {
@@ -43,6 +44,7 @@ export function AI_Degree(): Degree {
         restrictedReq: ["CISC681"] //again, will vary and change as necessary
     };
 }
+
 
 /*
 export function DataScience(): Degree {}
