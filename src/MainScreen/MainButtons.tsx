@@ -36,11 +36,6 @@ export function MainButtons(): JSX.Element {
                             >
                                 <SemesterTable></SemesterTable>
                             </div>
-                            <div>
-                                Click Here to create your schedule for the
-                                upcoming and future semesters by adding your
-                                desired courses.
-                            </div>
                         </div>
                     </Col>
                     <Col>
@@ -52,7 +47,6 @@ export function MainButtons(): JSX.Element {
                             >
                                 Current Plan
                             </Button>
-                            <FilteringSearch></FilteringSearch>
                         </div>
                     </Col>
                     <Col>
