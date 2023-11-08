@@ -1,10 +1,16 @@
 .App {
     text-align: center;
+    background-color: #ffffff;
 }
 
 .App-logo {
     height: 40vmin;
     pointer-events: none;
+    color: rgb(255, 255, 255);
+}
+
+.App-title {
+    color: rgb(64, 64, 64);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -22,11 +28,11 @@
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: white;
-    border-top-color: #fed600;
+    color: rgb(255, 255, 255);
+    border-top-color: #00b8fb;
     border-top-style: solid;
     border-top-width: 0.25rem;
-    border-bottom-color: #fed600;
+    border-bottom-color: #00b8fb;
     border-bottom-style: solid;
     border-bottom-width: 0.25rem;
 }

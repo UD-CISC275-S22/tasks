@@ -127,7 +127,16 @@ function App(): JSX.Element {
 
     return (
         <div className="App">
-            <h1 className="App-title">CIS Scheduler</h1>
+            <div className="logo">
+                <h1 className="App-title">
+                    <img
+                        src={require("./ud_logo.jpg")}
+                        width="150"
+                        height="150"
+                    ></img>
+                    CIS Scheduler{" "}
+                </h1>
+            </div>
             <header className="App-header">
                 Adam Beck, Zach Reggio, Sam Ferguson, Brandon Marafino, Adam Liu
             </header>
