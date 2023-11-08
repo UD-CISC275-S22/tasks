@@ -1,53 +1,63 @@
 import React from "react";
-import { Button } from "react-bootstrap";
-import { semester } from "../Interface/semester";
 import { classes } from "../Interface/classes";
+import { semester } from "../Interface/semester";
+import { Button } from "react-bootstrap";
 
 export function RemoveClass({
     schedule,
-    removeName,
+    classToDelete,
     onRemoveClass
 }: {
     schedule: semester;
-    removeName: string;
+    classToDelete: classes;
     onRemoveClass: (updatedSchedule: semester) => void;
 }): JSX.Element {
-    function removeNewClass() {
-        const newSchedule = {
-            ...schedule,
-            classList: schedule.classList.filter(
-                (course) => course.title !== removeName
-            )
-        };
+    function addNewClass() {
+        // Create a new array of semesters
+        let updatedSchedule = { ...schedule };
 
-        newSchedule.totalCredits = newSchedule.classList.reduce(
-            (total: number, adding: classes) => total + adding.credits,
+        // Find the semester at the specified index (scheduleID)
+        const semesterToUpdate = updatedSchedule;
+
+        // Create a new array of classes for the updated semester
+        const updatedClasses = [
+            ...semesterToUpdate.classList.filter(
+                (allClasses: classes): boolean =>
+                    allClasses.title != classToDelete.title
+            )
+        ];
+
+        // Get new credit total
+        const totalCredits = updatedClasses.reduce(
+            (total: number, currentClass: classes) =>
+                total + currentClass.credits,
             0
         );
-        onRemoveClass(newSchedule);
+
+        // Update the classList of the semester with the new array of classes
+        semesterToUpdate.classList = updatedClasses;
+        semesterToUpdate.totalCredits = totalCredits;
+
+        // Update the schedule with the modified semester
+        updatedSchedule = semesterToUpdate;
+
+        onRemoveClass(updatedSchedule);
     }
 
-    return <Button onClick={removeNewClass}>Remove Class</Button>;
+    return (
+        <div>
+            <Button onClick={addNewClass}>Remove Class</Button>
+        </div>
+    );
 }
-
-//Paste function into file using RemoveClass
-//updates a state with a semeter object to have the new updated list of classes
-// function onRemoveClass(updatedSchedule: semester) {
-//     setSampleSemester(updatedSchedule);
-// }
-
-// const [sampleSemester, setSampleSemester] = useState({
-//     classList: [
-//         /* your initial class list here */
-//     ],
-//     totalCredits: 0, // Update this based on the initial data
-//     season: "Fall 2023"
-// });
 
 {
     /* <RemoveClass
-    schedule={sampleSemester}
-    removeName="Physics for Beginners"
-    onRemoveClass={onRemoveClass}
-/>; */
+    schedule={currSemesterArr}
+    scheduleID={currentSemester.id}
+    classToDelete={classItem}
+    onRemoveClass={function (updatedSchedule: semester[]): void {
+        setCurrSemesterArr(updatedSchedule);
+    }}
+></RemoveClass>; */
 }
