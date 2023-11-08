@@ -1,10 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
+import { GenerateCSV, Import } from "./CSV";
 import { WelcomeMessage } from "./Name";
-import { Import } from "./ImportExport";
-import { createEmptyDegreePlan } from "./createDelete";
+import { DegreePlan } from "./interfaces/degreeplan";
+import degreeplan_json from "./dummy_data.json";
+import { Button } from "react-bootstrap";
 
 function App(): JSX.Element {
+    //load in json data
+    const DEGREEPLANS: DegreePlan[] = degreeplan_json.map(
+        (dp: DegreePlan): DegreePlan => ({ ...dp }) //dp = degreeplan
+    );
+    //this is the initial data that every user starts with
+    let loaded_data = DEGREEPLANS;
+    //this will be the key we use to access previous data
+    const SAVE_KEY = "MY-PAGE-DEGREEPLANS";
+    const previousData = localStorage.getItem(SAVE_KEY);
+    //load data into loaded_data (will either overwrite loaded_data with previous data if user is not new or keep initial loaded data if user it new)
+    if (previousData !== null) {
+        loaded_data = JSON.parse(previousData);
+    }
+
+    const [importData, setImportData] = useState<string>("");
+    //degreePlans will store and maintain the users degree plans, whenever they save their work it will be stored here
+    const [degreePlans, setdegreePlans] = useState<DegreePlan[]>(loaded_data);
+
+    function saveData() {
+        localStorage.setItem(SAVE_KEY, JSON.stringify(degreePlans));
+        console.log(setdegreePlans); //will delete only here to satisfy typescript
+    }
+
     return (
         <div className="App">
             <header className="App-header">
@@ -22,11 +47,18 @@ function App(): JSX.Element {
                     </ul>
                 </p>
             </header>
-            <p>
-                <code>src/App.tsx</code> and save. This page will automatically
-                reload.
-            </p>
-            <div className="div-alignleft">
+            <div />
+            <GenerateCSV
+                data={[
+                    ["First Name", "Last Name"],
+                    ["Nicky", "Reigel"],
+                    ["Aidan", "Bell"]
+                ]}
+                filename="testexport"
+            />
+            <div />
+            <Import importData={importData} setImportData={setImportData} />
+            <div className="div-alightleft">
                 <div className="App-blockleft">
                     <p>sample block left</p>
                 </div>
@@ -36,10 +68,7 @@ function App(): JSX.Element {
                     <p>sample block right</p>
                 </div>
             </div>
-            <div>
-                <Import></Import>
-            </div>
-            <div>{createEmptyDegreePlan}</div>
+            <Button onClick={saveData}>Save Degree Plans</Button>
         </div>
     );
 }
