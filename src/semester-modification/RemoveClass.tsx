@@ -5,24 +5,19 @@ import { Button } from "react-bootstrap";
 
 export function RemoveClass({
     schedule,
-    scheduleID,
     classToDelete,
     onRemoveClass
 }: {
-    schedule: semester[];
-    scheduleID: number;
+    schedule: semester;
     classToDelete: classes;
-    onRemoveClass: (updatedSchedule: semester[]) => void;
+    onRemoveClass: (updatedSchedule: semester) => void;
 }): JSX.Element {
     function addNewClass() {
         // Create a new array of semesters
-        const updatedSchedule = [...schedule];
-        const semesterIDX = updatedSchedule.findIndex(
-            (semester: semester): boolean => semester.id == scheduleID
-        );
+        let updatedSchedule = { ...schedule };
 
         // Find the semester at the specified index (scheduleID)
-        const semesterToUpdate = updatedSchedule[semesterIDX];
+        const semesterToUpdate = updatedSchedule;
 
         // Create a new array of classes for the updated semester
         const updatedClasses = [
@@ -44,7 +39,7 @@ export function RemoveClass({
         semesterToUpdate.totalCredits = totalCredits;
 
         // Update the schedule with the modified semester
-        updatedSchedule[semesterIDX] = semesterToUpdate;
+        updatedSchedule = semesterToUpdate;
 
         onRemoveClass(updatedSchedule);
     }
