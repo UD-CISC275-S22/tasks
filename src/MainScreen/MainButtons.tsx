@@ -5,6 +5,7 @@ import { useState } from "react";
 import { AddSemesterModal } from "./Modal/addSemesterModal";
 import { SemesterTable } from "../semester/SemesterTable";
 import { FilteringSearch } from "../FilteringSearch/FilteringSearch";
+import { ChosenMajor } from "../Audit/ChosenMajor";
 
 export function MainButtons(): JSX.Element {
     const [semesterSchedule, setSemesterSchedule] = useState<boolean>(true);
@@ -14,6 +15,10 @@ export function MainButtons(): JSX.Element {
     const [openModal, setOpenModal] = useState<boolean>(false);
     const handleOpenModal = () => setOpenModal(!openModal);
     const handleCloseModal = () => setOpenModal(!openModal);
+
+    const [openMajor, setOpenMajor] = useState<boolean>(false);
+    const handleOpenMajor = () => setOpenMajor(!openMajor);
+    const handleCloseMajor = () => setOpenMajor(!openMajor);
 
     return (
         <div>
@@ -73,6 +78,23 @@ export function MainButtons(): JSX.Element {
                                 <AddSemesterModal
                                     handleClose={handleCloseModal}
                                     show={openModal}
+                                />
+                            )}
+                        </div>
+                    </Col>
+                    <Col>
+                        <div>
+                            <Button
+                                onClick={() => {
+                                    handleOpenMajor();
+                                }}
+                            >
+                                Choose Major
+                            </Button>
+                            {openMajor && (
+                                <ChosenMajor
+                                    handleClose={handleCloseMajor}
+                                    show={openMajor}
                                 />
                             )}
                         </div>
