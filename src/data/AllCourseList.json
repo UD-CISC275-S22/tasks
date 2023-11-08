@@ -1,6 +1,7 @@
 [
     {
-        "id": "ENGL110",
+        "id": 0,
+        "title": "ENGL110",
         "name": "First-Year Writing",
         "description": "",
         "credits": 3,
@@ -8,10 +9,11 @@
         "department": "",
         "prereq": [""],
         "coreq": [""],
-        "requirement": ["University Requirments"]
+        "requirements": ["University Requirments"]
     },
     {
-        "id": "CISC108",
+        "id": 1,
+        "title": "CISC108",
         "name": "Introduction to Computer Science I",
         "description": "Computing and principles of programming with an emphasis on systematic program design. Topics include functional programming, data abstraction, procedural abstraction, use of control and state, recursion, testing, and object-oriented programming concepts. Requires no prior programming experience, open to any major, but intended primarily for majors and minors in computer science or mathematics.",
         "credits": 3,
@@ -19,10 +21,11 @@
         "department": "COE",
         "prereq": [""],
         "coreq": ["MATH115 or MATH117+"],
-        "requirement": ["BA Core", "BS Core", "CAS Breadth"]
+        "requirements": ["BA Core", "BS Core", "CAS Breadth"]
     },
     {
-        "id": "CISC181",
+        "id": 2,
+        "title": "CISC181",
         "name": "Introduction to Computer Science II",
         "description": "Principles of computer science illustrated and applied through programming in an object oriented language. Programming projects illustrate computational problems, styles and issues that arise in computer systems development and in all application areas of computation.",
         "credits": 3,
@@ -33,7 +36,8 @@
         "requirements": ["BA Core", "BS Core", "CAS Breadth"]
     },
     {
-        "id": "CISC210",
+        "id": 3,
+        "title": "CISC210",
         "name": "Introduction to Systems Programming",
         "description": "Principles of computer systems programming for software and hardware platforms to achieve efficient resource usage. Topics include the C programming language, memory management, and awareness of system constraints and interfacing. Projects include programming embedded systems and interactive objects.",
         "credits": 3,
@@ -44,7 +48,8 @@
         "requirements": ["BA Core", "BS Core"]
     },
     {
-        "id": "CISC220",
+        "id": 4,
+        "title": "CISC220",
         "name": "Data Structures",
         "description": "Review of data type abstraction, recursion, arrays, stacks, queues, multiple stacks and linked lists. Emphasis on dynamic storage management, garbage collection, trees, graphs, tables, sorting and searching.",
         "credits": 3,
@@ -55,7 +60,8 @@
         "requirements": ["BA Core", "BS Core"]
     },
     {
-        "id": "CISC260",
+        "id": 5,
+        "title": "CISC260",
         "name": "Machine Organization and Assembly Language",
         "description": "Introduction to the basics of machine organization. Programming tools and techniques at the machine and assembly levels. Assembly language programming and computer arithmetic techniques.",
         "credits": 3,
@@ -66,7 +72,8 @@
         "requirements": ["BA Core", "BS Core"]
     },
     {
-        "id": "CISC275",
+        "id": 6,
+        "title": "CISC275",
         "name": "Introduction to Software Engineering",
         "description": "Object oriented software design and development through use of an object oriented programming language. Topics include team programming, design patterns, graphical user interfaces, software engineering tools (e.g., integrated development environments, version control, build management, bug tracking, automated testing).",
         "credits": 3,
@@ -77,7 +84,8 @@
         "requirements": ["BA Core", "BS Core"]
     },
     {
-        "id": "CISC303",
+        "id": 7,
+        "title": "CISC303",
         "name": "Automata Theory",
         "description": "Automata and formal language theory. Background for advanced applications in compilers, computer networks, operating systems, and natural language processing. Finite automata and regular languages. Push down automata and context free grammars. Turing machines.",
         "credits": 3,
@@ -88,9 +96,10 @@
         "requirements": ["BS Core"]
     },
     {
-        "id": "CISC320",
+        "id": 8,
+        "title": "CISC320",
         "name": "Introduction to Algorithms",
-        "description": "Design and analysis of algorithms: worst/average case analysis, proofs for correctness and performance of algorithms. Algorithmic strategies (divide and conquer, greedy methods, dynamic programming, etc.). Algorithms for searching, forming and traversal of strings, trees and graphs. Categorization of computational problems: classes P and NP. NP completeness.",
+        "description": "Design and analysis of algorithms: worst/average case analysis, proofs for correctness and performance of algorithms. Algorithmic strategies (divtitlee and conquer, greedy methods, dynamic programming, etc.). Algorithms for searching, forming and traversal of strings, trees and graphs. Categorization of computational problems: classes P and NP. NP completeness.",
         "credits": 3,
         "semester": ["Fall", "Spring"],
         "department": "COE",
@@ -99,7 +108,8 @@
         "requirements": ["BS Core"]
     },
     {
-        "id": "CISC361",
+        "id": 9,
+        "title": "CISC361",
         "name": "Operating Systems",
         "description": "Principles and techniques employed in the development of operating systems and their control programs. Includes management of memory, processors, I/O devices.",
         "credits": 3,
@@ -110,7 +120,8 @@
         "requirements": ["BS Core"]
     },
     {
-        "id": "CISC372",
+        "id": 10,
+        "title": "CISC372",
         "name": "Parallel Computing",
         "description": "Introduction to parallel computing concepts, methodologies, and tools. Programming and algorithmic techniques for code that will run simultaneously on parallel computing architectures. Topics include: single and multi-core parallelism, shared and distributed memory architectures, concurrency, program decomposition, data distribution, communication, load balancing, scalability, locality, granularity, debugging, performance evaluation.",
         "credits": 3,
@@ -121,7 +132,8 @@
         "requirements": ["BS Core"]
     },
     {
-        "id": "MATH210",
+        "id": 11,
+        "title": "MATH210",
         "name": "Discrete Mathematics I",
         "description": "Elements of sets and logic. Relations, functions. Integers. Induction and recursion. Principles and techniques of counting. Graphs. Paths and circuits",
         "credits": 3,
@@ -132,7 +144,8 @@
         "requirements": ["BA Core", "BS Core"]
     },
     {
-        "id": "MATH241",
+        "id": 12,
+        "title": "MATH241",
         "name": "Analytical Geometry and Calculus A",
         "description": "Functions, limits, continuity, derivatives. Polynomial, rational, exponential, hyperbolic, logarithmic, trigonometric and inverse trigonometric functions. Definite and indefinite integrals and the Fundamental Theorem of Calculus. Simple differential equations (separable ODE, linear ODE). ODE models leading to exponential growth and decay.",
         "credits": 4,
@@ -143,7 +156,8 @@
         "requirements": ["BA Core", "BS Core"]
     },
     {
-        "id": "MATH242",
+        "id": 13,
+        "title": "MATH242",
         "name": "Analytical Geometry and Calculus B",
         "description": "Brief review of MATH 241; evaluation of limits by L’Hospital’s rule; applications of integration; integration techniques; parametric curves; polar coordinates; infinite sequences and series. Includes use of computers to perform symbolic, numerical and graphical analysis.",
         "credits": 4,
@@ -154,7 +168,8 @@
         "requirements": ["BS Core"]
     },
     {
-        "id": "MATH205",
+        "id": 14,
+        "title": "MATH205",
         "name": "Statistical Methods",
         "description": "Descriptive statistics, graphical displays, sampling, variation, normal distribution, estimation, hypothesis testing, one-way analysis of variance, simple linear regression and goodness of fit. Laboratory covers use of statistical packages on mainframe and microcomputers.",
         "credits": 3,
@@ -165,7 +180,8 @@
         "requirements": ["BS Core"]
     },
     {
-        "id": "MATH350",
+        "id": 15,
+        "title": "MATH350",
         "name": "Probability Theory and Simulation Methods",
         "description": "Introduces the basic theory of discrete and continuous aspects of probability theory. Topics include bivariate distributions, sums of independent random variables, moment generating functions, laws of large numbers and central limit theorem.",
         "credits": 3,
@@ -176,7 +192,8 @@
         "requirements": ["BS Core"]
     },
     {
-        "id": "CISC498",
+        "id": 16,
+        "title": "CISC498",
         "name": "Computer Science Senior Design Project I",
         "description": "First semester of two-semester senior software design course.  Students work in teams to develop solutions to real-world problems for a client.  Application of a modern software engineering process; requirement solicitation, analysis, and specification; prototyping; design; incremental development; testing and verification; client interaction; and presentation. Offered in Fall only.",
         "credits": 3,
@@ -187,7 +204,8 @@
         "requirements": ["Capstone", "DLE"]
     },
     {
-        "id": "CISC499",
+        "id": 17,
+        "title": "CISC499",
         "name": "Computer Science Senior Design Project II",
         "description": "Practicum; Continuation of CISC 498.",
         "credits": 3,
@@ -198,7 +216,8 @@
         "requirements": ["Capstone", "DLE"]
     },
     {
-        "id": "UNIV401",
+        "id": 18,
+        "title": "UNIV401",
         "name": "Senior Thesis I",
         "description": "Senior thesis for students working toward a degree with distinction.",
         "credits": 3,
@@ -209,7 +228,8 @@
         "requirements": ["Capstone", "DLE"]
     },
     {
-        "id": "UNIV402",
+        "id": 19,
+        "title": "UNIV402",
         "name": "Senior Thesis II",
         "description": "Continuation of UNIV401",
         "credits": 3,
@@ -220,9 +240,10 @@
         "requirements": ["Capstone", "DLE"]
     },
     {
-        "id": "PHYS207",
+        "id": 20,
+        "title": "PHYS207",
         "name": "Fundamentals of Physics I",
-        "description": "First course in a sequence with PHYS 208 that provides an introduction to physics for those in physical sciences and engineering. Emphasis on Newton’s laws of motion and conservation principles. These are applied to motion in a gravitational field, and to rotation of a rigid body. Integrates conceptual understanding with extensive problem solving.",
+        "description": "First course in a sequence with PHYS 208 that provtitlees an introduction to physics for those in physical sciences and engineering. Emphasis on Newton’s laws of motion and conservation principles. These are applied to motion in a gravitational field, and to rotation of a rigtitle body. Integrates conceptual understanding with extensive problem solving.",
         "credits": 3,
         "semester": ["Fall", "Winter", "Spring", "Summer"],
         "department": "CAS",
@@ -231,7 +252,8 @@
         "requirements": ["Science Courses", "CAS Breadth D"]
     },
     {
-        "id": "PHYS227",
+        "id": 21,
+        "title": "PHYS227",
         "name": "Fundamentals of Physics Laboratory I",
         "description": "Introductory laboratory experience associated with the course content in PHYS 207.  This includes exploring projectile motion, linear and rotational dynamics, energy, momentum, and simple harmonic motion.",
         "credits": 1,
@@ -239,12 +261,17 @@
         "department": "CAS",
         "prereq": [""],
         "coreq": ["PHYS207"],
-        "requirements": ["Science Courses", "University Breadth", "CAS Breadth D"]
+        "requirements": [
+            "Science Courses",
+            "University Breadth",
+            "CAS Breadth D"
+        ]
     },
     {
-        "id": "PHYS208",
+        "id": 22,
+        "title": "PHYS208",
         "name": "Fundamentals of Physics II",
-        "description": "Second course in a sequence with PHYS 207 that provides an introduction to physics for those in the physical sciences and engineering. Emphasis on electro- and magnetostatics in terms of forces, fields and potentials, with some elements of circuit theory. Furthermore, magnetic induction and Maxwell’s equations in integral form are introduced. Integrates conceptual understanding with extensive problem solving.",
+        "description": "Second course in a sequence with PHYS 207 that provtitlees an introduction to physics for those in the physical sciences and engineering. Emphasis on electro- and magnetostatics in terms of forces, fields and potentials, with some elements of circuit theory. Furthermore, magnetic induction and Maxwell’s equations in integral form are introduced. Integrates conceptual understanding with extensive problem solving.",
         "credits": 3,
         "semester": ["Fall", "Winter", "Spring", "Summer"],
         "department": "CAS",
@@ -253,7 +280,8 @@
         "requirements": ["Science Courses", "CAS Breadth D"]
     },
     {
-        "id": "PHYS228",
+        "id": 23,
+        "title": "PHYS228",
         "name": "Fundamentals of Physics Laboratory II",
         "description": "Introductory laboratory associated with topics coverd in PHYS 208.  This includes investigaing the properties of Electric and Magnetic fields, simple circuits, and simple motors.",
         "credits": 1,
@@ -261,32 +289,47 @@
         "department": "CAS",
         "prereq": ["PHYS227", "PHYS207"],
         "coreq": ["PHYS208"],
-        "requirements": ["Science Courses", "University Breadth", "CAS Breadth D"]
+        "requirements": [
+            "Science Courses",
+            "University Breadth",
+            "CAS Breadth D"
+        ]
     },
     {
-        "id": "CHEM103",
+        "id": 24,
+        "title": "CHEM103",
         "name": "General Chemistry I",
-        "description": "Matter, the changes that matter undergoes, and the laws governing these changes, with greater emphasis on atomic and molecular structure, chemicalbonding, and energy relationships. Properties of gases, liquids, solids and solutions.",
+        "description": "Matter, the changes that matter undergoes, and the laws governing these changes, with greater emphasis on atomic and molecular structure, chemicalbonding, and energy relationships. Properties of gases, liqutitles, soltitles and solutions.",
         "credits": 3,
         "semester": ["Fall", "Winter", "Spring", "Summer"],
         "department": "CAS",
         "prereq": [""],
         "coreq": ["CHEM133", "MATH114+"],
-        "requirements": ["Science Courses", "University Breadth", "CAS Breadth D"]
+        "requirements": [
+            "Science Courses",
+            "University Breadth",
+            "CAS Breadth D"
+        ]
     },
     {
-        "id": "CHEM133",
+        "id": 25,
+        "title": "CHEM133",
         "name": "General Chemistry Laboratory I",
-        "description": "Laboratory topics and techniques covered include: stoichiometry, gases, liquids, solids, atomic and molecular structure, chemical reactions in solution, and properties of solutions. 42h lab experiments.",
+        "description": "Laboratory topics and techniques covered include: stoichiometry, gases, liqutitles, soltitles, atomic and molecular structure, chemical reactions in solution, and properties of solutions. 42h lab experiments.",
         "credits": 1,
         "semester": ["Fall", "Winter", "Spring", "Summer"],
         "department": "CAS",
         "prereq": [""],
         "coreq": ["CHEM103", "MATH114+"],
-        "requirements": ["Science Courses", "University Breadth", "CAS Breadth D"]
+        "requirements": [
+            "Science Courses",
+            "University Breadth",
+            "CAS Breadth D"
+        ]
     },
     {
-        "id": "CHEM104",
+        "id": 26,
+        "title": "CHEM104",
         "name": "General Chemistry II",
         "description": "Continuation and application of CHEM 103 with additional emphasis on chemical spontaneity, equilibrium, rates of reactions, electrochemistry and organic chemistry. ",
         "credits": 3,
@@ -294,21 +337,31 @@
         "department": "CAS",
         "prereq": ["CHEM103", "CHEM133"],
         "coreq": ["CHEM134"],
-        "requirements": ["Science Courses", "University Breadth", "CAS Breadth D"]
+        "requirements": [
+            "Science Courses",
+            "University Breadth",
+            "CAS Breadth D"
+        ]
     },
     {
-        "id": "CHEM134",
+        "id": 27,
+        "title": "CHEM134",
         "name": "General Chemistry Laboratory II",
-        "description": "This laboratory course is the second in a two-semester sequence designed (and required) for science and engineering majors. Covers thermodynamics, kinetics, equilibrium among gases, liquids and solids, equilibrium in solution, acids and bases, electrochemistry, and nuclear chemistry.  Topics touched on briefly include transition elements and types and nomenclature of organic compounds. Descriptive chemistry of representative elements is interspersed throughout the course.  42h laboratory experiments.",
+        "description": "This laboratory course is the second in a two-semester sequence designed (and required) for science and engineering majors. Covers thermodynamics, kinetics, equilibrium among gases, liqutitles and soltitles, equilibrium in solution, actitles and bases, electrochemistry, and nuclear chemistry.  Topics touched on briefly include transition elements and types and nomenclature of organic compounds. Descriptive chemistry of representative elements is interspersed throughout the course.  42h laboratory experiments.",
         "credits": 1,
         "semester": ["Fall", "Winter", "Spring", "Summer"],
         "department": "CAS",
         "prereq": ["CHEM103", "CHEM133"],
         "coreq": ["CHEM104"],
-        "requirements": ["Science Courses", "University Breadth", "CAS Breadth D"]
+        "requirements": [
+            "Science Courses",
+            "University Breadth",
+            "CAS Breadth D"
+        ]
     },
     {
-        "id": "BISC207",
+        "id": 28,
+        "title": "BISC207",
         "name": "Introductory Biology I",
         "description": "Molecular basis of life. Structure and function of cells, including signal transduction pathways. Energy transformations. Classical Mendelian genetics and the flow of information from DNA to RNA to proteins. Laboratory focuses on the testing of hypotheses, data analysis and scientific writing.",
         "credits": 4,
@@ -316,10 +369,15 @@
         "department": "CAS",
         "prereq": ["MATH114+"],
         "coreq": [""],
-        "requirements": ["Science Courses", "University Breadth", "CAS Breadth D"]
+        "requirements": [
+            "Science Courses",
+            "University Breadth",
+            "CAS Breadth D"
+        ]
     },
     {
-        "id": "BISC208",
+        "id": 29,
+        "title": "BISC208",
         "name": "Introductory Biology II",
         "description": "Mechanisms of evolution. Physiology of multicellular plants and animals. Principles of ecology with emphasis on the biology of populations. Laboratory focuses on testing of hypotheses, data analysis and scientific writing. Animal and plant anatomy also studied.",
         "credits": 4,
@@ -327,10 +385,15 @@
         "department": "CAS",
         "prereq": ["BISC207"],
         "coreq": [""],
-        "requirements": ["Science Courses", "University Breadth", "CAS Breadth D"]
+        "requirements": [
+            "Science Courses",
+            "University Breadth",
+            "CAS Breadth D"
+        ]
     },
     {
-        "id": "GEOL105",
+        "id": 30,
+        "title": "GEOL105",
         "name": "Geological Hazards and Their Human Impact",
         "description": "Geological processes and events that adversely affect humans and civilization. Methods for predicting and dealing with geological hazards. May be taken with a 1 credit lab, GEOL 115.",
         "credits": 3,
@@ -338,45 +401,65 @@
         "department": "CAS",
         "prereq": [""],
         "coreq": ["GEOL115"],
-        "requirements": ["Science Courses", "University Breadth", "CAS Breadth D"]
+        "requirements": [
+            "Science Courses",
+            "University Breadth",
+            "CAS Breadth D"
+        ]
     },
     {
-        "id": "GEOL107",
+        "id": 31,
+        "title": "GEOL107",
         "name": "Geology of Dynamic Earth",
-        "description": "Principles of physical geology and its application in interpreting earth processes. Laboratory covers identification of earth materials and the interpretation of topographic and geologic maps.",
+        "description": "Principles of physical geology and its application in interpreting earth processes. Laboratory covers titleentification of earth materials and the interpretation of topographic and geologic maps.",
         "credits": 4,
         "semester": ["Fall"],
         "department": "CAS",
         "prereq": ["GEOL105"],
         "coreq": [""],
-        "requirements": ["Science Courses", "University Breadth", "CAS Breadth D"]
+        "requirements": [
+            "Science Courses",
+            "University Breadth",
+            "CAS Breadth D"
+        ]
     },
     {
-        "id": "GEOL115",
+        "id": 32,
+        "title": "GEOL115",
         "name": "Geological Hazards Laboratory",
-        "description": "Laboratory investigation of environmental geological processes and their impact on society: earthquakes, volcanoes, coastal hazards, rivers and streams, groundwater. Identification of earth materials and study of earth processes using topographical, geological and tectonic maps.",
+        "description": "Laboratory investigation of environmental geological processes and their impact on society: earthquakes, volcanoes, coastal hazards, rivers and streams, groundwater. titleentification of earth materials and study of earth processes using topographical, geological and tectonic maps.",
         "credits": 1,
         "semester": ["Fall", "Spring", "Summer"],
         "department": "CAS",
         "prereq": [""],
         "coreq": ["GEOL105"],
-        "requirements": ["Science Courses", "University Breadth", "CAS Breadth D"]
+        "requirements": [
+            "Science Courses",
+            "University Breadth",
+            "CAS Breadth D"
+        ]
     },
     {
-        "id": "GEOL110",
+        "id": 33,
+        "title": "GEOL110",
         "name": "Earth's Evolving Systems",
-        "description": "History of the earth and its biota. Origins, evolution and mass extinctionsof major groups of organisms as demonstrated by the earth’s fossil record. Laboratory covers identification of basic fossil groups and exercises in interpreting Earth history.",
+        "description": "History of the earth and its biota. Origins, evolution and mass extinctionsof major groups of organisms as demonstrated by the earth’s fossil record. Laboratory covers titleentification of basic fossil groups and exercises in interpreting Earth history.",
         "credits": 4,
         "semester": ["Spring"],
         "department": "CAS",
         "prereq": ["GEOL107"],
         "coreq": [""],
-        "requirements": ["Science Courses", "University Breadth", "CAS Breadth D"]
+        "requirements": [
+            "Science Courses",
+            "University Breadth",
+            "CAS Breadth D"
+        ]
     },
     {
-        "id": "CISC355",
+        "id": 34,
+        "title": "CISC355",
         "name": "Computers, Ethics, and Society",
-        "description": "Explains relationships among information technology, society and ethics by examining issues raised by increasingly widespread use of computers. Topics include ethics for computer professionals, computer impact on factory work, office work, personal privacy and social power distribution.",
+        "description": "Explains relationships among information technology, society and ethics by examining issues raised by increasingly wtitleespread use of computers. Topics include ethics for computer professionals, computer impact on factory work, office work, personal privacy and social power distribution.",
         "credits": 3,
         "semester": ["Spring"],
         "department": "COE",
@@ -385,7 +468,8 @@
         "requirements": ["Additional Reqs, University Breadth, CAS Breadth A"]
     },
     {
-        "id": "CISC304",
+        "id": 35,
+        "title": "CISC304",
         "name": "Logic for Programming",
         "description": "Propositional and predicate logic for general reasoning and advanced applications in knowledge representation in artificial intelligence and database, program correctness and programming semantics. Models, resolution, logic programming, and natural deduction.",
         "credits": 3,
@@ -396,7 +480,8 @@
         "requirements": ["Additional Reqs"]
     },
     {
-        "id": "MATH349",
+        "id": 36,
+        "title": "MATH349",
         "name": "Elementary Linear Algebra",
         "description": "Systems of linear equations, linear combinations of vectors, and matrix algebra. Determinants, eigenvalues and eigenvectors, similarity and diagonalization of square matrices. Vector spaces, linear dependence and independence, basis and dimension, linear transformations. Inner product spaces, orthogonality, orthogonal projections, fundamental subspaces. A software package may be used for the analysis and solution of linear algebra problems.",
         "credits": 3,
@@ -407,7 +492,8 @@
         "requirements": ["Additional Reqs"]
     },
     {
-        "id": "ENGL312",
+        "id": 37,
+        "title": "ENGL312",
         "name": "Written Communications in Business",
         "description": "Examines the role of written communication in corporate decision making. Students write memos, letters, proposals and reports that simulate on-the-job communication tasks, and are encouraged to use materials from their fields of specialization.",
         "credits": 3,
@@ -418,7 +504,8 @@
         "requirements": ["Additional Reqs", "COE Breadth"]
     },
     {
-        "id": "ENGL410",
+        "id": 38,
+        "title": "ENGL410",
         "name": "Technical Writing",
         "description": "Selected problems in technical communications, the preparation of reports and technical editing.",
         "credits": 3,
@@ -427,159 +514,5 @@
         "prereq": ["ENGL110"],
         "coreq": [""],
         "requirements": ["Additional Reqs", "COE Breadth"]
-    },
-    {
-        "id": "",
-        "name": "",
-        "description": "",
-        "credits": 3,
-        "semester": "",
-        "department": "",
-        "prereq": [""],
-        "coreq": [""],
-        "requirements": []
-    },
-    {
-        "id": "",
-        "name": "",
-        "description": "",
-        "credits": 3,
-        "semester": "",
-        "department": "",
-        "prereq": [""],
-        "coreq": [""],
-        "requirements": []
-    },
-    {
-        "id": "",
-        "name": "",
-        "description": "",
-        "credits": 3,
-        "semester": "",
-        "department": "",
-        "prereq": [""],
-        "coreq": [""],
-        "requirements": []
-    },
-    {
-        "id": "",
-        "name": "",
-        "description": "",
-        "credits": 3,
-        "semester": "",
-        "department": "",
-        "prereq": [""],
-        "coreq": [""],
-        "requirements": []
-    },
-    {
-        "id": "",
-        "name": "",
-        "description": "",
-        "credits": 3,
-        "semester": "",
-        "department": "",
-        "prereq": [""],
-        "coreq": [""],
-        "requirements": []
-    },
-    {
-        "id": "",
-        "name": "",
-        "description": "",
-        "credits": 3,
-        "semester": "",
-        "department": "",
-        "prereq": [""],
-        "coreq": [""],
-        "requirements": []
-    },
-    {
-        "id": "",
-        "name": "",
-        "description": "",
-        "credits": 3,
-        "semester": "",
-        "department": "",
-        "prereq": [""],
-        "coreq": [""],
-        "requirements": []
-    },
-    {
-        "id": "",
-        "name": "",
-        "description": "",
-        "credits": 3,
-        "semester": "",
-        "department": "",
-        "prereq": [""],
-        "coreq": [""],
-        "requirements": []
-    },
-    {
-        "id": "",
-        "name": "",
-        "description": "",
-        "credits": 3,
-        "semester": "",
-        "department": "",
-        "prereq": [""],
-        "coreq": [""],
-        "requirements": []
-    },
-    {
-        "id": "",
-        "name": "",
-        "description": "",
-        "credits": 3,
-        "semester": "",
-        "department": "",
-        "prereq": [""],
-        "coreq": [""],
-        "requirements": []
-    },
-    {
-        "id": "",
-        "name": "",
-        "description": "",
-        "credits": 3,
-        "semester": "",
-        "department": "",
-        "prereq": [""],
-        "coreq": [""],
-        "requirements": []
-    },
-    {
-        "id": "",
-        "name": "",
-        "description": "",
-        "credits": 3,
-        "semester": "",
-        "department": "",
-        "prereq": [""],
-        "coreq": [""],
-        "requirements": []
-    },
-    {
-        "id": "",
-        "name": "",
-        "description": "",
-        "credits": 3,
-        "semester": "",
-        "department": "",
-        "prereq": [""],
-        "coreq": [""],
-        "requirements": []
-    },
-    {
-        "id": "",
-        "name": "",
-        "description": "",
-        "credits": 3,
-        "semester": "",
-        "department": "",
-        "prereq": [""],
-        "coreq": [""],
-        "requirements": []
     }
 ]
