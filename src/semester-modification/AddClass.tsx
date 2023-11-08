@@ -5,16 +5,42 @@ import { Button } from "react-bootstrap";
 
 export function AddClass({
     schedule,
+    scheduleID,
     newClass,
     onAddClass
 }: {
-    schedule: semester;
+    schedule: semester[];
+    scheduleID: number;
     newClass: classes;
-    onAddClass: (updatedSchedule: semester) => void;
+    onAddClass: (updatedSchedule: semester[]) => void;
 }): JSX.Element {
     function addNewClass() {
-        const updatedSchedule = { ...schedule };
-        updatedSchedule.classList = updatedSchedule.classList.concat(newClass);
+        // Create a new array of semesters
+        const updatedSchedule = [...schedule];
+        const semesterIDX = updatedSchedule.findIndex(
+            (semester: semester): boolean => semester.id == scheduleID
+        );
+
+        // Find the semester at the specified index (scheduleID)
+        const semesterToUpdate = updatedSchedule[semesterIDX];
+
+        // Create a new array of classes for the updated semester
+        const updatedClasses = [...semesterToUpdate.classList, newClass];
+
+        // Get new credit total
+        const totalCredits = updatedClasses.reduce(
+            (total: number, currentClass: classes) =>
+                total + currentClass.credits,
+            0
+        );
+
+        // Update the classList of the semester with the new array of classes
+        semesterToUpdate.classList = updatedClasses;
+        semesterToUpdate.totalCredits = totalCredits;
+
+        // Update the schedule with the modified semester
+        updatedSchedule[semesterIDX] = semesterToUpdate;
+
         onAddClass(updatedSchedule);
     }
 
@@ -24,30 +50,12 @@ export function AddClass({
         </div>
     );
 }
-//Paste function into file using AddClass
-//updates a state with a semeter object to have the new updated list of classes
-// function onAddClass(updatedSchedule: semester) {
-//     setSampleSemester(updatedSchedule);
-// }
 
-// const [sampleSemester, setSampleSemester] = useState({
-//     classList: [
-//         /* your initial class list here */
-//     ],
-//     totalCredits: 0, // Update this based on the initial data
-//     season: "Fall 2023"
-// });
-
-{
-    /* <AddClass
-    schedule={sampleSemester}
-    newClass={{
-        code: "PHYS101",
-        title: "Physics for Beginners",
-        credits: 4,
-        preReq: [],
-        instructor: "Professor Anderson"
-    }}
-    onAddClass={handleAddClass}
-/>; */
-}
+// <AddClass
+//     schedule={exClass}
+//     scheduleID={1}
+//     newClass={addNewClass}
+//     onAddClass={(updatedSchedule: semester[]): void => {
+//         setexClass(updatedSchedule);
+//     }}
+// ></AddClass>;
