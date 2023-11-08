@@ -4,4 +4,5 @@ export interface Class {
     credits: number;
     degreeRequirements: string[];
     coursePrereq: string[];
+    courseCoreq: string[];
 }
