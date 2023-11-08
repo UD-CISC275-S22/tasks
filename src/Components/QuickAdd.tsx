@@ -13,6 +13,7 @@ interface QuickAddProps {
 }
 
 function CourseSearch(props: QuickAddProps): JSX.Element {
+    //const [isQuickAdd, setIsQuickAdd] = useState<boolean>(false);
     const [courseCode, setCourseCode] = useState("");
     const [courseInfo, setCourseInfo] = useState<Class | null>(null);
     const [year, setYear] = useState("");
@@ -53,6 +54,7 @@ function CourseSearch(props: QuickAddProps): JSX.Element {
 
     const handleAddCourse = () => {
         if (courseInfo) {
+            console.log(courseInfo);
             props.onCourseInfo({ ...courseInfo, semester, year });
         }
     };
@@ -79,15 +81,6 @@ function CourseSearch(props: QuickAddProps): JSX.Element {
                     <br></br>
                     {year === "" || semester === "" ? (
                         <div>
-                            <label htmlFor="year">Year: </label>
-                            <input
-                                type="text"
-                                id="year"
-                                name="year"
-                                value={year}
-                                onChange={handleYearChange}
-                            />
-                            <br></br>
                             <label htmlFor="semester">Semester: </label>
                             <select
                                 id="semester"
@@ -100,6 +93,15 @@ function CourseSearch(props: QuickAddProps): JSX.Element {
                                 <option value="Spring">Spring</option>
                                 <option value="Summer">Summer</option>
                             </select>
+                            <br></br>
+                            <label htmlFor="year">Year: </label>
+                            <input
+                                type="text"
+                                id="year"
+                                name="year"
+                                value={year}
+                                onChange={handleYearChange}
+                            />
                             <br></br>
                             <button onClick={handleAddCourse}>
                                 Add Course

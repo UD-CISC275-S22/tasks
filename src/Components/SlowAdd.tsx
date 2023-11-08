@@ -14,8 +14,8 @@ function SlowAdd(props: SlowAddProps): JSX.Element {
         preReqs: [],
         credits: 0,
         canEditCredits: true,
-        semester: "Fall",
-        year: "Freshman",
+        semester: "",
+        year: "",
         taken: true,
         note: ""
     });
@@ -47,7 +47,8 @@ function SlowAdd(props: SlowAddProps): JSX.Element {
     };
     const handlePreReqChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const tempValue = e.target.value;
-        setPreReqs((prePreReqs) => [...prePreReqs, tempValue]);
+        const preReqArray = tempValue.split(",").map((preReq) => preReq.trim());
+        setPreReqs(preReqArray);
         //Fix later
     };
 
@@ -90,7 +91,7 @@ function SlowAdd(props: SlowAddProps): JSX.Element {
                     type="text"
                     id="title"
                     name="courseTitle"
-                    value={courseInfo.courseTitle}
+                    value={courseTitle}
                     onChange={handleTitleChange}
                 />
             </div>
@@ -101,7 +102,7 @@ function SlowAdd(props: SlowAddProps): JSX.Element {
                     type="text"
                     id="courseCode"
                     name="courseCode"
-                    value={courseInfo.courseCode}
+                    value={courseCode}
                     onChange={handleCourseCodeChange}
                 />
             </div>
@@ -112,7 +113,7 @@ function SlowAdd(props: SlowAddProps): JSX.Element {
                     type="text"
                     id="preReq"
                     name="preReqs"
-                    value={courseInfo.preReqs.join(", ")}
+                    value={preReqs.join(", ")}
                     onChange={handlePreReqChange}
                 />
             </div>
@@ -123,8 +124,11 @@ function SlowAdd(props: SlowAddProps): JSX.Element {
                     type="number"
                     id="credits"
                     name="credits"
-                    value={courseInfo.credits.toString()}
+                    value={credits.toString()}
                     onChange={handleCredits}
+                    min={1}
+                    max={10}
+                    defaultValue={0}
                 />
             </div>
 
@@ -133,7 +137,7 @@ function SlowAdd(props: SlowAddProps): JSX.Element {
                 <select
                     id="semester"
                     name="semester"
-                    value={courseInfo.semester}
+                    value={semester}
                     onChange={handleSemesterChange}
                 >
                     <option value="Fall">Fall</option>
@@ -148,7 +152,7 @@ function SlowAdd(props: SlowAddProps): JSX.Element {
                 <input
                     id="year"
                     name="year"
-                    value={courseInfo.year}
+                    value={year}
                     onChange={handleYearChange}
                 />
             </div>

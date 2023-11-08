@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-//import { Class } from "../interfaces/class";
+import { Class } from "../interfaces/class";
+import QuickAdd from "./QuickAdd";
+import SlowAdd from "./SlowAdd";
 
 import { /*Button,*/ Row, Col, Form, Button } from "react-bootstrap";
 // import { degreePlan } from "../interfaces/degreePlan";
 // import { semester } from "../interfaces/semster";
-// import QuickAdd from "./QuickAdd";
-// import SlowAdd from "./SlowAdd";
 
 //UNCOMMENT SLOW, QUICK, CLASS WHEN READY TO WORK ON THEM
 
@@ -16,68 +16,10 @@ export function SingleMultipleSemester(): JSX.Element {
     const [semArrClicked, setSemArrClicked] = useState<string[]>(semArr);
     const [clicked, setClicked] = useState<boolean>(false);
     //const [degreePlan, setDegreePlan] = useState<degreePlan>();
-    // const [semesterClasses /*, setSemesterClasses*/] = useState<Class[]>([
-    //     {
-    //         courseTitle: "Introduction to Algorithms",
-    //         courseCode: "CISC320",
-    //         credits: 3,
-    //         canEditCredits: false,
-    //         numPreReqs: 2,
-    //         preReqs: ["MATH210", "CISC220"],
-    //         semester: "Fall",
-    //         year: "Freshman",
-    //         taken: false,
-    //         note: ""
-    //     },
-    //     {
-    //         courseTitle: "Computers, Ethics and Society",
-    //         courseCode: "CISC355",
-    //         credits: 3,
-    //         canEditCredits: false,
-    //         numPreReqs: 0,
-    //         preReqs: [],
-    //         semester: "Fall",
-    //         year: "Freshman",
-    //         taken: false,
-    //         note: ""
-    //     }
-    // ]);
+    const [semesterClasses, setSemesterClasses] = useState<Class[]>([]);
     function addtable(semester: string) {
         return (
             <div>
-                {/* <div>
-                    <h4>
-                        Search for your course, or manually input your course.
-                    </h4>
-                    <div style={{ display: "flex", justifyContent: "center" }}>
-                        <div style={{ marginRight: "5px" }}>
-                            <QuickAdd
-                                onCourseInfo={function (
-                                    courseInfo: Class & {
-                                        semester: string;
-                                        year: string;
-                                    }
-                                ): void {
-                                    throw new Error(
-                                        "Function not implemented."
-                                    );
-                                }}
-                            />
-                        </div>
-                        <div className="separator"></div>
-                        <div style={{ marginLeft: "5px" }}>
-                            <SlowAdd
-                                onCourseInfo={function (
-                                    courseInfo: Class
-                                ): void {
-                                    throw new Error(
-                                        "Function not implemented."
-                                    );
-                                }}
-                            />
-                        </div>
-                    </div>
-                </div> */}
                 {/* github is not letting me push it when this is active, uncomment when ready to work */}
                 <div>
                     <Col>
@@ -125,6 +67,50 @@ export function SingleMultipleSemester(): JSX.Element {
             </div>
         );
     }
+
+    function addCourse(): JSX.Element {
+        console.log(semesterClasses);
+        return (
+            <div>
+                <h4>Search for your course, or manually input your course.</h4>
+                <div style={{ display: "flex", justifyContent: "center" }}>
+                    <div style={{ marginRight: "5px" }}>
+                        <QuickAdd
+                            onCourseInfo={(
+                                courseInfo: Class & {
+                                    semester: string;
+                                    year: string;
+                                }
+                            ): void => {
+                                setSemesterClasses((prevState) => [
+                                    ...prevState,
+                                    courseInfo
+                                ]);
+                                setSemester1(courseInfo.semester);
+                                setYear1(courseInfo.year);
+                                addSemLabel(semester1, year1);
+                            }}
+                        />
+                    </div>
+                    <div className="separator"></div>
+                    <div style={{ marginLeft: "5px" }}>
+                        <SlowAdd
+                            onCourseInfo={function (courseInfo: Class): void {
+                                setSemesterClasses((prevState) => [
+                                    ...prevState,
+                                    courseInfo
+                                ]);
+                                setSemester1(courseInfo.semester);
+                                setYear1(courseInfo.year);
+                                addSemLabel(semester1, year1);
+                            }}
+                        />
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
     // Make a helper function to add information to the table.(Add/Remove from array?)
     function addForClicked(clickedArr: string[]) {
         const tables = clickedArr.map(
@@ -133,12 +119,12 @@ export function SingleMultipleSemester(): JSX.Element {
         );
         return tables;
     }
-    function updateSemester1(event: React.ChangeEvent<HTMLInputElement>) {
-        setSemester1(event.target.value);
-    }
-    function updateYear1(event: React.ChangeEvent<HTMLInputElement>) {
-        setYear1(event.target.value);
-    }
+    // function updateSemester1(event: React.ChangeEvent<HTMLInputElement>) {
+    //     setSemester1(event.target.value);
+    // }
+    // function updateYear1(event: React.ChangeEvent<HTMLInputElement>) {
+    //     setYear1(event.target.value);
+    // }
     function updateSemClicked(event: React.ChangeEvent<HTMLInputElement>) {
         setClicked(true);
         const sem = event.target.value;
@@ -158,16 +144,17 @@ export function SingleMultipleSemester(): JSX.Element {
     }
     return (
         <div>
+            {addCourse()}
             <h3>Single Semester</h3>
             <Form.Group controlId="formCreateSemester">
-                <Form.Label>Input Semester:</Form.Label>
-                <Button onClick={() => addSemLabel(semester1, year1)}>
+                {/* <Form.Label>Input Semester:</Form.Label> */}
+                {/* <Button onClick={() => addSemLabel(semester1, year1)}>
                     Enter
-                </Button>
-                <Form.Control value={semester1} onChange={updateSemester1} />
+                </Button> */}
+                {/* <Form.Control value={semester1} onChange={updateSemester1} />
                 Semester
                 <Form.Control value={year1} onChange={updateYear1} />
-                Year
+                Year */}
                 <Col>
                     {semArr.map((sem: string) => {
                         return (
