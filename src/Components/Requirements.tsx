@@ -14,7 +14,7 @@ import { math } from "../Interfaces/requirements";
 
 const [degree] = useState<string>("AI"); //add back set degree
 
-/** Determines if a course is a pre */
+/** Determines if a course is a pre
 function isPrereq(course1: Course, course2: Course): boolean {
     if (course1.title in course2.prereq) {
         return true;
@@ -22,6 +22,7 @@ function isPrereq(course1: Course, course2: Course): boolean {
         return false;
     }
 }
+*/
 
 
 //EXAMPLE of a degree function
@@ -51,14 +52,16 @@ export function DataScience(): Degree {}
 ...keep going
 */
 
-//purpose: ?
+/*
 function num(name: string): number {
     return 4;
 }
+*/
 
 /* To determine if a course fulfills a degree requirement
 "CISC220 is a required course for all degrees"
 "The degree must have at least 3 restrcited electives */
+/*
 function fulfillsDegreeReq(course: Course, degree: Degree): boolean {   
     if (course.title in 
         degree.capstoneReq 
@@ -74,11 +77,13 @@ function fulfillsDegreeReq(course: Course, degree: Degree): boolean {
         can do so by suming number of credits for each course within that section (ex. course1.credits + course2.credits, etc)
         then depending on the requirement type (can be done in if statements) then that shows if you met the requirement
         I might recommend that this be a seprate function all together though
-        */
+        */ 
+/*
         return true;
     }
     return false;
 }
+*/
 
 export default function YourComponent() {
     return (
