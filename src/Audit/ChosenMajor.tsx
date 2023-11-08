@@ -3,14 +3,14 @@ import React from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 
 const majors = [
-    "Major1",
-    "Major2",
-    "Major3",
-    "Major4",
-    "Major5",
-    "Major6",
-    "Major7",
-    "Major8"
+    "Artificial Intelligence and Robotics Concentration",
+    "Bioinformatics Concentration",
+    "Cybersecurity Concentration",
+    "Data Science Concentration",
+    "High Performance Computing Concentration",
+    "Systems and Networks Concentration",
+    "Theory and Computation Concentration",
+    "Traditional Program with Custom Focus Area"
 ];
 
 export function ChosenMajor({
@@ -28,8 +28,6 @@ export function ChosenMajor({
                 </Modal.Header>
                 <Modal.Body>
                     <Form.Group>
-                        <Form.Label>Majors</Form.Label>
-                        <Form.Label>Answer:</Form.Label>
                         <Form.Select style={{ textAlign: "center" }}>
                             {majors.map((options: string) => (
                                 <option key={options} value={options}>
