@@ -468,10 +468,7 @@
         "requirements": ["Additional Reqs, University Breadth, CAS Breadth A"]
     },
     {
-<<<<<<< HEAD
-=======
         "id": 35,
->>>>>>> main
         "title": "CISC304",
         "name": "Logic for Programming",
         "description": "Propositional and predicate logic for general reasoning and advanced applications in knowledge representation in artificial intelligence and database, program correctness and programming semantics. Models, resolution, logic programming, and natural deduction.",
@@ -483,10 +480,7 @@
         "requirements": ["Additional Reqs"]
     },
     {
-<<<<<<< HEAD
-=======
         "id": 36,
->>>>>>> main
         "title": "MATH349",
         "name": "Elementary Linear Algebra",
         "description": "Systems of linear equations, linear combinations of vectors, and matrix algebra. Determinants, eigenvalues and eigenvectors, similarity and diagonalization of square matrices. Vector spaces, linear dependence and independence, basis and dimension, linear transformations. Inner product spaces, orthogonality, orthogonal projections, fundamental subspaces. A software package may be used for the analysis and solution of linear algebra problems.",
@@ -498,10 +492,7 @@
         "requirements": ["Additional Reqs"]
     },
     {
-<<<<<<< HEAD
-=======
         "id": 37,
->>>>>>> main
         "title": "ENGL312",
         "name": "Written Communications in Business",
         "description": "Examines the role of written communication in corporate decision making. Students write memos, letters, proposals and reports that simulate on-the-job communication tasks, and are encouraged to use materials from their fields of specialization.",
@@ -513,10 +504,7 @@
         "requirements": ["Additional Reqs", "COE Breadth"]
     },
     {
-<<<<<<< HEAD
-=======
         "id": 38,
->>>>>>> main
         "title": "ENGL410",
         "name": "Technical Writing",
         "description": "Selected problems in technical communications, the preparation of reports and technical editing.",
@@ -526,162 +514,5 @@
         "prereq": ["ENGL110"],
         "coreq": [""],
         "requirements": ["Additional Reqs", "COE Breadth"]
-<<<<<<< HEAD
-    },
-    {
-        "title": "",
-        "name": "",
-        "description": "",
-        "credits": 3,
-        "semester": "",
-        "department": "",
-        "prereq": [""],
-        "coreq": [""],
-        "requirements": []
-    },
-    {
-        "title": "",
-        "name": "",
-        "description": "",
-        "credits": 3,
-        "semester": "",
-        "department": "",
-        "prereq": [""],
-        "coreq": [""],
-        "requirements": []
-    },
-    {
-        "title": "",
-        "name": "",
-        "description": "",
-        "credits": 3,
-        "semester": "",
-        "department": "",
-        "prereq": [""],
-        "coreq": [""],
-        "requirements": []
-    },
-    {
-        "title": "",
-        "name": "",
-        "description": "",
-        "credits": 3,
-        "semester": "",
-        "department": "",
-        "prereq": [""],
-        "coreq": [""],
-        "requirements": []
-    },
-    {
-        "title": "",
-        "name": "",
-        "description": "",
-        "credits": 3,
-        "semester": "",
-        "department": "",
-        "prereq": [""],
-        "coreq": [""],
-        "requirements": []
-    },
-    {
-        "title": "",
-        "name": "",
-        "description": "",
-        "credits": 3,
-        "semester": "",
-        "department": "",
-        "prereq": [""],
-        "coreq": [""],
-        "requirements": []
-    },
-    {
-        "title": "",
-        "name": "",
-        "description": "",
-        "credits": 3,
-        "semester": "",
-        "department": "",
-        "prereq": [""],
-        "coreq": [""],
-        "requirements": []
-    },
-    {
-        "title": "",
-        "name": "",
-        "description": "",
-        "credits": 3,
-        "semester": "",
-        "department": "",
-        "prereq": [""],
-        "coreq": [""],
-        "requirements": []
-    },
-    {
-        "title": "",
-        "name": "",
-        "description": "",
-        "credits": 3,
-        "semester": "",
-        "department": "",
-        "prereq": [""],
-        "coreq": [""],
-        "requirements": []
-    },
-    {
-        "title": "",
-        "name": "",
-        "description": "",
-        "credits": 3,
-        "semester": "",
-        "department": "",
-        "prereq": [""],
-        "coreq": [""],
-        "requirements": []
-    },
-    {
-        "title": "",
-        "name": "",
-        "description": "",
-        "credits": 3,
-        "semester": "",
-        "department": "",
-        "prereq": [""],
-        "coreq": [""],
-        "requirements": []
-    },
-    {
-        "title": "",
-        "name": "",
-        "description": "",
-        "credits": 3,
-        "semester": "",
-        "department": "",
-        "prereq": [""],
-        "coreq": [""],
-        "requirements": []
-    },
-    {
-        "title": "",
-        "name": "",
-        "description": "",
-        "credits": 3,
-        "semester": "",
-        "department": "",
-        "prereq": [""],
-        "coreq": [""],
-        "requirements": []
-    },
-    {
-        "title": "",
-        "name": "",
-        "description": "",
-        "credits": 3,
-        "semester": "",
-        "department": "",
-        "prereq": [""],
-        "coreq": [""],
-        "requirements": []
-=======
->>>>>>> main
     }
 ]
