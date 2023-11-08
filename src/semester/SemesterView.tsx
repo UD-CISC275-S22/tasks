@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { semester } from "../Interface/semester";
+import { AddClass } from "../semester-modification/AddClass";
+import { RemoveClass } from "../semester-modification/RemoveClass";
 
 export function SemesterView({
     semester,
@@ -41,6 +43,17 @@ export function SemesterView({
                                     {classItem.preReq.length === 0
                                         ? "None"
                                         : classItem.preReq}
+                                </td>
+                                <td>
+                                    <RemoveClass
+                                        schedule={currentSemester}
+                                        classToDelete={classItem}
+                                        onRemoveClass={function (
+                                            updatedSchedule: semester
+                                        ): void {
+                                            setSemester(updatedSchedule);
+                                        }}
+                                    ></RemoveClass>
                                 </td>
                                 {/*<td>
                                     {classItem.schedule.day.join(", ")},{" "}
