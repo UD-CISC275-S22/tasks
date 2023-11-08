@@ -37,3 +37,7 @@
         transform: rotate(360deg);
     }
 }
+/* App.css or a custom CSS file */
+.center {
+    text-align: center; /* Center-align the content within the table cells */
+}
