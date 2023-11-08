@@ -1,41 +1,35 @@
-//task 1: shows a single semester (DONE)
-//task 2: shows multiple semesters (DONE)
-//task 3: clear out semester
-//task 4: insert or remove a course in a semester
+/* eslint-disable prettier/prettier */
+//for visualization of semesters and altering the courses within them
 
 import React, { useState } from "react";
+import "./App.css";
+import { courseList } from "./course";
 import "./Semester.css";
 import { Course } from "../Interfaces/course";
 import { Button } from "react-bootstrap";
+import { Semester } from "../Interfaces/semester";
+import { Degree } from "../Interfaces/degree";
 
-//SemType: mostly here to change the semester type and show that there are these many options (can add Winter and Summer later)
-const SemType = ["Fall", "Spring"];
-//set the default semester to Fall
-const DEFAULT_SEMTYPE = SemType[0];
-
-//create an intial course for testing (will eventually replace this with actual courses)
-const initialCourse: Course = {
-    id: "CISC 275",
-    name: "Intro to Software Engineering",
-    description: "Sample description of CISC275",
-    credits: 3,
-    semester: "Both",
-    department: "COE",
-    requirements: ["CISC108"]
+//create an intial course for testing (will eventually replace this with actual courses from a default setting) - from course.tsx
+const COURSE_LIST = courseList;
+//create initial semester for testing
+const SEM1: Semester = {
+    type: ["Fall"],
+    year: 2024,
+    totalCredits: 18,
+    courseList: COURSE_LIST
 };
-//now initial the array of courses for useState constant (that way you can use that state to iterate through a list of courses you pass it)
-const initCourseArray: Course[] = [initialCourse];
 
 export function ViewSemester(): JSX.Element {
-    //need a state for an array of courses for fall and spring and the semestertype that the user wants to see (Fall or Spring Semester) and the number of semesters they want to view
-    const [fallcourse] = useState<Course[]>(initCourseArray); //an array of courses (NOTE FOR MICHAEL: add back setFallCourses)
-    const [springcourse] = useState<Course[]>(initCourseArray); //add back setSpringCourses later (NOTE FOR MICHAEL: add back setSpringCourses)
-    const [SemesterType, setSemesterType] = useState<string>(DEFAULT_SEMTYPE); //set default to Fall
-    const [SemCount, setSemCount] = useState<number>(1); //default is showing one semester, can do 1-2 (if more than 2 than that goes beyond a year) and can later go back to show 0 semesters
-
+    //states as globals
+    const [fallSemester] = useState<Semester>(SEM1);
+    const [springSemester] = useState<Semester>(SEM1);
+    //will add more semesters later
+    const [SemesterType, setSemesterType] = useState<string>("Fall"); //set default to Fall for now
+    const [SemCount, setSemCount] = useState<number>(1); //default shows 1 semester
     //NOTE FOR MICHAEL: Here is where you can add your add courses and remove courses functions
 
-    //functin to change number of semesters shown (can be either 1 or 2 only - can add 0 semesters later)
+    //functin to change number of semesters shown (can be either 1 or 2 only - can add 0 or more semesters later)
     function changeSemCount(): void {
         if (SemCount == 2) {
             setSemCount(1);
@@ -48,24 +42,26 @@ export function ViewSemester(): JSX.Element {
     function changeSemester(): void {
         let newSemType = "Default";
         if (SemesterType == "Fall") {
-            newSemType = SemType[1]; //spring
+            newSemType = "Spring";
         } else {
-            newSemType = SemType[0]; //fall
+            newSemType = "Fall";
         }
         setSemesterType(newSemType); //set the new semester type to display
+        /* ADD OTHER TYPES OF SEMESTERS LATER */
     }
 
     //function to display ONLY the fall semester
-    function fallSemester(): JSX.Element {
+    function displayFall(): JSX.Element {
         return (
             <div className="Fall">
                 <h1>Fall</h1>
-                {fallcourse.map(
+                {fallSemester.courseList.map(
                     // eslint-disable-next-line no-extra-parens
                     (course: Course): JSX.Element => (
                         <div className="Course" key={course.id}>
                             <span key={course.id}>
-                                {course.id} {course.credits} {course.department}{" "}
+                                {course.title}
+                                {" - "}
                                 {course.name}
                             </span>
                         </div>
@@ -76,16 +72,17 @@ export function ViewSemester(): JSX.Element {
     }
 
     //function to show ONLY the spring semester
-    function springSemester(): JSX.Element {
+    function displaySpring(): JSX.Element {
         return (
             <div className="Spring">
                 <h1>Spring</h1>
-                {springcourse.map(
+                {springSemester.courseList.map(
                     // eslint-disable-next-line no-extra-parens
                     (course: Course): JSX.Element => (
                         <div className="Course" key={course.id}>
                             <span key={course.id}>
-                                {course.id} {course.credits} {course.department}{" "}
+                                {course.title}
+                                {" - "}
                                 {course.name}
                             </span>
                         </div>
@@ -101,13 +98,14 @@ export function ViewSemester(): JSX.Element {
             <div className="Semester">
                 <div className="Fall">
                     <h1>Fall</h1>
-                    {fallcourse.map(
+                    {fallSemester.courseList.map(
                         // eslint-disable-next-line no-extra-parens
                         (course: Course): JSX.Element => (
                             <div className="Course" key={course.id}>
                                 <span key={course.id}>
-                                    {course.id} {course.credits}{" "}
-                                    {course.department} {course.name}
+                                    {course.title}
+                                    {" - "}
+                                    {course.name}
                                 </span>
                             </div>
                         )
@@ -115,13 +113,14 @@ export function ViewSemester(): JSX.Element {
                 </div>
                 <div className="Spring">
                     <h1>Spring</h1>
-                    {springcourse.map(
+                    {springSemester.courseList.map(
                         // eslint-disable-next-line no-extra-parens
                         (course: Course): JSX.Element => (
                             <div className="Course" key={course.id}>
                                 <span key={course.id}>
-                                    {course.id} {course.credits}{" "}
-                                    {course.department} {course.name}
+                                    {course.title}
+                                    {" - "}
+                                    {course.name}
                                 </span>
                             </div>
                         )
@@ -134,9 +133,9 @@ export function ViewSemester(): JSX.Element {
     //function to handle displaying semesters
     function OneorTwo(): JSX.Element {
         if (SemCount == 1 && SemesterType == "Fall") {
-            return <div className="Semester">{fallSemester()}</div>;
+            return <div className="Semester">{displayFall()}</div>;
         } else if (SemCount == 1 && SemesterType == "Spring") {
-            return <div className="Semester">{springSemester()}</div>;
+            return <div className="Semester">{displaySpring()}</div>;
         } else {
             return displayBoth();
         }
