@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { semester } from "../Interface/semester";
+import { RemoveClass } from "../semester-modification/RemoveClass";
 
 export function SemesterView({
     semester,
@@ -8,6 +9,9 @@ export function SemesterView({
     semester: semester;
     clearSemester: (id: number) => void;
 }): JSX.Element {
+    const [currSemesterArr, setCurrSemesterArr] = useState<semester[]>([
+        semester
+    ]);
     const [currentSemester, setSemester] = useState<semester>(semester);
     function clearCourses(semester: semester): void {
         setSemester({ ...semester, classList: [] });

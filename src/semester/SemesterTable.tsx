@@ -10,8 +10,7 @@ const semesterExamples = sample.map(
         ...sem,
         classList: sem.classList.map(
             (c): classes => ({
-                ...c,
-                schedule: c.schedule as dateTime
+                ...c
             })
         )
     })
