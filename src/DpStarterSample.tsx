@@ -1,4 +1,5 @@
-//Example:
+//This is essentially the DpList but only for one thing we should edit this to make it a universal list for all Dp's
+//use this to make the DpList.tsx file
 import React, { useState } from "react";
 import { Button, Row, Col, Stack } from "react-bootstrap";
 import { DegreePlan } from "./interfaces/degreeplan";
@@ -24,7 +25,7 @@ export function DpStarterSample({
     const [displayId, setDisplayId] = useState<null | number>(null);
     const degreePlansSample: DegreePlan[] = jsonDp;
 
-    const handleQuizView = (id: number) => {
+    const handleDpView = (id: number) => {
         setDisplayId(id);
     };
     // what this will do is set the displayId to null so that the dPView (expanded version) exits out of the view once the user click exit button
@@ -38,7 +39,7 @@ export function DpStarterSample({
                 {!displayId && (
                     <DpStarterSampleCard
                         dp={degreePlansSample[0]}
-                        handleClick={handleQuizView}
+                        handleClick={handleDpView}
                     ></DpStarterSampleCard>
                 )}
                 {degreePlansSample.map((dp: DegreePlan) => {

@@ -4,13 +4,15 @@ import "./App.css";
 import { GenerateCSV, Import } from "./CSV";
 import { WelcomeMessage } from "./Name";
 import { DegreePlan } from "./interfaces/degreeplan";
-import degreeplan_json from "./dummy_data.json";
+import degreeplan_json from "./dummy_data.json"; //dummy json data (for testing and what not)
+import dpsamplejson from "./sampleDpData.json"; //this is the real json data that the user will start with if they are new
 import { Button } from "react-bootstrap";
 import { DpStarterSample } from "./DpStarterSample";
+import { DpList } from "./DpList";
 
 function App(): JSX.Element {
     //load in json data
-    const DEGREEPLANS: DegreePlan[] = degreeplan_json.map(
+    const DEGREEPLANS: DegreePlan[] = dpsamplejson.map(
         (dp: DegreePlan): DegreePlan => ({ ...dp }) //dp = degreeplan
     );
     //this is the initial data that every user starts with
@@ -27,11 +29,20 @@ function App(): JSX.Element {
     //degreePlans will store and maintain the users degree plans, whenever they save their work it will be stored here
     const [degreePlans, setdegreePlans] = useState<DegreePlan[]>(loaded_data);
 
-    function saveData() {
-        localStorage.setItem(SAVE_KEY, JSON.stringify(degreePlans));
-        console.log(setdegreePlans); //will delete only here to satisfy typescript
+    function addDp(newDp: DegreePlan) {
+        const exists = degreePlans.find(
+            (dp: DegreePlan): boolean => dp.id === newDp.id
+        );
+        if (exists === undefined) {
+            setdegreePlans([...degreePlans, newDp]);
+        }
     }
 
+    function saveData() {
+        localStorage.setItem(SAVE_KEY, JSON.stringify(degreePlans));
+    }
+
+    //todo: here if previousData does exists then use the DpList.tsx instead (which should have all the Dp's in it even the sample one if the user saved it)
     return (
         <div className="App">
             <header className="App-header">
@@ -49,9 +60,13 @@ function App(): JSX.Element {
                     </ul>
                 </p>
             </header>
-            {previousData === null && (
-                <DpStarterSample jsonDp={degreePlans}></DpStarterSample>
-            )}
+            <div>
+                {previousData === null ? (
+                    <DpStarterSample jsonDp={degreePlans}></DpStarterSample>
+                ) : (
+                    <DpList dp={degreePlans}></DpList>
+                )}
+            </div>
             <div />
             <GenerateCSV
                 data={[
