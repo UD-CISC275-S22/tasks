@@ -11,9 +11,8 @@ import { DpStarterSample } from "./DpStarterSample";
 import { DpList } from "./DpList";
 import { AddDpModal } from "./AddDpModal";
 
-//todo: create a system of Id's to fix bug where clicking a dp card opens up multiple views since opening a view depends on Id's
-//todo: fix bug where when you first create a dp using the modal you must save and then try and add another dp for the first one to show up on the UI
-//      (I THINK THE ISSUE OCCURS DOWN BELOW WHERE IF PREVIOUSDATA === NULL THEN IT WONT SHOW ALL THE CARDS UNTIL I SAVE IT IN WHICH CASE PREVIOUSDATA WILL NO LONGER BE NULL)
+//todo: fix bug where the sample degree plan does not fully take over the UI instead it shows up on the bottom of the screen unlike the other degreeplans
+//      which hide everything else
 
 function App(): JSX.Element {
     //load in json data
@@ -30,10 +29,19 @@ function App(): JSX.Element {
         loaded_data = JSON.parse(previousData);
     }
 
+    //load in ID
+    let default_id = 1;
+    const SAVED_ID = "MY-PAGE-IDCOUNT";
+    const previoudId = localStorage.getItem(SAVED_ID);
+    if (previoudId !== null) {
+        default_id = JSON.parse(previoudId);
+    }
+
     const [importData, setImportData] = useState<string>("");
     //degreePlans will store and maintain the users degree plans, whenever they save their work it will be stored here
     const [degreePlans, setdegreePlans] = useState<DegreePlan[]>(loaded_data);
     const [showAddModal, setShowAddModal] = useState<boolean>(false);
+    const [currentId, setCurrentId] = useState<number>(default_id);
     //handles opening and closing the popup (modal)
     const handleCloseModal = () => setShowAddModal(false);
     const handleShowModal = () => setShowAddModal(true);
@@ -46,13 +54,20 @@ function App(): JSX.Element {
         if (exists === undefined) {
             setdegreePlans([
                 ...degreePlans,
-                { title: title, id: 1, totalCredits: 0, semestersList: [] }
+                {
+                    title: title,
+                    id: currentId,
+                    totalCredits: 0,
+                    semestersList: []
+                }
             ]);
         }
+        setCurrentId(currentId + 1);
     }
 
     function saveData() {
         localStorage.setItem(SAVE_KEY, JSON.stringify(degreePlans));
+        localStorage.setItem(SAVED_ID, JSON.stringify(currentId));
     }
 
     return (
