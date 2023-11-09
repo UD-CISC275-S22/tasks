@@ -1,12 +1,12 @@
-import { classes } from "../Interface/classes";
+//import { classes } from "../Interface/classes";
 
 //List of all requirements for degree
-const CISCoreClasses: classes[] = [];
+//const CISCoreClasses: classes[] = [];
 
-const UniversityClasses: classes[] = [];
+//const UniversityClasses: classes[] = [];
 
-const minCredits = 124;
+//const minCredits = 124;
 
 export function SemesterAudit(): void {
-    const words = "hello";
+    //const words = "hello";
 }

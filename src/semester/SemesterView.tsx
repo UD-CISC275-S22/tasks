@@ -46,6 +46,17 @@ export function SemesterView({
                                         ? "None"
                                         : classItem.preReq}
                                 </td>
+                                <td>
+                                    <RemoveClass
+                                        schedule={currentSemester}
+                                        classToDelete={classItem}
+                                        onRemoveClass={function (
+                                            updatedSchedule: semester
+                                        ): void {
+                                            setSemester(updatedSchedule);
+                                        }}
+                                    ></RemoveClass>
+                                </td>
                                 {/*<td>
                                     {classItem.schedule.day.join(", ")},{" "}
                                     {classItem.schedule.time}
