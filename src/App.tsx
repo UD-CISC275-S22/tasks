@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { Button } from "react-bootstrap";
+///import { Button } from "react-bootstrap";
 import { data } from "./classData";
 
 function App(): JSX.Element {
