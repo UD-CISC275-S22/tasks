@@ -9,6 +9,11 @@ import dpsamplejson from "./sampleDpData.json"; //this is the real json data tha
 import { Button } from "react-bootstrap";
 import { DpStarterSample } from "./DpStarterSample";
 import { DpList } from "./DpList";
+import { AddDpModal } from "./AddDpModal";
+
+//todo: create a system of Id's to fix bug where clicking a dp card opens up multiple views since opening a view depends on Id's
+//todo: fix bug where when you first create a dp using the modal you must save and then try and add another dp for the first one to show up on the UI
+//      (I THINK THE ISSUE OCCURS DOWN BELOW WHERE IF PREVIOUSDATA === NULL THEN IT WONT SHOW ALL THE CARDS UNTIL I SAVE IT IN WHICH CASE PREVIOUSDATA WILL NO LONGER BE NULL)
 
 function App(): JSX.Element {
     //load in json data
@@ -28,13 +33,21 @@ function App(): JSX.Element {
     const [importData, setImportData] = useState<string>("");
     //degreePlans will store and maintain the users degree plans, whenever they save their work it will be stored here
     const [degreePlans, setdegreePlans] = useState<DegreePlan[]>(loaded_data);
+    const [showAddModal, setShowAddModal] = useState<boolean>(false);
+    //handles opening and closing the popup (modal)
+    const handleCloseModal = () => setShowAddModal(false);
+    const handleShowModal = () => setShowAddModal(true);
 
-    function addDp(newDp: DegreePlan) {
+    //should soon take in a full dp using a form of sort to pass in a fully described dp
+    function addDp(title: string) {
         const exists = degreePlans.find(
-            (dp: DegreePlan): boolean => dp.id === newDp.id
+            (dp: DegreePlan): boolean => dp.title === title
         );
         if (exists === undefined) {
-            setdegreePlans([...degreePlans, newDp]);
+            setdegreePlans([
+                ...degreePlans,
+                { title: title, id: 1, totalCredits: 0, semestersList: [] }
+            ]);
         }
     }
 
@@ -42,7 +55,6 @@ function App(): JSX.Element {
         localStorage.setItem(SAVE_KEY, JSON.stringify(degreePlans));
     }
 
-    //todo: here if previousData does exists then use the DpList.tsx instead (which should have all the Dp's in it even the sample one if the user saved it)
     return (
         <div className="App">
             <header className="App-header">
@@ -62,7 +74,10 @@ function App(): JSX.Element {
             </header>
             <div>
                 {previousData === null ? (
-                    <DpStarterSample jsonDp={degreePlans}></DpStarterSample>
+                    <div>
+                        <DpStarterSample jsonDp={degreePlans}></DpStarterSample>
+                        {saveData()}
+                    </div>
                 ) : (
                     <DpList dp={degreePlans}></DpList>
                 )}
@@ -88,6 +103,14 @@ function App(): JSX.Element {
                     <p>sample block right</p>
                 </div>
             </div>
+            <Button className="add_btn" onClick={handleShowModal}>
+                Add New Degree Plan
+            </Button>
+            <AddDpModal
+                show={showAddModal}
+                handleClose={handleCloseModal}
+                addDp={addDp}
+            ></AddDpModal>
             <Button onClick={saveData}>Save Degree Plans</Button>
         </div>
     );
