@@ -2,96 +2,30 @@
 import React, { useState } from "react";
 import "./App.css";
 import Image1 from "./Images/Delaware-Blue-Hens-Logo.png";
-import { SemesterTable } from "./semester/SemesterTable";
+//import { SemesterTable } from "./semester/SemesterTable";
 //import { MainButtons } from "./MainScreen/MainButtons";
 import Image2 from "./Images/Udel-Crest.png";
-import { MainButtons } from "./MainScreen/MainButtons";
+//import { MainButtons } from "./MainScreen/MainButtons";
 import WelcomeMessage from "./welcome";
-import { AddClass } from "./semester-modification/AddClass";
-import { semester } from "./Interface/semester";
 //import { Session } from "inspector";
 //import { Button, Container, Row, Col } from "react-bootstrap";
-
-const tmpClass = [
-    {
-        id: 1,
-        fullTime: true,
-        classList: [
-            {
-                code: "CISC108",
-                title: "Introduction to Computer Science I",
-                credits: 3,
-                preReq: []
-            },
-            {
-                code: "CISC181",
-                title: "Introduction to Computer Science II",
-                credits: 3,
-                preReq: ["CISC108"]
-            }
-        ],
-        totalCredits: 6,
-        season: "Fall 2023"
-    },
-    {
-        id: 2,
-        fullTime: true,
-        classList: [
-            {
-                code: "CISC210",
-                title: "Introduction to Systems Programming",
-                credits: 3,
-                preReq: ["CISC108"]
-            },
-            {
-                code: "CISC220",
-                title: "Data Structures",
-                credits: 3,
-                preReq: ["CISC210"]
-            }
-        ],
-        totalCredits: 6,
-        season: "Spring 2023"
-    },
-    {
-        id: 3,
-        fullTime: true,
-        classList: [
-            {
-                code: "CISC108",
-                title: "Introduction to Computer Science I",
-                credits: 3,
-                preReq: []
-            },
-            {
-                code: "CISC181",
-                title: "Introduction to Computer Science II",
-                credits: 3,
-                preReq: ["CISC108"]
-            }
-        ],
-        totalCredits: 6,
-        season: "Winter 2023"
-    }
-];
-//const [semesterList, setSemesterList] = useState<semester[]>(exClass);
-
-const addNewClass = {
-    code: "New Class",
-    title: "Introduction to Computer Science 47",
-    credits: 3,
-    preReq: []
-};
+//import { useState } from "react";
+import { SideNav2 } from "./SideNav/SideNav2";
+import { SwitchComponents } from "./SwitchComponents";
+import { Col, Row } from "react-bootstrap";
 
 function App(): JSX.Element {
-    const [exClass, setexClass] = useState<semester[]>(tmpClass);
     const [page, setPage] = useState(false);
     const [name, setName] = useState("");
-    const getName = (name: string) => {
+    const [seeSemesterView, setSeeSemesterView] = useState(false);
+    const getName = () => {
         setName(name);
     };
     const showHomePage = () => {
         setPage(!page);
+    };
+    const flipView = () => {
+        setSeeSemesterView(!seeSemesterView);
     };
     return (
         <div className="App">
@@ -107,12 +41,32 @@ function App(): JSX.Element {
                 ></WelcomeMessage>
             ) : (
                 <div>
-                    <div>Welcome {name}!</div>
-                    <SemesterTable></SemesterTable>
-                    <MainButtons></MainButtons>
+                    <div>
+                        <Row>
+                            <Col sm={2}>
+                                {" "}
+                                <SideNav2 flipView={flipView}></SideNav2>
+                            </Col>
+                            <Col sm={10}>
+                                <SwitchComponents
+                                    seeSemesterView={seeSemesterView}
+                                ></SwitchComponents>
+                            </Col>
+                        </Row>
+                    </div>
                 </div>
             )}
         </div>
     );
 }
+
 export default App;
+
+{
+    /*pagecomponents
+
+if seeSemester
+    return semestercomponent
+if seecourse
+return coursecomponent*/
+}

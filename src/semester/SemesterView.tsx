@@ -9,9 +9,6 @@ export function SemesterView({
     semester: semester;
     clearSemester: (id: number) => void;
 }): JSX.Element {
-    const [currSemesterArr, setCurrSemesterArr] = useState<semester[]>([
-        semester
-    ]);
     const [currentSemester, setSemester] = useState<semester>(semester);
     function clearCourses(semester: semester): void {
         setSemester({ ...semester, classList: [] });
