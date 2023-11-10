@@ -2,23 +2,30 @@
 import React, { useState } from "react";
 import "./App.css";
 import Image1 from "./Images/Delaware-Blue-Hens-Logo.png";
-import { SemesterTable } from "./semester/SemesterTable";
+//import { SemesterTable } from "./semester/SemesterTable";
 //import { MainButtons } from "./MainScreen/MainButtons";
 import Image2 from "./Images/Udel-Crest.png";
-import { MainButtons } from "./MainScreen/MainButtons";
+//import { MainButtons } from "./MainScreen/MainButtons";
 import WelcomeMessage from "./welcome";
 //import { Session } from "inspector";
 //import { Button, Container, Row, Col } from "react-bootstrap";
 //import { useState } from "react";
+import { SideNav2 } from "./SideNav/SideNav2";
+import { SwitchComponents } from "./SwitchComponents";
+import { Col, Row } from "react-bootstrap";
 
 function App(): JSX.Element {
     const [page, setPage] = useState(false);
     const [name, setName] = useState("");
-    const getName = (name: string) => {
+    const [seeSemesterView, setSeeSemesterView] = useState(false);
+    const getName = () => {
         setName(name);
     };
     const showHomePage = () => {
         setPage(!page);
+    };
+    const flipView = () => {
+        setSeeSemesterView(!seeSemesterView);
     };
     return (
         <div className="App">
@@ -34,12 +41,32 @@ function App(): JSX.Element {
                 ></WelcomeMessage>
             ) : (
                 <div>
-                    <div>Welcome {name}!</div>
-                    <SemesterTable></SemesterTable>
-                    <MainButtons></MainButtons>
+                    <div>
+                        <Row>
+                            <Col sm={2}>
+                                {" "}
+                                <SideNav2 flipView={flipView}></SideNav2>
+                            </Col>
+                            <Col sm={10}>
+                                <SwitchComponents
+                                    seeSemesterView={seeSemesterView}
+                                ></SwitchComponents>
+                            </Col>
+                        </Row>
+                    </div>
                 </div>
             )}
         </div>
     );
 }
+
 export default App;
+
+{
+    /*pagecomponents
+
+if seeSemester
+    return semestercomponent
+if seecourse
+return coursecomponent*/
+}
