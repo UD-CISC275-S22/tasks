@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import sample from "../data/data.json";
 import { classes } from "../Interface/classes";
 import { semester } from "../Interface/semester";
-import { dateTime } from "../Interface/dateTime";
 import { SemesterView } from "./SemesterView";
 
 const semesterExamples = sample.map(
@@ -10,8 +9,7 @@ const semesterExamples = sample.map(
         ...sem,
         classList: sem.classList.map(
             (c): classes => ({
-                ...c,
-                schedule: c.schedule as dateTime
+                ...c
             })
         )
     })
