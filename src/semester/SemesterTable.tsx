@@ -1,23 +1,15 @@
-import React, { useState } from "react";
-import sample from "../data/data.json";
-import { classes } from "../Interface/classes";
+import React from "react";
+//import { classes } from "../Interface/classes";
 import { semester } from "../Interface/semester";
 import { SemesterView } from "./SemesterView";
 
-const semesterExamples = sample.map(
-    (sem): semester => ({
-        ...sem,
-        classList: sem.classList.map(
-            (c): classes => ({
-                ...c
-            })
-        )
-    })
-);
-
-export function SemesterTable(): JSX.Element {
-    const [semesters, setSemesters] = useState<semester[]>(semesterExamples);
-
+export function SemesterTable({
+    semesters,
+    setSemesters
+}: {
+    semesters: semester[];
+    setSemesters: (sems: semester[]) => void;
+}): JSX.Element {
     function clearSemester(id: number): void {
         const semesterIndex = semesters.findIndex(
             (semester: semester): boolean => semester.id === id

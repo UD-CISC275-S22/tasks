@@ -2,29 +2,44 @@
 import React from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 //import { FilteringSearch } from "../../FilteringSearch/FilteringSearch";
-import realData from "../../data/camelData.json";
+import realData from "../data/corrected_data.json";
+import { semester } from "../Interface/semester";
 import { useState } from "react";
+import { classes } from "../Interface/classes";
 
 export function AddSemesterModal({
     handleClose,
-    show
+    show,
+    semesterExamples,
+    addSemester
 }: {
     handleClose: () => void;
     show: boolean;
+    semesterExamples: semester[];
+    addSemester: (
+        id: number,
+        fullTime: boolean,
+        classList: classes[],
+        totalCredits: number,
+        season: string
+    ) => void;
 }) {
     const [searchAttribute, setSearchAttribute] = useState("");
+    const [season, setSeason] = useState("");
     const [filteredCourses, setFilteredCourses] = useState(realData);
     const [visible, setVisible] = useState<boolean>(false);
+
+    const inputChange1 = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const searchValue = event.target.value;
+        setSeason(searchValue);
+    };
 
     const inputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const searchValue = event.target.value;
         setSearchAttribute(searchValue);
 
         const filteredClasses = realData.filter((course) =>
-            course.courseCode
-                .replace(" ", "")
-                .toLowerCase()
-                .startsWith(searchValue.toLowerCase())
+            course.code.toLowerCase().startsWith(searchValue.toLowerCase())
         );
         setFilteredCourses(filteredClasses);
     };
@@ -38,9 +53,15 @@ export function AddSemesterModal({
     };
 
     function closingModal() {
-        const findCourse = realData.find(
-            (course) => course.courseCode.replace(" ", "") === searchAttribute
+        const findIndexCourse: number = realData.findIndex(
+            (course) => course.code === searchAttribute
         );
+        const foundCourse: classes = realData[findIndexCourse];
+        const lastSemester: semester =
+            semesterExamples[semesterExamples.length - 1];
+        const newId: number = lastSemester.id + 1;
+        addSemester(newId, true, [foundCourse], foundCourse.credits, season);
+        handleClose();
     }
 
     return (
@@ -56,6 +77,7 @@ export function AddSemesterModal({
                             <Form.Control
                                 type="text"
                                 placeholder="Provide a name for the semester"
+                                onChange={inputChange1}
                             />
                         </Form.Group>
                         <hr></hr>
@@ -82,14 +104,14 @@ export function AddSemesterModal({
                                     return (
                                         <div
                                             onClick={() =>
-                                                handleClick(course.courseCode)
+                                                handleClick(course.code)
                                             }
                                             style={{
                                                 cursor: "pointer"
                                             }}
-                                            key={course.courseCode}
+                                            key={course.code}
                                         >
-                                            {course.courseCode.replace(" ", "")}
+                                            {course.code.replace(" ", "")}
                                         </div>
                                     );
                                 })}
@@ -101,12 +123,17 @@ export function AddSemesterModal({
                     <Button
                         onClick={() => {
                             handleClose();
-                            closingModal();
                         }}
                     >
                         Close
                     </Button>
-                    <Button> Done</Button>
+                    <Button
+                        onClick={() => {
+                            closingModal();
+                        }}
+                    >
+                        Done
+                    </Button>
                 </Modal.Footer>
             </Modal>
         </div>

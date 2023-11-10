@@ -8,7 +8,13 @@ import SchoolIcon from "@mui/icons-material/School";
 import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 import ClassIcon from "@mui/icons-material/Class";
 
-export function SideNav2({ flipView }: { flipView: () => void }): JSX.Element {
+export function SideNav2({
+    flipView,
+    flipModalView
+}: {
+    flipView: () => void;
+    flipModalView: () => void;
+}): JSX.Element {
     return (
         <div className="SideNav2">
             <ul className="SideNavList2">
@@ -16,7 +22,7 @@ export function SideNav2({ flipView }: { flipView: () => void }): JSX.Element {
                     <div id="picture">{<SchoolIcon />}</div>
                     <div id="name">{"Add Degree Plan"}</div>
                 </li>
-                <li className="row">
+                <li className="row" onClick={() => flipModalView()}>
                     <div id="picture">{<AutoStoriesIcon />}</div>
                     <div id="name">{"Add Semester"}</div>
                 </li>
