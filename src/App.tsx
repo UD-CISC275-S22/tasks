@@ -2,10 +2,10 @@
 import React, { useState } from "react";
 import "./App.css";
 import Image1 from "./Images/Delaware-Blue-Hens-Logo.png";
-import { SemesterTable } from "./semester/SemesterTable";
+//import { SemesterTable } from "./semester/SemesterTable";
 //import { MainButtons } from "./MainScreen/MainButtons";
 import Image2 from "./Images/Udel-Crest.png";
-import { MainButtons } from "./MainScreen/MainButtons";
+//import { MainButtons } from "./MainScreen/MainButtons";
 import WelcomeMessage from "./welcome";
 //import { Session } from "inspector";
 //import { Button, Container, Row, Col } from "react-bootstrap";
@@ -18,7 +18,7 @@ function App(): JSX.Element {
     const [page, setPage] = useState(false);
     const [name, setName] = useState("");
     const [seeSemesterView, setSeeSemesterView] = useState(false);
-    const getName = (name: string) => {
+    const getName = () => {
         setName(name);
     };
     const showHomePage = () => {
