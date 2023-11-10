@@ -8,6 +8,7 @@
                 "title": "Introduction to Computer Science I",
                 "credits": 3,
                 "preReq": [],
+
                 "schedule": { "day": ["Tuesday"], "time": "9:35AM - 10:55AM" },
                 "location": "Gore208",
                 "instructor": "Bart,Austin Cory"
