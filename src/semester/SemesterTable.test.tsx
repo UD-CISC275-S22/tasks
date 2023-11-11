@@ -71,7 +71,17 @@ const handleOnDrop = (event: React.DragEvent<HTMLDivElement>, id: number) => {
         }
     }
 };
-
+function clearSemester(id: number): void {
+    const semesterIndex = semesters.findIndex(
+        (semester: semester): boolean => semester.id === id
+    );
+    const s_copy = semesters.map((sem) => ({
+        ...sem,
+        classList: [...sem.classList]
+    }));
+    s_copy.splice(semesterIndex, 1);
+    setSemesters(s_copy);
+}
 describe("SemesterView", () => {
     beforeEach(() => {
         render(

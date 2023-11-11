@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import sample from "../data/data.json";
 import { classes } from "../Interface/classes";
+//import { classes } from "../Interface/classes";
 import { semester } from "../Interface/semester";
 import { SemesterView } from "./SemesterView";
 import { Button } from "react-bootstrap";
@@ -59,6 +60,14 @@ export function SemesterTable(): JSX.Element {
     const download = () => {
         downloadBlob(csv, ".csv", "text/csv;charset=utf-8;");
     };
+    function reset() {
+        console.log(semesters);
+        setSemesters(semesterExamples);
+    }
+    function refresh() {
+        console.log(semesters);
+        setSemesters([...semesters]);
+    }
     function clearSemester(id: number): void {
         const semesterIndex = semesters.findIndex(
             (semester: semester): boolean => semester.id === id

@@ -35,6 +35,7 @@ import realData from "../data/final_data.json";
     { courseID: "CISC110", id: 25 }
 ];
 */
+
 export function FilteringSearch(): JSX.Element {
     /*const realData = rawData.map((course: any):classes => {
         return { ...course, code: course.code.replace(" ", "") };

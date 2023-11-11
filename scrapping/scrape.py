@@ -35,7 +35,7 @@ def scrape_code_and_name(soup) -> list:
     course_names = []
     for i in range(0, len(course_code_and_name)):
         course_code, course_name = course_code_and_name[i].text.split(" - ")[:2]
-        course_codes.append(course_code)
+        course_codes.append(course_code.replace(" ",""))
         course_names.append(course_name[:-1])
     return course_codes, course_names
 
