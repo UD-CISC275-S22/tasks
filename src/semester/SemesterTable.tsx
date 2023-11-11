@@ -19,6 +19,7 @@ const semesterExamples = sample.map(
 );
 
 //CISC275 Tome and StackOverflow link that was given was used to build this code.
+//https://stackoverflow.com/questions/14964035/how-to-export-javascript-array-info-to-csv-on-client-side/68146412#68146412
 function arrayToCSV(data: semester[][]) {
     return data
         .map((row) =>
@@ -38,6 +39,7 @@ function arrayToCSV(data: semester[][]) {
 }
 
 //CISC275 Tome and StackOverflow link that was given was used to build this code.
+//https://stackoverflow.com/questions/14964035/how-to-export-javascript-array-info-to-csv-on-client-side/68146412#68146412
 function downloadBlob(content: BlobPart, filename: string, contentType: any) {
     // Create a blob
     var blob = new Blob([content], { type: contentType });
@@ -57,14 +59,6 @@ export function SemesterTable(): JSX.Element {
     const download = () => {
         downloadBlob(csv, ".csv", "text/csv;charset=utf-8;");
     };
-    function reset() {
-        console.log(semesters);
-        setSemesters(semesterExamples);
-    }
-    function refresh() {
-        console.log(semesters);
-        setSemesters([...semesters]);
-    }
     function clearSemester(id: number): void {
         const semesterIndex = semesters.findIndex(
             (semester: semester): boolean => semester.id === id

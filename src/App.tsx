@@ -18,6 +18,7 @@ function App(): JSX.Element {
     const [page, setPage] = useState(false);
     const [name, setName] = useState("");
     const [seeSemesterView, setSeeSemesterView] = useState(false);
+
     const getName = () => {
         setName(name);
     };
