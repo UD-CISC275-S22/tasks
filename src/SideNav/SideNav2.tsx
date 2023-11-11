@@ -11,9 +11,11 @@ import ChecklistIcon from "@mui/icons-material/Checklist";
 
 export function SideNav2({
     flipView,
+    flipModalView,
     flipAudit
 }: {
     flipView: () => void;
+    flipModalView: () => void;
     flipAudit: () => void;
 }): JSX.Element {
     return (
@@ -23,7 +25,7 @@ export function SideNav2({
                     <div id="picture">{<SchoolIcon />}</div>
                     <div id="name">{"Add Degree Plan"}</div>
                 </li>
-                <li className="row">
+                <li className="row" onClick={() => flipModalView()}>
                     <div id="picture">{<AutoStoriesIcon />}</div>
                     <div id="name">{"Add Semester"}</div>
                 </li>
