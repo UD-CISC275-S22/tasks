@@ -4,10 +4,8 @@ import "./App.css";
 import { GenerateCSV, Import } from "./CSV";
 import { WelcomeMessage } from "./Name";
 import { DegreePlan } from "./interfaces/degreeplan";
-import degreeplan_json from "./dummy_data.json"; //dummy json data (for testing and what not)
 import dpsamplejson from "./sampleDpData.json"; //this is the real json data that the user will start with if they are new
 import { Button } from "react-bootstrap";
-import { DpStarterSample } from "./DpStarterSample";
 import { DpList } from "./DpList";
 import { AddDpModal } from "./AddDpModal";
 
@@ -30,7 +28,7 @@ function App(): JSX.Element {
     }
 
     //load in ID
-    let default_id = 1;
+    let default_id = 2;
     const SAVED_ID = "MY-PAGE-IDCOUNT";
     const previoudId = localStorage.getItem(SAVED_ID);
     if (previoudId !== null) {
@@ -41,7 +39,7 @@ function App(): JSX.Element {
     //degreePlans will store and maintain the users degree plans, whenever they save their work it will be stored here
     const [degreePlans, setdegreePlans] = useState<DegreePlan[]>(loaded_data);
     const [showAddModal, setShowAddModal] = useState<boolean>(false);
-    const [currentId, setCurrentId] = useState<number>(default_id);
+    const [availableId, setAvailableId] = useState<number>(default_id);
     //handles opening and closing the popup (modal)
     const handleCloseModal = () => setShowAddModal(false);
     const handleShowModal = () => setShowAddModal(true);
@@ -56,18 +54,18 @@ function App(): JSX.Element {
                 ...degreePlans,
                 {
                     title: title,
-                    id: currentId,
+                    id: availableId,
                     totalCredits: 0,
                     semestersList: []
                 }
             ]);
+            setAvailableId(availableId + 1);
         }
-        setCurrentId(currentId + 1);
     }
 
     function saveData() {
         localStorage.setItem(SAVE_KEY, JSON.stringify(degreePlans));
-        localStorage.setItem(SAVED_ID, JSON.stringify(currentId));
+        localStorage.setItem(SAVED_ID, JSON.stringify(availableId));
     }
 
     return (
@@ -87,16 +85,7 @@ function App(): JSX.Element {
                     </ul>
                 </p>
             </header>
-            <div>
-                {previousData === null ? (
-                    <div>
-                        <DpStarterSample jsonDp={degreePlans}></DpStarterSample>
-                        {saveData()}
-                    </div>
-                ) : (
-                    <DpList dp={degreePlans}></DpList>
-                )}
-            </div>
+            <DpList dp={degreePlans}></DpList>
             <div />
             <GenerateCSV
                 data={[

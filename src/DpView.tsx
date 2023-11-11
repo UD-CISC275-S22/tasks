@@ -2,13 +2,10 @@
 /* eslint-disable no-extra-parens */
 //this will be the dp table shower
 import React from "react";
-import { useState } from "react";
-import { Button, Table, Container, Row, Col, Tab } from "react-bootstrap";
+import { Button, Table, Container, Row, Col } from "react-bootstrap";
 import { DegreePlan } from "./interfaces/degreeplan";
 import { Semester } from "./interfaces/semester";
 import { Course } from "./interfaces/course";
-
-import App from "./App";
 
 export function DpView({
     dp,
