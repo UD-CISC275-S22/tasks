@@ -18,6 +18,7 @@ function App(): JSX.Element {
     const [page, setPage] = useState(false);
     const [name, setName] = useState("");
     const [seeSemesterView, setSeeSemesterView] = useState(false);
+    const [seeAudit, setSeeAudit] = useState(false);
     const getName = () => {
         setName(name);
     };
@@ -27,6 +28,11 @@ function App(): JSX.Element {
     const flipView = () => {
         setSeeSemesterView(!seeSemesterView);
     };
+
+    const flipAudit = () => {
+        setSeeAudit(!seeAudit);
+    };
+
     return (
         <div className="App">
             <header className="App-header">
@@ -45,7 +51,10 @@ function App(): JSX.Element {
                         <Row>
                             <Col sm={2}>
                                 {" "}
-                                <SideNav2 flipView={flipView}></SideNav2>
+                                <SideNav2
+                                    flipView={flipView}
+                                    flipAudit={flipAudit}
+                                ></SideNav2>
                             </Col>
                             <Col sm={10}>
                                 <SwitchComponents

@@ -7,8 +7,15 @@ import "../App.css";
 import SchoolIcon from "@mui/icons-material/School";
 import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 import ClassIcon from "@mui/icons-material/Class";
+import ChecklistIcon from "@mui/icons-material/Checklist";
 
-export function SideNav2({ flipView }: { flipView: () => void }): JSX.Element {
+export function SideNav2({
+    flipView,
+    flipAudit
+}: {
+    flipView: () => void;
+    flipAudit: () => void;
+}): JSX.Element {
     return (
         <div className="SideNav2">
             <ul className="SideNavList2">
@@ -23,6 +30,10 @@ export function SideNav2({ flipView }: { flipView: () => void }): JSX.Element {
                 <li className="row">
                     <div id="picture">{<ClassIcon />}</div>
                     <div id="name">{"Add Course"}</div>
+                </li>
+                <li className="row" onClick={() => flipAudit()}>
+                    <div id="picture">{ChecklistIcon}</div>
+                    <div id="name">{"Degree Audit"}</div>
                 </li>
             </ul>
         </div>
