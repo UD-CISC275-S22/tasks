@@ -1,43 +1,32 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
+///import { Button } from "react-bootstrap";
+import { data } from "./classData";
 
 function App(): JSX.Element {
-    const [newName, setNewName] = useState<string>("New Name");
     return (
         <div className="App">
-            <header className="App-header">Final Project</header>
-            <p>James Lloyd, Kerry Ferguson, name3, name4, name5</p>
-            <p>Sample Degree Plan</p>
-            <p>Fall 2023 Courses: </p>
+            <header className="App-header">UD Course Planner</header>
+            <p>
+                James Lloyd, Kerry Ferguson, Matthew Conlon, Caleb Sachetti,
+                Arnav Baliyan
+            </p>
+            <p> List of Degree Plans: </p>
             <table>
                 <tr>
-                    <td>Course</td>
-                    <td>Credits</td>
+                    <th>Code</th>
+                    <th>Name</th>
+                    <th>Credits</th>
                 </tr>
-                <tr>
-                    <td>EGG 101: Introduction to Engineering (FYE)</td>
-                    <td>2</td>
-                </tr>
-                <tr>
-                    <td>CISC 108: Introduction to Computer Science I</td>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td>MATH 241: Analytic Geomnetry & Calculus A</td>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td>ENGL 110: Seminar in Composition</td>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td>Breadth Requirement Elective 1</td>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td>Total Number of Credits:</td>
-                    <td>15</td>
-                </tr>
+                {data.map((val, key) => {
+                    return (
+                        <tr key={key}>
+                            <td>{val.code}</td>
+                            <td>{val.name}</td>
+                            <td>{val.credits}</td>
+                        </tr>
+                    );
+                })}
             </table>
         </div>
     );
