@@ -17,7 +17,6 @@
                             "CISC220 is a required course for all degrees"
                         ],
                         "coursePrereq": [],
-                        "courseCoreq": [],
                         "courseDescription": "You will be studying data structures including binary trees, hash maps, arrays, etc. You will also be learning Big-O notation."
                     },
                     {
@@ -26,7 +25,6 @@
                         "credits": 3,
                         "degreeRequirements": [],
                         "coursePrereq": [],
-                        "courseCoreq": [],
                         "courseDescription": "fjfjd dhijj f dsjfij fj f fdioja fafj  foidfij fjfsjfoiajsf joif asjfidj fj oi a ojadjf jfd fiojfiodjif iojfoij f oi asofj"
                     },
                     {
@@ -37,7 +35,6 @@
                         "coursePrereq": [
                             "CISC108 serves as a prereq for CISC210"
                         ],
-                        "courseCoreq": [],
                         "courseDescription": "You will be studying the basics of programming using python to complete various projects, homeworks, and other assignments with the goal of helping you learn to code"
                     }
                 ]
@@ -55,7 +52,6 @@
                             "CISC220 is a required course for all degrees"
                         ],
                         "coursePrereq": [],
-                        "courseCoreq": [],
                         "courseDescription": "You will be studying data structures including binary trees, hash maps, arrays, etc. You will also be learning Big-O notation. Blah Blah Blah BlahBlah Blah BlahBlahBlah. "
                     },
                     {
@@ -67,7 +63,6 @@
                             "CISC220 is a required course for all degrees"
                         ],
                         "coursePrereq": [],
-                        "courseCoreq": [],
                         "courseDescription": "You will be studying data structures including binary trees, hash maps, arrays, etc. You will also be learning Big-O notation."
                     },
                     {
@@ -78,7 +73,6 @@
                         "coursePrereq": [
                             "CISC108 serves as a prereq for CISC210"
                         ],
-                        "courseCoreq": [],
                         "courseDescription": "You will be studying the basics of programming using python to complete various projects, homeworks, and other assignments with the goal of helping you learn to code"
                     }
                 ]
@@ -96,7 +90,6 @@
                             "CISC220 is a required course for all degrees"
                         ],
                         "coursePrereq": [],
-                        "courseCoreq": [],
                         "courseDescription": "You will be studying data structures including binary trees, hash maps, arrays, etc. You will also be learning Big-O notation."
                     },
                     {
@@ -108,7 +101,6 @@
                             "CISC220 is a required course for all degrees"
                         ],
                         "coursePrereq": [],
-                        "courseCoreq": [],
                         "courseDescription": "You will be studying data structures including binary trees, hash maps, arrays, etc. You will also be learning Big-O notation."
                     },
                     {
@@ -119,7 +111,6 @@
                         "coursePrereq": [
                             "CISC108 serves as a prereq for CISC210"
                         ],
-                        "courseCoreq": [],
                         "courseDescription": "You will be studying the basics of programming using python to complete various projects, homeworks, and other assignments with the goal of helping you learn to code"
                     }
                 ]
@@ -137,7 +128,6 @@
                             "CISC205 is a required course for all degrees"
                         ],
                         "coursePrereq": [],
-                        "courseCoreq": [],
                         "courseDescription": "You will be studying how to progress through the world of software engineering as well as learn about the different workflows."
                     },
                     {
@@ -148,52 +138,6 @@
                         "coursePrereq": [
                             "CISC210 serves as a prereq for CISC320"
                         ],
-                        "courseCoreq": [],
-                        "courseDescription": "You will be studying data structures including binary trees, hash maps, arrays, etc. You will also be learning Big-O notation."
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "id": 2,
-        "title": "Degree Plan 2",
-        "totalCredits": 6,
-        "semestersList": [
-            {
-                "title": "Fall 2023",
-                "totalCredits": 3,
-                "courseList": [
-                    {
-                        "title": "CISC220",
-                        "courseCode": 124,
-                        "credits": 3,
-                        "degreeRequirements": [
-                            "CISC core requirement",
-                            "CISC220 is a required course for all degrees"
-                        ],
-                        "coursePrereq": [
-                            "CISC220 serves as a prereq for CISC405"
-                        ],
-                        "courseCoreq": [],
-                        "courseDescription": "You will be studying data structures including binary trees, hash maps, arrays, etc. You will also be learning Big-O notation."
-                    }
-                ]
-            },
-            {
-                "title": "Spring 2023",
-                "totalCredits": 3,
-                "courseList": [
-                    {
-                        "title": "CISC205",
-                        "courseCode": 121,
-                        "credits": 3,
-                        "degreeRequirements": [
-                            "CISC core requirement",
-                            "CISC205 is a required course for all degrees"
-                        ],
-                        "coursePrereq": [],
-                        "courseCoreq": [],
                         "courseDescription": "You will be studying data structures including binary trees, hash maps, arrays, etc. You will also be learning Big-O notation."
                     }
                 ]
