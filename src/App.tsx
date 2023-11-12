@@ -1,20 +1,20 @@
 import React, { useState } from "react";
 
-type Course = {
+interface Course {
     code: string;
     title: string;
     credits: number;
-};
+}
 
-type Semester = {
+interface Semester {
     id: number;
     name: string;
     courses: Course[];
-};
+}
 
 export function App() {
     const [semesters, setSemesters] = useState<Semester[]>([]);
-    const [newSemester, setNewSemester] = useState<string>("");
+    const [selectedSemester, setSelectedSemester] = useState<string>("Fall");
     const [newCourse, setNewCourse] = useState<Course>({
         code: "",
         title: "",
@@ -22,15 +22,12 @@ export function App() {
     });
 
     const addSemester = () => {
-        if (newSemester) {
-            const newSemesterObj: Semester = {
-                id: semesters.length + 1,
-                name: newSemester,
-                courses: []
-            };
-            setSemesters([...semesters, newSemesterObj]);
-            setNewSemester("");
-        }
+        const newSemesterObj: Semester = {
+            id: semesters.length + 1,
+            name: selectedSemester,
+            courses: []
+        };
+        setSemesters([...semesters, newSemesterObj]);
     };
 
     const addCourse = (semesterId: number) => {
@@ -40,6 +37,7 @@ export function App() {
                     semester.id === semesterId
                         ? {
                               ...semester,
+                              // eslint-disable-next-line indent
                               courses: [...semester.courses, newCourse]
                           }
                         : semester
@@ -71,30 +69,43 @@ export function App() {
         );
     };
 
+    const semesterOptions = ["Fall", "Winter", "Spring", "Summer"];
+
     return (
         <div>
             <h1>Semester Tracker</h1>
             <div>
-                <input
-                    type="text"
-                    value={newSemester}
-                    onChange={(e) => setNewSemester(e.target.value)}
-                    placeholder="Add a semester"
-                />
+                <select
+                    value={selectedSemester}
+                    onChange={(e) => setSelectedSemester(e.target.value)}
+                >
+                    {semesterOptions.map((option, index) => (
+                        <option key={index} value={option}>
+                            {option}
+                        </option>
+                    ))}
+                </select>
                 <button onClick={addSemester}>Add Semester</button>
             </div>
             <ul>
                 {semesters.map((semester) => (
                     <li key={semester.id}>
-                        {semester.id}. {semester.name}
-                        <ul>
+                        <div>
+                            Semester: {semester.name}
+                            <button onClick={() => deleteSemester(semester.id)}>
+                                Delete Semester
+                            </button>
+                        </div>
+                        <div className="courses">
                             {semester.courses.map((course, courseIndex) => (
-                                <li key={courseIndex}>
-                                    Course Code: {course.code}
-                                    <br />
-                                    Course Title: {course.title}
-                                    <br />
-                                    Credits: {course.credits}
+                                <div key={courseIndex} className="course">
+                                    <span>
+                                        Course Code: {course.code}
+                                        <br />
+                                        Course Title: {course.title}
+                                        <br />
+                                        Credits: {course.credits}
+                                    </span>
                                     <button
                                         onClick={() =>
                                             deleteCourse(
@@ -105,48 +116,47 @@ export function App() {
                                     >
                                         Delete Course
                                     </button>
-                                </li>
+                                </div>
                             ))}
-                        </ul>
-                        <input
-                            type="text"
-                            value={newCourse.code}
-                            onChange={(e) =>
-                                setNewCourse({
-                                    ...newCourse,
-                                    code: e.target.value
-                                })
-                            }
-                            placeholder="Course Code"
-                        />
-                        <input
-                            type="text"
-                            value={newCourse.title}
-                            onChange={(e) =>
-                                setNewCourse({
-                                    ...newCourse,
-                                    title: e.target.value
-                                })
-                            }
-                            placeholder="Course Title"
-                        />
-                        <input
-                            type="number"
-                            value={newCourse.credits}
-                            onChange={(e) =>
-                                setNewCourse({
-                                    ...newCourse,
-                                    credits: +e.target.value
-                                })
-                            }
-                            placeholder="Credits"
-                        />
-                        <button onClick={() => addCourse(semester.id)}>
-                            Add Course
-                        </button>
-                        <button onClick={() => deleteSemester(semester.id)}>
-                            Delete Semester
-                        </button>
+                        </div>
+                        <div>
+                            <input
+                                type="text"
+                                value={newCourse.code}
+                                onChange={(e) =>
+                                    setNewCourse({
+                                        ...newCourse,
+                                        code: e.target.value
+                                    })
+                                }
+                                placeholder="Course Code"
+                            />
+                            <input
+                                type="text"
+                                value={newCourse.title}
+                                onChange={(e) =>
+                                    setNewCourse({
+                                        ...newCourse,
+                                        title: e.target.value
+                                    })
+                                }
+                                placeholder="Course Title"
+                            />
+                            <input
+                                type="number"
+                                value={newCourse.credits}
+                                onChange={(e) =>
+                                    setNewCourse({
+                                        ...newCourse,
+                                        credits: +e.target.value
+                                    })
+                                }
+                                placeholder="Credits"
+                            />
+                            <button onClick={() => addCourse(semester.id)}>
+                                Add Course
+                            </button>
+                        </div>
                     </li>
                 ))}
             </ul>
