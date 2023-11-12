@@ -1,3 +1,4 @@
+/* eslint-disable no-extra-parens */
 import React, { useState } from "react";
 
 interface Course {
@@ -165,12 +166,17 @@ import "./App.css";
 import { GenerateCSV, Import } from "./CSV";
 import { WelcomeMessage } from "./Name";
 import { DegreePlan } from "./interfaces/degreeplan";
-import degreeplan_json from "./dummy_data.json";
+import dpsamplejson from "./sampleDpData.json"; //this is the real json data that the user will start with if they are new
 import { Button } from "react-bootstrap";
+import { DpList } from "./DpList";
+import { AddDpModal } from "./AddDpModal";
+
+//todo: fix bug where the sample degree plan does not fully take over the UI instead it shows up on the bottom of the screen unlike the other degreeplans
+//      which hide everything else
 
 function App(): JSX.Element {
     //load in json data
-    const DEGREEPLANS: DegreePlan[] = degreeplan_json.map(
+    const DEGREEPLANS: DegreePlan[] = dpsamplejson.map(
         (dp: DegreePlan): DegreePlan => ({ ...dp }) //dp = degreeplan
     );
     //this is the initial data that every user starts with
@@ -183,13 +189,45 @@ function App(): JSX.Element {
         loaded_data = JSON.parse(previousData);
     }
 
+    //load in ID
+    let default_id = 2;
+    const SAVED_ID = "MY-PAGE-IDCOUNT";
+    const previoudId = localStorage.getItem(SAVED_ID);
+    if (previoudId !== null) {
+        default_id = JSON.parse(previoudId);
+    }
+
     const [importData, setImportData] = useState<string>("");
     //degreePlans will store and maintain the users degree plans, whenever they save their work it will be stored here
     const [degreePlans, setdegreePlans] = useState<DegreePlan[]>(loaded_data);
+    const [showAddModal, setShowAddModal] = useState<boolean>(false);
+    const [availableId, setAvailableId] = useState<number>(default_id);
+    //handles opening and closing the popup (modal)
+    const handleCloseModal = () => setShowAddModal(false);
+    const handleShowModal = () => setShowAddModal(true);
+
+    //should soon take in a full dp using a form of sort to pass in a fully described dp
+    function addDp(title: string) {
+        const exists = degreePlans.find(
+            (dp: DegreePlan): boolean => dp.title === title
+        );
+        if (exists === undefined) {
+            setdegreePlans([
+                ...degreePlans,
+                {
+                    title: title,
+                    id: availableId,
+                    totalCredits: 0,
+                    semestersList: []
+                }
+            ]);
+            setAvailableId(availableId + 1);
+        }
+    }
 
     function saveData() {
         localStorage.setItem(SAVE_KEY, JSON.stringify(degreePlans));
-        console.log(setdegreePlans); //will delete only here to satisfy typescript
+        localStorage.setItem(SAVED_ID, JSON.stringify(availableId));
     }
 
     return (
@@ -209,6 +247,7 @@ function App(): JSX.Element {
                     </ul>
                 </p>
             </header>
+            <DpList dp={degreePlans}></DpList>
             <div />
             <GenerateCSV
                 data={[
@@ -230,6 +269,14 @@ function App(): JSX.Element {
                     <p>sample block right</p>
                 </div>
             </div>
+            <Button className="add_btn" onClick={handleShowModal}>
+                Add New Degree Plan
+            </Button>
+            <AddDpModal
+                show={showAddModal}
+                handleClose={handleCloseModal}
+                addDp={addDp}
+            ></AddDpModal>
             <Button onClick={saveData}>Save Degree Plans</Button>
         </div>
     );
