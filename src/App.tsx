@@ -1,8 +1,7 @@
 import React from "react";
 import "./App.css";
 ///import { Button } from "react-bootstrap";
-import { data } from "./classData";
-
+//import { data } from "./classData";
 function App(): JSX.Element {
     return (
         <div className="App">
@@ -18,6 +17,7 @@ function App(): JSX.Element {
                     <th>Name</th>
                     <th>Credits</th>
                 </tr>
+<<<<<<< HEAD
                 {data.map((val, key) => {
                     return (
                         <tr key={key}>
@@ -27,6 +27,8 @@ function App(): JSX.Element {
                         </tr>
                     );
                 })}
+=======
+>>>>>>> origin/kferg315-KerryFerguson04
             </table>
         </div>
     );
