@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable no-var */
 /* eslint-disable quotes */
 import React, { useState } from "react";
@@ -12,6 +13,7 @@ function arrayToCSV(data: semester[][]) {
     return data
         .map((row) =>
             row
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 .map((v: any) => {
                     if (typeof v === "object" && v !== null) {
                         return JSON.stringify(v)
