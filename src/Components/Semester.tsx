@@ -2,13 +2,13 @@
 //for visualization of semesters and altering the courses within them
 
 import React, { useState } from "react";
-import "./App.css";
+import "../App.css";
 import { courseList } from "./course";
 import "./Semester.css";
 import { Course } from "../Interfaces/course";
 import { Button } from "react-bootstrap";
 import { Semester } from "../Interfaces/semester";
-import { Degree } from "../Interfaces/degree";
+/*import { Degree } from "../Interfaces/degree";*/
 
 //create an intial course for testing (will eventually replace this with actual courses from a default setting) - from course.tsx
 const COURSE_LIST = courseList;

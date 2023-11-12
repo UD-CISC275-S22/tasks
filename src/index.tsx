@@ -6,6 +6,15 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+/*The following two imports are needed for the collaspe buttons to work
+to install bootstrap:
+ 1. cd to your final project directory
+ 2. Type npm install bootstrap jquery popper.js 
+ 3. Check if it's installed properly cd into node_modules directory and see if you see a Bootstrap directory 
+ 4. If you do, then you installed Bootstrap correctly*/
+import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
+import "bootstrap/dist/js/bootstrap.bundle.min"; // Import Bootstrap JavaScript
+
 ReactDOM.render(
     <React.StrictMode>
         <App />
