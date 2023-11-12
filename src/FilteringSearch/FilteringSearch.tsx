@@ -101,3 +101,9 @@ export function FilteringSearch(): JSX.Element {
         </div>
     );
 }
+
+/*
+The filtering search component provides users with a way to select a course from an actively filtering list of courses,
+based on the input of the user. For example, If the user enters "CISC", the list of courses that appears will only have
+courses begining with "CISC" as it filters out other course codes.
+*/
