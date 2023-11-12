@@ -2,7 +2,7 @@
 //for visualization of semesters and altering the courses within them
 
 import React, { useState } from "react";
-import "./App.css";
+import "../App.css";
 import { courseList } from "./course";
 import "./Semester.css";
 import { Course } from "../Interfaces/course";
