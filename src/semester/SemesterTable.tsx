@@ -1,23 +1,10 @@
 /* eslint-disable no-var */
 /* eslint-disable quotes */
 import React, { useState } from "react";
-import sample from "../data/data.json";
 import { classes } from "../Interface/classes";
-//import { classes } from "../Interface/classes";
 import { semester } from "../Interface/semester";
 import { SemesterView } from "./SemesterView";
 import { Button } from "react-bootstrap";
-
-const semesterExamples = sample.map(
-    (sem): semester => ({
-        ...sem,
-        classList: sem.classList.map(
-            (c): classes => ({
-                ...c
-            })
-        )
-    })
-);
 
 //CISC275 Tome and StackOverflow link that was given was used to build this code.
 //https://stackoverflow.com/questions/14964035/how-to-export-javascript-array-info-to-csv-on-client-side/68146412#68146412
@@ -53,21 +40,18 @@ function downloadBlob(content: BlobPart, filename: string, contentType: any) {
     pom.click();
 }
 
-export function SemesterTable(): JSX.Element {
-    const [semesters, setSemesters] = useState<semester[]>(semesterExamples);
+export function SemesterTable({
+    semesters,
+    setSemesters
+}: {
+    semesters: semester[];
+    setSemesters: (sems: semester[]) => void;
+}): JSX.Element {
     const [dragCourse, setDragCourse] = useState<classes>();
     const csv = arrayToCSV([semesters]);
     const download = () => {
         downloadBlob(csv, ".csv", "text/csv;charset=utf-8;");
     };
-    function reset() {
-        console.log(semesters);
-        setSemesters(semesterExamples);
-    }
-    function refresh() {
-        console.log(semesters);
-        setSemesters([...semesters]);
-    }
     function clearSemester(id: number): void {
         const semesterIndex = semesters.findIndex(
             (semester: semester): boolean => semester.id === id
@@ -115,6 +99,8 @@ export function SemesterTable(): JSX.Element {
         console.log(dragCourse);
     };
 
+    <Button onClick={download}>download</Button>;
+
     return (
         <div className="semesterTable">
             <h2>Semester Schedule</h2>
@@ -132,22 +118,6 @@ export function SemesterTable(): JSX.Element {
                     ></SemesterView>
                 );
             })}
-            <button
-                onClick={() => {
-                    reset();
-                }}
-            >
-                {" "}
-                reset
-            </button>
-            <button
-                onClick={() => {
-                    refresh();
-                }}
-            >
-                {" "}
-                refresh
-            </button>
         </div>
     );
 }

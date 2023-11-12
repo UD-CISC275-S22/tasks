@@ -1,25 +1,14 @@
 import React from "react";
-import sample from "../data/data.json";
 import { classes } from "../Interface/classes";
 import { semester } from "../Interface/semester";
 import { SemesterView } from "./SemesterView";
-import { render, screen } from "@testing-library/react";
-
-const semesterExamples = sample.map(
-    (sem): semester => ({
-        ...sem,
-        classList: sem.classList.map(
-            (c): classes => ({
-                ...c
-            })
-        )
-    })
-);
+import { fireEvent, render, screen } from "@testing-library/react";
+import user from "@testing-library/user-event";
 
 const classExamples: classes[] = [
     {
-        code: "CISC210",
-        title: "Introduction to Systems Programming",
+        code: "CISC181",
+        title: "Introduction to Computer Science II",
         credits: 3,
         preReq: ["CISC108"]
     },
@@ -39,61 +28,60 @@ const semesterExample: semester = {
     season: "Fall"
 };
 
-const handleOnDragOver = (event: React.DragEvent<HTMLDivElement>) => {
-    event.preventDefault();
-    console.log(dragCourse);
-};
-const handleOnDrop = (event: React.DragEvent<HTMLDivElement>, id: number) => {
-    event.preventDefault();
-    console.log("Drop");
-    console.log(dragCourse);
-    if (dragCourse !== undefined) {
-        const findSemesterIndex = semesters.findIndex(
-            (sem: semester): boolean => sem.id === id
-        );
-        const foundSemester = semesters[findSemesterIndex];
-        if (foundSemester !== undefined) {
-            const updatedSemester = {
-                ...foundSemester,
-                classList: [...foundSemester.classList, dragCourse]
-            };
-            console.log(updatedSemester.classList);
-            console.log(semesters);
-            const updatedSemesters = semesters.map(
-                (semester: semester): semester => ({
-                    ...semester,
-                    classList: [...semester.classList]
-                })
-            );
-            updatedSemesters.splice(findSemesterIndex, 1, updatedSemester);
-            console.log(updatedSemesters);
-            setSemesters(updatedSemesters);
-        }
-    }
-};
-function clearSemester(id: number): void {
-    const semesterIndex = semesters.findIndex(
-        (semester: semester): boolean => semester.id === id
-    );
-    const s_copy = semesters.map((sem) => ({
-        ...sem,
-        classList: [...sem.classList]
-    }));
-    s_copy.splice(semesterIndex, 1);
-    setSemesters(s_copy);
-}
-describe("SemesterView", () => {
+describe("SemesterTable", () => {
+    const DragOverHandler = jest.fn();
+    const DropHandler = jest.fn();
+    const clearSemesterHandler = jest.fn();
+    const setDragCourseHandler = jest.fn();
+
     beforeEach(() => {
         render(
             <SemesterView
                 key={semesterExample.id}
                 semester={semesterExample}
-                handleOnDragOver={(e) => handleOnDragOver(e)}
-                handleOnDrop={(e) => handleOnDrop(e, sem.id)}
-                clearSemester={clearSemester}
-                setDragCourse={setDragCourse}
+                handleOnDragOver={DragOverHandler}
+                handleOnDrop={DropHandler}
+                clearSemester={clearSemesterHandler}
+                setDragCourse={setDragCourseHandler}
             />
         );
     });
-    test("Users can add a new quiz", () => {});
+    test("Users can see a lists of courses, including the course code, title, credits, and prerequisites.", () => {
+        const classExample = semesterExample.classList;
+        for (let i = 0; i < classExamples.length; i++) {
+            expect(
+                screen.queryByText(classExample[i].code)
+            ).toBeInTheDocument();
+            expect(
+                screen.queryByText(classExample[i].title.length, {
+                    exact: false
+                })
+            ).toBeInTheDocument();
+            expect(
+                screen.queryByText(classExample[i].credits, {
+                    exact: false
+                })
+            ).toBeInTheDocument();
+            expect(
+                screen.queryByText(classExample[i].preReq.length, {
+                    exact: false
+                })
+            ).toBeInTheDocument();
+        }
+    });
+    test("Users can see a lists of courses, including the course code, title, credits, and prerequisites.", () => {
+        const clearButton = screen.getByRole("button", {
+            name: /Clear Courses/i
+        });
+        user.click(clearButton);
+        const classes = screen.getByTestId("classes");
+        expect(classes).toBeNull();
+    });
+    test("Clears courses after pressing a button.", () => {
+        const clearButton = screen.getByRole("button", {
+            name: "Clear Courses"
+        });
+        fireEvent.click(clearButton);
+        expect(semesterExample.classList).toHaveLength(0);
+    });
 });
