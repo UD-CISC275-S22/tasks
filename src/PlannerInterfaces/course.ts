@@ -2,6 +2,6 @@ export interface course {
     id: string;
     name: string;
     credits: number;
-    courseId: number;
+    courseID: string;
     preReq: string;
 }

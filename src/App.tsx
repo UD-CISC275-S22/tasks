@@ -18,15 +18,6 @@ function App(): JSX.Element {
                     <th>Name</th>
                     <th>Credits</th>
                 </tr>
-                {data.map((val, key) => {
-                    return (
-                        <tr key={key}>
-                            <td>{val.code}</td>
-                            <td>{val.name}</td>
-                            <td>{val.credits}</td>
-                        </tr>
-                    );
-                })}
             </table>
         </div>
     );
