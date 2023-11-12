@@ -1,3 +1,6 @@
+/*eslint-disable no-extra-parens*/
+/* Lint disabled for extra parenthases in order to work around issue and view our changes.
+Will need to be fixed for final submission*/
 import React from "react";
 import { useState } from "react";
 import { Form } from "react-bootstrap";
