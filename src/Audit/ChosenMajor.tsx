@@ -1,5 +1,5 @@
 /* eslint-disable no-extra-parens */
-import React from "react";
+import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 
 const majors = [
@@ -20,6 +20,11 @@ export function ChosenMajor({
     handleClose: () => void;
     show: boolean;
 }) {
+    const [selectedMajor, setSelectedMajor] = useState<string>(" ");
+
+    function updateMajor(event: React.ChangeEvent<HTMLSelectElement>): void {
+        setSelectedMajor(event.target.value);
+    }
     return (
         <div>
             <Modal show={show} onHide={handleClose} animation={false}>
@@ -28,10 +33,14 @@ export function ChosenMajor({
                 </Modal.Header>
                 <Modal.Body>
                     <Form.Group>
-                        <Form.Select style={{ textAlign: "center" }}>
-                            {majors.map((options: string) => (
-                                <option key={options} value={options}>
-                                    {options}
+                        <Form.Select
+                            value={selectedMajor}
+                            onChange={updateMajor}
+                            style={{ textAlign: "center" }}
+                        >
+                            {majors.map((option: string) => (
+                                <option key={option} value={option}>
+                                    {option}
                                 </option>
                             ))}
                         </Form.Select>
@@ -45,7 +54,13 @@ export function ChosenMajor({
                     >
                         Close
                     </Button>
-                    <Button> Done</Button>
+                    <Button
+                        onClick={() => {
+                            handleClose();
+                        }}
+                    >
+                        TBD
+                    </Button>
                 </Modal.Footer>
             </Modal>
         </div>
