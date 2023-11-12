@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { SideNav2 } from "./SideNav2";
-import userEvent from "@testing-library/user-event";
+//import userEvent from "@testing-library/user-event";
 
 describe("FilteringSearchTests", () => {
     test("render the search box", () => {
