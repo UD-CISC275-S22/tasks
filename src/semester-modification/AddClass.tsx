@@ -1,57 +1,53 @@
 import React from "react";
+import { Button } from "react-bootstrap";
 import { classes } from "../Interface/classes";
 import { semester } from "../Interface/semester";
-import { Button } from "react-bootstrap";
 
 export function AddClass({
     schedule,
+    semester,
     newClass,
     onAddClass
 }: {
-    schedule: semester;
+    schedule: semester[];
+    semester: semester;
     newClass: classes;
-    onAddClass: (updatedSchedule: semester) => void;
+    onAddClass: (updatedSchedule: semester[]) => void;
 }): JSX.Element {
-    function addNewClass() {
-        const updatedSchedule = { ...schedule };
-        updatedSchedule.classList = updatedSchedule.classList.concat(newClass);
-        updatedSchedule.totalCredits = updatedSchedule.classList.reduce(
-            (total: number, adding: classes) => total + adding.credits,
+    function addClass() {
+        // Create a new array of semesters
+        const updatedSchedule: semester[] = [...schedule];
+
+        // Find the index of the current semester
+        const semesterIndex: number = updatedSchedule.findIndex(
+            (sem: semester) => sem.id === semester.id
+        );
+
+        // Create a new array of classes for the updated semester
+        const updatedClasses: classes[] = [
+            ...updatedSchedule[semesterIndex].classList,
+            newClass
+        ];
+
+        // Get new credit total
+        const totalCredits: number = updatedClasses.reduce(
+            (total: number, currentClass: classes) =>
+                total + currentClass.credits,
             0
         );
+
+        // Create a new semester object with the updated values
+        const updatedSemester: semester = {
+            ...updatedSchedule[semesterIndex],
+            classList: updatedClasses,
+            totalCredits: totalCredits
+        };
+
+        // Update the schedule with the modified semester
+        updatedSchedule[semesterIndex] = updatedSemester;
+
         onAddClass(updatedSchedule);
     }
 
-    return (
-        <div>
-            <Button onClick={addNewClass}>Add Class</Button>
-        </div>
-    );
-}
-//Paste function into file using AddClass
-//updates a state with a semeter object to have the new updated list of classes
-// function onAddClass(updatedSchedule: semester) {
-//     setSampleSemester(updatedSchedule);
-// }
-
-// const [sampleSemester, setSampleSemester] = useState({
-//     classList: [
-//         /* your initial class list here */
-//     ],
-//     totalCredits: 0, // Update this based on the initial data
-//     season: "Fall 2023"
-// });
-
-{
-    /* <AddClass
-    schedule={sampleSemester}
-    newClass={{
-        code: "PHYS101",
-        title: "Physics for Beginners",
-        credits: 4,
-        preReq: [],
-        instructor: "Professor Anderson"
-    }}
-    onAddClass={handleAddClass}
-/>; */
+    return <Button onClick={addClass}>Add Class</Button>;
 }

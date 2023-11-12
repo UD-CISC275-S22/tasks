@@ -2,7 +2,7 @@
 import React from "react";
 import { useState } from "react";
 import { Form } from "react-bootstrap";
-import realData from "../data/camelData.json";
+import realData from "../data/final_data.json";
 //import { classes } from "../Interface/classes";
 
 //import { ComboBoxComponent } from "@syncfusion/ej2-react-dropdowns";
@@ -35,6 +35,7 @@ import realData from "../data/camelData.json";
     { courseID: "CISC110", id: 25 }
 ];
 */
+
 export function FilteringSearch(): JSX.Element {
     /*const realData = rawData.map((course: any):classes => {
         return { ...course, code: course.code.replace(" ", "") };
@@ -49,10 +50,7 @@ export function FilteringSearch(): JSX.Element {
         setSearchAttribute(searchValue);
 
         const filteredClasses = realData.filter((course) =>
-            course.courseCode
-                .replace(" ", "")
-                .toLowerCase()
-                .startsWith(searchValue.toLowerCase())
+            course.code.toLowerCase().startsWith(searchValue.toLowerCase())
         );
         setFilteredCourses(filteredClasses);
     };
@@ -70,7 +68,7 @@ export function FilteringSearch(): JSX.Element {
             <Form.Group controlId="formFilterSearch">
                 <Form.Control
                     type="text"
-                    value={searchAttribute.replace(" ", "")}
+                    value={searchAttribute}
                     onChange={inputChange}
                     placeholder="Search by Course Code"
                     onClick={flipVisibility}
@@ -88,13 +86,13 @@ export function FilteringSearch(): JSX.Element {
                     {filteredCourses.map((course) => {
                         return (
                             <div
-                                onClick={() => handleClick(course.courseCode)}
+                                onClick={() => handleClick(course.code)}
                                 style={{
                                     cursor: "pointer"
                                 }}
-                                key={course.courseCode}
+                                key={course.code}
                             >
-                                {course.courseCode.replace(" ", "")}
+                                {course.code}
                             </div>
                         );
                     })}

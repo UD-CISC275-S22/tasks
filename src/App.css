@@ -52,3 +52,49 @@
         transform: rotate(360deg);
     }
 }
+
+.SideNav2 {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(255, 217, 2);
+}
+
+.SideNavList2 {
+    height: auto;
+    padding: 0;
+    width: 100%;
+}
+
+.SideNavList2 .row {
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    color: white;
+    list-style-type: none;
+    margin: 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    font-size: large;
+    font-weight: bold;
+}
+
+.SideNavList2 .row:hover {
+    cursor: pointer;
+    background-color: #005aad;
+}
+.SideNavList #active {
+    background-color: rgb(161, 161, 3);
+}
+.row #picture {
+    flex: 30%;
+    display: grid;
+    place-items: center;
+}
+.row #name {
+    flex: 70%;
+}
