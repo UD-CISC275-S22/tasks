@@ -43,3 +43,9 @@ export function SideNav2({
         </div>
     );
 }
+
+/*
+The sideNav2 component provides a side navigation menu for every screen displayed on the website, in which users
+can interact with its "Add Degree Plan", "Add Semester", "Add Course", and "Degree Audit" buttons. This is essentially,
+the root point for all interactivity that the website provides. 
+*/
