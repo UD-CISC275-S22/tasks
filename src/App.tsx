@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 /* eslint-disable no-extra-parens */
 import React, { useState } from "react";
 
@@ -171,10 +172,77 @@ import { Button } from "react-bootstrap";
 import { DpList } from "./DpList";
 import { AddDpModal } from "./AddDpModal";
 
-//todo: fix bug where the sample degree plan does not fully take over the UI instead it shows up on the bottom of the screen unlike the other degreeplans
-//      which hide everything else
+interface Course {
+    code: string;
+    title: string;
+    credits: number;
+}
 
-function App(): JSX.Element {
+interface Semester {
+    id: number;
+    name: string;
+    courses: Course[];
+}
+
+export function App(): JSX.Element {
+    const [semesters, setSemesters] = useState<Semester[]>([]);
+    const [selectedSemester, setSelectedSemester] = useState<string>("Fall");
+    const [newCourse, setNewCourse] = useState<Course>({
+        code: "",
+        title: "",
+        credits: 0
+    });
+
+    const addSemester = () => {
+        const newSemesterObj: Semester = {
+            id: semesters.length + 1,
+            name: selectedSemester,
+            courses: []
+        };
+        setSemesters([...semesters, newSemesterObj]);
+    };
+
+    const addCourse = (semesterId: number) => {
+        if (newCourse.code && newCourse.title && newCourse.credits > 0) {
+            setSemesters((prevSemesters) =>
+                prevSemesters.map((semester) =>
+                    semester.id === semesterId
+                        ? {
+                              ...semester,
+                              // eslint-disable-next-line indent
+                              courses: [...semester.courses, newCourse]
+                          }
+                        : semester
+                )
+            );
+            setNewCourse({ code: "", title: "", credits: 0 });
+        }
+    };
+
+    const deleteSemester = (id: number) => {
+        const updatedSemesters = semesters.filter(
+            (semester) => semester.id !== id
+        );
+        setSemesters(updatedSemesters);
+    };
+
+    const deleteCourse = (semesterId: number, courseIndex: number) => {
+        setSemesters((prevSemesters) =>
+            prevSemesters.map((semester) =>
+                semester.id === semesterId
+                    ? {
+                          ...semester,
+                          courses: semester.courses.filter(
+                              (_, index) => index !== courseIndex
+                          )
+                      }
+                    : semester
+            )
+        );
+    };
+
+    const semesterOptions = ["Fall", "Winter", "Spring", "Summer"];
+
     //load in json data
     const DEGREEPLANS: DegreePlan[] = dpsamplejson.map(
         (dp: DegreePlan): DegreePlan => ({ ...dp }) //dp = degreeplan
@@ -231,55 +299,146 @@ function App(): JSX.Element {
     }
 
     return (
-        <div className="App">
-            <header className="App-header">
-                University of Delaware Computer Science Degree Plan
-                <p>
-                    <WelcomeMessage></WelcomeMessage>
-                </p>
-                <p>
-                    <ul className="horizontal-list">
-                        <li> Aidan Bell </li>
-                        <li>Lawrence Collins </li>
-                        <li>Nicky Reigel</li>
-                        <li>Melvin Rau</li>
-                        <li>Victor Vasquez</li>
-                    </ul>
-                </p>
-            </header>
-            <DpList dp={degreePlans}></DpList>
-            <div />
-            <GenerateCSV
-                data={[
-                    ["First Name", "Last Name"],
-                    ["Nicky", "Reigel"],
-                    ["Aidan", "Bell"]
-                ]}
-                filename="testexport"
-            />
-            <div />
-            <Import importData={importData} setImportData={setImportData} />
-            <div className="div-alightleft">
-                <div className="App-blockleft">
-                    <p>sample block left</p>
+        <div>
+            <div className="App">
+                <header className="App-header">
+                    University of Delaware Computer Science Degree Plan
+                    <p>
+                        <WelcomeMessage></WelcomeMessage>
+                    </p>
+                    <p>
+                        <ul className="horizontal-list">
+                            <li> Aidan Bell </li>
+                            <li>Lawrence Collins </li>
+                            <li>Nicky Reigel</li>
+                            <li>Melvin Rau</li>
+                            <li>Victor Vasquez</li>
+                        </ul>
+                    </p>
+                </header>
+                <DpList dp={degreePlans}></DpList>
+                <div />
+                <GenerateCSV
+                    data={[
+                        ["First Name", "Last Name"],
+                        ["Nicky", "Reigel"],
+                        ["Aidan", "Bell"]
+                    ]}
+                    filename="testexport"
+                />
+                <div />
+                <Import importData={importData} setImportData={setImportData} />
+                <div className="div-alightleft">
+                    <div className="App-blockleft">
+                        <p>sample block left</p>
+                    </div>
                 </div>
-            </div>
-            <div className="div-alignright">
-                <div className="App-blockright">
-                    <p>sample block right</p>
+                <div className="div-alignright">
+                    <div className="App-blockright">
+                        <p>sample block right</p>
+                    </div>
                 </div>
+                <Button className="add_btn" onClick={handleShowModal}>
+                    Add New Degree Plan
+                </Button>
+                <AddDpModal
+                    show={showAddModal}
+                    handleClose={handleCloseModal}
+                    addDp={addDp}
+                ></AddDpModal>
+                <Button onClick={saveData}>Save Degree Plans</Button>
             </div>
-            <Button className="add_btn" onClick={handleShowModal}>
-                Add New Degree Plan
-            </Button>
-            <AddDpModal
-                show={showAddModal}
-                handleClose={handleCloseModal}
-                addDp={addDp}
-            ></AddDpModal>
-            <Button onClick={saveData}>Save Degree Plans</Button>
+            <div>
+                <h1>Semester Tracker</h1>
+                <div>
+                    <select
+                        value={selectedSemester}
+                        onChange={(e) => setSelectedSemester(e.target.value)}
+                    >
+                        {semesterOptions.map((option, index) => (
+                            <option key={index} value={option}>
+                                {option}
+                            </option>
+                        ))}
+                    </select>
+                    <button onClick={addSemester}>Add Semester</button>
+                </div>
+                <ul>
+                    {semesters.map((semester) => (
+                        <li key={semester.id}>
+                            <div>
+                                Semester: {semester.name}
+                                <button
+                                    onClick={() => deleteSemester(semester.id)}
+                                >
+                                    Delete Semester
+                                </button>
+                            </div>
+                            <div className="courses">
+                                {semester.courses.map((course, courseIndex) => (
+                                    <div key={courseIndex} className="course">
+                                        <span>
+                                            Course Code: {course.code}
+                                            <br />
+                                            Course Title: {course.title}
+                                            <br />
+                                            Credits: {course.credits}
+                                        </span>
+                                        <button
+                                            onClick={() =>
+                                                deleteCourse(
+                                                    semester.id,
+                                                    courseIndex
+                                                )
+                                            }
+                                        >
+                                            Delete Course
+                                        </button>
+                                    </div>
+                                ))}
+                            </div>
+                            <div>
+                                <input
+                                    type="text"
+                                    value={newCourse.code}
+                                    onChange={(e) =>
+                                        setNewCourse({
+                                            ...newCourse,
+                                            code: e.target.value
+                                        })
+                                    }
+                                    placeholder="Course Code"
+                                />
+                                <input
+                                    type="text"
+                                    value={newCourse.title}
+                                    onChange={(e) =>
+                                        setNewCourse({
+                                            ...newCourse,
+                                            title: e.target.value
+                                        })
+                                    }
+                                    placeholder="Course Title"
+                                />
+                                <input
+                                    type="number"
+                                    value={newCourse.credits}
+                                    onChange={(e) =>
+                                        setNewCourse({
+                                            ...newCourse,
+                                            credits: +e.target.value
+                                        })
+                                    }
+                                    placeholder="Credits"
+                                />
+                                <button onClick={() => addCourse(semester.id)}>
+                                    Add Course
+                                </button>
+                            </div>
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </div>
     );
 }
-
-export default App;
