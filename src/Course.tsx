@@ -54,7 +54,7 @@ function DisplayCourse({
     }
 
     //Updates info based on autofill
-    function updateCourseIdentity(event: React.ChangeEvent<HTMLInputElement>) {
+    function updateCourseID(event: React.ChangeEvent<HTMLInputElement>) {
         const newCourse = courseList.findIndex(
             (course: course) => course.id === event.target.value
         );
@@ -118,7 +118,7 @@ function DisplayCourse({
                             <Form.Control
                                 list="courseIDs"
                                 value={courseID}
-                                onChange={updateCourseIdentity}
+                                onChange={updateCourseID}
                             />
                         </Form.Group>
                     </td>
