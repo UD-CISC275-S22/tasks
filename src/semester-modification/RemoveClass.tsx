@@ -12,7 +12,7 @@ export function RemoveClass({
     classToDelete: classes;
     onRemoveClass: (updatedSchedule: semester) => void;
 }): JSX.Element {
-    function addNewClass() {
+    function removeNewClass() {
         // Create a new array of semesters
         let updatedSchedule = { ...schedule };
 
@@ -46,7 +46,7 @@ export function RemoveClass({
 
     return (
         <div>
-            <Button onClick={addNewClass}>Remove Class</Button>
+            <Button onClick={removeNewClass}>Remove Class</Button>
         </div>
     );
 }

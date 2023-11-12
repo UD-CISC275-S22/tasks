@@ -1,56 +1,53 @@
 import React from "react";
+import { Button } from "react-bootstrap";
 import { classes } from "../Interface/classes";
 import { semester } from "../Interface/semester";
-import { Button } from "react-bootstrap";
 
 export function AddClass({
     schedule,
+    semester,
     newClass,
     onAddClass
 }: {
-    schedule: semester;
+    schedule: semester[];
+    semester: semester;
     newClass: classes;
-    onAddClass: (updatedSchedule: semester) => void;
+    onAddClass: (updatedSchedule: semester[]) => void;
 }): JSX.Element {
-    function addNewClass() {
+    function addClass() {
         // Create a new array of semesters
-        let updatedSchedule = { ...schedule };
+        const updatedSchedule: semester[] = [...schedule];
 
-        // Find the semester at the specified index (scheduleID)
-        const semesterToUpdate = updatedSchedule;
+        // Find the index of the current semester
+        const semesterIndex: number = updatedSchedule.findIndex(
+            (sem: semester) => sem.id === semester.id
+        );
 
         // Create a new array of classes for the updated semester
-        const updatedClasses = [...semesterToUpdate.classList, newClass];
+        const updatedClasses: classes[] = [
+            ...updatedSchedule[semesterIndex].classList,
+            newClass
+        ];
 
         // Get new credit total
-        const totalCredits = updatedClasses.reduce(
+        const totalCredits: number = updatedClasses.reduce(
             (total: number, currentClass: classes) =>
                 total + currentClass.credits,
             0
         );
 
-        // Update the classList of the semester with the new array of classes
-        semesterToUpdate.classList = updatedClasses;
-        semesterToUpdate.totalCredits = totalCredits;
+        // Create a new semester object with the updated values
+        const updatedSemester: semester = {
+            ...updatedSchedule[semesterIndex],
+            classList: updatedClasses,
+            totalCredits: totalCredits
+        };
 
         // Update the schedule with the modified semester
-        updatedSchedule = semesterToUpdate;
+        updatedSchedule[semesterIndex] = updatedSemester;
 
         onAddClass(updatedSchedule);
     }
 
-    return (
-        <div>
-            <Button onClick={addNewClass}>Add Class</Button>
-        </div>
-    );
+    return <Button onClick={addClass}>Add Class</Button>;
 }
-
-// <AddClass
-//     schedule={exClass}
-//     scheduleID={1}
-//     newClass={addNewClass}
-//     onAddClass={(updatedSchedule: semester[]): void => {
-//         setexClass(updatedSchedule);
-//     }}
-// ></AddClass>;

@@ -7,13 +7,18 @@ import "../App.css";
 import SchoolIcon from "@mui/icons-material/School";
 import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 import ClassIcon from "@mui/icons-material/Class";
+import ChecklistIcon from "@mui/icons-material/Checklist";
 
 export function SideNav2({
     flipView,
-    flipModalView
+    flipModalView,
+    flipAudit,
+    flipAddView
 }: {
     flipView: () => void;
     flipModalView: () => void;
+    flipAudit: () => void;
+    flipAddView: () => void;
 }): JSX.Element {
     return (
         <div className="SideNav2">
@@ -26,9 +31,13 @@ export function SideNav2({
                     <div id="picture">{<AutoStoriesIcon />}</div>
                     <div id="name">{"Add Semester"}</div>
                 </li>
-                <li className="row">
+                <li className="row" onClick={() => flipAddView()}>
                     <div id="picture">{<ClassIcon />}</div>
                     <div id="name">{"Add Course"}</div>
+                </li>
+                <li className="row" onClick={() => flipAudit()}>
+                    <div id="picture">{<ChecklistIcon />}</div>
+                    <div id="name">{"Degree Audit"}</div>
                 </li>
             </ul>
         </div>
