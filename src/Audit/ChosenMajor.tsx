@@ -22,7 +22,7 @@ export function ChosenMajor({
 }) {
     const [selectedMajor, setSelectedMajor] = useState<string>(" ");
 
-    function updateMajor(event: React.ChangeEvent<HTMLInputElement>) {
+    function updateMajor(event: React.ChangeEvent<HTMLSelectElement>): void {
         setSelectedMajor(event.target.value);
     }
     return (
@@ -33,17 +33,15 @@ export function ChosenMajor({
                 </Modal.Header>
                 <Modal.Body>
                     <Form.Group>
-                        <Form.Select style={{ textAlign: "center" }}>
-                            {majors.map((options: string) => (
-                                <Form.Check
-                                    inline
-                                    key={options}
-                                    type="radio"
-                                    label={options}
-                                    value={options}
-                                    checked={selectedMajor === options}
-                                    onChange={updateMajor}
-                                ></Form.Check>
+                        <Form.Select
+                            value={selectedMajor}
+                            onChange={updateMajor}
+                            style={{ textAlign: "center" }}
+                        >
+                            {majors.map((option: string) => (
+                                <option key={option} value={option}>
+                                    {option}
+                                </option>
                             ))}
                         </Form.Select>
                     </Form.Group>
@@ -56,7 +54,13 @@ export function ChosenMajor({
                     >
                         Close
                     </Button>
-                    <Button> Done</Button>
+                    <Button
+                        onClick={() => {
+                            handleClose();
+                        }}
+                    >
+                        TBD
+                    </Button>
                 </Modal.Footer>
             </Modal>
         </div>

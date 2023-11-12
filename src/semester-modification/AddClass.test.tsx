@@ -1,10 +1,9 @@
+import { semester } from "../Interface/semester";
+import { AddClass } from "./AddClass";
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { AddClass } from "./AddClass";
-import { semester } from "../Interface/semester";
-import { classes } from "../Interface/classes";
 
-const plan: semester[] = [
+const base: semester[] = [
     {
         id: 1,
         fullTime: true,
@@ -67,42 +66,86 @@ const plan: semester[] = [
     }
 ];
 
-const newClass: classes = {
-    code: "ACCT166",
-    title: "SPECIAL PROBLEM",
-    credits: 3,
-    preReq: ["No prerequisites."]
-};
-let currentSemester = plan[0];
+let planHolder = base;
+let currentSemester = base[0];
 
-function setCurrentSemester(newSem: semester): void {
-    currentSemester = { ...newSem };
+function updatedSchedule(updatedSchedule: semester[]): void {
+    planHolder = updatedSchedule;
 }
+
 describe("AddClass Component tests", () => {
     beforeEach(() => {
-        currentSemester = plan[0];
+        // Reset the base state before each test
+        currentSemester = base[0];
+        planHolder = base;
+    });
+
+    test("Button says Add Class", () => {
         render(
             <AddClass
-                schedule={currentSemester}
-                newClass={newClass}
-                onAddClass={function (updatedSchedule: semester): void {
-                    setCurrentSemester(updatedSchedule);
+                schedule={planHolder}
+                semester={currentSemester}
+                newClass={{
+                    code: "ACCT208",
+                    title: "Accounting II",
+                    credits: 3,
+                    preReq: ["ACCT207", " ACCT207"]
                 }}
+                onAddClass={updatedSchedule}
             />
         );
-    });
-    test("Button says Add Class", () => {
-        // getByRole to tell if it's a button that shows up
         const valueText = screen.getByRole("button", { name: /Add Class/i });
         expect(valueText).toBeInTheDocument();
     });
 
     test("Button adds class to semester", () => {
-        // Checks if the classlist now contains the new class
-        const valueText = screen.getByRole("button", {
-            name: /Add Class/i
-        });
+        render(
+            <AddClass
+                schedule={planHolder}
+                semester={currentSemester}
+                newClass={{
+                    code: "ACCT208",
+                    title: "Accounting II",
+                    credits: 3,
+                    preReq: ["ACCT207", " ACCT207"]
+                }}
+                onAddClass={updatedSchedule}
+            />
+        );
+        const valueText = screen.getByRole("button", { name: /Add Class/i });
         valueText.click();
-        expect(currentSemester.classList).toContain(newClass);
+        expect(planHolder[0].classList).toContainEqual({
+            code: "ACCT208",
+            title: "Accounting II",
+            credits: 3,
+            preReq: ["ACCT207", " ACCT207"]
+        });
+        expect(planHolder[0].classList.length).toEqual(3);
+    });
+
+    test("Button adds class to second semester", () => {
+        currentSemester = planHolder[1];
+        render(
+            <AddClass
+                schedule={planHolder}
+                semester={currentSemester}
+                newClass={{
+                    code: "ACCT208",
+                    title: "Accounting II",
+                    credits: 3,
+                    preReq: ["ACCT207", " ACCT207"]
+                }}
+                onAddClass={updatedSchedule}
+            />
+        );
+        const valueText = screen.getByRole("button", { name: /Add Class/i });
+        valueText.click();
+        expect(planHolder[1].classList).toContainEqual({
+            code: "ACCT208",
+            title: "Accounting II",
+            credits: 3,
+            preReq: ["ACCT207", " ACCT207"]
+        });
+        expect(planHolder[1].classList.length).toEqual(3);
     });
 });

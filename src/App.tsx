@@ -17,12 +17,15 @@ import { AddSemesterModal } from "./SemesterModal/addSemesterModal";
 import { semester } from "./Interface/semester";
 import { classes } from "./Interface/classes";
 import sample from "./data/data.json";
+import { AddToSemester } from "./semester-modification/AddToSemester";
+import { ChosenMajor } from "./Audit/ChosenMajor";
 
 function App(): JSX.Element {
     const [page, setPage] = useState(false);
     const [name, setName] = useState("");
     const [seeSemesterView, setSeeSemesterView] = useState(false);
     const [modalView, setModalView] = useState(false);
+    const [addView, setAddView] = useState(false);
     const [seeAudit, setSeeAudit] = useState(false);
     const getName = () => {
         setName(name);
@@ -36,6 +39,10 @@ function App(): JSX.Element {
 
     const flipModalView = () => {
         setModalView(!modalView);
+    };
+
+    const flipAddView = () => {
+        setAddView(!addView);
     };
 
     const flipAudit = () => {
@@ -52,6 +59,8 @@ function App(): JSX.Element {
             )
         })
     );
+
+    const [semesters, setSemesters] = useState<semester[]>(semesterExamples);
 
     function addSemester(
         id: number,
@@ -70,7 +79,9 @@ function App(): JSX.Element {
         setSemesters([...semesters, newSemester]);
     }
 
-    const [semesters, setSemesters] = useState<semester[]>(semesterExamples);
+    function onAddClass(updatedSemester: semester[]): void {
+        setSemesters(updatedSemester);
+    }
 
     return (
         <div className="App">
@@ -93,6 +104,7 @@ function App(): JSX.Element {
                                 flipView={flipView}
                                 flipModalView={flipModalView}
                                 flipAudit={flipAudit}
+                                flipAddView={flipAddView}
                             ></SideNav2>
                         </Col>
                         <Col sm={10}>
@@ -102,6 +114,20 @@ function App(): JSX.Element {
                                     show={modalView}
                                     semesterExamples={semesters}
                                     addSemester={addSemester}
+                                />
+                            )}
+                            {addView && (
+                                <AddToSemester
+                                    handleClose={flipAddView}
+                                    show={addView}
+                                    semesters={semesters}
+                                    onAddClass={onAddClass}
+                                />
+                            )}
+                            {seeAudit && (
+                                <ChosenMajor
+                                    handleClose={flipAudit}
+                                    show={seeAudit}
                                 />
                             )}
                             <SwitchComponents

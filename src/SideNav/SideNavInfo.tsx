@@ -22,7 +22,7 @@ export const SideNavInfo = [
     },
     {
         name: "Degree Audit",
-        pictur: <ChecklistIcon />,
+        picture: <ChecklistIcon />,
         link: "/DegreeAudit"
     }
 ];
