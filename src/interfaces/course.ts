@@ -1,6 +1,6 @@
 export interface Course {
     title: string;
-    courseCode: number;
+    courseCode: string;
     credits: number;
     degreeRequirements: string[];
     coursePrereq: string[];

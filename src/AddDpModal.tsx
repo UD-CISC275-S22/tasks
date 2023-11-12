@@ -2,7 +2,7 @@
 //it should essentially be form that the user fills out
 import React from "react";
 import { useState } from "react";
-import { Button, Form, Modal, Col, Row } from "react-bootstrap";
+import { Button, Form, Modal } from "react-bootstrap";
 
 export function AddDpModal({
     show,

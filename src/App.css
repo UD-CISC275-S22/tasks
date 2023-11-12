@@ -63,13 +63,14 @@
 .center {
     text-align: center; /* Center-align the content within the table cells */
 
-.horizontal-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+    .horizontal-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
 
-.horizontal-list li {
-    display: inline-block;
-    margin-right: 10px;
+    .horizontal-list li {
+        display: inline-block;
+        margin-right: 10px;
+    }
 }

@@ -9,39 +9,34 @@ import dpsamplejson from "./sampleDpData.json"; //this is the real json data tha
 import { Button } from "react-bootstrap";
 import { DpList } from "./DpList";
 import { AddDpModal } from "./AddDpModal";
-
-interface Course {
-    code: string;
-    title: string;
-    credits: number;
-}
-
-interface Semester {
-    id: number;
-    name: string;
-    courses: Course[];
-}
+import { Course } from "./interfaces/course";
+import { Semester } from "./interfaces/semester";
 
 export function App(): JSX.Element {
     const [semesters, setSemesters] = useState<Semester[]>([]);
     const [selectedSemester, setSelectedSemester] = useState<string>("Fall");
     const [newCourse, setNewCourse] = useState<Course>({
-        code: "",
         title: "",
-        credits: 0
+        courseCode: "",
+        credits: 0,
+        degreeRequirements: [],
+        coursePrereq: [],
+        courseCoreq: [],
+        courseDescription: ""
     });
 
     const addSemester = () => {
         const newSemesterObj: Semester = {
             id: semesters.length + 1,
-            name: selectedSemester,
-            courses: []
+            title: selectedSemester,
+            courses: [],
+            totalCredits: 0
         };
         setSemesters([...semesters, newSemesterObj]);
     };
 
     const addCourse = (semesterId: number) => {
-        if (newCourse.code && newCourse.title && newCourse.credits > 0) {
+        if (newCourse.courseCode && newCourse.title && newCourse.credits > 0) {
             setSemesters((prevSemesters) =>
                 prevSemesters.map((semester) =>
                     semester.id === semesterId
@@ -53,7 +48,15 @@ export function App(): JSX.Element {
                         : semester
                 )
             );
-            setNewCourse({ code: "", title: "", credits: 0 });
+            setNewCourse({
+                courseCode: "",
+                title: "",
+                credits: 0,
+                degreeRequirements: [],
+                coursePrereq: [],
+                courseCoreq: [],
+                courseDescription: ""
+            });
         }
     };
 
@@ -205,7 +208,7 @@ export function App(): JSX.Element {
                     {semesters.map((semester) => (
                         <li key={semester.id}>
                             <div>
-                                Semester: {semester.name}
+                                Semester: {semester.title}
                                 <button
                                     onClick={() => deleteSemester(semester.id)}
                                 >
@@ -216,7 +219,7 @@ export function App(): JSX.Element {
                                 {semester.courses.map((course, courseIndex) => (
                                     <div key={courseIndex} className="course">
                                         <span>
-                                            Course Code: {course.code}
+                                            Course Code: {course.courseCode}
                                             <br />
                                             Course Title: {course.title}
                                             <br />
@@ -238,11 +241,11 @@ export function App(): JSX.Element {
                             <div>
                                 <input
                                     type="text"
-                                    value={newCourse.code}
+                                    value={newCourse.courseCode}
                                     onChange={(e) =>
                                         setNewCourse({
                                             ...newCourse,
-                                            code: e.target.value
+                                            courseCode: e.target.value
                                         })
                                     }
                                     placeholder="Course Code"

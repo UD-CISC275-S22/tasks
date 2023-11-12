@@ -48,41 +48,36 @@ export function DpView({
                         <tbody>
                             {dp.semestersList.map((semester: Semester) => (
                                 <td key={semester.title}>
-                                    {semester.courseList.map(
-                                        (course: Course) => (
-                                            <div key={course.courseCode}>
-                                                <p>{course.title}</p>
-                                                <Table striped bordered>
-                                                    <tbody>
-                                                        <td>
-                                                            <p>
-                                                                Course Credits:{" "}
-                                                                {course.credits}
-                                                            </p>
-                                                            <p>
-                                                                Course Code:{" "}
-                                                                {
-                                                                    course.courseCode
-                                                                }
-                                                            </p>
-                                                            <p
-                                                                style={{
-                                                                    textAlign:
-                                                                        "center"
-                                                                }}
-                                                            >
-                                                                Course
-                                                                Description:{" "}
-                                                                {
-                                                                    course.courseDescription
-                                                                }
-                                                            </p>
-                                                        </td>
-                                                    </tbody>
-                                                </Table>
-                                            </div>
-                                        )
-                                    )}
+                                    {semester.courses.map((course: Course) => (
+                                        <div key={course.courseCode}>
+                                            <p>{course.title}</p>
+                                            <Table striped bordered>
+                                                <tbody>
+                                                    <td>
+                                                        <p>
+                                                            Course Credits:{" "}
+                                                            {course.credits}
+                                                        </p>
+                                                        <p>
+                                                            Course Code:{" "}
+                                                            {course.courseCode}
+                                                        </p>
+                                                        <p
+                                                            style={{
+                                                                textAlign:
+                                                                    "center"
+                                                            }}
+                                                        >
+                                                            Course Description:{" "}
+                                                            {
+                                                                course.courseDescription
+                                                            }
+                                                        </p>
+                                                    </td>
+                                                </tbody>
+                                            </Table>
+                                        </div>
+                                    ))}
                                 </td>
                             ))}
                         </tbody>

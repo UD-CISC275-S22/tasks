@@ -11,7 +11,7 @@
                 "courses": [
                     {
                         "title": "CISC220",
-                        "courseCode": 124,
+                        "courseCode": "124",
                         "credits": 3,
                         "degreeRequirements": [
                             "CISC core requirement",
@@ -23,7 +23,7 @@
                     },
                     {
                         "title": "CISC290",
-                        "courseCode": 120,
+                        "courseCode": "120",
                         "credits": 3,
                         "degreeRequirements": [],
                         "coursePrereq": [],
@@ -32,7 +32,7 @@
                     },
                     {
                         "title": "CISC108",
-                        "courseCode": 170,
+                        "courseCode": "170",
                         "credits": 3,
                         "degreeRequirements": ["CISC core requirement"],
                         "coursePrereq": [
@@ -50,7 +50,7 @@
                 "courses": [
                     {
                         "title": "CISC220",
-                        "courseCode": 124,
+                        "courseCode": "124",
                         "credits": 3,
                         "degreeRequirements": [
                             "CISC core requirement",
@@ -62,7 +62,7 @@
                     },
                     {
                         "title": "CISC220",
-                        "courseCode": 124,
+                        "courseCode": "124",
                         "credits": 3,
                         "degreeRequirements": [
                             "CISC core requirement",
@@ -74,7 +74,7 @@
                     },
                     {
                         "title": "CISC108",
-                        "courseCode": 170,
+                        "courseCode": "170",
                         "credits": 3,
                         "degreeRequirements": ["CISC core requirement"],
                         "coursePrereq": [
@@ -92,7 +92,7 @@
                 "courses": [
                     {
                         "title": "CISC220",
-                        "courseCode": 124,
+                        "courseCode": "124",
                         "credits": 3,
                         "degreeRequirements": [
                             "CISC core requirement",
@@ -104,7 +104,7 @@
                     },
                     {
                         "title": "CISC220",
-                        "courseCode": 124,
+                        "courseCode": "124",
                         "credits": 3,
                         "degreeRequirements": [
                             "CISC core requirement",
@@ -116,7 +116,7 @@
                     },
                     {
                         "title": "CISC108",
-                        "courseCode": 170,
+                        "courseCode": "170",
                         "credits": 3,
                         "degreeRequirements": ["CISC core requirement"],
                         "coursePrereq": [
@@ -134,7 +134,7 @@
                 "courses": [
                     {
                         "title": "CISC205",
-                        "courseCode": 121,
+                        "courseCode": "121",
                         "credits": 3,
                         "degreeRequirements": [
                             "CISC core requirement",
@@ -146,7 +146,7 @@
                     },
                     {
                         "title": "CISC210",
-                        "courseCode": 193,
+                        "courseCode": "193",
                         "credits": 3,
                         "degreeRequirements": ["CISC core requirement"],
                         "coursePrereq": [

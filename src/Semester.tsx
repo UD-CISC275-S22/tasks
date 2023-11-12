@@ -12,7 +12,7 @@ function Semester({
 }) {
     const [newCourse, setNewCourse] = useState<Course>({
         title: "",
-        courseCode: -1,
+        courseCode: "",
         credits: 0,
         degreeRequirements: [""],
         coursePrereq: [""],
@@ -41,7 +41,7 @@ function Semester({
                     onChange={(e) =>
                         setNewCourse({
                             ...newCourse,
-                            courseCode: Number(e.target.value)
+                            courseCode: e.target.value
                         })
                     }
                     placeholder="Course Code"
