@@ -1,20 +1,38 @@
 import React, { useState } from "react";
 import { semester } from "../Interface/semester";
+import { classes } from "../Interface/classes";
 import { RemoveClass } from "../semester-modification/RemoveClass";
 
 export function SemesterView({
     semester,
-    clearSemester
+    clearSemester,
+    setDragCourse,
+    handleOnDrop,
+    handleOnDragOver
 }: {
     semester: semester;
     clearSemester: (id: number) => void;
+    setDragCourse: (classes: classes) => void;
+    handleOnDrop: (event: React.DragEvent<HTMLDivElement>, id: number) => void;
+    handleOnDragOver: (event: React.DragEvent<HTMLDivElement>) => void;
 }): JSX.Element {
     const [currentSemester, setSemester] = useState<semester>(semester);
     function clearCourses(semester: semester): void {
         setSemester({ ...semester, classList: [] });
     }
+    const handleDragStart = (
+        event: React.DragEvent<HTMLTableRowElement>,
+        course: classes
+    ) => {
+        console.log("Enter");
+        console.log(course);
+        setDragCourse(course);
+    };
     return (
-        <div>
+        <div
+            onDrop={(e) => handleOnDrop(e, currentSemester.id)}
+            onDragOver={(e) => handleOnDragOver(e)}
+        >
             <div>
                 <h3>{currentSemester.season}</h3>
             </div>
@@ -33,9 +51,15 @@ export function SemesterView({
                     </tr>
                 </thead>
                 <tbody>
-                    {currentSemester.classList.map((classItem, classIndex) => {
+                    {currentSemester.classList.map((classItem) => {
                         return (
-                            <tr key={classIndex}>
+                            <tr
+                                draggable={true}
+                                onDragStart={(e) =>
+                                    handleDragStart(e, classItem)
+                                }
+                                key={classItem.code}
+                            >
                                 <td>{classItem.code}</td>
                                 <td>{classItem.title}</td>
                                 <td>{classItem.credits}</td>
