@@ -1,17 +1,18 @@
-import { Class } from "./interfaces/course";
+import { Course } from "./interfaces/course";
 
 //Only viable for degree if it is first CISC course taken
-export const CISC101: Class = {
-    classTitle: "Principles of Computing",
-    classCode: 101,
+export const CISC101: Course = {
+    title: "Principles of Computing",
+    courseCode: 101,
     credits: 3,
     degreeRequirements: ["None"],
     coursePrereq: ["None"],
-    courseCoreq: ["None"]
+    courseCoreq: ["None"],
+    courseDescription: ""
 };
 
 //For credit, must be taken before 106/108 (not required)
-export const CISC103: Class = {
+export const CISC103: Course = {
     classTitle: "Introduction to Computer Science with Web Applications",
     classCode: 103,
     credits: 3,
@@ -21,7 +22,7 @@ export const CISC103: Class = {
 };
 
 //Cant get credit in both 106 and 108 (108 reccommended)
-export const CISC106: Class = {
+export const CISC106: Course = {
     classTitle: "General Computer Science for Engineers",
     classCode: 106,
     credits: 3,
@@ -31,7 +32,7 @@ export const CISC106: Class = {
 };
 
 //Cant get credit in both 106 and 108 (108 reccommended)
-export const CISC108: Class = {
+export const CISC108: Course = {
     classTitle: "Introduction to Computer Science I",
     classCode: 108,
     credits: 3,
@@ -40,7 +41,7 @@ export const CISC108: Class = {
     courseCoreq: ["MATH115" || "MATH117" || "Higher MATH"]
 };
 
-export const CISC181: Class = {
+export const CISC181: Course = {
     classTitle: "Introduction to Computer Science II",
     classCode: 181,
     credits: 3,
@@ -49,7 +50,7 @@ export const CISC181: Class = {
     courseCoreq: ["MATH221" || "MATH241" || "Higher MATH"]
 };
 
-export const CISC210: Class = {
+export const CISC210: Course = {
     classTitle: "Introduction to Systems Programming",
     classCode: 210,
     credits: 3,
