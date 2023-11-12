@@ -1,12 +1,23 @@
 // Semester.tsx
 import React, { useState } from "react";
-import Course from "./Course";
+import { Course } from "./interfaces/course";
+import { Semester } from "./interfaces/semester";
 
-function Semester({ semester, deleteSemester }) {
+function Semester({
+    semester,
+    deleteSemester
+}: {
+    semester: Semester;
+    deleteSemester: (semesterID: number) => void;
+}) {
     const [newCourse, setNewCourse] = useState<Course>({
-        code: "",
         title: "",
-        credits: 0
+        courseCode: -1,
+        credits: 0,
+        degreeRequirements: [""],
+        coursePrereq: [""],
+        courseCoreq: [""],
+        courseDescription: ""
     });
 
     const addCourse = () => {
@@ -16,18 +27,22 @@ function Semester({ semester, deleteSemester }) {
 
     return (
         <li>
-            {semester.id}. {semester.name}
+            {semester.id}. {semester.title}
             <ul>
+                {/*eslint-disable-next-line no-extra-parens*/}
                 {semester.courses.map((course, index) => (
-                    <Course key={index} course={course} />
+                    <li key={index}>{course}</li>
                 ))}
             </ul>
             <div>
                 <input
                     type="text"
-                    value={newCourse.code}
+                    value={newCourse.courseCode}
                     onChange={(e) =>
-                        setNewCourse({ ...newCourse, code: e.target.value })
+                        setNewCourse({
+                            ...newCourse,
+                            courseCode: Number(e.target.value)
+                        })
                     }
                     placeholder="Course Code"
                 />
