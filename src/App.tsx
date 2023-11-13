@@ -4,15 +4,12 @@ import "./App.css";
 
 function App(): JSX.Element {
     const [modalIsOpen, setModalIsOpen] = useState(false);
-
     const openModal = () => {
         setModalIsOpen(true);
     };
-
     const closeModal = () => {
         setModalIsOpen(false);
     };
-
     return (
         <div className="App">
             <header className="App-header">UD Course Planner</header>

@@ -49,11 +49,11 @@
 .ReactModal__Content {
     background: #fff;
     padding: 20px;
-    border: none; /* Remove border */
+    border: none;
     border-radius: 4px;
     outline: none;
     width: 80%;
-    max-width: 100000px; /* Adjust as needed */
+    max-width: 10000px;
     text-align: left;
 }
 
