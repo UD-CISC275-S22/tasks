@@ -108,5 +108,5 @@ function App(): JSX.Element {
         </div>
     );
 }
-//send help
+//send help :(
 export default App;
