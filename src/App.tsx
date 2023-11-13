@@ -1,10 +1,19 @@
 import React from "react";
 import "./App.css";
-//import { modal } from "react-modal";
 //import { ModalBody } from "react-bootstrap";
 //import { Button } from "react-bootstrap";
 //import { data } from "./classData";
 function App(): JSX.Element {
+    const modal = document.getElementById("myModal") as HTMLElement;
+    const btn = document.getElementById("myBtn") as HTMLElement;
+    const span = document.getElementsByClassName("close")[0] as HTMLElement;
+    btn.onclick = () => {
+        modal.style.display = "block";
+    };
+
+    span.onclick = () => {
+        modal.style.display = "none";
+    };
     return (
         <div className="App">
             <header className="App-header">UD Course Planner</header>
