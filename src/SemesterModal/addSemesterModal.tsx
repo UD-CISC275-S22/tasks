@@ -1,7 +1,6 @@
 /* eslint-disable no-extra-parens */
 import React from "react";
 import { Button, Form, Modal } from "react-bootstrap";
-//import { FilteringSearch } from "../../FilteringSearch/FilteringSearch";
 import realData from "../data/corrected_data.json";
 import { semester } from "../Interface/semester";
 import { useState } from "react";
@@ -23,7 +22,7 @@ export function AddSemesterModal({
         totalCredits: number,
         season: string
     ) => void;
-}) {
+}): JSX.Element {
     const [searchAttribute, setSearchAttribute] = useState("");
     const [season, setSeason] = useState("");
     const [filteredCourses, setFilteredCourses] = useState(realData);
@@ -78,6 +77,7 @@ export function AddSemesterModal({
                                 type="text"
                                 placeholder="Provide a name for the semester"
                                 onChange={inputChange1}
+                                data-testid="input1"
                             />
                         </Form.Group>
                         <hr></hr>
@@ -89,6 +89,7 @@ export function AddSemesterModal({
                                 onChange={inputChange}
                                 placeholder="Search by Course Code"
                                 onClick={flipVisibility}
+                                data-testid="input2"
                             />
                         </Form.Group>
                         {visible && (
@@ -128,6 +129,7 @@ export function AddSemesterModal({
                         Close
                     </Button>
                     <Button
+                        data-testid="Done"
                         onClick={() => {
                             closingModal();
                         }}
@@ -139,3 +141,16 @@ export function AddSemesterModal({
         </div>
     );
 }
+
+/* 
+
+This component is used to create pop which allows users to 
+add a semester to thier degree plan. (Currently demo data is being 
+used to display the table, and show that you can add a semester to the plan.) 
+The component allows the user to write the name of the semester and also search 
+through the courses with the help of filtering search. From there, the information about
+the course is extracted and the displayed on the plan, alongside the name of the semester
+
+I have a linter issue currently due to parans issue but it should be fixed before final submission
+
+*/
