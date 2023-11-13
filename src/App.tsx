@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import "./App.css";
-import CourseTable, { DisplayCourse } from "./CoursePlan";
-import { course } from "./PlannerInterfaces/course";
-import { data } from "./classData";
-import { semester } from "./PlannerInterfaces/semester";
 import { plan } from "./PlannerInterfaces/plan";
+import { Plan } from "./Plan";
+import defaultPlans from "./Defaults.json";
 
 function App(): JSX.Element {
     const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -15,35 +13,9 @@ function App(): JSX.Element {
     const closeModal = () => {
         setModalIsOpen(false);
     };
-    // Mock data for testing
-    const defaultCourse: course = {
-        id: "1",
-        name: "Sample Course",
-        credits: 3,
-        courseID: "CSCI123",
-        preReq: "None"
-    };
-
-    const defaultSemester: semester = {
-        id: "1",
-        name: "Fall 2023",
-        courses: data,
-        year: 0,
-        season: ""
-    };
-
-    const defaultPlan: plan = {
-        id: "1",
-        name: "Sample Plan",
-        semesters: [defaultSemester]
-    };
-
-    const [, /*currentPlan*/ setCurrentPlan] = useState<plan>(defaultPlan);
-
-    // Update plan function
-    const updatePlan = (updatedPlan: plan) => {
-        setCurrentPlan(updatedPlan);
-    };
+    useState<number>(-1);
+    const defaultPlan = defaultPlans.defaultPlans;
+    const [degreePlans, setDegreePlans] = useState<plan[]>(defaultPlan);
     return (
         <div className="App">
             <header className="App-header">UD Course Planner</header>
@@ -51,6 +23,11 @@ function App(): JSX.Element {
                 James Lloyd, Kerry Ferguson, Matthew Conlon, Caleb Sachetti,
                 Arnav Baliyan
             </p>
+            <Plan
+                degreePlans={degreePlans}
+                setDegreePlans={setDegreePlans}
+                currentPlan={degreePlans[0]}
+            ></Plan>
             <div>
                 <button
                     id="openModalBtn"
@@ -140,5 +117,5 @@ function App(): JSX.Element {
         </div>
     );
 }
-
+//send help :(
 export default App;
