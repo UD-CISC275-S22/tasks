@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import "./App.css";
+import CourseTable, { DisplayCourse } from "./CoursePlan";
+import { course } from "./PlannerInterfaces/course";
+import { data } from "./classData";
+import { semester } from "./PlannerInterfaces/semester";
+import { plan } from "./PlannerInterfaces/plan";
 
 function App(): JSX.Element {
     const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -9,6 +14,35 @@ function App(): JSX.Element {
     };
     const closeModal = () => {
         setModalIsOpen(false);
+    };
+    // Mock data for testing
+    const defaultCourse: course = {
+        id: "1",
+        name: "Sample Course",
+        credits: 3,
+        courseID: "CSCI123",
+        preReq: "None"
+    };
+
+    const defaultSemester: semester = {
+        id: "1",
+        name: "Fall 2023",
+        courses: data,
+        year: 0,
+        season: ""
+    };
+
+    const defaultPlan: plan = {
+        id: "1",
+        name: "Sample Plan",
+        semesters: [defaultSemester]
+    };
+
+    const [, /*currentPlan*/ setCurrentPlan] = useState<plan>(defaultPlan);
+
+    // Update plan function
+    const updatePlan = (updatedPlan: plan) => {
+        setCurrentPlan(updatedPlan);
     };
     return (
         <div className="App">
@@ -86,6 +120,15 @@ function App(): JSX.Element {
                     </div>
                 </Modal>
             </div>
+            {/* Render CourseTable component */}
+            <CourseTable data={data} />
+            {/* Render DisplayCourse component with mock data */}
+            <DisplayCourse
+                defaultCourse={defaultCourse}
+                semester={defaultSemester}
+                plan={defaultPlan}
+                updatePlan={updatePlan}
+            />
             <p> List of Degree Plans: </p>
             <table>
                 <tr>
