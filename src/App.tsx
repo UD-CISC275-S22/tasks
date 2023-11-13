@@ -6,6 +6,7 @@ import { yearI } from "./interfaces/semester";
 import { EditCourseModal } from "./EditModal";
 import { Course } from "./interfaces/course";
 import { AddCourseModal } from "./AddCourseModal";
+import { ClearCourseModal } from "./ClearCourseModal";
 
 const testSemester = {
     season: "Fall",
@@ -84,6 +85,7 @@ function App(): JSX.Element {
     const handleShowAddCourseModal = () => setShowAddCourseModal(true);
     const handleCloseAddCourseModal = () => setShowAddCourseModal(false);
     //const handleShowAddModal = () => updateEditMogal(true);
+    const [showClearModal, setShowClearModal] = useState(false);
     const [editSelected, setEdit] = useState<Course>({
         ticker: "",
         name: "",
@@ -124,17 +126,13 @@ function App(): JSX.Element {
     const handleImportCSV = () => {
         console.log("Import csv button clicked");
     };
-
-    const handleClearAllCourses = () => {
-        const clearedYear = {
+    const clearCourses = (semester: "firstsemester" | "secondsemester") => {
+        const updatedYear = {
             ...yearOne,
-            firstsemester: { ...yearOne.firstsemester, courses: [] },
-            secondsemester: { ...yearOne.secondsemester, courses: [] }
+            [semester]: { ...yearOne[semester], courses: [] }
         };
-
-        updateYearOne(clearedYear);
+        updateYearOne(updatedYear);
     };
-
     return (
         <div className="App">
             <div className="logo">
@@ -156,12 +154,14 @@ function App(): JSX.Element {
                 </button>
                 <button onClick={handleImportCSV}>Import CSV</button>
                 <button onClick={handleShowAddCourseModal}>Add Course</button>
-                <button
-                    className="buttonSpacing"
-                    onClick={handleClearAllCourses}
-                >
-                    Clear All Courses
+                <button onClick={() => setShowClearModal(true)}>
+                    Clear Courses
                 </button>
+                <ClearCourseModal
+                    show={showClearModal}
+                    handleClose={() => setShowClearModal(false)}
+                    clearCourses={clearCourses}
+                />
             </div>
             <Year year={yearOne} editCourse={setCurrentCourseEdit}></Year>
             <EditCourseModal
