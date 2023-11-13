@@ -75,6 +75,9 @@ function App(): JSX.Element {
                 ></WelcomeMessage>
             ) : (
                 <div>
+                    {
+                        //prettier giving issues with large ternary else. Will be fixed by end of sprint.
+                    }
                     <Row>
                         <Col sm={2}>
                             {" "}
