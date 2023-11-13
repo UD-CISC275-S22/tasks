@@ -20,14 +20,6 @@ function App(): JSX.Element {
                 James Lloyd, Kerry Ferguson, Matthew Conlon, Caleb Sachetti,
                 Arnav Baliyan
             </p>
-            <p> List of Degree Plans: </p>
-            <table>
-                <tr>
-                    <th>Code</th>
-                    <th>Name</th>
-                    <th>Credits</th>
-                </tr>
-            </table>
             <Plan
                 degreePlans={degreePlans}
                 setDegreePlans={setDegreePlans}
