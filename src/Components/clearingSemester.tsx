@@ -1,4 +1,26 @@
-export {}; //just for MVP purposes
+import React from "react";
+import { Button } from "react-bootstrap";
+import { Semester } from "../Interfaces/semester";
+import { useState } from "react";
+import { SEM1 } from "./Semester"; //will change later to be an actual default fall and spring list
+import { ViewSemester } from "./Semester";
+
+export const ClearSemester = ({
+    clearSemesterCourses
+}: {
+    clearSemesterCourses: () => void;
+}) => {
+    return (
+        <>
+            <div className="clear_sem">
+                <Button onClick={clearSemesterCourses}>
+                    Remove All Courses
+                </Button>
+            </div>
+        </>
+    );
+};
+
 /*import React, { useState } from "react";
 import { courseList } from "./course";
 import "./Semester.css";

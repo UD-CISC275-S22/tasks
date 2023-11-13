@@ -9,17 +9,19 @@ import { Form, Button } from "react-bootstrap";
 import { Semester } from "../Interfaces/semester";
 //import { Degree } from "../Interfaces/degree";
 import sample from "../data/AllCourseList.json";
+import { ClearSemester } from "./clearingSemester";
+import { clear } from "@testing-library/user-event/dist/clear";
 
 //A variable able to use for the list of courses within the JSON file.
 const COURSE_LIST = courseList;
 //create initial semester for testing
-const SEM1: Semester = {
+export const SEM1: Semester = {
     type: ["Fall"],
     year: 2024,
     totalCredits: 18,
     courseList: COURSE_LIST
 };
-const SEM2: Semester = {
+export const SEM2: Semester = {
     type: ["Fall"],
     year: 2024,
     totalCredits: 18,
@@ -249,10 +251,17 @@ export function ViewSemester(): JSX.Element {
             </div>
             <hr></hr>
             <div>
+                <ClearSemester
+                    clearSemesterCourses={clearSemsterCourses}
+                ></ClearSemester>
+            </div>
+            {/*
+            <div>
                 <Button onClick={clearSemsterCourses}>
                     Remove All Courses
                 </Button>
             </div>
+            */}
             <hr></hr>
             <div>
                 <Form.Group controlId="currentCourse">
