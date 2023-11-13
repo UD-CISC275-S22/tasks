@@ -8,7 +8,6 @@ import { Course } from "../Interfaces/course";
 import { Form, Button } from "react-bootstrap";
 import { Semester } from "../Interfaces/semester";
 //import { Degree } from "../Interfaces/degree";
-
 import sample from "../data/AllCourseList.json";
 
 //A variable able to use for the list of courses within the JSON file.
@@ -26,6 +25,7 @@ const SEM2: Semester = {
     totalCredits: 18,
     courseList: COURSE_LIST
 };
+
 //a default course variable; uses the first course within the JSON file.
 const DEFAULT_COURSE = sample[0].title;
 
@@ -36,6 +36,7 @@ export function ViewSemester(): JSX.Element {
     //(MM) NOTE: Using this state in order to create a drop down of Courses
     //and set which course the user would like to add or remove
     // updated through updateCurrCourse and drop down element
+    //MERGE CONFLICT (discuss after MVP): changed course.ts's department type due to error
     const [currCourse, setCurrCourse] = useState<string>(DEFAULT_COURSE);
     //will add more semesters later
     const [SemesterType, setSemesterType] = useState<string>("Fall"); //set default to Fall for now
@@ -124,7 +125,7 @@ export function ViewSemester(): JSX.Element {
         }
     }
 
-    //functin to change number of semesters shown (can be either 1 or 2 only - can add 0 or more semesters later)
+    //function to change number of semesters shown (can be either 1 or 2 only - can add 0 or more semesters later)
     function changeSemCount(): void {
         if (SemCount == 2) {
             setSemCount(1);
