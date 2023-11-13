@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState } from "react";
 import { classes } from "../Interface/classes";
 import { semester } from "../Interface/semester";
@@ -12,8 +11,7 @@ function arrayToCSV(data: semester[][]) {
     return data
         .map((row) =>
             row
-                //any will be fixed for final version and will need to be fixed. Just needed for deployment purposes.
-                .map((v: any) => {
+                .map((v) => {
                     if (typeof v === "object" && v !== null) {
                         return JSON.stringify(v)
                             .replaceAll(/['"]+/g, "")
@@ -23,8 +21,7 @@ function arrayToCSV(data: semester[][]) {
                     // eslint-disable-next-line quotes
                     return String(v).replace(/"/g, '""');
                 })
-                //any will be fixed for final version and will need to be fixed. Just needed for deployment purposes. Will be fixed for this sprint.
-                .map((v: any) => `${v}`)
+                .map((v) => `${v}`)
                 .join("\n")
         )
         .join("\n");
@@ -33,7 +30,11 @@ function arrayToCSV(data: semester[][]) {
 //CISC275 Tome and StackOverflow link that was given was used to build this code.
 //https://stackoverflow.com/questions/14964035/how-to-export-javascript-array-info-to-csv-on-client-side/68146412#68146412
 //download plan as a filename. Prettier error will fixed by end of sprint.
-function downloadBlob(content: BlobPart, filename: string, contentType: any) {
+function downloadBlob(
+    content: BlobPart,
+    filename: string,
+    contentType: string
+) {
     // Create a blob
     const blob = new Blob([content], { type: contentType });
     const url = URL.createObjectURL(blob);
