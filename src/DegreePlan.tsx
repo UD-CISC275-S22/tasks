@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { plan } from "./PlannerInterfaces/plan";
 import { semester } from "./PlannerInterfaces/semester";
-import { DisplaySemester } from "./Semester";
+import { DisplaySemester } from "./SemesterTable";
 
 export function DegreePlan({
     degreePlans,
