@@ -6,7 +6,7 @@ import { plan } from "./PlannerInterfaces/plan";
 import { semester } from "./PlannerInterfaces/semester";
 import { DisplaySemester } from "./SemesterTable";
 
-export function DegreePlan({
+export function Plan({
     degreePlans,
     setDegreePlans,
     currentPlan
