@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 ///import { Button } from "react-bootstrap";
 //import { data } from "./classData";
+//:)
 import { plan } from "./PlannerInterfaces/plan";
 import { Plan } from "./Plan";
 import DefaultPlans from "./Defaults.json";
