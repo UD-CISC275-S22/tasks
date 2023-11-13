@@ -40,7 +40,7 @@ export function ViewSemester(): JSX.Element {
     //MERGE CONFLICT (discuss after MVP): changed course.ts's department type due to error
     const [currCourse, setCurrCourse] = useState<string>(DEFAULT_COURSE);
     //will add more semesters later
-    const [SemesterType, setSemesterType] = useState<string>("Fall"); //set default to Fall for now
+    const [SemesterType, setSemesterType] = useState<string>("Fall"); //can be "Fall", "Spring" or "Both"
     const [SemCount, setSemCount] = useState<number>(1); //default shows 1 semester
     //const for clearsemesters modal visibility
     const [clicked, setClicked] = useState<boolean>(false);
@@ -58,17 +58,22 @@ export function ViewSemester(): JSX.Element {
             setFallSemester({ ...fallSemester, courseList: [] });
         } else if (SemCount === 1 && SemesterType === "Spring") {
             setSpringSemester({ ...springSemester, courseList: [] });
-        } else if (SemCount === 2) {
+        }
+        /* Add functionality about clearing both semesters if needed
+            else if (SemCount === 2) {
             //if both coursees are displayed empty both courses regardless.
             //setting both course list to empty
             setFallSemester({ ...fallSemester, courseList: [] });
-            setSpringSemester({ ...springSemester, courseList: [] });
-        }
-        setClicked(true);
+            setSpringSemester({ ...springSemester, courseList: [] }); */
+        handleClose();
     }
 
-    function closeVisibility() {
+    function handleClose() {
         setClicked(false);
+    }
+
+    function handleShow() {
+        setClicked(true);
     }
 
     function dropClass() {
@@ -115,11 +120,12 @@ export function ViewSemester(): JSX.Element {
                 ...fallSemester,
                 courseList: [...fallSemester.courseList, COURSE_LIST[idea]]
             });
-        } else if (SemCount === 1 && SemesterType !== "Spring") {
+        } else if (SemCount === 1 && SemesterType === "Spring") {
             setSpringSemester({
                 ...springSemester,
                 courseList: [...springSemester.courseList, COURSE_LIST[idea]]
             });
+            /* Adding to both semesters
         } else if (SemCount === 2) {
             //filtering the class from both semesters
             setFallSemester({
@@ -129,7 +135,7 @@ export function ViewSemester(): JSX.Element {
             setSpringSemester({
                 ...springSemester,
                 courseList: [...springSemester.courseList, COURSE_LIST[idea]]
-            });
+            }); */
         }
     }
 
@@ -171,6 +177,14 @@ export function ViewSemester(): JSX.Element {
                         </div>
                     )
                 )}
+                <div>
+                    <ClearSemester
+                        clearSemesterCourses={clearSemsterCourses}
+                        show={clicked}
+                        handleClose={handleClose}
+                        handleShow={handleShow}
+                    ></ClearSemester>
+                </div>
             </div>
         );
     }
@@ -192,6 +206,14 @@ export function ViewSemester(): JSX.Element {
                         </div>
                     )
                 )}
+                <div>
+                    <ClearSemester
+                        clearSemesterCourses={clearSemsterCourses}
+                        show={clicked}
+                        handleClose={handleClose}
+                        handleShow={handleShow}
+                    ></ClearSemester>
+                </div>
             </div>
         );
     }
@@ -214,6 +236,12 @@ export function ViewSemester(): JSX.Element {
                             </div>
                         )
                     )}
+                    <ClearSemester
+                        clearSemesterCourses={clearSemsterCourses}
+                        show={clicked}
+                        handleClose={handleClose}
+                        handleShow={handleShow}
+                    ></ClearSemester>
                 </div>
                 <div className="Spring">
                     <h1>Spring</h1>
@@ -229,6 +257,12 @@ export function ViewSemester(): JSX.Element {
                             </div>
                         )
                     )}
+                    <ClearSemester
+                        clearSemesterCourses={clearSemsterCourses}
+                        show={clicked}
+                        handleClose={handleClose}
+                        handleShow={handleShow}
+                    ></ClearSemester>
                 </div>
             </div>
         );
@@ -255,21 +289,6 @@ export function ViewSemester(): JSX.Element {
                 </Button>
                 {OneorTwo()}
             </div>
-            <hr></hr>
-            <div>
-                <ClearSemester
-                    clearSemesterCourses={clearSemsterCourses}
-                    show={clicked}
-                    closeVisibility={closeVisibility}
-                ></ClearSemester>
-            </div>
-            {/*
-            <div>
-                <Button onClick={clearSemsterCourses}>
-                    Remove All Courses
-                </Button>
-            </div>
-            */}
             <hr></hr>
             <div>
                 <Form.Group controlId="currentCourse">
