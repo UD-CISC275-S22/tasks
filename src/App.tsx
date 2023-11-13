@@ -2,7 +2,6 @@ import React from "react";
 import "./App.css";
 ///import { Button } from "react-bootstrap";
 //import { data } from "./classData";
-//import { DisplayCourse } from "./Course";
 function App(): JSX.Element {
     return (
         <div className="App">
