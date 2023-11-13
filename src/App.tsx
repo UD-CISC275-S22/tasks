@@ -10,7 +10,6 @@ function App(): JSX.Element {
     btn.onclick = () => {
         modal.style.display = "block";
     };
-
     span.onclick = () => {
         modal.style.display = "none";
     };
