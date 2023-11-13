@@ -8,7 +8,7 @@ import { Button, Form, Modal, ModalFooter } from "react-bootstrap";
 import { course } from "./PlannerInterfaces/course";
 import { plan } from "./PlannerInterfaces/plan";
 import { semester } from "./PlannerInterfaces/semester";
-import { DisplayCourse } from "./Course";
+import { DisplayCourse } from "./CoursePlan";
 //Courses to be used to for the datalist autofill
 interface currentSemester {
     semester: semester;
