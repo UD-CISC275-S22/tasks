@@ -97,14 +97,6 @@ function App(): JSX.Element {
                     </div>
                 </Modal>
             </div>
-            <p> List of Degree Plans: </p>
-            <table>
-                <tr>
-                    <th>Code</th>
-                    <th>Name</th>
-                    <th>Credits</th>
-                </tr>
-            </table>
         </div>
     );
 }
