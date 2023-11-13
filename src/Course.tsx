@@ -4,31 +4,31 @@ import "./App.css";
 ///import { Button } from "react-bootstrap";
 import { data } from "./classData";
 import { Button, Form } from "react-bootstrap";
-import { course } from "./PlannerInterfaces/course";
-import { plan } from "./PlannerInterfaces/plan";
-import { semester } from "./PlannerInterfaces/semester";
+import { Course } from "./PlannerInterfaces/Course";
+import { Plan } from "./PlannerInterfaces/Plan";
+import { Semester } from "./PlannerInterfaces/Semester";
 //Courses to be used to for the datalist autofill
 const courseList = data.map(
-    (course): course => ({
+    (course): Course => ({
         id: course.id,
         name: course.name,
         credits: course.credits,
-        courseID: course.id,
+        courseID: course.courseID,
         preReq: course.preReq
     })
 );
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-function DisplayCourse({
+export function DisplayCourse({
     defaultCourse,
     semester,
     plan,
     updatePlan
 }: {
-    defaultCourse: course;
-    semester: semester;
-    plan: plan;
-    updatePlan: (plan: plan) => void;
+    defaultCourse: Course;
+    semester: Semester;
+    plan: Plan;
+    updatePlan: (plan: Plan) => void;
 }): JSX.Element {
     //set/edit courseID
     const [courseID, setCourseID] = useState<string>(defaultCourse.courseID);
@@ -38,14 +38,14 @@ function DisplayCourse({
     const [preReqs, setPreReqs] = useState<string>(defaultCourse.preReq); //PreReq editing
 
     //Saves changes to use for Plan
-    function editCourse(course: course) {
+    function editCourse(course: Course) {
         const replace = semester.courses.findIndex(
-            (course2: course) => course2.id === course.id
+            (course2: Course) => course2.id === course.id
         );
         const newCourses = [...semester.courses];
         newCourses.splice(replace, 1, course);
         const newSem = plan.semesters.map(
-            (semester: semester): semester =>
+            (semester: Semester): Semester =>
                 semester.id === semester.id
                     ? { ...semester, courses: newCourses }
                     : { ...semester }
@@ -56,7 +56,7 @@ function DisplayCourse({
     //Updates info based on autofill
     function updateCourseID(event: React.ChangeEvent<HTMLInputElement>) {
         const newCourse = courseList.findIndex(
-            (course: course) => course.id === event.target.value
+            (course: Course) => course.id === event.target.value
         );
         setCourseID(event.target.value);
         setCredits(courseList[newCourse].credits);
@@ -100,7 +100,7 @@ function DisplayCourse({
             {
                 // eslint-disable-next-line no-extra-parens, prettier/prettier
             }{" "}
-            {isEditing ? ( //If editing displays textboxes and 2 buttons to allow for edits to the course to be made
+            {isEditing ? (
                 <>
                     <td>
                         <Form.Group className="mb-3" id="courseID">
@@ -108,7 +108,7 @@ function DisplayCourse({
                                 {
                                     // eslint-disable-next-line no-extra-parens, prettier/prettier
                                 }{" "}
-                                {courseList.map((course: course) => (
+                                {courseList.map((course: Course) => (
                                     <option key={course.id}>{course.id}</option>
                                 ))}
                             </datalist>

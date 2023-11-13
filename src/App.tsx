@@ -17,18 +17,6 @@ function App(): JSX.Element {
                     <th>Name</th>
                     <th>Credits</th>
                 </tr>
-<<<<<<< HEAD
-                {data.map((val, key) => {
-                    return (
-                        <tr key={key}>
-                            <td>{val.code}</td>
-                            <td>{val.name}</td>
-                            <td>{val.credits}</td>
-                        </tr>
-                    );
-                })}
-=======
->>>>>>> origin/kferg315-KerryFerguson04
             </table>
         </div>
     );
