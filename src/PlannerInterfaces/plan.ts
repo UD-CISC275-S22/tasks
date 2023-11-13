@@ -1,7 +1,7 @@
-import { Semester } from "./Semester";
+import { semester } from "./semester";
 
-export interface Plan {
+export interface plan {
     id: string;
     name: string;
-    semesters: Semester[];
+    semesters: semester[];
 }

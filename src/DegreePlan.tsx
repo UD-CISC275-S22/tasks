@@ -2,8 +2,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
-import { Plan } from "./PlannerInterfaces/Plan";
-import { Semester } from "./PlannerInterfaces/Semester";
+import { plan } from "./PlannerInterfaces/plan";
+import { semester } from "./PlannerInterfaces/semester";
 import { DisplaySemester } from "./Semester";
 
 export function DegreePlan({
@@ -11,51 +11,50 @@ export function DegreePlan({
     setDegreePlans,
     currentPlan
 }: {
-    degreePlans: Plan[];
-    setDegreePlans: (newDegreePlans: Plan[]) => void;
-    currentPlan: Plan;
+    degreePlans: plan[];
+    setDegreePlans: (newDegreePlans: plan[]) => void;
+    currentPlan: plan;
 }): JSX.Element {
     const [degreeReqView, toggleDegreeReqView] = useState(false);
-    const [plan, setPlan] = useState<Plan>({ ...currentPlan });
+    const [plan, setPlan] = useState<plan>({ ...currentPlan });
     const [edit, setEdit] = useState<boolean>(false);
 
     function insertSemester(id: string) {
         const newSemesters = [...plan.semesters];
         const insertIndex =
-            newSemesters.findIndex((semester: Semester) => semester.id === id) +
-            1; //Finding where to insert the new semester
+            newSemesters.findIndex((semester: semester) => semester.id === id) +
+            1; //Finding index of where to put new semester
         newSemesters.splice(insertIndex, 0, {
             id: "",
-            name: "Copy of " + plan.semesters[insertIndex - 1].name,
+            name: "New " + plan.semesters[insertIndex - 1].name,
             year: plan.semesters[insertIndex - 1].year,
             courses: [],
             season: ""
-        }); //Putting the new semester in the plan
-        setPlan({ ...plan, semesters: newSemesters }); //Updating plan
+        }); //Add new semester
+        setPlan({ ...plan, semesters: newSemesters }); //Update plan
     }
-    //Deletes chosen semester
+    //Delete semester
     function deleteSemester(id: string) {
         const newSemesters = [...plan.semesters];
         newSemesters.splice(
-            newSemesters.findIndex((semester: Semester) => semester.id === id),
+            newSemesters.findIndex((semester: semester) => semester.id === id),
             1
         ); //Removes plan by id
-        setPlan({ ...plan, semesters: newSemesters }); //Updating plan
+        setPlan({ ...plan, semesters: newSemesters }); //Update plan
     }
-    //Saves changes made to plan into the state of the list of plans in App
-    function saveChanges() {
-        const replaceIndex = degreePlans.findIndex(
-            (current: Plan) => current.id === plan.id
-        ); //Finds where the plan we have a copy of is
-        const newDegreePlans = [...degreePlans]; //Makes a copy of the old list of plans
-        newDegreePlans.splice(replaceIndex, 1, plan); //Replaces the old plan in the list with our local version
-        setDegreePlans(newDegreePlans); //Updates the list of plans in App
-    }
-    //Deletes all semester of a plan by setting semester to an empty list
+    // function saveChanges() {
+    //     const replaceIndex = degreePlans.findIndex(
+    //         (current: plan) => current.id === plan.id
+    //     ); //Finds where the plan we have a copy of is
+    //     const newDegreePlans = [...degreePlans]; //Makes a copy of the old list of plans
+    //     newDegreePlans.splice(replaceIndex, 1, plan); //Replaces the old plan in the list with our local version
+    //     setDegreePlans(newDegreePlans); //Updates the list of plans in App
+    // }
+
     function clearAllSemesters() {
         setPlan({ ...plan, semesters: [] });
     }
-    //Adds a semester to the end of the semester list
+
     function addSemester() {
         setPlan({
             ...plan,
@@ -71,13 +70,13 @@ export function DegreePlan({
             ]
         });
     }
-    //Updates the name of a plan
+
     function editPlanName(event: React.ChangeEvent<HTMLInputElement>) {
         setPlan({ ...plan, name: event.target.value });
     }
     return (
         <div>
-            {edit ? ( //Checks if you are editing if so displays textbox to change name, if not displays plan name with button to edit
+            {edit ? (
                 <div>
                     <Form.Group className="dropdownWidth" controlId="planName">
                         <Form.Label>Name of Plan: </Form.Label>
@@ -98,17 +97,12 @@ export function DegreePlan({
                             onClick={() => setEdit(true)}
                             className="btntransparent"
                         >
-                            <img
-                                src="https://cdn-icons-png.flaticon.com/512/84/84380.png"
-                                height="40"
-                                width="40"
-                            />
                             Edit Name
                         </Button>
                     </h1>
                 </div>
             )}
-            {plan.semesters.map((semester: Semester) => (
+            {plan.semesters.map((semester: semester) => (
                 <div key={semester.id}>
                     <DisplaySemester
                         semester={semester}
@@ -132,9 +126,9 @@ export function DegreePlan({
             <Button className="btnadd" onClick={() => addSemester()}>
                 Add Semester
             </Button>
-            <Button className="btnadd" onClick={() => saveChanges()}>
+            {/* <Button className="btnadd" onClick={() => saveChanges()}>
                 Save Plan Changes
-            </Button>
+            </Button> */}
             <Button className="btncancel" onClick={() => clearAllSemesters()}>
                 Delete All Semesters
             </Button>
