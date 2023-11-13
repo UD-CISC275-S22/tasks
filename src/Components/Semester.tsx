@@ -99,15 +99,30 @@ export function ViewSemester(): JSX.Element {
     }
 
     function addClass() {
-        /*
-        const desiredCourse: Course = COURSE_LIST.find(
+        const idea = COURSE_LIST.findIndex(
             (course: Course) => course.title === currCourse
         );
         if (SemCount === 1 && SemesterType === "Fall") {
-            setFallSemester({...fallSemester, courseList: ...fallSemester.courseList});
-        } 
-        else{null};
-        */
+            setFallSemester({
+                ...fallSemester,
+                courseList: [...fallSemester.courseList, COURSE_LIST[idea]]
+            });
+        } else if (SemCount === 1 && SemesterType !== "Spring") {
+            setSpringSemester({
+                ...springSemester,
+                courseList: [...springSemester.courseList, COURSE_LIST[idea]]
+            });
+        } else if (SemCount === 2) {
+            //filtering the class from both semesters
+            setFallSemester({
+                ...fallSemester,
+                courseList: [...fallSemester.courseList, COURSE_LIST[idea]]
+            });
+            setSpringSemester({
+                ...springSemester,
+                courseList: [...springSemester.courseList, COURSE_LIST[idea]]
+            });
+        }
     }
 
     //functin to change number of semesters shown (can be either 1 or 2 only - can add 0 or more semesters later)
