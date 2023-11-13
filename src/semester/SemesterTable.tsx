@@ -73,6 +73,29 @@ export function SemesterTable({
         s_copy.splice(semesterIndex, 1);
         setSemesters(s_copy);
     }
+    function clearCourses(semester: semester): void {
+        const updatedSemester = { ...semester, classList: [] };
+        const semesterIndex = semesters.findIndex(
+            (semesterItem: semester): boolean => semesterItem.id === semester.id
+        );
+        const s_copy = semesters.map((sem) => ({
+            ...sem,
+            classList: [...sem.classList]
+        }));
+        s_copy.splice(semesterIndex, 1, updatedSemester);
+        setSemesters(s_copy);
+    }
+    function clearCourseFromSemester(semester: semester): void {
+        const semesterIndex = semesters.findIndex(
+            (semesterItem: semester): boolean => semesterItem.id === semester.id
+        );
+        const s_copy = semesters.map((sem) => ({
+            ...sem,
+            classList: [...sem.classList]
+        }));
+        s_copy.splice(semesterIndex, 1, semester);
+        setSemesters(s_copy);
+    }
 
     //Handles drop and what happens when the element is let go from the mouse
     const handleOnDrop = (
@@ -88,21 +111,32 @@ export function SemesterTable({
             );
             const foundSemester = semesters[findSemesterIndex];
             if (foundSemester !== undefined) {
-                const updatedSemester = {
-                    ...foundSemester,
-                    classList: [...foundSemester.classList, dragCourse]
-                };
-                console.log(updatedSemester.classList);
-                console.log(semesters);
-                const updatedSemesters = semesters.map(
-                    (semester: semester): semester => ({
-                        ...semester,
-                        classList: [...semester.classList]
-                    })
-                );
-                updatedSemesters.splice(findSemesterIndex, 1, updatedSemester);
-                console.log(updatedSemesters);
-                setSemesters(updatedSemesters);
+                if (
+                    foundSemester.classList.every(
+                        (classes: classes): boolean =>
+                            classes.code !== dragCourse.code
+                    )
+                ) {
+                    const updatedSemester = {
+                        ...foundSemester,
+                        classList: [...foundSemester.classList, dragCourse]
+                    };
+                    console.log(updatedSemester.classList);
+                    console.log(semesters);
+                    const updatedSemesters = semesters.map(
+                        (semester: semester): semester => ({
+                            ...semester,
+                            classList: [...semester.classList]
+                        })
+                    );
+                    updatedSemesters.splice(
+                        findSemesterIndex,
+                        1,
+                        updatedSemester
+                    );
+                    console.log(updatedSemesters);
+                    setSemesters(updatedSemesters);
+                }
             }
         }
     };
@@ -119,15 +153,17 @@ export function SemesterTable({
             <h2>Semester Schedule</h2>
             <Button onClick={download}>download</Button>
 
-            {semesters.map((sem) => {
+            {semesters.map((semester) => {
                 return (
                     <SemesterView
-                        key={sem.id}
-                        semester={sem}
+                        key={semester.id}
+                        semester={semester}
                         handleOnDragOver={(e) => handleOnDragOver(e)}
-                        handleOnDrop={(e) => handleOnDrop(e, sem.id)}
+                        handleOnDrop={(e) => handleOnDrop(e, semester.id)}
                         clearSemester={clearSemester}
                         setDragCourse={setDragCourse}
+                        clearCourses={clearCourses}
+                        clearCourseFromSemester={clearCourseFromSemester}
                     ></SemesterView>
                 );
             })}

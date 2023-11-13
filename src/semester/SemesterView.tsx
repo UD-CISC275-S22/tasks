@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { semester } from "../Interface/semester";
 import { classes } from "../Interface/classes";
 import { RemoveClass } from "../semester-modification/RemoveClass";
@@ -8,20 +8,18 @@ export function SemesterView({
     clearSemester,
     setDragCourse,
     handleOnDrop,
-    handleOnDragOver
+    handleOnDragOver,
+    clearCourses,
+    clearCourseFromSemester
 }: {
     semester: semester;
     clearSemester: (id: number) => void;
     setDragCourse: (classes: classes) => void;
     handleOnDrop: (event: React.DragEvent<HTMLDivElement>, id: number) => void;
     handleOnDragOver: (event: React.DragEvent<HTMLDivElement>) => void;
+    clearCourses: (sems: semester) => void;
+    clearCourseFromSemester: (semester: semester) => void;
 }): JSX.Element {
-    const [currentSemester, setSemester] = useState<semester>(semester);
-    //TODO: Doesn't properly update semesters state from Parent Component. Need to be fixed.
-    //Clears courses for the current semesters.
-    function clearCourses(semester: semester): void {
-        setSemester({ ...semester, classList: [] });
-    }
     //This grabs the info of the course being dragged.
     //TODO: Doesn't properly render on its own.
     const handleDragStart = (
@@ -34,11 +32,11 @@ export function SemesterView({
     };
     return (
         <div
-            onDrop={(e) => handleOnDrop(e, currentSemester.id)}
+            onDrop={(e) => handleOnDrop(e, semester.id)}
             onDragOver={(e) => handleOnDragOver(e)}
         >
             <div>
-                <h3>{currentSemester.season}</h3>
+                <h3>{semester.season}</h3>
             </div>
             <table className="table table-hover table-dark">
                 <thead>
@@ -55,7 +53,7 @@ export function SemesterView({
                     </tr>
                 </thead>
                 <tbody>
-                    {currentSemester.classList.map((classItem) => {
+                    {semester.classList.map((classItem) => {
                         return (
                             <tr
                                 draggable={true}
@@ -74,12 +72,14 @@ export function SemesterView({
                                 </td>
                                 <td>
                                     <RemoveClass
-                                        schedule={currentSemester}
+                                        schedule={semester}
                                         classToDelete={classItem}
                                         onRemoveClass={function (
                                             updatedSchedule: semester
                                         ): void {
-                                            setSemester(updatedSchedule);
+                                            clearCourseFromSemester(
+                                                updatedSchedule
+                                            );
                                         }}
                                     ></RemoveClass>
                                 </td>
@@ -101,7 +101,7 @@ export function SemesterView({
                     type="button"
                     className="btn btn-outline-danger"
                     onClick={() => {
-                        clearCourses(currentSemester);
+                        clearCourses(semester);
                     }}
                 >
                     Clear Courses
@@ -110,7 +110,7 @@ export function SemesterView({
                     type="button"
                     className="btn btn-outline-danger"
                     onClick={() => {
-                        clearSemester(currentSemester.id);
+                        clearSemester(semester.id);
                     }}
                 >
                     Clear Semester

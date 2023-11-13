@@ -45,6 +45,8 @@ describe("SemesterView", () => {
                 handleOnDrop={DropHandler}
                 clearSemester={clearSemesterHandler}
                 setDragCourse={setDragCourseHandler}
+                clearCourses={jest.fn()}
+                clearCourseFromSemester={jest.fn()}
             />
         );
     });
