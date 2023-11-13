@@ -16,7 +16,7 @@ function CourseSearch(props: QuickAddProps): JSX.Element {
     //const [isQuickAdd, setIsQuickAdd] = useState<boolean>(false);
     const [courseCode, setCourseCode] = useState("");
     const [courseInfo, setCourseInfo] = useState<Class | null>(null);
-    const [year, setYear] = useState("");
+    const [year /*setYear*/] = useState("");
     const [semester, setSemester] = useState("");
 
     const [courseFound, setCourseFound] = useState(true);
@@ -44,11 +44,11 @@ function CourseSearch(props: QuickAddProps): JSX.Element {
         }
     };
 
-    const handleYearChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setYear(e.target.value);
-    };
+    // const handleYearChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    //     setYear(e.target.value);
+    // };
 
-    const handleSemesterChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const handleSemesterChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSemester(e.target.value);
     };
 
@@ -82,26 +82,27 @@ function CourseSearch(props: QuickAddProps): JSX.Element {
                     {year === "" || semester === "" ? (
                         <div>
                             <label htmlFor="semester">Semester: </label>
-                            <select
+                            <input
+                                type="text"
                                 id="semester"
                                 name="semester"
                                 value={semester}
                                 onChange={handleSemesterChange}
                             >
-                                <option value="Fall">Fall</option>
+                                {/* <option value="Fall">Fall</option>
                                 <option value="Winter">Winter</option>
                                 <option value="Spring">Spring</option>
-                                <option value="Summer">Summer</option>
-                            </select>
+                                <option value="Summer">Summer</option> */}
+                            </input>
                             <br></br>
-                            <label htmlFor="year">Year: </label>
+                            {/* <label htmlFor="year">Year: </label>
                             <input
                                 type="text"
                                 id="year"
                                 name="year"
                                 value={year}
                                 onChange={handleYearChange}
-                            />
+                            /> */}
                             <br></br>
                             <button onClick={handleAddCourse}>
                                 Add Course
