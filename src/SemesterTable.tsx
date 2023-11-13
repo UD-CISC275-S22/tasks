@@ -34,11 +34,11 @@ export function DisplaySemester({
     function toggleModal() {
         setOnScreen(!isOnScreen);
     }
-    const [edit, setEdit] = useState<boolean>(false); //Edit semester name
-    const [courseID, setcourseID] = useState<string>(""); //For adding coruses
-    const [credits, setCredits] = useState<number>(0); //For adding courses
-    const [name, setName] = useState<string>(""); //For adding courses
-    const [preReq, setPreReq] = useState<string>(""); //For adding courses
+    const [edit, setEdit] = useState<boolean>(false);
+    const [courseID, setcourseID] = useState<string>("");
+    const [credits, setCredits] = useState<number>(0);
+    const [name, setName] = useState<string>("");
+    const [preReq, setPreReq] = useState<string>("");
 
     //Find the course with the ID and delete it
     function deleteCourse(id: string): void {
@@ -64,26 +64,25 @@ export function DisplaySemester({
         );
         updatePlan({ ...plan, semesters: newSemester });
     }
-    //Updates the states for the course to be added
+    //Updates the course ID
     function updatecourseID(event: React.ChangeEvent<HTMLInputElement>) {
         const newCourse = courseList.findIndex(
             (course: course) => course.id === event.target.value
         );
         if (newCourse === -1) {
-            //If not in the pool of courses use null values for other info
+            //If not in the pool of courses use null values
             setcourseID(event.target.value);
             setCredits(0);
             setName("");
             setPreReq("");
         } else {
-            //If found in pool of courses use values found
             setcourseID(event.target.value);
             setCredits(courseList[newCourse].credits);
             setName(courseList[newCourse].name);
             setPreReq(courseList[newCourse].preReq);
         }
     }
-    //Modal for adding a course
+
     function chooseCourse(): JSX.Element {
         return (
             <div className=".app">
@@ -109,8 +108,8 @@ export function DisplaySemester({
                             ;
                         </datalist>
                         <Form.Label placeholder="Enter Course ID">
-                            Please Enter The Course ID, Then Click on The Course
-                            From the Dropdown:
+                            Please Enter The Course ID, then find your course
+                            from the dropdown:
                         </Form.Label>
                         <Form.Control
                             list="courseIDs"
@@ -141,7 +140,7 @@ export function DisplaySemester({
             </div>
         );
     }
-    //Adds the course to the end of the semester with the current states
+
     function addCourse() {
         // const newCourse = {
         //     id: courseID,
