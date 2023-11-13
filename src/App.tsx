@@ -1,19 +1,20 @@
-import React, { useState }, { useState } from "react";
-import Modal from "react-modal";
+import React, { useState } from "react";
 import Modal from "react-modal";
 import "./App.css";
-//import { Button } from "react-bootstrap";
-//import { data } from "./classData";
 import { plan } from "./PlannerInterfaces/plan";
 import { Plan } from "./Plan";
-import DefaultPlans from "./Defaults.json";
+import defaultPlans from "./Defaults.json";
+
 function App(): JSX.Element {
-    // const [isOpen, setIsOpen] = useState(true);
-    // const [selectedPlan, setSelectedPlan] = useState<number>(-1); //Selected plan
-    // // function toggleModal() {
-    // //     setIsOpen(!isOpen);
-    // }
-    const defaultPlan = DefaultPlans.defaultPlans;
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+    const openModal = () => {
+        setModalIsOpen(true);
+    };
+    const closeModal = () => {
+        setModalIsOpen(false);
+    };
+    useState<number>(-1);
+    const defaultPlan = defaultPlans.defaultPlans;
     const [degreePlans, setDegreePlans] = useState<plan[]>(defaultPlan);
     return (
         <div className="App">
