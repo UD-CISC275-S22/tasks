@@ -10,7 +10,6 @@ import { Semester } from "../Interfaces/semester";
 //import { Degree } from "../Interfaces/degree";
 import sample from "../data/AllCourseList.json";
 import { ClearSemester } from "./clearingSemester";
-import { clear } from "@testing-library/user-event/dist/clear";
 
 //A variable able to use for the list of courses within the JSON file.
 const COURSE_LIST = courseList;
@@ -43,6 +42,8 @@ export function ViewSemester(): JSX.Element {
     //will add more semesters later
     const [SemesterType, setSemesterType] = useState<string>("Fall"); //set default to Fall for now
     const [SemCount, setSemCount] = useState<number>(1); //default shows 1 semester
+    //const for clearsemesters modal visibility
+    const [clicked, setClicked] = useState<boolean>(false);
 
     //NOTE FOR MICHAEL: Here is where you can add your add courses and remove courses functions
     function updateCurrCourse(event: React.ChangeEvent<HTMLSelectElement>) {
@@ -63,6 +64,11 @@ export function ViewSemester(): JSX.Element {
             setFallSemester({ ...fallSemester, courseList: [] });
             setSpringSemester({ ...springSemester, courseList: [] });
         }
+        setClicked(true);
+    }
+
+    function closeVisibility() {
+        setClicked(false);
     }
 
     function dropClass() {
@@ -253,6 +259,8 @@ export function ViewSemester(): JSX.Element {
             <div>
                 <ClearSemester
                     clearSemesterCourses={clearSemsterCourses}
+                    show={clicked}
+                    closeVisibility={closeVisibility}
                 ></ClearSemester>
             </div>
             {/*

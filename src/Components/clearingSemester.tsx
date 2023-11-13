@@ -1,14 +1,14 @@
 import React from "react";
-import { Button } from "react-bootstrap";
-import { Semester } from "../Interfaces/semester";
-import { useState } from "react";
-import { SEM1 } from "./Semester"; //will change later to be an actual default fall and spring list
-import { ViewSemester } from "./Semester";
+import { Button, Modal } from "react-bootstrap";
 
 export const ClearSemester = ({
-    clearSemesterCourses
+    clearSemesterCourses,
+    closeVisibility,
+    show
 }: {
     clearSemesterCourses: () => void;
+    closeVisibility: () => void;
+    show: boolean;
 }) => {
     return (
         <>
@@ -16,6 +16,29 @@ export const ClearSemester = ({
                 <Button onClick={clearSemesterCourses}>
                     Remove All Courses
                 </Button>
+            </div>
+            <div>
+                <Modal show={show} animation={false}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Warning</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <p>
+                            You are deleting this current semester, do you
+                            confirm?
+                        </p>
+                    </Modal.Body>
+                </Modal>
+                {/*
+                <div>
+                    {/*handling clearing semester
+                    <clearSemester
+                        clicked={displayClearSemester}
+                        closed={displayedSemester}
+                    ></clearSemester>
+                    <Button onClick={clearSemestersModal}> Clear </Button>
+                </div>
+                */}
             </div>
         </>
     );
