@@ -1,7 +1,7 @@
 import React from "react";
 import { classes } from "../Interface/classes";
 import { semester } from "../Interface/semester";
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import sample from "../data/data.json";
 import { SemesterTable } from "./SemesterTable";
 
@@ -25,5 +25,15 @@ describe("SemesterTable", () => {
                 setSemesters={mockSetSemesters}
             />
         );
+    });
+    test("SemesterTable renders a heading to test to make sure it is properly rendering.", () => {
+        screen.getByRole("heading", { name: "Semester Schedule" });
+    });
+    test("SemesterTable renders all the seasons, and classes for the file", () => {
+        for (let i = 0; i < semesterExamples.length; i++) {
+            expect(
+                screen.queryByText(semesterExamples[i].season)
+            ).toBeInTheDocument();
+        }
     });
 });
