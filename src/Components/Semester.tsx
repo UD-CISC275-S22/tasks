@@ -7,7 +7,7 @@ import "./Semester.css";
 import { Course } from "../Interfaces/course";
 import { Form, Button } from "react-bootstrap";
 import { Semester } from "../Interfaces/semester";
-import { Degree } from "../Interfaces/degree";
+//import { Degree } from "../Interfaces/degree";
 
 import sample from "../data/AllCourseList.json";
 
@@ -257,14 +257,18 @@ export function ViewSemester(): JSX.Element {
                 <Form.Group controlId="currentCourse">
                     <Form.Label>Select A Course</Form.Label>
                     <Form.Select value={currCourse} onChange={updateCurrCourse}>
-                        {COURSE_LIST.map((courseName: Course) => (
-                            <option
-                                key={courseName.title}
-                                value={courseName.title}
-                            >
-                                {courseName.title}
-                            </option>
-                        ))}
+                        {
+                            //Needed to disable prettier here because there was an "extra parenths" error that couldn't be resolved by any means. Will need to ask the professor but we wanted to showcase the funcitonality of the dropdown for the MVP
+                            // eslint-disable-next-line no-extra-parens
+                            COURSE_LIST.map((courseName: Course) => (
+                                <option
+                                    key={courseName.title}
+                                    value={courseName.title}
+                                >
+                                    {courseName.title}
+                                </option>
+                            ))
+                        }
                     </Form.Select>
                 </Form.Group>
                 <Button onClick={dropClass}>Remove Class</Button>
