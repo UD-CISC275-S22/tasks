@@ -8,7 +8,7 @@ import "./Semester.css";
 import { Course } from "../Interfaces/course";
 import { Form, Button } from "react-bootstrap";
 import { Semester } from "../Interfaces/semester";
-import { Degree } from "../Interfaces/degree";
+/*import { Degree } from "../Interfaces/degree";*/
 
 import sample from "../data/AllCourseList.json";
 
