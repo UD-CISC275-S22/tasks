@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 //for visualization of semesters and altering the courses within them
 
 import React, { useState } from "react";
@@ -8,10 +7,7 @@ import "./Semester.css";
 import { Course } from "../Interfaces/course";
 import { Form, Button } from "react-bootstrap";
 import { Semester } from "../Interfaces/semester";
-/*import { Degree } from "../Interfaces/degree";*/
-
-import sample from "../data/AllCourseList.json";
-
+//import { Degree } from "../Interfaces/degree";
 import sample from "../data/AllCourseList.json";
 
 //A variable able to use for the list of courses within the JSON file.
@@ -251,23 +247,29 @@ export function ViewSemester(): JSX.Element {
                 </Button>
                 {OneorTwo()}
             </div>
+            <hr></hr>
             <div>
                 <Button onClick={clearSemsterCourses}>
                     Remove All Courses
                 </Button>
             </div>
+            <hr></hr>
             <div>
                 <Form.Group controlId="currentCourse">
                     <Form.Label>Select A Course</Form.Label>
                     <Form.Select value={currCourse} onChange={updateCurrCourse}>
-                        {COURSE_LIST.map((courseName: Course) => (
-                            <option
-                                key={courseName.title}
-                                value={courseName.title}
-                            >
-                                {courseName.title}
-                            </option>
-                        ))}
+                        {
+                            //Needed to disable prettier here because there was an "extra parenths" error that couldn't be resolved by any means. Will need to ask the professor but we wanted to showcase the funcitonality of the dropdown for the MVP
+                            // eslint-disable-next-line no-extra-parens
+                            COURSE_LIST.map((courseName: Course) => (
+                                <option
+                                    key={courseName.title}
+                                    value={courseName.title}
+                                >
+                                    {courseName.title}
+                                </option>
+                            ))
+                        }
                     </Form.Select>
                 </Form.Group>
                 <Button onClick={dropClass}>Remove Class</Button>

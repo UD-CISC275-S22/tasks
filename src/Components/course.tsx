@@ -1,9 +1,8 @@
-/* eslint-disable prettier/prettier */
 //all prep stuff for courses will go in here and things like finding the course based off of an id
-import React from "react";
-import { Button, Modal} from "react-bootstrap";
+//import React from "react";
+//import { Button, Modal} from "react-bootstrap";
 import "../App.css";
-import { Semester } from "../Interfaces/semester";
+//import { Semester } from "../Interfaces/semester";
 import courseListAll from "../data/AllCourseList.json";
 import { Course, Department } from "../Interfaces/course";
 
@@ -38,8 +37,14 @@ export function findCourse(courseList: Course[], id: number): Course | number {
 }
 
 //Students can edit the course code, course title, and credits of a course in the plan
-export function editCourse(course: Course, newTitle: string, newName: string, newCredits: number): Course{
-    const newCourse: Course = {...course, 
+export function editCourse(
+    course: Course,
+    newTitle: string,
+    newName: string,
+    newCredits: number
+): Course {
+    const newCourse: Course = {
+        ...course,
         title: newTitle,
         name: newName,
         credits: newCredits
