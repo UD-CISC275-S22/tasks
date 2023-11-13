@@ -13,6 +13,7 @@ function App(): JSX.Element {
     span.onclick = () => {
         modal.style.display = "none";
     };*/
+    //caleb pushing again cause he accidently was working in main
     return (
         <div className="App">
             <header className="App-header">UD Course Planner</header>
