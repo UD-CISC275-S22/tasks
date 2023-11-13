@@ -125,6 +125,16 @@ function App(): JSX.Element {
         console.log("Import csv button clicked");
     };
 
+    const handleClearAllCourses = () => {
+        const clearedYear = {
+            ...yearOne,
+            firstsemester: { ...yearOne.firstsemester, courses: [] },
+            secondsemester: { ...yearOne.secondsemester, courses: [] }
+        };
+
+        updateYearOne(clearedYear);
+    };
+
     return (
         <div className="App">
             <div className="logo">
@@ -146,6 +156,12 @@ function App(): JSX.Element {
                 </button>
                 <button onClick={handleImportCSV}>Import CSV</button>
                 <button onClick={handleShowAddCourseModal}>Add Course</button>
+                <button
+                    className="buttonSpacing"
+                    onClick={handleClearAllCourses}
+                >
+                    Clear All Courses
+                </button>
             </div>
             <Year year={yearOne} editCourse={setCurrentCourseEdit}></Year>
             <EditCourseModal
