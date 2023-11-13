@@ -29,7 +29,7 @@ export function ViewSemester(): JSX.Element {
     const [SemCount, setSemCount] = useState<number>(1); //default shows 1 semester
     //NOTE FOR MICHAEL: Here is where you can add your add courses and remove courses functions
 
-    //functin to change number of semesters shown (can be either 1 or 2 only - can add 0 or more semesters later)
+    //function to change number of semesters shown (can be either 1 or 2 only - can add 0 or more semesters later)
     function changeSemCount(): void {
         if (SemCount == 2) {
             setSemCount(1);

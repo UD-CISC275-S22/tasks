@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import { ViewSemester } from "./Components/Semester";
+import { Welcome } from "./Components/welcome";
+import { Button } from "react-bootstrap";
+import { clearSemester } from "./Components/clearingSemester";
+import { clearCourse } from "./Components/clearingCourse";
 
 function App(): JSX.Element {
+    //constants for welcome message button/modal
+    const [displayWelcomeMessage, displayWelcomeModal] = useState(true);
+    const welcomeMessage = () => displayWelcomeModal(false);
+    const welcomeMessageModal = () => displayWelcomeModal(true);
+
+    //constants for clearing semester button/modal
+    const [displayClearSemester, setSemesterCleared] = useState(true);
+    const displayedSemester = () => setSemesterCleared(false);
+    const clearSemestersModal = () => setSemesterCleared(true);
+
     return (
         <div className="App">
             <header className="App-header">
@@ -13,7 +27,21 @@ function App(): JSX.Element {
                 <h6>Malika Iyer</h6>
                 <h6>Dina Dawood</h6>
             </header>
-            <p>
+
+            {/* handling welcome message */}
+            <Welcome
+                clicked={displayWelcomeMessage}
+                closed={welcomeMessage}
+            ></Welcome>
+            <Button onClick={welcomeMessageModal}> Welcome </Button>
+
+            {/* handling clearing semester */}
+            <clearSemester
+                clicked={displayClearSemester}
+                closed={displayedSemester}
+            ></clearSemester>
+            <Button onClick={clearSemestersModal}> Clear </Button>
+            {/* <p>
                 Welcome to your personal Degree Planner! Some basic tools have
                 been designed to make your visit accessible to your needs; this
                 includes creating new plans from scratch and/or compiling data
@@ -22,7 +50,7 @@ function App(): JSX.Element {
                 bottom of the page for more instructions (will enhance this
                 later by making an expandable/disposable button near the top of
                 the page).
-            </p>
+            </p> */}
             <hr></hr>
             <ViewSemester></ViewSemester>
         </div>
