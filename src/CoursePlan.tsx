@@ -13,7 +13,7 @@ const courseList = data.map(
         id: course.id,
         name: course.name,
         credits: course.credits,
-        courseID: course.id,
+        courseID: course.courseID,
         preReq: course.preReq
     })
 );
@@ -66,7 +66,7 @@ const CourseTable = () => {
 export default CourseTable;
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-function DisplayCourse({
+export function DisplayCourse({
     defaultCourse,
     semester,
     plan,
@@ -147,7 +147,7 @@ function DisplayCourse({
             {
                 // eslint-disable-next-line no-extra-parens, prettier/prettier
             }{" "}
-            {isEditing ? ( //If editing displays textboxes and 2 buttons to allow for edits to the course to be made
+            {isEditing ? (
                 <>
                     <td>
                         <Form.Group className="mb-3" id="courseID">
