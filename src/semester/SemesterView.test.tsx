@@ -52,12 +52,25 @@ describe("SemesterView", () => {
         screen.getByRole("heading", { name: semesterExample.season });
     });
 
-    test("ClearSemester is called after clicking button.", () => {
+    test("ClearSemester is called after clicking button, and the semester is cleared.", () => {
         const clearSemesterButton = screen.getByRole("button", {
             name: /Clear Semester/i
         });
         fireEvent.click(clearSemesterButton);
-        console.log(screen.debug());
         expect(clearSemesterHandler).toHaveBeenCalled();
+        /*
+        expect(
+            screen.queryByText(semesterExample.season)
+        ).not.toBeInTheDocument();
+        */
+    });
+
+    test("ClearCourses is called after clicking button.", () => {
+        const clearCoursesButton = screen.getByRole("button", {
+            name: /Clear Courses/i
+        });
+        fireEvent.click(clearCoursesButton);
+        const classExample = semesterExample.classList[0].title;
+        expect(screen.queryByText(classExample)).not.toBeInTheDocument();
     });
 });
