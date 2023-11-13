@@ -5,9 +5,9 @@ import "./App.css";
 ///import { Button } from "react-bootstrap";
 import { data } from "./classData";
 import { Button, Form, Modal, ModalFooter } from "react-bootstrap";
-import { course } from "./PlannerInterfaces/Course";
-import { plan } from "./PlannerInterfaces/Plan";
-import { semester } from "./PlannerInterfaces/Semester";
+import { course } from "./PlannerInterfaces/course";
+import { plan } from "./PlannerInterfaces/plan";
+import { semester } from "./PlannerInterfaces/semester";
 import { DisplayCourse } from "./CoursePlan";
 //Courses to be used to for the datalist autofill
 interface currentSemester {
