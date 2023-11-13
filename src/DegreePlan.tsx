@@ -1,9 +1,9 @@
-/* eslint-disable no-extra-parens */
+/*eslint-disable no-extra-parens*/
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
-import { plan } from "./PlannerInterfaces/plan";
-import { semester } from "./PlannerInterfaces/semester";
+import { plan } from "./PlannerInterfaces/Plan";
+import { semester } from "./PlannerInterfaces/Semester";
 import { DisplaySemester } from "./SemesterTable";
 
 export function DegreePlan({
