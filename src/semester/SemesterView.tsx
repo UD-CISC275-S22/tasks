@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { semester } from "../Interface/semester";
 import { classes } from "../Interface/classes";
 import { RemoveClass } from "../semester-modification/RemoveClass";
@@ -20,8 +20,6 @@ export function SemesterView({
     clearCourses: (sems: semester) => void;
     clearCourseFromSemester: (semester: semester) => void;
 }): JSX.Element {
-    //TODO: Doesn't properly update semesters state from Parent Component. Need to be fixed.
-    //Clears courses for the current semesters.
     //This grabs the info of the course being dragged.
     //TODO: Doesn't properly render on its own.
     const handleDragStart = (

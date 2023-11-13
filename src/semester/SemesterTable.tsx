@@ -112,7 +112,7 @@ export function SemesterTable({
             const foundSemester = semesters[findSemesterIndex];
             if (foundSemester !== undefined) {
                 if (
-                    foundSemester.classList.map(
+                    foundSemester.classList.every(
                         (classes: classes): boolean =>
                             classes.code !== dragCourse.code
                     )
