@@ -6,7 +6,7 @@ import { plan } from "./PlannerInterfaces/plan";
 import { semester } from "./PlannerInterfaces/semester";
 import { DisplaySemester } from "./Semester";
 
-export function DegreePlan({
+export function Plan({
     degreePlans,
     setDegreePlans,
     currentPlan
@@ -15,7 +15,7 @@ export function DegreePlan({
     setDegreePlans: (newDegreePlans: plan[]) => void;
     currentPlan: plan;
 }): JSX.Element {
-    const [degreeReqView, toggleDegreeReqView] = useState(false);
+    //const [degreeReqView, toggleDegreeReqView] = useState(false);
     const [plan, setPlan] = useState<plan>({ ...currentPlan });
     const [edit, setEdit] = useState<boolean>(false);
 
