@@ -13,7 +13,7 @@ function App(): JSX.Element {
                 <h6>Malika Iyer</h6>
                 <h6>Dina Dawood</h6>
             </header>
-
+            <hr></hr>
             {/*This is the collaspe button*/}
             <button
                 type="button"
@@ -23,7 +23,7 @@ function App(): JSX.Element {
             >
                 Need Help❓
             </button>
-
+            <hr></hr>
             {/*When the button is clicked the message collapses*/}
             <div id="welcome_message" className="collapse">
                 <p>

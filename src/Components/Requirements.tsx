@@ -1,5 +1,3 @@
-/* eslint-disable prettier/prettier */
-
 import React, { useState } from "react";
 import { Course } from "../Interfaces/course";
 import { Degree } from "../Interfaces/degree";
@@ -28,7 +26,7 @@ export function AI_Degree(): Degree {
     const name = degree;
     const totCredits = 124; //example total credits for this degree
     const concentration = "Artificial Intelligence and Robotics";
-    
+
     return {
         name: name,
         concentration: concentration,
@@ -43,7 +41,6 @@ export function AI_Degree(): Degree {
         restrictedReq: ["CISC681"] //again, will vary and change as necessary
     };
 }
-
 
 /*
 export function DataScience(): Degree {}
@@ -60,17 +57,17 @@ function num(name: string): number {
 "CISC220 is a required course for all degrees"
 "The degree must have at least 3 restrcited electives */
 
-function fulfillsDegreeReq(course: Course, degree: Degree): boolean {   
-    if (course.title in 
-        degree.capstoneReq 
-        || degree.ciscoreReq 
-        || degree.additionalReq 
-        || degree.concentrationReq 
-        || degree.labReq
-        || degree.probabilityReq
-        || degree.restrictedReq
-        || degree.systemsReq) {
-        
+function fulfillsDegreeReq(course: Course, degree: Degree): boolean {
+    if (
+        course.title in degree.capstoneReq ||
+        degree.ciscoreReq ||
+        degree.additionalReq ||
+        degree.concentrationReq ||
+        degree.labReq ||
+        degree.probabilityReq ||
+        degree.restrictedReq ||
+        degree.systemsReq
+    ) {
         /*add in the functionality of you need this many credits in this field
         can do so by suming number of credits for each course within that section (ex. course1.credits + course2.credits, etc)
         then depending on the requirement type (can be done in if statements) then that shows if you met the requirement
@@ -79,7 +76,6 @@ function fulfillsDegreeReq(course: Course, degree: Degree): boolean {
     }
     return false;
 }
-
 
 export default function YourComponent() {
     return (

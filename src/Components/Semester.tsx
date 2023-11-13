@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 //for visualization of semesters and altering the courses within them
 
 import React, { useState } from "react";
@@ -216,11 +215,13 @@ export function ViewSemester(): JSX.Element {
                 </Button>
                 {OneorTwo()}
             </div>
+            <hr></hr>
             <div>
                 <Button onClick={clearSemsterCourses}>
                     Remove All Courses
                 </Button>
             </div>
+            <hr></hr>
             <div>
                 <Form.Group controlId="currentCourse">
                     <Form.Label>Select A Course</Form.Label>

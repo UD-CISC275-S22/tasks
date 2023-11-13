@@ -1,5 +1,3 @@
-/* eslint-disable prettier/prettier */
-
 /* 
 CANR:
 CAS
@@ -12,7 +10,15 @@ BPPA:
 Honors:
 
 */
-export type Department = "CANR" | "CAS" | "CEOE" | "CEHD" | "COE" | "CHS" | "LBE" | "BPPA";
+export type Department =
+    | "CANR"
+    | "CAS"
+    | "CEOE"
+    | "CEHD"
+    | "COE"
+    | "CHS"
+    | "LBE"
+    | "BPPA";
 
 export interface Course {
     /*id number for each course (0,1,2,etc) for coding purposes*/
