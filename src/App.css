@@ -40,7 +40,7 @@
     }
 }
 
-.modal {
+/*.modal {
     display: none;
     position: fixed;
     z-index: 1;
@@ -75,7 +75,7 @@
     text-decoration: none;
     cursor: pointer;
     text-align: left;
-}
+}*/
 
 table {
     font-family: arial, sans-serif;
