@@ -6,9 +6,11 @@ import "../App.css";
 import { courseList } from "./course";
 import "./Semester.css";
 import { Course } from "../Interfaces/course";
-import { Button } from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 import { Semester } from "../Interfaces/semester";
-import { Degree } from "../Interfaces/degree";
+/*import { Degree } from "../Interfaces/degree";*/
+
+import sample from "../data/AllCourseList.json";
 
 //create an intial course for testing (will eventually replace this with actual courses from a default setting) - from course.tsx
 const COURSE_LIST = courseList;
@@ -19,15 +21,78 @@ const SEM1: Semester = {
     totalCredits: 18,
     courseList: COURSE_LIST
 };
+const SEM2: Semester = {
+    type: ["Fall"],
+    year: 2024,
+    totalCredits: 18,
+    courseList: COURSE_LIST
+};
+const DEFAULT_COURSE = sample[0].title;
 
 export function ViewSemester(): JSX.Element {
     //states as globals
-    const [fallSemester] = useState<Semester>(SEM1);
-    const [springSemester] = useState<Semester>(SEM1);
+    const [fallSemester, setFallSemester] = useState<Semester>({ ...SEM1 });
+    const [springSemester, setSpringSemester] = useState<Semester>({ ...SEM2 });
+    //(MM) NOTE: Using this state in order to create a drop down of Courses
+    //changed course.ts's department type due to error
+    const [currCourse, setCurrCourse] = useState<string>(DEFAULT_COURSE);
     //will add more semesters later
     const [SemesterType, setSemesterType] = useState<string>("Fall"); //set default to Fall for now
     const [SemCount, setSemCount] = useState<number>(1); //default shows 1 semester
+
     //NOTE FOR MICHAEL: Here is where you can add your add courses and remove courses functions
+    function updateCurrCourse(event: React.ChangeEvent<HTMLSelectElement>) {
+        setCurrCourse(event.target.value);
+    }
+
+    function dropClass() {
+        // looks through the course list in the current semester and filters out the
+        // course with the same value as "courseId"
+        if (SemCount === 1 && SemesterType === "Fall") {
+            setFallSemester({
+                ...fallSemester,
+                courseList: fallSemester.courseList.filter(
+                    (course: Course) => currCourse !== course.title
+                )
+            });
+        } else if (SemCount === 1 && SemesterType !== "Spring") {
+            setSpringSemester({
+                ...springSemester,
+                courseList: springSemester.courseList.filter(
+                    (course: Course) => currCourse === course.title
+                )
+            });
+        } else if (SemCount === 2) {
+            //filtering the class from both semesters
+            setFallSemester({
+                ...fallSemester,
+                courseList: fallSemester.courseList.filter(
+                    (course: Course) => currCourse !== course.title
+                )
+            });
+            setSpringSemester({
+                ...springSemester,
+                courseList: springSemester.courseList.filter(
+                    (course: Course) => currCourse !== course.title
+                )
+            });
+        }
+    }
+
+    function clearSemsterCourses() {
+        //function to clear all courses within a semester
+        //checks the current semester type and semester count
+        if (SemCount === 1 && SemesterType === "Fall") {
+            setFallSemester({ ...fallSemester, courseList: [] });
+        } else if (SemCount === 1 && SemesterType === "Spring") {
+            setSpringSemester({ ...springSemester, courseList: [] });
+        } else if (SemCount === 2) {
+            //if both coursees are displayed empty both courses regardless.
+            //setting both course list to empty
+            setFallSemester({ ...fallSemester, courseList: [] });
+            setSpringSemester({ ...springSemester, courseList: [] });
+        }
+    }
 
     //function to change number of semesters shown (can be either 1 or 2 only - can add 0 or more semesters later)
     function changeSemCount(): void {
@@ -144,9 +209,34 @@ export function ViewSemester(): JSX.Element {
     //actual return for the tsx file to App.tsx
     return (
         <div>
-            <Button onClick={changeSemCount}>Show One Semester</Button>
-            <Button onClick={changeSemester}>Show Different Semester</Button>
-            {OneorTwo()}
+            <div>
+                <Button onClick={changeSemCount}>Show One Semester</Button>
+                <Button onClick={changeSemester}>
+                    Show Different Semester
+                </Button>
+                {OneorTwo()}
+            </div>
+            <div>
+                <Button onClick={clearSemsterCourses}>
+                    Remove All Courses
+                </Button>
+            </div>
+            <div>
+                <Form.Group controlId="currentCourse">
+                    <Form.Label>Select A Course</Form.Label>
+                    <Form.Select value={currCourse} onChange={updateCurrCourse}>
+                        {COURSE_LIST.map((courseName: Course) => (
+                            <option
+                                key={courseName.title}
+                                value={courseName.title}
+                            >
+                                {courseName.title}
+                            </option>
+                        ))}
+                    </Form.Select>
+                </Form.Group>
+                <Button onClick={dropClass}>Remove Class</Button>
+            </div>
         </div>
     );
 }

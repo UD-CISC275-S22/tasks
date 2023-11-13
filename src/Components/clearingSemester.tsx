@@ -1,13 +1,11 @@
-import React from "react";
-import { Modal } from "react-bootstrap";
-
-// import React, { useState } from "react";
-// // import { courseList } from "./course";
+import React, { useState } from "react";
+import { courseList } from "./course";
 import "./Semester.css";
 import { Course } from "../Interfaces/course";
-// import { Button, Container, Modal, Row, Col } from "react-bootstrap";
+import { Button, Container, Modal, Row, Col } from "react-bootstrap";
 import { Semester } from "../Interfaces/semester";
-// import { Degree } from "../Interfaces/degree";
+import { ViewSemester } from "./Semester";
+import { Degree } from "../Interfaces/degree";
 
 // export function clearAddButtons({
 //     semester,
@@ -62,32 +60,44 @@ export function clearSemester({
     closed: () => void;
     currentSemester: Semester;
 }): JSX.Element {
+    const [displayClearSemester, setSemesterCleared] = useState(true);
+    const displayedSemester = () => setSemesterCleared(false);
+    const clearSemestersModal = () => setSemesterCleared(true);
     function saveEdits() {
         currentSemester.courseList = [] as Course[];
         closed();
     }
+    function clearing() {
+        if (SemCount === 1 && SemesterType === "Fall") {
+            setFallSemester({ ...fallSemester, CourseList: []});
+        } else if (SemCount === 1 && SemesterType === "Spring") {
+            setSpringSemester({ ...springSemester, courseList: [] });
+        } else if (SemCount === 2) {
+            setFallSemester({ ...fallSemester, courseList: []});
+            setSpringSemester({ ...springSemester, courseList: [] });
+        }
+    }
     //Collapsable button: Asks for confirmation before deleting semester
     return (
-        <Modal onClicked={clicked} onClose={closed} animation={false}>
-            <Modal.Header closeButton>
-                <Modal.Title>Warning</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-                <p>You are deleting this current semester, do you confirm?</p>
-            </Modal.Body>
-        </Modal>
+        <div>
+            <Modal onClicked={clicked} onClose={closed} animation={false}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Warning</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <p>
+                        You are deleting this current semester, do you confirm?
+                    </p>
+                </Modal.Body>
+            </Modal>
+            <div>
+                {/* handling clearing semester */}
+                <clearSemester
+                    clicked={displayClearSemester}
+                    closed={displayedSemester}
+                ></clearSemester>
+                <Button onClick={clearSemestersModal}> Clear </Button>
+            </div>
+        </div>
     );
 }
-
-// function clearSemesterCourses() {
-//     //function to clear all courses within a semester
-//     if (SemesterType === "Fall") {
-//         fallSemester.courseList = [];
-//     } else if (SemesterType === "Spring") {
-//         springSemester.courseList = [];
-//     } else {
-//         //setting both course list to empty
-//         fallSemester.courseList = [];
-//         springSemester.courseList = [];
-//     }
-// }

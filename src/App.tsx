@@ -12,11 +12,6 @@ function App(): JSX.Element {
     const welcomeMessage = () => displayWelcomeModal(false);
     const welcomeMessageModal = () => displayWelcomeModal(true);
 
-    //constants for clearing semester button/modal
-    const [displayClearSemester, setSemesterCleared] = useState(true);
-    const displayedSemester = () => setSemesterCleared(false);
-    const clearSemestersModal = () => setSemesterCleared(true);
-
     return (
         <div className="App">
             <header className="App-header">
@@ -34,23 +29,30 @@ function App(): JSX.Element {
                 closed={welcomeMessage}
             ></Welcome>
             <Button onClick={welcomeMessageModal}> Welcome </Button>
+            {/*This is the collaspe button*/}
+            <button
+                type="button"
+                className="btn btn-info "
+                data-bs-toggle="collapse"
+                data-bs-target="#welcome_message"
+            >
+                Need Help❓
+            </button>
 
-            {/* handling clearing semester */}
-            <clearSemester
-                clicked={displayClearSemester}
-                closed={displayedSemester}
-            ></clearSemester>
-            <Button onClick={clearSemestersModal}> Clear </Button>
-            {/* <p>
-                Welcome to your personal Degree Planner! Some basic tools have
-                been designed to make your visit accessible to your needs; this
-                includes creating new plans from scratch and/or compiling data
-                from a csv file. You will be able to add, remove, edit, and save
-                various courses/semesters in a multitude of plans. Scroll to the
-                bottom of the page for more instructions (will enhance this
-                later by making an expandable/disposable button near the top of
-                the page).
-            </p> */}
+            {/*When the button is clicked the message collapses*/}
+            <div id="welcome_message" className="collapse">
+                <p>
+                    Welcome to your personal Degree Planner! Some basic tools
+                    have been designed to make your visit accessible to your
+                    needs; this includes creating new plans from scratch and/or
+                    compiling data from a csv file. You will be able to add,
+                    remove, edit, and save various courses/semesters in a
+                    multitude of plans. Scroll to the bottom of the page for
+                    more instructions (will enhance later by making an
+                    expandable/disposable button near the top of the page).
+                </p>
+            </div>
+
             <hr></hr>
             <ViewSemester></ViewSemester>
         </div>
