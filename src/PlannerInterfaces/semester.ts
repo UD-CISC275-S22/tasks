@@ -1,9 +1,9 @@
-import { course } from "./course";
+import { Course } from "./Course";
 
-export interface semester {
+export interface Semester {
     id: string;
     name: string;
     year: number;
-    courses: course[];
+    courses: Course[];
     season: string;
 }

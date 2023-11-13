@@ -5,18 +5,18 @@ import "./App.css";
 ///import { Button } from "react-bootstrap";
 import { data } from "./classData";
 import { Button, Form, Modal, ModalFooter } from "react-bootstrap";
-import { course } from "./PlannerInterfaces/course";
-import { plan } from "./PlannerInterfaces/plan";
-import { semester } from "./PlannerInterfaces/semester";
+import { Course } from "./PlannerInterfaces/Course";
+import { Plan } from "./PlannerInterfaces/Plan";
+import { Semester } from "./PlannerInterfaces/Semester";
 import { DisplayCourse } from "./Course";
 //Courses to be used to for the datalist autofill
 interface currentSemester {
-    semester: semester;
-    plan: plan;
-    updatePlan: (plan: plan) => void;
+    semester: Semester;
+    plan: Plan;
+    updatePlan: (plan: Plan) => void;
 }
 const courseList = data.map(
-    (course): course => ({
+    (course): Course => ({
         id: course.id,
         name: course.name,
         credits: course.credits,
@@ -43,10 +43,10 @@ export function DisplaySemester({
     //Find the course with the ID and delete it
     function deleteCourse(id: string): void {
         const newCourses = semester.courses.filter(
-            (course: course): boolean => course.id !== id
+            (course: Course): boolean => course.id !== id
         );
         const newSem = plan.semesters.map(
-            (sem: semester): semester =>
+            (sem: Semester): Semester =>
                 sem.id === semester.id
                     ? { ...sem, courses: newCourses }
                     : { ...sem }
@@ -57,7 +57,7 @@ export function DisplaySemester({
     //Deletes all courses in a semester
     function removeAllCourses() {
         const newSemester = plan.semesters.map(
-            (semester: semester): semester =>
+            (semester: Semester): Semester =>
                 semester.id === semester.id
                     ? { ...semester, courses: [] }
                     : { ...semester }
@@ -67,7 +67,7 @@ export function DisplaySemester({
     //Updates the states for the course to be added
     function updatecourseID(event: React.ChangeEvent<HTMLInputElement>) {
         const newCourse = courseList.findIndex(
-            (course: course) => course.id === event.target.value
+            (course: Course) => course.id === event.target.value
         );
         if (newCourse === -1) {
             //If not in the pool of courses use null values for other info
@@ -103,7 +103,7 @@ export function DisplaySemester({
                 >
                     <Form.Group className="mb-3" id="courseID">
                         <datalist id="courseIDs">
-                            {courseList.map((course: course) => (
+                            {courseList.map((course: Course) => (
                                 <option key={course.id}>{course.id}</option>
                             ))}
                             ;
@@ -165,7 +165,7 @@ export function DisplaySemester({
     //Edits the name of the semester
     function editSemName(event: React.ChangeEvent<HTMLInputElement>) {
         const newSemester = plan.semesters.map(
-            (semester: semester): semester =>
+            (semester: Semester): Semester =>
                 semester.id === semester.id
                     ? { ...semester, name: event.target.value }
                     : { ...semester }
@@ -233,7 +233,7 @@ export function DisplaySemester({
                     <th>Edit Course</th>
                     <th>Delete Course</th>
                 </tr>
-                {semester.courses.map((course: course) => {
+                {semester.courses.map((course: Course) => {
                     return (
                         <tr key={course.id}>
                             <DisplayCourse

@@ -58,25 +58,19 @@ tr:nth-child(even) {
 }
 
 body {
-    background: linear-gradient(to right,#2547f3, rgb(230, 247, 46));
-    background-size: 400%
-   
-  400%;
+    background: linear-gradient(to right, #2547f3, rgb(230, 247, 46));
+    background-size: 400% 400%;
     animation: gradient 15s ease infinite;
-  }
+}
 
-  @keyframes gradient {
+@keyframes gradient {
     0% {
-      background-position: 0%
-   
-  50%;
+        background-position: 0% 50%;
     }
     50% {
-      background-position: 100%
-   
-  50%;
+        background-position: 100% 50%;
     }
     100% {
-      background-position: 0% 50%;
+        background-position: 0% 50%;
     }
-  }
+}
