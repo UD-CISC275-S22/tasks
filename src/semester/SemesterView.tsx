@@ -17,9 +17,13 @@ export function SemesterView({
     handleOnDragOver: (event: React.DragEvent<HTMLDivElement>) => void;
 }): JSX.Element {
     const [currentSemester, setSemester] = useState<semester>(semester);
+    //TODO: Doesn't properly update semesters state from Parent Component. Need to be fixed.
+    //Clears courses for the current semesters.
     function clearCourses(semester: semester): void {
         setSemester({ ...semester, classList: [] });
     }
+    //This grabs the info of the course being dragged.
+    //TODO: Doesn't properly render on its own.
     const handleDragStart = (
         event: React.DragEvent<HTMLTableRowElement>,
         course: classes
