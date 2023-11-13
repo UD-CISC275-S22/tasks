@@ -1,27 +1,20 @@
-import React, { useState } from "react";
+import React, { useState }, { useState } from "react";
+import Modal from "react-modal";
 import Modal from "react-modal";
 import "./App.css";
-<<<<<<< HEAD
+//import { Button } from "react-bootstrap";
+//import { data } from "./classData";
 import { plan } from "./PlannerInterfaces/plan";
 import { Plan } from "./Plan";
-import defaultPlans from "./Defaults.json";
-=======
->>>>>>> e540e1c0594ba09b2d604c0cfc0f65c301a81b24
-
+import DefaultPlans from "./Defaults.json";
 function App(): JSX.Element {
-    const [modalIsOpen, setModalIsOpen] = useState(false);
-    const openModal = () => {
-        setModalIsOpen(true);
-    };
-    const closeModal = () => {
-        setModalIsOpen(false);
-    };
-<<<<<<< HEAD
-    useState<number>(-1);
-    const defaultPlan = defaultPlans.defaultPlans;
+    // const [isOpen, setIsOpen] = useState(true);
+    // const [selectedPlan, setSelectedPlan] = useState<number>(-1); //Selected plan
+    // // function toggleModal() {
+    // //     setIsOpen(!isOpen);
+    // }
+    const defaultPlan = DefaultPlans.defaultPlans;
     const [degreePlans, setDegreePlans] = useState<plan[]>(defaultPlan);
-=======
->>>>>>> e540e1c0594ba09b2d604c0cfc0f65c301a81b24
     return (
         <div className="App">
             <header className="App-header">UD Course Planner</header>
@@ -29,14 +22,11 @@ function App(): JSX.Element {
                 James Lloyd, Kerry Ferguson, Matthew Conlon, Caleb Sachetti,
                 Arnav Baliyan
             </p>
-<<<<<<< HEAD
             <Plan
                 degreePlans={degreePlans}
                 setDegreePlans={setDegreePlans}
                 currentPlan={degreePlans[0]}
             ></Plan>
-=======
->>>>>>> e540e1c0594ba09b2d604c0cfc0f65c301a81b24
             <div>
                 <button
                     id="openModalBtn"
