@@ -12,7 +12,9 @@ import { Semester } from "../Interfaces/semester";
 
 import sample from "../data/AllCourseList.json";
 
-//create an intial course for testing (will eventually replace this with actual courses from a default setting) - from course.tsx
+import sample from "../data/AllCourseList.json";
+
+//A variable able to use for the list of courses within the JSON file.
 const COURSE_LIST = courseList;
 //create initial semester for testing
 const SEM1: Semester = {
@@ -27,6 +29,8 @@ const SEM2: Semester = {
     totalCredits: 18,
     courseList: COURSE_LIST
 };
+
+//a default course variable; uses the first course within the JSON file.
 const DEFAULT_COURSE = sample[0].title;
 
 export function ViewSemester(): JSX.Element {
@@ -34,7 +38,9 @@ export function ViewSemester(): JSX.Element {
     const [fallSemester, setFallSemester] = useState<Semester>({ ...SEM1 });
     const [springSemester, setSpringSemester] = useState<Semester>({ ...SEM2 });
     //(MM) NOTE: Using this state in order to create a drop down of Courses
-    //changed course.ts's department type due to error
+    //and set which course the user would like to add or remove
+    // updated through updateCurrCourse and drop down element
+    //MERGE CONFLICT (discuss after MVP): changed course.ts's department type due to error
     const [currCourse, setCurrCourse] = useState<string>(DEFAULT_COURSE);
     //will add more semesters later
     const [SemesterType, setSemesterType] = useState<string>("Fall"); //set default to Fall for now
@@ -45,9 +51,26 @@ export function ViewSemester(): JSX.Element {
         setCurrCourse(event.target.value);
     }
 
+    // function removes all courses!
+    function clearSemsterCourses() {
+        //function to clear all courses within a semester
+        //checks the current semester type and semester count
+        if (SemCount === 1 && SemesterType === "Fall") {
+            setFallSemester({ ...fallSemester, courseList: [] });
+        } else if (SemCount === 1 && SemesterType === "Spring") {
+            setSpringSemester({ ...springSemester, courseList: [] });
+        } else if (SemCount === 2) {
+            //if both coursees are displayed empty both courses regardless.
+            //setting both course list to empty
+            setFallSemester({ ...fallSemester, courseList: [] });
+            setSpringSemester({ ...springSemester, courseList: [] });
+        }
+    }
+
     function dropClass() {
         // looks through the course list in the current semester and filters out the
-        // course with the same value as "courseId"
+        // course with the same "Title" as the state "currCourse"
+        // **refer to "currCourse" documentation for more info **
         if (SemCount === 1 && SemesterType === "Fall") {
             setFallSemester({
                 ...fallSemester,
@@ -79,18 +102,30 @@ export function ViewSemester(): JSX.Element {
         }
     }
 
-    function clearSemsterCourses() {
-        //function to clear all courses within a semester
-        //checks the current semester type and semester count
+    function addClass() {
+        const idea = COURSE_LIST.findIndex(
+            (course: Course) => course.title === currCourse
+        );
         if (SemCount === 1 && SemesterType === "Fall") {
-            setFallSemester({ ...fallSemester, courseList: [] });
-        } else if (SemCount === 1 && SemesterType === "Spring") {
-            setSpringSemester({ ...springSemester, courseList: [] });
+            setFallSemester({
+                ...fallSemester,
+                courseList: [...fallSemester.courseList, COURSE_LIST[idea]]
+            });
+        } else if (SemCount === 1 && SemesterType !== "Spring") {
+            setSpringSemester({
+                ...springSemester,
+                courseList: [...springSemester.courseList, COURSE_LIST[idea]]
+            });
         } else if (SemCount === 2) {
-            //if both coursees are displayed empty both courses regardless.
-            //setting both course list to empty
-            setFallSemester({ ...fallSemester, courseList: [] });
-            setSpringSemester({ ...springSemester, courseList: [] });
+            //filtering the class from both semesters
+            setFallSemester({
+                ...fallSemester,
+                courseList: [...fallSemester.courseList, COURSE_LIST[idea]]
+            });
+            setSpringSemester({
+                ...springSemester,
+                courseList: [...springSemester.courseList, COURSE_LIST[idea]]
+            });
         }
     }
 
@@ -236,6 +271,7 @@ export function ViewSemester(): JSX.Element {
                     </Form.Select>
                 </Form.Group>
                 <Button onClick={dropClass}>Remove Class</Button>
+                <Button onClick={addClass}>Add Class</Button>
             </div>
         </div>
     );

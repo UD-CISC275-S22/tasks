@@ -23,12 +23,14 @@ function App(): JSX.Element {
                 <h6>Dina Dawood</h6>
             </header>
 
-            {/* handling welcome message */}
+            
+            {/* Dina's welcome message implementation. Merge conflict with bryant's, discuss after MVP
             <Welcome
                 clicked={displayWelcomeMessage}
                 closed={welcomeMessage}
             ></Welcome>
-            <Button onClick={welcomeMessageModal}> Welcome </Button>
+            <Button onClick={welcomeMessageModal}> Welcome </Button> */
+
             {/*This is the collaspe button*/}
             <button
                 type="button"
