@@ -17,8 +17,12 @@ const courseList = data.map(
         preReq: course.preReq
     })
 );
-const CourseTable = () => {
-    const [courses, setCourses] = useState<course[]>(courseList);
+interface CourseTableProps {
+    data: course[]; // Define the 'data' prop
+}
+
+const CourseTable: React.FC<CourseTableProps> = ({ data }) => {
+    const [courses, setCourses] = useState<course[]>(data);
 
     const handleDelete = (id: number | string) => {
         const updatedCourses = courses.filter(
