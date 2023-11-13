@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 //import { Course } from "../Interfaces/course";
 //^^^^^COMMENTED OUT FOR PRETTIER ERRORS - PUT BACK AFTER SUBMITTING MVP
-import { Degree } from "../Interfaces/degree";
+import { Degree } from "../Interfaces/plan";
 
 //EXAMPLE usage of the requirements ts
 import { CoreBS } from "../Interfaces/requirements";

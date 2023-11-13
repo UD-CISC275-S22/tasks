@@ -48,7 +48,7 @@ export function ViewSemester(): JSX.Element {
     }
 
     // function removes all courses!
-    function clearSemsterCourses() {
+    function clearSemesterCourses() {
         //function to clear all courses within a semester
         //checks the current semester type and semester count
         if (SemCount === 1 && SemesterType === "Fall") {
@@ -249,7 +249,7 @@ export function ViewSemester(): JSX.Element {
             </div>
             <hr></hr>
             <div>
-                <Button onClick={clearSemsterCourses}>
+                <Button onClick={clearSemesterCourses}>
                     Remove All Courses
                 </Button>
             </div>
