@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
-import Modal from "react-modal";
-import { ModalBody } from "react-bootstrap";
+//import { modal } from "react-modal";
+//import { ModalBody } from "react-bootstrap";
 //import { Button } from "react-bootstrap";
 //import { data } from "./classData";
 function App(): JSX.Element {
