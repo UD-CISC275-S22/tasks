@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "./App.css";
 ///import { Button } from "react-bootstrap";
 import { data } from "./classData";
-import { Button, Form } from "react-bootstrap";
+import { Button, Form, Table } from "react-bootstrap";
 import { course } from "./PlannerInterfaces/course";
 import { plan } from "./PlannerInterfaces/plan";
 import { semester } from "./PlannerInterfaces/semester";
@@ -17,6 +17,53 @@ const courseList = data.map(
         preReq: course.preReq
     })
 );
+const CourseTable = () => {
+    const [courses, setCourses] = useState<course[]>(courseList);
+
+    const handleDelete = (id: number | string) => {
+        const updatedCourses = courses.filter(
+            (course) => course.id !== String(id)
+        );
+        setCourses(updatedCourses);
+    };
+
+    return (
+        <div>
+            <h2>Course Table</h2>
+            <Table striped bordered hover>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Credits</th>
+                        <th>Prerequisites</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {courses.map((course) => (
+                        <tr key={course.id}>
+                            <td>{course.id}</td>
+                            <td>{course.name}</td>
+                            <td>{course.credits}</td>
+                            <td>{course.preReq}</td>
+                            <td>
+                                <Button
+                                    variant="danger"
+                                    onClick={() => handleDelete(course.id)}
+                                >
+                                    Delete
+                                </Button>
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
+            </Table>
+        </div>
+    );
+};
+
+export default CourseTable;
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 function DisplayCourse({
