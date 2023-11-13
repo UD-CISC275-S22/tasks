@@ -40,7 +40,6 @@
         "title": "Accounting II",
         "credits": 3,
         "preReq": [
-            "ACCT 207",
             "ACCT 207"
         ],
         "description": "Introduction to managerial accounting. Topics: manufacturing accounting, cost-volume-profit analysis, job-order accounting, budgeting, standard costs and variance analysis, contribution approach to decision analysis, absorption and variable costing."
@@ -108,7 +107,6 @@
         "title": "Intermediate Accounting II",
         "credits": 3,
         "preReq": [
-            "ACCT 315",
             "ACCT 315"
         ],
         "description": "Decsription not available."
@@ -236,7 +234,6 @@
         "title": "Income Tax Accounting",
         "credits": 3,
         "preReq": [
-            "ACCT 315",
             "ACCT 315"
         ],
         "description": "Analysis of recent revenue acts; use of federal law and regulations todetermine tax liability."
@@ -255,7 +252,6 @@
         "title": "Advanced Accounting",
         "credits": 3,
         "preReq": [
-            "ACCT 316",
             "ACCT 316"
         ],
         "description": "Introduction to branch accounting, consolidations, partnerships, fund accounting for state and local governments, and accounting for international transactions. Other relevant topics may also be covered."

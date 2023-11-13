@@ -1,37 +1,35 @@
 /* eslint-disable no-extra-parens */
 import React from "react";
 import { Button, Form, Modal } from "react-bootstrap";
+//import { FilteringSearch } from "../../FilteringSearch/FilteringSearch";
 import realData from "../data/corrected_data.json";
 import { semester } from "../Interface/semester";
 import { useState } from "react";
 import { classes } from "../Interface/classes";
+import { AddClass } from "./AddClass";
 
-export function AddSemesterModal({
+export function AddToSemester({
     handleClose,
     show,
-    semesterExamples,
-    addSemester
+    semesters,
+    onAddClass
 }: {
     handleClose: () => void;
     show: boolean;
-    semesterExamples: semester[];
-    addSemester: (
-        id: number,
-        fullTime: boolean,
-        classList: classes[],
-        totalCredits: number,
-        season: string
-    ) => void;
-}): JSX.Element {
+    semesters: semester[];
+    onAddClass: (updatedSchedule: semester[]) => void;
+}) {
     const [searchAttribute, setSearchAttribute] = useState("");
-    const [season, setSeason] = useState("");
     const [filteredCourses, setFilteredCourses] = useState(realData);
     const [visible, setVisible] = useState<boolean>(false);
+    const [changeSemester, setChangeSemester] = useState<semester>(
+        semesters[0]
+    );
 
-    const inputChange1 = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const searchValue = event.target.value;
-        setSeason(searchValue);
-    };
+    function setPlan(updatedSchedule: semester[]): void {
+        onAddClass(updatedSchedule);
+        handleClose();
+    }
 
     const inputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const searchValue = event.target.value;
@@ -43,6 +41,19 @@ export function AddSemesterModal({
         setFilteredCourses(filteredClasses);
     };
 
+    const inputChangeSemester = (
+        event: React.ChangeEvent<HTMLInputElement>
+    ) => {
+        const wantedSemester = event.target.value;
+        setChangeSemester(
+            semesters[
+                semesters.findIndex(
+                    (sem: semester) => sem.season === wantedSemester
+                )
+            ]
+        );
+    };
+
     const handleClick = (cID: string) => {
         setSearchAttribute(cID);
     };
@@ -51,16 +62,12 @@ export function AddSemesterModal({
         setVisible(!visible);
     };
 
-    function closingModal() {
+    function getRealClass(): classes {
         const findIndexCourse: number = realData.findIndex(
             (course) => course.code === searchAttribute
         );
         const foundCourse: classes = realData[findIndexCourse];
-        const lastSemester: semester =
-            semesterExamples[semesterExamples.length - 1];
-        const newId: number = lastSemester.id + 1;
-        addSemester(newId, true, [foundCourse], foundCourse.credits, season);
-        handleClose();
+        return foundCourse;
     }
 
     return (
@@ -71,15 +78,20 @@ export function AddSemesterModal({
                 </Modal.Header>
                 <Modal.Body>
                     <Form.Group>
-                        <Form.Label>Semester Name:</Form.Label>
-                        <Form.Group controlId="SemesterName">
-                            <Form.Control
-                                type="text"
-                                placeholder="Provide a name for the semester"
-                                onChange={inputChange1}
-                                data-testid="input1"
-                            />
-                        </Form.Group>
+                        <div>
+                            {semesters.map((sem: semester) => (
+                                <Form.Check
+                                    key={sem.season}
+                                    type="radio"
+                                    label={sem.season}
+                                    value={sem.season}
+                                    checked={
+                                        changeSemester.season === sem.season
+                                    }
+                                    onChange={inputChangeSemester}
+                                ></Form.Check>
+                            ))}
+                        </div>
                         <hr></hr>
                         <Form.Label>Course:</Form.Label>
                         <Form.Group controlId="formFilterSearch">
@@ -89,7 +101,6 @@ export function AddSemesterModal({
                                 onChange={inputChange}
                                 placeholder="Search by Course Code"
                                 onClick={flipVisibility}
-                                data-testid="input2"
                             />
                         </Form.Group>
                         {visible && (
@@ -128,29 +139,18 @@ export function AddSemesterModal({
                     >
                         Close
                     </Button>
-                    <Button
-                        data-testid="Done"
-                        onClick={() => {
-                            closingModal();
+                    <AddClass
+                        schedule={semesters}
+                        semester={changeSemester}
+                        newClass={getRealClass()}
+                        onAddClass={function (
+                            updatedSchedule: semester[]
+                        ): void {
+                            setPlan(updatedSchedule);
                         }}
-                    >
-                        Done
-                    </Button>
+                    ></AddClass>
                 </Modal.Footer>
             </Modal>
         </div>
     );
 }
-
-/* 
-
-This component is used to create pop which allows users to 
-add a semester to thier degree plan. (Currently demo data is being 
-used to display the table, and show that you can add a semester to the plan.) 
-The component allows the user to write the name of the semester and also search 
-through the courses with the help of filtering search. From there, the information about
-the course is extracted and the displayed on the plan, alongside the name of the semester
-
-I have a linter issue currently due to parans issue but it should be fixed before final submission
-
-*/

@@ -47,6 +47,11 @@ export function SemesterView({
                         <th scope="col">Course Title</th>
                         <th scope="col">Credits</th>
                         <th scope="col">Prerequisites</th>
+                        <th scope="col">Remove Class</th>
+                        {/*<th scope="col">Schedule</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Instructor</th>
+    */}
                     </tr>
                 </thead>
                 <tbody>

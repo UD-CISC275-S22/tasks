@@ -1,19 +1,20 @@
 import React from "react";
-//import { JsxElement } from "typescript";
 import "../App.css";
-//import { SideNavInfo } from "./SideNavInfo";
-//import { Routes, Route, Outlet, Link } from "react-router-dom";
-//import { Component } from "react";
 import SchoolIcon from "@mui/icons-material/School";
 import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 import ClassIcon from "@mui/icons-material/Class";
+import ChecklistIcon from "@mui/icons-material/Checklist";
 
 export function SideNav2({
     flipView,
-    flipModalView
+    flipModalView,
+    flipAudit,
+    flipAddView
 }: {
     flipView: () => void;
     flipModalView: () => void;
+    flipAudit: () => void;
+    flipAddView: () => void;
 }): JSX.Element {
     return (
         <div className="SideNav2">
@@ -26,11 +27,21 @@ export function SideNav2({
                     <div id="picture">{<AutoStoriesIcon />}</div>
                     <div id="name">{"Add Semester"}</div>
                 </li>
-                <li className="row">
+                <li className="row" onClick={() => flipAddView()}>
                     <div id="picture">{<ClassIcon />}</div>
                     <div id="name">{"Add Course"}</div>
+                </li>
+                <li className="row" onClick={() => flipAudit()}>
+                    <div id="picture">{<ChecklistIcon />}</div>
+                    <div id="name">{"Degree Audit"}</div>
                 </li>
             </ul>
         </div>
     );
 }
+
+/*
+The sideNav2 component provides a side navigation menu for every screen displayed on the website, in which users
+can interact with its "Add Degree Plan", "Add Semester", "Add Course", and "Degree Audit" buttons. This is essentially,
+the root point for all interactivity that the website provides. 
+*/
