@@ -6,10 +6,17 @@ import allClasses from "../data/allClasses.json";
 
 //Quick Course Search and Add to Semester
 
-function CourseSearch(): JSX.Element {
+interface QuickAddProps {
+    onCourseInfo: (
+        courseInfo: Class & { semester: string; year: string }
+    ) => void;
+}
+
+function CourseSearch(props: QuickAddProps): JSX.Element {
+    //const [isQuickAdd, setIsQuickAdd] = useState<boolean>(false);
     const [courseCode, setCourseCode] = useState("");
     const [courseInfo, setCourseInfo] = useState<Class | null>(null);
-    const [year, setYear] = useState("");
+    const [year /*setYear*/] = useState("");
     const [semester, setSemester] = useState("");
 
     const [courseFound, setCourseFound] = useState(true);
@@ -37,16 +44,19 @@ function CourseSearch(): JSX.Element {
         }
     };
 
-    const handleYearChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setYear(e.target.value);
-    };
+    // const handleYearChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    //     setYear(e.target.value);
+    // };
 
-    const handleSemesterChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const handleSemesterChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSemester(e.target.value);
     };
 
     const handleAddCourse = () => {
-        //Figure out tomorrow
+        if (courseInfo) {
+            console.log(courseInfo);
+            props.onCourseInfo({ ...courseInfo, semester, year });
+        }
     };
 
     return (
@@ -71,27 +81,28 @@ function CourseSearch(): JSX.Element {
                     <br></br>
                     {year === "" || semester === "" ? (
                         <div>
-                            <label htmlFor="year">Year: </label>
+                            <label htmlFor="semester">Semester: </label>
+                            <input
+                                type="text"
+                                id="semester"
+                                name="semester"
+                                value={semester}
+                                onChange={handleSemesterChange}
+                            >
+                                {/* <option value="Fall">Fall</option>
+                                <option value="Winter">Winter</option>
+                                <option value="Spring">Spring</option>
+                                <option value="Summer">Summer</option> */}
+                            </input>
+                            <br></br>
+                            {/* <label htmlFor="year">Year: </label>
                             <input
                                 type="text"
                                 id="year"
                                 name="year"
                                 value={year}
                                 onChange={handleYearChange}
-                            />
-                            <br></br>
-                            <label htmlFor="semester">Semester: </label>
-                            <select
-                                id="semester"
-                                name="semester"
-                                value={semester}
-                                onChange={handleSemesterChange}
-                            >
-                                <option value="Fall">Fall</option>
-                                <option value="Winter">Winter</option>
-                                <option value="Spring">Spring</option>
-                                <option value="Summer">Summer</option>
-                            </select>
+                            /> */}
                             <br></br>
                             <button onClick={handleAddCourse}>
                                 Add Course
@@ -107,5 +118,4 @@ function CourseSearch(): JSX.Element {
         </div>
     );
 }
-
 export default CourseSearch;

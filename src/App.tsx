@@ -1,8 +1,9 @@
 import React from "react";
 import "./App.css";
 import { SingleMultipleSemester } from "./Components/SingleMultipleSemester";
-import SlowAdd from "./Components/SlowAdd";
-import QuickAdd from "./Components/QuickAdd";
+// import SlowAdd from "./Components/SlowAdd";
+// import QuickAdd from "./Components/QuickAdd";
+// import { Class } from "./interfaces/class";
 
 function App(): JSX.Element {
     return (
@@ -10,18 +11,6 @@ function App(): JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript
             </header>
-            <div>
-                <h4>Search for your course, or manually input your course.</h4>
-                <div style={{ display: "flex", justifyContent: "center" }}>
-                    <div style={{ marginRight: "5px" }}>
-                        <QuickAdd />
-                    </div>
-                    <div className="separator"></div>
-                    <div style={{ marginLeft: "5px" }}>
-                        <SlowAdd />
-                    </div>
-                </div>
-            </div>
             <SingleMultipleSemester></SingleMultipleSemester>
         </div>
     );

@@ -3,7 +3,7 @@ import { semester } from "./semster";
 export interface degreePlan {
     semesters: semester[];
     name: string;
-    id: number;
+    //id: number;
 }
 
 export interface degreePlanProps {
