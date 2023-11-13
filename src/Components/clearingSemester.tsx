@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+export {}; //just for MVP purposes
+/*import React, { useState } from "react";
 import { courseList } from "./course";
 import "./Semester.css";
 import { Course } from "../Interfaces/course";
@@ -91,7 +92,7 @@ export function clearSemester({
                 </Modal.Body>
             </Modal>
             <div>
-                {/* handling clearing semester */}
+                {/* handling clearing semester}
                 <clearSemester
                     clicked={displayClearSemester}
                     closed={displayedSemester}
@@ -101,3 +102,4 @@ export function clearSemester({
         </div>
     );
 }
+*/
