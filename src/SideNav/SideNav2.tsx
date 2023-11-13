@@ -1,9 +1,5 @@
 import React from "react";
-//import { JsxElement } from "typescript";
 import "../App.css";
-//import { SideNavInfo } from "./SideNavInfo";
-//import { Routes, Route, Outlet, Link } from "react-router-dom";
-//import { Component } from "react";
 import SchoolIcon from "@mui/icons-material/School";
 import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 import ClassIcon from "@mui/icons-material/Class";
