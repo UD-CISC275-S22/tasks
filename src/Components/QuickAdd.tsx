@@ -66,6 +66,7 @@ function CourseSearch(props: QuickAddProps): JSX.Element {
             <input
                 type="text"
                 id="courseCode"
+                data-testid="courseCode"
                 name="courseCode"
                 value={courseCode}
                 onChange={handleCourseCodeChange}
