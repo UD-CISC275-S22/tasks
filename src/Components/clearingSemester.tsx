@@ -1,5 +1,50 @@
-export {}; //just for MVP purposes
-import React, { useState } from "react";
+import React from "react";
+import { Button, Modal } from "react-bootstrap";
+
+export const ClearSemester = ({
+    clearSemesterCourses,
+    closeVisibility,
+    show
+}: {
+    clearSemesterCourses: () => void;
+    closeVisibility: () => void;
+    show: boolean;
+}) => {
+    return (
+        <>
+            <div className="clear_sem">
+                <Button onClick={clearSemesterCourses}>
+                    Remove All Courses
+                </Button>
+            </div>
+            <div>
+                <Modal show={show} animation={false}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Warning</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <p>
+                            You are deleting this current semester, do you
+                            confirm?
+                        </p>
+                    </Modal.Body>
+                </Modal>
+                {/*
+                <div>
+                    {/*handling clearing semester
+                    <clearSemester
+                        clicked={displayClearSemester}
+                        closed={displayedSemester}
+                    ></clearSemester>
+                    <Button onClick={clearSemestersModal}> Clear </Button>
+                </div>
+                */}
+            </div>
+        </>
+    );
+};
+
+/*import React, { useState } from "react";
 import { courseList } from "./course";
 import "./Semester.css";
 import { Course } from "../Interfaces/course";
@@ -102,4 +147,4 @@ export function clearSemester({
         </div>
     );
 }
-
+*/
