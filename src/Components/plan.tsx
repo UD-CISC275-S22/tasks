@@ -1,5 +1,5 @@
 import { Semester } from "../Interfaces/semester";
-import { Course, Department } from "../Interfaces/course";
+import { Course } from "../Interfaces/course";
 import { Plan } from "../Interfaces/plan";
 import { courseList } from "./course";
 
@@ -237,19 +237,19 @@ export function AI(): Plan {
         courseList: fall3AI
     };
     const spring3Sem: Semester = {
-        type: "Spring",
+        type: ["Spring"],
         year: 3,
         totalCredits: 15,
         courseList: spring3AI
     };
     const fall4Sem: Semester = {
-        type: "Fall",
+        type: ["Fall"],
         year: 4,
         totalCredits: 15,
         courseList: fall4AI
     };
     const spring4Sem: Semester = {
-        type: "Spring",
+        type: ["Spring"],
         year: 4,
         totalCredits: 15,
         courseList: spring4AI

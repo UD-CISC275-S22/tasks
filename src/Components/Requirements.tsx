@@ -1,3 +1,5 @@
+export {};
+/*
 import React, { useState } from "react";
 import Course from "./draggingCourses";
 import { Plan } from "../Interfaces/plan";
@@ -53,6 +55,7 @@ function fulfillsDegreeReq(course: Course, degree: Degree): boolean {
 COMMENTED OUT FOR PRETTIER ERRORS - PUT BACK AFTER SUBMITTING MVP
 */
 
+/*
 export default function YourComponent() {
     return (
         <div>
@@ -60,3 +63,4 @@ export default function YourComponent() {
         </div>
     );
 }
+*/
