@@ -5,11 +5,12 @@ import "../App.css";
 import { courseList } from "./course";
 import "./Semester.css";
 import { Course } from "../Interfaces/course";
-import { Form, Button } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { Semester } from "../Interfaces/semester";
 //import { Degree } from "../Interfaces/degree";
 import sample from "../data/AllCourseList.json";
 import { ClearSemester } from "./clearingSemester";
+import { DropAdd } from "./dropAdd";
 
 //A variable able to use for the list of courses within the JSON file.
 const COURSE_LIST = courseList;
@@ -44,6 +45,8 @@ export function ViewSemester(): JSX.Element {
     const [SemCount, setSemCount] = useState<number>(1); //default shows 1 semester
     //const for clearsemesters modal visibility
     const [clicked, setClicked] = useState<boolean>(false);
+    //const for target semester you want to interact with
+    const [targetSem, setTargetSem] = useState<string>("Fall");
 
     //NOTE FOR MICHAEL: Here is where you can add your add courses and remove courses functions
     function updateCurrCourse(event: React.ChangeEvent<HTMLSelectElement>) {
@@ -54,20 +57,18 @@ export function ViewSemester(): JSX.Element {
     function clearSemsterCourses() {
         //function to clear all courses within a semester
         //checks the current semester type and semester count
-        if (SemCount === 1 && SemesterType === "Fall") {
+        if (targetSem === "Fall") {
             setFallSemester({ ...fallSemester, courseList: [] });
-        } else if (SemCount === 1 && SemesterType === "Spring") {
+        } else if (targetSem === "Spring") {
+            setSpringSemester({ ...springSemester, courseList: [] });
+        } else if (targetSem === "Both") {
+            setFallSemester({ ...fallSemester, courseList: [] });
             setSpringSemester({ ...springSemester, courseList: [] });
         }
-        /* Add functionality about clearing both semesters if needed
-            else if (SemCount === 2) {
-            //if both coursees are displayed empty both courses regardless.
-            //setting both course list to empty
-            setFallSemester({ ...fallSemester, courseList: [] });
-            setSpringSemester({ ...springSemester, courseList: [] }); */
         handleClose();
     }
 
+    //functions for visibility of the modal of clearing semesters (the warning)
     function handleClose() {
         setClicked(false);
     }
@@ -80,21 +81,21 @@ export function ViewSemester(): JSX.Element {
         // looks through the course list in the current semester and filters out the
         // course with the same "Title" as the state "currCourse"
         // **refer to "currCourse" documentation for more info **
-        if (SemCount === 1 && SemesterType === "Fall") {
+        if (targetSem === "Fall") {
             setFallSemester({
                 ...fallSemester,
                 courseList: fallSemester.courseList.filter(
                     (course: Course) => currCourse !== course.title
                 )
             });
-        } else if (SemCount === 1 && SemesterType !== "Spring") {
+        } else if (targetSem === "Spring") {
             setSpringSemester({
                 ...springSemester,
                 courseList: springSemester.courseList.filter(
-                    (course: Course) => currCourse === course.title
+                    (course: Course) => currCourse !== course.title
                 )
             });
-        } else if (SemCount === 2) {
+        } else if (targetSem === "Both") {
             //filtering the class from both semesters
             setFallSemester({
                 ...fallSemester,
@@ -115,18 +116,34 @@ export function ViewSemester(): JSX.Element {
         const idea = COURSE_LIST.findIndex(
             (course: Course) => course.title === currCourse
         );
-        if (SemCount === 1 && SemesterType === "Fall") {
-            setFallSemester({
-                ...fallSemester,
-                courseList: [...fallSemester.courseList, COURSE_LIST[idea]]
-            });
-        } else if (SemCount === 1 && SemesterType === "Spring") {
-            setSpringSemester({
-                ...springSemester,
-                courseList: [...springSemester.courseList, COURSE_LIST[idea]]
-            });
-            /* Adding to both semesters
-        } else if (SemCount === 2) {
+        //checks if it's already there
+        //if exists stays as -1 then the course isn't already in the semester list and should be added otherwise nothing happens
+        let exists = -1;
+        if (targetSem === "Fall") {
+            exists = fallSemester.courseList.findIndex(
+                (course: Course) => course.id === COURSE_LIST[idea].id
+            );
+            if (exists === -1) {
+                setFallSemester({
+                    ...fallSemester,
+                    courseList: [...fallSemester.courseList, COURSE_LIST[idea]]
+                });
+            }
+        }
+        if (targetSem === "Spring") {
+            exists = springSemester.courseList.findIndex(
+                (course: Course) => course.id === COURSE_LIST[idea].id
+            );
+            if (exists === -1) {
+                setSpringSemester({
+                    ...springSemester,
+                    courseList: [
+                        ...springSemester.courseList,
+                        COURSE_LIST[idea]
+                    ]
+                });
+            }
+        } else if (targetSem === "Both") {
             //filtering the class from both semesters
             setFallSemester({
                 ...fallSemester,
@@ -135,7 +152,7 @@ export function ViewSemester(): JSX.Element {
             setSpringSemester({
                 ...springSemester,
                 courseList: [...springSemester.courseList, COURSE_LIST[idea]]
-            }); */
+            });
         }
     }
 
@@ -143,8 +160,10 @@ export function ViewSemester(): JSX.Element {
     function changeSemCount(): void {
         if (SemCount == 2) {
             setSemCount(1);
+            setSemesterType("Fall"); //default is fall semester
         } else {
             setSemCount(2);
+            setSemesterType("Both");
         }
     }
 
@@ -236,6 +255,13 @@ export function ViewSemester(): JSX.Element {
                             </div>
                         )
                     )}
+                    <DropAdd
+                        dropClass={dropClass}
+                        addClass={addClass}
+                        updateCurrCourse={updateCurrCourse}
+                        currCourse={currCourse}
+                        Course_List={COURSE_LIST}
+                    ></DropAdd>
                     <ClearSemester
                         clearSemesterCourses={clearSemsterCourses}
                         show={clicked}
@@ -257,6 +283,13 @@ export function ViewSemester(): JSX.Element {
                             </div>
                         )
                     )}
+                    <DropAdd
+                        dropClass={dropClass}
+                        addClass={addClass}
+                        updateCurrCourse={updateCurrCourse}
+                        currCourse={currCourse}
+                        Course_List={COURSE_LIST}
+                    ></DropAdd>
                     <ClearSemester
                         clearSemesterCourses={clearSemsterCourses}
                         show={clicked}
@@ -290,6 +323,7 @@ export function ViewSemester(): JSX.Element {
                 {OneorTwo()}
             </div>
             <hr></hr>
+            {/*
             <div>
                 <Form.Group controlId="currentCourse">
                     <Form.Label>Select A Course</Form.Label>
@@ -311,6 +345,7 @@ export function ViewSemester(): JSX.Element {
                 <Button onClick={dropClass}>Remove Class</Button>
                 <Button onClick={addClass}>Add Class</Button>
             </div>
+                    */}
         </div>
     );
 }
