@@ -8,7 +8,7 @@ function App(): JSX.Element {
             <header className="App-header">UD Course Planner</header>
             <p>
                 James Lloyd, Kerry Ferguson, Matthew Conlon, Caleb Sachetti,
-                Arnav Baliyan
+                Arnav Baliyan.
             </p>
             <p> List of Degree Plans: </p>
             <table>
