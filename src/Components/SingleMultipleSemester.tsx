@@ -14,7 +14,6 @@ export function SingleMultipleSemester(): JSX.Element {
     const [semArrClicked, setSemArrClicked] = useState<semester[]>(semArr);
     const [clicked, setClicked] = useState<boolean>(false);
     //const [degreePlan, setDegreePlan] = useState<degreePlan>();
-    const [, /*semesterClasses*/ setSemesterClasses] = useState<Class[]>([]);
     function addRowPerClass(semClasses: Class[]) {
         const tableCell = semClasses.map(
             // eslint-disable-next-line no-extra-parens
@@ -37,46 +36,10 @@ export function SingleMultipleSemester(): JSX.Element {
         );
         return finalTable;
     }
-    // function addRowPerClass(semClasses: Class[]) {
-    //     const tableCell = semClasses.map(
-    //         // eslint-disable-next-line no-extra-parens
-    //         (course: Class): JSX.Element => (
-    //             <Row key={course.semester}>
-    //                 <Col>
-    //                     {course.courseCode}
-    //                     {": "}
-    //                     {course.courseTitle}
-    //                 </Col>
-    //                 <Col>{course.credits}</Col>
-    //             </Row>
-    //         )
-    //     );
-    //     return tableCell;
-    // }
-    // function addRowPerClass(semester00: semester) {
-    //     const semClasses = semester00.classes;
-    //     const tableCell = semClasses.map(
-    //         // eslint-disable-next-line no-extra-parens
-    //         (course: Class): JSX.Element => (
-    //             <Row key={course.semester}>
-    //                 <Col>
-    //                     {course.courseCode}
-    //                     {": "}
-    //                     {course.courseTitle}
-    //                 </Col>
-    //                 <Col>{course.credits}</Col>
-    //             </Row>
-    //         )
-    //     );
-    //     console.log("semClasses --------------");
-    //     console.log(semClasses);
-    //     return tableCell;
-    // }
     function addtable(semester: semester) {
         console.log(semester.classes);
         return (
             <div>
-                {/* github is not letting me push it when this is active, uncomment when ready to work */}
                 <div>
                     <Col>
                         <h4>
@@ -88,15 +51,6 @@ export function SingleMultipleSemester(): JSX.Element {
                             <Col>Number of Credits</Col>
                         </Row>
                         {addClasstoTable([semester])}
-                        {/* {<div>{addRowPerClass(semester)}</div>} */}
-                        {/* <Row>
-                            <Col>{testClass.courseTitle}</Col>
-                            <Col>{testClass.credits}</Col>
-                        </Row> */}
-                        {/* <Row>
-                            <Col>{semester.classes[1].courseTitle}</Col>
-                            <Col>{semester.classes[1].credits}</Col>
-                        </Row> */}
                     </Col>
                 </div>
             </div>
@@ -105,50 +59,15 @@ export function SingleMultipleSemester(): JSX.Element {
     function createSemester(name: string, classes: Class[]) {
         return { name: name, classes: classes };
     }
-    // function extractClasses(semArr1: semester[]){
-    //     const classesArr = semArr1.map((sem: semester): Class[] => sem.classes);
-    //     return classesArr;
-    // }
-    // ADD TO SEMESTER CLASSES USING A FUNCTION W/ SPREAD OPERATOR TO ADD TO ARRAY
-    // function addClassToSem(course: Class) {
-    //     if (!semesterClasses.includes(course)) {
-    //         const classArr = [...semesterClasses, course];
-    //         setSemesterClasses(classArr);
-    //         semesterClasses.length++;
-    //     }
-    // }
     function addToCorrectSem(course: Class, semArr0: semester[]) {
-        //const classYearSem = course.semester + " " + course.year;
-        // if (semArr.includes(classYearSem)) {
-        //     addClassToSem(course);
-        // }
-        // setSemArr([...semArr, { name: classYearSem, classes: [testClass] }]);
         const updatedSem = semArr0.map((sem: semester): semester => {
-            // console.log(sem.name);
-            // console.log(course.semester);
-            //console.log(classYearSem);
             if (sem.name === course.semester) {
                 sem.classes.push(course);
                 setSemArr([...semArr]);
-                //addClasstoTable(semArr);
-                //addRowPerClass(course);
             }
-            // if (sem.name === classYearSem) {
-            //     // const sems = [
-            //     //     ...semArr,
-            //     //     { name: classYearSem, classes: [...sem.classes, course] }
-            //     // ];
-            //     sem.classes.push(course);
-            //     console.log("Hello 1");
-            //     //setSemArr(sems);
-            //     // const OGclasses = extractClasses(sem);
-            //     // const updatedClasses = [...sem.classes, {}];
-            // }
             return sem;
         });
-        //addRowPerClass(testClass);
         setSemArr(updatedSem);
-        console.log("Hello 2");
         console.log(semArr);
     }
     function addCourse(): JSX.Element {
@@ -165,19 +84,7 @@ export function SingleMultipleSemester(): JSX.Element {
                                     year: string;
                                 }
                             ): void => {
-                                // {
-                                //     console.log(courseInfo);
-                                // }
-                                // setSemesterClasses((prevState) => [
-                                //     ...prevState,
-                                //     courseInfo
-                                // ]);
-                                //setSemester1(courseInfo.semester);
-                                //setYear1(courseInfo.year);
-                                //addSemLabel(semester1, year1);
-                                //addClassToSem(courseInfo);
                                 addToCorrectSem(courseInfo, semArr);
-                                //addRowPerClass(courseInfo);
                             }}
                         />
                     </div>
@@ -185,13 +92,11 @@ export function SingleMultipleSemester(): JSX.Element {
                     <div style={{ marginLeft: "5px" }}>
                         <SlowAdd
                             onCourseInfo={function (courseInfo: Class): void {
-                                setSemesterClasses((prevState) => [
-                                    ...prevState,
-                                    courseInfo
-                                ]);
-                                setSemester1(courseInfo.semester);
-                                setYear1(courseInfo.year);
-                                addSemLabel(semester1, year1);
+                                // setSemester1(courseInfo.semester);
+                                // setYear1(courseInfo.year);
+                                // addSemLabel(semester1, year1);
+                                addToCorrectSem(courseInfo, semArr);
+                                console.log(semArr);
                             }}
                         />
                     </div>
@@ -203,18 +108,15 @@ export function SingleMultipleSemester(): JSX.Element {
     // Make a helper function to add information to the table.(Add/Remove from array?)
     function addForClicked(clickedArr: semester[]) {
         console.log(semArr.map((e) => e.name));
-        const tables = clickedArr.map(
-            (clickedSem: semester): JSX.Element => {
-                const semester = semArr.find(
-                    (element) => element.name === clickedSem.name
-                );
-                if (semester) {
-                    return addtable(semester);
-                }
-                return <></>;
+        const tables = clickedArr.map((clickedSem: semester): JSX.Element => {
+            const semester = semArr.find(
+                (element) => element.name === clickedSem.name
+            );
+            if (semester) {
+                return addtable(semester);
             }
-            //clickedSem ? addtable(clickedSem) : addtable(clickedSem)
-        );
+            return <></>;
+        });
         return tables;
     }
     function updateSemester1(event: React.ChangeEvent<HTMLInputElement>) {
@@ -232,26 +134,17 @@ export function SingleMultipleSemester(): JSX.Element {
         const sem = event.target.value;
         const labelArr = toLabels(semArrClicked);
         if (!labelArr.includes(sem)) {
-            //semArrClicked.push(createSemester(sem));
             setSemArrClicked([...semArrClicked, createSemester(sem, [])]);
         } else {
             setSemArrClicked(semArrClicked.filter((e) => e.name !== sem));
         }
-        // console.log(semLabels);
     }
-    // function toSemester(strArr: string[]) {
-    //     const semesters = strArr.map((semStr: string) =>
-    //         createSemester(semStr, [])
-    //     );
-    //     setSemArr(semesters);
-    // }
     function addSemLabel(sem1: string, year1: string) {
         const semYearCombined = sem1 + " " + year1;
         if (!semArr.map((e) => e.name).includes(semYearCombined)) {
             const sems = [...semArr, createSemester(semYearCombined, [])];
             setSemArr(sems);
         }
-        //toSemester(semLabels);
     }
     return (
         <div>
