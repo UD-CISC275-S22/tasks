@@ -1,19 +1,9 @@
 import React, { useState } from "react";
-//import { Course } from "../Interfaces/course";
-//^^^^^COMMENTED OUT FOR PRETTIER ERRORS - PUT BACK AFTER SUBMITTING MVP
-import { Degree } from "../Interfaces/degree";
+import Course from "./draggingCourses";
+import { Plan } from "../Interfaces/plan";
 
-//EXAMPLE usage of the requirements ts
-import { CoreBS } from "../Interfaces/requirements";
-import { capstone } from "../Interfaces/requirements";
-import { labSciences } from "../Interfaces/requirements";
-import { additionalReqs } from "../Interfaces/requirements";
-import { ArtificialIntelligence } from "../Interfaces/requirements";
-import { math } from "../Interfaces/requirements";
+const [plan, setPlan] = useState<Plan>(); //add back set degree
 
-const [degree] = useState<string>("AI"); //add back set degree
-
-/*
 //Determines if a course is a prereq of another
 function isPrereq(course1: Course, course2: Course): boolean {
     if (course1.title in course2.prereq) {
@@ -22,39 +12,17 @@ function isPrereq(course1: Course, course2: Course): boolean {
         return false;
     }
 }
-COMMENTED OUT FOR PRETTIER ERRORS - PUT BACK AFTER SUBMITTING MVP
-*/
 
 //EXAMPLE of a degree function
-export function AI_Degree(): Degree {
-    const name = degree;
-    const totCredits = 124; //example total credits for this degree
-    const concentration = "Artificial Intelligence and Robotics";
-
-    return {
-        name: name,
-        concentration: concentration,
-        credits: totCredits,
-        ciscoreReq: [CoreBS[0], CoreBS[1]], //pick the courses according to this major from the CoreBS array
-        capstoneReq: capstone,
-        labReq: labSciences, //make sure you check if the degree has a lab science requirement
-        additionalReq: additionalReqs, //this will change according to major so change this as neccessary (even input the actual array if needed)
-        concentrationReq: ArtificialIntelligence, //select the array from the requirements.ts file that corresponds to the major
-        probabilityReq: math, //this will vary, some may not have this so make it an empty array
-        systemsReq: ["CISC437"], //again, will vary and change as necessary
-        restrictedReq: ["CISC681"] //again, will vary and change as necessary
-    };
-}
-
 /*
-export function DataScience(): Degree {}
-...keep going
+export function AI(): Plan {
+
+}
 */
 
 /*
-function num(name: string): number {
-    return 4;
-}
+export function DataScience(): Plan {}
+...keep going
 */
 
 /* To determine if a course fulfills a degree requirement

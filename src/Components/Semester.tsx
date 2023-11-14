@@ -46,7 +46,7 @@ export function ViewSemester(): JSX.Element {
     //const for clearsemesters modal visibility
     const [clicked, setClicked] = useState<boolean>(false);
     //const for target semester you want to interact with
-    const [targetSem, setTargetSem] = useState<string>("Fall");
+    const [targetSem, setTargetSem] = useState<string>("Fall"); //fall or spring only
 
     //NOTE FOR MICHAEL: Here is where you can add your add courses and remove courses functions
     function updateCurrCourse(event: React.ChangeEvent<HTMLSelectElement>) {
@@ -54,7 +54,7 @@ export function ViewSemester(): JSX.Element {
     }
 
     // function removes all courses!
-    function clearSemsterCourses() {
+    function clearSemesterCourses() {
         //function to clear all courses within a semester
         //checks the current semester type and semester count
         if (targetSem === "Fall") {
@@ -197,8 +197,15 @@ export function ViewSemester(): JSX.Element {
                     )
                 )}
                 <div>
+                    <DropAdd
+                        dropClass={dropClass}
+                        addClass={addClass}
+                        updateCurrCourse={updateCurrCourse}
+                        currCourse={currCourse}
+                        Course_List={COURSE_LIST}
+                    ></DropAdd>
                     <ClearSemester
-                        clearSemesterCourses={clearSemsterCourses}
+                        clearSemesterCourses={clearSemesterCourses}
                         show={clicked}
                         handleClose={handleClose}
                         handleShow={handleShow}
@@ -226,8 +233,15 @@ export function ViewSemester(): JSX.Element {
                     )
                 )}
                 <div>
+                    <DropAdd
+                        dropClass={dropClass}
+                        addClass={addClass}
+                        updateCurrCourse={updateCurrCourse}
+                        currCourse={currCourse}
+                        Course_List={COURSE_LIST}
+                    ></DropAdd>
                     <ClearSemester
-                        clearSemesterCourses={clearSemsterCourses}
+                        clearSemesterCourses={clearSemesterCourses}
                         show={clicked}
                         handleClose={handleClose}
                         handleShow={handleShow}
@@ -263,7 +277,7 @@ export function ViewSemester(): JSX.Element {
                         Course_List={COURSE_LIST}
                     ></DropAdd>
                     <ClearSemester
-                        clearSemesterCourses={clearSemsterCourses}
+                        clearSemesterCourses={clearSemesterCourses}
                         show={clicked}
                         handleClose={handleClose}
                         handleShow={handleShow}
@@ -291,7 +305,7 @@ export function ViewSemester(): JSX.Element {
                         Course_List={COURSE_LIST}
                     ></DropAdd>
                     <ClearSemester
-                        clearSemesterCourses={clearSemsterCourses}
+                        clearSemesterCourses={clearSemesterCourses}
                         show={clicked}
                         handleClose={handleClose}
                         handleShow={handleShow}
@@ -345,7 +359,7 @@ export function ViewSemester(): JSX.Element {
                 <Button onClick={dropClass}>Remove Class</Button>
                 <Button onClick={addClass}>Add Class</Button>
             </div>
-                    */}
+            */}
         </div>
     );
 }

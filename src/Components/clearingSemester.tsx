@@ -45,7 +45,7 @@ import { Course } from "../Interfaces/course";
 import { Button, Container, Modal, Row, Col } from "react-bootstrap";
 import { Semester } from "../Interfaces/semester";
 import { ViewSemester } from "./Semester";
-import { Degree } from "../Interfaces/degree";
+import { Degree } from "../Interfaces/plan";
 
 // export function clearAddButtons({
 //     semester,
