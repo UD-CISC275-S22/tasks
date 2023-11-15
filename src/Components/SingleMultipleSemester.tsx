@@ -9,7 +9,6 @@ import { semester } from "../interfaces/semster";
 
 export function SingleMultipleSemester(): JSX.Element {
     const [semester1, setSemester1] = useState<string>("");
-    const [year1, setYear1] = useState<string>("");
     const [semArr, setSemArr] = useState<semester[]>([]);
     const [semArrClicked, setSemArrClicked] = useState<semester[]>(semArr);
     const [clicked, setClicked] = useState<boolean>(false);
@@ -106,7 +105,7 @@ export function SingleMultipleSemester(): JSX.Element {
     }
 
     // Make a helper function to add information to the table.(Add/Remove from array?)
-    function addForClicked(clickedArr: semester[]) {
+    function addForClickedSem(clickedArr: semester[]) {
         console.log(semArr.map((e) => e.name));
         const tables = clickedArr.map((clickedSem: semester): JSX.Element => {
             const semester = semArr.find(
@@ -118,12 +117,6 @@ export function SingleMultipleSemester(): JSX.Element {
             return <></>;
         });
         return tables;
-    }
-    function updateSemester1(event: React.ChangeEvent<HTMLInputElement>) {
-        setSemester1(event.target.value);
-    }
-    function updateYear1(event: React.ChangeEvent<HTMLInputElement>) {
-        setYear1(event.target.value);
     }
     function toLabels(semArr1: semester[]) {
         const labelArr = semArr1.map((sem: semester): string => sem.name);
@@ -139,12 +132,14 @@ export function SingleMultipleSemester(): JSX.Element {
             setSemArrClicked(semArrClicked.filter((e) => e.name !== sem));
         }
     }
-    function addSemLabel(sem1: string, year1: string) {
-        const semYearCombined = sem1 + " " + year1;
-        if (!semArr.map((e) => e.name).includes(semYearCombined)) {
-            const sems = [...semArr, createSemester(semYearCombined, [])];
+    function addSemLabel(sem1: string) {
+        if (!semArr.map((e) => e.name).includes(sem1)) {
+            const sems = [...semArr, createSemester(sem1, [])];
             setSemArr(sems);
         }
+    }
+    function updateSemester1(event: React.ChangeEvent<HTMLInputElement>) {
+        setSemester1(event.target.value);
     }
     return (
         <div>
@@ -152,13 +147,9 @@ export function SingleMultipleSemester(): JSX.Element {
             <h3>Single Semester</h3>
             <Form.Group controlId="formCreateSemester">
                 <Form.Label>Input Semester:</Form.Label>
-                <Button onClick={() => addSemLabel(semester1, year1)}>
-                    Enter
-                </Button>
+                <Button onClick={() => addSemLabel(semester1)}>Enter</Button>
                 <Form.Control value={semester1} onChange={updateSemester1} />
                 Semester
-                <Form.Control value={year1} onChange={updateYear1} />
-                Year
                 <Col>
                     {semArr.map((sem: semester) => {
                         return (
@@ -180,7 +171,7 @@ export function SingleMultipleSemester(): JSX.Element {
             </Form.Group>
             <div>
                 {clicked
-                    ? addForClicked(semArrClicked)
+                    ? addForClickedSem(semArrClicked)
                     : "Enter and Click semester(s) to view classes"}
             </div>
             {/* <div>{RemoveSemester()}</div> */}
