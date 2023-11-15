@@ -125,11 +125,11 @@ export const english: Course = {
 //fall1 reprensents semester 1 fall
 //this function returns first fall semester in year 1 of 4 year plan
 export function fall1(): Course[] {
-    //id 1 is CISC108, id 89 is EGGG101, id 0 is ENGL110, id 12 is MATH241
+    //id 1 is CISC108, id 101 is EGGG101, id 0 is ENGL110, id 12 is MATH241
     const fall1Courses = courseList.filter(
         (course) =>
             course.id == 1 ||
-            course.id == 89 ||
+            course.id == 101 ||
             course.id == 0 ||
             course.id == 12
     );
@@ -153,7 +153,7 @@ export function spring1(): Course[] {
 //it returns a portion of the semester classes because the filtered classes are the only classes that every plan have in common
 export function partFall2(): Course[] {
     const partFall2Courses = courseList.filter(
-        //id 4 is CISC22 and id 5 is CISC260 and id 11 is MATH210
+        //id 4 is CISC220 and id 5 is CISC260 and id 11 is MATH210
         (course) => course.id == 4 || course.id == 5 || course.id == 11
     );
     return partFall2Courses;
