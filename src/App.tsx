@@ -3,6 +3,7 @@ import "./App.css";
 import { SingleMultipleSemester } from "./Components/SingleMultipleSemester";
 import { degreePlan } from "./interfaces/degreePlan";
 import { Views } from "./interfaces/viewProps";
+import { degreePlanView } from "./Components/degreePlanView";
 
 // import SlowAdd from "./Components/SlowAdd";
 // import QuickAdd from "./Components/QuickAdd";
@@ -10,6 +11,7 @@ import { Views } from "./interfaces/viewProps";
 function App(): JSX.Element {
     const [view, setView] = useState<Views>(Views.degreePlanView);
     const [currDegreePlan, setcurrDegreePlan] = useState<degreePlan>();
+    const [degreePlanList, setDegreePlanList] = useState<degreePlan[]>([]);
     return (
         <div className="App">
             <header className="App-header">
