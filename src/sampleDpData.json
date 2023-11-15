@@ -6,8 +6,8 @@
         "semestersList": [
             {
                 "title": "Fall 2025",
-                "id": 1,
                 "totalCredits": 6,
+                "id": 12,
                 "courses": [
                     {
                         "title": "CISC220",
@@ -45,8 +45,8 @@
             },
             {
                 "title": "Fall 2024",
-                "id": 2,
                 "totalCredits": 6,
+                "id": 13,
                 "courses": [
                     {
                         "title": "CISC220",
@@ -87,8 +87,8 @@
             },
             {
                 "title": "Fall 2024",
-                "id": 3,
                 "totalCredits": 6,
+                "id": 12,
                 "courses": [
                     {
                         "title": "CISC220",
@@ -129,8 +129,8 @@
             },
             {
                 "title": "Spring 2023",
-                "id": 4,
                 "totalCredits": 6,
+                "id": 12,
                 "courses": [
                     {
                         "title": "CISC205",
