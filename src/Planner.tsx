@@ -66,10 +66,33 @@ const Planner: React.FC<Planner> = ({ plan }) => {
         updatedSemesters[semesterIndex].courses[courseIndex] = updatedCourse;
         setSemestersData(updatedSemesters);
     };
+    const handleInsertSemester = () => {
+        const newSemester: Semester = {
+            id: `Semester ${semestersData.length + 1}`,
+            season: "Fall",
+            year: "2023",
+            courses: [],
+            skip: false
+        };
 
+        setSemestersData(prevSemesters => [...prevSemesters, newSemester]);
+    };
+
+    const handleRemoveSemester = (index: number) => {
+        const updatedSemesters = [...semestersData];
+        updatedSemesters.splice(index, 1);
+        setSemestersData(updatedSemesters);
+    };
+    const handleClearAllSemesters = () => {
+        setSemestersData([]);
+    };
     return (
         <div className="semester-courses">
-            {plan.semesters.map((semester, semesterIndex) => (
+            <button onClick={handleInsertSemester}>Insert New Semester</button>
+            <button onClick={handleClearAllSemesters}>
+                Clear All Semesters
+            </button>
+            {semestersData.map((semester, semesterIndex) => (
                 <div key={semesterIndex}>
                     {semester.skip ? (
                         <h2>{semester.id}(Skipped)</h2>
@@ -97,6 +120,9 @@ const Planner: React.FC<Planner> = ({ plan }) => {
                         }
                     >
                         Insert New Course
+                    </button>
+                    <button onClick={() => handleRemoveSemester(semesterIndex)}>
+                        Remove Semester
                     </button>
                     <table>
                         <thead>
