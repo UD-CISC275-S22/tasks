@@ -1,137 +1,55 @@
 import React from "react";
 import { useState } from "react";
 import "./App.css";
-import { Year } from "./viewCourseComponents";
-import { yearI } from "./interfaces/semester";
+import { MulitCourseplan, Year } from "./viewCourseComponents";
+import { TotalDB, yearI } from "./interfaces/semester";
 import { EditCourseModal } from "./EditModal";
 import { Course } from "./interfaces/course";
 import { AddCourseModal } from "./AddCourseModal";
 import { ClearCourseModal } from "./ClearCourseModal";
+import coursePlanData from "./data/couresplans.json";
+import { Container } from "react-bootstrap";
+import { v4 as uuidv4 } from "uuid";
 
-const testSemester = {
-    season: "Fall",
-    name: "Freshman year: Fall",
-    year: "Freshman",
-    courses: [
-        {
-            ticker: "CISC108",
-            name: "Introduction to Computer Science I",
-            credits: 3,
-            prereq: "N/A"
-        },
-        {
-            ticker: "EGGG101",
-            name: "Introduction to Engineering (FYE)",
-            credits: 2,
-            prereq: "N/A"
-        },
-        {
-            ticker: "ENGL110",
-            name: "Seminar in Composition",
-            credits: 3,
-            prereq: "N/A"
-        },
-        {
-            ticker: "MATH241",
-            name: "Analytic Geometry & Calculus A",
-            credits: 4,
-            prereq: "MATH117 or Exam Score"
+function createUUID(db: TotalDB) {
+    for (const plans of db.Coureseplans) {
+        for (const yeari of plans.years) {
+            yeari.firstsemester.courses = yeari.firstsemester.courses.map(
+                (courseIndex: Course) => {
+                    return { ...courseIndex, UUID: uuidv4() };
+                }
+            );
         }
-    ]
-};
-const testSemester2 = {
-    season: "Spring",
-    name: "Sophomore year: Spring",
-    year: "Sophomore",
-    courses: [
-        {
-            ticker: "CISC181",
-            name: "Introduction to Computer Science II",
-            credits: 3,
-            prereq: "CISC106 or CISC108"
-        },
-        {
-            ticker: "CISC210",
-            name: "Introduction to Systems Programming",
-            credits: 3,
-            prereq: "CISC106 or CISC108"
-        },
-        {
-            ticker: "CISC355",
-            name: "Computers, Ethics & Society",
-            credits: 3,
-            prereq: "N/A"
-        },
-        {
-            ticker: "MATH242",
-            name: "Analytic Geometry & Calculus B",
-            credits: 4,
-            prereq: "MATH241 or MATH232"
-        }
-    ]
-};
+    }
+}
 
 function App(): JSX.Element {
-    const yearOneStart = {
-        name: "Year1",
-        firstsemester: testSemester,
-        secondsemester: testSemester2
+    const vartotalDB = {
+        Coureseplans: coursePlanData
     };
-    const [yearOne, updateYearOne] = useState<yearI>(yearOneStart);
+    createUUID(vartotalDB);
+    console.log(vartotalDB);
+    const [data, setdata] = useState<TotalDB>();
     const [showEditModal, updateEditMogal] = useState<boolean>(false);
     const handleCloseAddModal = () => updateEditMogal(false);
-    const [showAddCourseModal, setShowAddCourseModal] =
-        useState<boolean>(false);
-    const handleShowAddCourseModal = () => setShowAddCourseModal(true);
-    const handleCloseAddCourseModal = () => setShowAddCourseModal(false);
-    //const handleShowAddModal = () => updateEditMogal(true);
-    const [showClearModal, setShowClearModal] = useState(false);
+    //setdata(coursePlanData);
+
     const [editSelected, setEdit] = useState<Course>({
         ticker: "",
         name: "",
         credits: 0,
         prereq: ""
     });
-    const handleAddNewCourse = (
-        newCourse: Course,
-        semester: "firstsemester" | "secondsemester"
-    ) => {
-        if (yearOne[semester].courses.length >= 5) {
-            console.error("Cannot add more than 5 courses per semester");
-            return;
-        }
-
-        const updatedCourses = [...yearOne[semester].courses, newCourse];
-
-        const updatedSemester = {
-            ...yearOne[semester],
-            courses: updatedCourses
-        };
-
-        updateYearOne({ ...yearOne, [semester]: updatedSemester });
-        handleCloseAddCourseModal();
-    };
     function setCurrentCourseEdit(course: Course) {
         setEdit(course);
         updateEditMogal(true);
     }
-    const db = {
-        Courseplan: yearOne,
-        stateSetter: updateYearOne
-    };
     const handleCreatePlan = () => {
         console.log("Create plan button clicked");
     };
 
     const handleImportCSV = () => {
         console.log("Import csv button clicked");
-    };
-    const clearCourses = (semester: "firstsemester" | "secondsemester") => {
-        const updatedYear = {
-            ...yearOne,
-            [semester]: { ...yearOne[semester], courses: [] }
-        };
-        updateYearOne(updatedYear);
     };
     return (
         <div className="App">
@@ -153,28 +71,19 @@ function App(): JSX.Element {
                     Create New Plan
                 </button>
                 <button onClick={handleImportCSV}>Import CSV</button>
-                <button onClick={handleShowAddCourseModal}>Add Course</button>
-                <button onClick={() => setShowClearModal(true)}>
-                    Clear Courses
-                </button>
-                <ClearCourseModal
-                    show={showClearModal}
-                    handleClose={() => setShowClearModal(false)}
-                    clearCourses={clearCourses}
+            </div>
+            <div className="container">
+                <MulitCourseplan
+                    Courseplans={coursePlanData}
+                    setCurrentCourseEdit={setCurrentCourseEdit}
                 />
             </div>
-            <Year year={yearOne} editCourse={setCurrentCourseEdit}></Year>
-            <EditCourseModal
+            {/* <EditCourseModal
                 show={showEditModal}
                 handleClose={handleCloseAddModal}
                 currentCourse={editSelected}
                 cRUD={db}
-            ></EditCourseModal>
-            <AddCourseModal
-                show={showAddCourseModal}
-                handleClose={handleCloseAddCourseModal}
-                addCourse={handleAddNewCourse}
-            ></AddCourseModal>
+            ></EditCourseModal> */}
         </div>
     );
 }

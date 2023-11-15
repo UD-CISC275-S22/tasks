@@ -12,3 +12,12 @@ export interface yearI {
     firstsemester: SemesterI;
     secondsemester: SemesterI;
 }
+
+export interface CoursePlan {
+    name: string;
+    years:yearI[];
+}
+
+export interface TotalDB {
+    Coureseplans:CoursePlan[];
+}

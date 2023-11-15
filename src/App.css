@@ -47,10 +47,12 @@ button {
     align-items: center;
     gap: 10px;
     color: white;
+
+}
+.UDbutton{
     margin-top: 20px;
     margin-bottom: 20px;
 }
-
 button:hover {
     background-color: #0072ce;
 }
