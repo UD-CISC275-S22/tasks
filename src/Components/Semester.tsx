@@ -99,28 +99,50 @@ export function ViewSemester(): JSX.Element {
     }
 
     function addClass() {
-        const idea = COURSE_LIST.findIndex(
+        /* 
+        "desiredCourse" is meant to hold the index of the course
+        that matches the "currCourse"; ideally the Course that they
+        wish to add/drop.
+        */
+        const desiredCourse = COURSE_LIST.findIndex(
             (course: Course) => course.title === currCourse
         );
+        /*
+        Setting individual semesters to unpack the current semester's
+        and adding the desired course (currCourse) to the end of the list
+        using the JSON file and the index held by "desiredCourse".
+        */
         if (SemCount === 1 && SemesterType === "Fall") {
             setFallSemester({
                 ...fallSemester,
-                courseList: [...fallSemester.courseList, COURSE_LIST[idea]]
+                courseList: [
+                    ...fallSemester.courseList,
+                    COURSE_LIST[desiredCourse]
+                ]
             });
         } else if (SemCount === 1 && SemesterType !== "Spring") {
             setSpringSemester({
                 ...springSemester,
-                courseList: [...springSemester.courseList, COURSE_LIST[idea]]
+                courseList: [
+                    ...springSemester.courseList,
+                    COURSE_LIST[desiredCourse]
+                ]
             });
         } else if (SemCount === 2) {
             //filtering the class from both semesters
             setFallSemester({
                 ...fallSemester,
-                courseList: [...fallSemester.courseList, COURSE_LIST[idea]]
+                courseList: [
+                    ...fallSemester.courseList,
+                    COURSE_LIST[desiredCourse]
+                ]
             });
             setSpringSemester({
                 ...springSemester,
-                courseList: [...springSemester.courseList, COURSE_LIST[idea]]
+                courseList: [
+                    ...springSemester.courseList,
+                    COURSE_LIST[desiredCourse]
+                ]
             });
         }
     }
@@ -266,8 +288,8 @@ export function ViewSemester(): JSX.Element {
                         ))}
                     </Form.Select>
                 </Form.Group>
-                <Button onClick={dropClass}>Remove Class</Button>
-                <Button onClick={addClass}>Add Class</Button>
+                <Button onClick={dropClass}>Remove Course</Button>
+                <Button onClick={addClass}>Add Course</Button>
             </div>
         </div>
     );
