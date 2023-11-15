@@ -23,6 +23,7 @@ export const breadth: Course = {
     requirements: [""] //depends on the course they select
 };
 
+//this is a general elective constant course that you can keep for any semester or plan
 export const elective: Course = {
     id: -1,
     title: "Free Elective",
@@ -36,6 +37,7 @@ export const elective: Course = {
     requirements: [""]
 };
 
+//this is a general science/lab constant course that you can keep for any semester or plan
 export const science: Course = {
     id: -1,
     title: "Science Requirement",
@@ -49,6 +51,7 @@ export const science: Course = {
     requirements: [""]
 };
 
+//this is a general math constant course that you can keep for any semester or plan
 export const math: Course = {
     id: -1,
     title: "Math Requirement",
@@ -62,6 +65,7 @@ export const math: Course = {
     requirements: [""]
 };
 
+//this is a general restricted elective constant course that you can keep for any semester or plan
 export const restricted: Course = {
     id: -1,
     title: "Restricted Electives",
@@ -75,6 +79,7 @@ export const restricted: Course = {
     requirements: [""]
 };
 
+//this is a general systems requirement constant course that you can keep for any semester or plan
 export const systems: Course = {
     id: -1,
     title: "Systems Requirement",
@@ -88,6 +93,7 @@ export const systems: Course = {
     requirements: [""]
 };
 
+//this is a general higher level CISC constant course that you can keep for any semester or plan
 export const higherLevel: Course = {
     id: -1,
     title: "CISC 300 Level Requirement",
@@ -101,6 +107,7 @@ export const higherLevel: Course = {
     requirements: [""]
 };
 
+//this is a general english constant course that you can keep for any semester or plan
 export const english: Course = {
     id: -1,
     title: "English Requirement",
@@ -115,7 +122,8 @@ export const english: Course = {
 };
 
 //explain why fall1 and fall2 and spring1 etc.
-//this fall1 course is constant for each plan
+//fall1 reprensents semester 1 fall
+//this function returns first fall semester in year 1 of 4 year plan
 export function fall1(): Course[] {
     //id 1 is CISC108, id 89 is EGGG101, id 0 is ENGL110, id 12 is MATH241
     const fall1Courses = courseList.filter(
@@ -129,6 +137,7 @@ export function fall1(): Course[] {
     return fall1Courses;
 }
 
+//this function returns first spring semester in year 1 of 4 year plan
 export function spring1(): Course[] {
     //id 2 is CISC181 and id 3 is CISC210
     const spring1Courses = courseList.filter(
@@ -140,7 +149,8 @@ export function spring1(): Course[] {
     return spring1Courses;
 }
 
-//this function returns part of the second fall semester (in the plan functions, you push concentration specific courses)
+//this function returns a portion of the second fall semester in year 1 of 4 year plan
+//it returns a portion of the semester classes because the filtered classes are the only classes that every plan have in common
 export function partFall2(): Course[] {
     const partFall2Courses = courseList.filter(
         //id 4 is CISC22 and id 5 is CISC260 and id 11 is MATH210
@@ -149,6 +159,8 @@ export function partFall2(): Course[] {
     return partFall2Courses;
 }
 
+//this function returns a portion of the second spring semester in year 1 of 4 year plan
+//it returns a portion of the semester classes because the filtered classes are the only classes that every plan have in common
 export function partSpring2(): Course[] {
     const partSpring2Courses = courseList.filter(
         //id 6 is CISC275 and id 34 is CISC355
@@ -161,6 +173,7 @@ export function partSpring2(): Course[] {
     return partSpring2Courses;
 }
 
+//this is the plan for the AI concentration
 export function AI(): Plan {
     //plan fields
     const title = "BS Computer Science";
@@ -267,6 +280,7 @@ export function AI(): Plan {
         spring4Sem
     ];
 
+    //returns the actual plan
     return {
         title: title,
         concentration: concentration,
