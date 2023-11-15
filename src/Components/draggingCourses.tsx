@@ -1,4 +1,5 @@
-import React from "react";
+export {};
+/*import React from "react";
 import drag from "./dragndrop";
 import courseListAll from "../data/AllCourseList.json";
 import { Course } from "../Interfaces/course";
@@ -20,3 +21,4 @@ const Course: React.FC = () => {
 };
 
 export default Course;
+*/
