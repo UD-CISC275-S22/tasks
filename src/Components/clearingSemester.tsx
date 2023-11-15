@@ -3,22 +3,22 @@ import { Button, Modal } from "react-bootstrap";
 
 export const ClearSemester = ({
     clearSemesterCourses,
-    closeVisibility,
+    handleClose,
+    handleShow,
     show
 }: {
     clearSemesterCourses: () => void;
-    closeVisibility: () => void;
+    handleClose: () => void;
+    handleShow: () => void;
     show: boolean;
 }) => {
     return (
         <>
             <div className="clear_sem">
-                <Button onClick={clearSemesterCourses}>
-                    Remove All Courses
-                </Button>
+                <Button onClick={handleShow}>Remove All Courses</Button>
             </div>
             <div>
-                <Modal show={show} animation={false}>
+                <Modal show={show} onHide={handleClose} animation={false}>
                     <Modal.Header closeButton>
                         <Modal.Title>Warning</Modal.Title>
                     </Modal.Header>
@@ -28,17 +28,11 @@ export const ClearSemester = ({
                             confirm?
                         </p>
                     </Modal.Body>
+                    <Modal.Footer>
+                        <Button onClick={clearSemesterCourses}>Yes</Button>
+                        <Button onClick={handleClose}>No</Button>
+                    </Modal.Footer>
                 </Modal>
-                {/*
-                <div>
-                    {/*handling clearing semester
-                    <clearSemester
-                        clicked={displayClearSemester}
-                        closed={displayedSemester}
-                    ></clearSemester>
-                    <Button onClick={clearSemestersModal}> Clear </Button>
-                </div>
-                */}
             </div>
         </>
     );

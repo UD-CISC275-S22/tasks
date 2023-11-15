@@ -1114,5 +1114,17 @@
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
+    },
+        {
+        "id": 89,
+        "title": "EGGG101",
+        "name": "Introduction to Engineering",
+        "description": "Introduction to profession, including disciplines of chemical, civil, computer, electrical, environmental, and mechanical engineering. Prepares students for success through integration of: technical problem solving and engineering design, ethical decision-making, teamwork, and communicating to diverse audiences.",
+        "credits": 2,
+        "semester": ["Fall"],
+        "department": "COE",
+        "prereq": ["None"],
+        "coreq": ["None"],
+        "requirements": ["First Year Experience"]
     }
 ]
