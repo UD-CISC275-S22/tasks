@@ -160,6 +160,7 @@ export function SingleMultipleSemester(): JSX.Element {
                                     name="semesters"
                                     onChange={updateSemClicked}
                                     id="semseter-buttons"
+                                    data-testid="semesters"
                                     label={sem.name}
                                     value={sem.name}
                                 />
