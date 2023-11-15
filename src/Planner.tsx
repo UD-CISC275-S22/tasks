@@ -17,7 +17,7 @@ interface Semester {
     id: string;
     season: string;
     year: string;
-    course: Course[];
+    courses: Course[];
     skip: boolean;
 }
 
@@ -42,19 +42,28 @@ const Planner: React.FC<Planner> = ({ plan }) => {
 
     const handleClearCourses = (index: number) => {
         const updatedSemesters = [...semestersData];
-        updatedSemesters[index].course = [];
+        updatedSemesters[index].courses = [];
         setSemestersData(updatedSemesters);
     };
 
     const handleInsertCourse = (index: number, newCourse: Course) => {
         const updatedSemesters = [...semestersData];
-        updatedSemesters[index].course.push(newCourse);
+        updatedSemesters[index].courses.push(newCourse);
         setSemestersData(updatedSemesters);
     };
 
     const handleRemoveCourse = (index: number, courseIndex: number) => {
         const updatedSemesters = [...semestersData];
-        updatedSemesters[index].course.splice(courseIndex, 1);
+        updatedSemesters[index].courses.splice(courseIndex, 1);
+        setSemestersData(updatedSemesters);
+    };
+    const handleEditCourse = (
+        semesterIndex: number,
+        courseIndex: number,
+        updatedCourse: Course
+    ) => {
+        const updatedSemesters = [...semestersData];
+        updatedSemesters[semesterIndex].courses[courseIndex] = updatedCourse;
         setSemestersData(updatedSemesters);
     };
 
@@ -103,7 +112,7 @@ const Planner: React.FC<Planner> = ({ plan }) => {
                             </tr>
                         </thead>
                         <tbody>
-                            {semester.course.map((course, courseIndex) => (
+                            {semester.courses.map((course, courseIndex) => (
                                 <tr key={courseIndex}>
                                     <td>{course.code}</td>
                                     <td>{course.name}</td>
@@ -114,6 +123,59 @@ const Planner: React.FC<Planner> = ({ plan }) => {
                                     <td>{course.breadth}</td>
                                     <td>{course.typ}</td>
                                     <td>
+                                        <button
+                                            onClick={() =>
+                                                handleEditCourse(
+                                                    semesterIndex,
+                                                    courseIndex,
+                                                    {
+                                                        code:
+                                                            prompt(
+                                                                "Enter new code",
+                                                                course.code
+                                                            ) || course.code,
+                                                        name:
+                                                            prompt(
+                                                                "Enter new name",
+                                                                course.name
+                                                            ) || course.name,
+                                                        descr:
+                                                            prompt(
+                                                                "Enter new description",
+                                                                course.descr
+                                                            ) || course.descr,
+                                                        credits:
+                                                            prompt(
+                                                                "Enter new credits",
+                                                                course.credits
+                                                            ) || course.credits,
+                                                        preReq:
+                                                            prompt(
+                                                                "Enter new prerequisites",
+                                                                course.preReq
+                                                            ) || course.preReq,
+                                                        restrict:
+                                                            prompt(
+                                                                "Enter new restrictions",
+                                                                course.restrict
+                                                            ) ||
+                                                            course.restrict,
+                                                        breadth:
+                                                            prompt(
+                                                                "Enter new breadth",
+                                                                course.breadth
+                                                            ) || course.breadth,
+                                                        typ:
+                                                            prompt(
+                                                                "Enter new typically offered",
+                                                                course.typ
+                                                            ) || course.typ
+                                                    }
+                                                )
+                                            }
+                                        >
+                                            Edit Course
+                                        </button>
                                         <button
                                             onClick={() =>
                                                 handleRemoveCourse(
