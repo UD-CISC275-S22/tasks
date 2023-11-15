@@ -157,7 +157,11 @@ export function SingleMultipleSemester(): JSX.Element {
                 </Button>
                 <Form.Control value={semester1} onChange={updateSemester1} />
                 Semester
-                <Form.Control value={year1} onChange={updateYear1} />
+                <Form.Control
+                    data-testid="year"
+                    value={year1}
+                    onChange={updateYear1}
+                />
                 Year
                 <Col>
                     {semArr.map((sem: semester) => {
@@ -169,6 +173,7 @@ export function SingleMultipleSemester(): JSX.Element {
                                     name="semesters"
                                     onChange={updateSemClicked}
                                     id="semseter-buttons"
+                                    data-testid="semesters"
                                     label={sem.name}
                                     value={sem.name}
                                 />

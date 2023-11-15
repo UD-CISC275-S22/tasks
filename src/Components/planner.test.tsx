@@ -35,8 +35,16 @@ describe("Project Component tests", () => {
     });
 
     test("Add semesters", () => {
-        //initially start out with 0 semesters, then add 1
-        //once button is clicked, semester is added
+        const addSem = "Spring 2026";
+        const input = screen.getByTestId("year");
+        const enterButton = screen.getByText("Enter");
+        input.setAttribute("value", addSem);
+        enterButton.click();
+        const checkbox = screen.getByTestId("semesters");
+        checkbox.click();
+        expect(screen.queryByText(addSem));
+        expect(screen.queryByText("Course"));
+        expect(screen.queryByText("Number of Credits"));
     });
 
     test("Removing semesters", () => {
