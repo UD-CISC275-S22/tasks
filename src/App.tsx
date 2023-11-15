@@ -12,7 +12,7 @@ function App(): JSX.Element {
                 season: "Fall",
                 year: "2022",
                 skip: false,
-                course: [
+                courses: [
                     {
                         code: "CISC 108",
                         name: "Introduction to Computer Science I",
@@ -74,7 +74,7 @@ function App(): JSX.Element {
                 season: "Spring",
                 year: "2023",
                 skip: false,
-                course: [
+                courses: [
                     {
                         code: "CISC 181",
                         name: "Introduction to Computer Science II",
@@ -135,7 +135,7 @@ function App(): JSX.Element {
                 season: "Fall",
                 year: "2023",
                 skip: false,
-                course: [
+                courses: [
                     {
                         code: "CISC 220",
                         name: "Data Structures",
@@ -207,7 +207,7 @@ function App(): JSX.Element {
                 season: "Spring",
                 year: "2024",
                 skip: false,
-                course: [
+                courses: [
                     {
                         code: "CISC 275",
                         name: "Introduction to Software Engineering",
@@ -269,7 +269,7 @@ function App(): JSX.Element {
                 season: "Fall",
                 year: "2024",
                 skip: false,
-                course: [
+                courses: [
                     {
                         code: "CISC 303",
                         name: "Automata Theory",
@@ -330,7 +330,7 @@ function App(): JSX.Element {
                 season: "Spring",
                 year: "2025",
                 skip: false,
-                course: [
+                courses: [
                     {
                         code: "CISC 304",
                         name: "Logic for Programming",
@@ -391,7 +391,7 @@ function App(): JSX.Element {
                 season: "Fall",
                 year: "2025",
                 skip: false,
-                course: [
+                courses: [
                     {
                         code: "CISC 481",
                         name: "Artificial Intelligence",
@@ -453,7 +453,7 @@ function App(): JSX.Element {
                 season: "Spring",
                 year: "2026",
                 skip: false,
-                course: [
+                courses: [
                     {
                         code: "CISC 499",
                         name: "Computer Science Senior Design Project II",
