@@ -1,0 +1,475 @@
+[
+    {
+        "name": "Computer Science (BA)",
+        "concentration": "None",
+        "RequiredCourseList": [
+            "CISC108",
+            "CISC181",
+            "CISC210",
+            "CISC220",
+            "CISC260",
+            "CISC275",
+            "MATH210",
+            "MATH241",
+            "ENGL11O",
+            "CISC300+"
+        ],
+        "RestrictedElectiveList": [""]
+    },
+    {
+        "name": "Computer Science (BS)",
+        "concentration": "none",
+        "RequiredCourseList": [
+            "CISC108",
+            "CISC181",
+            "CISC210",
+            "CISC220",
+            "CISC260",
+            "CISC275",
+            "CISC303",
+            "CISC320",
+            "CISC361",
+            "CISC372",
+            ["MATH205", "MATH350"],
+            "MATH210",
+            "MATH241",
+            "MATH242",
+            "ENGL11O",
+            [
+                ["CISC498", "CISC499"],
+                ["UNIV401", "UNIV402"]
+            ],
+            [
+                ["BISC207", "BISC208"],
+                ["CHEM103", "CHEM133", "CHEM104", "CHEM134"],
+                ["GEOL105", "GEOL1115", "GEOL107"],
+                ["GEOL107", "GEOL110"],
+                ["PHYS207", "PHYS227", "PHYS208", "PHYS228"]
+            ],
+            "CISC355",
+            ["ENGL312", "ENGL410"],
+            ["CISC304", "MATH349"]
+        ],
+        "RestrictedElectiveList": [""]
+    },
+    {
+        "name": "Computer Science - Artificial Intelligence and Robotics Concentration (BS)",
+        "concentration": "Artificial Intelligence and Robotics",
+        "RequiredCourseList": [
+            "CISC108",
+            "CISC181",
+            "CISC210",
+            "CISC220",
+            "CISC260",
+            "CISC275",
+            "CISC303",
+            "CISC320",
+            "MATH210",
+            "MATH241",
+            "ENGL11O",
+            [
+                ["CISC498", "CISC499"],
+                ["UNIV401", "UNIV402"]
+            ],
+            "CISC355",
+            ["ENGL312", "ENGL410"],
+            [
+                ["BISC207", "BISC208"],
+                ["CHEM103", "CHEM133", "CHEM104", "CHEM134"],
+                ["GEOL105", "GEOL1115", "GEOL107"],
+                ["GEOL107", "GEOL110"],
+                ["PHYS207", "PHYS227", "PHYS208", "PHYS228"]
+            ],
+            "CISC304",
+            "CISC442",
+            "CISC481",
+            "CISC483",
+            "CISC484",
+            ["MATH205", "MATH350"],
+            ["CISC361", "CISC372"]
+        ],
+        "RestrictedElectiveList": [""]
+    },
+    {
+        "name": "Computer Science - Bioinformatics Concentration (BS)",
+        "concentration": "Bioinformatics",
+        "RequiredCourseList": [
+            "CISC108",
+            "CISC181",
+            "CISC210",
+            "CISC220",
+            "CISC260",
+            "CISC275",
+            "CISC303",
+            "CISC320",
+            "MATH210",
+            "MATH241",
+            "ENGL11O",
+            [
+                ["CISC498", "CISC499"],
+                ["UNIV401", "UNIV402"]
+            ],
+            "CISC355",
+            ["ENGL312", "ENGL410"],
+            [
+                ["BISC207", "BISC208"],
+                ["CHEM103", "CHEM133", "CHEM104", "CHEM134"],
+                ["GEOL105", "GEOL1115", "GEOL107"],
+                ["GEOL107", "GEOL110"],
+                ["PHYS207", "PHYS227", "PHYS208", "PHYS228"]
+            ],
+            "BISC207",
+            "BISC208",
+            "BISC401",
+            "CHEM103",
+            "CHEM133",
+            "CHEM104",
+            "CHEM134",
+            "CISC372",
+            "CISC436",
+            "MATH242",
+            "MATH349",
+            [
+                ["CHEM213", "CHEM215"],
+                ["CHEM321", "CHEM325"]
+            ],
+            ["MATH205", "MATH350"],
+            ["CISC483", "CISC484"]
+        ],
+        "RestrictedElectiveList": [
+            "ANFS300",
+            "ANFS310",
+            "ANFS470",
+            "BISC403",
+            "BISC484",
+            "BISC492",
+            "CHEM214",
+            "CHEM216",
+            "CHEM322",
+            "CHEM326",
+            "MATH243"
+        ]
+    },
+    {
+        "name": "Computer Science - Cybersecurity Concentration (BS)",
+        "concentration": "Cybersecurity",
+        "RequiredCourseList": [
+            "CISC108",
+            "CISC181",
+            "CISC210",
+            "CISC220",
+            "CISC260",
+            "CISC275",
+            "CISC303",
+            "CISC320",
+            "MATH210",
+            "MATH241",
+            "ENGL11O",
+            [
+                ["CISC498", "CISC499"],
+                ["UNIV401", "UNIV402"]
+            ],
+            "CISC355",
+            ["ENGL312", "ENGL410"],
+            [
+                ["BISC207", "BISC208"],
+                ["CHEM103", "CHEM133", "CHEM104", "CHEM134"],
+                ["GEOL105", "GEOL1115", "GEOL107"],
+                ["GEOL107", "GEOL110"],
+                ["PHYS207", "PHYS227", "PHYS208", "PHYS228"]
+            ],
+            "CISC361",
+            "CISC372",
+            "CISC450",
+            "CISC464",
+            "CPEG465",
+            "CISC494",
+            ["MATH205", "MATH350"],
+            ["CPEG472", "CPEG473", "CPEG475", "CPEG476", "CPEG495"]
+        ],
+        "RestrictedElectiveList": [
+            "MATH242",
+            "MATH349",
+            "MATH549",
+            "CISC304",
+            "CISC436",
+            "CISC437",
+            "CISC440",
+            "CISC442",
+            "CISC449",
+            "CISC453",
+            "CISC459",
+            "CISC481",
+            "CISC483",
+            "CISC484",
+            "CISC474",
+            "CPEG470",
+            "CPEG471",
+            "CPEG472",
+            "CPEG473",
+            "CPEG475",
+            "CPEG476",
+            "CPEG494",
+            "CPEG495",
+            "ELEG387",
+            "ELEG487"
+        ]
+    },
+    {
+        "name": "Computer Science - Data Science Concentration (BS)",
+        "concentration": "Data Science",
+        "RequiredCourseList": [
+            "CISC108",
+            "CISC181",
+            "CISC210",
+            "CISC220",
+            "CISC260",
+            "CISC275",
+            "CISC303",
+            "CISC320",
+            "MATH210",
+            "MATH241",
+            "ENGL11O",
+            [
+                ["CISC498", "CISC499"],
+                ["UNIV401", "UNIV402"]
+            ],
+            "CISC355",
+            ["ENGL312", "ENGL410"],
+            [
+                ["BISC207", "BISC208"],
+                ["CHEM103", "CHEM133", "CHEM104", "CHEM134"],
+                ["GEOL105", "GEOL1115", "GEOL107"],
+                ["GEOL107", "GEOL110"],
+                ["PHYS207", "PHYS227", "PHYS208", "PHYS228"]
+            ],
+            "CISC304",
+            "CISC372",
+            "CISC437",
+            "CISC481",
+            "MATH205",
+            "MATH242",
+            "MATH243",
+            "MATH349",
+            ["CISC483", "CISC484"],
+            ["MATH302", "MATH350", "MATH426"]
+        ],
+        "RestrictedElectiveList": [""]
+    },
+    {
+        "name": "Computer Science - High Performance Computing Concentration (BS)",
+        "concentration": "High Performance Computing",
+        "RequiredCourseList": [
+            "CISC108",
+            "CISC181",
+            "CISC210",
+            "CISC220",
+            "CISC260",
+            "CISC275",
+            "CISC303",
+            "CISC320",
+            "MATH210",
+            "MATH241",
+            "ENGL11O",
+            [
+                ["CISC498", "CISC499"],
+                ["UNIV401", "UNIV402"]
+            ],
+            "CISC355",
+            ["ENGL312", "ENGL410"],
+            [
+                ["BISC207", "BISC208"],
+                ["CHEM103", "CHEM133", "CHEM104", "CHEM134"],
+                ["GEOL105", "GEOL1115", "GEOL107"],
+                ["GEOL107", "GEOL110"],
+                ["PHYS207", "PHYS227", "PHYS208", "PHYS228"]
+            ],
+            "CISC360",
+            "CISC361",
+            "CISC372",
+            "CISC450",
+            "CISC471",
+            "MATH242",
+            "MATH243",
+            [
+                "MATH351",
+                "MATH428",
+                ["MATH205", "MATH350"],
+                ["CISC300+", "MATH205", "MATH350", "CISC387", "CISC487"]
+            ],
+            [
+                "CISC437",
+                "MATH350",
+                "MATH450",
+                ["CISC483", "CISC484"],
+                [
+                    "CISC300+",
+                    "MATH302",
+                    "MATH349",
+                    "MATH451",
+                    "MATH535",
+                    "CISC387",
+                    "CISC487"
+                ]
+            ]
+        ],
+        "RestrictedElectiveList": [""]
+    },
+    {
+        "name": "Computer Science - Systems and Networks Concentration (BS)",
+        "concentration": "Systems and Networks",
+        "RequiredCourseList": [
+            "CISC108",
+            "CISC181",
+            "CISC210",
+            "CISC220",
+            "CISC260",
+            "CISC275",
+            "CISC303",
+            "CISC320",
+            "MATH210",
+            "MATH241",
+            "ENGL11O",
+            [
+                ["CISC498", "CISC499"],
+                ["UNIV401", "UNIV402"]
+            ],
+            "CISC355",
+            ["ENGL312", "ENGL410"],
+            [
+                ["BISC207", "BISC208"],
+                ["CHEM103", "CHEM133", "CHEM104", "CHEM134"],
+                ["GEOL105", "GEOL1115", "GEOL107"],
+                ["GEOL107", "GEOL110"],
+                ["PHYS207", "PHYS227", "PHYS208", "PHYS228"]
+            ],
+            "CISC360",
+            "CISC361",
+            "CISC372",
+            "CISC450",
+            "CISC471",
+            ["MATH205", "MATH350"],
+            [
+                "CISC464",
+                "CPEG465",
+                "CPEG470",
+                "CPEG476",
+                "CPEG473",
+                "CPEG475",
+                "CPEG497"
+            ],
+            [
+                "CISC437",
+                "CISC453",
+                "CISC459",
+                "CISC464",
+                "CISC474",
+                "CISC475",
+                "CISC479",
+                "CPEG473",
+                "CPEG497"
+            ]
+        ],
+        "RestrictedElectiveLists": [""]
+    },
+    {
+        "name": "Computer Science - Theory and Computation Concentration (BS)",
+        "concentration": "Theory and Computation",
+        "RequiredCourseList": [
+            "CISC108",
+            "CISC181",
+            "CISC210",
+            "CISC220",
+            "CISC260",
+            "CISC275",
+            "CISC303",
+            "CISC320",
+            "MATH210",
+            "MATH241",
+            "ENGL11O",
+            [
+                ["CISC498", "CISC499"],
+                ["UNIV401", "UNIV402"]
+            ],
+            "CISC355",
+            ["ENGL312", "ENGL410"],
+            [
+                ["BISC207", "BISC208"],
+                ["CHEM103", "CHEM133", "CHEM104", "CHEM134"],
+                ["GEOL105", "GEOL1115", "GEOL107"],
+                ["GEOL107", "GEOL110"],
+                ["PHYS207", "PHYS227", "PHYS208", "PHYS228"]
+            ],
+            "CISC304",
+            "CISC401",
+            "MATH242",
+            "MATH349",
+            ["MATH205", "MATH350"],
+            [
+                ["CISC4O4", "MATH245", "MATH315", "MATH451"],
+                ["MATH243", "MATH302", "MATH535", "MATH426"]
+            ]
+        ],
+        "RestrictedElectiveList": [""]
+    },
+    {
+        "name": "Information Systems (BS)",
+        "concentration": "none",
+        "RequiredCourseList": [""],
+        "RestrictedElectiveList": [""]
+    },
+    {
+        "name": "Computer Science Honors (HBA)",
+        "concentration": "none",
+        "RequiredCourseList": [""],
+        "RestrictedElectiveList": [""]
+    },
+    {
+        "name": "Computer Science Honors (HBS)",
+        "concentration": "none",
+        "RequiredCourseList": [""],
+        "RestrictedElectiveList": [""]
+    },
+    {
+        "name": "Information Systems Honors (HBS)",
+        "concentration": "none",
+        "RequiredCourseList": [""],
+        "RestrictedElectiveList": [""]
+    },
+    {
+        "name": "Computer Science 4+1 (BA/MS)",
+        "concentration": "none",
+        "RequiredCourseList": [""],
+        "RestrictedElectiveList": [""]
+    },
+    {
+        "name": "Computer Science 4+1 (BS/MS)",
+        "concentration": "none",
+        "RequiredCourseList": [""],
+        "RestrictedElectiveList": [""]
+    },
+    {
+        "name": "Computer Science/Data Science 4+1 (BA/MS)",
+        "concentration": "none",
+        "RequiredCourseList": [""],
+        "RestrictedElectiveList": [""]
+    },
+    {
+        "name": "Computer Science/Data Science 4+1 (BS/MS)",
+        "concentration": "none",
+        "RequiredCourseList": [""],
+        "RestrictedElectiveList": [""]
+    },
+    {
+        "name": "Information Systems/Computer Science 4+1 (BS/MS)",
+        "concentration": "none",
+        "RequiredCourseList": [""],
+        "RestrictedElectiveList": [""]
+    },
+    {
+        "name": "Information Systems/Data Science 4+1 (BS/MS)",
+        "concentration": "none",
+        "RequiredCourseList": [""],
+        "RestrictedElectiveList": [""]
+    }
+]
