@@ -1,8 +1,17 @@
-import React from "react";
+import React /*{ useState }*/ from "react";
 import "./App.css";
 import { ViewSemester } from "./Components/Semester";
+//import { Welcome } from "./Components/welcome";
+//import { Button } from "react-bootstrap";
+//import { clearSemester } from "./Components/clearingSemester";
+//import { clearCourse } from "./Components/clearingCourse";
 
 function App(): JSX.Element {
+    //constants for welcome message button/modal
+    //const [displayWelcomeMessage, displayWelcomeModal] = useState(true);
+    //const welcomeMessage = () => displayWelcomeModal(false);
+    //const welcomeMessageModal = () => displayWelcomeModal(true);
+
     return (
         <div className="App">
             <header className="App-header">
@@ -13,7 +22,7 @@ function App(): JSX.Element {
                 <h6>Malika Iyer</h6>
                 <h6>Dina Dawood</h6>
             </header>
-
+            <hr></hr>
             {/*This is the collaspe button*/}
             <button
                 type="button"
@@ -23,7 +32,7 @@ function App(): JSX.Element {
             >
                 Need Help❓
             </button>
-
+            <hr></hr>
             {/*When the button is clicked the message collapses*/}
             <div id="welcome_message" className="collapse">
                 <p>

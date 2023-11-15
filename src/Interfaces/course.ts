@@ -12,7 +12,15 @@ BPPA:
 Honors:
 
 */
-export type Department = "CANR" | "CAS" | "CEOE" | "CEHD" | "COE" | "CHS" | "LBE" | "BPPA";
+export type Department =
+    | "CANR"
+    | "CAS"
+    | "CEOE"
+    | "CEHD"
+    | "COE"
+    | "CHS"
+    | "LBE"
+    | "BPPA";
 
 export interface Course {
     /*id number for each course (0,1,2,etc) for coding purposes*/
@@ -28,6 +36,7 @@ export interface Course {
     /*semester offered, eg: Spring, Fall, Both, etc */
     semester: string[]; //made this a string because in the AllCourses json file there is summer, fall, spring, all three, only two, etc. too many variables to account for
     /*Department: eg: College of Engineering */
+    // can change into string to get a fix
     department: Department;
     /* prerequesite to take this course - an array of course titles */
     prereq: string[];
