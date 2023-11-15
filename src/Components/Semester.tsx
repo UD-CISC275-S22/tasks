@@ -13,14 +13,14 @@ import { Plan } from "../Interfaces/plan";
 import { AI } from "./plan";
 import { courseList } from "./course";
 
-const COURSE_LIST = courseList;
-const AI_Plan = AI();
-const AI_Semesters = AI_Plan.semesters;
+const COURSE_LIST = courseList; //list of all the courses
+const AI_Plan = AI(); //the actual AI plan itself
+const AI_Semesters = AI_Plan.semesters; //the semesters for the AI plan
 const DEFAULT_COURSE = AI_Semesters[0].courseList[0].title;
 
 export function ViewSemester(): JSX.Element {
-    const [plan, setPlan] = useState<Plan>(AI_Plan); //default for now
-    const [semesters, setSemesters] = useState<Semester[]>(AI_Semesters); //default for now
+    const [plan, setPlan] = useState<Plan>(AI_Plan); //The default plan (for now)
+    const [semesters, setSemesters] = useState<Semester[]>(AI_Semesters); //the default semesters (for now)
     const [currCourse, setCurrCourse] = useState<string>(DEFAULT_COURSE);
     const [SemesterType, setSemesterType] = useState<string>("Fall"); //can be "Fall", "Spring" or "Both"
     const [SemCount, setSemCount] = useState<number>(1); //default shows 1 semester
@@ -324,7 +324,7 @@ export function ViewSemester(): JSX.Element {
             return displayBoth();
         }
     }
-
+    //function that displays the entire plan based on the year
     function displayPlan(): JSX.Element {
         setTargetYear(1);
         const firstYear = displayBoth();
