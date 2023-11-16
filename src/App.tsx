@@ -20,6 +20,7 @@ function App(): JSX.Element {
             {view === Views.degreePlanView && <degreePlanView></degreePlanView>}
             {view === Views.semestersView && (
                 // singleMutipleSemester needs to get pass the current degreePlan in order to know which degreePlan to display
+                //try to come up with a save.
                 <SingleMultipleSemester></SingleMultipleSemester>
             )}
         </div>
