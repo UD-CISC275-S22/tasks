@@ -1,6 +1,7 @@
 //all prep stuff for courses will go in here and things like finding the course based off of an id
 //import React from "react";
 //import { Button, Modal} from "react-bootstrap";
+// import { useState } from "react";
 import "../App.css";
 //import { Semester } from "../Interfaces/semester";
 import courseListAll from "../data/AllCourseList.json";
@@ -36,18 +37,23 @@ export function findCourse(courseList: Course[], id: number): Course | number {
     }
 }
 
-//Students can edit the course code, course title, and credits of a course in the plan
-export function editCourse(
-    course: Course,
-    newTitle: string,
-    newName: string,
-    newCredits: number
-): Course {
-    const newCourse: Course = {
-        ...course,
-        title: newTitle,
-        name: newName,
-        credits: newCredits
-    };
-    return newCourse;
-}
+//updates courseList value (used for save changes button) - Malika
+export const updateCourseList = (
+    courseList: Course[],
+    editedCourse: Course
+): void => {
+    //find index of the course to be updated
+    const index = courseList.findIndex(
+        (course) => course.id === editedCourse.id
+    );
+
+    //if course is found, update in courseList
+    if (index !== -1) {
+        courseList[index] = {
+            ...editedCourse,
+            department: editedCourse.department as Department
+        };
+    } else {
+        console.error("Course not found in courseList");
+    }
+};

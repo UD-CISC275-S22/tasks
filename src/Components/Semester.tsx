@@ -9,6 +9,8 @@ import { Form, Button } from "react-bootstrap";
 import { Semester } from "../Interfaces/semester";
 //import { Degree } from "../Interfaces/degree";
 import sample from "../data/AllCourseList.json";
+import CourseEdit from "./CourseEdit";
+import { updateCourseList } from "./course";
 
 //A variable able to use for the list of courses within the JSON file.
 const COURSE_LIST = courseList;
@@ -41,6 +43,10 @@ export function ViewSemester(): JSX.Element {
     //will add more semesters later
     const [SemesterType, setSemesterType] = useState<string>("Fall"); //set default to Fall for now
     const [SemCount, setSemCount] = useState<number>(1); //default shows 1 semester
+
+    //states for editing courses - created by Malika
+    const [showEditModal, setShowEditModal] = useState(false);
+    const [editedCourse, setEditedCourse] = useState<Course | null>(null);
 
     //NOTE FOR MICHAEL: Here is where you can add your add courses and remove courses functions
     function updateCurrCourse(event: React.ChangeEvent<HTMLSelectElement>) {
@@ -237,6 +243,39 @@ export function ViewSemester(): JSX.Element {
         }
     }
 
+    //functions to edit courses - Malika
+    const handleEditShow = (course: Course | undefined) => {
+        if (course) {
+            setEditedCourse(course);
+            setShowEditModal(true);
+        } else {
+            return null;
+        }
+    };
+
+    const handleEditClose = () => {
+        setEditedCourse(null);
+        setShowEditModal(false);
+    };
+
+    const handleSaveChanges = (editedCourse: Course) => {
+        //update courseList with edited values
+        updateCourseList(COURSE_LIST, editedCourse);
+
+        setEditedCourse(null);
+        setCurrCourse("");
+        // Close the modal
+        handleEditClose();
+    };
+
+    const handleResetToDefault = () => {
+        // Implement logic to reset to default values
+        // ...
+
+        // Close the modal
+        handleEditClose();
+    };
+
     //actual return for the tsx file to App.tsx
     return (
         <div>
@@ -274,6 +313,26 @@ export function ViewSemester(): JSX.Element {
                 </Form.Group>
                 <Button onClick={dropClass}>Remove Class</Button>
                 <Button onClick={addClass}>Add Class</Button>
+                <Button
+                    onClick={() =>
+                        handleEditShow(
+                            COURSE_LIST.find(
+                                (course) => course.title === currCourse
+                            )
+                        )
+                    }
+                >
+                    Edit Course
+                </Button>
+                {/* CourseEdit modal */}
+                {editedCourse && (
+                    <CourseEdit
+                        editedCourse={editedCourse}
+                        onSaveChanges={handleSaveChanges}
+                        onResetToDefault={handleResetToDefault}
+                        onClose={handleEditClose}
+                    />
+                )}
             </div>
         </div>
     );
