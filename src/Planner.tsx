@@ -33,6 +33,9 @@ interface Planner {
 
 const Planner: React.FC<Planner> = ({ plan }) => {
     const [semestersData, setSemestersData] = useState(plan.semesters);
+    const [semesterVisibility, setSemesterVisibility] = useState(
+        Array(semestersData.length).fill(true)
+    );
 
     const handleSkipToggle = (index: number) => {
         const updatedSemesters = [...semestersData];
@@ -67,15 +70,39 @@ const Planner: React.FC<Planner> = ({ plan }) => {
         setSemestersData(updatedSemesters);
     };
     const handleInsertSemester = () => {
+        const lastSemester = semestersData[semestersData.length - 1];
         const newSemester: Semester = {
-            id: `Semester ${semestersData.length + 1}`,
-            season: "Fall",
-            year: "2023",
+            id: getNextSemesterName(lastSemester),
+            season: getNextSeason(lastSemester),
+            year: getNextYear(lastSemester),
             courses: [],
             skip: false
         };
 
         setSemestersData(prevSemesters => [...prevSemesters, newSemester]);
+        setSemesterVisibility(prevVisibility => [...prevVisibility, true]);
+    };
+
+    const getNextSemesterName = (lastSemester: Semester | undefined) => {
+        if (!lastSemester) return "Fall 2023";
+
+        return lastSemester.season === "Fall"
+            ? `Spring ${lastSemester.year}`
+            : `Fall ${parseInt(lastSemester.year, 10) + 1}`;
+    };
+
+    const getNextSeason = (lastSemester: Semester | undefined) => {
+        if (!lastSemester) return "Fall";
+
+        return lastSemester.season === "Fall" ? "Spring" : "Fall";
+    };
+
+    const getNextYear = (lastSemester: Semester | undefined) => {
+        if (!lastSemester) return "2023";
+
+        return lastSemester.season === "Fall"
+            ? lastSemester.year
+            : (parseInt(lastSemester.year, 10) + 1).toString();
     };
 
     const handleRemoveSemester = (index: number) => {
@@ -85,6 +112,11 @@ const Planner: React.FC<Planner> = ({ plan }) => {
     };
     const handleClearAllSemesters = () => {
         setSemestersData([]);
+    };
+    const handleToggleVisibility = (index: number) => {
+        const updatedVisibility = [...semesterVisibility];
+        updatedVisibility[index] = !updatedVisibility[index];
+        setSemesterVisibility(updatedVisibility);
     };
     return (
         <div className="semester-courses">
@@ -97,7 +129,13 @@ const Planner: React.FC<Planner> = ({ plan }) => {
                     {semester.skip ? (
                         <h2>{semester.id}(Skipped)</h2>
                     ) : (
-                        <h2>{semester.id}</h2>
+                        <h2
+                            onClick={() =>
+                                handleToggleVisibility(semesterIndex)
+                            }
+                        >
+                            {semester.id}
+                        </h2>
                     )}
                     <button onClick={() => handleSkipToggle(semesterIndex)}>
                         {semester.skip ? "Unskip" : "Skip"}
@@ -124,99 +162,107 @@ const Planner: React.FC<Planner> = ({ plan }) => {
                     <button onClick={() => handleRemoveSemester(semesterIndex)}>
                         Remove Semester
                     </button>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Course Code</th>
-                                <th>Course Name</th>
-                                <th>Credits</th>
-                                <th>Description</th>
-                                <th>Prerequisites</th>
-                                <th>Restrictions</th>
-                                <th>Breadth</th>
-                                <th>Typically Offered</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {semester.courses.map((course, courseIndex) => (
-                                <tr key={courseIndex}>
-                                    <td>{course.code}</td>
-                                    <td>{course.name}</td>
-                                    <td>{course.credits}</td>
-                                    <td>{course.descr}</td>
-                                    <td>{course.preReq}</td>
-                                    <td>{course.restrict}</td>
-                                    <td>{course.breadth}</td>
-                                    <td>{course.typ}</td>
-                                    <td>
-                                        <button
-                                            onClick={() =>
-                                                handleEditCourse(
-                                                    semesterIndex,
-                                                    courseIndex,
-                                                    {
-                                                        code:
-                                                            prompt(
-                                                                "Enter new code",
-                                                                course.code
-                                                            ) || course.code,
-                                                        name:
-                                                            prompt(
-                                                                "Enter new name",
-                                                                course.name
-                                                            ) || course.name,
-                                                        descr:
-                                                            prompt(
-                                                                "Enter new description",
-                                                                course.descr
-                                                            ) || course.descr,
-                                                        credits:
-                                                            prompt(
-                                                                "Enter new credits",
-                                                                course.credits
-                                                            ) || course.credits,
-                                                        preReq:
-                                                            prompt(
-                                                                "Enter new prerequisites",
-                                                                course.preReq
-                                                            ) || course.preReq,
-                                                        restrict:
-                                                            prompt(
-                                                                "Enter new restrictions",
-                                                                course.restrict
-                                                            ) ||
-                                                            course.restrict,
-                                                        breadth:
-                                                            prompt(
-                                                                "Enter new breadth",
-                                                                course.breadth
-                                                            ) || course.breadth,
-                                                        typ:
-                                                            prompt(
-                                                                "Enter new typically offered",
-                                                                course.typ
-                                                            ) || course.typ
-                                                    }
-                                                )
-                                            }
-                                        >
-                                            Edit Course
-                                        </button>
-                                        <button
-                                            onClick={() =>
-                                                handleRemoveCourse(
-                                                    semesterIndex,
-                                                    courseIndex
-                                                )
-                                            }
-                                        >
-                                            Remove Course
-                                        </button>
-                                    </td>
+                    {semesterVisibility[semesterIndex] ? (
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Course Code</th>
+                                    <th>Course Name</th>
+                                    <th>Credits</th>
+                                    <th>Description</th>
+                                    <th>Prerequisites</th>
+                                    <th>Restrictions</th>
+                                    <th>Breadth</th>
+                                    <th>Typically Offered</th>
                                 </tr>
-                            ))}
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                {semester.courses.map((course, courseIndex) => (
+                                    <tr key={courseIndex}>
+                                        <td>{course.code}</td>
+                                        <td>{course.name}</td>
+                                        <td>{course.credits}</td>
+                                        <td>{course.descr}</td>
+                                        <td>{course.preReq}</td>
+                                        <td>{course.restrict}</td>
+                                        <td>{course.breadth}</td>
+                                        <td>{course.typ}</td>
+                                        <td>
+                                            <button
+                                                onClick={() =>
+                                                    handleEditCourse(
+                                                        semesterIndex,
+                                                        courseIndex,
+                                                        {
+                                                            code:
+                                                                prompt(
+                                                                    "Enter new code",
+                                                                    course.code
+                                                                ) ||
+                                                                course.code,
+                                                            name:
+                                                                prompt(
+                                                                    "Enter new name",
+                                                                    course.name
+                                                                ) ||
+                                                                course.name,
+                                                            descr:
+                                                                prompt(
+                                                                    "Enter new description",
+                                                                    course.descr
+                                                                ) ||
+                                                                course.descr,
+                                                            credits:
+                                                                prompt(
+                                                                    "Enter new credits",
+                                                                    course.credits
+                                                                ) ||
+                                                                course.credits,
+                                                            preReq:
+                                                                prompt(
+                                                                    "Enter new prerequisites",
+                                                                    course.preReq
+                                                                ) ||
+                                                                course.preReq,
+                                                            restrict:
+                                                                prompt(
+                                                                    "Enter new restrictions",
+                                                                    course.restrict
+                                                                ) ||
+                                                                course.restrict,
+                                                            breadth:
+                                                                prompt(
+                                                                    "Enter new breadth",
+                                                                    course.breadth
+                                                                ) ||
+                                                                course.breadth,
+                                                            typ:
+                                                                prompt(
+                                                                    "Enter new typically offered",
+                                                                    course.typ
+                                                                ) || course.typ
+                                                        }
+                                                    )
+                                                }
+                                            >
+                                                Edit Course
+                                            </button>
+                                            <button
+                                                onClick={() =>
+                                                    handleRemoveCourse(
+                                                        semesterIndex,
+                                                        courseIndex
+                                                    )
+                                                }
+                                            >
+                                                Remove Course
+                                            </button>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    ) : null}
                 </div>
             ))}
         </div>
