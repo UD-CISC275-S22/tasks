@@ -1,6 +1,8 @@
 /* eslint-disable no-extra-parens */
 import React, { useState } from "react";
 import "./Planner.css";
+import CourseList from "./CourseList";
+import catalog from "./catalog.json";
 
 interface Course {
     code: string;
@@ -33,10 +35,51 @@ interface Planner {
 
 const Planner: React.FC<Planner> = ({ plan }) => {
     const [semestersData, setSemestersData] = useState(plan.semesters);
+    const [searchTerm, setSearchTerm] = useState("");
+    const [showCourseList, setShowCourseList] = useState(false);
     const [coursesVisibility, setCoursesVisibility] = useState(
         Array(semestersData.length).fill(true)
     );
     const [allSemestersVisible, setAllSemestersVisible] = useState(true);
+
+    const filteredCourses = Object.values(catalog)
+        .flatMap(department => Object.values(department))
+        .filter(course => {
+            const normalizedSearchTerm = searchTerm.toLowerCase();
+            const matchesSearchTerm =
+                course.code.toLowerCase().includes(normalizedSearchTerm) ||
+                course.code.split(" ")[1].includes(normalizedSearchTerm);
+
+            return matchesSearchTerm;
+        });
+    const handleSearchTermChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setSearchTerm(e.target.value);
+        setShowCourseList(e.target.value.trim().length > 0);
+    };
+
+    const semesterOptions = semestersData.map(semester => ({
+        value: semester.id,
+        label: semester.season + " " + semester.year
+    }));
+    const [selectedSemester, setSelectedSemester] = useState<string | null>(
+        null
+    );
+
+    const handleCourseSelected = (selectedCourse: Course) => {
+        if (selectedSemester) {
+            const semesterIndex = semestersData.findIndex(
+                semester => semester.id === selectedSemester
+            );
+
+            if (semesterIndex !== -1) {
+                handleInsertCourse(semesterIndex, selectedCourse);
+            } else {
+                alert("Invalid semester selection. Course not added.");
+            }
+        } else {
+            alert("Please select a semester before adding a course.");
+        }
+    };
 
     const handleSkipToggle = (index: number) => {
         const updatedSemesters = [...semestersData];
@@ -127,6 +170,31 @@ const Planner: React.FC<Planner> = ({ plan }) => {
     };
     return (
         <div className="semester-courses">
+            <select
+                value={selectedSemester || ""}
+                onChange={e => setSelectedSemester(e.target.value || null)}
+            >
+                <option value="" disabled>
+                    Selected Semester
+                </option>
+                {semesterOptions.map(option => (
+                    <option key={option.value} value={option.value}>
+                        {option.label}
+                    </option>
+                ))}
+            </select>
+            <input
+                type="text"
+                placeholder="Search by Course Code"
+                value={searchTerm}
+                onChange={handleSearchTermChange}
+            />
+            {showCourseList && (
+                <CourseList
+                    courses={filteredCourses}
+                    onCourseSelected={handleCourseSelected}
+                />
+            )}
             <h1 onClick={handleToggleAllSemestersVisibility}>{plan.title}</h1>
             {allSemestersVisible && (
                 <>
@@ -299,3 +367,4 @@ const Planner: React.FC<Planner> = ({ plan }) => {
 };
 
 export { Planner };
+export type { Course };
