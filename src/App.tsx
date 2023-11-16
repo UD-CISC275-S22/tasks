@@ -4,8 +4,8 @@ import { Planner } from "./Planner";
 
 function App(): JSX.Element {
     const Plan = {
-        id: "Default",
-        title: "Default",
+        id: "123",
+        title: "Computer Science Degree",
         semesters: [
             {
                 id: "Fall 2022",
