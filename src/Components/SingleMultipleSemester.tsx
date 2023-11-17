@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import { Class } from "../interfaces/class";
 import QuickAdd from "./QuickAdd";
 import SlowAdd from "./SlowAdd";
-import { degreePlan } from "../interfaces/degreePlan"; // ------------add this
+
+// ------------add this
+import { degreePlan } from "../interfaces/degreePlan";
+import { Views } from "../interfaces/viewProps";
+//------------------------------------------------
 
 import { Button, Row, Col, Form /*Button*/ } from "react-bootstrap";
 // import { degreePlan } from "../interfaces/degreePlan";
@@ -10,9 +14,11 @@ import { semester } from "../interfaces/semster";
 
 //-------------------------------------------------------------------------edit
 export function SingleMultipleSemester({
-    CurrentdegreePlan
+    CurrentdegreePlan,
+    setCurrentView
 }: {
     CurrentdegreePlan: degreePlan;
+    setCurrentView: (view: Views) => void;
 }): JSX.Element {
     //export function SingleMultipleSemester(): JSX.Element { ----------------adding to DegreePlan
     const [semester1, setSemester1] = useState<string>("");
@@ -28,6 +34,10 @@ export function SingleMultipleSemester({
         setSemArr([]); //clears semester array, one issue: when wanting to go back, we need to save all the changes made,
         //back to the degreePlanList and currentDegreePlan
     }
+    function goBackClick() {
+        setCurrentView(Views.degreePlanView);
+    }
+
     //----------------------------------------------------EDIT
 
     //const [degreePlan, setDegreePlan] = useState<degreePlan>();
@@ -162,9 +172,10 @@ export function SingleMultipleSemester({
     return (
         <div>
             {addCourse()}
-            {/* add Clear Semesters */}
+            {/* add Clear Semesters and goBack button */}
             <div>
                 <Button onClick={clear}> Clear Existing Semesters </Button>
+                <Button onClick={goBackClick}>Go Back to Degree Plans</Button>
             </div>
             <h3>Single Semester</h3>
             <Form.Group controlId="formCreateSemester">

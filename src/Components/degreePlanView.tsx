@@ -3,16 +3,17 @@ import { degreePlan } from "../interfaces/degreePlan";
 import { SingleMultipleSemester } from "./SingleMultipleSemester";
 import { Views } from "../interfaces/viewProps";
 import { Button } from "react-bootstrap";
-
-export const degreePlanView = ({
-    setCurrentView,
-    setCurrentDegreePlan,
-    degreePlanList
-}: {
+interface degreePlanViewProps {
     setCurrentView: (view: Views) => void;
     setCurrentDegreePlan: (degreePlan: degreePlan) => void;
     degreePlanList: degreePlan[];
-}): JSX.Element => {
+}
+
+export const DegreePlanView = ({
+    setCurrentView,
+    setCurrentDegreePlan,
+    degreePlanList
+}: degreePlanViewProps): JSX.Element => {
     const [viewDegreePlan, setviewDegreePlan] = useState<degreePlan>();
 
     function DegreePlanClick(selectedPlan: degreePlan) {

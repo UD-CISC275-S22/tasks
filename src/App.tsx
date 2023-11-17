@@ -3,14 +3,14 @@ import "./App.css";
 import { SingleMultipleSemester } from "./Components/SingleMultipleSemester";
 import { degreePlan } from "./interfaces/degreePlan";
 import { Views } from "./interfaces/viewProps";
-import { degreePlanView } from "./Components/degreePlanView";
+import { DegreePlanView } from "./Components/DegreePlanView";
 
 // import SlowAdd from "./Components/SlowAdd";
 // import QuickAdd from "./Components/QuickAdd";
 // import { Class } from "./interfaces/class";
 function App(): JSX.Element {
     const [view, setView] = useState<Views>(Views.degreePlanView);
-    const [currDegreePlan, setcurrDegreePlan] = useState<degreePlan>();
+    const [currDegreePlan, setcurrDegreePlan] = useState<degreePlan>({});
     const [degreePlanList, setDegreePlanList] = useState<degreePlan[]>([]);
     return (
         <div className="App">
@@ -18,16 +18,20 @@ function App(): JSX.Element {
                 UD CISC275 with React Hooks and TypeScript
             </header>
             {view === Views.degreePlanView && (
-                <degreePlanView
+                <DegreePlanView
                     setCurrentView={setView}
                     setCurrentDegreePlan={setcurrDegreePlan}
-                    degreePlanList={setDegreePlanList}
-                ></degreePlanView>
+                    degreePlanList={degreePlanList}
+                ></DegreePlanView>
             )}
             {view === Views.semestersView && (
                 // singleMutipleSemester needs to get pass the current degreePlan in order to know which degreePlan to display
                 //try to come up with a save.
-                <SingleMultipleSemester></SingleMultipleSemester>
+                //<SingleMultipleSemester></SingleMultipleSemester>
+                <SingleMultipleSemester
+                    setCurrentView={setView}
+                    CurrentdegreePlan={currDegreePlan}
+                ></SingleMultipleSemester>
             )}
         </div>
     );
