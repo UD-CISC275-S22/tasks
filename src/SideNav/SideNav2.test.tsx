@@ -9,6 +9,9 @@ describe("FilteringSearchTests", () => {
                 flipView={function (): void {
                     throw new Error("Function not implemented.");
                 }}
+                flipPlan={function (): void {
+                    throw new Error("Function not implemented.");
+                }}
                 flipModalView={function (): void {
                     throw new Error("Function not implemented.");
                 }}

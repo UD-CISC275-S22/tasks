@@ -1,4 +1,5 @@
 /* eslint-disable no-extra-parens */
+
 import React from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import realData from "../data/corrected_data.json";
@@ -95,7 +96,7 @@ export function AddSemesterModal({
                         {visible && (
                             <div
                                 style={{
-                                    backgroundColor: "gold",
+                                    backgroundColor: "#005aad",
                                     height: "auto",
                                     overflowY: "scroll",
                                     maxHeight: "125px"
@@ -108,7 +109,10 @@ export function AddSemesterModal({
                                                 handleClick(course.code)
                                             }
                                             style={{
-                                                cursor: "pointer"
+                                                cursor: "pointer",
+                                                color: "white",
+                                                borderBottom: "2px solid gold",
+                                                textAlign: "center"
                                             }}
                                             key={course.code}
                                         >
