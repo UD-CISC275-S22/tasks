@@ -1,0 +1,223 @@
+[
+    {
+        "name": "plan 1",
+        "semesters": [
+            {
+                "id": 1,
+                "fullTime": true,
+                "classList": [
+                    {
+                        "code": "CISC108",
+                        "title": "Introduction to Computer Science I",
+                        "credits": 3,
+                        "preReq": []
+                    },
+                    {
+                        "code": "CISC181",
+                        "title": "Introduction to Computer Science II",
+                        "credits": 3,
+                        "preReq": [
+                            "CISC108"
+                        ]
+                    }
+                ],
+                "totalCredits": 6,
+                "season": "Fall 2023"
+            },
+            {
+                "id": 2,
+                "fullTime": true,
+                "classList": [
+                    {
+                        "code": "CISC210",
+                        "title": "Introduction to Systems Programming",
+                        "credits": 3,
+                        "preReq": [
+                            "CISC108"
+                        ]
+                    },
+                    {
+                        "code": "CISC220",
+                        "title": "Data Structures",
+                        "credits": 3,
+                        "preReq": [
+                            "CISC210"
+                        ]
+                    }
+                ],
+                "totalCredits": 6,
+                "season": "Spring 2023"
+            },
+            {
+                "id": 3,
+                "fullTime": true,
+                "classList": [
+                    {
+                        "code": "CISC108",
+                        "title": "Introduction to Computer Science I",
+                        "credits": 3,
+                        "preReq": []
+                    },
+                    {
+                        "code": "CISC181",
+                        "title": "Introduction to Computer Science II",
+                        "credits": 3,
+                        "preReq": [
+                            "CISC108"
+                        ]
+                    }
+                ],
+                "totalCredits": 6,
+                "season": "Winter 2023"
+            }
+        ]
+    },
+    {
+        "name": "plan 2",
+        "semesters": [
+            {
+                "id": 1,
+                "fullTime": true,
+                "classList": [
+                    {
+                        "code": "CISC108",
+                        "title": "Introduction to Computer Science I",
+                        "credits": 3,
+                        "preReq": []
+                    },
+                    {
+                        "code": "AGED466",
+                        "title": "Independent Study",
+                        "credits": 6,
+                        "preReq": [
+                            "No prerequisites."
+                        ]
+                    }
+                ],
+                "totalCredits": 6,
+                "season": "Fall 2023"
+            },
+            {
+                "id": 2,
+                "fullTime": true,
+                "classList": [
+                    {
+                        "code": "CISC210",
+                        "title": "Introduction to Systems Programming",
+                        "credits": 3,
+                        "preReq": [
+                            "CISC108"
+                        ]
+                    },
+                    {
+                        "code": "CISC220",
+                        "title": "Data Structures",
+                        "credits": 3,
+                        "preReq": [
+                            "CISC210"
+                        ]
+                    }
+                ],
+                "totalCredits": 6,
+                "season": "Spring 2023"
+            },
+            {
+                "id": 3,
+                "fullTime": true,
+                "classList": [
+                    {
+                        "code": "CISC108",
+                        "title": "Introduction to Computer Science I",
+                        "credits": 3,
+                        "preReq": []
+                    },
+                    {
+                        "code": "CISC181",
+                        "title": "Introduction to Computer Science II",
+                        "credits": 3,
+                        "preReq": [
+                            "CISC108"
+                        ]
+                    }
+                ],
+                "totalCredits": 6,
+                "season": "Winter 2023"
+            }
+        ]
+    },
+    {
+        "name": "plan 3",
+        "semesters": [
+            {
+                "id": 1,
+                "fullTime": true,
+                "classList": [
+                    {
+                        "code": "ACCT350",
+                        "title": "Business Law I",
+                        "credits": 3,
+                        "preReq": [
+                            "No prerequisites."
+                        ]
+                    },
+                    {
+                        "code": "CISC181",
+                        "title": "Introduction to Computer Science II",
+                        "credits": 3,
+                        "preReq": [
+                            "CISC108"
+                        ]
+                    }
+                ],
+                "totalCredits": 6,
+                "season": "Fall 2023"
+            },
+            {
+                "id": 2,
+                "fullTime": true,
+                "classList": [
+                    {
+                        "code": "CISC210",
+                        "title": "Introduction to Systems Programming",
+                        "credits": 3,
+                        "preReq": [
+                            "CISC108"
+                        ]
+                    },
+                    {
+                        "code": "CISC220",
+                        "title": "Data Structures",
+                        "credits": 3,
+                        "preReq": [
+                            "CISC210"
+                        ]
+                    }
+                ],
+                "totalCredits": 6,
+                "season": "Spring 2023"
+            },
+            {
+                "id": 3,
+                "fullTime": true,
+                "classList": [
+                    {
+                        "code": "CISC108",
+                        "title": "Introduction to Computer Science I",
+                        "credits": 3,
+                        "preReq": []
+                    },
+                    {
+                        "code": "CISC181",
+                        "title": "Introduction to Computer Science II",
+                        "credits": 3,
+                        "preReq": [
+                            "CISC108"
+                        ]
+                    }
+                ],
+                "totalCredits": 6,
+                "season": "Winter 2023"
+            }
+        ]
+    }
+]

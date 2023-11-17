@@ -10,9 +10,11 @@ import { Col, Row } from "react-bootstrap";
 import { AddSemesterModal } from "./SemesterModal/addSemesterModal";
 import { semester } from "./Interface/semester";
 import { classes } from "./Interface/classes";
-import sample from "./data/data.json";
+import { Plan } from "./Interface/Plan";
+import sample from "./data/Dummy.json";
 import { AddToSemester } from "./semester-modification/AddToSemester";
 import { ChosenMajor } from "./Audit/ChosenMajor";
+import { PlanView } from "./PlanView/PlanView";
 
 function App(): JSX.Element {
     const [page, setPage] = useState(false);
@@ -21,6 +23,7 @@ function App(): JSX.Element {
     const [modalView, setModalView] = useState(false);
     const [addView, setAddView] = useState(false);
     const [seeAudit, setSeeAudit] = useState(false);
+    const [displayPlan, setdisplayPlan] = useState(false);
     const getName = () => {
         setName(name);
     };
@@ -43,18 +46,24 @@ function App(): JSX.Element {
         setSeeAudit(!seeAudit);
     };
 
-    const semesterExamples = sample.map(
-        (sem): semester => ({
-            ...sem,
-            classList: sem.classList.map(
-                (c): classes => ({
+    const flipPlan = () => {
+        setdisplayPlan(!displayPlan);
+    };
+
+    const planExamples = sample.map(
+        (plan): Plan => ({
+            ...plan,
+            semesters: plan.semesters.map((s: semester) => ({
+                ...s,
+                classList: s.classList.map((c: classes) => ({
                     ...c
-                })
-            )
+                }))
+            }))
         })
     );
-
-    const [semesters, setSemesters] = useState<semester[]>(semesterExamples);
+    const [plans] = useState<Plan[]>(planExamples);
+    const FirstPlan = plans[0].semesters;
+    const [semesters, setSemesters] = useState<semester[]>(FirstPlan);
 
     function addSemester(
         id: number,
@@ -99,6 +108,7 @@ function App(): JSX.Element {
                             {" "}
                             <SideNav2
                                 flipView={flipView}
+                                flipPlan={flipPlan}
                                 flipModalView={flipModalView}
                                 flipAudit={flipAudit}
                                 flipAddView={flipAddView}
@@ -125,6 +135,14 @@ function App(): JSX.Element {
                                 <ChosenMajor
                                     handleClose={flipAudit}
                                     show={seeAudit}
+                                />
+                            )}
+                            {displayPlan && (
+                                <PlanView
+                                    handleClose={flipPlan}
+                                    show={displayPlan}
+                                    allplans={plans}
+                                    changeViewSemesters={setSemesters}
                                 />
                             )}
                             <SwitchComponents
