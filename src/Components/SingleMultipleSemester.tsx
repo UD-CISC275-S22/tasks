@@ -2,16 +2,34 @@ import React, { useState } from "react";
 import { Class } from "../interfaces/class";
 import QuickAdd from "./QuickAdd";
 import SlowAdd from "./SlowAdd";
+import { degreePlan } from "../interfaces/degreePlan"; // ------------add this
 
 import { Button, Row, Col, Form /*Button*/ } from "react-bootstrap";
 // import { degreePlan } from "../interfaces/degreePlan";
 import { semester } from "../interfaces/semster";
 
-export function SingleMultipleSemester(): JSX.Element {
+//-------------------------------------------------------------------------edit
+export function SingleMultipleSemester({
+    CurrentdegreePlan
+}: {
+    CurrentdegreePlan: degreePlan;
+}): JSX.Element {
+    //export function SingleMultipleSemester(): JSX.Element { ----------------adding to DegreePlan
     const [semester1, setSemester1] = useState<string>("");
-    const [semArr, setSemArr] = useState<semester[]>([]);
+    //const [semArr, setSemArr] = useState<semester[]>([]);-----------------------comment out
+    const [semArr, setSemArr] = useState<semester[]>(
+        CurrentdegreePlan.semesters
+    );
+
     const [semArrClicked, setSemArrClicked] = useState<semester[]>(semArr);
     const [clicked, setClicked] = useState<boolean>(false);
+    //add clear Semester here-----------------------------------------------------EDIT
+    function clear() {
+        setSemArr([]); //clears semester array, one issue: when wanting to go back, we need to save all the changes made,
+        //back to the degreePlanList and currentDegreePlan
+    }
+    //----------------------------------------------------EDIT
+
     //const [degreePlan, setDegreePlan] = useState<degreePlan>();
     function addRowPerClass(semClasses: Class[]) {
         const tableCell = semClasses.map(
@@ -144,6 +162,10 @@ export function SingleMultipleSemester(): JSX.Element {
     return (
         <div>
             {addCourse()}
+            {/* add Clear Semesters */}
+            <div>
+                <Button onClick={clear}> Clear Existing Semesters </Button>
+            </div>
             <h3>Single Semester</h3>
             <Form.Group controlId="formCreateSemester">
                 <Form.Label>Input Semester:</Form.Label>

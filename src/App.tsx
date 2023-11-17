@@ -17,7 +17,13 @@ function App(): JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript
             </header>
-            {view === Views.degreePlanView && <degreePlanView></degreePlanView>}
+            {view === Views.degreePlanView && (
+                <degreePlanView
+                    setCurrentView={setView}
+                    setCurrentDegreePlan={setcurrDegreePlan}
+                    degreePlanList={setDegreePlanList}
+                ></degreePlanView>
+            )}
             {view === Views.semestersView && (
                 // singleMutipleSemester needs to get pass the current degreePlan in order to know which degreePlan to display
                 //try to come up with a save.

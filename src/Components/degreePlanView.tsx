@@ -13,21 +13,21 @@ export const degreePlanView = ({
     setCurrentDegreePlan: (degreePlan: degreePlan) => void;
     degreePlanList: degreePlan[];
 }): JSX.Element => {
-    const [semester, setSemester] = useState<degreePlan>();
+    const [viewDegreePlan, setviewDegreePlan] = useState<degreePlan>();
 
     function DegreePlanClick(selectedPlan: degreePlan) {
-        setSemester(selectedPlan);
+        setviewDegreePlan(selectedPlan);
     }
 
     function viewSemesterClick() {
-        if (semester) {
-            //setCurrentDegreePlan(semester);
+        if (viewDegreePlan) {
+            //viewDegreePlan(vi);
             setCurrentView(Views.semestersView);
         }
     }
     function goBackClick() {
-        if (semester) {
-            //setSemester({});
+        if (viewDegreePlan) {
+            //viewDegreePlan({});
         }
         setCurrentView(Views.degreePlanView);
     }
