@@ -30,7 +30,7 @@ export function NewModal({
     const [selectedSemester, setSelectedSemester] = useState<string>("Fall");
     const [title, setTitle] = useState<string>("Example Title");
     //todo: find a way to track the amount of credits in total for the dp, probably parse the semester state before saving dp and add up the amount of credits in each semester.
-    const [totalCredits, setTotCredits] = useState<number>(0);
+    //      one of the issues right now is each semester is not tracking its courses credits
     const [newCourse, setNewCourse] = useState<Course>({
         title: "",
         courseCode: "",
@@ -51,8 +51,22 @@ export function NewModal({
         setSemesters([...semesters, newSemesterObj]);
     };
 
+    function updateSemesterCredits(semesterId: number, credits: number) {
+        const modifiedSemester = semesters.map(
+            (semester: Semester): Semester =>
+                semester.id === semesterId
+                    ? {
+                          ...semester,
+                          totalCredits: semester.totalCredits + credits
+                      }
+                    : { ...semester }
+        );
+        setSemesters(modifiedSemester); //this right here is creating the bug where it reloads the semster to default i think
+    }
+
     const addCourse = (semesterId: number) => {
         if (newCourse.courseCode && newCourse.title && newCourse.credits > 0) {
+            updateSemesterCredits(semesterId, newCourse.credits);
             setSemesters((prevSemesters) =>
                 prevSemesters.map((semester) =>
                     semester.id === semesterId
@@ -64,6 +78,7 @@ export function NewModal({
                         : semester
                 )
             );
+            //here we should update the credits for the semester by passing in the semesterid
             setNewCourse({
                 courseCode: "",
                 title: "",
@@ -99,17 +114,19 @@ export function NewModal({
     };
 
     //assuming semsters state is tracking the total credits for each semester this will total up all the semesters credits at the end
-    const totSemestersCredits = semesters.reduce(
-        (currentTot: number, semester: Semester) =>
-            currentTot + semester.totalCredits,
-        0
-    );
-
+    function totDpSemesterCredits(): number {
+        const totSemestersCredits: number = semesters.reduce(
+            (currentTot: number, semester: Semester) =>
+                currentTot + semester.totalCredits,
+            0
+        );
+        return totSemestersCredits;
+    }
     const saveChanges = () => {
         const newDp: DegreePlan = {
             title: title,
             id: 0,
-            totalCredits: totSemestersCredits,
+            totalCredits: totDpSemesterCredits(),
             semestersList: semesters
         };
         addDp(newDp);
