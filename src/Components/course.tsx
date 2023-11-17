@@ -25,13 +25,26 @@ export const courseList: Course[] = courseListAll.map(
     })
 );
 
+//this is the default copy because course list is changed throughout. THIS LIST WILL REMAIN UNCHANGED - Malika
+export const defaultCourseList: Course[] = courseListAll.map(
+    //remember you only need to deep copy data structures over
+    (course): Course => ({
+        ...course,
+        semester: course.semester,
+        department: course.department as Department,
+        prereq: course.prereq,
+        coreq: course.coreq,
+        requirements: course.requirements
+    })
+);
+
 //sees if an id (passed in as a paramtetr) is in the total courseList - based on json file
-export function findCourse(courseList: Course[], id: number): Course | number {
+export function findCourse(courseList: Course[], id: number): Course | null {
     const filteredList = courseList.filter((course) => course.id === id);
     if (filteredList.length > 1) {
-        return 0;
+        return null;
     } else if (filteredList.length == 0) {
-        return 0;
+        return null;
     } else {
         return filteredList[0];
     }

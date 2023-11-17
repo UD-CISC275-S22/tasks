@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import "../App.css";
-import { courseList } from "./course";
+import { courseList, defaultCourseList } from "./course";
 import "./Semester.css";
 import { Course } from "../Interfaces/course";
 import { Form, Button } from "react-bootstrap";
@@ -10,10 +10,14 @@ import { Semester } from "../Interfaces/semester";
 //import { Degree } from "../Interfaces/degree";
 import sample from "../data/AllCourseList.json";
 import CourseEdit from "./CourseEdit";
-import { updateCourseList } from "./course";
+import { updateCourseList, findCourse } from "./course";
 
 //A variable able to use for the list of courses within the JSON file.
 const COURSE_LIST = courseList;
+
+//variable to use DEFAULT list of courses from JSON file - Malika
+const DEFAULT_COURSE_LIST = defaultCourseList;
+
 //create initial semester for testing
 const SEM1: Semester = {
     type: ["Fall"],
@@ -268,9 +272,14 @@ export function ViewSemester(): JSX.Element {
         handleEditClose();
     };
 
-    const handleResetToDefault = () => {
-        // Implement logic to reset to default values
-        // ...
+    const handleResetToDefault = (editedCourse: Course) => {
+        console.log("Edited course exists");
+        const defaultCourse = findCourse(DEFAULT_COURSE_LIST, editedCourse.id);
+        if (defaultCourse) {
+            setEditedCourse(defaultCourse);
+
+            updateCourseList(COURSE_LIST, defaultCourse);
+        }
 
         // Close the modal
         handleEditClose();

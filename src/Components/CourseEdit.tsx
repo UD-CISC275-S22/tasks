@@ -10,7 +10,7 @@ import Form from "react-bootstrap/Form";
 interface CourseEditProps {
     editedCourse: Course;
     onSaveChanges: (editedCourse: Course) => void;
-    onResetToDefault: () => void;
+    onResetToDefault: (editedCourse: Course) => void;
     onClose: () => void;
 }
 
@@ -36,7 +36,9 @@ const CourseEdit: React.FC<CourseEditProps> = ({
 
     const handleResetToDefault = () => {
         // You might need to implement logic to reset to default values
-        onResetToDefault();
+        onResetToDefault({
+            ...editedCourse
+        });
         onClose();
     };
 
