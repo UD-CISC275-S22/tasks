@@ -46,24 +46,25 @@ export function App(): JSX.Element {
     const handleShowModal = () => setShowAddModal(true);
 
     //should soon take in a full dp using a form of sort to pass in a fully described dp
-    function addDp(title: string) {
+    function addDp(newDp: DegreePlan) {
         const exists = degreePlans.find(
-            (dp: DegreePlan): boolean => dp.title === title
+            (dp: DegreePlan): boolean => dp.title === newDp.title
         );
         if (exists === undefined) {
             setdegreePlans([
                 ...degreePlans,
                 {
-                    title: title,
+                    title: newDp.title,
                     id: availableId,
-                    totalCredits: 0,
-                    semestersList: []
+                    totalCredits: newDp.totalCredits,
+                    semestersList: newDp.semestersList
                 }
             ]);
             setAvailableId(availableId + 1);
         }
     }
 
+    //todo: make it so that once the user exists out of the modal the dp is saved as well automatically.
     function saveData() {
         localStorage.setItem(SAVE_KEY, JSON.stringify(degreePlans));
         localStorage.setItem(SAVED_ID, JSON.stringify(availableId));

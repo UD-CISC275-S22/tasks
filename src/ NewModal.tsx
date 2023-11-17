@@ -2,13 +2,8 @@
 /* eslint-disable no-extra-parens */
 import React, { useState } from "react";
 import "./App.css";
-import { GenerateCSV, Import } from "./CSV";
-import { WelcomeMessage } from "./Name";
 import { DegreePlan } from "./interfaces/degreeplan";
-import dpsamplejson from "./sampleDpData.json"; //this is the real json data that the user will start with if they are new
 import { Button, Form, Modal } from "react-bootstrap";
-import { DpList } from "./DpList";
-import { AddDpModal } from "./AddDpModal";
 import { Course } from "./interfaces/course";
 import { Semester } from "./interfaces/semester";
 //todo: right now the modal is not reseting after adding semesters and courses when you click save and try and create a new dp.
@@ -19,8 +14,9 @@ import { Semester } from "./interfaces/semester";
 //      after we press save the data shoould route back to the app.tsx where there should be a function that reads in all the data from the modal and
 //      converts it into a dp that the user can then see with the help of dpviewer.tsx
 
-//todo(current) / complete: I want to reset the modal everytime so that it is in a clean slate every time you open it
+//todo / complete: I want to reset the modal everytime so that it is in a clean slate every time you open it
 //               Right now it is showing the previous semester tracker every time when it should be in a default state every time
+//todo (current): make it so that the user can create their semesters and courses and then send that back to app.tsx where we create a dp of it so that dpviewer can use it
 export function NewModal({
     show,
     handleClose,
@@ -28,10 +24,13 @@ export function NewModal({
 }: {
     show: boolean;
     handleClose: () => void;
-    addDp: (title: string) => void;
+    addDp: (newdp: DegreePlan) => void;
 }): JSX.Element {
     const [semesters, setSemesters] = useState<Semester[]>([]);
     const [selectedSemester, setSelectedSemester] = useState<string>("Fall");
+    const [title, setTitle] = useState<string>("Example Title");
+    //todo: find a way to track the amount of credits in total for the dp, probably parse the semester state before saving dp and add up the amount of credits in each semester.
+    const [totalCredits, setTotCredits] = useState<number>(0);
     const [newCourse, setNewCourse] = useState<Course>({
         title: "",
         courseCode: "",
@@ -41,7 +40,6 @@ export function NewModal({
         courseCoreq: [],
         courseDescription: ""
     });
-    const [title, setTitle] = useState<string>("Example Title");
 
     const addSemester = () => {
         const newSemesterObj: Semester = {
@@ -100,8 +98,21 @@ export function NewModal({
         );
     };
 
+    //assuming semsters state is tracking the total credits for each semester this will total up all the semesters credits at the end
+    const totSemestersCredits = semesters.reduce(
+        (currentTot: number, semester: Semester) =>
+            currentTot + semester.totalCredits,
+        0
+    );
+
     const saveChanges = () => {
-        addDp(title);
+        const newDp: DegreePlan = {
+            title: title,
+            id: 0,
+            totalCredits: totSemestersCredits,
+            semestersList: semesters
+        };
+        addDp(newDp);
         handleClose();
         setSemesters([]); //added this to set up a clean slate for semester tracker whenever we go to add a new dp
     };
@@ -114,7 +125,7 @@ export function NewModal({
                 <Modal.Title>Add New Degree Plan</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <Form.Group controlId="formQuizId">
+                <Form.Group>
                     <Form.Label>Title: </Form.Label>
                     <Form.Control
                         defaultValue="Example Title"
