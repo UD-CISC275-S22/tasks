@@ -8,10 +8,9 @@ import { DegreePlan } from "./interfaces/degreeplan";
 import dpsamplejson from "./sampleDpData.json"; //this is the real json data that the user will start with if they are new
 import { Button } from "react-bootstrap";
 import { DpList } from "./DpList";
-import { AddDpModal } from "./AddDpModal";
 import { Course } from "./interfaces/course";
 import { Semester } from "./interfaces/semester";
-import { NewModal } from "./ NewModal";
+import { AddDpSemestersCoursesModal } from "./AddDpSemestersCoursesModal";
 
 export function App(): JSX.Element {
     //load in json data
@@ -45,7 +44,6 @@ export function App(): JSX.Element {
     const handleCloseModal = () => setShowAddModal(false);
     const handleShowModal = () => setShowAddModal(true);
 
-    //should soon take in a full dp using a form of sort to pass in a fully described dp
     function addDp(newDp: DegreePlan) {
         const exists = degreePlans.find(
             (dp: DegreePlan): boolean => dp.title === newDp.title
@@ -63,8 +61,6 @@ export function App(): JSX.Element {
             setAvailableId(availableId + 1);
         }
     }
-
-    //todo: make it so that once the user exists out of the modal the dp is saved as well automatically.
     function saveData() {
         localStorage.setItem(SAVE_KEY, JSON.stringify(degreePlans));
         localStorage.setItem(SAVED_ID, JSON.stringify(availableId));
@@ -93,11 +89,11 @@ export function App(): JSX.Element {
                     Add New Degree Plan
                 </Button>
                 <Button onClick={saveData}>Save Degree Plans</Button>
-                <NewModal
+                <AddDpSemestersCoursesModal
                     show={showAddModal}
                     handleClose={handleCloseModal}
                     addDp={addDp}
-                ></NewModal>
+                ></AddDpSemestersCoursesModal>
                 <div>
                     <Import
                         importData={importData}
