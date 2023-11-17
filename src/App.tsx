@@ -1,5 +1,5 @@
 /* eslint-disable no-extra-parens */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import Image1 from "./Images/Delaware-Blue-Hens-Logo.png";
 import Image2 from "./Images/Udel-Crest.png";
@@ -24,6 +24,8 @@ function App(): JSX.Element {
     const [addView, setAddView] = useState(false);
     const [seeAudit, setSeeAudit] = useState(false);
     const [displayPlan, setdisplayPlan] = useState(false);
+    const [currentPlan, setCurrentPlan] = useState("");
+
     const getName = () => {
         setName(name);
     };
@@ -61,30 +63,33 @@ function App(): JSX.Element {
             }))
         })
     );
-    const [plans] = useState<Plan[]>(planExamples);
-    const FirstPlan = plans[0].semesters;
-    const [semesters, setSemesters] = useState<semester[]>(FirstPlan);
+    const [plans, setPlans] = useState<Plan[]>(planExamples);
 
-    function addSemester(
-        id: number,
-        fullTime: boolean,
-        classList: classes[],
-        totalCredits: number,
-        season: string
-    ): void {
-        const newSemester: semester = {
-            id: id,
-            fullTime: fullTime,
-            classList: classList,
-            totalCredits: totalCredits,
-            season: season
-        };
-        setSemesters([...semesters, newSemester]);
-    }
+    const [semesters, setSemesters] = useState<semester[]>([]);
 
     function onAddClass(updatedSemester: semester[]): void {
         setSemesters(updatedSemester);
     }
+
+    function updatingPlans(): void {
+        const findIndexplan: number = plans.findIndex(
+            (plan) => plan.name === currentPlan
+        );
+        if (findIndexplan === -1) {
+            console.log("sike i lied");
+        } else {
+            const foundPlan = {
+                ...plans[findIndexplan],
+                semesters: semesters
+            };
+            console.log(semesters);
+            plans.splice(findIndexplan, 1, foundPlan);
+            console.log(plans);
+            setPlans(plans);
+        }
+    }
+
+    useEffect(() => updatingPlans(), [semesters]);
 
     return (
         <div className="App">
@@ -119,8 +124,8 @@ function App(): JSX.Element {
                                 <AddSemesterModal
                                     handleClose={flipModalView}
                                     show={modalView}
-                                    semesterExamples={semesters}
-                                    addSemester={addSemester}
+                                    semesters={semesters}
+                                    settingSemester={setSemesters}
                                 />
                             )}
                             {addView && (
@@ -143,6 +148,7 @@ function App(): JSX.Element {
                                     show={displayPlan}
                                     allplans={plans}
                                     changeViewSemesters={setSemesters}
+                                    setCurrentPlan={setCurrentPlan}
                                 />
                             )}
                             <SwitchComponents
