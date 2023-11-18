@@ -4,7 +4,13 @@ import { DegreePlan } from "./interfaces/degreeplan";
 import { DpCard } from "./DpCard";
 import { DpView } from "./DpView";
 
-export function DpList({ dp }: { dp: DegreePlan[] }): JSX.Element {
+export function DpList({
+    dp,
+    deleteDp
+}: {
+    dp: DegreePlan[];
+    deleteDp: (id: number) => void;
+}): JSX.Element {
     const [displayId, setDisplayId] = useState<null | number>(null);
     const handleDpView = (id: number) => {
         setDisplayId(id);
@@ -17,7 +23,13 @@ export function DpList({ dp }: { dp: DegreePlan[] }): JSX.Element {
             {!displayId && <DpCard dp={dp} handleClick={handleDpView}></DpCard>}
             {dp.map((dp: DegreePlan) => {
                 if (displayId === dp.id) {
-                    return <DpView dp={dp} resetView={resetDisplayId}></DpView>;
+                    return (
+                        <DpView
+                            dp={dp}
+                            resetView={resetDisplayId}
+                            deleteDp={deleteDp}
+                        ></DpView>
+                    );
                 } else {
                     return null;
                 }

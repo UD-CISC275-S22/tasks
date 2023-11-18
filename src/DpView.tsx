@@ -9,11 +9,17 @@ import { Course } from "./interfaces/course";
 
 export function DpView({
     dp,
-    resetView
+    resetView,
+    deleteDp
 }: {
     dp: DegreePlan;
     resetView: () => void;
+    deleteDp: (id: number) => void;
 }): JSX.Element {
+    const deleteDegreePlan = () => {
+        deleteDp(dp.id);
+        resetView();
+    };
     return (
         <div>
             <Container>
@@ -90,6 +96,13 @@ export function DpView({
                 onClick={resetView}
             >
                 Exit
+            </Button>
+            <Button
+                className="esc_button text-align-center"
+                variant="danger"
+                onClick={deleteDegreePlan}
+            >
+                Delete
             </Button>
         </div>
     );

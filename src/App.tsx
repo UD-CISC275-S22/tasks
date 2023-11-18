@@ -59,6 +59,11 @@ export function App(): JSX.Element {
             setAvailableId(availableId + 1);
         }
     }
+
+    function deleteDp(id: number) {
+        const updatedDps = degreePlans.filter((dp) => dp.id !== id);
+        setdegreePlans(updatedDps);
+    }
     function saveData() {
         localStorage.setItem(SAVE_KEY, JSON.stringify(degreePlans));
         localStorage.setItem(SAVED_ID, JSON.stringify(availableId));
@@ -82,7 +87,7 @@ export function App(): JSX.Element {
                         </ul>
                     </p>
                 </header>
-                <DpList dp={degreePlans}></DpList>
+                <DpList dp={degreePlans} deleteDp={deleteDp}></DpList>
                 <Button className="add_btn" onClick={handleShowModal}>
                     Add New Degree Plan
                 </Button>
