@@ -8,8 +8,6 @@ import { DegreePlan } from "./interfaces/degreeplan";
 import dpsamplejson from "./sampleDpData.json"; //this is the real json data that the user will start with if they are new
 import { Button } from "react-bootstrap";
 import { DpList } from "./DpList";
-import { Course } from "./interfaces/course";
-import { Semester } from "./interfaces/semester";
 import { AddDpSemestersCoursesModal } from "./AddDpSemestersCoursesModal";
 
 export function App(): JSX.Element {
