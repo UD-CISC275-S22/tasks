@@ -16,14 +16,8 @@ describe("FilteringSearchTests", () => {
                     throw new Error("Function not implemented.");
                 }}
                 show={false}
-                semesterExamples={[]}
-                addSemester={function (
-                    id: number,
-                    fullTime: boolean,
-                    classList: classes[],
-                    totalCredits: number,
-                    season: string
-                ): void {
+                semesters={[]}
+                settingSemester={function (): void {
                     throw new Error("Function not implemented.");
                 }}
             />

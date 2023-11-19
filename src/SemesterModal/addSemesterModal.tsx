@@ -10,19 +10,13 @@ import { classes } from "../Interface/classes";
 export function AddSemesterModal({
     handleClose,
     show,
-    semesterExamples,
-    addSemester
+    semesters,
+    settingSemester
 }: {
     handleClose: () => void;
     show: boolean;
-    semesterExamples: semester[];
-    addSemester: (
-        id: number,
-        fullTime: boolean,
-        classList: classes[],
-        totalCredits: number,
-        season: string
-    ) => void;
+    semesters: semester[];
+    settingSemester: (Sems: semester[]) => void;
 }): JSX.Element {
     const [searchAttribute, setSearchAttribute] = useState("");
     const [season, setSeason] = useState("");
@@ -52,13 +46,30 @@ export function AddSemesterModal({
         setVisible(!visible);
     };
 
+    function addSemester(
+        id: number,
+        fullTime: boolean,
+        classList: classes[],
+        totalCredits: number,
+        season: string
+    ): void {
+        const newSemester: semester = {
+            id: id,
+            fullTime: fullTime,
+            classList: classList,
+            totalCredits: totalCredits,
+            season: season
+        };
+        settingSemester([...semesters, newSemester]);
+        console.log([...semesters, newSemester]);
+    }
+
     function closingModal() {
         const findIndexCourse: number = realData.findIndex(
             (course) => course.code === searchAttribute
         );
         const foundCourse: classes = realData[findIndexCourse];
-        const lastSemester: semester =
-            semesterExamples[semesterExamples.length - 1];
+        const lastSemester: semester = semesters[semesters.length - 1];
         const newId: number = lastSemester.id + 1;
         addSemester(newId, true, [foundCourse], foundCourse.credits, season);
         handleClose();
