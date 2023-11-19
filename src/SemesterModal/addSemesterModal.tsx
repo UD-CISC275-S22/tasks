@@ -96,7 +96,7 @@ export function AddSemesterModal({
                         {visible && (
                             <div
                                 style={{
-                                    backgroundColor: "#005aad",
+                                    backgroundColor: "gold",
                                     height: "auto",
                                     overflowY: "scroll",
                                     maxHeight: "125px"
@@ -105,18 +105,21 @@ export function AddSemesterModal({
                                 {filteredCourses.map((course) => {
                                     return (
                                         <div
+                                            className="searchResult"
                                             onClick={() =>
                                                 handleClick(course.code)
                                             }
                                             style={{
                                                 cursor: "pointer",
                                                 color: "white",
-                                                borderBottom: "2px solid gold",
-                                                textAlign: "center"
+                                                textAlign: "center",
+                                                borderBottom: "solid",
+                                                borderBottomColor: "white",
+                                                fontWeight: "bold"
                                             }}
                                             key={course.code}
                                         >
-                                            {course.code.replace(" ", "")}
+                                            {course.code}
                                         </div>
                                     );
                                 })}
