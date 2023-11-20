@@ -2,7 +2,7 @@
 /* eslint-disable no-extra-parens */
 //this will be the dp table shower
 import React from "react";
-import { Button, Table, Container, Row, Col } from "react-bootstrap";
+import { Button, Table, Container, Row, Col, Card } from "react-bootstrap";
 import { DegreePlan } from "./interfaces/degreeplan";
 import { Semester } from "./interfaces/semester";
 import { Course } from "./interfaces/course";
@@ -37,16 +37,18 @@ export function DpView({
                     </Col>
                 </Row>
                 <Row>
-                    <Table striped bordered>
+                    <Table>
                         <thead>
                             <tr>
                                 {dp.semestersList.map((semester: Semester) => (
                                     <th key={semester.title}>
-                                        <p>{semester.title}</p>
-                                        <p>
-                                            Total Credits:{" "}
-                                            {semester.totalCredits}
-                                        </p>
+                                        <Card bg="warning">
+                                            <p>{semester.title}</p>
+                                            <p>
+                                                Total Credits:{" "}
+                                                {semester.totalCredits}
+                                            </p>
+                                        </Card>
                                     </th>
                                 ))}
                             </tr>
@@ -56,31 +58,38 @@ export function DpView({
                                 <td key={semester.title}>
                                     {semester.courses.map((course: Course) => (
                                         <div key={course.courseCode}>
-                                            <p>{course.title}</p>
-                                            <Table striped bordered>
-                                                <tbody>
-                                                    <td>
-                                                        <p>
-                                                            Course Credits:{" "}
-                                                            {course.credits}
-                                                        </p>
-                                                        <p>
-                                                            Course Code:{" "}
-                                                            {course.courseCode}
-                                                        </p>
-                                                        <p
-                                                            style={{
-                                                                textAlign:
-                                                                    "center"
-                                                            }}
-                                                        >
-                                                            Course Description:{" "}
-                                                            {
-                                                                course.courseDescription
-                                                            }
-                                                        </p>
-                                                    </td>
-                                                </tbody>
+                                            <Card bg="light">
+                                                <p>{course.title}</p>
+                                            </Card>
+                                            <Table>
+                                                <Card bg="info" text="dark">
+                                                    <tbody>
+                                                        <td>
+                                                            <p>
+                                                                Course Credits:{" "}
+                                                                {course.credits}
+                                                            </p>
+                                                            <p>
+                                                                Course Code:{" "}
+                                                                {
+                                                                    course.courseCode
+                                                                }
+                                                            </p>
+                                                            <p
+                                                                style={{
+                                                                    textAlign:
+                                                                        "center"
+                                                                }}
+                                                            >
+                                                                Course
+                                                                Description:{" "}
+                                                                {
+                                                                    course.courseDescription
+                                                                }
+                                                            </p>
+                                                        </td>
+                                                    </tbody>
+                                                </Card>
                                             </Table>
                                         </div>
                                     ))}
