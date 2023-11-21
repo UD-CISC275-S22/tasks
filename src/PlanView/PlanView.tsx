@@ -8,12 +8,14 @@ export function PlanView({
     handleClose,
     show,
     allplans,
-    changeViewSemesters
+    changeViewSemesters,
+    setCurrentPlan
 }: {
     handleClose: () => void;
     show: boolean;
     allplans: Plan[];
     changeViewSemesters: (viewSemesteres: semester[]) => void;
+    setCurrentPlan: (name: string) => void;
 }): JSX.Element {
     const [viewPlan, setViewPlan] = useState<string>(allplans[0].name);
 
@@ -23,6 +25,7 @@ export function PlanView({
         );
         const foundplan: Plan = allplans[findIndexplan];
         changeViewSemesters(foundplan.semesters);
+        setCurrentPlan(viewPlan);
         handleClose();
     }
 
