@@ -30,10 +30,39 @@ export function SemesterView({
         console.log(course);
         setDragCourse(course);
     };
+    const handleOnDragLeaves = (
+        event: React.DragEvent<HTMLTableRowElement>,
+        course: classes
+    ) => {
+        const semesterToUpdate = { ...semester };
+
+        // Create a new array of classes for the updated semester
+        const updatedClasses = [
+            ...semesterToUpdate.classList.filter(
+                (allClasses: classes): boolean =>
+                    allClasses.title != course.title
+            )
+        ];
+
+        // Get new credit total
+        const totalCredits = updatedClasses.reduce(
+            (total: number, currentClass: classes) =>
+                total + currentClass.credits,
+            0
+        );
+
+        // Update the classList of the semester with the new array of classes
+        semesterToUpdate.classList = updatedClasses;
+        semesterToUpdate.totalCredits = totalCredits;
+
+        // Update the schedule with the modified semester
+        clearCourseFromSemester(semesterToUpdate);
+    };
     return (
         <div
             onDrop={(e) => handleOnDrop(e, semester.id)}
             onDragOver={(e) => handleOnDragOver(e)}
+            //onDragLeaves={(e) => handleOnDragLeaves(e, semester.id)}
         >
             <div>
                 <h3>{semester.season}</h3>
@@ -59,6 +88,9 @@ export function SemesterView({
                                 draggable={true}
                                 onDragStart={(e) =>
                                     handleDragStart(e, classItem)
+                                }
+                                onDragLeave={(e) =>
+                                    handleOnDragLeaves(e, classItem)
                                 }
                                 key={classItem.code}
                             >
