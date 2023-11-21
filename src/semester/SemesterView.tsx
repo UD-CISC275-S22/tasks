@@ -1,7 +1,12 @@
+/* eslint-disable no-extra-parens */
 import React from "react";
 import { semester } from "../Interface/semester";
 import { classes } from "../Interface/classes";
 import { RemoveClass } from "../semester-modification/RemoveClass";
+import { EditClassInfoModal } from "../semester-modification/EditClassInfoModal";
+//import { EditClass } from "../semester-modification/EditClass";
+import { useState } from "react";
+import { Button } from "react-bootstrap";
 
 export function SemesterView({
     semester,
@@ -22,6 +27,7 @@ export function SemesterView({
 }): JSX.Element {
     //This grabs the info of the course being dragged.
     //TODO: Doesn't properly render on its own.
+    const [modalView, setModalView] = useState(false);
     const handleDragStart = (
         event: React.DragEvent<HTMLTableRowElement>,
         course: classes
@@ -29,6 +35,11 @@ export function SemesterView({
         console.log("Enter");
         console.log(course);
         setDragCourse(course);
+    };
+    const flipModalView = () => {
+        console.log("hello");
+        setModalView(!modalView);
+        //console.log("hello");
     };
     return (
         <div
@@ -46,6 +57,7 @@ export function SemesterView({
                         <th scope="col">Credits</th>
                         <th scope="col">Prerequisites</th>
                         <th scope="col">Remove Class</th>
+                        <th scope="col">Edit Course</th>
                         {/*<th scope="col">Schedule</th>
                         <th scope="col">Location</th>
                         <th scope="col">Instructor</th>
@@ -82,6 +94,23 @@ export function SemesterView({
                                             );
                                         }}
                                     ></RemoveClass>
+                                </td>
+                                <td>
+                                    <Button onClick={flipModalView}>
+                                        Edit Course
+                                    </Button>
+                                    {modalView && (
+                                        <EditClassInfoModal
+                                            handleClose={flipModalView}
+                                            show={modalView}
+                                            courseToEdit={classItem}
+                                        />
+                                    )}
+                                    {/*<EditClassInfoModal
+                                        handleClose={flipModalView}
+                                        show={modalView}
+                                        courseToEdit={classItem}
+                                    />*/}
                                 </td>
                                 {/*<td>
                                     {classItem.schedule.day.join(", ")},{" "}

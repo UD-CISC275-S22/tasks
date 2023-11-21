@@ -54,7 +54,7 @@
 }
 
 .SideNav2 {
-    height: 100vh;
+    height: 100dvh;
     width: 100%;
     background-color: rgb(255, 217, 2);
 }
@@ -97,4 +97,9 @@
 }
 .row #name {
     flex: 70%;
+}
+.searchResult:hover {
+    background-color: #005aad;
+    color: white;
+    font-weight: bold;
 }

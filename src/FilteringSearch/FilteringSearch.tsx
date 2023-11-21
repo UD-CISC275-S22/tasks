@@ -42,6 +42,7 @@ export function FilteringSearch(): JSX.Element {
             </Form.Group>
             {visible && (
                 <div
+                    className="FilterMainDiv"
                     style={{
                         backgroundColor: "gold",
                         height: "auto",
