@@ -86,7 +86,12 @@ export function AddDpSemestersCoursesModal({
         setSemesters(updatedSemesters);
     };
 
-    const deleteCourse = (semesterId: number, courseIndex: number) => {
+    const deleteCourse = (
+        semesterId: number,
+        courseIndex: number,
+        credits: number
+    ) => {
+        updateSemesterCredits(semesterId, -credits);
         setSemesters((prevSemesters) =>
             prevSemesters.map((semester) =>
                 semester.id === semesterId
@@ -187,7 +192,8 @@ export function AddDpSemestersCoursesModal({
                                                         onClick={() =>
                                                             deleteCourse(
                                                                 semester.id,
-                                                                courseIndex
+                                                                courseIndex,
+                                                                course.credits
                                                             )
                                                         }
                                                     >
