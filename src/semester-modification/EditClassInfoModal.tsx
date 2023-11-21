@@ -15,10 +15,13 @@ export function EditClassInfoModal({
     const [newCode, setNewCode] = useState(courseToEdit.code);
     const [newTitle, setNewTitle] = useState(courseToEdit.title);
     const [newCredits, setNewCredits] = useState(courseToEdit.credits);
+    //const [newPrereqs, setNewPrereqs] = useState(courseToEdit.preReq);
 
     const inputChange1 = (event: React.ChangeEvent<HTMLInputElement>) => {
         const searchValue1 = event.target.value;
-        setNewCode(searchValue1);
+        const firstFour = searchValue1.substring(0, 4).toUpperCase();
+        const last = searchValue1.substring(4, searchValue1.length);
+        setNewCode(firstFour + last);
     };
     const inputChange2 = (event: React.ChangeEvent<HTMLInputElement>) => {
         const searchValue2 = event.target.value;
@@ -28,15 +31,20 @@ export function EditClassInfoModal({
         const searchValue3 = event.target.value;
         setNewCredits(parseInt(searchValue3));
     };
+    /*const inputChange4 = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const searchValue4 = event.target.list;
+        setNewPrereqs(searchValue4);
+    };
+    */
     function editClass(classToEdit: classes): void {
         classToEdit.code = newCode;
         classToEdit.title = newTitle;
         classToEdit.credits = newCredits;
     }
     function closingInfoModal() {
+        handleClose();
         const course: classes = courseToEdit;
         editClass(course);
-        () => handleClose();
     }
 
     /*function doneEditing(
@@ -100,7 +108,7 @@ export function EditClassInfoModal({
                             closingInfoModal();
                         }}
                     >
-                        Edit Course
+                        Done
                     </Button>
                     {/*<EditClass
                         classToEdit={courseToEdit}
