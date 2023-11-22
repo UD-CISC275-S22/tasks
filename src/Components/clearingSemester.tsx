@@ -1,4 +1,43 @@
-export {}; //just for MVP purposes
+import React from "react";
+import { Button, Modal } from "react-bootstrap";
+
+export const ClearSemester = ({
+    clearSemesterCourses,
+    handleClose,
+    handleShow,
+    show
+}: {
+    clearSemesterCourses: () => void;
+    handleClose: () => void;
+    handleShow: () => void;
+    show: boolean;
+}) => {
+    return (
+        <>
+            <div className="clear_sem">
+                <Button onClick={handleShow}>Remove All Courses</Button>
+            </div>
+            <div>
+                <Modal show={show} onHide={handleClose} animation={false}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Warning</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <p>
+                            You are deleting this current semester, do you
+                            confirm?
+                        </p>
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button onClick={clearSemesterCourses}>Yes</Button>
+                        <Button onClick={handleClose}>No</Button>
+                    </Modal.Footer>
+                </Modal>
+            </div>
+        </>
+    );
+};
+
 /*import React, { useState } from "react";
 import { courseList } from "./course";
 import "./Semester.css";
@@ -6,7 +45,7 @@ import { Course } from "../Interfaces/course";
 import { Button, Container, Modal, Row, Col } from "react-bootstrap";
 import { Semester } from "../Interfaces/semester";
 import { ViewSemester } from "./Semester";
-import { Degree } from "../Interfaces/degree";
+import { Degree } from "../Interfaces/plan";
 
 // export function clearAddButtons({
 //     semester,

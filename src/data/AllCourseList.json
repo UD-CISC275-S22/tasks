@@ -117,7 +117,7 @@
         "department": "COE",
         "prereq": ["CISC220", "CISC260", "CISC360 (recommended)"],
         "coreq": [""],
-        "requirements": ["BS Core"]
+        "requirements": ["BS Core", "ArtificialIntelligence"]
     },
     {
         "id": 10,
@@ -129,7 +129,7 @@
         "department": "COE",
         "prereq": ["CISC220", "CISC260"],
         "coreq": [""],
-        "requirements": ["BS Core"]
+        "requirements": ["BS Core", "ArtificialIntelligence", "Bioinformatics"]
     },
     {
         "id": 11,
@@ -165,7 +165,7 @@
         "department": "CAS",
         "prereq": ["MATH241 or MATH232"],
         "coreq": [""],
-        "requirements": ["BS Core"]
+        "requirements": ["BS Core", "ArtificialIntelligenceRE"]
     },
     {
         "id": 14,
@@ -308,7 +308,8 @@
         "requirements": [
             "Science Courses",
             "University Breadth",
-            "CAS Breadth D"
+            "CAS Breadth D",
+            "Bioinformatics"
         ]
     },
     {
@@ -324,7 +325,8 @@
         "requirements": [
             "Science Courses",
             "University Breadth",
-            "CAS Breadth D"
+            "CAS Breadth D",
+            "Bioinformatics"
         ]
     },
     {
@@ -340,7 +342,8 @@
         "requirements": [
             "Science Courses",
             "University Breadth",
-            "CAS Breadth D"
+            "CAS Breadth D",
+            "Bioinformatics"
         ]
     },
     {
@@ -356,7 +359,8 @@
         "requirements": [
             "Science Courses",
             "University Breadth",
-            "CAS Breadth D"
+            "CAS Breadth D",
+            "Bioinformatics"
         ]
     },
     {
@@ -372,7 +376,8 @@
         "requirements": [
             "Science Courses",
             "University Breadth",
-            "CAS Breadth D"
+            "CAS Breadth D",
+            "Bioinformatics"
         ]
     },
     {
@@ -388,7 +393,8 @@
         "requirements": [
             "Science Courses",
             "University Breadth",
-            "CAS Breadth D"
+            "CAS Breadth D",
+            "Bioinformatics"
         ]
     },
     {
@@ -477,7 +483,7 @@
         "department": "COE",
         "prereq": ["CISC220", "MATH210"],
         "coreq": [""],
-        "requirements": ["Additional Reqs"]
+        "requirements": ["Additional Reqs", "ArtificialIntelligence"]
     },
     {
         "id": 36,
@@ -489,7 +495,11 @@
         "department": "",
         "prereq": ["MATH230 or MATH242"],
         "coreq": [""],
-        "requirements": ["Additional Reqs"]
+        "requirements": [
+            "Additional Reqs",
+            "ArtificialIntelligenceRE",
+            "Bioinformatics"
+        ]
     },
     {
         "id": 37,
@@ -514,5 +524,761 @@
         "prereq": ["ENGL110"],
         "coreq": [""],
         "requirements": ["Additional Reqs", "COE Breadth"]
+    },
+    {
+        "id": 39,
+        "title": "CISC442",
+        "name": "Introduction to Computer Vision",
+        "description": "Analysis of images and video to recognize, reconstruct, model, and otherwise infer static and dynamic properties of objects in the three-dimensional world. Geometry of image formation; image processing such as smoothing, edge and feature detection, color, and texture; segmentation; shape representation including deformable templates; stereo vision; motion estimation and tracking; techniques for 3-D reconstruction; image registration methods.",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "COE",
+        "prereq": ["CISC220"],
+        "coreq": [""],
+        "requirements": ["ArtificialIntelligence"]
+    },
+    {
+        "id": 40,
+        "title": "CISC481",
+        "name": "Artifical Intelligence",
+        "description": "Programming techniques for problems not amenable to algorithmic solutions. Problem formulation, search strategies, state spaces, applications of logic, knowledge representation, planning and application areas.",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "COE",
+        "prereq": ["CISC220", "CISC304"],
+        "coreq": [""],
+        "requirements": ["ArtificialIntelligence"]
+    },
+    {
+        "id": 41,
+        "title": "CISC483",
+        "name": "Introduction to Data Mining",
+        "description": "Concepts, techniques, and algorithms for mining large data sets to discover structural patterns that can be used to make subsequent predictions. Emphasis on practical approaches and empirical evaluation. Use of a workbench of data mining tools, such as the Weka toolkit.",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "COE",
+        "prereq": ["CISC220", "MATH205 or MATH350"],
+        "coreq": [""],
+        "requirements": ["ArtificialIntelligence", "Bioinformatics"]
+    },
+    {
+        "id": 42,
+        "title": "CISC484",
+        "name": "Introduction to Machine Learning",
+        "description": "Development of methods to learn to solve a task using examples. Explore different machine learning algorithms/techniques and discuss their strengths and weaknesses and situations they are or are not suited for.",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "COE",
+        "prereq": ["CISC220", "MATH205 or MATH350"],
+        "coreq": [""],
+        "requirements": ["ArtificialIntelligence", "Bioinformatics"]
+    },
+    {
+        "id": 43,
+        "title": "CHEM213",
+        "name": "Elementary Organic Chemistry",
+        "description": "A survey of the fundamentals of organic chemistry. Topics include molecular structure, organic nomenclature, functional groups, isomerism and stereoisomerism, reaction mechanisms, and organic synthesis. Basic principles will be illustrated with examples of biological significance.",
+        "credits": 3,
+        "semester": ["Fall", "Spring", "Winter", "Summer"],
+        "department": "CAS",
+        "prereq": ["CHEM104", "CHEM134", "or CHEM102, or CHEM105, or CHEM112"],
+        "coreq": [""],
+        "requirements": ["Bioinformatics"]
+    },
+    {
+        "id": 44,
+        "title": "CHEM215",
+        "name": "Elementary Organic Chemistry Laboratory",
+        "description": "A survey of elementary laboratory techniques that are useful to organic chemists. Separation and purification techniques and examples of typical organic reactions will be included.",
+        "credits": 1,
+        "semester": ["Fall", "Winter", "Spring", "Summer"],
+        "department": "CAS",
+        "prereq": ["CHEM104", "CHEM134", "or CHEM102, or CHEM105, or CHEM112"],
+        "coreq": ["CHEM213"],
+        "requirements": ["Bioinformatics"]
+    },
+    {
+        "id": 45,
+        "title": "CHEM321",
+        "name": "Organic Chemistry I",
+        "description": "First half of two-semester survey of structure, synthesis, and reactions of organic compounds.",
+        "credits": 3,
+        "semester": ["Fall", "Winter", "Summer"],
+        "department": "CAS",
+        "prereq": ["CHEM104", "CHEM134", "or CHEM112"],
+        "coreq": ["CHEM325"],
+        "requirements": ["Bioinformatics"]
+    },
+    {
+        "id": 46,
+        "title": "CHEM325",
+        "name": "Organic Chemistry Laboratory I",
+        "description": "Laboratory work that introduces the basic laboratory techniques of organic chemistry.",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "CAS",
+        "prereq": ["CHEM104", "CHEM134"],
+        "coreq": ["CHEM321"],
+        "requirements": [""]
+    },
+    {
+        "id": 47,
+        "title": "CISC450",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": [""]
+    },
+    {
+        "id": 48,
+        "title": "CISC464",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": [""]
+    },
+    {
+        "id": 49,
+        "title": "CPEG465",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": [""]
+    },
+    {
+        "id": 50,
+        "title": "CISC494",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": [""]
+    },
+    {
+        "id": 51,
+        "title": "CPEG472",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": [""]
+    },
+    {
+        "id": 52,
+        "title": "CPEG473",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": [""]
+    },
+    {
+        "id": 53,
+        "title": "CPEG475",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": [""]
+    },
+    {
+        "id": 54,
+        "title": "CPEG476",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": [""]
+    },
+    {
+        "id": 55,
+        "title": "CPEG495",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": [""]
+    },
+    {
+        "id": 56,
+        "title": "CISC437",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": ["ArtificialIntelligenceRE"]
+    },
+    {
+        "id": 57,
+        "title": "MATH243",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": ["BioinformaticsRE"]
+    },
+    {
+        "id": 58,
+        "title": "MATH302",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": [""]
+    },
+    {
+        "id": 59,
+        "title": "MATH426",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": [""]
+    },
+    {
+        "id": 60,
+        "title": "CISC360",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": [""]
+    },
+    {
+        "id": 61,
+        "title": "CISC471",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": [""]
+    },
+    {
+        "id": 62,
+        "title": "MATH351",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": [""]
+    },
+    {
+        "id": 63,
+        "title": "MATH428",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": [""]
+    },
+    {
+        "id": 64,
+        "title": "CISC300+",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": ["BioinformaticsRE"]
+    },
+    {
+        "id": 65,
+        "title": "MATH450",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": [""]
+    },
+    {
+        "id": 66,
+        "title": "MATH451",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": [""]
+    },
+    {
+        "id": 67,
+        "title": "MATH535",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": [""]
+    },
+    {
+        "id": 68,
+        "title": "CISC387",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": [""]
+    },
+    {
+        "id": 69,
+        "title": "CISC487",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": [""]
+    },
+    {
+        "id": 70,
+        "title": "CPEG470",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": [""]
+    },
+    {
+        "id": 71,
+        "title": "CPEG497",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": [""]
+    },
+    {
+        "id": 72,
+        "title": "CISC401",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": [""]
+    },
+    {
+        "id": 73,
+        "title": "CISC404",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": [""]
+    },
+    {
+        "id": 74,
+        "title": "MATH245",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": [""]
+    },
+    {
+        "id": 75,
+        "title": "MATH315",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": [""]
+    },
+    {
+        "id": 76,
+        "title": "ARSC116",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": [""]
+    },
+    {
+        "id": 77,
+        "title": "BHAN135",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": [""]
+    },
+    {
+        "id": 78,
+        "title": "ACCT363",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": [""]
+    },
+    {
+        "id": 79,
+        "title": "ACCT364",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": [""]
+    },
+    {
+        "id": 80,
+        "title": "AFRA110",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": [""]
+    },
+    {
+        "id": 81,
+        "title": "AFRA193",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": [""]
+    },
+    {
+        "id": 82,
+        "title": "AFRA206",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": [""]
+    },
+    {
+        "id": 83,
+        "title": "ARFA250",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": [""]
+    },
+    {
+        "id": 84,
+        "title": "AFRA110",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": [""]
+    },
+    {
+        "id": 85,
+        "title": "AFRA205",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": [""]
+    },
+    {
+        "id": 86,
+        "title": "AFRA223",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": [""]
+    },
+    {
+        "id": 87,
+        "title": "ARGI100",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": [""]
+    },
+    {
+        "id": 88,
+        "title": "ANFS101",
+        "name": " ",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": [""]
+    },
+    {
+        "id": 89,
+        "title": "BISC401",
+        "name": "Molecular Biology of the Cell",
+        "description": "Introduction to the molecular biology of eucaryotes and procaryotes. Topics include structure and function of proteins and nucleic acids; replication and repair of DNA; biosynthesis of RNA and proteins; membranes, transport, composition and function of the eucaryotic cell, chromosomes, viruses, the immune system and recombinant DNA.",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "CAS",
+        "prereq": ["BISC207"],
+        "coreq": [""],
+        "requirements": ["Bioinformatics"]
+    },
+    {
+        "id": 90,
+        "title": "CISC436",
+        "name": "Computational Biology and Bioinformatics",
+        "description": "Concepts, methodologies, and tools in bioinformatics. Abstraction of biological problems for computational solutions. Genome sequencing and assembly, bio-sequence analysis and comparison and database search, dynamics programming, hidden Markov models, and phylogenetic trees.",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "COE",
+        "prereq": ["CISC220"],
+        "coreq": [""],
+        "requirements": ["ArtificialIntelligenceRE", "Bioinformatics"]
+    },
+    {
+        "id": 91,
+        "title": "ANFS300",
+        "name": "",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": ["BioinformaticsRE"]
+    },
+    {
+        "id": 92,
+        "title": "ANFS310",
+        "name": "",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": ["BioinformaticsRE"]
+    },
+    {
+        "id": 93,
+        "title": "ANFS470",
+        "name": "",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": ["BioinformaticsRE"]
+    },
+    {
+        "id": 94,
+        "title": "BISC403",
+        "name": "",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": ["BioinformaticsRE"]
+    },
+    {
+        "id": 95,
+        "title": "BISC484",
+        "name": "",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": ["BioinformaticsRE"]
+    },
+    {
+        "id": 96,
+        "title": "BISC492",
+        "name": "",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": ["BioinformaticsRE"]
+    },
+    {
+        "id": 97,
+        "title": "CHEM214",
+        "name": "",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": ["BioinformaticsRE"]
+    },
+    {
+        "id": 98,
+        "title": "CHEM216",
+        "name": "",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": ["BioinformaticsRE"]
+    },
+    {
+        "id": 99,
+        "title": "CHEM322",
+        "name": "",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": ["BioinformaticsRE"]
+    },
+    {
+        "id": 100,
+        "title": "CHEM326",
+        "name": "",
+        "description": " ",
+        "credits": 3,
+        "semester": ["Fall", "Spring"],
+        "department": "",
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": ["BioinformaticsRE"]
+    },
+    {
+        "id": 101,
+        "title": "EGGG101",
+        "name": "Introduction to Engineering",
+        "description": "Introduction to profession, including disciplines of chemical, civil, computer, electrical, environmental, and mechanical engineering. Prepares students for success through integration of: technical problem solving and engineering design, ethical decision-making, teamwork, and communicating to diverse audiences.",
+        "credits": 2,
+        "semester": ["Fall"],
+        "department": "COE",
+        "prereq": ["None"],
+        "coreq": ["None"],
+        "requirements": ["First Year Experience"]
     }
 ]
