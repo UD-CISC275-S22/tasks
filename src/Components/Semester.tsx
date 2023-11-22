@@ -2,10 +2,36 @@
 
 import React, { useState } from "react";
 import "../App.css";
+import { courseList, defaultCourseList } from "./course";
 import "./Semester.css";
 import { Course } from "../Interfaces/course";
 import { Button } from "react-bootstrap";
 import { Semester } from "../Interfaces/semester";
+//import { Degree } from "../Interfaces/degree";
+import sample from "../data/AllCourseList.json";
+import CourseEdit from "./CourseEdit";
+import { updateCourseList, findCourse } from "./course";
+
+//A variable able to use for the list of courses within the JSON file.
+const COURSE_LIST = courseList;
+
+//variable to use DEFAULT list of courses from JSON file - Malika
+const DEFAULT_COURSE_LIST = defaultCourseList;
+
+//create initial semester for testing
+const SEM1: Semester = {
+    type: ["Fall"],
+    year: 2024,
+    totalCredits: 18,
+    courseList: COURSE_LIST
+};
+const SEM2: Semester = {
+    type: ["Fall"],
+    year: 2024,
+    totalCredits: 18,
+    courseList: COURSE_LIST
+};
+
 //import sample from "../data/AllCourseList.json";
 import { ClearSemester } from "./clearingSemester";
 import { DropAdd } from "./dropAdd";
@@ -28,6 +54,12 @@ export function ViewSemester(): JSX.Element {
     const [targetSem, setTargetSem] = useState<string>("Fall"); //fall or spring only
     const [targetYear, setTargetYear] = useState<number>(1);
 
+
+    //states for editing courses - created by Malika
+    const [showEditModal, setShowEditModal] = useState(false);
+    const [editedCourse, setEditedCourse] = useState<Course | null>(null);
+
+    //NOTE FOR MICHAEL: Here is where you can add your add courses and remove courses functions
     //Here is where you can add your add courses and remove courses functions
     function updateCurrCourse(event: React.ChangeEvent<HTMLSelectElement>) {
         setCurrCourse(event.target.value);
@@ -344,6 +376,44 @@ export function ViewSemester(): JSX.Element {
         );
     }
 
+    //functions to edit courses - Malika
+    const handleEditShow = (course: Course | undefined) => {
+        if (course) {
+            setEditedCourse(course);
+            setShowEditModal(true);
+        } else {
+            return null;
+        }
+    };
+
+    const handleEditClose = () => {
+        setEditedCourse(null);
+        setShowEditModal(false);
+    };
+
+    const handleSaveChanges = (editedCourse: Course) => {
+        //update courseList with edited values
+        updateCourseList(COURSE_LIST, editedCourse);
+
+        setEditedCourse(null);
+        setCurrCourse("");
+        // Close the modal
+        handleEditClose();
+    };
+
+    const handleResetToDefault = (editedCourse: Course) => {
+        console.log("Edited course exists");
+        const defaultCourse = findCourse(DEFAULT_COURSE_LIST, editedCourse.id);
+        if (defaultCourse) {
+            setEditedCourse(defaultCourse);
+
+            updateCourseList(COURSE_LIST, defaultCourse);
+        }
+
+        // Close the modal
+        handleEditClose();
+    };
+
     //actual return for the tsx file to App.tsx
     return (
         <div>
@@ -376,6 +446,26 @@ export function ViewSemester(): JSX.Element {
                 </Form.Group>
                 <Button onClick={dropClass}>Remove Class</Button>
                 <Button onClick={addClass}>Add Class</Button>
+                <Button
+                    onClick={() =>
+                        handleEditShow(
+                            COURSE_LIST.find(
+                                (course) => course.title === currCourse
+                            )
+                        )
+                    }
+                >
+                    Edit Course
+                </Button>
+                {/* CourseEdit modal */}
+                {editedCourse && (
+                    <CourseEdit
+                        editedCourse={editedCourse}
+                        onSaveChanges={handleSaveChanges}
+                        onResetToDefault={handleResetToDefault}
+                        onClose={handleEditClose}
+                    />
+                )}
             </div>
             */}
         </div>
