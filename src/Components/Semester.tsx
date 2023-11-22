@@ -10,7 +10,7 @@ import { Semester } from "../Interfaces/semester";
 //import { Degree } from "../Interfaces/degree";
 import sample from "../data/AllCourseList.json";
 import CourseEdit from "./CourseEdit";
-import { updateCourseList, findCourse } from "./course";
+import { updateCourseList, findCourse, displayCourse } from "./course";
 
 //A variable able to use for the list of courses within the JSON file.
 const COURSE_LIST = courseList;
@@ -137,9 +137,18 @@ export function ViewSemester(): JSX.Element {
 
     //function to change number of semesters shown (can be either 1 or 2 only - can add 0 or more semesters later)
     function changeSemCount(): void {
-        if (SemCount == 2) {
+        // if (SemCount == 2) {
+        //     setSemCount(1);
+        //     setSemesterType("Fall");
+        // } else {
+        //     setSemCount(2);
+        // }
+        if (SemCount === 2) {
+            console.log("Changing SemCount to 1");
             setSemCount(1);
+            setSemesterType("Fall");
         } else {
+            console.log("Changing SemCount to 2");
             setSemCount(2);
         }
     }
@@ -156,7 +165,7 @@ export function ViewSemester(): JSX.Element {
         /* ADD OTHER TYPES OF SEMESTERS LATER */
     }
 
-    //function to display ONLY the fall semester
+    // function to display ONLY the fall semester
     function displayFall(): JSX.Element {
         return (
             <div className="Fall">
@@ -166,9 +175,10 @@ export function ViewSemester(): JSX.Element {
                     (course: Course): JSX.Element => (
                         <div className="Course" key={course.id}>
                             <span key={course.id}>
-                                {course.title}
+                                {/* {course.title}
                                 {" - "}
-                                {course.name}
+                                {course.name} */}
+                                {displayCourse(course)}
                             </span>
                         </div>
                     )
@@ -176,6 +186,20 @@ export function ViewSemester(): JSX.Element {
             </div>
         );
     }
+
+    // function displayFall(): JSX.Element {
+    //     return (
+    //         <div className="Fall">
+    //             <h1>Fall</h1>
+    //             {
+    //                 // eslint-disable-next-line no-extra-parens
+    //                 fallSemester.courseList.map((course: Course) => (
+    //                     <div key={course.id}>{displayCourse(course)}</div>
+    //                 ))
+    //             }
+    //         </div>
+    //     );
+    // }
 
     //function to show ONLY the spring semester
     function displaySpring(): JSX.Element {
@@ -187,9 +211,10 @@ export function ViewSemester(): JSX.Element {
                     (course: Course): JSX.Element => (
                         <div className="Course" key={course.id}>
                             <span key={course.id}>
-                                {course.title}
+                                {/* {course.title}
                                 {" - "}
-                                {course.name}
+                                {course.name} */}
+                                {displayCourse(course)}
                             </span>
                         </div>
                     )
@@ -209,9 +234,10 @@ export function ViewSemester(): JSX.Element {
                         (course: Course): JSX.Element => (
                             <div className="Course" key={course.id}>
                                 <span key={course.id}>
-                                    {course.title}
-                                    {" - "}
-                                    {course.name}
+                                    {/* {course.title}
+                                {" - "}
+                                {course.name} */}
+                                    {displayCourse(course)}
                                 </span>
                             </div>
                         )
@@ -224,9 +250,10 @@ export function ViewSemester(): JSX.Element {
                         (course: Course): JSX.Element => (
                             <div className="Course" key={course.id}>
                                 <span key={course.id}>
-                                    {course.title}
-                                    {" - "}
-                                    {course.name}
+                                    {/* {course.title}
+                                {" - "}
+                                {course.name} */}
+                                    {displayCourse(course)}
                                 </span>
                             </div>
                         )
