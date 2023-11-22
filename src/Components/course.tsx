@@ -1,4 +1,3 @@
-
 //all prep stuff for courses will go in here and things like finding the course based off of an id
 import React, { useState } from "react";
 //import { Button, Modal} from "react-bootstrap";
