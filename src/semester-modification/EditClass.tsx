@@ -30,11 +30,13 @@ export function EditClass({
         <div>
             <Button onClick={editClass}>
                 {
-                    <EditClassInfoModal
+                    {
+                        /*<EditClassInfoModal
                         handleClose={flipModalView}
                         show={modalView}
                         courseToEdit={classToEdit}
-                    ></EditClassInfoModal>
+                ></EditClassInfoModal>*/
+                    }
                 }{" "}
                 Edit Course
             </Button>

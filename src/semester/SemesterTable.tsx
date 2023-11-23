@@ -85,17 +85,38 @@ export function SemesterTable({
         s_copy.splice(semesterIndex, 1, updatedSemester);
         setSemesters(s_copy);
     }
-    function clearCourseFromSemester(semester: semester): void {
+    function updateSemester(semester: semester): void {
         const semesterIndex = semesters.findIndex(
             (semesterItem: semester): boolean => semesterItem.id === semester.id
+        );
+        const newTotalCredits = semesters[semesterIndex].classList.reduce(
+            (total: number, currentClass: classes) =>
+                total + currentClass.credits,
+            0
+        );
+        const s_copy = semesters.map((sem) => ({
+            ...sem,
+            classList: [...sem.classList],
+            totalCredits: newTotalCredits
+        }));
+        s_copy.splice(semesterIndex, 1, semester);
+        setSemesters(s_copy);
+    }
+    /*function editCourseInSemester(course: classes, semester: semester): void {
+        const semesterIndex = semesters.findIndex(
+            (semesterItem: semester): boolean => semesterItem.id === semester.id
+        );
+        const courseIndex = semesters[semesterIndex].classList.findIndex(
+            (courseItem: classes): boolean => courseItem === course
         );
         const s_copy = semesters.map((sem) => ({
             ...sem,
             classList: [...sem.classList]
         }));
-        s_copy.splice(semesterIndex, 1, semester);
+        s_copy.splice(semester[semesterIndex], 1, course);
         setSemesters(s_copy);
     }
+    */
 
     //Handles drop and what happens when the element is let go from the mouse
     const handleOnDrop = (
@@ -121,6 +142,12 @@ export function SemesterTable({
                         ...foundSemester,
                         classList: [...foundSemester.classList, dragCourse]
                     };
+                    const totalCredits = updatedSemester.classList.reduce(
+                        (total: number, currentClass: classes) =>
+                            total + currentClass.credits,
+                        0
+                    );
+                    updatedSemester.totalCredits = totalCredits;
                     console.log(updatedSemester.classList);
                     console.log(semesters);
                     const updatedSemesters = semesters.map(
@@ -163,7 +190,7 @@ export function SemesterTable({
                         clearSemester={clearSemester}
                         setDragCourse={setDragCourse}
                         clearCourses={clearCourses}
-                        clearCourseFromSemester={clearCourseFromSemester}
+                        updateSemester={updateSemester}
                     ></SemesterView>
                 );
             })}
