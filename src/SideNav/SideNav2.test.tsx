@@ -21,6 +21,9 @@ describe("FilteringSearchTests", () => {
                 flipAddView={function (): void {
                     throw new Error("Function not implemented.");
                 }}
+                flipDownload={function (): void {
+                    throw new Error("Function not implemented.");
+                }}
             />
         );
         expect(screen.getByText(/Add Degree Plan/i)).toBeInTheDocument();

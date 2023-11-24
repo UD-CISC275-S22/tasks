@@ -15,6 +15,7 @@ import sample from "./data/Dummy.json";
 import { AddToSemester } from "./semester-modification/AddToSemester";
 import { ChosenMajor } from "./Audit/ChosenMajor";
 import { PlanView } from "./PlanView/PlanView";
+import { DownloadPlan } from "./PlanView/DownloadPlan";
 
 function App(): JSX.Element {
     const [page, setPage] = useState(false);
@@ -24,6 +25,7 @@ function App(): JSX.Element {
     const [addView, setAddView] = useState(false);
     const [seeAudit, setSeeAudit] = useState(false);
     const [displayPlan, setdisplayPlan] = useState(false);
+    const [downloadPlan, setDownloadPlan] = useState(false);
     const [currentPlan, setCurrentPlan] = useState("");
 
     const getName = () => {
@@ -50,6 +52,10 @@ function App(): JSX.Element {
 
     const flipPlan = () => {
         setdisplayPlan(!displayPlan);
+    };
+
+    const flipDownload = () => {
+        setDownloadPlan(!downloadPlan);
     };
 
     const planExamples = sample.map(
@@ -117,6 +123,7 @@ function App(): JSX.Element {
                                 flipModalView={flipModalView}
                                 flipAudit={flipAudit}
                                 flipAddView={flipAddView}
+                                flipDownload={flipDownload}
                             ></SideNav2>
                         </Col>
                         <Col sm={10}>
@@ -149,6 +156,13 @@ function App(): JSX.Element {
                                     allplans={plans}
                                     changeViewSemesters={setSemesters}
                                     setCurrentPlan={setCurrentPlan}
+                                />
+                            )}
+                            {downloadPlan && (
+                                <DownloadPlan
+                                    handleClose={flipDownload}
+                                    show={downloadPlan}
+                                    allplans={plans}
                                 />
                             )}
                             <SwitchComponents
