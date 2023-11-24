@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { classes } from "../Interface/classes";
 import { semester } from "../Interface/semester";
 import { SemesterView } from "./SemesterView";
-import { Button } from "react-bootstrap";
-
+//import { Button } from "react-bootstrap";
+/*
 //CISC275 Tome and StackOverflow link that was given was used to build this code.
 //https://stackoverflow.com/questions/14964035/how-to-export-javascript-array-info-to-csv-on-client-side/68146412#68146412
 //TBD and not finished. Takes in the current semesters and attempts to create a csv
@@ -45,6 +45,7 @@ function downloadBlob(
     pom.setAttribute("download", filename);
     pom.click();
 }
+*/
 
 //Created a function to map all the given semesters into their own view.
 export function SemesterTable({
@@ -56,10 +57,10 @@ export function SemesterTable({
 }): JSX.Element {
     //drag course is being used for ability to drag. Not complete yet.
     const [dragCourse, setDragCourse] = useState<classes>();
-    const csv = arrayToCSV([semesters]);
+    /*const csv = arrayToCSV([semesters]);
     const download = () => {
         downloadBlob(csv, ".csv", "text/csv;charset=utf-8;");
-    };
+    };*/
 
     //Clears Semesters
     function clearSemester(id: number): void {
@@ -173,12 +174,12 @@ export function SemesterTable({
         console.log(dragCourse);
     };
 
-    <Button onClick={download}>download</Button>;
+    //<Button onClick={download}>download</Button>;
 
     return (
         <div className="semesterTable">
             <h2>Semester Schedule</h2>
-            <Button onClick={download}>download</Button>
+            {/*<Button onClick={download}>download</Button>*/}
 
             {semesters.map((semester) => {
                 return (
