@@ -36,9 +36,7 @@ describe("Project Component tests", () => {
 
     test("Add semesters", () => {
         const addSem = "Spring 2026";
-        const input = screen.getByTestId("year");
         const enterButton = screen.getByText("Enter");
-        input.setAttribute("value", addSem);
         enterButton.click();
         const checkbox = screen.getByTestId("semesters");
         checkbox.click();

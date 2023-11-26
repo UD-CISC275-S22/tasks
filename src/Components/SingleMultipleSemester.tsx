@@ -104,7 +104,6 @@ export function SingleMultipleSemester(): JSX.Element {
         );
     }
 
-    // Make a helper function to add information to the table.(Add/Remove from array?)
     function addForClickedSem(clickedArr: semester[]) {
         console.log(semArr.map((e) => e.name));
         const tables = clickedArr.map((clickedSem: semester): JSX.Element => {
