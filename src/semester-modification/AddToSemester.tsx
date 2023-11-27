@@ -1,7 +1,6 @@
 /* eslint-disable no-extra-parens */
 import React from "react";
 import { Button, Form, Modal } from "react-bootstrap";
-//import { FilteringSearch } from "../../FilteringSearch/FilteringSearch";
 import realData from "../data/corrected_data.json";
 import { semester } from "../Interface/semester";
 import { useState } from "react";
