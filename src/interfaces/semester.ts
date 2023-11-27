@@ -19,5 +19,10 @@ export interface CoursePlan {
 }
 
 export interface TotalDB {
-    Coureseplans:CoursePlan[];
+    Courseplans:CoursePlan[];
+}
+
+export interface dbMangement {
+    dataset: TotalDB;
+    stateSetter: (DB: TotalDB) => void;
 }
