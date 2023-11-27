@@ -1066,18 +1066,6 @@
         "requirements": [""]
     },
     {
-        "id": 84,
-        "title": "AFRA110",
-        "name": " ",
-        "description": " ",
-        "credits": 3,
-        "semester": ["Fall", "Spring"],
-        "department": "",
-        "prereq": [""],
-        "coreq": [""],
-        "requirements": [""]
-    },
-    {
         "id": 85,
         "title": "AFRA205",
         "name": " ",
