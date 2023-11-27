@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+/*import React, { useState } from "react";
 import { degreePlan } from "../interfaces/degreePlan";
 import { SingleMultipleSemester } from "./SingleMultipleSemester";
 import { Views } from "../interfaces/viewProps";
@@ -55,4 +55,4 @@ export const DegreePlanView = ({
 //extrafuction I might need to add is when someone goes back to degreeplan view,
 //they have to save all the change you made and update the degreePlanView and update all degreePlanList
 
-//try to add clearSemesters into SingleMutipleSemesters
+//try to add clearSemesters into SingleMutipleSemesters */
