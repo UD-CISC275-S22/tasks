@@ -1,0 +1,524 @@
+[
+    {
+        "ticker": "EGGG101",
+        "name": "Introduction to Engineering (FYE)",
+        "credits": 2,
+        "prereq": "N/A"
+    },
+    {
+        "ticker": "SCIEXXX",
+        "name": "Science Requirement",
+        "credits": 3,
+        "prereq": "N/A"
+    },
+    {
+        "ticker": "FREEXXX",
+        "name": "Free Elective",
+        "credits": 3,
+        "prereq": "N/A"
+    },
+    {
+        "ticker": "GRPAXXX",
+        "name": "Group A Breadth Requirement",
+        "credits": 3,
+        "prereq": "N/A"
+    },
+    {
+        "ticker": "GRPBXXX",
+        "name": "Group B Breadth Requirement",
+        "credits": 3,
+        "prereq": "N/A"
+    },
+    {
+        "ticker": "GRPCXXX",
+        "name": "Group C Breadth Requirement",
+        "credits": 3,
+        "prereq": "N/A"
+    },
+    {
+        "ticker": "GRPDXXX",
+        "name": "Group D Breadth Requirement",
+        "credits": 3,
+        "prereq": "N/A"
+    },
+    {
+        "ticker": "CISC101",
+        "name": "Principles of Computing",
+        "credits": 3,
+        "prereq": "N/A"
+    },
+    {
+        "ticker": "CISC103",
+        "name": "Introduction to Computer Science with Web Applications",
+        "credits": 3,
+        "prereq": "N/A"
+    },
+    {
+        "ticker": "CISC104",
+        "name": "Introduction to Programming in Games",
+        "credits": 3,
+        "prereq": "N/A"
+    },
+    {
+        "ticker": "CISC106",
+        "name": "General Computer Science for Engineers",
+        "credits": 3,
+        "prereq": "N/A"
+    },
+    {
+        "ticker": "CISC108",
+        "name": "Introduction to Computer Science I",
+        "credits": 3,
+        "prereq": "N/A"
+    },
+    {
+        "ticker": "CISC166",
+        "name": "SPECIAL PROBLEM",
+        "credits": 3,
+        "prereq": "N/A"
+    },
+    {
+        "ticker": "CISC167",
+        "name": "SEMINAR",
+        "credits": 3,
+        "prereq": "N/A"
+    },
+    {
+        "ticker": "CISC181",
+        "name": "Introduction to Computer Science II",
+        "credits": 3,
+        "prereq": "CISC106 or CISC108"
+    },
+    {
+        "ticker": "CISC187",
+        "name": "Vertically Integrated Projects I",
+        "credits": 3,
+        "prereq": "N/A"
+    },
+    {
+        "ticker": "CISC204",
+        "name": "Introduction to Game Development",
+        "credits": 3,
+        "prereq": "N/A"
+    },
+    {
+        "ticker": "CISC210",
+        "name": "Introduction to Systems Programming",
+        "credits": 3,
+        "prereq": "CISC106 or CISC108"
+    },
+    {
+        "ticker": "CISC220",
+        "name": "Data Structures",
+        "credits": 3,
+        "prereq": "CISC210"
+    },
+    {
+        "ticker": "CISC250",
+        "name": "Business Telecommunication Networks",
+        "credits": 3,
+        "prereq": "CISC181"
+    },
+    {
+        "ticker": "CISC260",
+        "name": "Machine Organization and Assembly Language",
+        "credits": 3,
+        "prereq": "CISC210"
+    },
+    {
+        "ticker": "CISC266",
+        "name": "SPECIAL PROBLEM",
+        "credits": 3,
+        "prereq": "N/A"
+    },
+    {
+        "ticker": "CISC267",
+        "name": "SEMINAR",
+        "credits": 3,
+        "prereq": "N/A"
+    },
+    {
+        "ticker": "CISC275",
+        "name": "Introduction to Software Engineering",
+        "credits": 3,
+        "prereq": "CISC181 and CISC220"
+    },
+    {
+        "ticker": "CISC287",
+        "name": "Vertically Integrated Projects II",
+        "credits": 3,
+        "prereq": "N/A"
+    },
+    {
+        "ticker": "CISC303",
+        "name": "Automata Theory",
+        "credits": 3,
+        "prereq": "MATH210 and CISC220"
+    },
+    {
+        "ticker": "CISC304",
+        "name": "Logic for Programming",
+        "credits": 3,
+        "prereq": "CISC181 and CISC220"
+    },
+    {
+        "ticker": "CISC320",
+        "name": "Introduction to Algorithms",
+        "credits": 3,
+        "prereq": "MATH210 and CISC220"
+    },
+    {
+        "ticker": "CISC355",
+        "name": "Computers, Ethics & Society",
+        "credits": 3,
+        "prereq": "N/A"
+    },
+    {
+        "ticker": "CISC356",
+        "name": "Intellectual Property in the Digital Age",
+        "credits": 3,
+        "prereq": "N/A"
+    },
+    {
+        "ticker": "CISC357",
+        "name": "Engaging Youth in Computing",
+        "credits": 3,
+        "prereq": "CISC101 or CISC103 or CISC106 or CISC108"
+    },
+    {
+        "ticker": "CISC358",
+        "name": "Introduction to Computer Science Research",
+        "credits": 3,
+        "prereq": "CISC220"
+    },
+    {
+        "ticker": "CISC360",
+        "name": "Computer Architecture",
+        "credits": 3,
+        "prereq": "CISC220 and CISC260"
+    },
+    {
+        "ticker": "CISC361",
+        "name": "Operating Systems",
+        "credits": 3,
+        "prereq": "CISC220 and CISC260"
+    },
+    {
+        "ticker": "CISC362",
+        "name": "Cloud Computing and Big Data",
+        "credits": 3,
+        "prereq": "CISC220"
+    },
+    {
+        "ticker": "CISC364",
+        "name": "System Security",
+        "credits": 3,
+        "prereq": "CISC361"
+    },
+    {
+        "ticker": "CISC366",
+        "name": "Independent Study",
+        "credits": 3,
+        "prereq": "N/A"
+    },
+    {
+        "ticker": "CISC367",
+        "name": "SEMINAR",
+        "credits": 3,
+        "prereq": "N/A"
+    },
+    {
+        "ticker": "CISC372",
+        "name": "Parallel Programming",
+        "credits": 3,
+        "prereq": "CISC220"
+    },
+    {
+        "ticker": "CISC374",
+        "name": "Educational Game Development",
+        "credits": 3,
+        "prereq": "CISC220"
+    },
+    {
+        "ticker": "CISC387",
+        "name": "Vertically Integrated Projects III",
+        "credits": 3,
+        "prereq": "N/A"
+    },
+    {
+        "ticker": "CISC401",
+        "name": "Elements of the Theory of Computation",
+        "credits": 3,
+        "prereq": "CISC303"
+    },
+    {
+        "ticker": "CISC404",
+        "name": "Logic in Computer Science",
+        "credits": 3,
+        "prereq": "CISC304"
+    },
+    {
+        "ticker": "CISC410",
+        "name": "Computational Mathematics I",
+        "credits": 3,
+        "prereq": "MATH305 or MATH351 or MATH349"
+    },
+    {
+        "ticker": "CISC411",
+        "name": "Computational Mathematics I",
+        "credits": 3,
+        "prereq": "MATH353 or MATH426 or CISC410"
+    },
+    {
+        "ticker": "CISC414",
+        "name": "Formal Methods in Software Engineering",
+        "credits": 3,
+        "prereq": "CISC304"
+    },
+    {
+        "ticker": "CISC415",
+        "name": "Software Testing and Maintenance",
+        "credits": 3,
+        "prereq": "CISC275"
+    },
+    {
+        "ticker": "CISC436",
+        "name": "Computational Biology and Bioinformatics",
+        "credits": 3,
+        "prereq": "CISC220"
+    },
+    {
+        "ticker": "CISC437",
+        "name": "Database Systems",
+        "credits": 3,
+        "prereq": "CISC220"
+    },
+    {
+        "ticker": "CISC440",
+        "name": "Computer Graphics",
+        "credits": 3,
+        "prereq": "CISC220 and MATH241"
+    },
+    {
+        "ticker": "CISC442",
+        "name": "Introduction to Computer Vision",
+        "credits": 3,
+        "prereq": "CISC220"
+    },
+    {
+        "ticker": "CISC449",
+        "name": "Topics in Computer Applications",
+        "credits": 3,
+        "prereq": "N/A"
+    },
+    {
+        "ticker": "CISC450",
+        "name": "Computer Networks I",
+        "credits": 3,
+        "prereq": "CISC260"
+    },
+    {
+        "ticker": "CISC453",
+        "name": "Simulation of Computer Networks",
+        "credits": 3,
+        "prereq": "CISC450"
+    },
+    {
+        "ticker": "CISC459",
+        "name": "Topics in Communications, Distributed Computing and Networks",
+        "credits": 3,
+        "prereq": "CISC450"
+    },
+    {
+        "ticker": "CISC464",
+        "name": "Introduction to Network Security",
+        "credits": 3,
+        "prereq": "CISC450"
+    },
+    {
+        "ticker": "CISC465",
+        "name": "Introduction to Cybersecurity",
+        "credits": 3,
+        "prereq": "N/A"
+    },
+    {
+        "ticker": "CISC466",
+        "name": "Independent Study",
+        "credits": 3,
+        "prereq": "N/A"
+    },
+    {
+        "ticker": "CISC467",
+        "name": "SEMINAR",
+        "credits": 3,
+        "prereq": "N/A"
+    },
+    {
+        "ticker": "CISC469",
+        "name": "Computer Security Principles and Practice",
+        "credits": 3,
+        "prereq": "CISC361"
+    },
+    {
+        "ticker": "CISC471",
+        "name": "Compiler Design",
+        "credits": 3,
+        "prereq": "CISC260 and CISC303"
+    },
+    {
+        "ticker": "CISC472",
+        "name": "Web Applications Security",
+        "credits": 3,
+        "prereq": "N/A"
+    },
+    {
+        "ticker": "CISC473",
+        "name": "Computer Science Projects",
+        "credits": 3,
+        "prereq": "N/A"
+    },
+    {
+        "ticker": "CISC474",
+        "name": "Advanced Web Technologies",
+        "credits": 3,
+        "prereq": "CISC275"
+    },
+    {
+        "ticker": "CISC475",
+        "name": "Software Engineering Principles and Practices",
+        "credits": 3,
+        "prereq": "CISC275"
+    },
+    {
+        "ticker": "CISC476",
+        "name": "Secure Software Design",
+        "credits": 3,
+        "prereq": "N/A"
+    },
+    {
+        "ticker": "CISC479",
+        "name": "Topics in Architecture and Software",
+        "credits": 3,
+        "prereq": "CISC361"
+    },
+    {
+        "ticker": "CISC481",
+        "name": "Artificial Intelligence",
+        "credits": 3,
+        "prereq": "CISC220, CISC304"
+    },
+    {
+        "ticker": "CISC482",
+        "name": "Introduction to Human-Computer Interaction",
+        "credits": 3,
+        "prereq": "CISC275"
+    },
+    {
+        "ticker": "CISC483",
+        "name": "Introduction to Data Mining",
+        "credits": 3,
+        "prereq": "CISC220, and MATH205 or MATH350"
+    },
+    {
+        "ticker": "CISC484",
+        "name": "Introduction to Machine Learning",
+        "credits": 3,
+        "prereq": "CISC220, and MATH205 or MATH350"
+    },
+    {
+        "ticker": "CISC486",
+        "name": "Introduction to Multi-Agent Systems",
+        "credits": 3,
+        "prereq": "CISC220"
+    },
+    {
+        "ticker": "CISC487",
+        "name": "Vertically Integrated Projects IV",
+        "credits": 3,
+        "prereq": "N/A"
+    },
+    {
+        "ticker": "CISC488",
+        "name": "Introduction to Natural Language Processing",
+        "credits": 3,
+        "prereq": "CISC220"
+    },
+    {
+        "ticker": "CISC489",
+        "name": "Topics: Artitificial Intelligence",
+        "credits": 3,
+        "prereq": "N/A"
+    },
+    {
+        "ticker": "CISC498",
+        "name": "Computer Science Senior Design Project I",
+        "credits": 3,
+        "prereq": "CISC275"
+    },
+    {
+        "ticker": "CISC499",
+        "name": "Computer Science Senior Design Project II",
+        "credits": 3,
+        "prereq": "CISC320 and CISC498"
+    },
+    {
+        "ticker": "MATH117",
+        "name": "Pre-Calculus for Scientists and Engineers",
+        "credits": 3,
+        "prereq": "MATH010 or Exam Score"
+    },
+    {
+        "ticker": "MATH205",
+        "name": "Statistical Methods",
+        "credits": 4,
+        "prereq": "MATH210 or MATH230"
+    },
+    {
+        "ticker": "MATH210",
+        "name": "Discrete Mathematics I",
+        "credits": 3,
+        "prereq": "MATH241, MATH242, or MATH232"
+    },
+    {
+        "ticker": "MATH241",
+        "name": "Analytic Geometry & Calculus A",
+        "credits": 4,
+        "prereq": "MATH117 or Exam Score"
+    },
+    {
+        "ticker": "MATH242",
+        "name": "Analytic Geometry & Calculus B",
+        "credits": 4,
+        "prereq": "MATH241 or MATH232"
+    },
+    {
+        "ticker": "MATH349",
+        "name": "Elementary Linear Algebra",
+        "credits": 3,
+        "prereq": "MATH230 or MATH242"
+    },
+    {
+        "ticker": "MATH350",
+        "name": "Probability Theory and Simulation Methods",
+        "credits": 3,
+        "prereq": "N/A"
+    },
+    {
+        "ticker": "ENGL110",
+        "name": "Seminar in Composition",
+        "credits": 3,
+        "prereq": "N/A"
+    },
+    {
+        "ticker": "ENGL312",
+        "name": "Written Communications in Business",
+        "credits": 3,
+        "prereq": "ENGL110"
+    },
+    {
+        "ticker": "ENGL410",
+        "name": "Technical Writing",
+        "credits": 3,
+        "prereq": "ENGL110"
+    }
+]
