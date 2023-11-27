@@ -11,8 +11,7 @@ interface degreePlanViewProps {
 
 export const DegreePlanView = ({
     setCurrentView,
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    setCurrentDegreePlan,
+    //setCurrentDegreePlan,
     degreePlanList
 }: degreePlanViewProps): JSX.Element => {
     const [viewDegreePlan, setviewDegreePlan] = useState<degreePlan>();
