@@ -114,15 +114,21 @@ export function AddToSemester({
                                 {filteredCourses.map((course) => {
                                     return (
                                         <div
+                                            className="searchResult"
                                             onClick={() =>
                                                 handleClick(course.code)
                                             }
                                             style={{
-                                                cursor: "pointer"
+                                                cursor: "pointer",
+                                                color: "white",
+                                                textAlign: "center",
+                                                borderBottom: "solid",
+                                                borderBottomColor: "white",
+                                                fontWeight: "bold"
                                             }}
                                             key={course.code}
                                         >
-                                            {course.code.replace(" ", "")}
+                                            {course.code}
                                         </div>
                                     );
                                 })}

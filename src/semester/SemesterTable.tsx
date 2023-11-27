@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { classes } from "../Interface/classes";
 import { semester } from "../Interface/semester";
 import { SemesterView } from "./SemesterView";
-import { Button } from "react-bootstrap";
-
+//import { Button } from "react-bootstrap";
+/*
 //CISC275 Tome and StackOverflow link that was given was used to build this code.
 //https://stackoverflow.com/questions/14964035/how-to-export-javascript-array-info-to-csv-on-client-side/68146412#68146412
 //TBD and not finished. Takes in the current semesters and attempts to create a csv
@@ -45,6 +45,7 @@ function downloadBlob(
     pom.setAttribute("download", filename);
     pom.click();
 }
+*/
 
 //Created a function to map all the given semesters into their own view.
 export function SemesterTable({
@@ -56,10 +57,10 @@ export function SemesterTable({
 }): JSX.Element {
     //drag course is being used for ability to drag. Not complete yet.
     const [dragCourse, setDragCourse] = useState<classes>();
-    const csv = arrayToCSV([semesters]);
+    /*const csv = arrayToCSV([semesters]);
     const download = () => {
         downloadBlob(csv, ".csv", "text/csv;charset=utf-8;");
-    };
+    };*/
 
     //Clears Semesters
     function clearSemester(id: number): void {
@@ -85,17 +86,38 @@ export function SemesterTable({
         s_copy.splice(semesterIndex, 1, updatedSemester);
         setSemesters(s_copy);
     }
-    function clearCourseFromSemester(semester: semester): void {
+    function updateSemester(semester: semester): void {
         const semesterIndex = semesters.findIndex(
             (semesterItem: semester): boolean => semesterItem.id === semester.id
+        );
+        const newTotalCredits = semesters[semesterIndex].classList.reduce(
+            (total: number, currentClass: classes) =>
+                total + currentClass.credits,
+            0
+        );
+        const s_copy = semesters.map((sem) => ({
+            ...sem,
+            classList: [...sem.classList],
+            totalCredits: newTotalCredits
+        }));
+        s_copy.splice(semesterIndex, 1, semester);
+        setSemesters(s_copy);
+    }
+    /*function editCourseInSemester(course: classes, semester: semester): void {
+        const semesterIndex = semesters.findIndex(
+            (semesterItem: semester): boolean => semesterItem.id === semester.id
+        );
+        const courseIndex = semesters[semesterIndex].classList.findIndex(
+            (courseItem: classes): boolean => courseItem === course
         );
         const s_copy = semesters.map((sem) => ({
             ...sem,
             classList: [...sem.classList]
         }));
-        s_copy.splice(semesterIndex, 1, semester);
+        s_copy.splice(semester[semesterIndex], 1, course);
         setSemesters(s_copy);
     }
+    */
 
     //Handles drop and what happens when the element is let go from the mouse
     const handleOnDrop = (
@@ -121,6 +143,12 @@ export function SemesterTable({
                         ...foundSemester,
                         classList: [...foundSemester.classList, dragCourse]
                     };
+                    const totalCredits = updatedSemester.classList.reduce(
+                        (total: number, currentClass: classes) =>
+                            total + currentClass.credits,
+                        0
+                    );
+                    updatedSemester.totalCredits = totalCredits;
                     console.log(updatedSemester.classList);
                     console.log(semesters);
                     const updatedSemesters = semesters.map(
@@ -146,12 +174,12 @@ export function SemesterTable({
         console.log(dragCourse);
     };
 
-    <Button onClick={download}>download</Button>;
+    //<Button onClick={download}>download</Button>;
 
     return (
         <div className="semesterTable">
             <h2>Semester Schedule</h2>
-            <Button onClick={download}>download</Button>
+            {/*<Button onClick={download}>download</Button>*/}
 
             {semesters.map((semester) => {
                 return (
@@ -163,7 +191,7 @@ export function SemesterTable({
                         clearSemester={clearSemester}
                         setDragCourse={setDragCourse}
                         clearCourses={clearCourses}
-                        clearCourseFromSemester={clearCourseFromSemester}
+                        updateSemester={updateSemester}
                     ></SemesterView>
                 );
             })}

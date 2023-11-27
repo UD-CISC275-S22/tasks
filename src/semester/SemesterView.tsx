@@ -1,7 +1,12 @@
+/* eslint-disable no-extra-parens */
 import React from "react";
 import { semester } from "../Interface/semester";
 import { classes } from "../Interface/classes";
 import { RemoveClass } from "../semester-modification/RemoveClass";
+import { EditClassInfoModal } from "../semester-modification/EditClassInfoModal";
+//import { EditClass } from "../semester-modification/EditClass";
+//import { useState } from "react";
+//import { Button } from "react-bootstrap";
 
 export function SemesterView({
     semester,
@@ -10,7 +15,7 @@ export function SemesterView({
     handleOnDrop,
     handleOnDragOver,
     clearCourses,
-    clearCourseFromSemester
+    updateSemester
 }: {
     semester: semester;
     clearSemester: (id: number) => void;
@@ -18,7 +23,7 @@ export function SemesterView({
     handleOnDrop: (event: React.DragEvent<HTMLDivElement>, id: number) => void;
     handleOnDragOver: (event: React.DragEvent<HTMLDivElement>) => void;
     clearCourses: (sems: semester) => void;
-    clearCourseFromSemester: (semester: semester) => void;
+    updateSemester: (semester: semester) => void;
 }): JSX.Element {
     //This grabs the info of the course being dragged.
     //TODO: Doesn't properly render on its own.
@@ -43,9 +48,10 @@ export function SemesterView({
                     <tr>
                         <th scope="col">Course Code</th>
                         <th scope="col">Course Title</th>
-                        <th scope="col">Credits</th>
+                        <th scope="col">Credits: {semester.totalCredits}</th>
                         <th scope="col">Prerequisites</th>
                         <th scope="col">Remove Class</th>
+                        <th scope="col">Edit Course</th>
                         {/*<th scope="col">Schedule</th>
                         <th scope="col">Location</th>
                         <th scope="col">Instructor</th>
@@ -68,7 +74,7 @@ export function SemesterView({
                                 <td>
                                     {classItem.preReq.length === 0
                                         ? "None"
-                                        : classItem.preReq}
+                                        : classItem.preReq.join(", ")}
                                 </td>
                                 <td>
                                     <RemoveClass
@@ -77,11 +83,38 @@ export function SemesterView({
                                         onRemoveClass={function (
                                             updatedSchedule: semester
                                         ): void {
-                                            clearCourseFromSemester(
-                                                updatedSchedule
-                                            );
+                                            updateSemester(updatedSchedule);
                                         }}
                                     ></RemoveClass>
+                                </td>
+                                <td>
+                                    <EditClassInfoModal
+                                        courseToEdit={classItem}
+                                        semester={semester}
+                                        updateSemester={updateSemester}
+                                    />
+                                    {/*modalView && (
+                                        <EditClassInfoModal
+                                            handleClose={flipModalView}
+                                            show={modalView}
+                                            courseToEdit={
+                                                semester.classList[
+                                                    semester.classList.findIndex(
+                                                        (
+                                                            classItem: classes
+                                                        ): boolean =>
+                                                            classItem.code ===
+                                                            classItem.code
+                                                    )
+                                                ]
+                                            }
+                                        />
+                                        )*/}
+                                    {/*<EditClassInfoModal
+                                        handleClose={flipModalView}
+                                        show={modalView}
+                                        courseToEdit={classItem}
+                                    />*/}
                                 </td>
                                 {/*<td>
                                     {classItem.schedule.day.join(", ")},{" "}

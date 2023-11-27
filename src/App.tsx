@@ -1,5 +1,5 @@
 /* eslint-disable no-extra-parens */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import Image1 from "./Images/Delaware-Blue-Hens-Logo.png";
 import Image2 from "./Images/Udel-Crest.png";
@@ -10,9 +10,12 @@ import { Col, Row } from "react-bootstrap";
 import { AddSemesterModal } from "./SemesterModal/addSemesterModal";
 import { semester } from "./Interface/semester";
 import { classes } from "./Interface/classes";
-import sample from "./data/data.json";
+import { Plan } from "./Interface/Plan";
+import sample from "./data/Dummy.json";
 import { AddToSemester } from "./semester-modification/AddToSemester";
-import { ChosenMajor } from "./Audit/ChosenMajor";
+import { ChosenMajor, generalClasses } from "./Audit/ChosenMajor";
+import { PlanView } from "./PlanView/PlanView";
+import { DownloadPlan } from "./PlanView/DownloadPlan";
 import { SeeAuditPage } from "./Audit/SeeAuditPage";
 
 function App(): JSX.Element {
@@ -22,7 +25,11 @@ function App(): JSX.Element {
     const [modalView, setModalView] = useState(false);
     const [addView, setAddView] = useState(false);
     const [seeAudit, setSeeAudit] = useState(false);
+    const [displayPlan, setdisplayPlan] = useState(false);
+    const [downloadPlan, setDownloadPlan] = useState(false);
+    const [currentPlan, setCurrentPlan] = useState("");
     const [majorPageView, setMajorPageView] = useState(false);
+
     const getName = () => {
         setName(name);
     };
@@ -45,48 +52,24 @@ function App(): JSX.Element {
         setSeeAudit(!seeAudit);
     };
 
+    const flipPlan = () => {
+        setdisplayPlan(!displayPlan);
+    };
+
+    const flipDownload = () => {
+        setDownloadPlan(!downloadPlan);
+    };
+
     const flipMajorPageView = () => {
         setMajorPageView(!majorPageView);
     };
 
-    const semesterExamples = sample.map(
-        (sem): semester => ({
-            ...sem,
-            classList: sem.classList.map(
-                (c): classes => ({
-                    ...c
-                })
-            )
-        })
-    );
-
-    const [semesters, setSemesters] = useState<semester[]>(semesterExamples);
-
     //exported const from ChosenMajor.tsx
     //Classes for each major
-    const [degreeRequirements, setDegreeRequirements] = useState<string[]>([]);
+    const [degreeRequirements, setDegreeRequirements] =
+        useState<string[]>(generalClasses);
+    //const [completedReq, setCompletedReq] = useState<string[]>([]);
     const [usedClasses, setUsedClasses] = useState<classes[][]>([[]]);
-
-    function addSemester(
-        id: number,
-        fullTime: boolean,
-        classList: classes[],
-        totalCredits: number,
-        season: string
-    ): void {
-        const newSemester: semester = {
-            id: id,
-            fullTime: fullTime,
-            classList: classList,
-            totalCredits: totalCredits,
-            season: season
-        };
-        setSemesters([...semesters, newSemester]);
-    }
-
-    function onAddClass(updatedSemester: semester[]): void {
-        setSemesters(updatedSemester);
-    }
 
     function reqList(finalList: string[]) {
         if (!degreeRequirements.every((req, IDX) => req === finalList[IDX])) {
@@ -98,6 +81,45 @@ function App(): JSX.Element {
     function pushCurrList(classesUsed: classes[][]) {
         setUsedClasses(classesUsed);
     }
+
+    const planExamples = sample.map(
+        (plan): Plan => ({
+            ...plan,
+            semesters: plan.semesters.map((s: semester) => ({
+                ...s,
+                classList: s.classList.map((c: classes) => ({
+                    ...c
+                }))
+            }))
+        })
+    );
+    const [plans, setPlans] = useState<Plan[]>(planExamples);
+
+    const [semesters, setSemesters] = useState<semester[]>([]);
+
+    function onAddClass(updatedSemester: semester[]): void {
+        setSemesters(updatedSemester);
+    }
+
+    function updatingPlans(): void {
+        const findIndexplan: number = plans.findIndex(
+            (plan) => plan.name === currentPlan
+        );
+        if (findIndexplan === -1) {
+            console.log("sike i lied");
+        } else {
+            const foundPlan = {
+                ...plans[findIndexplan],
+                semesters: semesters
+            };
+            console.log(semesters);
+            plans.splice(findIndexplan, 1, foundPlan);
+            console.log(plans);
+            setPlans(plans);
+        }
+    }
+
+    useEffect(() => updatingPlans(), [semesters]);
 
     return (
         <div className="App">
@@ -121,9 +143,11 @@ function App(): JSX.Element {
                             {" "}
                             <SideNav2
                                 flipView={flipView}
+                                flipPlan={flipPlan}
                                 flipModalView={flipModalView}
                                 flipAudit={flipAudit}
                                 flipAddView={flipAddView}
+                                flipDownload={flipDownload}
                             ></SideNav2>
                         </Col>
                         <Col sm={10}>
@@ -131,8 +155,8 @@ function App(): JSX.Element {
                                 <AddSemesterModal
                                     handleClose={flipModalView}
                                     show={modalView}
-                                    semesterExamples={semesters}
-                                    addSemester={addSemester}
+                                    semesters={semesters}
+                                    settingSemester={setSemesters}
                                 />
                             )}
                             {addView && (
@@ -151,11 +175,28 @@ function App(): JSX.Element {
                                     reqList={reqList}
                                 />
                             )}
+                            {displayPlan && (
+                                <PlanView
+                                    handleClose={flipPlan}
+                                    show={displayPlan}
+                                    allplans={plans}
+                                    changeViewSemesters={setSemesters}
+                                    setCurrentPlan={setCurrentPlan}
+                                />
+                            )}
+                            {downloadPlan && (
+                                <DownloadPlan
+                                    handleClose={flipDownload}
+                                    show={downloadPlan}
+                                    allplans={plans}
+                                />
+                            )}
                             <SwitchComponents
                                 seeSemesterView={seeSemesterView}
                                 semesterExamples={semesters}
                                 setSemesters={setSemesters}
                             ></SwitchComponents>
+
                             <SeeAuditPage
                                 canView={majorPageView}
                                 reqList={degreeRequirements}
