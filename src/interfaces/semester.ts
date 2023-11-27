@@ -1,7 +1,7 @@
 import { Course } from "./course";
 
 export interface SemesterI {
-    season: string;
+    season: "Winter"|"Spring"|"Summer"|"Fall"
     name: string;
     year: string;
     courses: Course[];
@@ -9,15 +9,21 @@ export interface SemesterI {
 
 export interface yearI {
     name: string;
-    firstsemester: SemesterI;
-    secondsemester: SemesterI;
+    winter:null|SemesterI;
+    spring:null|SemesterI;
+    summer:null|SemesterI;
+    Fall:null|SemesterI;
 }
-
 export interface CoursePlan {
     name: string;
-    years: yearI[];
+    years:yearI[];
 }
 
 export interface TotalDB {
-    Coureseplans: CoursePlan[];
+    Courseplans:CoursePlan[];
+}
+
+export interface dbMangement {
+    dataset: TotalDB;
+    stateSetter: (DB: TotalDB) => void;
 }
