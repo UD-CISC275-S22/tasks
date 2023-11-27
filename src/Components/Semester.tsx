@@ -19,7 +19,7 @@ const AI_Semesters = AI_Plan.semesters; //the semesters for the AI plan
 const DEFAULT_COURSE = AI_Semesters[0].courseList[0].title;
 
 export function ViewSemester(): JSX.Element {
-    const [plan, setPlan] = useState<Plan>(AI_Plan); //The default plan (for now)
+    //const [plan, setPlan] = useState<Plan>(AI_Plan); //The default plan (for now)
     const [semesters, setSemesters] = useState<Semester[]>(AI_Semesters); //the default semesters (for now)
     const [currCourse, setCurrCourse] = useState<string>(DEFAULT_COURSE);
     const [SemesterType, setSemesterType] = useState<string>("Fall"); //can be "Fall", "Spring" or "Both"

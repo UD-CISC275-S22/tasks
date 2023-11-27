@@ -48,7 +48,6 @@ function App(): JSX.Element {
             </div>
 
             <hr></hr>
-            <ViewSemester></ViewSemester>
         </div>
     );
 }
