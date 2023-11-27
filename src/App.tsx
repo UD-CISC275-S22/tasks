@@ -9,9 +9,18 @@ import { DegreePlanView } from "./Components/DegreePlanView";
 // import QuickAdd from "./Components/QuickAdd";
 // import { Class } from "./interfaces/class";
 function App(): JSX.Element {
+    const prevDegreePlan: degreePlan[] = [
+        { name: "Plan 1", semesters: [] },
+        { name: "Plan 2", semesters: [] },
+        { name: "Plan 3", semesters: [] }
+    ];
     const [view, setView] = useState<Views>(Views.degreePlanView);
-    const [currDegreePlan, setcurrDegreePlan] = useState<degreePlan>({});
-    const [degreePlanList, setDegreePlanList] = useState<degreePlan[]>([]);
+    const [currDegreePlan, setcurrDegreePlan] = useState<degreePlan>(
+        prevDegreePlan[1]
+    );
+    const [degreePlanList, setDegreePlanList] =
+        useState<degreePlan[]>(prevDegreePlan);
+
     return (
         <div className="App">
             <header className="App-header">
@@ -31,6 +40,9 @@ function App(): JSX.Element {
                 <SingleMultipleSemester
                     setCurrentView={setView}
                     CurrentdegreePlan={currDegreePlan}
+                    setCurrentDegreePlan={setcurrDegreePlan}
+                    setDegreePlanList={setDegreePlanList}
+                    DegreePlanList={degreePlanList}
                 ></SingleMultipleSemester>
             )}
         </div>

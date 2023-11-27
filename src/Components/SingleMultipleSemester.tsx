@@ -15,10 +15,16 @@ import { semester } from "../interfaces/semster";
 //-------------------------------------------------------------------------edit
 export function SingleMultipleSemester({
     CurrentdegreePlan,
-    setCurrentView
+    setCurrentView,
+    setCurrentDegreePlan,
+    setDegreePlanList,
+    DegreePlanList
 }: {
     CurrentdegreePlan: degreePlan;
     setCurrentView: (view: Views) => void;
+    setCurrentDegreePlan: (degreePlan: degreePlan) => void;
+    setDegreePlanList: (degreePlan: degreePlan[]) => void;
+    DegreePlanList: degreePlan[];
 }): JSX.Element {
     //export function SingleMultipleSemester(): JSX.Element { ----------------adding to DegreePlan
     const [semester1, setSemester1] = useState<string>("");
@@ -35,7 +41,22 @@ export function SingleMultipleSemester({
         //back to the degreePlanList and currentDegreePlan
     }
     function goBackClick() {
+        //go back button and Save function
+        const newDegreePlan: degreePlan = {
+            ...CurrentdegreePlan,
+            semesters: semArr
+        };
+        const newDegreePlanList: degreePlan[] = DegreePlanList.map(
+            (degreePlan: degreePlan): degreePlan =>
+                degreePlan.name === CurrentdegreePlan.name
+                    ? newDegreePlan
+                    : degreePlan
+        );
         setCurrentView(Views.degreePlanView);
+        setCurrentDegreePlan(newDegreePlan);
+        setDegreePlanList(newDegreePlanList);
+        //abstract semArray to App.tsx, pull out and add to App.tsx
+        //then clear it betweent degreePlans and set it to semesters of the degreePlan you click on
     }
 
     //----------------------------------------------------EDIT
