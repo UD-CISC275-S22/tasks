@@ -1,0 +1,225 @@
+[
+      {
+        "name": "Bachelor of Computer Science",
+        "years": [
+          {
+            "name": "Year 1",
+            "firstsemester": {
+              "season": "Fall",
+              "name": "First Semester",
+              "year": "2023",
+              "courses": [
+                {
+                  "ticker": "CS101",
+                  "name": "Introduction to Computer Science",
+                  "credits": 4,
+                  "prereq": "None"
+                },
+                {
+                  "ticker": "MATH101",
+                  "name": "Calculus I",
+                  "credits": 3,
+                  "prereq": "None"
+                },
+                {
+                  "ticker": "ENG101",
+                  "name": "English Composition",
+                  "credits": 3,
+                  "prereq": "None"
+                }
+              ]
+            },
+            "secondsemester": {
+              "season": "Spring",
+              "name": "Second Semester",
+              "year": "2024",
+              "courses": [
+                {
+                  "ticker": "CS102",
+                  "name": "Data Structures",
+                  "credits": 4,
+                  "prereq": "CS101"
+                },
+                {
+                  "ticker": "MATH102",
+                  "name": "Calculus II",
+                  "credits": 3,
+                  "prereq": "MATH101"
+                },
+                {
+                  "ticker": "PHYS101",
+                  "name": "General Physics",
+                  "credits": 4,
+                  "prereq": "MATH101"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Year 2",
+            "firstsemester": {
+              "season": "Fall",
+              "name": "Third Semester",
+              "year": "2024",
+              "courses": [
+                {
+                  "ticker": "CS201",
+                  "name": "Algorithms",
+                  "credits": 4,
+                  "prereq": "CS102"
+                },
+                {
+                  "ticker": "CS202",
+                  "name": "Computer Organization",
+                  "credits": 3,
+                  "prereq": "CS102"
+                },
+                {
+                  "ticker": "STAT101",
+                  "name": "Statistics",
+                  "credits": 3,
+                  "prereq": "MATH102"
+                }
+              ]
+            },
+            "secondsemester": {
+              "season": "Spring",
+              "name": "Fourth Semester",
+              "year": "2025",
+              "courses": [
+                {
+                  "ticker": "CS301",
+                  "name": "Operating Systems",
+                  "credits": 4,
+                  "prereq": "CS202"
+                },
+                {
+                  "ticker": "CS302",
+                  "name": "Database Systems",
+                  "credits": 3,
+                  "prereq": "CS201"
+                },
+                {
+                  "ticker": "ELECTIVE",
+                  "name": "Elective Course",
+                  "credits": 3,
+                  "prereq": "None"
+                }
+              ]
+            }
+          }
+        ]
+      },
+        {
+          "name": "Bachelor of Business Administration",
+          "years": [
+            {
+              "name": "Year 1",
+              "firstsemester": {
+                "season": "Fall",
+                "name": "First Semester",
+                "year": "2023",
+                "courses": [
+                  {
+                    "ticker": "BUS101",
+                    "name": "Principles of Management",
+                    "credits": 3,
+                    "prereq": "None"
+                  },
+                  {
+                    "ticker": "ECON101",
+                    "name": "Microeconomics",
+                    "credits": 3,
+                    "prereq": "None"
+                  },
+                  {
+                    "ticker": "MATH103",
+                    "name": "Business Mathematics",
+                    "credits": 3,
+                    "prereq": "None"
+                  }
+                ]
+              },
+              "secondsemester": {
+                "season": "Spring",
+                "name": "Second Semester",
+                "year": "2024",
+                "courses": [
+                  {
+                    "ticker": "BUS102",
+                    "name": "Principles of Marketing",
+                    "credits": 3,
+                    "prereq": "None"
+                  },
+                  {
+                    "ticker": "ECON102",
+                    "name": "Macroeconomics",
+                    "credits": 3,
+                    "prereq": "ECON101"
+                  },
+                  {
+                    "ticker": "STAT102",
+                    "name": "Business Statistics",
+                    "credits": 3,
+                    "prereq": "MATH103"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Year 2",
+              "firstsemester": {
+                "season": "Fall",
+                "name": "Third Semester",
+                "year": "2024",
+                "courses": [
+                  {
+                    "ticker": "FIN101",
+                    "name": "Financial Management",
+                    "credits": 4,
+                    "prereq": "ECON102"
+                  },
+                  {
+                    "ticker": "BUS201",
+                    "name": "Human Resource Management",
+                    "credits": 3,
+                    "prereq": "BUS101"
+                  },
+                  {
+                    "ticker": "LAW101",
+                    "name": "Business Law",
+                    "credits": 3,
+                    "prereq": "None"
+                  }
+                ]
+              },
+              "secondsemester": {
+                "season": "Spring",
+                "name": "Fourth Semester",
+                "year": "2025",
+                "courses": [
+                  {
+                    "ticker": "BUS202",
+                    "name": "Operations Management",
+                    "credits": 3,
+                    "prereq": "BUS201"
+                  },
+                  {
+                    "ticker": "MKT101",
+                    "name": "Marketing Research",
+                    "credits": 3,
+                    "prereq": "BUS102"
+                  },
+                  {
+                    "ticker": "ELECTIVE",
+                    "name": "Elective Course",
+                    "credits": 3,
+                    "prereq": "None"
+                  }
+                ]
+              }
+            }
+          ]
+        }      
+    ]
+  

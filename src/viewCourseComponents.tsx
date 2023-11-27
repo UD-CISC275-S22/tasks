@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import { Accordion, AccordionHeader, Table } from "react-bootstrap";
 import { CoursePlan, SemesterI, yearI } from "./interfaces/semester";
 import { Course } from "./interfaces/course";
-//import React, { useState } from "react";
 import "./App.css";
 import { ClearCourseModal } from "./ClearCourseModal";
 import { AddCourseModal } from "./AddCourseModal";
-//import { JsxAttribute } from "typescript";
-//const [CurrentModalCourse, setCurrentModalCourse] = useState<Course>();
+import { JsxAttribute } from "typescript";
+const [CurrentModalCourse, setCurrentModalCourse] = useState<Course>();
 
 export function Semester({
     rendSemester,

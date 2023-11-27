@@ -1,14 +1,14 @@
 import React from "react";
 import { useState } from "react";
 import "./App.css";
-import { MulitCourseplan, Year } from "./viewCourseComponents";
-import { TotalDB, yearI } from "./interfaces/semester";
-import { EditCourseModal } from "./EditModal";
+import { MulitCourseplan /*Year*/ } from "./viewCourseComponents";
+import { TotalDB /*yearI*/ } from "./interfaces/semester";
 import { Course } from "./interfaces/course";
+import { EditCourseModal } from "./EditModal";
 import { AddCourseModal } from "./AddCourseModal";
 import { ClearCourseModal } from "./ClearCourseModal";
-import coursePlanData from "./data/couresplans.json";
 import { Container } from "react-bootstrap";
+import coursePlanData from "./data/couresplans.json";
 import { v4 as uuidv4 } from "uuid";
 
 function createUUID(db: TotalDB) {
@@ -42,7 +42,7 @@ function App(): JSX.Element {
     });
     function setCurrentCourseEdit(course: Course) {
         setEdit(course);
-        updateEditMogal(true);
+        //updateEditMogal(true);
     }
     const handleCreatePlan = () => {
         console.log("Create plan button clicked");
@@ -78,12 +78,14 @@ function App(): JSX.Element {
                     setCurrentCourseEdit={setCurrentCourseEdit}
                 />
             </div>
-            {/* <EditCourseModal
-                show={showEditModal}
-                handleClose={handleCloseAddModal}
-                currentCourse={editSelected}
-                cRUD={db}
-            ></EditCourseModal> */}
+            {/*
+                <EditCourseModal
+                    show={showEditModal}
+                    handleClose={handleCloseAddModal}
+                    currentCourse={editSelected}
+                    cRUD={db}
+                ></EditCourseModal>
+            */}
         </div>
     );
 }
