@@ -17,6 +17,7 @@ import { ChosenMajor, generalClasses } from "./Audit/ChosenMajor";
 import { PlanView } from "./PlanView/PlanView";
 import { DownloadPlan } from "./PlanView/DownloadPlan";
 import { SeeAuditPage } from "./Audit/SeeAuditPage";
+import { AddPlan } from "./addPlan/AddPlan";
 
 function App(): JSX.Element {
     const [page, setPage] = useState(false);
@@ -29,6 +30,7 @@ function App(): JSX.Element {
     const [downloadPlan, setDownloadPlan] = useState(false);
     const [currentPlan, setCurrentPlan] = useState("");
     const [majorPageView, setMajorPageView] = useState(false);
+    const [addPlanView, setAddPlanView] = useState(false);
 
     const getName = () => {
         setName(name);
@@ -37,7 +39,7 @@ function App(): JSX.Element {
         setPage(!page);
     };
     const flipView = () => {
-        setSeeSemesterView(!seeSemesterView);
+        setSeeSemesterView(true);
     };
 
     const flipModalView = () => {
@@ -62,6 +64,10 @@ function App(): JSX.Element {
 
     const flipMajorPageView = () => {
         setMajorPageView(!majorPageView);
+    };
+
+    const flipAddPlanView = () => {
+        setAddPlanView(!addPlanView);
     };
 
     //exported const from ChosenMajor.tsx
@@ -143,6 +149,7 @@ function App(): JSX.Element {
                             {" "}
                             <SideNav2
                                 flipView={flipView}
+                                flipAddPlanView={flipAddPlanView}
                                 flipPlan={flipPlan}
                                 flipModalView={flipModalView}
                                 flipAudit={flipAudit}
@@ -189,6 +196,14 @@ function App(): JSX.Element {
                                     handleClose={flipDownload}
                                     show={downloadPlan}
                                     allplans={plans}
+                                />
+                            )}
+                            {addPlanView && (
+                                <AddPlan
+                                    handleClose={flipAddPlanView}
+                                    show={addPlanView}
+                                    allplans={plans}
+                                    setPlans={setPlans}
                                 />
                             )}
                             <SwitchComponents

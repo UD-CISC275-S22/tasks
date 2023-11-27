@@ -9,6 +9,7 @@ import List from "@mui/icons-material/List";
 
 export function SideNav2({
     flipView,
+    flipAddPlanView,
     flipPlan,
     flipModalView,
     flipAudit,
@@ -16,6 +17,7 @@ export function SideNav2({
     flipDownload
 }: {
     flipView: () => void;
+    flipAddPlanView: () => void;
     flipPlan: () => void;
     flipModalView: () => void;
     flipAudit: () => void;
@@ -25,11 +27,17 @@ export function SideNav2({
     return (
         <div className="SideNav2">
             <ul className="SideNavList2">
-                <li className="row" onClick={() => flipView()}>
+                <li className="row" onClick={() => flipAddPlanView()}>
                     <div id="picture">{<SchoolIcon />}</div>
                     <div id="name">{"Add Degree Plan"}</div>
                 </li>
-                <li className="row" onClick={() => flipPlan()}>
+                <li
+                    className="row"
+                    onClick={() => {
+                        flipPlan();
+                        flipView();
+                    }}
+                >
                     <div id="picture">{<List />}</div>
                     <div id="name">{"View Degree Plan"}</div>
                 </li>
