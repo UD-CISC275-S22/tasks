@@ -15,9 +15,9 @@ export interface yearI {
 
 export interface CoursePlan {
     name: string;
-    years:yearI[];
+    years: yearI[];
 }
 
 export interface TotalDB {
-    Coureseplans:CoursePlan[];
+    Coureseplans: CoursePlan[];
 }
