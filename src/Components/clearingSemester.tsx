@@ -1,42 +1,52 @@
 import React from "react";
 import { Button, Modal } from "react-bootstrap";
+import { Course } from "../Interfaces/course";
+import { Semester } from "../Interfaces/semester";
+import { Plan } from "../Interfaces/plan";
 
-export const ClearSemester = ({
-    clearSemesterCourses,
+export function ClearSemester({
+    show,
     handleClose,
-    handleShow,
-    show
+    currentSemester,
+    plan,
+    settingPlan
 }: {
-    clearSemesterCourses: () => void;
-    handleClose: () => void;
-    handleShow: () => void;
     show: boolean;
-}) => {
+    handleClose: () => void;
+    currentSemester: Semester;
+    plan: Plan;
+    settingPlan: (t: Plan) => void;
+}) {
+    function saveEdits() {
+        const newSemester: Semester = {
+            ...currentSemester,
+            courseList: [] as Course[]
+        };
+        const newPlan: Plan = {
+            ...plan,
+            semesters: plan.semesters.map(
+                (s: Semester): Semester =>
+                    s.id === currentSemester.id ? newSemester : s
+            )
+        };
+        settingPlan(newPlan);
+        handleClose();
+    }
     return (
-        <>
-            <div className="clear_sem">
-                <Button onClick={handleShow}>Remove All Courses</Button>
-            </div>
-            <div>
-                <Modal show={show} onHide={handleClose} animation={false}>
-                    <Modal.Header closeButton>
-                        <Modal.Title>Warning</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                        <p>
-                            You are deleting this current semester, do you
-                            confirm?
-                        </p>
-                    </Modal.Body>
-                    <Modal.Footer>
-                        <Button onClick={clearSemesterCourses}>Yes</Button>
-                        <Button onClick={handleClose}>No</Button>
-                    </Modal.Footer>
-                </Modal>
-            </div>
-        </>
+        <Modal show={show} close={handleClose} animation={false}>
+            <Modal.Header closeButton>
+                <Modal.Title>Warning!</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                <p>You are deleting this current semester, do you confirm?</p>
+            </Modal.Body>
+            <Modal.Footer>
+                <Button onClick={handleClose}> Cancel </Button>
+                <Button onClick={saveEdits}> Clear </Button>
+            </Modal.Footer>
+        </Modal>
     );
-};
+}
 
 /*import React, { useState } from "react";
 import { courseList } from "./course";

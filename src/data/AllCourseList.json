@@ -1277,8 +1277,8 @@
         "credits": 2,
         "semester": ["Fall"],
         "department": "COE",
-        "prereq": ["None"],
-        "coreq": ["None"],
-        "requirements": ["First Year Experience"]
+        "prereq": [""],
+        "coreq": [""],
+        "requirements": ["FYE"]
     }
 ]
