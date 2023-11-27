@@ -9,7 +9,6 @@ interface degreePlanViewProps {
     setCurrentDegreePlan: (degreePlan: degreePlan) => void;
     degreePlanList: degreePlan[];
 }
-
 export const DegreePlanView = ({
     setCurrentView,
     //setCurrentDegreePlan,
