@@ -6,7 +6,7 @@ import "./App.css";
 import { ClearCourseModal } from "./ClearCourseModal";
 import { AddCourseModal } from "./AddCourseModal";
 import { JsxAttribute } from "typescript";
-const [CurrentModalCourse, setCurrentModalCourse] = useState<Course>();
+//const [CurrentModalCourse, setCurrentModalCourse] = useState<Course>();
 
 export function Semester({
     rendSemester,
