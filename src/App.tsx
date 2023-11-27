@@ -13,6 +13,7 @@ import { classes } from "./Interface/classes";
 import sample from "./data/data.json";
 import { AddToSemester } from "./semester-modification/AddToSemester";
 import { ChosenMajor } from "./Audit/ChosenMajor";
+import { SeeAuditPage } from "./Audit/SeeAuditPage";
 
 function App(): JSX.Element {
     const [page, setPage] = useState(false);
@@ -21,6 +22,7 @@ function App(): JSX.Element {
     const [modalView, setModalView] = useState(false);
     const [addView, setAddView] = useState(false);
     const [seeAudit, setSeeAudit] = useState(false);
+    const [majorPageView, setMajorPageView] = useState(false);
     const getName = () => {
         setName(name);
     };
@@ -43,6 +45,10 @@ function App(): JSX.Element {
         setSeeAudit(!seeAudit);
     };
 
+    const flipMajorPageView = () => {
+        setMajorPageView(!majorPageView);
+    };
+
     const semesterExamples = sample.map(
         (sem): semester => ({
             ...sem,
@@ -55,6 +61,11 @@ function App(): JSX.Element {
     );
 
     const [semesters, setSemesters] = useState<semester[]>(semesterExamples);
+
+    //exported const from ChosenMajor.tsx
+    //Classes for each major
+    const [degreeRequirements, setDegreeRequirements] = useState<string[]>([]);
+    const [usedClasses, setUsedClasses] = useState<classes[][]>([[]]);
 
     function addSemester(
         id: number,
@@ -75,6 +86,17 @@ function App(): JSX.Element {
 
     function onAddClass(updatedSemester: semester[]): void {
         setSemesters(updatedSemester);
+    }
+
+    function reqList(finalList: string[]) {
+        if (!degreeRequirements.every((req, IDX) => req === finalList[IDX])) {
+            setUsedClasses([[]]);
+        }
+        setDegreeRequirements(finalList);
+    }
+
+    function pushCurrList(classesUsed: classes[][]) {
+        setUsedClasses(classesUsed);
     }
 
     return (
@@ -125,6 +147,8 @@ function App(): JSX.Element {
                                 <ChosenMajor
                                     handleClose={flipAudit}
                                     show={seeAudit}
+                                    majorPageView={flipMajorPageView}
+                                    reqList={reqList}
                                 />
                             )}
                             <SwitchComponents
@@ -132,6 +156,14 @@ function App(): JSX.Element {
                                 semesterExamples={semesters}
                                 setSemesters={setSemesters}
                             ></SwitchComponents>
+                            <SeeAuditPage
+                                canView={majorPageView}
+                                reqList={degreeRequirements}
+                                plan={semesters}
+                                prevUsedClasses={usedClasses}
+                                pushCurrList={pushCurrList}
+                                stopView={flipMajorPageView}
+                            ></SeeAuditPage>
                         </Col>
                     </Row>
                 </div>
