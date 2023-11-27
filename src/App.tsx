@@ -3,7 +3,7 @@ import "./App.css";
 import { SingleMultipleSemester } from "./Components/SingleMultipleSemester";
 import { degreePlan } from "./interfaces/degreePlan";
 import { Views } from "./interfaces/viewProps";
-import { DegreePlanView } from "./Components/DegreePlanView";
+//import { DegreePlanView } from "./Components/DegreePlanView";
 
 // import SlowAdd from "./Components/SlowAdd";
 // import QuickAdd from "./Components/QuickAdd";
