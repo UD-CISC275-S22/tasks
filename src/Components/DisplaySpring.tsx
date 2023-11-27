@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
 import { Course } from "../Interfaces/course";
 import { ClearSemester } from "./clearingSemester";

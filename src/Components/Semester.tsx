@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 //for visualization of semesters and altering the courses within them
 
 import React, { useState } from "react";
