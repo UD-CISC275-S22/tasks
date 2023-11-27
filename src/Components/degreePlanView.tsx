@@ -1,6 +1,7 @@
+/* eslint-disable no-extra-parens */
 import React, { useState } from "react";
 import { degreePlan } from "../interfaces/degreePlan";
-import { SingleMultipleSemester } from "./SingleMultipleSemester";
+//import { SingleMultipleSemester } from "./SingleMultipleSemester";
 import { Views } from "../interfaces/viewProps";
 import { Button } from "react-bootstrap";
 interface degreePlanViewProps {
@@ -10,7 +11,7 @@ interface degreePlanViewProps {
 }
 export const DegreePlanView = ({
     setCurrentView,
-    setCurrentDegreePlan,
+    //setCurrentDegreePlan,
     degreePlanList
 }: degreePlanViewProps): JSX.Element => {
     const [viewDegreePlan, setviewDegreePlan] = useState<degreePlan>();
