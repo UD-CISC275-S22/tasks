@@ -3,15 +3,64 @@ import { Class } from "../interfaces/class";
 import QuickAdd from "./QuickAdd";
 import SlowAdd from "./SlowAdd";
 
+// ------------add this
+import { degreePlan } from "../interfaces/degreePlan";
+import { Views } from "../interfaces/viewProps";
+//------------------------------------------------
+
 import { Button, Row, Col, Form /*Button*/ } from "react-bootstrap";
 // import { degreePlan } from "../interfaces/degreePlan";
 import { semester } from "../interfaces/semster";
 
-export function SingleMultipleSemester(): JSX.Element {
+//-------------------------------------------------------------------------edit
+export function SingleMultipleSemester({
+    CurrentdegreePlan,
+    setCurrentView,
+    setCurrentDegreePlan,
+    setDegreePlanList,
+    DegreePlanList
+}: {
+    CurrentdegreePlan: degreePlan;
+    setCurrentView: (view: Views) => void;
+    setCurrentDegreePlan: (degreePlan: degreePlan) => void;
+    setDegreePlanList: (degreePlan: degreePlan[]) => void;
+    DegreePlanList: degreePlan[];
+}): JSX.Element {
+    //export function SingleMultipleSemester(): JSX.Element { ----------------adding to DegreePlan
     const [semester1, setSemester1] = useState<string>("");
-    const [semArr, setSemArr] = useState<semester[]>([]);
+    //const [semArr, setSemArr] = useState<semester[]>([]);-----------------------comment out
+    const [semArr, setSemArr] = useState<semester[]>(
+        CurrentdegreePlan.semesters
+    );
+
     const [semArrClicked, setSemArrClicked] = useState<semester[]>(semArr);
     const [clicked, setClicked] = useState<boolean>(false);
+    //add clear Semester here-----------------------------------------------------EDIT
+    function clear() {
+        setSemArr([]); //clears semester array, one issue: when wanting to go back, we need to save all the changes made,
+        //back to the degreePlanList and currentDegreePlan
+    }
+    function goBackClick() {
+        //go back button and Save function
+        const newDegreePlan: degreePlan = {
+            ...CurrentdegreePlan,
+            semesters: semArr
+        };
+        const newDegreePlanList: degreePlan[] = DegreePlanList.map(
+            (degreePlan: degreePlan): degreePlan =>
+                degreePlan.name === CurrentdegreePlan.name
+                    ? newDegreePlan
+                    : degreePlan
+        );
+        setCurrentView(Views.degreePlanView);
+        setCurrentDegreePlan(newDegreePlan);
+        setDegreePlanList(newDegreePlanList);
+        //abstract semArray to App.tsx, pull out and add to App.tsx
+        //then clear it betweent degreePlans and set it to semesters of the degreePlan you click on
+    }
+
+    //----------------------------------------------------EDIT
+
     //const [degreePlan, setDegreePlan] = useState<degreePlan>();
     function addRowPerClass(semClasses: Class[]) {
         const tableCell = semClasses.map(
@@ -143,6 +192,11 @@ export function SingleMultipleSemester(): JSX.Element {
     return (
         <div>
             {addCourse()}
+            {/* add Clear Semesters and goBack button */}
+            <div>
+                <Button onClick={clear}> Clear Existing Semesters </Button>
+                <Button onClick={goBackClick}>Go Back to Degree Plans</Button>
+            </div>
             <h3>Single Semester</h3>
             <Form.Group controlId="formCreateSemester">
                 <Form.Label>Input Semester:</Form.Label>
