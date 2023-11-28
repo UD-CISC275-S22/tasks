@@ -13,6 +13,7 @@ import CourseEdit from "./CourseEdit";
 import { updateCourseList, findCourse, displayCourse } from "./course";
 import { DisplayFall } from "./DisplayFall";
 import { DisplaySpring } from "./DisplaySpring";
+import { DisplayPlan } from "./DisplayPlan";
 
 //A variable able to use for the list of courses within the JSON file.
 const COURSES_LIST = courseList;
@@ -353,8 +354,6 @@ export function ViewSemester(): JSX.Element {
                             index={index}
                         ></DisplayFall>
                     }
-                </div>
-                <div className="Semester">
                     {
                         <DisplaySpring
                             semesters={semesters}
@@ -438,6 +437,7 @@ export function ViewSemester(): JSX.Element {
     }
 
     //function that displays the entire plan based on the year
+    /*
     function displayPlan(): JSX.Element {
         setTargetYear(1);
         const firstYear = displayBoth();
@@ -455,7 +455,7 @@ export function ViewSemester(): JSX.Element {
                 {fourthYear}
             </div>
         );
-    }
+    } */
 
     //functions to edit courses - Malika
     const handleEditShow = (course: Course | undefined) => {
@@ -503,8 +503,13 @@ export function ViewSemester(): JSX.Element {
                 <Button onClick={changeSemester}>
                     Show Different Semester
                 </Button>
-                {OneorTwo()}
-                {SemCount !== 1 && displayBoth()}
+                {/*OneorTwo()*/}
+                {/*SemCount !== 1 && displayBoth()*/}
+                <DisplayPlan
+                    targetYear={targetYear}
+                    setTargetYear={setTargetYear}
+                    displayBoth={displayBoth}
+                ></DisplayPlan>
             </div>
             <hr></hr>
             {
