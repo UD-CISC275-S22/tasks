@@ -19,6 +19,9 @@ export function AddDpSemestersCoursesModal({
     const [semesters, setSemesters] = useState<Semester[]>([]);
     const [selectedSemester, setSelectedSemester] = useState<string>("Fall");
     const [title, setTitle] = useState<string>("Example Title");
+    const [selectedSemesterId, setSelectedSemesterId] = useState<number | null>(
+        null
+    );
 
     const [newCourse, setNewCourse] = useState<Course>({
         title: "",
@@ -29,6 +32,19 @@ export function AddDpSemestersCoursesModal({
         courseCoreq: [],
         courseDescription: ""
     });
+    const handleSelectSemester = (semesterId: number) => {
+        setSelectedSemesterId(semesterId);
+        // Reset the course input fields when selecting a new semester
+        setNewCourse({
+            courseCode: "",
+            title: "",
+            credits: 0,
+            degreeRequirements: [],
+            coursePrereq: [],
+            courseCoreq: [],
+            courseDescription: ""
+        });
+    };
 
     const addSemester = () => {
         const newSemesterObj: Semester = {
@@ -54,7 +70,12 @@ export function AddDpSemestersCoursesModal({
     }
 
     const addCourse = (semesterId: number) => {
-        if (newCourse.courseCode && newCourse.title && newCourse.credits > 0) {
+        if (
+            selectedSemesterId !== null &&
+            newCourse.courseCode &&
+            newCourse.title &&
+            newCourse.credits > 0
+        ) {
             updateSemesterCredits(semesterId, newCourse.credits);
             setSemesters((prevSemesters) =>
                 prevSemesters.map((semester) =>
@@ -113,6 +134,25 @@ export function AddDpSemestersCoursesModal({
         );
         return totSemestersCredits;
     }
+
+    const semesterOptions = ["Fall", "Winter", "Spring", "Summer"];
+
+    const handleCloseModal = () => {
+        setTitle("Example Title");
+        setSelectedSemester("Fall");
+        setSelectedSemesterId(null);
+        setSemesters([]);
+        setNewCourse({
+            title: "",
+            courseCode: "",
+            credits: 0,
+            degreeRequirements: [],
+            coursePrereq: [],
+            courseCoreq: [],
+            courseDescription: ""
+        });
+        handleClose();
+    };
     const saveChanges = () => {
         const newDp: DegreePlan = {
             title: title,
@@ -121,11 +161,8 @@ export function AddDpSemestersCoursesModal({
             semestersList: semesters
         };
         addDp(newDp);
-        handleClose();
-        setSemesters([]); //added this to set up a clean slate for semester tracker whenever we go to add a new dp
+        handleCloseModal();
     };
-
-    const semesterOptions = ["Fall", "Winter", "Spring", "Summer"];
 
     return (
         <Modal show={show} onHide={handleClose} animation={false}>
@@ -203,48 +240,58 @@ export function AddDpSemestersCoursesModal({
                                             )
                                         )}
                                     </div>
-                                    <div>
-                                        <input
-                                            type="text"
-                                            value={newCourse.courseCode}
-                                            onChange={(e) =>
-                                                setNewCourse({
-                                                    ...newCourse,
-                                                    courseCode: e.target.value
-                                                })
-                                            }
-                                            placeholder="Course Code"
-                                        />
-                                        <input
-                                            type="text"
-                                            value={newCourse.title}
-                                            onChange={(e) =>
-                                                setNewCourse({
-                                                    ...newCourse,
-                                                    title: e.target.value
-                                                })
-                                            }
-                                            placeholder="Course Title"
-                                        />
-                                        <input
-                                            type="number"
-                                            value={newCourse.credits}
-                                            onChange={(e) =>
-                                                setNewCourse({
-                                                    ...newCourse,
-                                                    credits: +e.target.value
-                                                })
-                                            }
-                                            placeholder="Credits"
-                                        />
-                                        <button
-                                            onClick={() =>
-                                                addCourse(semester.id)
-                                            }
-                                        >
-                                            Add Course
-                                        </button>
-                                    </div>
+                                    <button
+                                        onClick={() =>
+                                            handleSelectSemester(semester.id)
+                                        }
+                                    >
+                                        Add Course
+                                    </button>
+                                    {selectedSemesterId === semester.id && (
+                                        <div>
+                                            <input
+                                                type="text"
+                                                value={newCourse.courseCode}
+                                                onChange={(e) =>
+                                                    setNewCourse({
+                                                        ...newCourse,
+                                                        courseCode:
+                                                            e.target.value
+                                                    })
+                                                }
+                                                placeholder="Course Code"
+                                            />
+                                            <input
+                                                type="text"
+                                                value={newCourse.title}
+                                                onChange={(e) =>
+                                                    setNewCourse({
+                                                        ...newCourse,
+                                                        title: e.target.value
+                                                    })
+                                                }
+                                                placeholder="Course Title"
+                                            />
+                                            <input
+                                                type="number"
+                                                value={newCourse.credits}
+                                                onChange={(e) =>
+                                                    setNewCourse({
+                                                        ...newCourse,
+                                                        credits: +e.target.value
+                                                    })
+                                                }
+                                                placeholder="Credits"
+                                            />
+                                            <button
+                                                onClick={() =>
+                                                    addCourse(semester.id)
+                                                }
+                                            >
+                                                Enter
+                                            </button>
+                                        </div>
+                                    )}
                                 </li>
                             ))}
                         </ul>
@@ -252,7 +299,7 @@ export function AddDpSemestersCoursesModal({
                 </Form.Group>
             </Modal.Body>
             <Modal.Footer>
-                <Button variant="secondary" onClick={handleClose}>
+                <Button variant="secondary" onClick={handleCloseModal}>
                     Close
                 </Button>
                 <Button variant="primary" onClick={saveChanges}>
