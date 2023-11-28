@@ -1,42 +1,22 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
-import { Semester } from "../Interfaces/semester";
 import { Button } from "react-bootstrap";
 
 export interface valueProps {
-    /*
-    semesters: Semester[];
-    setSemesters: (expression: Semester[]) => void;
-    targetSem: string;
-    setTargetSem: (expression: string) => void;
-    currCourse: string;
-    setCurrCourse: (expression: string) => void;
-    clicked: boolean;
-    setClicked: (expression: boolean) => void;
-    */
-    /*
-    dropClass(): void;
-    addClass(): void;
-    updateCurrCourse(event: React.ChangeEvent<HTMLSelectElement>): void;
-    clearSemesterCourses(): void;
-    handleClose(): void;
-    handleShow(): void;
-    index(): number;
-    */
+    //function below acts like the display both function except it returns either a DisplayFall or DisplaySpring component
+    //it only returns one or the other to avoid rendering confusion of the site. The id parameter is for the key for the component (just an identifier)
     indivPlanSem(year: number, sem: string, id: number): JSX.Element;
-    SemCount: number;
-    SemesterType: string;
     changeSemCount(): void;
     changeSemester(): void;
 }
 
 export function DisplayPlan({
     indivPlanSem,
-    SemCount,
-    SemesterType,
     changeSemCount,
     changeSemester
 }: valueProps): JSX.Element {
+    //makes individual components of DisplayFall and DisplaySpring for each year
+    //first number is the year, second is the type and the third is the key value for the component
     const firstYearFall = indivPlanSem(1, "Fall", 1);
     const firstYearSpring = indivPlanSem(1, "Spring", 2);
     const secondYearFall = indivPlanSem(2, "Fall", 3);

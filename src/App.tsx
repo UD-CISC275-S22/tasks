@@ -15,12 +15,12 @@ function App(): JSX.Element {
     return (
         <div className="App">
             <header className="App-header">
-                UD CISC275 - Degree Planner
-                <h6>Matthew Mestre</h6>
-                <h6>Bryant Ferguson</h6>
-                <h6>Ava West</h6>
-                <h6>Malika Iyer</h6>
-                <h6>Dina Dawood</h6>
+                &#128195; UD Degree Planner
+                <h6></h6>
+                <h6>
+                    Made by: Matthew Mestre, Bryant Ferguson, Ava West, Malika
+                    Iyer and Dina Dawood (CISC275)
+                </h6>
             </header>
             <hr></hr>
             {/*This is the collaspe button*/}

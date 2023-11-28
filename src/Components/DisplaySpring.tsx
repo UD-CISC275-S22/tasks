@@ -2,19 +2,14 @@
 import React, { useState } from "react";
 import { Course } from "../Interfaces/course";
 import { ClearSemester } from "./clearingSemester";
-import { displayCourse } from "./course";
 import { DropAdd } from "./dropAdd";
 import { Semester } from "../Interfaces/semester";
 
 export interface valueProps {
     semesters: Semester[];
-    setSemesters: (expression: Semester[]) => void;
     targetSem: string;
-    setTargetSem: (expression: string) => void;
     currCourse: string;
-    setCurrCourse: (expression: string) => void;
     clicked: boolean;
-    setClicked: (expression: boolean) => void;
     targetYear: number;
     dropClass(): void;
     addClass(): void;
@@ -28,13 +23,9 @@ export interface valueProps {
 // function to display ONLY the fall semester
 export function DisplaySpring({
     semesters,
-    setSemesters,
     targetSem,
-    setTargetSem,
     currCourse,
-    setCurrCourse,
     clicked,
-    setClicked,
     targetYear,
     dropClass,
     addClass,
@@ -44,13 +35,10 @@ export function DisplaySpring({
     handleShow,
     index
 }: valueProps): JSX.Element {
-    //an array of courses in the plan's semester (ex. spring of year 1)
-
+    //index now takes in two parameters (targetYear - this is NOT the state and it's already passed in from the Semester.tsx file)
+    //targetSem is also NOT the state and it's already passed in from the Semester.tsx file. So both variables are already declared in the indivPlanSem function
     const idx = index(targetYear, targetSem);
-
     const springCourses = semesters[idx].courseList;
-    console.log("idx in Spring returned is");
-    console.log(idx);
 
     return (
         <div className="Spring">
@@ -63,12 +51,10 @@ export function DisplaySpring({
                             {course.title}
                             {" - "}
                             {course.name}
-                            {/* {displayCourse(course)} */}
                         </span>
                     </div>
                 )
             )}
-            {/*
             <div>
                 <DropAdd
                     dropClass={dropClass}
@@ -84,7 +70,6 @@ export function DisplaySpring({
                     handleShow={handleShow}
                 ></ClearSemester>
             </div>
-                */}
         </div>
     );
 }

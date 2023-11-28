@@ -180,13 +180,9 @@ export function ViewSemester(): JSX.Element {
                 <DisplayFall
                     key={id}
                     semesters={semesters}
-                    setSemesters={setSemesters}
                     targetSem={"Fall"}
-                    setTargetSem={setTargetSem}
                     currCourse={currCourse}
-                    setCurrCourse={setCurrCourse}
                     clicked={clicked}
-                    setClicked={setClicked}
                     targetYear={year}
                     dropClass={dropClass}
                     addClass={addClass}
@@ -202,13 +198,9 @@ export function ViewSemester(): JSX.Element {
                 <DisplaySpring
                     key={id}
                     semesters={semesters}
-                    setSemesters={setSemesters}
                     targetSem={"Spring"}
-                    setTargetSem={setTargetSem}
                     currCourse={currCourse}
-                    setCurrCourse={setCurrCourse}
                     clicked={clicked}
-                    setClicked={setClicked}
                     targetYear={year}
                     dropClass={dropClass}
                     addClass={addClass}
@@ -387,8 +379,6 @@ export function ViewSemester(): JSX.Element {
                 {/*SemCount !== 1 && displayBoth()*/}
                 <DisplayPlan
                     indivPlanSem={indivPlanSem}
-                    SemCount={SemCount}
-                    SemesterType={SemesterType}
                     changeSemCount={changeSemCount}
                     changeSemester={changeSemester}
                 ></DisplayPlan>
