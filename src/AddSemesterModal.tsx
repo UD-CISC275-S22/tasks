@@ -6,7 +6,7 @@ interface AddSemesterModalProps {
     show: boolean;
     handleClose: () => void;
     addSemester: (semester: SemesterI) => void;
-    year: yearI; // Make sure this matches the type from your interfaces
+    year: yearI;
 }
 
 export const AddSemesterModal: React.FC<AddSemesterModalProps> = ({
@@ -19,11 +19,10 @@ export const AddSemesterModal: React.FC<AddSemesterModalProps> = ({
 
     const handleAddSemester = () => {
         const newSemester: SemesterI = {
-            // Adjust fields as per your SemesterI interface
             season: season,
-            name: `${season} ${year.name}`, // Use year.name for the year part
-            year: year.name, // Assuming this is how you reference the year in SemesterI
-            courses: [] // Initialize with an empty array or as required
+            name: `${season} ${year.name}`,
+            year: year.name,
+            courses: []
         };
         addSemester(newSemester);
         handleClose();
