@@ -13,6 +13,7 @@ import "./App.css";
 import { ClearCourseModal } from "./ClearCourseModal";
 import { AddCourseModal } from "./AddCourseModal";
 import { UpdateCoureplanYear, removeSemesterYear } from "./DBmanage";
+import { AddSemesterModal } from "./AddSemesterModal";
 //import { JsxAttribute } from "typescript";
 //const [CurrentModalCourse, setCurrentModalCourse] = useState<Course>();
 
@@ -58,12 +59,14 @@ function Year({
     year,
     editCourse,
     selectedSemester,
-    updateYear
+    updateYear,
+    addSemesterToYear
 }: {
     year: yearI;
     editCourse: (course: Course) => void;
     selectedSemester: (semester: SemesterI) => void;
     updateYear: (updateYear: yearI) => void;
+    addSemesterToYear: () => void;
 }): JSX.Element {
     function DisplaySemester(year: yearI, index: number): SemesterI | null {
         const seasons: SemesterI[] = [];
@@ -246,6 +249,9 @@ function Year({
                     </tr>
                 </tbody>
             </Table>
+            <Button variant="primary" onClick={addSemesterToYear}>
+                Add Semester
+            </Button>
         </div>
     );
 }
@@ -260,35 +266,66 @@ export function CourseplanClick({
     selectedSemester: (semester: SemesterI) => void;
     UpdateCourseplan: (courseplan: CoursePlan) => void;
 }) {
-    const [yearOne, updateYearOne] = useState<yearI>();
-    const [showAddCourseModal, setShowAddCourseModal] =
-        useState<boolean>(false);
-    const handleCloseAddCourseModal = () => setShowAddCourseModal(false);
-    const [showClearModal, setShowClearModal] = useState(false);
+    const [showAddSemesterModal, setShowAddSemesterModal] = useState(false);
+    const [currentYear, setCurrentYear] = useState<yearI | null>(null);
+
+    const handleOpenAddSemesterModal = (year: yearI) => {
+        setCurrentYear(year);
+        setShowAddSemesterModal(true);
+    };
+
+    const addSemesterToCoursePlan = (
+        newSemester: SemesterI,
+        yearName: string
+    ) => {
+        const updatedCoursePlan = {
+            ...Courseplan,
+            years: Courseplan.years.map((year) => {
+                if (year.name === yearName) {
+                    return {
+                        ...year,
+                        [newSemester.season]: newSemester
+                    };
+                }
+                return year;
+            })
+        };
+        UpdateCourseplan(updatedCoursePlan);
+    };
 
     return (
         <div>
-            {/* <AddCourseModal
-                show={showAddCourseModal}
-                handleClose={handleCloseAddCourseModal}
-                addCourse={handleAddNewCourse}
-                ></AddCourseModal>*/}
-            {Courseplan.years.map((curyear: yearI) => {
-                return (
-                    <Year
-                        year={curyear}
-                        editCourse={setCurrentCourseEdit}
-                        key={curyear.name}
-                        selectedSemester={selectedSemester}
-                        updateYear={(year: yearI) => {
-                            console.log("update year called");
-                            UpdateCourseplan(
-                                UpdateCoureplanYear(curyear, year, Courseplan)
-                            );
-                        }}
-                    ></Year>
-                );
-            })}
+            {Courseplan.years.map((curyear) => (
+                <Year
+                    year={curyear}
+                    editCourse={setCurrentCourseEdit}
+                    key={curyear.name}
+                    selectedSemester={selectedSemester}
+                    updateYear={(updatedYear) =>
+                        UpdateCourseplan(
+                            UpdateCoureplanYear(
+                                curyear,
+                                updatedYear,
+                                Courseplan
+                            )
+                        )
+                    }
+                    addSemesterToYear={() =>
+                        handleOpenAddSemesterModal(curyear)
+                    }
+                />
+            ))}
+
+            {showAddSemesterModal && currentYear && (
+                <AddSemesterModal
+                    show={showAddSemesterModal}
+                    handleClose={() => setShowAddSemesterModal(false)}
+                    year={currentYear}
+                    addSemester={(newSemester) =>
+                        addSemesterToCoursePlan(newSemester, currentYear.name)
+                    }
+                />
+            )}
         </div>
     );
 }
