@@ -50,6 +50,9 @@ export function SingleMultipleSemester(): JSX.Element {
                             <Col>Number of Credits</Col>
                         </Row>
                         {addClasstoTable([semester])}
+                        <Button onClick={() => clearAllClassesButton(semester)}>
+                            Test
+                        </Button>
                     </Col>
                 </div>
             </div>
@@ -102,6 +105,13 @@ export function SingleMultipleSemester(): JSX.Element {
                 </div>
             </div>
         );
+    }
+
+    function clearAllClassesButton(sem: semester) {
+        //Im thinking make a button to clear semesters and then add that to the add table function
+        //when clicked update it so classes is an empty array or if that doesn't work create a new semester
+        sem.classes = [];
+        return sem;
     }
 
     // Make a helper function to add information to the table.(Add/Remove from array?)
