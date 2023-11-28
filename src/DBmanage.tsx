@@ -87,9 +87,28 @@ export function addCoursePlan(dbManager: dbMangement, nCoursePlan: CoursePlan) {
     });
 }
 export function removeSemesterYear(year: yearI, rSemester: SemesterI): yearI {
-    console.log("looking for old semester" + [rSemester.season]);
-    return { ...year, [rSemester.season]: null };
+    console.log("Removing semester: " + rSemester.season);
+
+    // Create a new object to avoid direct modification of the original year object
+    const updatedYear = { ...year };
+
+    // Check each season and set the matching one to null
+    if (updatedYear.winter && updatedYear.winter.season === rSemester.season) {
+        updatedYear.winter = null;
+    }
+    if (updatedYear.spring && updatedYear.spring.season === rSemester.season) {
+        updatedYear.spring = null;
+    }
+    if (updatedYear.summer && updatedYear.summer.season === rSemester.season) {
+        updatedYear.summer = null;
+    }
+    if (updatedYear.fall && updatedYear.fall.season === rSemester.season) {
+        updatedYear.fall = null;
+    }
+
+    return updatedYear;
 }
+
 export function UpdateCoureplanYear(
     Oyear: yearI,
     Nyear: yearI,

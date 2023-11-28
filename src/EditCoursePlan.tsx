@@ -120,14 +120,15 @@ function Year({
                                     <Button
                                         variant="danger"
                                         className="float-end"
-                                        onClick={() =>
+                                        onClick={(e) => {
+                                            e.stopPropagation(); // Prevent event bubbling
                                             updateYear(
                                                 removeSemesterYear(
                                                     year,
                                                     year.fall!
                                                 )
-                                            )
-                                        }
+                                            );
+                                        }}
                                     >
                                         remove
                                     </Button>
@@ -149,14 +150,15 @@ function Year({
                                     <Button
                                         variant="danger"
                                         className="float-end"
-                                        onClick={() =>
+                                        onClick={(e) => {
+                                            e.stopPropagation(); // Prevent event bubbling
                                             updateYear(
                                                 removeSemesterYear(
                                                     year,
                                                     year.winter!
                                                 )
-                                            )
-                                        }
+                                            );
+                                        }}
                                     >
                                         remove
                                     </Button>
@@ -178,14 +180,15 @@ function Year({
                                     <Button
                                         variant="danger"
                                         className="float-end"
-                                        onClick={() =>
+                                        onClick={(e) => {
+                                            e.stopPropagation(); // Prevent event bubbling
                                             updateYear(
                                                 removeSemesterYear(
                                                     year,
                                                     year.spring!
                                                 )
-                                            )
-                                        }
+                                            );
+                                        }}
                                     >
                                         remove
                                     </Button>
@@ -207,14 +210,15 @@ function Year({
                                     <Button
                                         variant="danger"
                                         className="float-end"
-                                        onClick={() =>
+                                        onClick={(e) => {
+                                            e.stopPropagation(); // Prevent event bubbling
                                             updateYear(
                                                 removeSemesterYear(
                                                     year,
                                                     year.summer!
                                                 )
-                                            )
-                                        }
+                                            );
+                                        }}
                                     >
                                         remove
                                     </Button>

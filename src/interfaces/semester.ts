@@ -1,5 +1,5 @@
 import { Course } from "./course";
-export type seasonT = "winter"|"spring"|"summer"|"fall";
+export type seasonT = "winter" | "spring" | "summer" | "fall";
 export interface SemesterI {
     season: seasonT;
     name: string;
@@ -9,18 +9,18 @@ export interface SemesterI {
 
 export interface yearI {
     name: string;
-    winter:null|SemesterI;
-    spring:null|SemesterI;
-    summer:null|SemesterI;
-    fall:null|SemesterI;
+    winter: null | SemesterI;
+    spring: null | SemesterI;
+    summer: null | SemesterI;
+    fall: null | SemesterI;
 }
 export interface CoursePlan {
     name: string;
-    years:yearI[];
+    years: yearI[];
 }
 
 export interface TotalDB {
-    Courseplans:CoursePlan[];
+    Courseplans: CoursePlan[];
 }
 
 export interface dbMangement {
