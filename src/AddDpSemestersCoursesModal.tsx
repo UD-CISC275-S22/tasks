@@ -162,7 +162,6 @@ export function AddDpSemestersCoursesModal({
         };
         addDp(newDp);
         handleCloseModal();
-        setSemesters([]); //added this to set up a clean slate for semester tracker whenever we go to add a new dp
     };
 
     return (
