@@ -48,7 +48,7 @@ const AI_Semesters = AI_Plan.semesters; //the semesters for the AI plan
 const DEFAULT_COURSE = AI_Semesters[0].courseList[0].title;
 
 export function ViewSemester(): JSX.Element {
-    // const [plan, setPlan] = useState<Plan>(AI_Plan); //The default plan (for now)
+    const [plan, setPlan] = useState<Plan>(AI_Plan); //The default plan (for now)
     const [semesters, setSemesters] = useState<Semester[]>(AI_Semesters); //the default semesters (for now)
     const [currCourse, setCurrCourse] = useState<string>(DEFAULT_COURSE);
     const [SemesterType, setSemesterType] = useState<string>("Fall"); //can be "Fall", "Spring" or "Both"
@@ -182,155 +182,18 @@ export function ViewSemester(): JSX.Element {
         /* ADD OTHER TYPES OF SEMESTERS LATER */
     }
 
-    // function displayFall(): JSX.Element {
-    //     return (
-    //         <div className="Fall">
-    //             <h1>Fall</h1>
-    //             {
-    //                 // eslint-disable-next-line no-extra-parens
-    //                 fallSemester.courseList.map((course: Course) => (
-    //                     <div key={course.id}>{displayCourse(course)}</div>
-    //                 ))
-    //             }
-    //         </div>
-    //     );
-    // }
-
-    //function to show ONLY the spring semester
-    // function displaySpring(): JSX.Element {
-    //     setTargetSem("Spring");
-    //     const idx = index();
-    //     //an array of courses in the plan's semester (ex. spring of year 1)
-    //     const springCourses = semesters[idx].courseList;
-
-    //     return (
-    //         <div className="Spring">
-    //             <h1>Spring Year {targetYear}</h1>
-    //             {springCourses.map(
-    //                 // eslint-disable-next-line no-extra-parens
-    //                 (course: Course): JSX.Element => (
-    //                     <div className="Course" key={course.id}>
-    //                         <span key={course.id}>
-    //                             {/* {course.title}
-    //                             {" - "}
-    //                             {course.name} */}
-    //                             {displayCourse(course)}
-    //                         </span>
-    //                     </div>
-    //                 )
-    //             )}
-    //             <div>
-    //                 <DropAdd
-    //                     dropClass={dropClass}
-    //                     addClass={addClass}
-    //                     updateCurrCourse={updateCurrCourse}
-    //                     currCourse={currCourse}
-    //                     Course_List={springCourses}
-    //                 ></DropAdd>
-    //                 <ClearSemester
-    //                     clearSemesterCourses={clearSemesterCourses}
-    //                     show={clicked}
-    //                     handleClose={handleClose}
-    //                     handleShow={handleShow}
-    //                 ></ClearSemester>
-    //             </div>
-    //         </div>
-    //     );
-    // }
-
     //function to display both semesters
     function displayBoth(): JSX.Element {
-        setTargetSem("Spring");
-        let idx = index();
-        //an array of courses in the plan's semester (ex. spring of year 1)
-        const springCourses = semesters[idx].courseList;
+        // setTargetSem("Spring");
+        // let idx = index();
+        // //an array of courses in the plan's semester (ex. spring of year 1)
+        // const springCourses = semesters[idx].courseList;
 
-        setTargetSem("Fall");
-        idx = index();
-        //an array of courses in the plan's semester (ex. fall of year 1)
-        const fallCourses = semesters[idx].courseList;
+        // setTargetSem("Fall");
+        // idx = index();
+        // //an array of courses in the plan's semester (ex. fall of year 1)
+        // const fallCourses = semesters[idx].courseList;
 
-        // return (
-        //     <div className="Semester">
-        //         <div className="Fall">
-        //             <h1>Fall</h1>
-        //             {fallCourses.map(
-        //                 // eslint-disable-next-line no-extra-parens
-        //                 (course: Course): JSX.Element => (
-        //                     <div className="Course" key={course.id}>
-        //                         <span key={course.id}>
-        //                             {/* {course.title}
-        //                         {" - "}
-        //                         {course.name} */}
-        //                             {displayCourse(course)}
-        //                         </span>
-        //                     </div>
-        //                 )
-        //             )}
-        //         </div>
-        //         <div className="Spring">
-        //             <h1>Spring Year {targetYear}</h1>
-        //             {springCourses.map(
-        //                 // eslint-disable-next-line no-extra-parens
-        //                 (course: Course): JSX.Element => (
-        //                     <div className="Course" key={course.id}>
-        //                         <span key={course.id}>
-        //                             {/* {course.title}
-        //                         {" - "}
-        //                         {course.name} */}
-        //                             {displayCourse(course)}
-        //                         </span>
-        //                     </div>
-        //                 )
-        //             )}
-        //             <div>
-        //                 <DropAdd
-        //                     dropClass={dropClass}
-        //                     addClass={addClass}
-        //                     updateCurrCourse={updateCurrCourse}
-        //                     currCourse={currCourse}
-        //                     Course_List={springCourses}
-        //                 ></DropAdd>
-        //                 <ClearSemester
-        //                     clearSemesterCourses={clearSemesterCourses}
-        //                     show={clicked}
-        //                     handleClose={handleClose}
-        //                     handleShow={handleShow}
-        //                 ></ClearSemester>
-        //             </div>
-        //         </div>
-        //         <div className="Fall">
-        //             <h1>Fall Year {targetYear}</h1>
-        //             {fallCourses.map(
-        //                 // eslint-disable-next-line no-extra-parens
-        //                 (course: Course): JSX.Element => (
-        //                     <div className="Course" key={course.id}>
-        //                         <span key={course.id}>
-        //                             {course.title}
-        //                             {" - "}
-        //                             {course.name}
-        //                         </span>
-        //                     </div>
-        //                 )
-        //             )}
-        //             <div>
-        //                 <DropAdd
-        //                     dropClass={dropClass}
-        //                     addClass={addClass}
-        //                     updateCurrCourse={updateCurrCourse}
-        //                     currCourse={currCourse}
-        //                     Course_List={fallCourses}
-        //                 ></DropAdd>
-        //                 <ClearSemester
-        //                     clearSemesterCourses={clearSemesterCourses}
-        //                     show={clicked}
-        //                     handleClose={handleClose}
-        //                     handleShow={handleShow}
-        //                 ></ClearSemester>
-        //             </div>
-        //         </div>
-        //     </div>
-        // );
         return (
             <div>
                 <div className="Semester">
@@ -521,7 +384,7 @@ export function ViewSemester(): JSX.Element {
                                 // eslint-disable-next-line no-extra-parens
                                 COURSES_LIST.map((courseName: Course) => (
                                     <option
-                                        key={courseName.title}
+                                        key={courseName.id}
                                         value={courseName.title}
                                     >
                                         {courseName.title}
