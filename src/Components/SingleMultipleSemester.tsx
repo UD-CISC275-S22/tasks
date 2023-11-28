@@ -236,7 +236,6 @@ export function SingleMultipleSemester({
                     <div></div>
                 </Col>
             </Form.Group>
-            {"}"}
             <DeleteCourses onDeleteCourse={onDeleteCourse} />
             <div>
                 {clicked
