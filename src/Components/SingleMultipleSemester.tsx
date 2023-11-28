@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Class } from "../interfaces/class";
 import QuickAdd from "./QuickAdd";
 import SlowAdd from "./SlowAdd";
+import DeleteCourses from "./DeleteCourses";
 
 // ------------add this
 import { degreePlan } from "../interfaces/degreePlan";
@@ -153,6 +154,18 @@ export function SingleMultipleSemester({
         );
     }
 
+    const onDeleteCourse = (courseCode: string) => {
+        // Find and remove the course with the given courseCode from semArr
+        const updatedSemArr = semArr.map((sem) => ({
+            ...sem,
+            classes: sem.classes.filter(
+                (course) => course.courseCode !== courseCode
+            )
+        }));
+
+        setSemArr(updatedSemArr);
+    };
+
     function addForClickedSem(clickedArr: semester[]) {
         console.log(semArr.map((e) => e.name));
         const tables = clickedArr.map((clickedSem: semester): JSX.Element => {
@@ -223,6 +236,7 @@ export function SingleMultipleSemester({
                     <div></div>
                 </Col>
             </Form.Group>
+            <DeleteCourses onDeleteCourse={onDeleteCourse} />
             <div>
                 {clicked
                     ? addForClickedSem(semArrClicked)
