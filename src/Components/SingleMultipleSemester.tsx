@@ -166,6 +166,8 @@ export function SingleMultipleSemester({
         setSemArr(updatedSemArr);
     };
 
+    const isCoursesAdded = semArr.some((sem) => sem.classes.length > 0);
+
     function addForClickedSem(clickedArr: semester[]) {
         console.log(semArr.map((e) => e.name));
         const tables = clickedArr.map((clickedSem: semester): JSX.Element => {
@@ -236,7 +238,9 @@ export function SingleMultipleSemester({
                     <div></div>
                 </Col>
             </Form.Group>
-            <DeleteCourses onDeleteCourse={onDeleteCourse} />
+            {isCoursesAdded && (
+                <DeleteCourses onDeleteCourse={onDeleteCourse} />
+            )}
             <div>
                 {clicked
                     ? addForClickedSem(semArrClicked)
