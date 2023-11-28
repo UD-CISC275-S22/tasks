@@ -250,7 +250,7 @@ function Year({
                 </tbody>
             </Table>
             <Button variant="primary" onClick={addSemesterToYear}>
-                Add semester
+                Add Semester
             </Button>
         </div>
     );
