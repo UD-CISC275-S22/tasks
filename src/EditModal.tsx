@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { Button, Modal, Form } from "react-bootstrap";
-import { dbMangement, deleteCourse } from "./DBmanage";
 import { Course } from "./interfaces/course";
 import { updateCourse } from "./DBmanage";
+import { dbMangement } from "./interfaces/semester";
 
 export const EditCourseModal = ({
     show,
     handleClose,
     currentCourse,
-    cRUD
+    updateCoursePass
 }: {
     show: boolean;
     handleClose: () => void;
     currentCourse: Course;
-    cRUD: dbMangement;
+    updateCoursePass: (courseSet: Course) => void;
 }) => {
     const [ticker, setTicker] = useState<string>(currentCourse.ticker);
     const [name, setName] = useState<string>(currentCourse.name);
@@ -27,17 +27,26 @@ export const EditCourseModal = ({
     }, [currentCourse]);
 
     const saveChanges = () => {
-        updateCourse(
-            cRUD,
-            { ticker: ticker, name: name, credits: credits, prereq: prereq },
-            currentCourse.ticker
-        );
+        // updateCourse(
+        //     cRUD,
+        //     { ticker: ticker, name: name, credits: credits, prereq: prereq },
+        //     currentCourse.UUID!
+        // );
+        updateCoursePass({
+            ticker: ticker,
+            name: name,
+            credits: credits,
+            prereq: prereq,
+            UUID: currentCourse.UUID
+        });
+        console.log("current Course");
+        console.log(currentCourse.UUID);
         handleClose();
     };
-    const handleDelete = () => {
-        deleteCourse(cRUD, currentCourse.ticker);
-        handleClose();
-    };
+    // const handleDelete = () => {
+    //     deleteCourse(cRUD, currentCourse.ticker);
+    //     handleClose();
+    // };
     return (
         <div>
             <Modal show={show} onHide={handleClose} animation={true}>
@@ -73,9 +82,9 @@ export const EditCourseModal = ({
                     <Button variant="secondary" onClick={handleClose}>
                         Close
                     </Button>
-                    <Button variant="danger" onClick={handleDelete}>
+                    {/* <Button variant="danger" onClick={handleDelete}>
                         Delete Course
-                    </Button>
+                            </Button> */}
                     <Button variant="primary" onClick={saveChanges}>
                         Save Changes
                     </Button>

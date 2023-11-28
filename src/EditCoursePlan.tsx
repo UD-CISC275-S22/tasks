@@ -1,15 +1,16 @@
 import React, { useState } from "react";
-import { Accordion, AccordionHeader, Table } from "react-bootstrap";
-import { CoursePlan, SemesterI, yearI } from "./interfaces/semester";
+import { Accordion, AccordionHeader, Button, Table } from "react-bootstrap";
+import { CoursePlan, SemesterI, seasonT, yearI } from "./interfaces/semester";
 import { Course } from "./interfaces/course";
 //import React, { useState } from "react";
 import "./App.css";
 import { ClearCourseModal } from "./ClearCourseModal";
 import { AddCourseModal } from "./AddCourseModal";
+import { UpdateCoureplanYear, removeSemesterYear } from "./DBmanage";
 //import { JsxAttribute } from "typescript";
 //const [CurrentModalCourse, setCurrentModalCourse] = useState<Course>();
 
-export function Semester({
+function Semester({
     rendSemester,
     edit
 }: {
@@ -47,14 +48,17 @@ export function Semester({
     );
 }
 
-export function Year({
+function Year({
     year,
-    editCourse
+    editCourse,
+    selectedSemester,
+    updateYear
 }: {
     year: yearI;
     editCourse: (course: Course) => void;
+    selectedSemester: (semester: SemesterI) => void;
+    updateYear: (updateYear: yearI) => void;
 }): JSX.Element {
-    let columncount = 0;
     function DisplaySemester(year: yearI, index: number): SemesterI | null {
         const seasons: SemesterI[] = [];
 
@@ -72,6 +76,7 @@ export function Year({
         }
         return seasons.length > index ? seasons[index] : null;
     }
+    let columncount = 0;
     if (year.winter) {
         columncount++;
     }
@@ -94,19 +99,61 @@ export function Year({
                 </thead>
                 <tbody>
                     <tr>
-                        {year.fall && <th>Fall</th>}
-                        {year.winter && <th>winter</th>}
-                        {year.spring && <th>Spring</th>}
-                        {year.summer && <th>Summer</th>}
+                        {year.fall && (
+                            <th onClick={() => selectedSemester(year.fall!)}>
+                                Fall
+                            </th>
+                        )}
+                        {year.winter && (
+                            <th onClick={() => selectedSemester(year.winter!)}>
+                                winter
+                            </th>
+                        )}
+                        {year.spring && (
+                            <th onClick={() => selectedSemester(year.spring!)}>
+                                Spring
+                            </th>
+                        )}
+                        {year.summer && (
+                            <th>
+                                Summer
+                                <Button
+                                    onClick={() =>
+                                        selectedSemester(year.summer!)
+                                    }
+                                    className="float-end"
+                                >
+                                    {" "}
+                                    AddQueue
+                                </Button>
+                                <Button
+                                    variant="danger"
+                                    className="float-end"
+                                    onClick={() =>
+                                        updateYear(
+                                            removeSemesterYear(
+                                                year,
+                                                year.summer!
+                                            )
+                                        )
+                                    }
+                                >
+                                    remove
+                                </Button>
+                            </th>
+                        )}
                     </tr>
                     <tr>
                         {["fall", "winter", "spring", "summer"].map(
-                            (season, index) => {
-                                const semester = DisplaySemester(year, index);
-                                return semester ? (
+                            (season: string) => {
+                                return year[season as keyof yearI] ? (
                                     <td key={season}>
                                         <Semester
-                                            rendSemester={semester}
+                                            rendSemester={
+                                                year[
+                                                    season as keyof yearI
+                                                ] as SemesterI
+                                            }
                                             edit={editCourse}
                                         ></Semester>
                                     </td>
@@ -119,89 +166,46 @@ export function Year({
         </div>
     );
 }
-function Courseplan({
+export function CourseplanClick({
     Courseplan,
-    setCurrentCourseEdit
+    setCurrentCourseEdit,
+    selectedSemester,
+    UpdateCourseplan
 }: {
     Courseplan: CoursePlan;
     setCurrentCourseEdit: (course: Course) => void;
+    selectedSemester: (semester: SemesterI) => void;
+    UpdateCourseplan: (courseplan: CoursePlan) => void;
 }) {
     const [yearOne, updateYearOne] = useState<yearI>();
     const [showAddCourseModal, setShowAddCourseModal] =
         useState<boolean>(false);
-    const handleShowAddCourseModal = () => setShowAddCourseModal(true);
     const handleCloseAddCourseModal = () => setShowAddCourseModal(false);
-    //const handleShowAddModal = () => updateEditMogal(true);
     const [showClearModal, setShowClearModal] = useState(false);
-
-    // const handleAddNewCourse = (
-    //     newCourse: Course,
-    //     semester: "firstsemester" | "secondsemester"
-    // ) => {
-    //     if (yearOne[semester].courses.length >= 5) {
-    //         console.error("Cannot add more than 5 courses per semester");
-    //         return;
-    //     }
-
-    //     const updatedCourses = [...yearOne[semester].courses, newCourse];
-
-    //     const updatedSemester = {
-    //         ...yearOne[semester],
-    //         courses: updatedCourses
-    //     };
-
-    //     updateYearOne({ ...yearOne, [semester]: updatedSemester });
-    //     handleCloseAddCourseModal();
-    // };
 
     return (
         <div>
-            <button onClick={handleShowAddCourseModal}>Add Course</button>
             {/* <AddCourseModal
                 show={showAddCourseModal}
                 handleClose={handleCloseAddCourseModal}
                 addCourse={handleAddNewCourse}
-            ></AddCourseModal> */}
+                ></AddCourseModal>*/}
             {Courseplan.years.map((curyear: yearI) => {
                 return (
                     <Year
                         year={curyear}
                         editCourse={setCurrentCourseEdit}
                         key={curyear.name}
+                        selectedSemester={selectedSemester}
+                        updateYear={(year: yearI) => {
+                            console.log("update year called");
+                            UpdateCourseplan(
+                                UpdateCoureplanYear(curyear, year, Courseplan)
+                            );
+                        }}
                     ></Year>
                 );
             })}
-        </div>
-    );
-}
-
-export function MulitCourseplan({
-    Courseplans,
-    setCurrentCourseEdit
-}: {
-    Courseplans: CoursePlan[];
-    setCurrentCourseEdit: (course: Course) => void;
-}) {
-    return (
-        <div>
-            <Accordion>
-                {Courseplans.map((curplan: CoursePlan, index: number) => (
-                    <Accordion.Item
-                        eventKey={index.toString()}
-                        key={index.toString()}
-                        className="beigebackground"
-                    >
-                        <AccordionHeader>{curplan.name}</AccordionHeader>
-                        <Accordion.Body>
-                            <Courseplan
-                                key={curplan.name}
-                                Courseplan={curplan}
-                                setCurrentCourseEdit={setCurrentCourseEdit}
-                            />
-                        </Accordion.Body>
-                    </Accordion.Item>
-                ))}
-            </Accordion>
         </div>
     );
 }
