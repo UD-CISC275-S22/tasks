@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
+import { Semester } from "../Interfaces/semester";
 
 export interface valueProps {
     /*
@@ -12,8 +13,6 @@ export interface valueProps {
     clicked: boolean;
     setClicked: (expression: boolean) => void;
     */
-    targetYear: number;
-    setTargetYear: (expression: number) => void;
     /*
     dropClass(): void;
     addClass(): void;
@@ -23,21 +22,33 @@ export interface valueProps {
     handleShow(): void;
     index(): number;
     */
+    setTargetYear: (expression: number) => void;
+    targetYear: number;
     displayBoth(): JSX.Element;
 }
 
 export function DisplayPlan({
+    displayBoth,
     setTargetYear,
-    displayBoth
+    targetYear
 }: valueProps): JSX.Element {
-    setTargetYear(1);
+    React.useEffect(() => {
+        setTargetYear(1);
+    });
     const firstYear = displayBoth();
-    setTargetYear(2);
+    React.useEffect(() => {
+        setTargetYear(2);
+    });
     const secondYear = displayBoth();
-    setTargetYear(3);
+    React.useEffect(() => {
+        setTargetYear(3);
+    });
     const thirdYear = displayBoth();
-    setTargetYear(4);
+    React.useEffect(() => {
+        setTargetYear(4);
+    });
     const fourthYear = displayBoth();
+
     return (
         <div>
             {firstYear}

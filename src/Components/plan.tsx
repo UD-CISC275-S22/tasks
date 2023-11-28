@@ -25,7 +25,7 @@ export const breadth: Course = {
 
 //this is a general elective constant course that you can keep for any semester or plan
 export const elective: Course = {
-    id: -1,
+    id: -2,
     title: "Free Elective",
     name: "",
     description: "",
@@ -39,7 +39,7 @@ export const elective: Course = {
 
 //this is a general science/lab constant course that you can keep for any semester or plan
 export const science: Course = {
-    id: -1,
+    id: -3,
     title: "Science Requirement",
     name: "",
     description: "GEO or CHEM or PHYS",
@@ -53,7 +53,7 @@ export const science: Course = {
 
 //this is a general math constant course that you can keep for any semester or plan
 export const math: Course = {
-    id: -1,
+    id: -4,
     title: "Math Requirement",
     name: "",
     description: "Math 205 or Math 350",
@@ -67,7 +67,7 @@ export const math: Course = {
 
 //this is a general restricted elective constant course that you can keep for any semester or plan
 export const restricted: Course = {
-    id: -1,
+    id: -5,
     title: "Restricted Electives",
     name: "",
     description: "",
@@ -81,7 +81,7 @@ export const restricted: Course = {
 
 //this is a general systems requirement constant course that you can keep for any semester or plan
 export const systems: Course = {
-    id: -1,
+    id: -6,
     title: "Systems Requirement",
     name: "",
     description: "",
@@ -95,7 +95,7 @@ export const systems: Course = {
 
 //this is a general higher level CISC constant course that you can keep for any semester or plan
 export const higherLevel: Course = {
-    id: -1,
+    id: -7,
     title: "CISC 300 Level Requirement",
     name: "",
     description: "",
@@ -109,7 +109,7 @@ export const higherLevel: Course = {
 
 //this is a general english constant course that you can keep for any semester or plan
 export const english: Course = {
-    id: -1,
+    id: -8,
     title: "English Requirement",
     name: "",
     description: "",
