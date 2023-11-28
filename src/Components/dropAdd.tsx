@@ -16,7 +16,7 @@ export const DropAdd = ({
     Course_List: Course[];
 }) => {
     return (
-        <div>
+        <>
             <Form.Group controlId="currentCourse">
                 <Form.Label>Select A Course</Form.Label>
                 <Form.Select value={currCourse} onChange={updateCurrCourse}>
@@ -36,6 +36,6 @@ export const DropAdd = ({
             </Form.Group>
             <Button onClick={dropClass}>Remove Class</Button>
             <Button onClick={addClass}>Add Class</Button>
-        </div>
+        </>
     );
 };

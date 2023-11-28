@@ -13,7 +13,7 @@ export const ClearSemester = ({
     show: boolean;
 }) => {
     return (
-        <div>
+        <>
             <div className="clear_sem">
                 <Button onClick={handleShow}>Remove All Courses</Button>
             </div>
@@ -34,7 +34,7 @@ export const ClearSemester = ({
                     </Modal.Footer>
                 </Modal>
             </div>
-        </div>
+        </>
     );
 };
 
