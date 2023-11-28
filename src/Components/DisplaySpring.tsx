@@ -44,10 +44,14 @@ export function DisplaySpring({
     handleShow,
     index
 }: valueProps): JSX.Element {
-    setTargetSem("Spring");
+    // setTargetSem("Spring");
     const idx = index();
     //an array of courses in the plan's semester (ex. spring of year 1)
     const springCourses = semesters[idx].courseList;
+
+    React.useEffect(() => {
+        setTargetSem("Spring");
+    }, []);
 
     return (
         <div className="Spring">
