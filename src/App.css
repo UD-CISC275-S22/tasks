@@ -1,10 +1,16 @@
 .App {
     text-align: center;
+    background-color: #ffffff;
 }
 
 .App-logo {
     height: 40vmin;
     pointer-events: none;
+    color: rgb(255, 255, 255);
+}
+
+.App-title {
+    color: rgb(64, 64, 64);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -15,14 +21,47 @@
 
 .App-header {
     width: 100%;
-    background-color: #282c34;
-    min-height: 40vh;
+    background-color: #00539f;
+    min-height: 10vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
+    color: rgb(255, 255, 255);
+    border-top-color: #00b8fb;
+    border-top-style: solid;
+    border-top-width: 0.25rem;
+    border-bottom-color: #00b8fb;
+    border-bottom-style: solid;
+    border-bottom-width: 0.25rem;
+}
+
+button {
+    border: none;
+    border-radius: 30px;
+    padding: 0.5rem;
+    background-color: #00539f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     color: white;
+
+}
+.UDbutton{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+button:hover {
+    background-color: #0072ce;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 .App-link {
@@ -36,4 +75,8 @@
     to {
         transform: rotate(360deg);
     }
+}
+.tight {
+    padding: 0;
+    margin: 0;
 }

@@ -1,0 +1,141 @@
+[
+  {
+      "name": "Bachelor of Computer Science",
+      "years": [
+          {
+              "name": "Year 1",
+              "winter": {
+                "season": "spring",
+                "name": "First Semester",
+                "year": "2023",
+                "courses": [
+                    {
+                        "ticker": "CS101",
+                        "name": "Introduction to Computer Science",
+                        "credits": 4,
+                        "prereq": "None"
+                    },
+                    {
+                        "ticker": "MATH101",
+                        "name": "Calculus I",
+                        "credits": 3,
+                        "prereq": "None"
+                    },
+                    {
+                        "ticker": "ENG101",
+                        "name": "English Composition",
+                        "credits": 3,
+                        "prereq": "None"
+                    }
+                ]
+            },
+              "spring": {
+                  "season": "spring",
+                  "name": "First Semester",
+                  "year": "2023",
+                  "courses": [
+                      {
+                          "ticker": "CS101",
+                          "name": "Introduction to Computer Science",
+                          "credits": 4,
+                          "prereq": "None"
+                      },
+                      {
+                          "ticker": "MATH101",
+                          "name": "Calculus I",
+                          "credits": 3,
+                          "prereq": "None"
+                      },
+                      {
+                          "ticker": "ENG101",
+                          "name": "English Composition",
+                          "credits": 3,
+                          "prereq": "None"
+                      }
+                  ]
+              },
+              "summer": null,
+              "fall": {
+                  "season": "fall",
+                  "name": "Second Semester",
+                  "year": "2023",
+                  "courses": [
+                      {
+                          "ticker": "CS102",
+                          "name": "Data Structures",
+                          "credits": 4,
+                          "prereq": "CS101"
+                      },
+                      {
+                          "ticker": "MATH102",
+                          "name": "Calculus II",
+                          "credits": 3,
+                          "prereq": "MATH101"
+                      },
+                      {
+                          "ticker": "PHYS101",
+                          "name": "General Physics",
+                          "credits": 4,
+                          "prereq": "MATH101"
+                      }
+                  ]
+              }
+          },
+          {
+              "name": "Year 2",
+              "winter": null,
+              "spring": {
+                  "season": "spring",
+                  "name": "Third Semester",
+                  "year": "2024",
+                  "courses": [
+                      {
+                          "ticker": "CS201",
+                          "name": "Algorithms",
+                          "credits": 4,
+                          "prereq": "CS102"
+                      },
+                      {
+                          "ticker": "CS202",
+                          "name": "Computer Organization",
+                          "credits": 3,
+                          "prereq": "CS102"
+                      },
+                      {
+                          "ticker": "STAT101",
+                          "name": "Statistics",
+                          "credits": 3,
+                          "prereq": "MATH102"
+                      }
+                  ]
+              },
+              "summer": null,
+              "fall": {
+                  "season": "fall",
+                  "name": "Fourth Semester",
+                  "year": "2024",
+                  "courses": [
+                      {
+                          "ticker": "CS301",
+                          "name": "Operating Systems",
+                          "credits": 4,
+                          "prereq": "CS202"
+                      },
+                      {
+                          "ticker": "CS302",
+                          "name": "Database Systems",
+                          "credits": 3,
+                          "prereq": "CS201"
+                      },
+                      {
+                          "ticker": "ELECTIVE",
+                          "name": "Elective Course",
+                          "credits": 3,
+                          "prereq": "None"
+                      }
+                  ]
+              }
+          }
+      ]
+  }
+]
