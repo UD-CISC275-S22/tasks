@@ -102,11 +102,11 @@ export function ViewSemester(): JSX.Element {
     // function removes all courses!
     function clearSemesterCourses() {
         const idx = index();
-        const newSemester = semesters;
+        const newSemester = { ...semesters };
         newSemester[idx].courseList = [];
 
         //function to clear all courses within a semester
-        setSemesters(newSemester);
+        setSemesters({ ...newSemester });
         handleClose();
     }
 
@@ -121,7 +121,7 @@ export function ViewSemester(): JSX.Element {
 
     function dropClass() {
         const idx = index();
-        const newSemester = semesters;
+        const newSemester = { ...semesters };
         const newClasses = newSemester[idx].courseList.filter(
             (course: Course) => currCourse !== course.title
         );
@@ -129,12 +129,12 @@ export function ViewSemester(): JSX.Element {
         // looks through the course list in the current semester and filters out the
         // course with the same "Title" as the state "currCourse"
         // **refer to "currCourse" documentation for more info **
-        setSemesters(newSemester);
+        setSemesters({ ...newSemester });
     }
 
     function addClass() {
         const idx = index();
-        const newSemester = semesters;
+        const newSemester = { ...semesters };
         const newClasses = newSemester[idx].courseList;
         //idea was a little connfusing for the variable name so we renamed it choiceIdx and choice is the actual course data structure
         const choiceIdx = COURSES_LIST.findIndex(
@@ -154,7 +154,7 @@ export function ViewSemester(): JSX.Element {
         }
 
         newSemester[idx].courseList = newClasses;
-        setSemesters(newSemester);
+        setSemesters({ ...newSemester });
     }
 
     //function to change number of semesters shown (can be either 1 or 2 only - can add 0 or more semesters later)
@@ -178,6 +178,7 @@ export function ViewSemester(): JSX.Element {
         } else {
             newSemType = "Fall";
         }
+        console.log(index());
         setSemesterType(newSemType); //set the new semester type to display
         /* ADD OTHER TYPES OF SEMESTERS LATER */
     }
