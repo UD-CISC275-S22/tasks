@@ -4,9 +4,6 @@ import "./App.css";
 import { plan } from "./PlannerInterfaces/plan";
 import { Plan } from "./Plan";
 import defaultPlans from "./Defaults.json";
-import CourseTable from "./CoursePlan";
-import { data } from "./classData";
-//test comment
 
 function App(): JSX.Element {
     const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -100,19 +97,8 @@ function App(): JSX.Element {
                     </div>
                 </Modal>
             </div>
-
             {/* Render CourseTable component */}
-            <CourseTable data={data} />
-            <p> List of Degree Plans: </p>
-            <table>
-                <tr>
-                    <th>Code</th>
-                    <th>Name</th>
-                    <th>Credits</th>
-                </tr>
-            </table>
         </div>
     );
 }
-//send help :(
 export default App;
