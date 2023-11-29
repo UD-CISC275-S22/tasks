@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Class } from "../interfaces/class";
 import QuickAdd from "./QuickAdd";
 import SlowAdd from "./SlowAdd";
-import DeleteCourses from "./DeleteCourses";
+//import DeleteCourses from "./DeleteCourses";
 
 // ------------add this
 import { degreePlan } from "../interfaces/degreePlan";
@@ -241,9 +241,9 @@ export function SingleMultipleSemester({
                     <div></div>
                 </Col>
             </Form.Group>
-            {isCoursesAdded && (
+            {/* {isCoursesAdded && (
                 <DeleteCourses onDeleteCourse={onDeleteCourse} />
-            )}
+            )} */}
             <div>
                 {clicked
                     ? addForClickedSem(semArrClicked)
