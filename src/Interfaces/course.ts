@@ -1,3 +1,5 @@
+/* eslint-disable prettier/prettier */
+
 /* 
 CANR:
 CAS
@@ -34,6 +36,7 @@ export interface Course {
     /*semester offered, eg: Spring, Fall, Both, etc */
     semester: string[]; //made this a string because in the AllCourses json file there is summer, fall, spring, all three, only two, etc. too many variables to account for
     /*Department: eg: College of Engineering */
+    // can change into string to get a fix
     department: Department;
     /* prerequesite to take this course - an array of course titles */
     prereq: string[];

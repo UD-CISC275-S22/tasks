@@ -289,3 +289,21 @@ export function AI(): Plan {
         credits: 124
     };
 }
+/*
+ * QUESTIONS
+ * what do you mean by fall1/fall2/fall3...ect, are those seperated by year or
+ * does that mean something else?
+ * Are the general courses meant to be edited?
+ */
+
+/*
+ * IDEAS FOR HOW TO CLEAR PLAN
+ * repeat drop down idea to remove desired semester
+ * create a button to remove the desired semester
+ */
+
+/*
+ * DUMMY CODE
+ * function dropPlanSemester () {
+ * }
+ */
