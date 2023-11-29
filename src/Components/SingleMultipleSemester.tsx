@@ -1,7 +1,9 @@
+/* eslint-disable no-extra-parens */
 import React, { useState } from "react";
 import { Class } from "../interfaces/class";
 import QuickAdd from "./QuickAdd";
 import SlowAdd from "./SlowAdd";
+import DeleteCourses from "./DeleteCourses";
 
 // ------------add this
 import { degreePlan } from "../interfaces/degreePlan";
@@ -174,7 +176,6 @@ export function SingleMultipleSemester({
         //return sem;
     }
 
-    // Make a helper function to add information to the table.(Add/Remove from array?)
     function addForClickedSem(clickedArr: semester[]) {
         console.log(semArr.map((e) => e.name));
         const tables = clickedArr.map((clickedSem: semester): JSX.Element => {
@@ -240,6 +241,9 @@ export function SingleMultipleSemester({
                     <div></div>
                 </Col>
             </Form.Group>
+            {isCoursesAdded && (
+                <DeleteCourses onDeleteCourse={onDeleteCourse} />
+            )}
             <div>
                 {clicked
                     ? addForClickedSem(semArrClicked)
