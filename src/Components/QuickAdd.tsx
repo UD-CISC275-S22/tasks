@@ -78,6 +78,9 @@ function CourseSearch(props: QuickAddProps): JSX.Element {
                     <h1>Course Information</h1>
                     <h6>{courseInfo.courseTitle}</h6>
                     <div>{courseInfo.courseCode}</div>
+                    <div>
+                        {"Pre-requisite: "} {courseInfo.preReqs}
+                    </div>
                     <div>{courseInfo.credits} Credits</div>
                     <br></br>
                     {year === "" || semester === "" ? (
