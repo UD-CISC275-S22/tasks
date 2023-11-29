@@ -68,6 +68,47 @@ export function CoureseplansBoot({
     function EditModal(course: Course) {
         console.log(EditModal);
     }
+    const [searchval, SetSeachval] = useState<string>("");
+
+    function searchInput(event: React.ChangeEvent<HTMLInputElement>) {
+        SetSeachval(event.target.value);
+        setcatalog(searchCourses(catalog, event.target.value));
+    }
+
+    function searchCourses(
+        catalog: CatalogCourses,
+        searchTerm: string
+    ): CatalogCourses {
+        const lowerCaseSearchTerm = searchTerm.toLowerCase();
+        const filteredCatalogEntries = Object.entries(catalog).map(
+            ([category, courses]) => {
+                const filteredCourses = Object.entries(courses).filter(
+                    ([courseCode, course]) =>
+                        course.code
+                            .toLowerCase()
+                            .includes(lowerCaseSearchTerm) ||
+                        course.name
+                            .toLowerCase()
+                            .includes(lowerCaseSearchTerm) ||
+                        course.descr
+                            .toLowerCase()
+                            .includes(lowerCaseSearchTerm) ||
+                        course.credits
+                            .toLowerCase()
+                            .includes(lowerCaseSearchTerm)
+                );
+
+                return [category, Object.fromEntries(filteredCourses)];
+            }
+        );
+
+        return Object.fromEntries(
+            filteredCatalogEntries.filter(
+                ([_, courses]) => Object.keys(courses).length > 0
+            )
+        );
+    }
+
     return (
         <div>
             <Button onClick={Save}>Save</Button>
@@ -80,6 +121,8 @@ export function CoureseplansBoot({
                                     className="float-end"
                                     type="text"
                                     placeholder="Search"
+                                    //value={searchval}
+                                    onChange={searchInput}
                                 />
                             </Col>
                         </Form.Group>
