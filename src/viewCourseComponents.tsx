@@ -43,6 +43,20 @@ export function Semester({
                     );
                 })}
             </tbody>
+            <tfoot>
+                <tr>
+                    <th colSpan={2}>Totals Credits</th>
+                    <td>
+                        {rendSemester.courses.reduce(
+                            (
+                                creditsCount: number,
+                                rendCourse: Course
+                            ): number => creditsCount + rendCourse.credits,
+                            0
+                        )}
+                    </td>
+                </tr>
+            </tfoot>
         </Table>
     );
 }
