@@ -3,4 +3,6 @@ export interface Course {
     name: string;
     credits: number;
     prereq: string;
+    UUID?: string;
+    Descritpion?: string;
 }

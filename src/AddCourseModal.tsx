@@ -12,11 +12,11 @@ interface AddCourseModalProps {
     ) => void;
 }
 
-export const AddCourseModal: React.FC<AddCourseModalProps> = ({
+export function AddCourseModal({
     show,
     handleClose,
     addCourse
-}) => {
+}: AddCourseModalProps) {
     const [name, setName] = useState<string>("");
     const [ticker, setTicker] = useState<string>("");
     const [credits, setCredits] = useState<number>(0);
@@ -101,4 +101,4 @@ export const AddCourseModal: React.FC<AddCourseModalProps> = ({
             </Modal.Footer>
         </Modal>
     );
-};
+}

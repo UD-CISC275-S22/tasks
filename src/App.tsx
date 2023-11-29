@@ -1,56 +1,101 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import "./App.css";
-import { MulitCourseplan /*Year*/ } from "./viewCourseComponents";
-import { TotalDB /*yearI*/ } from "./interfaces/semester";
-import { Course } from "./interfaces/course";
+import { MulitCourseplan, Year } from "./viewCourseComponents";
+import { CoursePlan, TotalDB, dbMangement, yearI } from "./interfaces/semester";
 import { EditCourseModal } from "./EditModal";
-import { AddCourseModal } from "./AddCourseModal";
-import { ClearCourseModal } from "./ClearCourseModal";
-import { Container } from "react-bootstrap";
+import { Course } from "./interfaces/course";
+//import { AddCourseModal } from "./AddCourseModal";
+//import { ClearCourseModal } from "./ClearCourseModal";
 import coursePlanData from "./data/couresplans.json";
+import { Container } from "react-bootstrap";
 import { v4 as uuidv4 } from "uuid";
+//import { CreateCoursePlan } from "./CreateCoursePlan";
+import { CoureseplansBoot } from "./NewCoursePlan";
+import {
+    createFourYearCoursePlan,
+    oneYearUpdate,
+    updateCourse
+} from "./DBmanage";
 
-function createUUID(db: TotalDB) {
-    for (const plans of db.Coureseplans) {
+function createUUID(db: CoursePlan[]) {
+    // Creating a deep copy of db to avoid modifying the original
+    const clonedDb = JSON.parse(JSON.stringify(db));
+
+    for (const plans of clonedDb) {
         for (const yeari of plans.years) {
-            yeari.firstsemester.courses = yeari.firstsemester.courses.map(
-                (courseIndex: Course) => {
-                    return { ...courseIndex, UUID: uuidv4() };
+            // Iterate over each season
+            ["winter", "spring", "summer", "fall"].forEach((season) => {
+                // Check if the season exists and is not null
+                if (yeari[season] && yeari[season].courses) {
+                    // Generate UUID for each course in the season
+                    yeari[season].courses = yeari[season].courses.map(
+                        (courseIndex: Course) => {
+                            return { ...courseIndex, UUID: uuidv4() };
+                        }
+                    );
                 }
-            );
+            });
         }
     }
+    console.log("initialize");
+    return clonedDb;
 }
 
+const processedPlans = createUUID(coursePlanData as CoursePlan[]);
+
 function App(): JSX.Element {
-    const vartotalDB = {
-        Coureseplans: coursePlanData
+    const [EditCorseplan, setEditCorseplan] = useState<boolean>(false);
+    const [data, setdata] = useState<TotalDB>({
+        Courseplans: processedPlans
+    });
+
+    //console.log();
+    const DbManager: dbMangement = {
+        dataset: data,
+        stateSetter: setdata
     };
-    createUUID(vartotalDB);
-    console.log(vartotalDB);
-    const [data, setdata] = useState<TotalDB>();
     const [showEditModal, updateEditMogal] = useState<boolean>(false);
+    const [currentEditCoureplan, setEditCoursePlan] = useState<CoursePlan>(
+        createFourYearCoursePlan("Click To Edit Name")
+    );
     const handleCloseAddModal = () => updateEditMogal(false);
     //setdata(coursePlanData);
-
     const [editSelected, setEdit] = useState<Course>({
         ticker: "",
         name: "",
         credits: 0,
-        prereq: ""
+        prereq: "",
+        UUID: ""
     });
+
     function setCurrentCourseEdit(course: Course) {
         setEdit(course);
-        //updateEditMogal(true);
+        updateEditMogal(true);
     }
     const handleCreatePlan = () => {
-        console.log("Create plan button clicked");
+        console.log(" create button clicked");
     };
 
     const handleImportCSV = () => {
         console.log("Import csv button clicked");
     };
+    function EditModal(cousePlan: CoursePlan) {
+        console.log("edit");
+    }
+    function setNewCourse(curCourse: Course) {
+        if (EditCorseplan) {
+            updateCourse(DbManager, curCourse, curCourse.UUID!);
+        } else {
+            setEditCoursePlan({
+                ...currentEditCoureplan,
+                years: currentEditCoureplan.years.map((currentYear: yearI) =>
+                    oneYearUpdate(currentYear, curCourse.UUID!, curCourse)
+                )
+            });
+        }
+    }
+
     return (
         <div className="App">
             <div className="logo">
@@ -67,25 +112,47 @@ function App(): JSX.Element {
                 Adam Beck, Zach Reggio, Sam Ferguson, Brandon Marafino, Adam Liu
             </header>
             <div className="button">
-                <button className="buttonSpacing" onClick={handleCreatePlan}>
-                    Create New Plan
-                </button>
+                {EditCorseplan && (
+                    <button
+                        className="buttonSpacing"
+                        onClick={() => setEditCorseplan(false)}
+                    >
+                        New Course Plans
+                    </button>
+                )}
+                {!EditCorseplan && (
+                    <button
+                        className="buttonSpacing"
+                        onClick={() => setEditCorseplan(true)}
+                    >
+                        View Course Plans
+                    </button>
+                )}
                 <button onClick={handleImportCSV}>Import CSV</button>
             </div>
-            <div className="container">
-                <MulitCourseplan
-                    Courseplans={coursePlanData}
-                    setCurrentCourseEdit={setCurrentCourseEdit}
-                />
+
+            <div className="container-fluid">
+                {EditCorseplan ? (
+                    <MulitCourseplan
+                        Courseplans={data.Courseplans}
+                        setCurrentCourseEdit={setCurrentCourseEdit}
+                    />
+                ) : (
+                    <CoureseplansBoot
+                        updateCoursePlan={EditModal}
+                        setCourseEdit={setCurrentCourseEdit}
+                        curCoursePlan={currentEditCoureplan}
+                        setEditCoursePlan={setEditCoursePlan}
+                    />
+                )}
             </div>
-            {/*
-                <EditCourseModal
-                    show={showEditModal}
-                    handleClose={handleCloseAddModal}
-                    currentCourse={editSelected}
-                    cRUD={db}
-                ></EditCourseModal>
-            */}
+
+            <EditCourseModal
+                show={showEditModal}
+                handleClose={handleCloseAddModal}
+                currentCourse={editSelected}
+                updateCoursePass={setNewCourse}
+            ></EditCourseModal>
         </div>
     );
 }

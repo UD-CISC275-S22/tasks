@@ -19,18 +19,21 @@ export function Semester({
         <Table striped bordered hover className="tight">
             <thead>
                 <tr>
-                    <th>Course ID</th> <th>Name</th>
+                    <th>Course ID</th>
+                    <th>Name</th>
                     <th>Credits</th>
                 </tr>
             </thead>
             <tbody>
                 {rendSemester.courses.map((rendCourse: Course): JSX.Element => {
+                    //console.log("render course:");
+                    //console.log(rendCourse);
                     return (
                         <tr
                             onClick={() => {
                                 edit(rendCourse);
                             }}
-                            key={rendCourse.ticker}
+                            key={rendCourse.UUID}
                         >
                             <td>{rendCourse.ticker}</td>
                             <td>{rendCourse.name}</td>
@@ -39,9 +42,24 @@ export function Semester({
                     );
                 })}
             </tbody>
+            <tfoot>
+                <tr>
+                    <th colSpan={2}>Totals Credits</th>
+                    <td>
+                        {rendSemester.courses.reduce(
+                            (
+                                creditsCount: number,
+                                rendCourse: Course
+                            ): number => creditsCount + rendCourse.credits,
+                            0
+                        )}
+                    </td>
+                </tr>
+            </tfoot>
         </Table>
     );
 }
+
 export function Year({
     year,
     editCourse
@@ -49,32 +67,65 @@ export function Year({
     year: yearI;
     editCourse: (course: Course) => void;
 }): JSX.Element {
+    let columncount = 0;
+    function DisplaySemester(year: yearI, index: number): SemesterI | null {
+        const seasons: SemesterI[] = [];
+
+        if (year.winter) {
+            seasons.push(year.winter);
+        }
+        if (year.spring) {
+            seasons.push(year.spring);
+        }
+        if (year.summer) {
+            seasons.push(year.summer);
+        }
+        if (year.fall) {
+            seasons.push(year.fall);
+        }
+        return seasons.length > index ? seasons[index] : null;
+    }
+    if (year.winter) {
+        columncount++;
+    }
+    if (year.spring) {
+        columncount++;
+    }
+    if (year.summer) {
+        columncount++;
+    }
+    if (year.fall) {
+        columncount++;
+    }
     return (
         <div>
-            <Table>
+            <Table style={{ tableLayout: "fixed" }} bordered size="sm">
                 <thead>
                     <tr>
-                        <th colSpan={2}>{year.name}</th>
+                        <th colSpan={columncount}>{year.name}</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <th>{year.firstsemester.season}</th>
-                        <th>{year.secondsemester.season}</th>
+                        {year.fall && <th>Fall</th>}
+                        {year.winter && <th>winter</th>}
+                        {year.spring && <th>Spring</th>}
+                        {year.summer && <th>Summer</th>}
                     </tr>
                     <tr>
-                        <td>
-                            <Semester
-                                rendSemester={year.firstsemester}
-                                edit={editCourse}
-                            ></Semester>
-                        </td>
-                        <td>
-                            <Semester
-                                rendSemester={year.secondsemester}
-                                edit={editCourse}
-                            ></Semester>
-                        </td>
+                        {["fall", "winter", "spring", "summer"].map(
+                            (season, index) => {
+                                const semester = DisplaySemester(year, index);
+                                return semester ? (
+                                    <td key={season}>
+                                        <Semester
+                                            rendSemester={semester}
+                                            edit={editCourse}
+                                        ></Semester>
+                                    </td>
+                                ) : null;
+                            }
+                        )}
                     </tr>
                 </tbody>
             </Table>
@@ -156,7 +207,7 @@ export function MulitCourseplan({
                         <AccordionHeader>{curplan.name}</AccordionHeader>
                         <Accordion.Body>
                             <Courseplan
-                                key={curplan.name} // assuming 'name' is a unique identifier
+                                key={curplan.name}
                                 Courseplan={curplan}
                                 setCurrentCourseEdit={setCurrentCourseEdit}
                             />
