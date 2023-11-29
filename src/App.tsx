@@ -61,6 +61,7 @@ import "./App.css";
 
 import AllCoursesList from "./data/AllCourseList.json";
 import degreeList from "./data/degreeList.json";
+import displaySemesters from "./data/displaySemesters.json";
 
 import { Welcome } from "./Components/welcome";
 import { AddingCourse } from "./Components/addingCourse";
@@ -77,8 +78,8 @@ import { Course } from "./Interfaces/course";
 import { Semester } from "./Interfaces/semester";
 import { Plan } from "./Interfaces/plan";
 
-const SemesterFinal = ViewSemester.map(
-    (semester: Semester): Semester => ({
+const SemesterFinal = displaySemesters.map(
+    (semester): Semester => ({
         ...semester,
         courseList: semester.courseList.map(
             (course): Course => ({
