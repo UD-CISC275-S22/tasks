@@ -619,37 +619,37 @@
         "department": "CAS",
         "prereq": ["CHEM104", "CHEM134"],
         "coreq": ["CHEM321"],
-        "requirements": [""]
+        "requirements": ["Bioinformatics"]
     },
     {
         "id": 47,
         "title": "CISC450",
-        "name": " ",
-        "description": " ",
+        "name": "Computer Networks I",
+        "description": "Foundation principles, architectures and techniques employed in computer and communication networks. Focuses on mechanisms used in TCP/IP protocol suite. Topics include connection management, end-to-end reliable data transfer, sliding window protocols, quality of service, flow control, congestion control, routing, LANs, framing, error control, analog versus digital transmission, packet versus circuit switching, multiplexing.",
         "credits": 3,
         "semester": ["Fall", "Spring"],
-        "department": "",
-        "prereq": [""],
+        "department": "COE",
+        "prereq": ["CISC260"],
         "coreq": [""],
-        "requirements": [""]
+        "requirements": ["HighPerformanceComputingMath", "HighPerfomanceComputingData", "SystemsNetworks"]
     },
     {
         "id": 48,
         "title": "CISC464",
-        "name": " ",
-        "description": " ",
+        "name": "Introduction to Network Security",
+        "description": "Practical introduction to network security field. Covers material on cryptography, intrusions, denial-of-service attacks, worms, honeynets and other hot topics in network security.",
         "credits": 3,
-        "semester": ["Fall", "Spring"],
-        "department": "",
-        "prereq": [""],
+        "semester": ["Varies"],
+        "department": "COE",
+        "prereq": ["CISC450"],
         "coreq": [""],
-        "requirements": [""]
+        "requirements": ["SystemsNetworks"]
     },
     {
         "id": 49,
         "title": "CPEG465",
-        "name": " ",
-        "description": " ",
+        "name": "Introduction to Cybersecurity",
+        "description": "This cybersecurity course is an introduction to computer and network security and covers the foundation security policies and methods to provide confidentiality, integrity, and availability, as well as cryptography, auditing, and user security. Topics are reinforced with hands-on exercises run in a virtual machine environment.",
         "credits": 3,
         "semester": ["Fall", "Spring"],
         "department": "",

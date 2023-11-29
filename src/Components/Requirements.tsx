@@ -64,3 +64,56 @@ export default function YourComponent() {
     );
 }
 */
+
+// import React, { useState } from "react";
+// import { Button, Container, Form, Modal, Col } from "react-bootstrap";
+// import { Concentrations } from "../Interfaces/requirements";
+// import { Course } from "../Interfaces/course";
+// import { Semester } from "../Interfaces/semester";
+// import { Plan } from "../Interfaces/plan";
+// import { CoreBA } from "../Interfaces/requirements";
+// import { CoreBS } from "../Interfaces/requirements";
+// import {
+//     math,
+//     capstone,
+//     additionalReqs,
+//     labSciences,
+//     secondWriting
+// } from "../Interfaces/requirements";
+// import {
+//     FYE,
+//     DLE,
+//     Multicultural,
+//     BreadthA,
+//     BreadthB,
+//     BreadthC,
+//     BreadthD
+// } from "../Interfaces/requirements";
+
+// type ChangeEvent = React.ChangeEvent<
+//     HTMLTextAreaElement | HTMLInputElement | HTMLSelectElement
+// >;
+
+// export function ViewRequirements({
+//     plan,
+//     settingPlan,
+//     poolingObjects
+// }: {
+//     plan: Plan;
+//     settingPlan: (t: Plan) => void;
+//     poolingObjects: poolingCourses;
+// }) {
+//     const concentrations = [
+//         "Artificial Intelligence",
+//         "Bioinformatics",
+//         "Cybersecurity",
+//         "Data Science",
+//         "High Performance Computing: Math",
+//         "High Performance Computing: Data",
+//         "Systems and Networks",
+//         "Theory and Computation: Discrete",
+//         "Theory and Computation: Continuous"
+//     ];
+//     const {concentration, setConcentration} = useState(concentrations);
+
+// }
