@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import "./App.css";
+import { plan } from "./PlannerInterfaces/plan";
+import { Plan } from "./Plan";
+import defaultPlans from "./Defaults.json";
+import CourseTable from "./CoursePlan";
+import { data } from "./classData";
 //test comment
 
 function App(): JSX.Element {
@@ -11,6 +16,9 @@ function App(): JSX.Element {
     const closeModal = () => {
         setModalIsOpen(false);
     };
+    useState<number>(-1);
+    const defaultPlan = defaultPlans.defaultPlans;
+    const [degreePlans, setDegreePlans] = useState<plan[]>(defaultPlan);
     return (
         <div className="App">
             <header className="App-header">UD Course Planner</header>
@@ -18,6 +26,11 @@ function App(): JSX.Element {
                 James Lloyd, Kerry Ferguson, Matthew Conlon, Caleb Sachetti,
                 Arnav Baliyan
             </p>
+            <Plan
+                degreePlans={degreePlans}
+                setDegreePlans={setDegreePlans}
+                currentPlan={degreePlans[0]}
+            ></Plan>
             <div>
                 <button
                     id="openModalBtn"
@@ -87,6 +100,9 @@ function App(): JSX.Element {
                     </div>
                 </Modal>
             </div>
+
+            {/* Render CourseTable component */}
+            <CourseTable data={data} />
             <p> List of Degree Plans: </p>
             <table>
                 <tr>
@@ -98,5 +114,5 @@ function App(): JSX.Element {
         </div>
     );
 }
-
+//send help :(
 export default App;

@@ -1,0 +1,9 @@
+{
+    "defaultPlans": [
+        {
+            "id": "1",
+            "name": "New Plan",
+            "semesters": []
+        }
+    ]
+}
