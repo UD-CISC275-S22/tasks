@@ -18,7 +18,7 @@ const CourseList: React.FC<CourseListProps> = ({
         <div>
             <h2>Course Catalog</h2>
             <strong>
-                To add a course, click on the course you want to add.
+                To add a course, click on the course you want to add
             </strong>
             <ul>
                 {courses.map(course => (
