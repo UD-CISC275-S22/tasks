@@ -1,0 +1,102 @@
+[
+    {
+        "id": 1,
+        "title": "Fall 2023",
+        "year": 2023,
+        "notes": "Additional info by user...",
+        "courseList": [
+            {
+                "id": 1,
+                "title": "CISC108",
+                "name": "Introduction to Computer Science I",
+                "description": "Computing and principles of programming with an emphasis on systematic program design. Topics include functional programming, data abstraction, procedural abstraction, use of control and state, recursion, testing, and object-oriented programming concepts. Requires no prior programming experience, open to any major, but intended primarily for majors and minors in computer science or mathematics.",
+                "credits": 3,
+                "semester": ["Fall", "Spring"],
+                "department": "COE",
+                "prereq": [""],
+                "coreq": ["MATH115 or MATH117+"],
+                "requirements": ["BA Core", "BS Core", "CAS Breadth"]
+            },
+            {
+                "id": 0,
+                "title": "ENGL110",
+                "name": "First-Year Writing",
+                "description": "Introduction to the process of academic writing that centers on the composition of analytical, research-based essays.",
+                "credits": 3,
+                "semester": ["Fall", "Winter", "Spring", "Summer"],
+                "department": "CAS",
+                "prereq": [""],
+                "coreq": [""],
+                "requirements": ["University Requirments"]
+            },
+            {
+                "id": 12,
+                "title": "MATH241",
+                "name": "Analytical Geometry and Calculus A",
+                "description": "Functions, limits, continuity, derivatives. Polynomial, rational, exponential, hyperbolic, logarithmic, trigonometric and inverse trigonometric functions. Definite and indefinite integrals and the Fundamental Theorem of Calculus. Simple differential equations (separable ODE, linear ODE). ODE models leading to exponential growth and decay.",
+                "credits": 4,
+                "semester": ["Fall", "Spring", "Winter", "Summer"],
+                "department": "CAS",
+                "prereq": ["MATH117+ or Exam placement"],
+                "coreq": [""],
+                "requirements": ["BA Core", "BS Core"]
+            },
+            {
+                "id": 101,
+                "title": "EGGG101",
+                "name": "Introduction to Engineering",
+                "description": "Introduction to profession, including disciplines of chemical, civil, computer, electrical, environmental, and mechanical engineering. Prepares students for success through integration of: technical problem solving and engineering design, ethical decision-making, teamwork, and communicating to diverse audiences.",
+                "credits": 2,
+                "semester": ["Fall"],
+                "department": "COE",
+                "prereq": [""],
+                "coreq": [""],
+                "requirements": ["FYE"]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Spring 2024",
+        "year": 2024,
+        "notes": "Additional info by user...",
+        "courseList": [
+            {
+                "id": 2,
+                "title": "CISC181",
+                "name": "Introduction to Computer Science II",
+                "description": "Principles of computer science illustrated and applied through programming in an object oriented language. Programming projects illustrate computational problems, styles and issues that arise in computer systems development and in all application areas of computation.",
+                "credits": 3,
+                "semester": ["Fall", "Spring"],
+                "department": "COE",
+                "prereq": ["CISC108"],
+                "coreq": ["MATH221 or MATH241+"],
+                "requirements": ["BA Core", "BS Core", "CAS Breadth"]
+            },
+            {
+                "id": 3,
+                "title": "CISC210",
+                "name": "Introduction to Systems Programming",
+                "description": "Principles of computer systems programming for software and hardware platforms to achieve efficient resource usage. Topics include the C programming language, memory management, and awareness of system constraints and interfacing. Projects include programming embedded systems and interactive objects.",
+                "credits": 3,
+                "semester": ["Fall", "Spring"],
+                "department": "COE",
+                "prereq": ["CISC108"],
+                "coreq": ["MATH221 or MATH241+"],
+                "requirements": ["BA Core", "BS Core"]
+            },
+            {
+                "id": 13,
+                "title": "MATH242",
+                "name": "Analytical Geometry and Calculus B",
+                "description": "Brief review of MATH 241; evaluation of limits by L’Hospital’s rule; applications of integration; integration techniques; parametric curves; polar coordinates; infinite sequences and series. Includes use of computers to perform symbolic, numerical and graphical analysis.",
+                "credits": 4,
+                "semester": ["Fall", "Winter", "Spring", "Summer"],
+                "department": "CAS",
+                "prereq": ["MATH241 or MATH232"],
+                "coreq": [""],
+                "requirements": ["BS Core", "ArtificialIntelligenceRE"]
+            }
+        ]
+    }
+]
