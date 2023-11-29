@@ -41,6 +41,36 @@ const Planner: React.FC<Planner> = ({ plan }) => {
         Array(semestersData.length).fill(true)
     );
     const [allSemestersVisible, setAllSemestersVisible] = useState(true);
+    const [destinationSemester, setDestinationSemester] = useState<
+        string | null
+    >(null);
+
+    const moveCourseToSemester = (
+        sourceSemesterIndex: number,
+        courseIndex: number
+    ) => {
+        if (destinationSemester !== null) {
+            const updatedSemesters = [...semestersData];
+            const movedCourse = updatedSemesters[
+                sourceSemesterIndex
+            ].courses.splice(courseIndex, 1)[0];
+
+            const destinationSemesterIndex = updatedSemesters.findIndex(
+                semester => semester.id === destinationSemester
+            );
+            if (destinationSemesterIndex !== -1) {
+                updatedSemesters[destinationSemesterIndex].courses.push(
+                    movedCourse
+                );
+                setSemestersData(updatedSemesters);
+            } else {
+                alert("Invalid destination semester. Course not moved.");
+            }
+            setDestinationSemester(null);
+        } else {
+            alert("Please select a destination semester.");
+        }
+    };
 
     const filteredCourses = Object.values(catalog)
         .flatMap(department => Object.values(department))
@@ -274,89 +304,145 @@ const Planner: React.FC<Planner> = ({ plan }) => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {semester.courses.map((course, courseIndex) => (
-                                    <tr key={courseIndex}>
-                                        <td>{course.code}</td>
-                                        <td>{course.name}</td>
-                                        <td>{course.credits}</td>
-                                        <td>{course.descr}</td>
-                                        <td>{course.preReq}</td>
-                                        <td>{course.restrict}</td>
-                                        <td>{course.breadth}</td>
-                                        <td>{course.typ}</td>
-                                        <td>
-                                            <button
-                                                onClick={() =>
-                                                    handleEditCourse(
-                                                        semesterIndex,
-                                                        courseIndex,
-                                                        {
-                                                            code:
-                                                                prompt(
-                                                                    "Enter new code",
-                                                                    course.code
-                                                                ) ||
-                                                                course.code,
-                                                            name:
-                                                                prompt(
-                                                                    "Enter new name",
-                                                                    course.name
-                                                                ) ||
-                                                                course.name,
-                                                            descr:
-                                                                prompt(
-                                                                    "Enter new description",
-                                                                    course.descr
-                                                                ) ||
-                                                                course.descr,
-                                                            credits:
-                                                                prompt(
-                                                                    "Enter new credits",
-                                                                    course.credits
-                                                                ) ||
-                                                                course.credits,
-                                                            preReq:
-                                                                prompt(
-                                                                    "Enter new prerequisites",
-                                                                    course.preReq
-                                                                ) ||
-                                                                course.preReq,
-                                                            restrict:
-                                                                prompt(
-                                                                    "Enter new restrictions",
-                                                                    course.restrict
-                                                                ) ||
-                                                                course.restrict,
-                                                            breadth:
-                                                                prompt(
-                                                                    "Enter new breadth",
-                                                                    course.breadth
-                                                                ) ||
-                                                                course.breadth,
-                                                            typ:
-                                                                prompt(
-                                                                    "Enter new typically offered",
+                                {plan.semesters[semesterIndex].courses.map(
+                                    (course, courseIndex) => (
+                                        <tr key={courseIndex}>
+                                            <td>{course.code}</td>
+                                            <td>{course.name}</td>
+                                            <td>{course.credits}</td>
+                                            <td>{course.descr}</td>
+                                            <td>{course.preReq}</td>
+                                            <td>{course.restrict}</td>
+                                            <td>{course.breadth}</td>
+                                            <td>{course.typ}</td>
+                                            <td>
+                                                <button
+                                                    onClick={() =>
+                                                        handleEditCourse(
+                                                            semesterIndex,
+                                                            courseIndex,
+                                                            {
+                                                                code:
+                                                                    prompt(
+                                                                        "Enter new code",
+                                                                        course.code
+                                                                    ) ||
+                                                                    course.code,
+                                                                name:
+                                                                    prompt(
+                                                                        "Enter new name",
+                                                                        course.name
+                                                                    ) ||
+                                                                    course.name,
+                                                                descr:
+                                                                    prompt(
+                                                                        "Enter new description",
+                                                                        course.descr
+                                                                    ) ||
+                                                                    course.descr,
+                                                                credits:
+                                                                    prompt(
+                                                                        "Enter new credits",
+                                                                        course.credits
+                                                                    ) ||
+                                                                    course.credits,
+                                                                preReq:
+                                                                    prompt(
+                                                                        "Enter new prerequisites",
+                                                                        course.preReq
+                                                                    ) ||
+                                                                    course.preReq,
+                                                                restrict:
+                                                                    prompt(
+                                                                        "Enter new restrictions",
+                                                                        course.restrict
+                                                                    ) ||
+                                                                    course.restrict,
+                                                                breadth:
+                                                                    prompt(
+                                                                        "Enter new breadth",
+                                                                        course.breadth
+                                                                    ) ||
+                                                                    course.breadth,
+                                                                typ:
+                                                                    prompt(
+                                                                        "Enter new typically offered",
+                                                                        course.typ
+                                                                    ) ||
                                                                     course.typ
-                                                                ) || course.typ
+                                                            }
+                                                        )
+                                                    }
+                                                >
+                                                    Edit Course
+                                                </button>
+                                                <button
+                                                    onClick={() =>
+                                                        handleRemoveCourse(
+                                                            semesterIndex,
+                                                            courseIndex
+                                                        )
+                                                    }
+                                                >
+                                                    Remove Course
+                                                </button>
+                                                <div>
+                                                    <select
+                                                        value={
+                                                            destinationSemester ||
+                                                            ""
                                                         }
-                                                    )
-                                                }
-                                            >
-                                                Edit Course
-                                            </button>
-                                            <button
-                                                onClick={() =>
-                                                    handleRemoveCourse(
-                                                        semesterIndex,
-                                                        courseIndex
-                                                    )
-                                                }
-                                            >
-                                                Remove Course
-                                            </button>
-                                        </td>
-                                    </tr>
-                                ))}
+                                                        onChange={e =>
+                                                            setDestinationSemester(
+                                                                e.target
+                                                                    .value ||
+                                                                    null
+                                                            )
+                                                        }
+                                                    >
+                                                        <option
+                                                            value=""
+                                                            disabled
+                                                        >
+                                                            Select Destination
+                                                            Semester
+                                                        </option>
+                                                        {semestersData.map(
+                                                            (
+                                                                semester,
+                                                                index
+                                                            ) => (
+                                                                <option
+                                                                    key={index}
+                                                                    value={
+                                                                        semester.id
+                                                                    }
+                                                                >
+                                                                    {
+                                                                        semester.season
+                                                                    }{" "}
+                                                                    {
+                                                                        semester.year
+                                                                    }
+                                                                </option>
+                                                            )
+                                                        )}
+                                                    </select>
+                                                    <button
+                                                        onClick={() =>
+                                                            moveCourseToSemester(
+                                                                semesterIndex,
+                                                                courseIndex
+                                                            )
+                                                        }
+                                                    >
+                                                        Move to Semester
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    )
+                                )}
                             </tbody>
                         </table>
                     ) : null}
@@ -367,4 +453,4 @@ const Planner: React.FC<Planner> = ({ plan }) => {
 };
 
 export { Planner };
-export type { Course };
+export type { Course, Semester, Plan };
