@@ -9,12 +9,12 @@ interface AddSemesterModalProps {
     year: yearI;
 }
 
-export const AddSemesterModal: React.FC<AddSemesterModalProps> = ({
+export function AddSemesterModal({
     show,
     handleClose,
     addSemester,
     year
-}) => {
+}: AddSemesterModalProps) {
     const [season, setSeason] = useState<seasonT>("winter");
 
     const handleAddSemester = () => {
@@ -62,4 +62,4 @@ export const AddSemesterModal: React.FC<AddSemesterModalProps> = ({
             </Modal.Footer>
         </Modal>
     );
-};
+}
