@@ -1,5 +1,5 @@
 import { Semester } from "../Interfaces/semester";
-import { Course } from "../Interfaces/course";
+import { Course, Department } from "../Interfaces/course";
 import { Plan } from "../Interfaces/plan";
 import { courseList } from "./course";
 
@@ -121,6 +121,21 @@ export const english: Course = {
     requirements: [""]
 };
 
+//default winter and summer course for making an empty array of one blank course
+//maybe this can be used for the requirements?
+export const blankCourse: Course = {
+    id: {} as number,
+    title: "",
+    name: "",
+    description: "",
+    credits: 0,
+    semester: [""],
+    department: "" as Department,
+    prereq: [""],
+    coreq: [""],
+    requirements: [""]
+};
+
 //explain why fall1 and fall2 and spring1 etc.
 //fall1 reprensents semester 1 fall
 //this function returns first fall semester in year 1 of 4 year plan
@@ -225,11 +240,23 @@ export function AI(): Plan {
         totalCredits: 15,
         courseList: fall1AI
     };
+    const winter1Sem: Semester = {
+        type: ["Winter"],
+        year: 1,
+        totalCredits: 0,
+        courseList: [blankCourse]
+    };
     const spring1Sem: Semester = {
         type: ["Spring"],
         year: 1,
         totalCredits: 15,
         courseList: spring1AI
+    };
+    const summer1Sem: Semester = {
+        type: ["Summer"],
+        year: 1,
+        totalCredits: 0,
+        courseList: [blankCourse]
     };
     const fall2Sem: Semester = {
         type: ["Fall"],
@@ -237,11 +264,23 @@ export function AI(): Plan {
         totalCredits: 15,
         courseList: fall2AI
     };
+    const winter2Sem: Semester = {
+        type: ["Winter"],
+        year: 1,
+        totalCredits: 0,
+        courseList: [blankCourse]
+    };
     const spring2Sem: Semester = {
         type: ["Spring"],
         year: 2,
         totalCredits: 15,
         courseList: spring2AI
+    };
+    const summer2Sem: Semester = {
+        type: ["Summer"],
+        year: 1,
+        totalCredits: 0,
+        courseList: [blankCourse]
     };
     const fall3Sem: Semester = {
         type: ["Fall"],
@@ -249,11 +288,23 @@ export function AI(): Plan {
         totalCredits: 15,
         courseList: fall3AI
     };
+    const winter3Sem: Semester = {
+        type: ["Winter"],
+        year: 1,
+        totalCredits: 0,
+        courseList: [blankCourse]
+    };
     const spring3Sem: Semester = {
         type: ["Spring"],
         year: 3,
         totalCredits: 15,
         courseList: spring3AI
+    };
+    const summer3Sem: Semester = {
+        type: ["Summer"],
+        year: 1,
+        totalCredits: 0,
+        courseList: [blankCourse]
     };
     const fall4Sem: Semester = {
         type: ["Fall"],
@@ -261,11 +312,23 @@ export function AI(): Plan {
         totalCredits: 15,
         courseList: fall4AI
     };
+    const winter4Sem: Semester = {
+        type: ["Winter"],
+        year: 1,
+        totalCredits: 0,
+        courseList: [blankCourse]
+    };
     const spring4Sem: Semester = {
         type: ["Spring"],
         year: 4,
         totalCredits: 15,
         courseList: spring4AI
+    };
+    const summer4Sem: Semester = {
+        type: ["Summer"],
+        year: 1,
+        totalCredits: 0,
+        courseList: [blankCourse]
     };
 
     //now the actual semester array for the AI plan

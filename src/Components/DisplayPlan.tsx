@@ -18,13 +18,30 @@ export function DisplayPlan({
     //makes individual components of DisplayFall and DisplaySpring for each year
     //first number is the year, second is the type and the third is the key value for the component
     const firstYearFall = indivPlanSem(1, "Fall", 1);
-    const firstYearSpring = indivPlanSem(1, "Spring", 2);
-    const secondYearFall = indivPlanSem(2, "Fall", 3);
-    const secondYearSpring = indivPlanSem(2, "Spring", 4);
-    const thirdYearFall = indivPlanSem(3, "Fall", 5);
-    const thirdYearSpring = indivPlanSem(3, "Spring", 6);
-    const fourthYearFall = indivPlanSem(4, "Fall", 7);
-    const fourthYearSpring = indivPlanSem(4, "Spring", 8);
+    const firstYearWinter = indivPlanSem(1, "Winter", 2);
+    const firstYearSpring = indivPlanSem(1, "Spring", 3);
+    const firstYearSummer = indivPlanSem(1, "Summer", 4);
+
+    const secondYearFall = indivPlanSem(2, "Fall", 5);
+    const secondYearWinter = indivPlanSem(2, "Winter", 6);
+    const secondYearSpring = indivPlanSem(2, "Spring", 7);
+    const secondYearSummer = indivPlanSem(2, "Summer", 8);
+
+    const thirdYearFall = indivPlanSem(3, "Fall", 9);
+    const thirdYearWinter = indivPlanSem(3, "Winter", 10);
+    const thirdYearSpring = indivPlanSem(3, "Spring", 11);
+    const thirdYearSummer = indivPlanSem(3, "Summer", 12);
+
+    const fourthYearFall = indivPlanSem(4, "Fall", 13);
+    const fourthYearWinter = indivPlanSem(4, "Winter", 14);
+    const fourthYearSpring = indivPlanSem(4, "Spring", 15);
+
+    //these next ones are extra semesters in case someone needs them but will not display
+    const fourthYearSummer = indivPlanSem(4, "Summer", 16);
+    const fifthYearFall = indivPlanSem(5, "Fall", 17);
+    const fifthYearWinter = indivPlanSem(5, "Winter", 18);
+    const fifthYearSpring = indivPlanSem(5, "Spring", 19);
+    const fifthYearSummer = indivPlanSem(5, "Summer", 20);
 
     return (
         <div>
