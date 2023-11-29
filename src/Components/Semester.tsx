@@ -52,6 +52,8 @@ export function ViewSemester(): JSX.Element {
     const [semesters, setSemesters] = useState<Semester[]>(AI_Semesters); //the default semesters (for now)
     const [currCourse, setCurrCourse] = useState<string>(DEFAULT_COURSE);
     const [SemesterType, setSemesterType] = useState<string>("Fall"); //can be "Fall", "Spring" or "Both"
+    const [displayCourseCategory, setDisplayCourseCategory] =
+        useState<string>("AllCourses");
 
     const [SemCount, setSemCount] = useState<number>(2); //default shows 2 semesters
 
@@ -67,6 +69,11 @@ export function ViewSemester(): JSX.Element {
     //Here is where you can add your add courses and remove courses functions
     function updateCurrCourse(event: React.ChangeEvent<HTMLSelectElement>) {
         setCurrCourse(event.target.value);
+    }
+    function updateDisplayCourseCat(
+        event: React.ChangeEvent<HTMLInputElement>
+    ) {
+        setDisplayCourseCategory(event.target.value);
     }
 
     function index(year: number, sem: string): number {
@@ -170,7 +177,6 @@ export function ViewSemester(): JSX.Element {
         } else {
             newSemType = "Fall";
         }
-        console.log(index());
         setSemesterType(newSemType); //set the new semester type to display
         /* ADD OTHER TYPES OF SEMESTERS LATER */
     }
@@ -385,52 +391,6 @@ export function ViewSemester(): JSX.Element {
                 ></DisplayPlan>
             </div>
             <hr></hr>
-            {
-                <div>
-                    <Form.Group controlId="currentCourse">
-                        <Form.Label>Select A Course</Form.Label>
-                        <Form.Select
-                            value={currCourse}
-                            onChange={updateCurrCourse}
-                        >
-                            {
-                                //Needed to disable prettier here because there was an "extra parenths" error that couldn't be resolved by any means. Will need to ask the professor but we wanted to showcase the funcitonality of the dropdown for the MVP
-                                // eslint-disable-next-line no-extra-parens
-                                COURSES_LIST.map((courseName: Course) => (
-                                    <option
-                                        key={courseName.id}
-                                        value={courseName.title}
-                                    >
-                                        {courseName.title}
-                                    </option>
-                                ))
-                            }
-                        </Form.Select>
-                    </Form.Group>
-                    <Button onClick={dropClass}>Remove Class</Button>
-                    <Button onClick={addClass}>Add Class</Button>
-                    <Button
-                        onClick={() =>
-                            handleEditShow(
-                                COURSES_LIST.find(
-                                    (course) => course.title === currCourse
-                                )
-                            )
-                        }
-                    >
-                        Edit Course
-                    </Button>
-                    {/* CourseEdit modal */}
-                    {/* {editedCourse && (
-                        <CourseEdit
-                            editedCourse={editedCourse}
-                            onSaveChanges={handleSaveChanges}
-                            onResetToDefault={handleResetToDefault}
-                            onClose={handleEditClose}
-                        />
-                    )} */}
-                </div>
-            }
         </div>
     );
 }
