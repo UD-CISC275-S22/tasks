@@ -4,7 +4,6 @@ import { Course } from "../Interfaces/course";
 import { ClearSemester } from "./clearingSemester";
 import { DropAdd } from "./dropAdd";
 import { Semester } from "../Interfaces/semester";
-import { Form } from "react-bootstrap";
 
 export interface valueProps {
     semesters: Semester[];
@@ -40,14 +39,7 @@ export function DisplaySpring({
     //targetSem is also NOT the state and it's already passed in from the Semester.tsx file. So both variables are already declared in the indivPlanSem function
     const idx = index(targetYear, targetSem);
     const springCourses = semesters[idx].courseList;
-    const [displaySpringCourseCategory, setDisplaySpringCourseCategory] =
-        useState<string>("AllCourses");
 
-    function updateDisplaySpringCourseCat(
-        event: React.ChangeEvent<HTMLInputElement>
-    ) {
-        setDisplaySpringCourseCategory(event.target.value);
-    }
     return (
         <div className="Spring">
             <h1>Spring Year {targetYear}</h1>
@@ -64,36 +56,6 @@ export function DisplaySpring({
                 )
             )}
             <div>
-                <Form.Label>Select Course Variety</Form.Label>
-                <Form.Check
-                    type="radio"
-                    name="displayCourseSpring1"
-                    onChange={updateDisplaySpringCourseCat}
-                    id="disp-course-all"
-                    label="AllCourses"
-                    value="AllCourses"
-                    checked={displaySpringCourseCategory === "AllCourses"}
-                />
-                <Form.Check
-                    type="radio"
-                    name="displayCourseSpring2"
-                    onChange={updateDisplaySpringCourseCat}
-                    id="disp-course-free"
-                    label="FreeElective"
-                    value="FreeElective"
-                    checked={displaySpringCourseCategory === "FreeElective"}
-                />
-                <Form.Check
-                    type="radio"
-                    name="displayCourseSpring3"
-                    onChange={updateDisplaySpringCourseCat}
-                    id="disp-course-restricted"
-                    label="RestrictiveElective"
-                    value="RestrictiveElective"
-                    checked={
-                        displaySpringCourseCategory === "RestrictiveElective"
-                    }
-                />
                 <DropAdd
                     dropClass={dropClass}
                     addClass={addClass}
