@@ -6,7 +6,7 @@ import { DegreePlan } from "./interfaces/degreeplan";
 import { Button, Form, Modal } from "react-bootstrap";
 import { Course } from "./interfaces/course";
 import { Semester } from "./interfaces/semester";
-import { courseList } from "./courseList"
+import { courseList } from "./courseList";
 
 export function AddDpSemestersCoursesModal({
     show,
@@ -233,35 +233,44 @@ export function AddDpSemestersCoursesModal({
                                             )
                                         )}
                                     </div>
-                                    <div>
-                                        <select
-                                            value={selectedCourseCode}
-                                            onChange={(e) =>
-                                                setSelectedCourseCode(
-                                                    e.target.value
-                                                )
-                                            }
-                                        >
-                                            <option value="">
-                                                Select a course
-                                            </option>
-                                            {courseList.map((course) => (
-                                                <option
-                                                    key={course.courseCode}
-                                                    value={course.courseCode}
-                                                >
-                                                    {course.title}
+                                    <button
+                                        onClick={() =>
+                                            handleSelectSemester(semester.id)
+                                        }
+                                    >
+                                        Add Course
+                                    </button>
+                                    {selectedSemesterId === semester.id && (
+                                        <div>
+                                            <select
+                                                value={selectedCourseCode}
+                                                onChange={(e) =>
+                                                    setSelectedCourseCode(
+                                                        e.target.value
+                                                    )
+                                                }
+                                            >
+                                                <option value="">
+                                                    Select a course
                                                 </option>
-                                            ))}
-                                        </select>
-                                        <button
-                                            onClick={() =>
-                                                addCourse(semester.id)
-                                            }
-                                        >
-                                            Add Course
-                                        </button>
-                                    </div>
+                                                {courseList.map((course) => (
+                                                    <option
+                                                        key={course.courseCode}
+                                                        value={course.courseCode}
+                                                    >
+                                                        {course.title}
+                                                    </option>
+                                                ))}
+                                            </select>
+                                            <button
+                                                onClick={() =>
+                                                    addCourse(semester.id)
+                                                }
+                                            >
+                                                Enter
+                                            </button>
+                                        </div>
+                                    )}
                                 </li>
                             ))}
                         </ul>
@@ -279,3 +288,4 @@ export function AddDpSemestersCoursesModal({
         </Modal>
     );
 }
+
