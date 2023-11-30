@@ -16,14 +16,23 @@ function App(): JSX.Element {
         { name: "Plan 3", semesters: [] }
     ];
     //-------------------------------------------------------
-    // Function to insert a new degree plan
-    //creating an array
+    // Function to insert a new degree plan, creating an array
     function insertDegreePlan(
         prevDegreePlans: degreePlan[],
         newDegreePlan: degreePlan
     ): degreePlan[] {
         const updatedDegreePlans = [...prevDegreePlans, newDegreePlan];
-
+        return updatedDegreePlans;
+    }
+    // Function to remove  a new degree plan, removing an array
+    function removeDegreePlan(
+        prevDegreePlans: degreePlan[],
+        removePlan: degreePlan
+    ): degreePlan[] {
+        //const updatedDegreePlans = [...prevDegreePlans];
+        const updatedDegreePlans = prevDegreePlans.filter(
+            (Plan: degreePlan): boolean => Plan.name !== removePlan.name
+        );
         return updatedDegreePlans;
     }
     //--------------------------------------------------------
@@ -39,7 +48,7 @@ function App(): JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript
             </header>
-            {/* a button to create a new degreePlan */}
+            {/* a button to create a new/remove degreePlan */}
             <button
                 onClick={() =>
                     setDegreePlanList(
@@ -52,7 +61,19 @@ function App(): JSX.Element {
             >
                 Create New Degree Plan
             </button>
-            {/* end of button to add a new degree Plan */}
+            <button
+                onClick={() =>
+                    setDegreePlanList(
+                        removeDegreePlan(degreePlanList, {
+                            name: `Plan ${degreePlanList.length - 1}`,
+                            semesters: []
+                        })
+                    )
+                }
+            >
+                Remove Degree Plan
+            </button>
+            {/* end of button to add/remove a new degree Plan */}
             {view === Views.degreePlanView && (
                 <DegreePlanView
                     setCurrentView={setView}
