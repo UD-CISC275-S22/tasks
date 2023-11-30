@@ -12,15 +12,18 @@ import { Semester } from "./interfaces/semester";
 //      We will basically trigger a popup modal with all the previous information pre attached and the user can then
 //      delete and add courses/semesters.
 
-export function AddDpSemestersCoursesModal({
+export function EditingDp({
     show,
     handleClose,
-    addDp
+    dp,
+    editDp
 }: {
     show: boolean;
     handleClose: () => void;
-    addDp: (newdp: DegreePlan) => void;
+    dp: DegreePlan;
+    editDp: (id: number, newdp: DegreePlan) => void;
 }): JSX.Element {
+    //todo: what we need to do is generate all the exisiting to the user before they can edit it
     const [semesters, setSemesters] = useState<Semester[]>([]);
     const [selectedSemester, setSelectedSemester] = useState<string>("Fall");
     const [title, setTitle] = useState<string>("Example Title");
@@ -165,14 +168,15 @@ export function AddDpSemestersCoursesModal({
             totalCredits: totDpSemesterCredits(),
             semestersList: semesters
         };
-        addDp(newDp);
+        editDp(dp.id, newDp);
         handleCloseModal();
     };
-
+    //todo: down he we need to first generate all of the users data that is in their dp
+    //      You can do things like defaultValue = {dp.title} possibly
     return (
         <Modal show={show} onHide={handleClose} animation={false}>
             <Modal.Header closeButton>
-                <Modal.Title>Add New Degree Plan</Modal.Title>
+                <Modal.Title>Edit Degree Plan</Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 <Form.Group>
