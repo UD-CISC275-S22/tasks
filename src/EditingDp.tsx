@@ -149,6 +149,17 @@ export function EditingDp({
     const semesterOptions = ["Fall", "Winter", "Spring", "Summer"];
 
     const handleCloseModal = () => {
+        setSemesters(dp.semestersList);
+        setTitle(dp.title);
+        setNewCourse({
+            title: "",
+            courseCode: "",
+            credits: 0,
+            degreeRequirements: [],
+            coursePrereq: [],
+            courseCoreq: [],
+            courseDescription: ""
+        });
         handleClose();
     };
     const saveChanges = () => {
@@ -310,8 +321,14 @@ export function EditingDp({
 }
 
 //bugs:
-// I have a bug where if i edited something and it takes me back to the dp viewer and i go to click edit again it
+// - I have a bug where if i edited something and it takes me back to the dp viewer and i go to click edit again it
 // does not load in the data in from the dp becauuse it does not recognize it for some reason i have to go back
 // into the main page and reclick the dp and the edit button for it to recognize.
 // solutiion: i think to fix it we have to remove the handleCloseModal function or at least change it since it is
 // essentially overwritting the modal to a fresh start
+//- I have a bug where once i hit close on the edit modal and i created courses and semesters the data is saved
+//  the next time i open the edit modal instead of reverting back to its old state
+// solution: i think i fixed the issue by changing the states back to their old state using the imported dp
+//- I have a bug where the textboxes for adding a course will still have the data from before after closing
+// and reopening the edit button without saving
+// i can prob fix it by adding a defuault when the handleCloseModal runs
