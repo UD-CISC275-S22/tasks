@@ -44,7 +44,7 @@ function App(): JSX.Element {
                 onClick={() =>
                     setDegreePlanList(
                         insertDegreePlan(degreePlanList, {
-                            name: `New Plan ${degreePlanList.length + 1}`,
+                            name: `Plan ${degreePlanList.length + 1}`,
                             semesters: []
                         })
                     )
