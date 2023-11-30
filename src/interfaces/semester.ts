@@ -1,6 +1,7 @@
-import { Class } from "./course";
+import { Course } from "./course";
 export interface Semester {
     title: string;
+    id: number;
     totalCredits: number;
-    classesList: Class[];
+    courses: Course[];
 }

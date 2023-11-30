@@ -7,10 +7,11 @@
             {
                 "title": "Fall 2025",
                 "totalCredits": 6,
-                "courseList": [
+                "id": 12,
+                "courses": [
                     {
                         "title": "CISC220",
-                        "courseCode": 124,
+                        "courseCode": "124",
                         "credits": 3,
                         "degreeRequirements": [
                             "CISC core requirement",
@@ -22,7 +23,7 @@
                     },
                     {
                         "title": "CISC290",
-                        "courseCode": 120,
+                        "courseCode": "120",
                         "credits": 3,
                         "degreeRequirements": [],
                         "coursePrereq": [],
@@ -31,7 +32,7 @@
                     },
                     {
                         "title": "CISC108",
-                        "courseCode": 170,
+                        "courseCode": "170",
                         "credits": 3,
                         "degreeRequirements": ["CISC core requirement"],
                         "coursePrereq": [
@@ -45,10 +46,11 @@
             {
                 "title": "Fall 2024",
                 "totalCredits": 6,
-                "courseList": [
+                "id": 13,
+                "courses": [
                     {
                         "title": "CISC220",
-                        "courseCode": 124,
+                        "courseCode": "124",
                         "credits": 3,
                         "degreeRequirements": [
                             "CISC core requirement",
@@ -60,7 +62,7 @@
                     },
                     {
                         "title": "CISC220",
-                        "courseCode": 124,
+                        "courseCode": "124",
                         "credits": 3,
                         "degreeRequirements": [
                             "CISC core requirement",
@@ -72,7 +74,7 @@
                     },
                     {
                         "title": "CISC108",
-                        "courseCode": 170,
+                        "courseCode": "170",
                         "credits": 3,
                         "degreeRequirements": ["CISC core requirement"],
                         "coursePrereq": [
@@ -86,10 +88,11 @@
             {
                 "title": "Fall 2024",
                 "totalCredits": 6,
-                "courseList": [
+                "id": 12,
+                "courses": [
                     {
                         "title": "CISC220",
-                        "courseCode": 124,
+                        "courseCode": "124",
                         "credits": 3,
                         "degreeRequirements": [
                             "CISC core requirement",
@@ -101,7 +104,7 @@
                     },
                     {
                         "title": "CISC220",
-                        "courseCode": 124,
+                        "courseCode": "124",
                         "credits": 3,
                         "degreeRequirements": [
                             "CISC core requirement",
@@ -113,7 +116,7 @@
                     },
                     {
                         "title": "CISC108",
-                        "courseCode": 170,
+                        "courseCode": "170",
                         "credits": 3,
                         "degreeRequirements": ["CISC core requirement"],
                         "coursePrereq": [
@@ -127,10 +130,11 @@
             {
                 "title": "Spring 2023",
                 "totalCredits": 6,
-                "courseList": [
+                "id": 12,
+                "courses": [
                     {
                         "title": "CISC205",
-                        "courseCode": 121,
+                        "courseCode": "121",
                         "credits": 3,
                         "degreeRequirements": [
                             "CISC core requirement",
@@ -142,57 +146,12 @@
                     },
                     {
                         "title": "CISC210",
-                        "courseCode": 193,
+                        "courseCode": "193",
                         "credits": 3,
                         "degreeRequirements": ["CISC core requirement"],
                         "coursePrereq": [
                             "CISC210 serves as a prereq for CISC320"
                         ],
-                        "courseCoreq": [],
-                        "courseDescription": "You will be studying data structures including binary trees, hash maps, arrays, etc. You will also be learning Big-O notation."
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "id": 2,
-        "title": "Degree Plan 2",
-        "totalCredits": 6,
-        "semestersList": [
-            {
-                "title": "Fall 2023",
-                "totalCredits": 3,
-                "courseList": [
-                    {
-                        "title": "CISC220",
-                        "courseCode": 124,
-                        "credits": 3,
-                        "degreeRequirements": [
-                            "CISC core requirement",
-                            "CISC220 is a required course for all degrees"
-                        ],
-                        "coursePrereq": [
-                            "CISC220 serves as a prereq for CISC405"
-                        ],
-                        "courseCoreq": [],
-                        "courseDescription": "You will be studying data structures including binary trees, hash maps, arrays, etc. You will also be learning Big-O notation."
-                    }
-                ]
-            },
-            {
-                "title": "Spring 2023",
-                "totalCredits": 3,
-                "courseList": [
-                    {
-                        "title": "CISC205",
-                        "courseCode": 121,
-                        "credits": 3,
-                        "degreeRequirements": [
-                            "CISC core requirement",
-                            "CISC205 is a required course for all degrees"
-                        ],
-                        "coursePrereq": [],
                         "courseCoreq": [],
                         "courseDescription": "You will be studying data structures including binary trees, hash maps, arrays, etc. You will also be learning Big-O notation."
                     }
