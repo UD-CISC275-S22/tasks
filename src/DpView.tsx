@@ -124,7 +124,9 @@ export function DpView({
                 className="esc_button text-align-center"
                 variant="warning"
                 onClick={handleShowModal}
-            ></Button>
+            >
+                Edit{" "}
+            </Button>
             <EditingDp
                 show={showEditModal}
                 handleClose={handleCloseModal}

@@ -12,6 +12,9 @@ import { Semester } from "./interfaces/semester";
 //      We will basically trigger a popup modal with all the previous information pre attached and the user can then
 //      delete and add courses/semesters.
 
+//      Maybe what I can do is have some code run in the beginning of this file that stores all the current data
+//      into the states and then from there we can parse and change things as we want.
+
 export function EditingDp({
     show,
     handleClose,
@@ -24,9 +27,9 @@ export function EditingDp({
     editDp: (id: number, newdp: DegreePlan) => void;
 }): JSX.Element {
     //todo: what we need to do is generate all the exisiting to the user before they can edit it
-    const [semesters, setSemesters] = useState<Semester[]>([]);
+    const [semesters, setSemesters] = useState<Semester[]>(dp.semestersList);
     const [selectedSemester, setSelectedSemester] = useState<string>("Fall");
-    const [title, setTitle] = useState<string>("Example Title");
+    const [title, setTitle] = useState<string>(dp.title);
     const [selectedSemesterId, setSelectedSemesterId] = useState<number | null>(
         null
     );
@@ -146,25 +149,12 @@ export function EditingDp({
     const semesterOptions = ["Fall", "Winter", "Spring", "Summer"];
 
     const handleCloseModal = () => {
-        setTitle("Example Title");
-        setSelectedSemester("Fall");
-        setSelectedSemesterId(null);
-        setSemesters([]);
-        setNewCourse({
-            title: "",
-            courseCode: "",
-            credits: 0,
-            degreeRequirements: [],
-            coursePrereq: [],
-            courseCoreq: [],
-            courseDescription: ""
-        });
         handleClose();
     };
     const saveChanges = () => {
         const newDp: DegreePlan = {
             title: title,
-            id: 0,
+            id: dp.id,
             totalCredits: totDpSemesterCredits(),
             semestersList: semesters
         };
@@ -182,7 +172,7 @@ export function EditingDp({
                 <Form.Group>
                     <Form.Label>Title: </Form.Label>
                     <Form.Control
-                        defaultValue="Example Title"
+                        defaultValue={title}
                         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                             setTitle(e.target.value)
                         }
@@ -318,3 +308,10 @@ export function EditingDp({
         </Modal>
     );
 }
+
+//bugs:
+// I have a bug where if i edited something and it takes me back to the dp viewer and i go to click edit again it
+// does not load in the data in from the dp becauuse it does not recognize it for some reason i have to go back
+// into the main page and reclick the dp and the edit button for it to recognize.
+// solutiion: i think to fix it we have to remove the handleCloseModal function or at least change it since it is
+// essentially overwritting the modal to a fresh start
