@@ -16,12 +16,9 @@ export const DropAdd = ({
     currCourse: string;
     Course_List: Course[];
 }) => {
+    //added notes
     return (
-       //each button will updtae the displaycourse category state 
-       //current issue is that you can only select button no matter the plan 
-       //solution is too move the radio buttons to a different probaly displau fall and dsiplay spring
-       //
- <>
+        <>
             <Form.Group controlId="currentCourse">
                 <Form.Label>Select A Course</Form.Label>
                 <Form.Select value={currCourse} onChange={updateCurrCourse}>
