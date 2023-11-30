@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Class } from "../interfaces/class";
 import QuickAdd from "./QuickAdd";
 import SlowAdd from "./SlowAdd";
-import DeleteCourses from "./DeleteCourses";
+//import DeleteCourses from "./DeleteCourses";
 
 // ------------add this
 import { degreePlan } from "../interfaces/degreePlan";
@@ -30,10 +30,11 @@ export function SingleMultipleSemester({
 }): JSX.Element {
     //export function SingleMultipleSemester(): JSX.Element { ----------------adding to DegreePlan
     const [semester1, setSemester1] = useState<string>("");
-    //const [semArr, setSemArr] = useState<semester[]>([]);-----------------------comment out
-    const [semArr, setSemArr] = useState<semester[]>(
-        CurrentdegreePlan.semesters
-    );
+    const [semArr, setSemArr] = useState<semester[]>([]);
+    //-----------------------comment out
+    //const [semArr, setSemArr] = useState<semester[]>(
+    //CurrentdegreePlan.semesters
+    //);
 
     const [semArrClicked, setSemArrClicked] = useState<semester[]>(semArr);
     const [clicked, setClicked] = useState<boolean>(false);
@@ -101,6 +102,9 @@ export function SingleMultipleSemester({
                             <Col>Number of Credits</Col>
                         </Row>
                         {addClasstoTable([semester])}
+                        <Button onClick={() => clearAllClassesButton(semester)}>
+                            Clear All Classes in {semester.name}
+                        </Button>
                     </Col>
                 </div>
             </div>
@@ -154,20 +158,23 @@ export function SingleMultipleSemester({
             </div>
         );
     }
-
-    const onDeleteCourse = (courseCode: string) => {
-        // Find and remove the course with the given courseCode from semArr
-        const updatedSemArr = semArr.map((sem) => ({
-            ...sem,
-            classes: sem.classes.filter(
-                (course) => course.courseCode !== courseCode
-            )
-        }));
-
-        setSemArr(updatedSemArr);
-    };
-
-    const isCoursesAdded = semArr.some((sem) => sem.classes.length > 0);
+    function clearClasses(semester: semester) {
+        semester.classes = [];
+        return semester;
+    }
+    function clearAllClassesButton(sem: semester) {
+        //Im thinking make a button to clear semesters and then add that to the add table function
+        //when clicked update it so classes is an empty array or if that doesn't work create a new semester
+        // Make a deep copy, check for the name, and then change it from there
+        const deepCopy = semArr.map((sem: semester): semester => ({ ...sem }));
+        const emptySemArr = deepCopy.map(
+            (semester: semester): semester =>
+                semester.name === sem.name ? clearClasses(semester) : semester
+        );
+        //sem.classes = [];
+        setSemArr(emptySemArr);
+        //return sem;
+    }
 
     function addForClickedSem(clickedArr: semester[]) {
         console.log(semArr.map((e) => e.name));
@@ -209,11 +216,6 @@ export function SingleMultipleSemester({
         <div>
             {addCourse()}
             {/* add Clear Semesters and goBack button */}
-            <div>
-                <Button onClick={clear}> Clear Existing Semesters </Button>
-                <Button onClick={goBackClick}>Go Back to Degree Plans</Button>
-            </div>
-            <h3>Single Semester</h3>
             <Form.Group controlId="formCreateSemester">
                 <Form.Label>Input Semester:</Form.Label>
                 <Button onClick={() => addSemLabel(semester1)}>Enter</Button>
@@ -239,13 +241,17 @@ export function SingleMultipleSemester({
                     <div></div>
                 </Col>
             </Form.Group>
-            {isCoursesAdded && (
+            {/* {isCoursesAdded && (
                 <DeleteCourses onDeleteCourse={onDeleteCourse} />
-            )}
+            )} */}
             <div>
                 {clicked
                     ? addForClickedSem(semArrClicked)
                     : "Enter and Click semester(s) to view classes"}
+            </div>
+            <div>
+                <Button onClick={clear}> Clear Existing Semesters </Button>
+                <Button onClick={goBackClick}>Go Back to Degree Plans</Button>
             </div>
             {/* <div>{RemoveSemester()}</div> */}
         </div>
