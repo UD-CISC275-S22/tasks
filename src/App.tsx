@@ -15,6 +15,18 @@ function App(): JSX.Element {
         { name: "Plan 2", semesters: [] },
         { name: "Plan 3", semesters: [] }
     ];
+    //-------------------------------------------------------
+    // Function to insert a new degree plan
+    //creating an array
+    function insertDegreePlan(
+        prevDegreePlans: degreePlan[],
+        newDegreePlan: degreePlan
+    ): degreePlan[] {
+        const updatedDegreePlans = [...prevDegreePlans, newDegreePlan];
+
+        return updatedDegreePlans;
+    }
+    //--------------------------------------------------------
     const [view, setView] = useState<Views>(Views.degreePlanView);
     const [currDegreePlan, setcurrDegreePlan] = useState<degreePlan>(
         prevDegreePlan[1]
@@ -27,6 +39,20 @@ function App(): JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript
             </header>
+            {/* a button to create a new degreePlan */}
+            <button
+                onClick={() =>
+                    setDegreePlanList(
+                        insertDegreePlan(degreePlanList, {
+                            name: `Plan ${degreePlanList.length + 1}`,
+                            semesters: []
+                        })
+                    )
+                }
+            >
+                Create New Degree Plan
+            </button>
+            {/* end of button to add a new degree Plan */}
             {view === Views.degreePlanView && (
                 <DegreePlanView
                     setCurrentView={setView}
