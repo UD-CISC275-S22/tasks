@@ -23,13 +23,14 @@ export const DropAdd = ({
     ) {
         setDisplayCourseCategory(event.target.value);
     }
+    //RADIO BUTTONS DO NOT WORK INDEPENDENT OF EACH SEMESTER!
     return (
         <>
             <Form.Group controlId="currentCourse">
                 <Form.Label>Select Course Variety</Form.Label>
                 <Form.Check
                     type="radio"
-                    name="displayCourse"
+                    name="displayCourse1"
                     onChange={updateDisplayCourseCat}
                     id="disp-course-all"
                     label="AllCourses"
@@ -38,7 +39,7 @@ export const DropAdd = ({
                 />
                 <Form.Check
                     type="radio"
-                    name="displayCourse"
+                    name="displayCourse2"
                     onChange={updateDisplayCourseCat}
                     id="disp-course-free"
                     label="FreeElective"
@@ -47,7 +48,7 @@ export const DropAdd = ({
                 />
                 <Form.Check
                     type="radio"
-                    name="displayCourse"
+                    name="displayCourse3"
                     onChange={updateDisplayCourseCat}
                     id="disp-course-restricted"
                     label="RestrictiveElective"
