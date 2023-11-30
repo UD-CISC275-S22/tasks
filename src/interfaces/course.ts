@@ -7,3 +7,4 @@ export interface Course {
     courseCoreq: string[];
     courseDescription: string;
 }
+
