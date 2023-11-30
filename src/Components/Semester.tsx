@@ -37,7 +37,7 @@ const SEM2: Semester = {
 
 //import sample from "../data/AllCourseList.json";
 import { ClearSemester } from "./clearingSemester";
-import { DropAdd } from "./dropAdd";
+//import { DropAdd } from "./dropAdd";
 import { Plan } from "../Interfaces/plan";
 import { AI } from "./plan";
 // import { courseList } from "./course";

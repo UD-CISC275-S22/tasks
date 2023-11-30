@@ -25,11 +25,11 @@ export const DropAdd = ({
         setDisplayCourseCategory(event.target.value);
     }
     return (
-       //each button will updtae the displaycourse category state 
-       //current issue is that you can only select button no matter the plan 
-       //solution is too move the radio buttons to a different probaly displau fall and dsiplay spring
-       //
- <>
+        //each button will updtae the displaycourse category state
+        //current issue is that you can only select button no matter the plan
+        //solution is too move the radio buttons to a different probaly displau fall and dsiplay spring
+        //
+        <>
             <Form.Group controlId="currentCourse">
                 <Form.Label>Select Course Variety</Form.Label>
                 <Form.Check
