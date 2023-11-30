@@ -1,4 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { Course } from "../Interfaces/course";
@@ -17,9 +16,47 @@ export const DropAdd = ({
     Course_List: Course[];
 }) => {
     //added notes
+=======
+    const [displayCourseCategory, setDisplayCourseCategory] =
+        useState<string>("AllCourses");
+
+    //update the state of the dsiplay course categoery
+    function updateDisplayCourseCat(
+        event: React.ChangeEvent<HTMLInputElement>
+    ) {
+        setDisplayCourseCategory(event.target.value);
+    }
     return (
         <>
             <Form.Group controlId="currentCourse">
+                <Form.Label>Select Course Variety</Form.Label>
+                <Form.Check
+                    type="radio"
+                    name="displayCourse"
+                    onChange={updateDisplayCourseCat}
+                    id="disp-course-all"
+                    label="AllCourses"
+                    value="AllCourses"
+                    checked={displayCourseCategory === "AllCourses"}
+                />
+                <Form.Check
+                    type="radio"
+                    name="displayCourse"
+                    onChange={updateDisplayCourseCat}
+                    id="disp-course-free"
+                    label="FreeElective"
+                    value="FreeElective"
+                    checked={displayCourseCategory === "FreeElective"}
+                />
+                <Form.Check
+                    type="radio"
+                    name="displayCourse"
+                    onChange={updateDisplayCourseCat}
+                    id="disp-course-restricted"
+                    label="RestrictiveElective"
+                    value="RestrictiveElective"
+                    checked={displayCourseCategory === "RestrictiveElective"}
+                />
                 <Form.Label>Select A Course</Form.Label>
                 <Form.Select value={currCourse} onChange={updateCurrCourse}>
                     {
