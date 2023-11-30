@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { Course } from "../Interfaces/course";
@@ -15,46 +16,10 @@ export const DropAdd = ({
     currCourse: string;
     Course_List: Course[];
 }) => {
-    const [displayCourseCategory, setDisplayCourseCategory] =
-        useState<string>("AllCourses");
-
-    function updateDisplayCourseCat(
-        event: React.ChangeEvent<HTMLInputElement>
-    ) {
-        setDisplayCourseCategory(event.target.value);
-    }
     //RADIO BUTTONS DO NOT WORK INDEPENDENT OF EACH SEMESTER!
     return (
         <>
             <Form.Group controlId="currentCourse">
-                <Form.Label>Select Course Variety</Form.Label>
-                <Form.Check
-                    type="radio"
-                    name="displayCourse1"
-                    onChange={updateDisplayCourseCat}
-                    id="disp-course-all"
-                    label="AllCourses"
-                    value="AllCourses"
-                    checked={displayCourseCategory === "AllCourses"}
-                />
-                <Form.Check
-                    type="radio"
-                    name="displayCourse2"
-                    onChange={updateDisplayCourseCat}
-                    id="disp-course-free"
-                    label="FreeElective"
-                    value="FreeElective"
-                    checked={displayCourseCategory === "FreeElective"}
-                />
-                <Form.Check
-                    type="radio"
-                    name="displayCourse3"
-                    onChange={updateDisplayCourseCat}
-                    id="disp-course-restricted"
-                    label="RestrictiveElective"
-                    value="RestrictiveElective"
-                    checked={displayCourseCategory === "RestrictiveElective"}
-                />
                 <Form.Label>Select A Course</Form.Label>
                 <Form.Select value={currCourse} onChange={updateCurrCourse}>
                     {
