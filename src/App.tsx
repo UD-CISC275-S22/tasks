@@ -15,27 +15,26 @@ function App(): JSX.Element {
         { name: "Plan 2", semesters: [] },
         { name: "Plan 3", semesters: [] }
     ];
-    //-------------------------------------------------------
+    //------------------------------------------------------------------------------------
     // Function to insert a new degree plan, creating an array
+    // Function to remove  a new degree plan, removing an array
     function insertDegreePlan(
         prevDegreePlans: degreePlan[],
-        newDegreePlan: degreePlan
+        newPlan: degreePlan
     ): degreePlan[] {
-        const updatedDegreePlans = [...prevDegreePlans, newDegreePlan];
+        const updatedDegreePlans = [...prevDegreePlans, newPlan];
         return updatedDegreePlans;
     }
-    // Function to remove  a new degree plan, removing an array
     function removeDegreePlan(
         prevDegreePlans: degreePlan[],
         removePlan: degreePlan
     ): degreePlan[] {
-        //const updatedDegreePlans = [...prevDegreePlans];
         const updatedDegreePlans = prevDegreePlans.filter(
             (Plan: degreePlan): boolean => Plan.name !== removePlan.name
         );
         return updatedDegreePlans;
     }
-    //--------------------------------------------------------
+    //-------------------------------------------------------------------------------------
     const [view, setView] = useState<Views>(Views.degreePlanView);
     const [currDegreePlan, setcurrDegreePlan] = useState<degreePlan>(
         prevDegreePlan[1]
@@ -63,11 +62,8 @@ function App(): JSX.Element {
             </button>
             <button
                 onClick={() =>
-                    setDegreePlanList(
-                        removeDegreePlan(degreePlanList, {
-                            name: `Plan ${degreePlanList.length - 1}`,
-                            semesters: []
-                        })
+                    setDegreePlanList((prevDegreePlans) =>
+                        removeDegreePlan(prevDegreePlans, currDegreePlan)
                     )
                 }
             >
