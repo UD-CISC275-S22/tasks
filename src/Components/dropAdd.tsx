@@ -15,9 +15,11 @@ export const DropAdd = ({
     currCourse: string;
     Course_List: Course[];
 }) => {
+    //added notes
     const [displayCourseCategory, setDisplayCourseCategory] =
         useState<string>("AllCourses");
 
+    //update the state of the dsiplay course categoery
     function updateDisplayCourseCat(
         event: React.ChangeEvent<HTMLInputElement>
     ) {
