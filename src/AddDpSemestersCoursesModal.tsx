@@ -20,7 +20,9 @@ export function AddDpSemestersCoursesModal({
     const [semesters, setSemesters] = useState<Semester[]>([]);
     const [selectedSemester, setSelectedSemester] = useState<string>("Fall");
     const [title, setTitle] = useState<string>("Example Title");
-    const [selectedSemesterId, setSelectedSemesterId] = useState<number | null>(null);
+    const [selectedSemesterId, setSelectedSemesterId] = useState<number | null>(
+        null
+    );
 
     const [selectedCourseCode, setSelectedCourseCode] = useState<string>("");
     const [newCourse, setNewCourse] = useState<Course>({
@@ -62,9 +64,9 @@ export function AddDpSemestersCoursesModal({
             (semester: Semester): Semester =>
                 semester.id === semesterId
                     ? {
-                        ...semester,
-                        totalCredits: semester.totalCredits + credits
-                    }
+                          ...semester,
+                          totalCredits: semester.totalCredits + credits
+                      }
                     : { ...semester }
         );
         setSemesters(modifiedSemester);
@@ -72,16 +74,18 @@ export function AddDpSemestersCoursesModal({
 
     const addCourse = (semesterId: number) => {
         if (selectedSemesterId !== null && selectedCourseCode) {
-            const selectedCourse = courseList.find(course => course.courseCode === selectedCourseCode);
+            const selectedCourse = courseList.find(
+                (course) => course.courseCode === selectedCourseCode
+            );
             if (selectedCourse) {
                 updateSemesterCredits(semesterId, selectedCourse.credits);
                 setSemesters((prevSemesters) =>
                     prevSemesters.map((semester) =>
                         semester.id === semesterId
                             ? {
-                                ...semester,
-                                courses: [...semester.courses, selectedCourse]
-                            }
+                                  ...semester,
+                                  courses: [...semester.courses, selectedCourse]
+                              }
                             : semester
                     )
                 );
@@ -107,11 +111,11 @@ export function AddDpSemestersCoursesModal({
             prevSemesters.map((semester) =>
                 semester.id === semesterId
                     ? {
-                        ...semester,
-                        courses: semester.courses.filter(
-                            (_, index) => index !== courseIndex
-                        )
-                    }
+                          ...semester,
+                          courses: semester.courses.filter(
+                              (_, index) => index !== courseIndex
+                          )
+                      }
                     : semester
             )
         );
@@ -256,7 +260,9 @@ export function AddDpSemestersCoursesModal({
                                                 {courseList.map((course) => (
                                                     <option
                                                         key={course.courseCode}
-                                                        value={course.courseCode}
+                                                        value={
+                                                            course.courseCode
+                                                        }
                                                     >
                                                         {course.title}
                                                     </option>
@@ -288,4 +294,3 @@ export function AddDpSemestersCoursesModal({
         </Modal>
     );
 }
-
