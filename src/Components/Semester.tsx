@@ -346,20 +346,26 @@ export function ViewSemester(): JSX.Element {
                         Pick a Plan:
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
-                        {planOptions.map((option, index) => (
-                            <Dropdown.Item
-                                key={index}
-                                onClick={() => handlePlans(option)}
-                            >
-                                {option}
-                            </Dropdown.Item>
-                        ))}
+                        {
+                            // eslint-disable-next-line no-extra-parens
+                            planOptions.map((option, index) => (
+                                <Dropdown.Item
+                                    key={index}
+                                    onClick={() => handlePlans(option)}
+                                >
+                                    {option}
+                                </Dropdown.Item>
+                            ))
+                        }
                     </Dropdown.Menu>
                 </Dropdown>
                 <hr></hr>
-                {seePlan && (
-                    <DisplayPlan indivPlanSem={indivPlanSem}></DisplayPlan>
-                )}
+                {
+                    // eslint-disable-next-line no-extra-parens
+                    seePlan && (
+                        <DisplayPlan indivPlanSem={indivPlanSem}></DisplayPlan>
+                    )
+                }
             </div>
             <hr></hr>
         </div>

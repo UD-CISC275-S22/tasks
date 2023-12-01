@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
-import { Button, Form } from "react-bootstrap";
 import { Dropdown } from "react-bootstrap";
 import { Semester } from "../Interfaces/semester";
 import { blankCourse } from "./plan";
@@ -92,15 +91,18 @@ export function DisplayPlan({ indivPlanSem }: valueProps): JSX.Element {
             <Dropdown>
                 <Dropdown.Toggle id="dropdown1">View Semester:</Dropdown.Toggle>
                 <Dropdown.Menu>
-                    {year.map((option, index) => (
-                        <Dropdown.Item
-                            key={index}
-                            onClick={() => toggleYear1(option, index)}
-                            active={selectedYear1.includes(option)}
-                        >
-                            {option}
-                        </Dropdown.Item>
-                    ))}
+                    {
+                        // eslint-disable-next-line no-extra-parens
+                        year.map((option, index) => (
+                            <Dropdown.Item
+                                key={index}
+                                onClick={() => toggleYear1(option, index)}
+                                active={selectedYear1.includes(option)}
+                            >
+                                {option}
+                            </Dropdown.Item>
+                        ))
+                    }
                 </Dropdown.Menu>
             </Dropdown>
             <div className="Semester">
@@ -112,15 +114,18 @@ export function DisplayPlan({ indivPlanSem }: valueProps): JSX.Element {
             <Dropdown>
                 <Dropdown.Toggle id="dropdown2">View Semester:</Dropdown.Toggle>
                 <Dropdown.Menu>
-                    {year.map((option, index) => (
-                        <Dropdown.Item
-                            key={index}
-                            onClick={() => toggleYear2(option, index)}
-                            active={selectedYear2.includes(option)}
-                        >
-                            {option}
-                        </Dropdown.Item>
-                    ))}
+                    {
+                        // eslint-disable-next-line no-extra-parens
+                        year.map((option, index) => (
+                            <Dropdown.Item
+                                key={index}
+                                onClick={() => toggleYear2(option, index)}
+                                active={selectedYear2.includes(option)}
+                            >
+                                {option}
+                            </Dropdown.Item>
+                        ))
+                    }
                 </Dropdown.Menu>
             </Dropdown>
             <div className="Semester">
@@ -132,15 +137,18 @@ export function DisplayPlan({ indivPlanSem }: valueProps): JSX.Element {
             <Dropdown>
                 <Dropdown.Toggle id="dropdown3">View Semester:</Dropdown.Toggle>
                 <Dropdown.Menu>
-                    {year.map((option, index) => (
-                        <Dropdown.Item
-                            key={index}
-                            onClick={() => toggleYear3(option, index)}
-                            active={selectedYear3.includes(option)}
-                        >
-                            {option}
-                        </Dropdown.Item>
-                    ))}
+                    {
+                        // eslint-disable-next-line no-extra-parens
+                        year.map((option, index) => (
+                            <Dropdown.Item
+                                key={index}
+                                onClick={() => toggleYear3(option, index)}
+                                active={selectedYear3.includes(option)}
+                            >
+                                {option}
+                            </Dropdown.Item>
+                        ))
+                    }
                 </Dropdown.Menu>
             </Dropdown>
             <div className="Semester">
@@ -152,15 +160,18 @@ export function DisplayPlan({ indivPlanSem }: valueProps): JSX.Element {
             <Dropdown>
                 <Dropdown.Toggle id="dropdown4">View Semester:</Dropdown.Toggle>
                 <Dropdown.Menu>
-                    {year.map((option, index) => (
-                        <Dropdown.Item
-                            key={index}
-                            onClick={() => toggleYear4(option, index)}
-                            active={selectedYear4.includes(option)}
-                        >
-                            {option}
-                        </Dropdown.Item>
-                    ))}
+                    {
+                        // eslint-disable-next-line no-extra-parens
+                        year.map((option, index) => (
+                            <Dropdown.Item
+                                key={index}
+                                onClick={() => toggleYear4(option, index)}
+                                active={selectedYear4.includes(option)}
+                            >
+                                {option}
+                            </Dropdown.Item>
+                        ))
+                    }
                 </Dropdown.Menu>
             </Dropdown>
             <div className="Semester">

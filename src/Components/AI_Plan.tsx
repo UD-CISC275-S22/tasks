@@ -1,5 +1,5 @@
 import { Semester } from "../Interfaces/semester";
-import { Course, Department } from "../Interfaces/course";
+import { Course } from "../Interfaces/course";
 import { Plan } from "../Interfaces/plan";
 import { courseList } from "./course";
 import { blankCourse } from "./plan";
