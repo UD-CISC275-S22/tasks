@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import { degreePlan, degreePlanProps } from "../interfaces/degreePlan";
-import { Views } from "../interfaces/viewProps";
+import { degreePlan } from "../interfaces/degreePlan";
 
 export function InsertRemoveDegreePlan(): JSX.Element {
     const prevDegreePlan: degreePlan[] = [];
