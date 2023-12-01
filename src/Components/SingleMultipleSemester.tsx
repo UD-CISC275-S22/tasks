@@ -76,6 +76,9 @@ export function SingleMultipleSemester({
                         {course.courseTitle}
                     </Col>
                     <Col>{course.credits}</Col>
+                    <Col>
+                        <Button>Remove</Button>
+                    </Col>
                 </Row>
             )
         );
@@ -100,6 +103,7 @@ export function SingleMultipleSemester({
                         <Row>
                             <Col>Course</Col>
                             <Col>Number of Credits</Col>
+                            <Col>Remove Course</Col>
                         </Row>
                         {addClasstoTable([semester])}
                         <Button onClick={() => clearAllClassesButton(semester)}>
@@ -109,6 +113,10 @@ export function SingleMultipleSemester({
                 </div>
             </div>
         );
+    }
+    function removeSemester(course: Class) {
+        //Nest a map; first find the name that matches then find the class that matches
+        //I will need to find the index first and then splice when the class matches
     }
     function createSemester(name: string, classes: Class[]) {
         return { name: name, classes: classes };
@@ -143,7 +151,20 @@ export function SingleMultipleSemester({
                         />
                     </div>
                     <div className="separator"></div>
-                    <div style={{ marginLeft: "5px" }}>
+                    <div style={{ marginRight: "5px" }}>
+                        <SlowAdd
+                            onCourseInfo={(
+                                courseInfo: Class & {
+                                    semester: string;
+                                    //year: string;
+                                }
+                            ): void => {
+                                addToCorrectSem(courseInfo, semArr);
+                                console.log(semArr);
+                            }}
+                        />
+                    </div>
+                    {/* <div style={{ marginLeft: "5px" }}>
                         <SlowAdd
                             onCourseInfo={function (courseInfo: Class): void {
                                 // setSemester1(courseInfo.semester);
@@ -153,7 +174,7 @@ export function SingleMultipleSemester({
                                 console.log(semArr);
                             }}
                         />
-                    </div>
+                    </div> */}
                 </div>
             </div>
         );
