@@ -112,7 +112,10 @@ export function Planner({
                             <Col>Remove Course</Col>
                         </Row>
                         {addClasstoTable([semester])}
-                        <Button onClick={() => clearAllClasses(semester)}>
+                        <Button
+                            onClick={() => clearAllClasses(semester)}
+                            disabled={semester.classes.length === 0}
+                        >
                             Clear All Classes in {semester.name}
                         </Button>
                         <br></br>
@@ -260,6 +263,7 @@ export function Planner({
             (sem: semester): boolean => sem.name !== sem0.name
         );
         setSemArr(removedClassArr);
+        setSemArrClicked(removedClassArr);
     }
     return (
         <div>
