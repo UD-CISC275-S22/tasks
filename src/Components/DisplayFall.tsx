@@ -4,6 +4,7 @@ import { Course } from "../Interfaces/course";
 import { ClearSemester } from "./clearingSemester";
 import { DropAdd } from "./dropAdd";
 import { Semester } from "../Interfaces/semester";
+import { Form } from "react-bootstrap";
 
 export interface valueProps {
     semesters: Semester[];
@@ -39,6 +40,14 @@ export function DisplayFall({
     //targetSem is also NOT the state and it's already passed in from the Semester.tsx file. So both variables are already declared in the indivPlanSem function
     const idx = index(targetYear, targetSem);
     const fallCourses = semesters[idx].courseList;
+    const [displayFallCourseCategory, setDisplayFallCourseCategory] =
+        useState<string>("AllCourses");
+
+    function updateDisplayFallCourseCat(
+        event: React.ChangeEvent<HTMLInputElement>
+    ) {
+        setDisplayFallCourseCategory(event.target.value);
+    }
 
     return (
         <div className="Fall">
@@ -56,6 +65,36 @@ export function DisplayFall({
                 )
             )}
             <div>
+                <Form.Label>Select Course Variety</Form.Label>
+                <Form.Check
+                    type="radio"
+                    name="displayCourseFall1"
+                    onChange={updateDisplayFallCourseCat}
+                    id="disp-course-all"
+                    label="AllCourses"
+                    value="AllCourses"
+                    checked={displayFallCourseCategory === "AllCourses"}
+                />
+                <Form.Check
+                    type="radio"
+                    name="displayCourseFall2"
+                    onChange={updateDisplayFallCourseCat}
+                    id="disp-course-free"
+                    label="FreeElective"
+                    value="FreeElective"
+                    checked={displayFallCourseCategory === "FreeElective"}
+                />
+                <Form.Check
+                    type="radio"
+                    name="displayCourseFall3"
+                    onChange={updateDisplayFallCourseCat}
+                    id="disp-course-restricted"
+                    label="RestrictiveElective"
+                    value="RestrictiveElective"
+                    checked={
+                        displayFallCourseCategory === "RestrictiveElective"
+                    }
+                />
                 <DropAdd
                     dropClass={dropClass}
                     addClass={addClass}
