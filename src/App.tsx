@@ -110,7 +110,6 @@ function App(): JSX.Element {
                     <th>Credits</th>
                 </tr>
             </table>
-
         </div>
     );
 }
