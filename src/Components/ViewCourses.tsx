@@ -48,12 +48,12 @@
 // }
 
 import React, { useState } from "react";
-// import { Button, Form } from "react-bootstrap";
-import { Form } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import { Course } from "../Interfaces/course";
 import { Semester } from "../Interfaces/semester";
 import { Plan } from "../Interfaces/plan";
 import { ClearCourse } from "./clearingCourse";
+import { courseOrigin } from "./courseOrigin";
 import "../App.css";
 
 export function ViewCourses({
@@ -67,25 +67,29 @@ export function ViewCourses({
     currentPlan: Plan;
     settingPlan: (t: Plan) => void;
 }): JSX.Element {
-    const [title] = useState(course.title);
-    const [name] = useState(course.name);
-    const [description] = useState(course.description);
-    const [credits] = useState(course.credits);
-    const [offering] = useState(course.semester);
-    const [department] = useState(course.department);
-    const [prereq] = useState(course.prereq);
-    const [coreq] = useState(course.coreq);
-    const [requirements] = useState(course.requirements);
-    //const [editing, settingEditing] = useState<boolean>(false);
-    //const [addingMod, setAddingMod] = useState(false);
-    //const handleCloseAddMod = () => setAddingMod(false);
-    //const handleAddingMod = () => setAddingMod(true);
-    //const [visible, settingVisibility] = useState<boolean>(false);
+    const [id, settingID] = useState(course.id);
+    const [title, settingTitle] = useState(course.title);
+    const [name, settingName] = useState(course.name);
+    const [description, settingDescription] = useState(course.description);
+    const [credits, settingCredits] = useState(course.credits);
+    const [offering, settingOffering] = useState(course.semester);
+    const [department, settingDepartment] = useState(course.department);
+    const [prereq, settingPrereq] = useState(course.prereq);
+    const [coreq, settingCoreq] = useState(course.coreq);
+    const [requirements, settingRequirements] = useState(course.requirements);
+    const [editing, settingEditing] = useState<boolean>(false);
+    const [addingMod, setAddingMod] = useState(false);
+    const [showAddingMod, setShowAddMod] = useState(false);
+    const [showSwitchMod, setShowSwitchMod] = useState(false);
+    const handleCloseAddMod = () => setAddingMod(false);
+    const handleAddingMod = () => setAddingMod(true);
+    const handleCloseSwitchMod = () => setShowSwitchMod(false);
+    const handleShowSwitchMod = () => setShowSwitchMod(true);
+    const [visible, settingVisibility] = useState<boolean>(false);
 
-    // function isVisibile(): void {
-    //     settingVisibility(!visible);
-
-    // }
+    function isVisibile(): void {
+        settingVisibility(!visible);
+    }
     return (
         <div>
             {courseSemester.courseList.findIndex(

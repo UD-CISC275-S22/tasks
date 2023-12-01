@@ -389,23 +389,27 @@ import { Semester } from "../Interfaces/semester";
 import { Plan } from "../Interfaces/plan";
 import { AddingCourse } from "./addingCourse";
 import { ClearSemester } from "./clearingSemester";
-import { ViewCourses } from "./course";
+import { ViewCourses } from "./ViewCourses";
+import { EditingSemester } from "./EditingSemester";
+
 import "../App.css";
 
 export function ViewSemester({
     semester,
-    clearSemesterCourses,
     currentPlan,
     settingPlan,
     plans,
-    settingPlans
+    settingPlans,
+    clearSemesterCourses,
+    editingSemester
 }: {
     semester: Semester;
-    clearSemesterCourses: (id: string) => void;
     currentPlan: Plan;
     settingPlan: (t: Plan) => void;
     plans: Plan[];
     settingPlans: (t: Plan[]) => void;
+    clearSemesterCourses: (id: string) => void;
+    editingSemester: (plan: Plan) => void;
 }): JSX.Element {
     const [editing, settingEditing] = useState<boolean>(false);
     const [addingMod, setAddingMod] = useState(false);
@@ -418,22 +422,22 @@ export function ViewSemester({
     function editingFunc() {
         settingEditing(!editing);
     }
-
     const checkingCredits = semester.courseList.filter(
         (c: Course): boolean => !isNaN(Number(c.credits))
     );
 
     return editing ? (
-        // <EditingSemester
-        //     editingFunc={editingFunc}
-        //     semester={semester}
-        //     clearSemesterCourses={clearSemesterCourses}
-        //     plan={currentPlan}
-        //     settingPlan={settingPlan}
-        //     plans={plans}
-        //     settingPlans={settingPlans}
-        // ></EditingSemester>
-    // ) : (
+        <EditSemester
+            editingFunc={editingFunc}
+            semester={semester}
+            plan={currentPlan}
+            settingPlan={settingPlan}
+            plans={plans}
+            settingPlans={settingPlans}
+            clearSemesterCourses={clearSemesterCourses}
+            editingSemester={editingSemester}
+        ></EditSemester>
+    ) : (
         <Container>
             <Row>
                 <Col>
@@ -441,10 +445,16 @@ export function ViewSemester({
                 </Col>
             </Row>
             <Row>
-                <p> Description: {semester.description}</p>
+                <p> Notes: {semester.notes}</p>
             </Row>
             <Row>
-                <p> Credits: {checkingCredits.reduce((total: number, c: Course) => total + Number(c.credits), 0)}</p>
+                <p>
+                    Credits:
+                    {checkingCredits.reduce(
+                        (total: number, c: Course) => total + Number(c.credits),
+                        0
+                    )}
+                </p>
             </Row>
             <Row>
                 <p>
@@ -465,28 +475,44 @@ export function ViewSemester({
             <p></p>
             <Row>
                 <Col>
-                    <Button onClick={handleAddingMod}> Add Course </Button>
-                    <AddingCourse 
-                        show={addingMod} 
-                        handleClose={handleCloseAddMod} 
+                    <Button
+                        onClick={handleAddingMod}
+                        data-testid="addCourseMod"
+                        variant="success"
+                    >
+                        Add Course
+                    </Button>
+                    <AddingCourse
+                        show={addingMod}
+                        handleClose={handleCloseAddMod}
                         currentSemester={semester}
                         plan={currentPlan}
                         settingPlan={settingPlan}
                     ></AddingCourse>
-                    {"  "}
-                    <Button onClick={editingFunc}> Edit Semester </Button>
-                    {"  "}
-                    <Button onClick={handleClearingMod}> Clear All Courses </Button>
+                    <Button
+                        onClick={editingFunc}
+                        data-testid="editingSemesterMod"
+                        variant="warning"
+                    >
+                        Edit Semester
+                    </Button>
+                    <Button
+                        onClick={handleClearingMod}
+                        data-testid="clearCoursesMod"
+                        variant="danger"
+                    >
+                        Clear All Courses
+                    </Button>
                     <ClearSemester
                         show={clearingMod}
                         handleClose={handleCloseClearMod}
-                        currentSemester={semester}
                         plan={currentPlan}
                         settingPlan={settingPlan}
+                        currentSemester={semester}
+                        editingSemester={editingSemester}
                     ></ClearSemester>
                 </Col>
             </Row>
         </Container>
     );
 }
-
