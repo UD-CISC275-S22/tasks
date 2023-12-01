@@ -4,5 +4,5 @@ export interface Course {
     credits: number;
     prereq: string;
     UUID?: string;
-    Descritpion?: string;
+    Description?: string;
 }

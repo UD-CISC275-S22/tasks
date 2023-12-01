@@ -10,7 +10,6 @@ import {
 import { Course } from "./interfaces/course";
 import { v4 as uuidv4 } from "uuid";
 import { Year } from "./viewCourseComponents";
-import { CreateCoursePlan } from "./CreateCoursePlan";
 
 // export function CreatCoursePlan(uuid: string, DB: TotalDB) {}
 // export function deleteCoursePlan() {}

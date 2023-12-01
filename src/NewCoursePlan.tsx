@@ -176,7 +176,7 @@ export function CoureseplansBoot({
                                                                         ),
                                                                     prereq: course.preReq,
                                                                     UUID: uuidv4(),
-                                                                    Descritpion:
+                                                                    Description:
                                                                         course.descr
                                                                 });
                                                             }}

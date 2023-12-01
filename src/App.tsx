@@ -8,6 +8,7 @@ import { Course } from "./interfaces/course";
 //import { AddCourseModal } from "./AddCourseModal";
 //import { ClearCourseModal } from "./ClearCourseModal";
 import coursePlanData from "./data/couresplans.json";
+import degreeData from "./data/degrees.json";
 import { Container } from "react-bootstrap";
 import { v4 as uuidv4 } from "uuid";
 //import { CreateCoursePlan } from "./CreateCoursePlan";
@@ -17,6 +18,7 @@ import {
     oneYearUpdate,
     updateCourse
 } from "./DBmanage";
+import { degreeRequirementCheck } from "./DegreeRequirementCheck";
 
 function createUUID(db: CoursePlan[]) {
     // Creating a deep copy of db to avoid modifying the original
@@ -95,6 +97,8 @@ function App(): JSX.Element {
             });
         }
     }
+
+    degreeRequirementCheck(degreeData[0], coursePlanData[0]);
 
     return (
         <div className="App">
