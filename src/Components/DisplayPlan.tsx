@@ -41,7 +41,6 @@ export function DisplayPlan({
     const fifthYearFall = indivPlanSem(5, "Fall", 17);
     const fifthYearWinter = indivPlanSem(5, "Winter", 18);
     const fifthYearSpring = indivPlanSem(5, "Spring", 19);
-    const fifthYearSummer = indivPlanSem(5, "Summer", 20);
 
     return (
         <div>

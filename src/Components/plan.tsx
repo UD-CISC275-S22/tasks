@@ -1,6 +1,4 @@
-import { Semester } from "../Interfaces/semester";
 import { Course, Department } from "../Interfaces/course";
-import { Plan } from "../Interfaces/plan";
 import { courseList } from "./course";
 
 //later: make a state that from user input finds the course that they selected and input

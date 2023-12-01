@@ -21,25 +21,11 @@ const COURSES_LIST = courseList;
 //variable to use DEFAULT list of courses from JSON file - Malika
 const DEFAULT_COURSE_LIST = defaultCourseList;
 
-//create initial semester for testing
-const SEM1: Semester = {
-    type: ["Fall"],
-    year: 2024,
-    totalCredits: 18,
-    courseList: COURSES_LIST
-};
-const SEM2: Semester = {
-    type: ["Fall"],
-    year: 2024,
-    totalCredits: 18,
-    courseList: COURSES_LIST
-};
-
 //import sample from "../data/AllCourseList.json";
 import { ClearSemester } from "./clearingSemester";
 import { DropAdd } from "./dropAdd";
 import { Plan } from "../Interfaces/plan";
-import { AI } from "./plan";
+import { AI } from "./AI_Plan";
 // import { courseList } from "./course";
 
 // const COURSE_LIST = courseList; //list of all the courses
