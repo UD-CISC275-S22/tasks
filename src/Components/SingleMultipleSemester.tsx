@@ -302,7 +302,6 @@ export function SingleMultipleSemester({
                 <Button onClick={clear}> Clear Existing Semesters </Button>
                 <Button onClick={goBackClick}>Go Back to Degree Plans</Button>
             </div>
-            {/* <div>{RemoveSemester()}</div> */}
         </div>
     );
 }
