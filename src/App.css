@@ -24,6 +24,28 @@
     font-size: calc(10px + 2vmin);
     color: white;
 }
+.App-blockright {
+    max-width: 50%;
+    width: 100%;
+    background-color: yellow;
+    text-align: center;
+    font-size: calc(10px + 2vmin);
+    color: black;
+}
+.App-blockleft {
+    max-width: 50%;
+    width: 100%;
+    background-color: lightblue;
+    text-align: center;
+    font-size: calc(10px + 2vmin);
+    color: black;
+}
+.div-alignright {
+    text-align: right;
+}
+.div-alignleft {
+    text-align: left;
+}
 
 .App-link {
     color: #61dafb;
@@ -35,5 +57,20 @@
     }
     to {
         transform: rotate(360deg);
+    }
+}
+/* App.css or a custom CSS file */
+.center {
+    text-align: center; /* Center-align the content within the table cells */
+
+    .horizontal-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .horizontal-list li {
+        display: inline-block;
+        margin-right: 10px;
     }
 }
