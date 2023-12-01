@@ -11,7 +11,6 @@ import { Views } from "../interfaces/viewProps";
 //------------------------------------------------
 
 import { Button, Row, Col, Form /*Button*/ } from "react-bootstrap";
-// import { degreePlan } from "../interfaces/degreePlan";
 import { semester } from "../interfaces/semster";
 
 //-------------------------------------------------------------------------edit
