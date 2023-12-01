@@ -25,7 +25,7 @@ export function AddDpSemestersCoursesModal({
     );
 
     const [selectedCourseCode, setSelectedCourseCode] = useState<string>("");
-    const [newCourse, setNewCourse] = useState<Course>({
+    const [, setNewCourse] = useState<Course>({
         title: "",
         courseCode: "",
         credits: 0,
