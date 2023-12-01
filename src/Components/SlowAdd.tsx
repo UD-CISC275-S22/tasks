@@ -7,6 +7,7 @@ interface SlowAddProps {
 }
 
 function SlowAdd(props: SlowAddProps): JSX.Element {
+    //const [classTest, setClassTest] = useState<Class>();
     const [courseInfo, setCourseInfo] = useState<Class>({
         courseTitle: "",
         courseCode: "",
@@ -15,7 +16,7 @@ function SlowAdd(props: SlowAddProps): JSX.Element {
         credits: 0,
         canEditCredits: true,
         semester: "",
-        year: "",
+        //year: "",
         taken: true,
         note: ""
     });
@@ -24,7 +25,7 @@ function SlowAdd(props: SlowAddProps): JSX.Element {
     const [preReqs, setPreReqs] = useState<string[]>([]);
     const [credits, setCredits] = useState(0);
     const [semester, setSemester] = useState("");
-    const [year, setYear] = useState("");
+    //const [year, setYear] = useState("");
 
     // const handleInputChange = (
     //     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
@@ -55,11 +56,10 @@ function SlowAdd(props: SlowAddProps): JSX.Element {
     const handleCredits = (e: React.ChangeEvent<HTMLInputElement>) => {
         setCredits(parseFloat(e.target.value));
     };
-    const handleYearChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setYear(e.target.value);
-    };
-
-    const handleSemesterChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    // const handleYearChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    //     setYear(e.target.value);
+    // };
+    const handleSemesterChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSemester(e.target.value);
     };
 
@@ -68,22 +68,37 @@ function SlowAdd(props: SlowAddProps): JSX.Element {
         setCourseInfo({
             courseTitle: courseTitle,
             courseCode: courseCode,
-            numPreReqs: 0,
+            numPreReqs: preReqs.length,
             preReqs: preReqs,
             credits: credits,
             canEditCredits: true,
             semester: semester,
-            year: year,
+            //year: year,
             taken: false,
             note: ""
         });
-        if (courseInfo) {
-            props.onCourseInfo({ ...courseInfo });
+        const courseInfo1 = {
+            courseTitle: courseTitle,
+            courseCode: courseCode,
+            numPreReqs: preReqs.length,
+            preReqs: preReqs,
+            credits: credits,
+            canEditCredits: true,
+            semester: semester,
+            //year: year,
+            taken: false,
+            note: ""
+        };
+        if (courseInfo1) {
+            props.onCourseInfo({ ...courseInfo1 });
         }
+        console.log("00000000000000000");
+        console.log(courseInfo);
     };
 
     return (
-        <form onSubmit={handleAddCourse}>
+        <form>
+            <div>onSubmit={handleAddCourse}</div>
             <div className="form-group">
                 <h3>Full Form</h3>
                 <label htmlFor="title">Course Title: </label>
@@ -131,33 +146,21 @@ function SlowAdd(props: SlowAddProps): JSX.Element {
                     defaultValue={0}
                 />
             </div>
-
-            <div className="form-group">
-                <label htmlFor="semester">Semester:</label>
-                <select
-                    id="semester"
-                    name="semester"
-                    value={semester}
-                    onChange={handleSemesterChange}
-                >
-                    <option value="Fall">Fall</option>
-                    <option value="Winter">Winter</option>
-                    <option value="Spring">Spring</option>
-                    <option value="Summer">Summer</option>
-                </select>
+            <div>
+                <div>
+                    <label htmlFor="semester">Semester: </label>
+                    <input
+                        type="text"
+                        id="semester"
+                        name="semester"
+                        value={semester}
+                        onChange={handleSemesterChange}
+                    ></input>
+                    <button onClick={handleAddCourse}>Add Course</button>
+                    <br></br>
+                    <br></br>
+                </div>
             </div>
-
-            <div className="form-group">
-                <label htmlFor="year">Year:</label>
-                <input
-                    id="year"
-                    name="year"
-                    value={year}
-                    onChange={handleYearChange}
-                />
-            </div>
-
-            <button type="submit">Add Course</button>
         </form>
     );
 }
