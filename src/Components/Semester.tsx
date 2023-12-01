@@ -1,19 +1,29 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 //for visualization of semesters and altering the courses within them
 
-import React, { useState } from "react";
-import "../App.css";
-import { courseList, defaultCourseList } from "./course";
+//css files
 import "./Semester.css";
-import { Course } from "../Interfaces/course";
+import "../App.css";
+//react and bootstrap
+import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
+//our own interfaces
+import { Course } from "../Interfaces/course";
 import { Semester } from "../Interfaces/semester";
+import { Plan } from "../Interfaces/plan";
+//individual constants
+import { courseList, defaultCourseList } from "./course";
+import { AI } from "./AI_Plan";
+//modals
+import { DisplayFall } from "./DisplayFall";
+import { DisplayWinter } from "./DisplayWinter";
+import { DisplaySpring } from "./DisplaySpring";
+import { DisplaySummer } from "./DisplaySummer";
+import { DisplayPlan } from "./DisplayPlan";
+//functions and other imports
 import sample from "../data/AllCourseList.json";
 import CourseEdit from "./CourseEdit";
 import { updateCourseList, findCourse, displayCourse } from "./course";
-import { DisplayFall } from "./DisplayFall";
-import { DisplaySpring } from "./DisplaySpring";
-import { DisplayPlan } from "./DisplayPlan";
 
 //A variable able to use for the list of courses within the JSON file.
 const COURSES_LIST = courseList;
@@ -24,8 +34,6 @@ const DEFAULT_COURSE_LIST = defaultCourseList;
 //import sample from "../data/AllCourseList.json";
 import { ClearSemester } from "./clearingSemester";
 import { DropAdd } from "./dropAdd";
-import { Plan } from "../Interfaces/plan";
-import { AI } from "./AI_Plan";
 // import { courseList } from "./course";
 
 // const COURSE_LIST = courseList; //list of all the courses
@@ -63,25 +71,49 @@ export function ViewSemester(): JSX.Element {
     }
 
     function index(year: number, sem: string): number {
-        //fall semesters will always be index 0,2,4,6 in the semesters state
-        //spring semesters will always be index 1,3,5,7 in the semesters state
+        //fall semesters will always indexes 0,4,8,12,16
+        //winter semesters will always be indexes 1,5,9,13,17
+        //spring semesters will always be indexes 2,6,10,14,18
+        //summer semesters will always be indexes 3,7,11,15 (has one less semester than the rest)
         let idx = 0;
         if (year === 1 && sem === "Fall") {
             idx = 0;
-        } else if (year === 1 && sem === "Spring") {
+        } else if (year === 1 && sem === "Winter") {
             idx = 1;
-        } else if (year === 2 && sem === "Fall") {
+        } else if (year === 1 && sem === "Spring") {
             idx = 2;
-        } else if (year === 2 && sem === "Spring") {
+        } else if (year === 1 && sem === "Summer") {
             idx = 3;
-        } else if (year === 3 && sem === "Fall") {
+        } else if (year === 2 && sem === "Fall") {
             idx = 4;
-        } else if (year === 3 && sem === "Spring") {
+        } else if (year === 2 && sem === "Winter") {
             idx = 5;
-        } else if (year === 4 && sem === "Fall") {
+        } else if (year === 2 && sem === "Spring") {
             idx = 6;
-        } else if (year === 4 && sem === "Spring") {
+        } else if (year === 2 && sem === "Summer") {
             idx = 7;
+        } else if (year === 3 && sem === "Fall") {
+            idx = 8;
+        } else if (year === 3 && sem === "Winter") {
+            idx = 9;
+        } else if (year === 3 && sem === "Spring") {
+            idx = 10;
+        } else if (year === 3 && sem === "Summer") {
+            idx = 11;
+        } else if (year === 4 && sem === "Fall") {
+            idx = 12;
+        } else if (year === 4 && sem === "Winter") {
+            idx = 13;
+        } else if (year === 4 && sem === "Spring") {
+            idx = 14;
+        } else if (year === 4 && sem === "Summer") {
+            idx = 15;
+        } else if (year === 5 && sem === "Fall") {
+            idx = 16;
+        } else if (year === 5 && sem === "Winter") {
+            idx = 17;
+        } else if (year === 5 && sem === "Spring") {
+            idx = 18;
         }
         return idx;
     }
@@ -105,6 +137,8 @@ export function ViewSemester(): JSX.Element {
     function handleShow() {
         setClicked(true);
     }
+
+    //functions for handling which semesters to see
 
     function dropClass() {
         const idx = index(targetYear, targetSem);
@@ -168,6 +202,7 @@ export function ViewSemester(): JSX.Element {
     }
 
     function indivPlanSem(year: number, sem: string, id: number): JSX.Element {
+        //returns 1 fall, spring, winter or summer semester
         if (sem === "Fall") {
             return (
                 <DisplayFall
@@ -204,127 +239,45 @@ export function ViewSemester(): JSX.Element {
                     index={index}
                 ></DisplaySpring>
             );
+        } else if (sem === "Winter") {
+            return (
+                <DisplayWinter
+                    key={id}
+                    semesters={semesters}
+                    targetSem={"Winter"}
+                    currCourse={currCourse}
+                    clicked={clicked}
+                    targetYear={year}
+                    dropClass={dropClass}
+                    addClass={addClass}
+                    updateCurrCourse={updateCurrCourse}
+                    clearSemesterCourses={clearSemesterCourses}
+                    handleClose={handleClose}
+                    handleShow={handleShow}
+                    index={index}
+                ></DisplayWinter>
+            );
+        } else if (sem === "Summer") {
+            return (
+                <DisplaySummer
+                    key={id}
+                    semesters={semesters}
+                    targetSem={"Summer"}
+                    currCourse={currCourse}
+                    clicked={clicked}
+                    targetYear={year}
+                    dropClass={dropClass}
+                    addClass={addClass}
+                    updateCurrCourse={updateCurrCourse}
+                    clearSemesterCourses={clearSemesterCourses}
+                    handleClose={handleClose}
+                    handleShow={handleShow}
+                    index={index}
+                ></DisplaySummer>
+            );
         }
         return <div></div>;
     }
-    //function to display both semesters
-    /*
-    function displayBoth(): JSX.Element {
-        //setTargetSem("Spring");
-        //let idx = index();
-        // //an array of courses in the plan's semester (ex. spring of year 1)
-        // const springCourses = semesters[idx].courseList;
-
-        // setTargetSem("Fall");
-        // idx = index();
-        // //an array of courses in the plan's semester (ex. fall of year 1)
-        // const fallCourses = semesters[idx].courseList;
-
-        const keyValue = targetYear.toString;
-        return (
-            <div className="Semester">
-                <DisplayFall
-                    semesters={semesters}
-                    setSemesters={setSemesters}
-                    targetSem={targetSem}
-                    setTargetSem={setTargetSem}
-                    currCourse={currCourse}
-                    setCurrCourse={setCurrCourse}
-                    clicked={clicked}
-                    setClicked={setClicked}
-                    targetYear={targetYear}
-                    dropClass={dropClass}
-                    addClass={addClass}
-                    updateCurrCourse={updateCurrCourse}
-                    clearSemesterCourses={clearSemesterCourses}
-                    handleClose={handleClose}
-                    handleShow={handleShow}
-                    index={index}
-                ></DisplayFall>
-                {setTargetSem("Spring")}
-                <DisplaySpring
-                    semesters={semesters}
-                    setSemesters={setSemesters}
-                    targetSem={targetSem}
-                    setTargetSem={setTargetSem}
-                    currCourse={currCourse}
-                    setCurrCourse={setCurrCourse}
-                    clicked={clicked}
-                    setClicked={setClicked}
-                    targetYear={targetYear}
-                    dropClass={dropClass}
-                    addClass={addClass}
-                    updateCurrCourse={updateCurrCourse}
-                    clearSemesterCourses={clearSemesterCourses}
-                    handleClose={handleClose}
-                    handleShow={handleShow}
-                    index={index}
-                ></DisplaySpring>
-            </div>
-        );
-    }*/
-
-    /*
-    // function to handle displaying semesters
-    function OneorTwo(): JSX.Element {
-        const year = targetYear.toString;
-        if (SemCount === 1 && targetSem === "Fall") {
-            return (
-                <div className="Semester">
-                    {
-                        <DisplayFall
-                            key={year + targetSem}
-                            semesters={semesters}
-                            setSemesters={setSemesters}
-                            targetSem={targetSem}
-                            setTargetSem={setTargetSem}
-                            currCourse={currCourse}
-                            setCurrCourse={setCurrCourse}
-                            clicked={clicked}
-                            setClicked={setClicked}
-                            targetYear={targetYear}
-                            dropClass={dropClass}
-                            addClass={addClass}
-                            updateCurrCourse={updateCurrCourse}
-                            clearSemesterCourses={clearSemesterCourses}
-                            handleClose={handleClose}
-                            handleShow={handleShow}
-                            index={index}
-                        ></DisplayFall>
-                    }
-                </div>
-            );
-        } else if (SemCount === 1 && targetSem === "Spring") {
-            return (
-                <div className="Semester">
-                    {
-                        <DisplaySpring
-                            key={year + targetSem}
-                            semesters={semesters}
-                            setSemesters={setSemesters}
-                            targetSem={targetSem}
-                            setTargetSem={setTargetSem}
-                            currCourse={currCourse}
-                            setCurrCourse={setCurrCourse}
-                            clicked={clicked}
-                            setClicked={setClicked}
-                            targetYear={targetYear}
-                            dropClass={dropClass}
-                            addClass={addClass}
-                            updateCurrCourse={updateCurrCourse}
-                            clearSemesterCourses={clearSemesterCourses}
-                            handleClose={handleClose}
-                            handleShow={handleShow}
-                            index={index}
-                        ></DisplaySpring>
-                    }
-                </div>
-            );
-        } else {
-            return displayBoth();
-        }
-    }
-    */
 
     //functions to edit courses - Malika
     const handleEditShow = (course: Course | undefined) => {

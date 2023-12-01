@@ -41,8 +41,8 @@ export function DisplaySummer({
     const summerCourses = semesters[idx].courseList;
 
     return (
-        <div className="Winter">
-            <h1>Fall Year {targetYear}</h1>
+        <div className="Summer">
+            <h1>Summer Year {targetYear}</h1>
             {summerCourses.map(
                 // eslint-disable-next-line no-extra-parens
                 (course: Course): JSX.Element => (

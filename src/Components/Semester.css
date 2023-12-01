@@ -17,16 +17,15 @@
     margin-bottom: 10px;
     border: 5px outset rgb(179, 100, 26);
     text-align: center;
-    flex-basis: 40%;
     min-height: 80%; /*Can change height later depending on deployment*/
-    min-width: 40%; /*Can change width later depending on deployment*/
+    min-width: 10%; /*Can change width later depending on deployment*/
     display: flex;
     flex-direction: column; /*Actual singular semester should span downwards - column like courses*/
     align-items: center;
     justify-content: center;
     background-color: rgb(251, 207, 142);
     font-family:'Times New Roman', Times, serif;
-    font-size: calc(6px + 2vmin); /*Can change size later depending on deployment*/
+    font-size: calc(4px + 2vmin); /*Can change size later depending on deployment*/
 }
 
 .Winter {
@@ -37,9 +36,8 @@
     margin-bottom: 10px;
     border: 5px outset rgb(28, 75, 58);
     text-align: center;
-    flex-basis: 40%;
     min-height: 80%; /*Can change height later depending on deployment*/
-    min-width: 40%; /*Can change width later depending on deployment*/
+    min-width: 10%; /*Can change width later depending on deployment*/
     display: flex;
     flex-direction: column; /*Actual singular semester should span downwards - column like courses*/
     align-items: center;
@@ -57,9 +55,8 @@
     margin-bottom: 10px;
     border: 5px outset rgb(11, 100, 23);
     text-align: center;
-    flex-basis: 40%;
     min-height: 80%; /*Can change height later depending on deployment*/
-    min-width: 40%; /*Can change width later depending on deployment*/
+    min-width: 10%; /*Can change width later depending on deployment*/
     display: flex;
     flex-direction: column; /*Actual singular semester should span downwards - column like courses*/
     align-items: center;
@@ -77,9 +74,8 @@
     margin-bottom: 10px;
     border: 5px outset rgb(75, 26, 71);
     text-align: center;
-    flex-basis: 40%;
     min-height: 80%; /*Can change height later depending on deployment*/
-    min-width: 40%; /*Can change width later depending on deployment*/
+    min-width: 10%; /*Can change width later depending on deployment*/
     display: flex;
     flex-direction: column; /*Actual singular semester should span downwards - column like courses*/
     align-items: center;
