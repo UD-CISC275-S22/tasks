@@ -16,7 +16,6 @@ export const DropAdd = ({
     Course_List: Course[];
 }) => {
     //added notes
-=======
     const [displayCourseCategory, setDisplayCourseCategory] =
         useState<string>("AllCourses");
 
