@@ -169,8 +169,17 @@ export function EditingDp({
             totalCredits: totDpSemesterCredits(),
             semestersList: semesters
         };
+        setNewCourse({
+            title: "",
+            courseCode: "",
+            credits: 0,
+            degreeRequirements: [],
+            coursePrereq: [],
+            courseCoreq: [],
+            courseDescription: ""
+        });
         editDp(dp.id, newDp);
-        handleCloseModal();
+        handleClose();
     };
     //todo: down he we need to first generate all of the users data that is in their dp
     //      You can do things like defaultValue = {dp.title} possibly
@@ -332,3 +341,7 @@ export function EditingDp({
 //- I have a bug where the textboxes for adding a course will still have the data from before after closing
 // and reopening the edit button without saving
 // i can prob fix it by adding a defuault when the handleCloseModal runs
+// Solution: I fixed it by adding a default course in handleCloseModal function
+// - I have a bug where when I edit and delete a course, if i stay on the page and repress the edit button the modal
+//  will still show the course i deleted but when i repress the edit button it fixes itself
+// i may need to also add a defualt to the saveChanges function to update the modal when presses
