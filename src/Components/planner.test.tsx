@@ -88,7 +88,6 @@ describe("Project Component tests", () => {
         expect(screen.queryByText(" "));
     });
 
-    /*
     test("Deleting course from a semester", () => {
         const planButton = screen.getByText("Plan 2");
         const viewButton = screen.getByText("View Semesters");
@@ -99,6 +98,7 @@ describe("Project Component tests", () => {
                 "Search for your course, or manually input your course."
             )
         );
+
         const addSemester = "Spring 2028";
         const testClass = CLASSES[3].courseCode;
         const enterButton = screen.getByText("Enter");
@@ -108,13 +108,10 @@ describe("Project Component tests", () => {
         expect(screen.queryByText(addSemester));
         expect(screen.queryByText("Course"));
         expect(screen.queryByText("Number of Credits"));
-        expect(screen.queryByText(testClass));
         expect(screen.queryByText("1"));
-        const deleteButton = screen.getByText("Delete Course");
-        const input = screen.getByTestId("courseCode");
-        input.setAttribute("value", testClass);
+        expect(screen.queryByText(testClass));
+        const deleteButton = screen.getByText("Clear All Classes in");
         deleteButton.click();
+        expect(screen.queryByText(" "));
     });
-    */
-    //Updated the test cases, need to fix last test case
 });
