@@ -13,9 +13,11 @@ import { classes } from "./Interface/classes";
 import { Plan } from "./Interface/Plan";
 import sample from "./data/Dummy.json";
 import { AddToSemester } from "./semester-modification/AddToSemester";
-import { ChosenMajor } from "./Audit/ChosenMajor";
+import { ChosenMajor, generalClasses } from "./Audit/ChosenMajor";
 import { PlanView } from "./PlanView/PlanView";
 import { DownloadPlan } from "./PlanView/DownloadPlan";
+import { SeeAuditPage } from "./Audit/SeeAuditPage";
+import { AddPlan } from "./addPlan/AddPlan";
 
 function App(): JSX.Element {
     const [page, setPage] = useState(false);
@@ -27,6 +29,8 @@ function App(): JSX.Element {
     const [displayPlan, setdisplayPlan] = useState(false);
     const [downloadPlan, setDownloadPlan] = useState(false);
     const [currentPlan, setCurrentPlan] = useState("");
+    const [majorPageView, setMajorPageView] = useState(false);
+    const [addPlanView, setAddPlanView] = useState(false);
 
     const getName = () => {
         setName(name);
@@ -35,7 +39,7 @@ function App(): JSX.Element {
         setPage(!page);
     };
     const flipView = () => {
-        setSeeSemesterView(!seeSemesterView);
+        setSeeSemesterView(true);
     };
 
     const flipModalView = () => {
@@ -57,6 +61,32 @@ function App(): JSX.Element {
     const flipDownload = () => {
         setDownloadPlan(!downloadPlan);
     };
+
+    const flipMajorPageView = () => {
+        setMajorPageView(!majorPageView);
+    };
+
+    const flipAddPlanView = () => {
+        setAddPlanView(!addPlanView);
+    };
+
+    //exported const from ChosenMajor.tsx
+    //Classes for each major
+    const [degreeRequirements, setDegreeRequirements] =
+        useState<string[]>(generalClasses);
+    //const [completedReq, setCompletedReq] = useState<string[]>([]);
+    const [usedClasses, setUsedClasses] = useState<classes[][]>([[]]);
+
+    function reqList(finalList: string[]) {
+        if (!degreeRequirements.every((req, IDX) => req === finalList[IDX])) {
+            setUsedClasses([[]]);
+        }
+        setDegreeRequirements(finalList);
+    }
+
+    function pushCurrList(classesUsed: classes[][]) {
+        setUsedClasses(classesUsed);
+    }
 
     const planExamples = sample.map(
         (plan): Plan => ({
@@ -119,6 +149,7 @@ function App(): JSX.Element {
                             {" "}
                             <SideNav2
                                 flipView={flipView}
+                                flipAddPlanView={flipAddPlanView}
                                 flipPlan={flipPlan}
                                 flipModalView={flipModalView}
                                 flipAudit={flipAudit}
@@ -147,6 +178,8 @@ function App(): JSX.Element {
                                 <ChosenMajor
                                     handleClose={flipAudit}
                                     show={seeAudit}
+                                    majorPageView={flipMajorPageView}
+                                    reqList={reqList}
                                 />
                             )}
                             {displayPlan && (
@@ -165,11 +198,28 @@ function App(): JSX.Element {
                                     allplans={plans}
                                 />
                             )}
+                            {addPlanView && (
+                                <AddPlan
+                                    handleClose={flipAddPlanView}
+                                    show={addPlanView}
+                                    allplans={plans}
+                                    setPlans={setPlans}
+                                />
+                            )}
                             <SwitchComponents
                                 seeSemesterView={seeSemesterView}
                                 semesterExamples={semesters}
                                 setSemesters={setSemesters}
                             ></SwitchComponents>
+
+                            <SeeAuditPage
+                                canView={majorPageView}
+                                reqList={degreeRequirements}
+                                plan={semesters}
+                                prevUsedClasses={usedClasses}
+                                pushCurrList={pushCurrList}
+                                stopView={flipMajorPageView}
+                            ></SeeAuditPage>
                         </Col>
                     </Row>
                 </div>
