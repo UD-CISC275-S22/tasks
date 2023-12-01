@@ -99,6 +99,7 @@ function App(): JSX.Element {
                     </div>
                 </Modal>
             </div>
+
             {/* Render CourseTable component */}
             <CourseTable data={data} />
             <p> List of Degree Plans: </p>
@@ -109,6 +110,7 @@ function App(): JSX.Element {
                     <th>Credits</th>
                 </tr>
             </table>
+
         </div>
     );
 }
