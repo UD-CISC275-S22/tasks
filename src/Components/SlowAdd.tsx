@@ -98,7 +98,7 @@ function SlowAdd(props: SlowAddProps): JSX.Element {
 
     return (
         <form>
-            <div>onSubmit={handleAddCourse}</div>
+            {/* <div>onSubmit={handleAddCourse}</div> */}
             <div className="form-group">
                 <h3>Full Form</h3>
                 <label htmlFor="title">Course Title: </label>

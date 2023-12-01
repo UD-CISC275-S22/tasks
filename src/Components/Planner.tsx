@@ -15,7 +15,7 @@ import { Button, Row, Col, Form /*Button*/ } from "react-bootstrap";
 import { semester } from "../interfaces/semster";
 
 //-------------------------------------------------------------------------edit
-export function SingleMultipleSemester({
+export function Planner({
     CurrentdegreePlan,
     setCurrentView,
     setCurrentDegreePlan,
@@ -65,7 +65,7 @@ export function SingleMultipleSemester({
     //----------------------------------------------------EDIT
 
     //const [degreePlan, setDegreePlan] = useState<degreePlan>();
-    function addRowPerClass(semClasses: Class[], semsArr: semester[]) {
+    function addRowPerClass(semClasses: Class[]) {
         const tableCell = semClasses.map(
             // eslint-disable-next-line no-extra-parens
             (course: Class): JSX.Element => (
@@ -79,7 +79,7 @@ export function SingleMultipleSemester({
                     <Col>
                         <Button
                             onClick={() =>
-                                removeSemester(course.courseCode, semsArr)
+                                removeClass(course.courseCode, semArr)
                             }
                         >
                             Remove
@@ -92,7 +92,7 @@ export function SingleMultipleSemester({
     }
     function addClasstoTable(semesters: semester[]) {
         const finalTable = semesters.map((sem: semester): JSX.Element[] =>
-            addRowPerClass(sem.classes, semArr)
+            addRowPerClass(sem.classes)
         );
         return finalTable;
     }
@@ -112,17 +112,21 @@ export function SingleMultipleSemester({
                             <Col>Remove Course</Col>
                         </Row>
                         {addClasstoTable([semester])}
-                        <Button onClick={() => clearAllClassesButton(semester)}>
+                        <Button onClick={() => clearAllClasses(semester)}>
                             Clear All Classes in {semester.name}
+                        </Button>
+                        <br></br>
+                        <Button
+                            onClick={() => removeSemester(semester, semArr)}
+                        >
+                            Remove {semester.name}
                         </Button>
                     </Col>
                 </div>
             </div>
         );
     }
-    function removeSemester(courseCode: string, semsArr: semester[]) {
-        //Nest a map; first find the name that matches then find the class that matches
-        //I will need to find the index first and then splice when the class matches
+    function removeClass(courseCode: string, semsArr: semester[]) {
         const removedClassArr = semsArr.map((sem: semester): semester => {
             return {
                 name: sem.name,
@@ -201,7 +205,7 @@ export function SingleMultipleSemester({
         semester.classes = [];
         return semester;
     }
-    function clearAllClassesButton(sem: semester) {
+    function clearAllClasses(sem: semester) {
         //Im thinking make a button to clear semesters and then add that to the add table function
         //when clicked update it so classes is an empty array or if that doesn't work create a new semester
         // Make a deep copy, check for the name, and then change it from there
@@ -251,6 +255,12 @@ export function SingleMultipleSemester({
     function updateSemester1(event: React.ChangeEvent<HTMLInputElement>) {
         setSemester1(event.target.value);
     }
+    function removeSemester(sem0: semester, semsArr: semester[]) {
+        const removedClassArr = semsArr.filter(
+            (sem: semester): boolean => sem.name !== sem0.name
+        );
+        setSemArr(removedClassArr);
+    }
     return (
         <div>
             {addCourse()}
@@ -292,7 +302,6 @@ export function SingleMultipleSemester({
                 <Button onClick={clear}> Clear Existing Semesters </Button>
                 <Button onClick={goBackClick}>Go Back to Degree Plans</Button>
             </div>
-            {/* <div>{RemoveSemester()}</div> */}
         </div>
     );
 }

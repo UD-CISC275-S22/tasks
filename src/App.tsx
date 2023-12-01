@@ -1,7 +1,7 @@
 /* eslint-disable no-extra-parens */
 import React, { useState } from "react";
 import "./App.css";
-import { SingleMultipleSemester } from "./Components/SingleMultipleSemester";
+import { Planner } from "./Components/Planner";
 import { degreePlan } from "./interfaces/degreePlan";
 import { Views } from "./interfaces/viewProps";
 import { DegreePlanView } from "./Components/DegreePlanView";
@@ -61,13 +61,13 @@ function App(): JSX.Element {
                 // singleMutipleSemester needs to get pass the current degreePlan in order to know which degreePlan to display
                 //try to come up with a save.
                 //<SingleMultipleSemester></SingleMultipleSemester>
-                <SingleMultipleSemester
+                <Planner
                     setCurrentView={setView}
                     CurrentdegreePlan={currDegreePlan}
                     setCurrentDegreePlan={setcurrDegreePlan}
                     setDegreePlanList={setDegreePlanList}
                     DegreePlanList={degreePlanList}
-                ></SingleMultipleSemester>
+                ></Planner>
             )}
         </div>
     );
