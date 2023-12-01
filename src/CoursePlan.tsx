@@ -69,7 +69,6 @@ const CourseTable: React.FC<CourseTableProps> = ({ data }) => {
 };
 
 export default CourseTable;
-
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function DisplayCourse({
     defaultCourse,
