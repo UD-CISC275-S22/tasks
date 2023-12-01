@@ -1,6 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
-import { Button } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
+import { Dropdown } from "react-bootstrap";
+import { Semester } from "../Interfaces/semester";
+import { blankCourse } from "./plan";
 
 export interface valueProps {
     //function below acts like the display both function except it returns either a DisplayFall or DisplaySpring component
@@ -41,6 +44,16 @@ export function DisplayPlan({
     const fifthYearFall = indivPlanSem(5, "Fall", 17);
     const fifthYearWinter = indivPlanSem(5, "Winter", 18);
     const fifthYearSpring = indivPlanSem(5, "Spring", 19);
+
+    //for toggling which semesters they want to see
+    const blankSem: Semester = {
+        type: [""],
+        year: {} as number,
+        totalCredits: {} as number,
+        courseList: [blankCourse]
+    };
+
+    const [selectedYear1, setSelectedYear1] = useState<string[]>([""]);
 
     return (
         <div>
