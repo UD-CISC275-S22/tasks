@@ -28,7 +28,6 @@ export function AddCourseModal({
             console.error("Invalid semester selected");
             return;
         }
-
         const newCourse = { ticker, name, credits, prereq };
         addCourse(newCourse, semester);
         handleClose();

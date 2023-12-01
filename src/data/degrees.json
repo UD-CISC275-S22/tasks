@@ -1,29 +1,27 @@
-{
-    "degrees": [
-        {
-            "degreeName": "Bachelor of Science in Computer Science",
-            "coreCourses": [
-                "CISC108",
-                "CISC181",
-                "CISC210",
-                "CISC220",
-                "CISC275",
-                "EGGG101",
-                "ENGL110",
-                "MATH241"
-            ],
-            "electives": {
-                "requiredNumber": 3,
-                "courseOptions": ["CISC355", "CISC367", "MATH242"]
-            },
-            "generalRequirements": ["EGGG101", "ENGL110", "MATH241"],
-            "prerequisites": {
-                "CISC181": ["CISC108"],
-                "CISC210": ["CISC108"],
-                "CISC220": ["CISC210"],
-                "CISC275": ["CISC181", "CISC220"],
-                "MATH242": ["MATH241"]
-            }
+[
+    {
+        "degreeName": "Bachelor of Science in Computer Science",
+        "coreCourses": [
+            "CISC 108",
+            "CISC 181",
+            "CISC 210",
+            "CISC 220",
+            "CISC 275",
+            "EGGG 101",
+            "ENGL 110",
+            "MATH 241"
+        ],
+        "electives": {
+            "requiredNumber": 3,
+            "courseOptions": ["CISC 355", "CISC 367", "MATH 242"]
+        },
+        "generalRequirements": ["EGGG 101", "ENGL 110", "MATH 241"],
+        "prerequisites": {
+            "CISC181": ["CISC 108"],
+            "CISC210": ["CISC 108"],
+            "CISC220": ["CISC 210"],
+            "CISC275": ["CISC 181", "CISC 220"],
+            "MATH242": ["MATH 241"]
         }
-    ]
-}
+    }
+]

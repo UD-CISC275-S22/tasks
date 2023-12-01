@@ -1,12 +1,11 @@
 import { Course } from "./course";
 export type seasonT = "winter" | "spring" | "summer" | "fall";
 export interface SemesterI {
-    season: seasonT;
+    season: string;
     name: string;
     year: string;
     courses: Course[];
 }
-
 export interface yearI {
     name: string;
     winter: null | SemesterI;
