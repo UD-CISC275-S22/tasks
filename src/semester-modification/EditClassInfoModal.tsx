@@ -98,7 +98,6 @@ export function EditClassInfoModal({
             totalCredits: totalCredits
         };
         updateSemester(updatedSemester);
-        //console.log(classToEdit.originalCode);
         flipModalView();
     }
 
