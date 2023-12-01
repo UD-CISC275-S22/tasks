@@ -8,12 +8,14 @@ export function ClearSemester({
     show,
     handleClose,
     currentSemester,
+    editingSemester,
     plan,
     settingPlan
 }: {
     show: boolean;
     handleClose: () => void;
     currentSemester: Semester;
+    editingSemester: (plan: Plan) => void;
     plan: Plan;
     settingPlan: (t: Plan) => void;
 }) {
@@ -30,6 +32,7 @@ export function ClearSemester({
             )
         };
         settingPlan(newPlan);
+        editingSemester(newPlan);
         handleClose();
     }
     return (
@@ -41,8 +44,18 @@ export function ClearSemester({
                 <p>You are deleting this current semester, do you confirm?</p>
             </Modal.Body>
             <Modal.Footer>
-                <Button onClick={handleClose}> Cancel </Button>
-                <Button onClick={saveEdits}> Clear </Button>
+                <Button
+                    onClick={handleClose}
+                    data-testid="clearSemesterCancelMod"
+                >
+                    Cancel
+                </Button>
+                <Button
+                    onClick={saveEdits}
+                    data-testid="clearSemesterDeleteMod"
+                >
+                    Clear
+                </Button>
             </Modal.Footer>
         </Modal>
     );
