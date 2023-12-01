@@ -54,6 +54,10 @@ export function DisplayPlan({
     };
 
     const [selectedYear1, setSelectedYear1] = useState<string[]>([""]);
+    const [selectedYear2, setSelectedYear2] = useState<string[]>([""]);
+    const [selectedYear3, setSelectedYear3] = useState<string[]>([""]);
+    const [selectedYear4, setSelectedYear4] = useState<string[]>([""]);
+    const [selectedYear5, setSelectedYear5] = useState<string[]>([""]);
 
     const toggleYear1 = (option: string, index: number) => {
         if (selectedYear1.includes(option)) {
@@ -63,12 +67,36 @@ export function DisplayPlan({
         }
     };
 
+    const toggleYear2 = (option: string, index: number) => {
+        if (selectedYear2.includes(option)) {
+            setSelectedYear2(selectedYear2.filter((item) => item !== option));
+        } else {
+            setSelectedYear2([...selectedYear2, option]);
+        }
+    };
+
+    const toggleYear3 = (option: string, index: number) => {
+        if (selectedYear3.includes(option)) {
+            setSelectedYear3(selectedYear3.filter((item) => item !== option));
+        } else {
+            setSelectedYear3([...selectedYear3, option]);
+        }
+    };
+
+    const toggleYear4 = (option: string, index: number) => {
+        if (selectedYear4.includes(option)) {
+            setSelectedYear4(selectedYear4.filter((item) => item !== option));
+        } else {
+            setSelectedYear4([...selectedYear4, option]);
+        }
+    };
+
     const year = ["Fall", "Winter", "Spring", "Summer"];
 
     return (
         <div>
             <Dropdown>
-                <Dropdown.Toggle id="dropdown1">Select Options</Dropdown.Toggle>
+                <Dropdown.Toggle id="dropdown1">View Semester:</Dropdown.Toggle>
                 <Dropdown.Menu>
                     {year.map((option, index) => (
                         <Dropdown.Item
@@ -83,33 +111,69 @@ export function DisplayPlan({
             </Dropdown>
             <div className="Semester">
                 {selectedYear1.includes("Fall") && firstYearFall}
-                {firstYearWinter}
-                {firstYearSpring}
-                {firstYearSummer}
+                {selectedYear1.includes("Winter") && firstYearWinter}
+                {selectedYear1.includes("Spring") && firstYearSpring}
+                {selectedYear1.includes("Summer") && firstYearSummer}
             </div>
-            <Button onClick={changeSemCount}>Show One Semester</Button>
-            <Button onClick={changeSemester}>Show Different Semester</Button>
+            <Dropdown>
+                <Dropdown.Toggle id="dropdown2">View Semester:</Dropdown.Toggle>
+                <Dropdown.Menu>
+                    {year.map((option, index) => (
+                        <Dropdown.Item
+                            key={index}
+                            onClick={() => toggleYear2(option, index)}
+                            active={selectedYear2.includes(option)}
+                        >
+                            {option}
+                        </Dropdown.Item>
+                    ))}
+                </Dropdown.Menu>
+            </Dropdown>
             <div className="Semester">
-                {secondYearFall}
-                {secondYearWinter}
-                {secondYearSpring}
-                {secondYearSummer}
+                {selectedYear2.includes("Fall") && secondYearFall}
+                {selectedYear2.includes("Winter") && secondYearWinter}
+                {selectedYear2.includes("Spring") && secondYearSpring}
+                {selectedYear2.includes("Summer") && secondYearSummer}
             </div>
-            <Button onClick={changeSemCount}>Show One Semester</Button>
-            <Button onClick={changeSemester}>Show Different Semester</Button>
+            <Dropdown>
+                <Dropdown.Toggle id="dropdown3">View Semester:</Dropdown.Toggle>
+                <Dropdown.Menu>
+                    {year.map((option, index) => (
+                        <Dropdown.Item
+                            key={index}
+                            onClick={() => toggleYear3(option, index)}
+                            active={selectedYear3.includes(option)}
+                        >
+                            {option}
+                        </Dropdown.Item>
+                    ))}
+                </Dropdown.Menu>
+            </Dropdown>
             <div className="Semester">
-                {thirdYearFall}
-                {thirdYearWinter}
-                {thirdYearSpring}
-                {thirdYearSummer}
+                {selectedYear3.includes("Fall") && thirdYearFall}
+                {selectedYear3.includes("Winter") && thirdYearWinter}
+                {selectedYear3.includes("Spring") && thirdYearSpring}
+                {selectedYear3.includes("Summer") && thirdYearSummer}
             </div>
-            <Button onClick={changeSemCount}>Show One Semester</Button>
-            <Button onClick={changeSemester}>Show Different Semester</Button>
+            <Dropdown>
+                <Dropdown.Toggle id="dropdown4">View Semester:</Dropdown.Toggle>
+                <Dropdown.Menu>
+                    {year.map((option, index) => (
+                        <Dropdown.Item
+                            key={index}
+                            onClick={() => toggleYear4(option, index)}
+                            active={selectedYear4.includes(option)}
+                        >
+                            {option}
+                        </Dropdown.Item>
+                    ))}
+                </Dropdown.Menu>
+            </Dropdown>
             <div className="Semester">
-                {fourthYearFall}
-                {fourthYearWinter}
-                {fourthYearSpring}
-                {fourthYearWinter}
+                {selectedYear4.includes("Fall") && fourthYearFall}
+                {selectedYear4.includes("Winter") && fourthYearWinter}
+                {selectedYear4.includes("Spring") && fourthYearSpring}
+                {selectedYear4.includes("Summer") && fourthYearSummer}
             </div>
         </div>
     );
