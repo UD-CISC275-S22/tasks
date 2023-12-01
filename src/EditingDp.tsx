@@ -345,3 +345,4 @@ export function EditingDp({
 // - I have a bug where when I edit and delete a course, if i stay on the page and repress the edit button the modal
 //  will still show the course i deleted but when i repress the edit button it fixes itself
 // i may need to also add a defualt to the saveChanges function to update the modal when presses
+// solution: fixed it and it was happening because the handleCloseModal and saveChanges were colliding
