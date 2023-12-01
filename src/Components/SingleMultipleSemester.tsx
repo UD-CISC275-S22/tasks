@@ -65,7 +65,7 @@ export function SingleMultipleSemester({
     //----------------------------------------------------EDIT
 
     //const [degreePlan, setDegreePlan] = useState<degreePlan>();
-    function addRowPerClass(semClasses: Class[]) {
+    function addRowPerClass(semClasses: Class[], semsArr: semester[]) {
         const tableCell = semClasses.map(
             // eslint-disable-next-line no-extra-parens
             (course: Class): JSX.Element => (
@@ -77,7 +77,13 @@ export function SingleMultipleSemester({
                     </Col>
                     <Col>{course.credits}</Col>
                     <Col>
-                        <Button>Remove</Button>
+                        <Button
+                            onClick={() =>
+                                removeSemester(course.courseCode, semsArr)
+                            }
+                        >
+                            Remove
+                        </Button>
                     </Col>
                 </Row>
             )
@@ -86,7 +92,7 @@ export function SingleMultipleSemester({
     }
     function addClasstoTable(semesters: semester[]) {
         const finalTable = semesters.map((sem: semester): JSX.Element[] =>
-            addRowPerClass(sem.classes)
+            addRowPerClass(sem.classes, semArr)
         );
         return finalTable;
     }
@@ -114,10 +120,22 @@ export function SingleMultipleSemester({
             </div>
         );
     }
-    // function removeSemester(course: Class) {
-    //     //Nest a map; first find the name that matches then find the class that matches
-    //     //I will need to find the index first and then splice when the class matches
-    // }
+    function removeSemester(courseCode: string, semsArr: semester[]) {
+        //Nest a map; first find the name that matches then find the class that matches
+        //I will need to find the index first and then splice when the class matches
+        const removedClassArr = semsArr.map((sem: semester): semester => {
+            return {
+                name: sem.name,
+                classes: [
+                    ...sem.classes.filter(
+                        (course: Class): boolean =>
+                            course.courseCode !== courseCode
+                    )
+                ]
+            };
+        });
+        setSemArr(removedClassArr);
+    }
     function createSemester(name: string, classes: Class[]) {
         return { name: name, classes: classes };
     }
