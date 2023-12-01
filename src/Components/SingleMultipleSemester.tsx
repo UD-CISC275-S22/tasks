@@ -114,10 +114,10 @@ export function SingleMultipleSemester({
             </div>
         );
     }
-    function removeSemester(course: Class) {
-        //Nest a map; first find the name that matches then find the class that matches
-        //I will need to find the index first and then splice when the class matches
-    }
+    // function removeSemester(course: Class) {
+    //     //Nest a map; first find the name that matches then find the class that matches
+    //     //I will need to find the index first and then splice when the class matches
+    // }
     function createSemester(name: string, classes: Class[]) {
         return { name: name, classes: classes };
     }

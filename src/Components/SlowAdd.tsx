@@ -146,31 +146,6 @@ function SlowAdd(props: SlowAddProps): JSX.Element {
                     defaultValue={0}
                 />
             </div>
-            {/* <button type="submit">Show Course Information</button> */}
-            {/* <div className="form-group">
-                <label htmlFor="semester">Semester:</label>
-                <input
-                    id="semester"
-                    name="semester"
-                    value={semester}
-                    onChange={handleSemesterChange}
-                >
-                    <option value="Fall">Fall</option>
-                    <option value="Winter">Winter</option>
-                    <option value="Spring">Spring</option>
-                    <option value="Summer">Summer</option>
-                </input>
-            </div> */}
-
-            {/* <div className="form-group">
-                <label htmlFor="year">Year:</label>
-                <input
-                    id="year"
-                    name="year"
-                    value={year}
-                    onChange={handleYearChange}
-                />
-            </div> */}
             <div>
                 <div>
                     <label htmlFor="semester">Semester: </label>
