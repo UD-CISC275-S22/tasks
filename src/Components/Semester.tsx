@@ -1,10 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 //for visualization of semesters and altering the courses within them
 
-//css files
-import "./Semester.css";
-import "../App.css";
-//react and bootstrap
 import React, { useState } from "react";
 import { Button, Dropdown, Form } from "react-bootstrap";
 //our own interfaces
