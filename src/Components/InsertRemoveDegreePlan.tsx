@@ -3,35 +3,63 @@ import { Button } from "react-bootstrap";
 import { degreePlan, degreePlanProps } from "../interfaces/degreePlan";
 import { Views } from "../interfaces/viewProps";
 
-export function InsertRemoveDegreePlan({
-    prevDegreePlans,
-    CurrentdegreePlan
-}: {
-    prevDegreePlans: degreePlan[];
-    CurrentdegreePlan: degreePlan;
-    setDegreePlanList: (degreePlan: degreePlan[]) => void;
-    degreePlanList: degreePlan[];
-}): JSX.Element {
+export function InsertRemoveDegreePlan(): JSX.Element {
     const prevDegreePlan: degreePlan[] = [];
     //------------------------------------------------------------------------------------
     // Function to insert a new degree plan, creating an array
     // Function to remove  a new degree plan, removing an array
 
-    function insertDegreePlan() {
-        const updatedDegreePlans = [...prevDegreePlans, CurrentdegreePlan];
+    function insertDegreePlan(
+        prevDegreePlans: degreePlan[],
+        newPlan: degreePlan
+    ): degreePlan[] {
+        const updatedDegreePlans = [...prevDegreePlans, newPlan];
         return updatedDegreePlans;
     }
-
-    function removeDegreePlan() {
+    function removeDegreePlan(
+        prevDegreePlans: degreePlan[],
+        removePlan: degreePlan
+    ): degreePlan[] {
         const updatedDegreePlans = prevDegreePlans.filter(
             (degreePlan: degreePlan): boolean =>
-                degreePlan.name !== CurrentdegreePlan.name
+                degreePlan.name !== removePlan.name
         );
         return updatedDegreePlans;
     }
+
     //-------------------------------------------------------------------------------------
     const [degreePlanList, setDegreePlanList] =
         useState<degreePlan[]>(prevDegreePlan);
 
-    return <div> type here later</div>;
+    return (
+        <div>
+            <Button
+                onClick={() =>
+                    setDegreePlanList(
+                        insertDegreePlan(degreePlanList, {
+                            name: `Plan ${degreePlanList.length + 1}`,
+                            semesters: []
+                        })
+                    )
+                }
+            >
+                Create New Degree Plan
+            </Button>
+            <ul>
+                {degreePlanList.map((plan) => (
+                    <li key={plan.name}>
+                        <Button
+                            onClick={() =>
+                                setDegreePlanList((prevDegreePlans) =>
+                                    removeDegreePlan(prevDegreePlans, plan)
+                                )
+                            }
+                        >
+                            Remove
+                        </Button>
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
 }

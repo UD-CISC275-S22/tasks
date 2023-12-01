@@ -66,7 +66,7 @@ function App(): JSX.Element {
             </button>
             {/* remove a plan */}
             {degreePlanList.map((plan, index) => (
-                <div key={index}>
+                <li key={index}>
                     {plan.name}
                     <button
                         onClick={() =>
@@ -77,8 +77,8 @@ function App(): JSX.Element {
                     >
                         Remove
                     </button>
-                </div>
-            )}
+                </li>
+            ))}
             {/* end of button to add/remove a new degree Plan */}
             {view === Views.degreePlanView && (
                 <DegreePlanView
