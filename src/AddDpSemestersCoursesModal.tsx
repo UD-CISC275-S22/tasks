@@ -6,6 +6,7 @@ import { DegreePlan } from "./interfaces/degreeplan";
 import { Button, Form, Modal } from "react-bootstrap";
 import { Course } from "./interfaces/course";
 import { Semester } from "./interfaces/semester";
+import { courseList } from "./courseList";
 
 export function AddDpSemestersCoursesModal({
     show,
@@ -19,10 +20,9 @@ export function AddDpSemestersCoursesModal({
     const [semesters, setSemesters] = useState<Semester[]>([]);
     const [selectedSemester, setSelectedSemester] = useState<string>("Fall");
     const [title, setTitle] = useState<string>("Example Title");
-    const [selectedSemesterId, setSelectedSemesterId] = useState<number | null>(
-        null
-    );
+    const [selectedSemesterId, setSelectedSemesterId] = useState<number | null>(null);
 
+    const [selectedCourseCode, setSelectedCourseCode] = useState<string>("");
     const [newCourse, setNewCourse] = useState<Course>({
         title: "",
         courseCode: "",
@@ -32,9 +32,10 @@ export function AddDpSemestersCoursesModal({
         courseCoreq: [],
         courseDescription: ""
     });
+
     const handleSelectSemester = (semesterId: number) => {
         setSelectedSemesterId(semesterId);
-        // Reset the course input fields when selecting a new semester
+        setSelectedCourseCode(""); // Reset the selected course code
         setNewCourse({
             courseCode: "",
             title: "",
@@ -61,42 +62,31 @@ export function AddDpSemestersCoursesModal({
             (semester: Semester): Semester =>
                 semester.id === semesterId
                     ? {
-                          ...semester,
-                          totalCredits: semester.totalCredits + credits
-                      }
+                        ...semester,
+                        totalCredits: semester.totalCredits + credits
+                    }
                     : { ...semester }
         );
         setSemesters(modifiedSemester);
     }
 
     const addCourse = (semesterId: number) => {
-        if (
-            selectedSemesterId !== null &&
-            newCourse.courseCode &&
-            newCourse.title &&
-            newCourse.credits > 0
-        ) {
-            updateSemesterCredits(semesterId, newCourse.credits);
-            setSemesters((prevSemesters) =>
-                prevSemesters.map((semester) =>
-                    semester.id === semesterId
-                        ? {
-                              ...semester,
-                              // eslint-disable-next-line indent
-                              courses: [...semester.courses, newCourse]
-                          }
-                        : semester
-                )
-            );
-            setNewCourse({
-                courseCode: "",
-                title: "",
-                credits: 0,
-                degreeRequirements: [],
-                coursePrereq: [],
-                courseCoreq: [],
-                courseDescription: ""
-            });
+        if (selectedSemesterId !== null && selectedCourseCode) {
+            const selectedCourse = courseList.find(course => course.courseCode === selectedCourseCode);
+            if (selectedCourse) {
+                updateSemesterCredits(semesterId, selectedCourse.credits);
+                setSemesters((prevSemesters) =>
+                    prevSemesters.map((semester) =>
+                        semester.id === semesterId
+                            ? {
+                                ...semester,
+                                courses: [...semester.courses, selectedCourse]
+                            }
+                            : semester
+                    )
+                );
+                setSelectedCourseCode(""); // Reset the selected course code
+            }
         }
     };
 
@@ -117,15 +107,16 @@ export function AddDpSemestersCoursesModal({
             prevSemesters.map((semester) =>
                 semester.id === semesterId
                     ? {
-                          ...semester,
-                          courses: semester.courses.filter(
-                              (_, index) => index !== courseIndex
-                          )
-                      }
+                        ...semester,
+                        courses: semester.courses.filter(
+                            (_, index) => index !== courseIndex
+                        )
+                    }
                     : semester
             )
         );
     };
+
     function totDpSemesterCredits(): number {
         const totSemestersCredits: number = semesters.reduce(
             (currentTot: number, semester: Semester) =>
@@ -142,6 +133,7 @@ export function AddDpSemestersCoursesModal({
         setSelectedSemester("Fall");
         setSelectedSemesterId(null);
         setSemesters([]);
+        setSelectedCourseCode(""); // Reset the selected course code
         setNewCourse({
             title: "",
             courseCode: "",
@@ -153,6 +145,7 @@ export function AddDpSemestersCoursesModal({
         });
         handleClose();
     };
+
     const saveChanges = () => {
         const newDp: DegreePlan = {
             title: title,
@@ -182,7 +175,7 @@ export function AddDpSemestersCoursesModal({
                         <h5>Add Semesters and Courses</h5>
                         <div>
                             <select
-                                defaultValue={"Fall"} //changed from value={selectedSemester} to defaultValue={"Fall"}
+                                defaultValue={"Fall"}
                                 onChange={(e) =>
                                     setSelectedSemester(e.target.value)
                                 }
@@ -249,40 +242,26 @@ export function AddDpSemestersCoursesModal({
                                     </button>
                                     {selectedSemesterId === semester.id && (
                                         <div>
-                                            <input
-                                                type="text"
-                                                value={newCourse.courseCode}
+                                            <select
+                                                value={selectedCourseCode}
                                                 onChange={(e) =>
-                                                    setNewCourse({
-                                                        ...newCourse,
-                                                        courseCode:
-                                                            e.target.value
-                                                    })
+                                                    setSelectedCourseCode(
+                                                        e.target.value
+                                                    )
                                                 }
-                                                placeholder="Course Code"
-                                            />
-                                            <input
-                                                type="text"
-                                                value={newCourse.title}
-                                                onChange={(e) =>
-                                                    setNewCourse({
-                                                        ...newCourse,
-                                                        title: e.target.value
-                                                    })
-                                                }
-                                                placeholder="Course Title"
-                                            />
-                                            <input
-                                                type="number"
-                                                value={newCourse.credits}
-                                                onChange={(e) =>
-                                                    setNewCourse({
-                                                        ...newCourse,
-                                                        credits: +e.target.value
-                                                    })
-                                                }
-                                                placeholder="Credits"
-                                            />
+                                            >
+                                                <option value="">
+                                                    Select a course
+                                                </option>
+                                                {courseList.map((course) => (
+                                                    <option
+                                                        key={course.courseCode}
+                                                        value={course.courseCode}
+                                                    >
+                                                        {course.title}
+                                                    </option>
+                                                ))}
+                                            </select>
                                             <button
                                                 onClick={() =>
                                                     addCourse(semester.id)
@@ -309,3 +288,4 @@ export function AddDpSemestersCoursesModal({
         </Modal>
     );
 }
+
