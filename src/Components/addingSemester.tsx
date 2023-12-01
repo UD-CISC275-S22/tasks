@@ -26,7 +26,7 @@ export function AddingSemester({
                 id: 0,
                 title: session,
                 year: year,
-                description: "",
+                notes: "",
                 courseList: [] as Course[]
             });
         } else {
@@ -34,7 +34,7 @@ export function AddingSemester({
                 id: 0,
                 title: session,
                 year: year,
-                description: "",
+                notes: "",
                 courseList: [] as Course[]
             });
         }
@@ -87,8 +87,12 @@ export function AddingSemester({
                 </Form.Group>
             </Modal.Body>
             <Modal.Footer>
-                <Button onClick={handleClose}> Close </Button>
-                <Button onClick={saveEdits}> Save </Button>
+                <Button onClick={handleClose} data-testid="addSemesterCloseMod">
+                    Close
+                </Button>
+                <Button onClick={saveEdits} data-testid="addSemesterSaveMod">
+                    Save
+                </Button>
             </Modal.Footer>
         </Modal>
     );
