@@ -5,6 +5,7 @@ import { SingleMultipleSemester } from "./Components/SingleMultipleSemester";
 import { degreePlan } from "./interfaces/degreePlan";
 import { Views } from "./interfaces/viewProps";
 import { DegreePlanView } from "./Components/DegreePlanView";
+import logo from "../src/logo.png";
 
 // import SlowAdd from "./Components/SlowAdd";
 // import QuickAdd from "./Components/QuickAdd";
@@ -37,7 +38,7 @@ function App(): JSX.Element {
     return (
         <div className="App">
             <header className="App-header">
-                UD CISC275 with React Hooks and TypeScript
+                <img src={logo} width="100" alt="BH" /> CS Degree Planner
             </header>
             {/* a button to create a new degreePlan */}
             <button

@@ -15,15 +15,18 @@
 
 .App-header {
     width: 100%;
-    background-color: #282c34;
+    background-color: #1348e7;
     min-height: 40vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: calc(30px + 2vmin);
+    color: #f2df11;
 }
+
+
 
 .App-link {
     color: #61dafb;
