@@ -1,6 +1,6 @@
 /* eslint-disable no-extra-parens */
 import React from "react";
-import { Course } from "./Planner";
+import { Course } from "./interfaces/Course";
 
 interface CourseListProps {
     courses: Course[];
@@ -33,9 +33,5 @@ const CourseList: React.FC<CourseListProps> = ({
         </div>
     );
 };
-
-// <button onClick={() => onCourseSelected(course)}>
-//     Add Course
-// </button>
 
 export default CourseList;

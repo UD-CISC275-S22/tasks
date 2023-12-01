@@ -30,3 +30,9 @@ tr:nth-child(even) {
 tr:hover {
     background-color: #e0e0e0;
 }
+
+.course-list-container {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+}
