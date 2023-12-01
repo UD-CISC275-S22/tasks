@@ -300,30 +300,30 @@ export function AddingPlan({
     show,
     handleClose,
     plans,
-    settingPlans,
-    settingPlan
+    settingPlan,
+    settingPlans
 }: {
     show: boolean;
     handleClose: () => void;
     plans: Plan[];
-    settingPlans: (t: Plan[]) => void;
     settingPlan: (t: Plan) => void;
+    settingPlans: (t: Plan[]) => void;
 }) {
     const [planTitle, setTitle] = useState<string>("");
 
     function saveEdits() {
         const newPlan: Plan = {
+            id: plans.length + 1,
             title: planTitle,
             concentration: "",
-            id: plans.length + 1,
             semesters: [] as Semester[],
             credits: 0
         };
         plans.push(newPlan);
-        settingPlans(plans);
-        setTitle("");
-        handleClose;
         settingPlan(newPlan);
+        setTitle(" ");
+        settingPlans(plans);
+        handleClose;
     }
 
     return (
@@ -335,7 +335,7 @@ export function AddingPlan({
                 <Form.Group
                     controlId="courseID"
                     as={Row}
-                    data-testid="settingTitleBox"
+                    data-testid="TitleBoxAP"
                 >
                     <Form.Label column sm={3}>
                         Plan Title:
@@ -354,14 +354,14 @@ export function AddingPlan({
                 <Button
                     variant="secondary"
                     onClick={handleClose}
-                    data-testid="closeButton"
+                    data-testid="closeButtonAP"
                 >
                     Close
                 </Button>
                 <Button
                     variant="success"
                     onClick={saveEdits}
-                    data-testid="saveButton"
+                    data-testid="saveButtonAP"
                 >
                     Save
                 </Button>
