@@ -15,7 +15,7 @@ import { Button, Row, Col, Form /*Button*/ } from "react-bootstrap";
 import { semester } from "../interfaces/semster";
 
 //-------------------------------------------------------------------------edit
-export function SingleMultipleSemester({
+export function Planner({
     CurrentdegreePlan,
     setCurrentView,
     setCurrentDegreePlan,
