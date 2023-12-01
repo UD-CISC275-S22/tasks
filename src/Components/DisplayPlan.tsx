@@ -56,19 +56,25 @@ export function DisplayPlan({
             <Button onClick={changeSemester}>Show Different Semester</Button>
             <div className="Semester">
                 {secondYearFall}
+                {secondYearWinter}
                 {secondYearSpring}
+                {secondYearSummer}
             </div>
             <Button onClick={changeSemCount}>Show One Semester</Button>
             <Button onClick={changeSemester}>Show Different Semester</Button>
             <div className="Semester">
                 {thirdYearFall}
+                {thirdYearWinter}
                 {thirdYearSpring}
+                {thirdYearSummer}
             </div>
             <Button onClick={changeSemCount}>Show One Semester</Button>
             <Button onClick={changeSemester}>Show Different Semester</Button>
             <div className="Semester">
                 {fourthYearFall}
+                {fourthYearWinter}
                 {fourthYearSpring}
+                {fourthYearWinter}
             </div>
         </div>
     );
