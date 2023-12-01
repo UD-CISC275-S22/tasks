@@ -9,15 +9,9 @@ export interface valueProps {
     //function below acts like the display both function except it returns either a DisplayFall or DisplaySpring component
     //it only returns one or the other to avoid rendering confusion of the site. The id parameter is for the key for the component (just an identifier)
     indivPlanSem(year: number, sem: string, id: number): JSX.Element;
-    changeSemCount(): void;
-    changeSemester(): void;
 }
 
-export function DisplayPlan({
-    indivPlanSem,
-    changeSemCount,
-    changeSemester
-}: valueProps): JSX.Element {
+export function DisplayPlan({ indivPlanSem }: valueProps): JSX.Element {
     //makes individual components of DisplayFall and DisplaySpring for each year
     //first number is the year, second is the type and the third is the key value for the component
     const firstYearFall = indivPlanSem(1, "Fall", 1);

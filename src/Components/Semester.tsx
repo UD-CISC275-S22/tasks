@@ -6,7 +6,7 @@ import "./Semester.css";
 import "../App.css";
 //react and bootstrap
 import React, { useState } from "react";
-import { Button, Form } from "react-bootstrap";
+import { Button, Dropdown, Form } from "react-bootstrap";
 //our own interfaces
 import { Course } from "../Interfaces/course";
 import { Semester } from "../Interfaces/semester";
@@ -14,6 +14,7 @@ import { Plan } from "../Interfaces/plan";
 //individual constants
 import { courseList, defaultCourseList } from "./course";
 import { AI } from "./AI_Plan";
+import { Cyber } from "./Cyber_Plan";
 //modals
 import { DisplayFall } from "./DisplayFall";
 import { DisplayWinter } from "./DisplayWinter";
@@ -38,11 +39,15 @@ import { DropAdd } from "./dropAdd";
 
 // const COURSE_LIST = courseList; //list of all the courses
 const AI_Plan = AI(); //the actual AI plan itself
+const CYBER_Plan = Cyber();
 const AI_Semesters = AI_Plan.semesters; //the semesters for the AI plan
+const CYBER_Semesters = CYBER_Plan.semesters;
+
 const DEFAULT_COURSE = AI_Semesters[0].courseList[0].title;
 
 export function ViewSemester(): JSX.Element {
     const [plan, setPlan] = useState<Plan>(AI_Plan); //The default plan (for now)
+    const [seePlan, setSeePlan] = useState<boolean>(false); //default is you cant see any plan (until a user selects one)
     const [semesters, setSemesters] = useState<Semester[]>(AI_Semesters); //the default semesters (for now)
     const [currCourse, setCurrCourse] = useState<string>(DEFAULT_COURSE);
     const [SemesterType, setSemesterType] = useState<string>("Fall"); //can be "Fall", "Spring" or "Both"
@@ -317,17 +322,44 @@ export function ViewSemester(): JSX.Element {
         handleEditClose();
     };
 
+    const planOptions = ["Artificial Intelligence", "Cybersecurity"];
+
+    const handlePlans = (planSelected: string) => {
+        if (planSelected === "Artificial Intelligence") {
+            setPlan(AI_Plan);
+            setSemesters(AI_Semesters);
+            setSeePlan(true);
+        } else if (planSelected === "Cybersecurity") {
+            setPlan(CYBER_Plan);
+            setSemesters(CYBER_Semesters);
+            setSeePlan(true);
+        }
+    };
     //actual return for the tsx file to App.tsx
     return (
         <div>
             <div>
                 {/*OneorTwo()*/}
                 {/*SemCount !== 1 && displayBoth()*/}
-                <DisplayPlan
-                    indivPlanSem={indivPlanSem}
-                    changeSemCount={changeSemCount}
-                    changeSemester={changeSemester}
-                ></DisplayPlan>
+                <Dropdown>
+                    <Dropdown.Toggle id="dropdown1">
+                        Pick a Plan:
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu>
+                        {planOptions.map((option, index) => (
+                            <Dropdown.Item
+                                key={index}
+                                onClick={() => handlePlans(option)}
+                            >
+                                {option}
+                            </Dropdown.Item>
+                        ))}
+                    </Dropdown.Menu>
+                </Dropdown>
+                <hr></hr>
+                {seePlan && (
+                    <DisplayPlan indivPlanSem={indivPlanSem}></DisplayPlan>
+                )}
             </div>
             <hr></hr>
         </div>
