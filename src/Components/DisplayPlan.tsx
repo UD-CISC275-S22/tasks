@@ -55,12 +55,34 @@ export function DisplayPlan({
 
     const [selectedYear1, setSelectedYear1] = useState<string[]>([""]);
 
+    const toggleYear1 = (option: string, index: number) => {
+        if (selectedYear1.includes(option)) {
+            setSelectedYear1(selectedYear1.filter((item) => item !== option));
+        } else {
+            setSelectedYear1([...selectedYear1, option]);
+        }
+    };
+
+    const year = ["Fall", "Winter", "Spring", "Summer"];
+
     return (
         <div>
-            <Button onClick={changeSemCount}>Show One Semester</Button>
-            <Button onClick={changeSemester}>Show Different Semester</Button>
+            <Dropdown>
+                <Dropdown.Toggle id="dropdown1">Select Options</Dropdown.Toggle>
+                <Dropdown.Menu>
+                    {year.map((option, index) => (
+                        <Dropdown.Item
+                            key={index}
+                            onClick={() => toggleYear1(option, index)}
+                            active={selectedYear1.includes(option)}
+                        >
+                            {option}
+                        </Dropdown.Item>
+                    ))}
+                </Dropdown.Menu>
+            </Dropdown>
             <div className="Semester">
-                {firstYearFall}
+                {selectedYear1.includes("Fall") && firstYearFall}
                 {firstYearWinter}
                 {firstYearSpring}
                 {firstYearSummer}
