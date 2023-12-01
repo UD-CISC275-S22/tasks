@@ -30,6 +30,7 @@ const CourseTable: React.FC<CourseTableProps> = ({ data }) => {
         );
         setCourses(updatedCourses);
     };
+    //test
 
     return (
         <div>

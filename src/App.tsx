@@ -98,6 +98,15 @@ function App(): JSX.Element {
                 </Modal>
             </div>
             {/* Render CourseTable component */}
+            <CourseTable data={data} />
+            <p> List of Degree Plans: </p>
+            <table>
+                <tr>
+                    <th>Code</th>
+                    <th>Name</th>
+                    <th>Credits</th>
+                </tr>
+            </table>
         </div>
     );
 }
