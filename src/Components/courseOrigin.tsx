@@ -4,9 +4,9 @@ import "../App.css";
 
 export function courseOrigin(currentCourse: Course, cOrigin: string[]) {
     type CourseRecord = Record<string, Record<string, Course>>;
-    const AllCourseLst: CourseRecord = AllCoursesList;
+    const ALLCOURSESLST: CourseRecord = AllCoursesList;
     const addingCourseCheck = cOrigin[0].split(" ", 1);
-    const originCourse = AllCourseLst[addingCourseCheck[0]][cOrigin[0]];
+    const originCourse = ALLCOURSESLST[addingCourseCheck[0]][cOrigin[0]];
 
     currentCourse.id = originCourse.id;
     currentCourse.title = originCourse.title;
