@@ -27,6 +27,8 @@ export function SemesterView({
 }): JSX.Element {
     //This grabs the info of the course being dragged.
     //TODO: Doesn't properly render on its own.
+    //const [revertKey, setRevertKey] = useState(0);
+    //setRevertKey(revertKey + 1);
     const handleDragStart = (
         event: React.DragEvent<HTMLTableRowElement>,
         course: classes
@@ -93,28 +95,6 @@ export function SemesterView({
                                         semester={semester}
                                         updateSemester={updateSemester}
                                     />
-                                    {/*modalView && (
-                                        <EditClassInfoModal
-                                            handleClose={flipModalView}
-                                            show={modalView}
-                                            courseToEdit={
-                                                semester.classList[
-                                                    semester.classList.findIndex(
-                                                        (
-                                                            classItem: classes
-                                                        ): boolean =>
-                                                            classItem.code ===
-                                                            classItem.code
-                                                    )
-                                                ]
-                                            }
-                                        />
-                                        )*/}
-                                    {/*<EditClassInfoModal
-                                        handleClose={flipModalView}
-                                        show={modalView}
-                                        courseToEdit={classItem}
-                                    />*/}
                                 </td>
                                 {/*<td>
                                     {classItem.schedule.day.join(", ")},{" "}
