@@ -69,6 +69,9 @@ export function AddSemesterModal({
             (course) => course.code === searchAttribute
         );
         const foundCourse: classes = realData[findIndexCourse];
+        foundCourse.originalCode = foundCourse.code;
+        foundCourse.originalTitle = foundCourse.title;
+        foundCourse.originalCredits = foundCourse.credits;
         if (semesters.length === 0) {
             const newId = 0;
             addSemester(

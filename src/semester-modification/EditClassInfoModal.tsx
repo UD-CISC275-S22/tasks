@@ -3,6 +3,8 @@ import { Button, Form, Modal } from "react-bootstrap";
 import { classes } from "../Interface/classes";
 import { useState } from "react";
 import { semester } from "../Interface/semester";
+//import realData from "../data/corrected_data.json";
+
 //import { semester } from "../Interface/semester";
 //import { EditClass } from "./EditClass";
 export function EditClassInfoModal({
@@ -17,6 +19,9 @@ export function EditClassInfoModal({
     const [newCode, setNewCode] = useState(courseToEdit.code);
     const [newTitle, setNewTitle] = useState(courseToEdit.title);
     const [newCredits, setNewCredits] = useState(courseToEdit.credits);
+    const [ogCode] = useState(courseToEdit.originalCode);
+    const [ogTitle] = useState(courseToEdit.originalTitle);
+    const [ogCredits] = useState(courseToEdit.originalCredits);
     const [modalView, setModalView] = useState(false);
     //const [newPrereqs, setNewPrereqs] = useState(courseToEdit.preReq);
 
@@ -43,6 +48,8 @@ export function EditClassInfoModal({
         setModalView(!modalView);
     };
     function editClass(classToEdit: classes) {
+        //const ogCode: string[] = [];
+        //ogCode.push(classToEdit.code);
         const updatedClass = {
             ...classToEdit,
             code: newCode,
@@ -65,8 +72,36 @@ export function EditClassInfoModal({
             totalCredits: totalCredits
         };
         updateSemester(updatedSemester);
-        //console.log(classToEdit);
+        //console.log(classToEdit.originalCode);
     }
+
+    function revertClass(classToEdit: classes) {
+        const updatedClass = {
+            ...classToEdit,
+            code: ogCode !== undefined ? ogCode : classToEdit.code,
+            title: ogTitle !== undefined ? ogTitle : classToEdit.title,
+            credits: ogCredits !== undefined ? ogCredits : classToEdit.credits
+        };
+        const classIndex = semester.classList.findIndex(
+            (classes: classes): boolean => classToEdit.code === classes.code
+        );
+        const updatedClasses = [...semester.classList];
+        updatedClasses.splice(classIndex, 1, updatedClass);
+        const totalCredits = updatedClasses.reduce(
+            (total: number, currentClass: classes) =>
+                total + currentClass.credits,
+            0
+        );
+        const updatedSemester = {
+            ...semester,
+            classList: [...updatedClasses],
+            totalCredits: totalCredits
+        };
+        updateSemester(updatedSemester);
+        //console.log(classToEdit.originalCode);
+        flipModalView();
+    }
+
     function closingInfoModal() {
         const course: classes = courseToEdit;
         const noInput =
@@ -77,6 +112,11 @@ export function EditClassInfoModal({
             flipModalView();
             editClass(course);
         }
+    }
+    function closingRevertModal() {
+        const course: classes = courseToEdit;
+        flipModalView();
+        revertClass(course);
     }
     return (
         <div>
@@ -119,6 +159,13 @@ export function EditClassInfoModal({
                     </Form.Group>
                 </Modal.Body>
                 <Modal.Footer>
+                    <Button
+                        onClick={() => {
+                            closingRevertModal();
+                        }}
+                    >
+                        Revert
+                    </Button>
                     <Button
                         onClick={() => {
                             flipModalView();
