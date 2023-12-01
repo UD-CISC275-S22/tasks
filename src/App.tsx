@@ -18,26 +18,6 @@ function App(): JSX.Element {
     ]; */
     const prevDegreePlan: degreePlan[] = [];
     //------------------------------------------------------------------------------------
-    // Function to insert a new degree plan, creating an array
-    // Function to remove  a new degree plan, removing an array
-    function insertDegreePlan(
-        prevDegreePlans: degreePlan[],
-        newPlan: degreePlan
-    ): degreePlan[] {
-        const updatedDegreePlans = [...prevDegreePlans, newPlan];
-        return updatedDegreePlans;
-    }
-    function removeDegreePlan(
-        prevDegreePlans: degreePlan[],
-        removePlan: degreePlan
-    ): degreePlan[] {
-        const updatedDegreePlans = prevDegreePlans.filter(
-            (degreePlan: degreePlan): boolean =>
-                degreePlan.name !== removePlan.name
-        );
-        return updatedDegreePlans;
-    }
-    //-------------------------------------------------------------------------------------
     const [view, setView] = useState<Views>(Views.degreePlanView);
     const [currDegreePlan, setcurrDegreePlan] = useState<degreePlan>(
         prevDegreePlan[1]
@@ -50,36 +30,6 @@ function App(): JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript
             </header>
-            {/* a button to create a new/remove degreePlan */}
-            {/* create a new Plan */}
-            <button
-                onClick={() =>
-                    setDegreePlanList(
-                        insertDegreePlan(degreePlanList, {
-                            name: `Plan ${degreePlanList.length + 1}`,
-                            semesters: []
-                        })
-                    )
-                }
-            >
-                Create New Degree Plan
-            </button>
-            {/* remove a plan */}
-            {degreePlanList.map((plan, index) => (
-                <li key={index}>
-                    {plan.name}
-                    <button
-                        onClick={() =>
-                            setDegreePlanList((prevDegreePlans) =>
-                                removeDegreePlan(prevDegreePlans, plan)
-                            )
-                        }
-                    >
-                        Remove
-                    </button>
-                </li>
-            ))}
-            {/* end of button to add/remove a new degree Plan */}
             {view === Views.degreePlanView && (
                 <DegreePlanView
                     setCurrentView={setView}
