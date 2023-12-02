@@ -406,6 +406,122 @@ export function SysNet(): Plan {
         credits: 124
     };
 }
+
+export function DataSci(): Plan {
+    //plan fields
+    const title = "BS Computer Science";
+    const concentration = "Data Science Concentration";
+    const id = 1;
+
+    //making the courses for each semester in each year (whole 4 year plan)
+    const fall_year1 = fall1();
+    const spring_year1 = spring1();
+    spring_year1.push(elective);
+    const fall_year2 = partFall2();
+    fall_year2.push(science);
+    fall_year2.push(elective);
+    const spring_year2 = partSpring2();
+    spring_year2.push(science);
+    spring_year2.push(breadth);
+    const fall_year3 = courseList.filter(
+        //id 8 is CISC320 and id 35 is CISC304
+        (course) => course.id == 8 || course.id == 35
+    );
+    fall_year3.push(restricted);
+    fall_year3.push(higherLevel);
+    const spring_year3 = courseList.filter(
+        //id 7 is CISC303 and id 40 is CISC481
+        (course) => course.id == 7 || course.id == 40
+    );
+    spring_year3.push(elective);
+    spring_year3.push(restricted);
+    spring_year3.push(english);
+    const fall_year4 = courseList.filter(
+        //id 41 is CISC483 and id 16 is CISC498 and id 39 is CISC442
+        (course) => course.id == 41 || course.id == 16 || course.id == 92
+    );
+    fall_year4.push(restricted);
+    fall_year4.push(elective);
+    const spring_year4 = courseList.filter(
+        //id 42 is CISC484 and id 17 is CISC499
+        (course) => course.id == 42 || course.id == 17
+    );
+    spring_year4.push(restricted);
+    spring_year4.push(elective);
+    spring_year4.push(elective);
+
+    //making the actual semester types
+    const fall1Sem: Semester = {
+        type: ["Fall"],
+        year: 1,
+        totalCredits: 15,
+        courseList: fall_year1
+    };
+    const spring1Sem: Semester = {
+        type: ["Spring"],
+        year: 1,
+        totalCredits: 15,
+        courseList: spring_year1
+    };
+    const fall2Sem: Semester = {
+        type: ["Fall"],
+        year: 2,
+        totalCredits: 15,
+        courseList: fall_year2
+    };
+    const spring2Sem: Semester = {
+        type: ["Spring"],
+        year: 2,
+        totalCredits: 15,
+        courseList: spring_year2
+    };
+    const fall3Sem: Semester = {
+        type: ["Fall"],
+        year: 3,
+        totalCredits: 15,
+        courseList: fall_year3
+    };
+    const spring3Sem: Semester = {
+        type: ["Spring"],
+        year: 3,
+        totalCredits: 15,
+        courseList: spring_year3
+    };
+    const fall4Sem: Semester = {
+        type: ["Fall"],
+        year: 4,
+        totalCredits: 15,
+        courseList: fall_year4
+    };
+    const spring4Sem: Semester = {
+        type: ["Spring"],
+        year: 4,
+        totalCredits: 15,
+        courseList: spring_year4
+    };
+
+    //now the actual semester array for the AI plan
+    const SysNet_Semesters = [
+        fall1Sem,
+        spring1Sem,
+        fall2Sem,
+        spring2Sem,
+        fall3Sem,
+        spring3Sem,
+        fall4Sem,
+        spring4Sem
+    ];
+
+    //returns the actual plan
+    return {
+        title: title,
+        concentration: concentration,
+        id: id,
+        semesters: SysNet_Semesters,
+        credits: 124
+    };
+}
+
 /*
  * QUESTIONS
  * what do you mean by fall1/fall2/fall3...ect, are those seperated by year or
