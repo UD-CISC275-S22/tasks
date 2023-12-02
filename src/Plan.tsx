@@ -16,31 +16,31 @@ export function Plan({
     currentPlan: plan;
 }): JSX.Element {
     //const [degreeReqView, toggleDegreeReqView] = useState(false);
-    const [plan, setPlan] = useState<plan>({ ...currentPlan });
+    const [localPlan, setLocalPlan] = useState<plan>({ ...currentPlan });
     const [edit, setEdit] = useState<boolean>(false);
 
     function insertSemester(id: string) {
-        const newSemesters = [...plan.semesters];
+        const newSemesters = [...localPlan.semesters];
         const insertIndex =
             newSemesters.findIndex((semester: semester) => semester.id === id) +
             1; //Finding index of where to put new semester
         newSemesters.splice(insertIndex, 0, {
             id: "",
-            name: "New " + plan.semesters[insertIndex - 1].name,
-            year: plan.semesters[insertIndex - 1].year,
+            name: "New " + localPlan.semesters[insertIndex - 1].name,
+            year: localPlan.semesters[insertIndex - 1].year,
             courses: [],
             season: ""
         }); //Add new semester
-        setPlan({ ...plan, semesters: newSemesters }); //Update plan
+        setLocalPlan({ ...localPlan, semesters: newSemesters }); //Update plan
     }
     //Delete semester
     function deleteSemester(id: string) {
-        const newSemesters = [...plan.semesters];
+        const newSemesters = [...localPlan.semesters];
         newSemesters.splice(
             newSemesters.findIndex((semester: semester) => semester.id === id),
             1
         ); //Removes plan by id
-        setPlan({ ...plan, semesters: newSemesters }); //Update plan
+        setLocalPlan({ ...localPlan, semesters: newSemesters }); //Update plan
     }
     // function saveChanges() {
     //     const replaceIndex = degreePlans.findIndex(
@@ -52,14 +52,14 @@ export function Plan({
     // }
 
     function clearAllSemesters() {
-        setPlan({ ...plan, semesters: [] });
+        setLocalPlan({ ...localPlan, semesters: [] });
     }
 
     function addSemester() {
-        setPlan({
-            ...plan,
+        setLocalPlan({
+            ...localPlan,
             semesters: [
-                ...plan.semesters,
+                ...localPlan.semesters,
                 {
                     id: "",
                     name: "New Semester",
@@ -72,7 +72,7 @@ export function Plan({
     }
 
     function editPlanName(event: React.ChangeEvent<HTMLInputElement>) {
-        setPlan({ ...plan, name: event.target.value });
+        setLocalPlan({ ...localPlan, name: event.target.value });
     }
     return (
         <div>
@@ -81,7 +81,7 @@ export function Plan({
                     <Form.Group className="dropdownWidth" controlId="planName">
                         <Form.Label>Name of Plan: </Form.Label>
                         <Form.Control
-                            value={plan.name}
+                            value={localPlan.name}
                             onChange={editPlanName}
                         />
                     </Form.Group>
@@ -92,7 +92,7 @@ export function Plan({
             ) : (
                 <div>
                     <h1>
-                        {plan.name}{" "}
+                        {localPlan.name}{" "}
                         <Button
                             onClick={() => setEdit(true)}
                             className="btntransparent"
@@ -102,22 +102,22 @@ export function Plan({
                     </h1>
                 </div>
             )}
-            {plan.semesters.map((semester: semester) => (
-                <div key={semester.id}>
+            {localPlan.semesters.map((currentSemester: semester) => (
+                <div key={currentSemester.id}>
                     <DisplaySemester
-                        semester={semester}
-                        plan={plan}
-                        updatePlan={setPlan}
+                        semester={currentSemester}
+                        plan={localPlan}
+                        updatePlan={setLocalPlan}
                     ></DisplaySemester>
                     <Button
                         className="btnadd"
-                        onClick={() => insertSemester(semester.id)}
+                        onClick={() => insertSemester(currentSemester.id)}
                     >
                         Insert New Semester
                     </Button>
                     <Button
                         className="btncancel"
-                        onClick={() => deleteSemester(semester.id)}
+                        onClick={() => deleteSemester(currentSemester.id)}
                     >
                         Delete This Semester
                     </Button>
