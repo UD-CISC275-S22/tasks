@@ -69,6 +69,14 @@ export function App(): JSX.Element {
         localStorage.setItem(SAVED_ID, JSON.stringify(availableId));
     }
 
+    function editDegreePlan(id: number, newDp: DegreePlan) {
+        setdegreePlans(
+            degreePlans.map(
+                (dp: DegreePlan): DegreePlan => (dp.id === id ? newDp : dp)
+            )
+        );
+    }
+
     return (
         <div>
             <div className="App">
@@ -87,7 +95,11 @@ export function App(): JSX.Element {
                         </ul>
                     </p>
                 </header>
-                <DpList dp={degreePlans} deleteDp={deleteDp}></DpList>
+                <DpList
+                    dp={degreePlans}
+                    deleteDp={deleteDp}
+                    editDp={editDegreePlan}
+                ></DpList>
                 <Button className="add_btn" onClick={handleShowModal}>
                     Add New Degree Plan
                 </Button>
