@@ -28,7 +28,7 @@ tr:nth-child(even) {
 }
 
 tr:hover {
-    background-color: #e0e0e0;
+    background-color: #ffff99;
 }
 
 .course-list-container {
