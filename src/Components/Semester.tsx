@@ -71,7 +71,7 @@ export function ViewSemester(): JSX.Element {
     );
 
     //while in the working session itself
-    const [plan, setPlan] = useSessionStorage("seePlan", AI_Plan); //The default plan (for now)
+    const [plan, setPlan] = useSessionStorage("plan", AI_Plan); //The default plan (for now)
     const [seePlan, setSeePlan] = useSessionStorage("seePlan", false); //default is you cant see any plan (until a user selects one)
     const [semesters, setSemesters] = useSessionStorage(
         "seePlan",
