@@ -1,4 +1,6 @@
 import { Course, Department } from "../../Interfaces/course";
+import { Plan } from "../../Interfaces/plan";
+import { Semester } from "../../Interfaces/semester";
 import { courseList } from "../course";
 
 //later: make a state that from user input finds the course that they selected and input
@@ -22,6 +24,21 @@ export const blankCourse: Course = {
     prereq: [""],
     coreq: [""],
     requirements: [""]
+};
+
+export const blankSemester: Semester = {
+    type: [""],
+    year: {} as number,
+    totalCredits: {} as number,
+    courseList: [blankCourse]
+};
+
+export const blankPlan: Plan = {
+    title: "",
+    concentration: "",
+    id: {} as number,
+    semesters: [blankSemester],
+    credits: {} as number
 };
 
 //explain why fall1 and fall2 and spring1 etc.

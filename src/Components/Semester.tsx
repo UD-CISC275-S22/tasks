@@ -17,6 +17,7 @@ import { AI } from "./Plans/AI_Plan";
 import { Cyber } from "./Plans/Cyber_Plan";
 import { SysNet } from "./Plans/SysNet_Plan";
 import { useSessionStorage } from "./useSessionStorage";
+import { blankPlan } from "./Plans/plan";
 
 //modals
 import { DisplayFall } from "./DisplayFall";
@@ -49,6 +50,17 @@ const CYBER_Semesters = CYBER_Plan.semesters;
 const SysNet_Semesters = SysNet_Plan.semesters;
 
 export function ViewSemester(): JSX.Element {
+    //all stuff for saving plans
+    const [plan1, setPlan1] = useSessionStorage("plan1", blankPlan);
+    const [plan1Semesters, setPlan1Semesters] = useSessionStorage(
+        "plan1Semesters",
+        plan1.semesters
+    );
+    const [plan1SeePlan, setPlan1SeePlan] = useSessionStorage(
+        "plan1SeePlan",
+        true
+    );
+
     const [plan, setPlan] = useSessionStorage("seePlan", AI_Plan); //The default plan (for now)
     const [seePlan, setSeePlan] = useSessionStorage("seePlan", false); //default is you cant see any plan (until a user selects one)
     const [semesters, setSemesters] = useSessionStorage(
@@ -335,6 +347,8 @@ export function ViewSemester(): JSX.Element {
         "Systems and Networks"
     ];
 
+    const planSaveOptions = ["Plan 1", "Plan 2"];
+
     const handlePlans = (planSelected: string) => {
         if (planSelected === "Artificial Intelligence") {
             setPlan(AI_Plan);
@@ -358,15 +372,64 @@ export function ViewSemester(): JSX.Element {
         setSeePlan(false);
     }
 
+    function savePlan(option: string) {
+        if (option === "Plan 1") {
+            setPlan1(plan);
+            setPlan1SeePlan(seePlan);
+            setPlan1Semesters(semesters);
+        }
+    }
+
+    function loadPlan(option: string) {
+        if (option === "Plan 1") {
+            setPlan(plan1);
+            setSeePlan(plan1SeePlan);
+            setSemesters(plan1Semesters);
+        }
+    }
     //actual return for the tsx file to App.tsx
     return (
         <div>
             <Button onClick={startNewSession}>Start Over</Button>
+            <Dropdown>
+                <Dropdown.Toggle id="dropdown1">
+                    Save Plan Into:
+                </Dropdown.Toggle>
+                <Dropdown.Menu>
+                    {
+                        // eslint-disable-next-line no-extra-parens
+                        planSaveOptions.map((option, index) => (
+                            <Dropdown.Item
+                                key={index}
+                                onClick={() => savePlan(option)}
+                            >
+                                {option}
+                            </Dropdown.Item>
+                        ))
+                    }
+                </Dropdown.Menu>
+            </Dropdown>
+            <Dropdown>
+                <Dropdown.Toggle id="dropdown2">Load:</Dropdown.Toggle>
+                <Dropdown.Menu>
+                    {
+                        // eslint-disable-next-line no-extra-parens
+                        planSaveOptions.map((option, index) => (
+                            <Dropdown.Item
+                                key={index}
+                                onClick={() => loadPlan(option)}
+                            >
+                                {option}
+                            </Dropdown.Item>
+                        ))
+                    }
+                </Dropdown.Menu>
+            </Dropdown>
             <div>
                 {/*OneorTwo()*/}
                 {/*SemCount !== 1 && displayBoth()*/}
                 <Dropdown>
-                    <Dropdown.Toggle id="dropdown1">
+                    <Dropdown.Toggle id="dropdown3">
                         Pick a Plan:
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
