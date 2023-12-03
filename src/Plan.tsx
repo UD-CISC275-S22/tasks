@@ -123,6 +123,7 @@ export function Plan({
                     </Button>
                 </div>
             ))}
+            <span></span>
             <Button className="btnadd" onClick={() => addSemester()}>
                 Add Semester
             </Button>
