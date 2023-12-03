@@ -3,23 +3,6 @@ import { Plan } from "../Interfaces/plan";
 import { courseList } from "./course";
 import { blankCourse, fall1, spring1, fall2, spring2 } from "./plan";
 
-//need to go through and check to see if fall1, spring1, fall2 and spring2 are the same for each default plan
-
-//later: make a state that from user input finds the course that they selected and input
-//that into the courses that don't have a definitive course (Ex. if you need math205 or math350)
-//the user would select math205 for example and that state variable would then be math205 and you
-//change that math course in the semester to that specific course
-
-//this is a general breadth constant course that you can keep for any semester or plan
-//just make sure you change it so that the student can pick which breadth course they want to take
-
-//default winter and summer course for making an empty array of one blank course
-//maybe this can be used for the requirements?
-
-//explain why fall1 and fall2 and spring1 etc.
-//fall1 reprensents semester 1 fall
-//this function returns first fall semester in year 1 of 4 year plan
-
 //this is the plan for the AI concentration
 export function AI(): Plan {
     //plan fields
