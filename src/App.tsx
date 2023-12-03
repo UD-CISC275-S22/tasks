@@ -9,7 +9,7 @@ import { Course } from "./interfaces/course";
 //import { AddCourseModal } from "./AddCourseModal";
 //import { ClearCourseModal } from "./ClearCourseModal";
 import coursePlanData from "./data/couresplans.json";
-//import { Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { v4 as uuidv4 } from "uuid";
 //import { CreateCoursePlan } from "./CreateCoursePlan";
 import { CoureseplansBoot } from "./NewCoursePlan";
@@ -98,6 +98,7 @@ function App(): JSX.Element {
         <div className="App">
             <div className="logo">
                 <h1 className="App-title">
+                    <Container>Test</Container>
                     <img
                         src={require("./ud_logo.jpg")}
                         width="150"
