@@ -1,21 +1,28 @@
 //todo: create a universal DpView for all Dp's
 /* eslint-disable no-extra-parens */
 //this will be the dp table shower
-import React from "react";
+import React, { useState } from "react";
 import { Button, Table, Container, Row, Col, Card } from "react-bootstrap";
 import { DegreePlan } from "./interfaces/degreeplan";
 import { Semester } from "./interfaces/semester";
 import { Course } from "./interfaces/course";
+import { EditingDp } from "./EditingDp";
 
 export function DpView({
     dp,
     resetView,
-    deleteDp
+    deleteDp,
+    editDp
 }: {
     dp: DegreePlan;
     resetView: () => void;
     deleteDp: (id: number) => void;
+    editDp: (id: number, newDp: DegreePlan) => void;
 }): JSX.Element {
+    const [showEditModal, setShowEditModal] = useState<boolean>(false);
+    const handleCloseModal = () => setShowEditModal(false);
+    const handleShowModal = () => setShowEditModal(true);
+
     const deleteDegreePlan = () => {
         deleteDp(dp.id);
         resetView();
@@ -113,6 +120,19 @@ export function DpView({
             >
                 Delete
             </Button>
+            <Button
+                className="esc_button text-align-center"
+                variant="warning"
+                onClick={handleShowModal}
+            >
+                Edit{" "}
+            </Button>
+            <EditingDp
+                show={showEditModal}
+                handleClose={handleCloseModal}
+                dp={dp}
+                editDp={editDp}
+            ></EditingDp>
         </div>
     );
 }

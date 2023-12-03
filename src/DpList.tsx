@@ -6,10 +6,12 @@ import { DpView } from "./DpView";
 
 export function DpList({
     dp,
-    deleteDp
+    deleteDp,
+    editDp
 }: {
     dp: DegreePlan[];
     deleteDp: (id: number) => void;
+    editDp: (id: number, newDp: DegreePlan) => void;
 }): JSX.Element {
     const [displayId, setDisplayId] = useState<null | number>(null);
     const handleDpView = (id: number) => {
@@ -28,6 +30,7 @@ export function DpList({
                             dp={dp}
                             resetView={resetDisplayId}
                             deleteDp={deleteDp}
+                            editDp={editDp}
                         ></DpView>
                     );
                 } else {
