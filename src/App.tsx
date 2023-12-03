@@ -6,7 +6,7 @@ import { Plan } from "./Plan";
 import defaultPlans from "./Defaults.json";
 
 function App(): JSX.Element {
-    const [modalIsOpen, setModalIsOpen] = useState(false);
+    const [modalIsOpen, setModalIsOpen] = useState(true);
     const openModal = () => {
         setModalIsOpen(true);
     };
@@ -14,14 +14,7 @@ function App(): JSX.Element {
         setModalIsOpen(false);
     };
     useState<number>(-1);
-    const defaultPlan: plan[] = defaultPlans.defaultPlans.map((item) => ({
-        id: item.id,
-        name: item.name,
-        year: 2023,
-        season: "Fall",
-        semesters: item.semesters,
-        courses: []
-    }));
+    const defaultPlan = defaultPlans.defaultPlans;
     const [degreePlans, setDegreePlans] = useState<plan[]>(defaultPlan);
     return (
         <div className="App">
@@ -104,15 +97,8 @@ function App(): JSX.Element {
                     </div>
                 </Modal>
             </div>
-            <p> List of Degree Plans: </p>
-            <table>
-                <tr>
-                    <th>Code</th>
-                    <th>Name</th>
-                    <th>Credits</th>
-                </tr>
-            </table>
         </div>
     );
 }
+//send help :(
 export default App;

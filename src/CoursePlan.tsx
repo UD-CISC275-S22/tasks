@@ -7,6 +7,7 @@ import { Button, Form } from "react-bootstrap";
 import { course } from "./PlannerInterfaces/course";
 import { plan } from "./PlannerInterfaces/plan";
 import { semester } from "./PlannerInterfaces/semester";
+//import catalog from "./catalog.json";
 //Courses to be used to for the datalist autofill
 const courseList = data.map(
     (course): course => ({
@@ -17,7 +18,6 @@ const courseList = data.map(
         preReq: course.preReq
     })
 );
-
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function DisplayCourse({
     defaultCourse,
