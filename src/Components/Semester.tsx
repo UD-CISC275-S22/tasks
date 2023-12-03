@@ -55,7 +55,7 @@ export function ViewSemester(): JSX.Element {
         "seePlan",
         AI_Semesters
     ); //the default semesters (for now)
-    const DEFAULT_COURSE = semesters[0].courseList[0].title;
+    const DEFAULT_COURSE = AI_Semesters[0].courseList[0].title;
     const [currCourse, setCurrCourse] = useState<string>(DEFAULT_COURSE);
     const [SemesterType, setSemesterType] = useState<string>("Fall"); //can be "Fall", "Spring" or "Both"
     const [displayCourseCategory, setDisplayCourseCategory] =
@@ -358,15 +358,10 @@ export function ViewSemester(): JSX.Element {
         setSeePlan(false);
     }
 
-    function loadOldPlan() {
-        return;
-    }
-
     //actual return for the tsx file to App.tsx
     return (
         <div>
-            <Button onClick={startNewSession}>Start a New Session</Button>
-            <Button onClick={loadOldPlan}>Load a Plan</Button>
+            <Button onClick={startNewSession}>Start Over</Button>
             <div>
                 {/*OneorTwo()*/}
                 {/*SemCount !== 1 && displayBoth()*/}

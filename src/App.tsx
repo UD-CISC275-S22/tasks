@@ -33,16 +33,16 @@ function App(): JSX.Element {
             <div id="welcome_message" className="collapse">
                 <p>
                     Welcome to your personal Degree Planner! Some basic tools
-                    have been designed to make your visit accessible to your
-                    needs; this includes creating new plans from scratch and/or
-                    compiling data from a csv file. You will be able to add,
-                    remove, edit, and save various courses/semesters in a
+                    have been designed to make your visit accessible to your to
+                    your needs; this includes creating new plans from scratch
+                    and/or compiling data from a csv file. You will be able to
+                    add, remove, edit, and save various courses/semesters in a
                     multitude of plans. You will be able to view 1 semester at a
                     time or multiple semesters at once. You will also be able to
                     add or remove new courses to each semester, and also add and
                     delete a plan entirely. You can also skip a semester. There
-                    a templates for each concentration that you can work on and
-                    there are many options to choose from when creating your
+                    a a templates for each concentration that you can work on
+                    and there are many options to choose from when creating your
                     plan.
                 </p>
             </div>
