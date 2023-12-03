@@ -26,7 +26,7 @@ function App(): JSX.Element {
             <Modal
                 isOpen={modalIsOpen}
                 onRequestClose={closeModal}
-                contentLabel="Example Modal"
+                contentLabel="Instruction Modal"
                 className="custom-modal"
                 overlayClassName="custom-overlay"
             >
