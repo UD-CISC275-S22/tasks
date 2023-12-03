@@ -4,6 +4,7 @@ import { Course } from "../Interfaces/course";
 import { ClearSemester } from "./clearingSemester";
 import { DropAdd } from "./dropAdd";
 import { Semester } from "../Interfaces/semester";
+import { Form } from "react-bootstrap";
 
 export interface valueProps {
     semesters: Semester[];
@@ -40,6 +41,15 @@ export function DisplayFall({
     const idx = index(targetYear, targetSem);
     const fallCourses = semesters[idx].courseList;
 
+    const [displayCourseCategory, setDisplayCourseCategory] =
+        useState<string>("AllCourses");
+
+    //update the state of the dsiplay course categoery
+    function updateDisplayCourseCat(
+        event: React.ChangeEvent<HTMLInputElement>
+    ) {
+        setDisplayCourseCategory(event.target.value);
+    }
     return (
         <div className="Fall">
             <h1>Fall Year {targetYear}</h1>
@@ -55,21 +65,42 @@ export function DisplayFall({
                     </div>
                 )
             )}
-            <div>
-                <DropAdd
-                    dropClass={dropClass}
-                    addClass={addClass}
-                    updateCurrCourse={updateCurrCourse}
-                    currCourse={currCourse}
-                    Course_List={fallCourses}
-                ></DropAdd>
-                <ClearSemester
-                    clearSemesterCourses={clearSemesterCourses}
-                    show={clicked}
-                    handleClose={handleClose}
-                    handleShow={handleShow}
-                ></ClearSemester>
-            </div>
+
+            <>
+                <Form.Group controlId="currentCourse">
+                    <Form.Label>Select Course Variety</Form.Label>
+                    <Form.Check
+                        type="radio"
+                        name="displayCourse1"
+                        onChange={updateDisplayCourseCat}
+                        id="disp-course-all"
+                        label="AllCourses"
+                        value="AllCourses"
+                        checked={displayCourseCategory === "AllCourses"}
+                    />
+                    <Form.Check
+                        type="radio"
+                        name="displayCourse2"
+                        onChange={updateDisplayCourseCat}
+                        id="disp-course-free"
+                        label="FreeElective"
+                        value="FreeElective"
+                        checked={displayCourseCategory === "FreeElective"}
+                    />
+                    <Form.Check
+                        type="radio"
+                        name="displayCourse3"
+                        onChange={updateDisplayCourseCat}
+                        id="disp-course-restricted"
+                        label="RestrictiveElective"
+                        value="RestrictiveElective"
+                        checked={
+                            displayCourseCategory === "RestrictiveElective"
+                        }
+                    />
+                    <Form.Label>Select A Course</Form.Label>
+                </Form.Group>
+            </>
         </div>
     );
 }
