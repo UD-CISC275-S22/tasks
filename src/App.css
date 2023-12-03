@@ -107,3 +107,8 @@ body {
         background-position: 0% 50%;
     }
 }
+
+/*btn styles*/
+#openModalBtn {
+    background: #1d37b8;
+}
