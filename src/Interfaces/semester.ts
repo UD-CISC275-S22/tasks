@@ -6,7 +6,7 @@ export interface Semester {
     //name of semester
     title: string;
     //year of occuring semester
-    year: number;
+    year: string;
     //totalCredits: number;
     //notes and additional info added by user
     notes: string;

@@ -4,7 +4,7 @@ import { Course } from "../Interfaces/course";
 import { Semester } from "../Interfaces/semester";
 import { Plan } from "../Interfaces/plan";
 import AllCourseList from "../data/AllCourseList.json";
-import { courseOrigin } from "./courseOrigin";
+import { CourseOrigin } from "./courseOrigin";
 import "../App.css";
 
 export function AddingCourse({
@@ -22,28 +22,28 @@ export function AddingCourse({
 }) {
     const [courseIDs, settingCourseID] = useState<string>("");
     type CourseRecord = Record<string, Record<string, Course>>;
-    const AllCourseLst: CourseRecord = AllCourseList;
+    const ALLCOURSELST: CourseRecord = AllCourseList;
 
     function saveEdits() {
         const courseCheck = courseIDs.split(" ", 1);
-        if (AllCourseLst[courseCheck[0].toUpperCase()]) {
+        if (ALLCOURSELST[courseCheck[0].toUpperCase()]) {
             if (
-                AllCourseLst[courseCheck[0].toUpperCase()][
+                ALLCOURSELST[courseCheck[0].toUpperCase()][
                     courseIDs.toUpperCase()
                 ]
             ) {
-                const addingCourseCheck =
-                    AllCourseLst[courseCheck[0].toUpperCase()][
+                const addedCourseCheck =
+                    ALLCOURSELST[courseCheck[0].toUpperCase()][
                         courseIDs.toUpperCase()
                     ];
                 const courseIndexing = currentSemester.courseList.findIndex(
-                    (c: Course): boolean => c.title === addingCourseCheck.title
+                    (c: Course): boolean => c.title === addedCourseCheck.title
                 );
                 const newSemester = { ...currentSemester };
                 if (courseIndexing > -1) {
                     newSemester.courseList.splice(courseIndexing, 1);
                 }
-                //plan.credits += parseInt(addingCourseCheck.credits);
+                //plan.credits += parseInt(addedCourseCheck.credits);
             }
         }
         settingCourseID("");
@@ -70,8 +70,12 @@ export function AddingCourse({
                 </Form.Group>
             </Modal.Body>
             <Modal.Footer>
-                <Button onClick={handleClose}> Close </Button>
-                <Button onClick={saveEdits}> Save </Button>
+                <Button onClick={handleClose} data-testid="closeModAC">
+                    Close
+                </Button>
+                <Button onClick={saveEdits} data-testid="saveModAC">
+                    Save
+                </Button>
             </Modal.Footer>
         </Modal>
     );

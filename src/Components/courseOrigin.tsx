@@ -2,20 +2,19 @@ import AllCoursesList from "../data/AllCourseList.json";
 import { Course } from "../Interfaces/course";
 import "../App.css";
 
-export function courseOrigin(currentCourse: Course, cOrigin: string[]) {
+export function CourseOrigin(currentCourse: Course, cOrigin: string[]) {
     type CourseRecord = Record<string, Record<string, Course>>;
     const ALLCOURSELST: CourseRecord = AllCoursesList;
     const addingCourseCheck = cOrigin[0].split(" ", 1);
-    const originCourse = ALLCOURSELST[addingCourseCheck[0]][cOrigin[0]];
+    const originalCourse = ALLCOURSELST[addingCourseCheck[0]][cOrigin[0]];
 
-    currentCourse.id = originCourse.id;
-    currentCourse.title = originCourse.title;
-    currentCourse.name = originCourse.name;
-    currentCourse.description = originCourse.description;
-    currentCourse.credits = originCourse.credits;
-    currentCourse.semester = originCourse.semester;
-    currentCourse.department = originCourse.department;
-    currentCourse.prereq = originCourse.prereq;
-    currentCourse.coreq = originCourse.coreq;
-    currentCourse.requirements = originCourse.requirements;
+    currentCourse.title = originalCourse.title;
+    currentCourse.name = originalCourse.name;
+    currentCourse.description = originalCourse.description;
+    currentCourse.credits = originalCourse.credits;
+    currentCourse.semester = originalCourse.semester;
+    currentCourse.department = originalCourse.department;
+    currentCourse.prereq = originalCourse.prereq;
+    currentCourse.coreq = originalCourse.coreq;
+    currentCourse.requirements = originalCourse.requirements;
 }
