@@ -40,15 +40,16 @@ export function DisplayFall({
     //targetSem is also NOT the state and it's already passed in from the Semester.tsx file. So both variables are already declared in the indivPlanSem function
     const idx = index(targetYear, targetSem);
     const fallCourses = semesters[idx].courseList;
-    const [displayFallCourseCategory, setDisplayFallCourseCategory] =
+
+    const [displayCourseCategory, setDisplayCourseCategory] =
         useState<string>("AllCourses");
 
-    function updateDisplayFallCourseCat(
+    //update the state of the dsiplay course categoery
+    function updateDisplayCourseCat(
         event: React.ChangeEvent<HTMLInputElement>
     ) {
-        setDisplayFallCourseCategory(event.target.value);
+        setDisplayCourseCategory(event.target.value);
     }
-
     return (
         <div className="Fall">
             <h1>Fall Year {targetYear}</h1>
@@ -64,51 +65,42 @@ export function DisplayFall({
                     </div>
                 )
             )}
-            <div>
-                <Form.Label>Select Course Variety</Form.Label>
-                <Form.Check
-                    type="radio"
-                    name="displayCourseFall1"
-                    onChange={updateDisplayFallCourseCat}
-                    id="disp-course-all"
-                    label="AllCourses"
-                    value="AllCourses"
-                    checked={displayFallCourseCategory === "AllCourses"}
-                />
-                <Form.Check
-                    type="radio"
-                    name="displayCourseFall2"
-                    onChange={updateDisplayFallCourseCat}
-                    id="disp-course-free"
-                    label="FreeElective"
-                    value="FreeElective"
-                    checked={displayFallCourseCategory === "FreeElective"}
-                />
-                <Form.Check
-                    type="radio"
-                    name="displayCourseFall3"
-                    onChange={updateDisplayFallCourseCat}
-                    id="disp-course-restricted"
-                    label="RestrictiveElective"
-                    value="RestrictiveElective"
-                    checked={
-                        displayFallCourseCategory === "RestrictiveElective"
-                    }
-                />
-                <DropAdd
-                    dropClass={dropClass}
-                    addClass={addClass}
-                    updateCurrCourse={updateCurrCourse}
-                    currCourse={currCourse}
-                    Course_List={fallCourses}
-                ></DropAdd>
-                <ClearSemester
-                    clearSemesterCourses={clearSemesterCourses}
-                    show={clicked}
-                    handleClose={handleClose}
-                    handleShow={handleShow}
-                ></ClearSemester>
-            </div>
+
+            <>
+                <Form.Group controlId="currentCourse">
+                    <Form.Label>Select Course Variety</Form.Label>
+                    <Form.Check
+                        type="radio"
+                        name="displayCourse1"
+                        onChange={updateDisplayCourseCat}
+                        id="disp-course-all"
+                        label="AllCourses"
+                        value="AllCourses"
+                        checked={displayCourseCategory === "AllCourses"}
+                    />
+                    <Form.Check
+                        type="radio"
+                        name="displayCourse2"
+                        onChange={updateDisplayCourseCat}
+                        id="disp-course-free"
+                        label="FreeElective"
+                        value="FreeElective"
+                        checked={displayCourseCategory === "FreeElective"}
+                    />
+                    <Form.Check
+                        type="radio"
+                        name="displayCourse3"
+                        onChange={updateDisplayCourseCat}
+                        id="disp-course-restricted"
+                        label="RestrictiveElective"
+                        value="RestrictiveElective"
+                        checked={
+                            displayCourseCategory === "RestrictiveElective"
+                        }
+                    />
+                    <Form.Label>Select A Course</Form.Label>
+                </Form.Group>
+            </>
         </div>
     );
 }
