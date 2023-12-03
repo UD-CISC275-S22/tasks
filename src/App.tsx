@@ -6,7 +6,7 @@ import { Plan } from "./Plan";
 import defaultPlans from "./Defaults.json";
 
 function App(): JSX.Element {
-    const [modalIsOpen, setModalIsOpen] = useState(false);
+    const [modalIsOpen, setModalIsOpen] = useState(true);
     const openModal = () => {
         setModalIsOpen(true);
     };
