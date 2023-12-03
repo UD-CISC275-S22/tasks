@@ -13,9 +13,10 @@ import { Semester } from "../Interfaces/semester";
 import { Plan } from "../Interfaces/plan";
 //individual constants
 import { courseList, defaultCourseList } from "./course";
-import { AI } from "./AI_Plan";
-import { Cyber } from "./Cyber_Plan";
-import { SysNet } from "./SysNet_Plan";
+import { AI } from "./Plans/AI_Plan";
+import { Cyber } from "./Plans/Cyber_Plan";
+import { SysNet } from "./Plans/SysNet_Plan";
+import { useSessionStorage } from "./useSessionStorage";
 
 //modals
 import { DisplayFall } from "./DisplayFall";
@@ -47,12 +48,14 @@ const AI_Semesters = AI_Plan.semesters; //the semesters for the AI plan
 const CYBER_Semesters = CYBER_Plan.semesters;
 const SysNet_Semesters = SysNet_Plan.semesters;
 
-const DEFAULT_COURSE = AI_Semesters[0].courseList[0].title;
-
 export function ViewSemester(): JSX.Element {
-    const [plan, setPlan] = useState<Plan>(AI_Plan); //The default plan (for now)
-    const [seePlan, setSeePlan] = useState<boolean>(false); //default is you cant see any plan (until a user selects one)
-    const [semesters, setSemesters] = useState<Semester[]>(AI_Semesters); //the default semesters (for now)
+    const [plan, setPlan] = useSessionStorage("seePlan", AI_Plan); //The default plan (for now)
+    const [seePlan, setSeePlan] = useSessionStorage("seePlan", false); //default is you cant see any plan (until a user selects one)
+    const [semesters, setSemesters] = useSessionStorage(
+        "seePlan",
+        AI_Semesters
+    ); //the default semesters (for now)
+    const DEFAULT_COURSE = semesters[0].courseList[0].title;
     const [currCourse, setCurrCourse] = useState<string>(DEFAULT_COURSE);
     const [SemesterType, setSemesterType] = useState<string>("Fall"); //can be "Fall", "Spring" or "Both"
     const [displayCourseCategory, setDisplayCourseCategory] =
@@ -337,19 +340,33 @@ export function ViewSemester(): JSX.Element {
             setPlan(AI_Plan);
             setSemesters(AI_Semesters);
             setSeePlan(true);
+            return;
         } else if (planSelected === "Cybersecurity") {
             setPlan(CYBER_Plan);
             setSemesters(CYBER_Semesters);
             setSeePlan(true);
+            return;
         } else if (planSelected === "Systems and Networks") {
             setPlan(SysNet_Plan);
             setSemesters(SysNet_Semesters);
             setSeePlan(true);
+            return;
         }
     };
+
+    function startNewSession() {
+        setSeePlan(false);
+    }
+
+    function loadOldPlan() {
+        return;
+    }
+
     //actual return for the tsx file to App.tsx
     return (
         <div>
+            <Button onClick={startNewSession}>Start a New Session</Button>
+            <Button onClick={loadOldPlan}>Load a Plan</Button>
             <div>
                 {/*OneorTwo()*/}
                 {/*SemCount !== 1 && displayBoth()*/}

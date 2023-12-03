@@ -1,5 +1,6 @@
-import React /*{ useState }*/ from "react";
+import React from "react";
 import "./App.css";
+//import { ViewSemester } from "./Components/Semester";
 import { ViewSemester } from "./Components/Semester";
 //import { Welcome } from "./Components/welcome";
 //import { Button } from "react-bootstrap";
@@ -7,11 +8,6 @@ import { ViewSemester } from "./Components/Semester";
 //import { clearCourse } from "./Components/clearingCourse";
 
 function App(): JSX.Element {
-    //constants for welcome message button/modal
-    //const [displayWelcomeMessage, displayWelcomeModal] = useState(true);
-    //const welcomeMessage = () => displayWelcomeModal(false);
-    //const welcomeMessageModal = () => displayWelcomeModal(true);
-
     return (
         <div className="App">
             <header className="App-header">
