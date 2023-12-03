@@ -55,7 +55,7 @@ export function ViewSemester(): JSX.Element {
     const [plan1, setPlan1] = useSessionStorage("plan1", blankPlan);
     const [plan1Semesters, setPlan1Semesters] = useSessionStorage(
         "plan1Semesters",
-        plan1.semesters
+        [blankSemester]
     );
     const [plan1SeePlan, setPlan1SeePlan] = useSessionStorage(
         "plan1SeePlan",
@@ -64,7 +64,7 @@ export function ViewSemester(): JSX.Element {
     const [plan2, setPlan2] = useSessionStorage("plan2", blankPlan);
     const [plan2Semesters, setPlan2Semesters] = useSessionStorage(
         "plan2Semesters",
-        plan2.semesters
+        [blankSemester]
     );
     const [plan2SeePlan, setPlan2SeePlan] = useSessionStorage(
         "plan2SeePlan",
