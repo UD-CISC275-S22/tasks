@@ -2,7 +2,8 @@
 import React, { useState } from "react";
 import { Dropdown } from "react-bootstrap";
 import { Semester } from "../Interfaces/semester";
-import { blankCourse } from "./plan";
+import { blankCourse } from "./Plans/plan";
+import { useSessionStorage } from "./useSessionStorage";
 
 export interface valueProps {
     //function below acts like the display both function except it returns either a DisplayFall or DisplaySpring component
@@ -89,7 +90,20 @@ export function DisplayPlan({ indivPlanSem }: valueProps): JSX.Element {
     return (
         <div>
             <Dropdown>
-                <Dropdown.Toggle id="dropdown1">View Semester:</Dropdown.Toggle>
+                <Dropdown.Toggle
+                    id="dropdown4"
+                    style={{
+                        backgroundColor: "#71B48D",
+                        borderColor: "#1d442d",
+                        marginLeft: "5px",
+                        marginRight: "5px",
+                        marginTop: "5px",
+                        marginBottom: "5px",
+                        color: "black"
+                    }}
+                >
+                    View Year 1 Semesters:
+                </Dropdown.Toggle>
                 <Dropdown.Menu>
                     {
                         // eslint-disable-next-line no-extra-parens
@@ -112,7 +126,20 @@ export function DisplayPlan({ indivPlanSem }: valueProps): JSX.Element {
                 {selectedYear1.includes("Summer") && firstYearSummer}
             </div>
             <Dropdown>
-                <Dropdown.Toggle id="dropdown2">View Semester:</Dropdown.Toggle>
+                <Dropdown.Toggle
+                    id="dropdown5"
+                    style={{
+                        backgroundColor: "#71B48D",
+                        borderColor: "#1d442d",
+                        marginLeft: "5px",
+                        marginRight: "5px",
+                        marginTop: "5px",
+                        marginBottom: "5px",
+                        color: "black"
+                    }}
+                >
+                    View Year 2 Semesters:
+                </Dropdown.Toggle>
                 <Dropdown.Menu>
                     {
                         // eslint-disable-next-line no-extra-parens
@@ -135,7 +162,20 @@ export function DisplayPlan({ indivPlanSem }: valueProps): JSX.Element {
                 {selectedYear2.includes("Summer") && secondYearSummer}
             </div>
             <Dropdown>
-                <Dropdown.Toggle id="dropdown3">View Semester:</Dropdown.Toggle>
+                <Dropdown.Toggle
+                    id="dropdown6"
+                    style={{
+                        backgroundColor: "#71B48D",
+                        borderColor: "#1d442d",
+                        marginLeft: "5px",
+                        marginRight: "5px",
+                        marginTop: "5px",
+                        marginBottom: "5px",
+                        color: "black"
+                    }}
+                >
+                    View Year 3 Semesters:
+                </Dropdown.Toggle>
                 <Dropdown.Menu>
                     {
                         // eslint-disable-next-line no-extra-parens
@@ -158,7 +198,20 @@ export function DisplayPlan({ indivPlanSem }: valueProps): JSX.Element {
                 {selectedYear3.includes("Summer") && thirdYearSummer}
             </div>
             <Dropdown>
-                <Dropdown.Toggle id="dropdown4">View Semester:</Dropdown.Toggle>
+                <Dropdown.Toggle
+                    id="dropdown7"
+                    style={{
+                        backgroundColor: "#71B48D",
+                        borderColor: "#1d442d",
+                        marginLeft: "5px",
+                        marginRight: "5px",
+                        marginTop: "5px",
+                        marginBottom: "5px",
+                        color: "black"
+                    }}
+                >
+                    View Year 4 Semesters:
+                </Dropdown.Toggle>
                 <Dropdown.Menu>
                     {
                         // eslint-disable-next-line no-extra-parens

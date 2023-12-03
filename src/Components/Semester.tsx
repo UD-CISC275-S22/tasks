@@ -2,20 +2,23 @@
 //for visualization of semesters and altering the courses within them
 
 //css files
-import "./Semester.css";
 import "../App.css";
 //react and bootstrap
 import React, { useState } from "react";
 import { Button, Dropdown, Form } from "react-bootstrap";
+import "./Semester.css";
 //our own interfaces
 import { Course } from "../Interfaces/course";
 import { Semester } from "../Interfaces/semester";
 import { Plan } from "../Interfaces/plan";
 //individual constants
 import { courseList, defaultCourseList } from "./course";
-import { AI } from "./AI_Plan";
-import { Cyber } from "./Cyber_Plan";
-import { SysNet } from "./SysNet_Plan";
+import { AI } from "./Plans/AI_Plan";
+import { Cyber } from "./Plans/Cyber_Plan";
+import { SysNet } from "./Plans/SysNet_Plan";
+import { useSessionStorage } from "./useSessionStorage";
+import { blankPlan } from "./Plans/plan";
+import { blankSemester } from "./Plans/plan";
 
 //modals
 import { DisplayFall } from "./DisplayFall";
@@ -47,12 +50,35 @@ const AI_Semesters = AI_Plan.semesters; //the semesters for the AI plan
 const CYBER_Semesters = CYBER_Plan.semesters;
 const SysNet_Semesters = SysNet_Plan.semesters;
 
-const DEFAULT_COURSE = AI_Semesters[0].courseList[0].title;
-
 export function ViewSemester(): JSX.Element {
-    const [plan, setPlan] = useState<Plan>(AI_Plan); //The default plan (for now)
-    const [seePlan, setSeePlan] = useState<boolean>(false); //default is you cant see any plan (until a user selects one)
-    const [semesters, setSemesters] = useState<Semester[]>(AI_Semesters); //the default semesters (for now)
+    //all stuff for saving plans
+    const [plan1, setPlan1] = useSessionStorage("plan1", blankPlan);
+    const [plan1Semesters, setPlan1Semesters] = useSessionStorage(
+        "plan1Semesters",
+        plan1.semesters
+    );
+    const [plan1SeePlan, setPlan1SeePlan] = useSessionStorage(
+        "plan1SeePlan",
+        false
+    );
+    const [plan2, setPlan2] = useSessionStorage("plan2", blankPlan);
+    const [plan2Semesters, setPlan2Semesters] = useSessionStorage(
+        "plan2Semesters",
+        plan2.semesters
+    );
+    const [plan2SeePlan, setPlan2SeePlan] = useSessionStorage(
+        "plan2SeePlan",
+        false
+    );
+
+    //while in the working session itself
+    const [plan, setPlan] = useSessionStorage("plan", AI_Plan); //The default plan (for now)
+    const [seePlan, setSeePlan] = useSessionStorage("seePlan", false); //default is you cant see any plan (until a user selects one)
+    const [semesters, setSemesters] = useSessionStorage(
+        "seePlan",
+        AI_Semesters
+    ); //the default semesters (for now)
+    const DEFAULT_COURSE = AI_Semesters[0].courseList[0].title;
     const [currCourse, setCurrCourse] = useState<string>(DEFAULT_COURSE);
     const [SemesterType, setSemesterType] = useState<string>("Fall"); //can be "Fall", "Spring" or "Both"
     const [displayCourseCategory, setDisplayCourseCategory] =
@@ -332,29 +358,146 @@ export function ViewSemester(): JSX.Element {
         "Systems and Networks"
     ];
 
+    const planSaveOptions = ["Plan 1", "Plan 2"];
+
     const handlePlans = (planSelected: string) => {
         if (planSelected === "Artificial Intelligence") {
             setPlan(AI_Plan);
             setSemesters(AI_Semesters);
             setSeePlan(true);
+            return;
         } else if (planSelected === "Cybersecurity") {
             setPlan(CYBER_Plan);
             setSemesters(CYBER_Semesters);
             setSeePlan(true);
+            return;
         } else if (planSelected === "Systems and Networks") {
             setPlan(SysNet_Plan);
             setSemesters(SysNet_Semesters);
             setSeePlan(true);
+            return;
         }
     };
+
+    function startNewSession() {
+        setPlan(blankPlan);
+        setSeePlan(false);
+        setSemesters(blankPlan.semesters);
+    }
+
+    function savePlan(option: string) {
+        if (option === "Plan 1") {
+            setPlan1(plan);
+            setPlan1SeePlan(seePlan);
+            setPlan1Semesters(semesters);
+        } else if (option === "Plan 2") {
+            setPlan2(plan);
+            setPlan2SeePlan(seePlan);
+            setPlan2Semesters(semesters);
+        }
+    }
+
+    function loadPlan(option: string) {
+        if (option === "Plan 1") {
+            setPlan(plan1);
+            setSeePlan(plan1SeePlan);
+            setSemesters(plan1Semesters);
+        } else if (option === "Plan 2") {
+            setPlan(plan2);
+            setSeePlan(plan2SeePlan);
+            setSemesters(plan2Semesters);
+        }
+    }
     //actual return for the tsx file to App.tsx
     return (
-        <div>
-            <div>
-                {/*OneorTwo()*/}
-                {/*SemCount !== 1 && displayBoth()*/}
+        <div style={{ backgroundColor: "#0f234c" }}>
+            <div className="DropdownMenu">
+                <Button
+                    onClick={startNewSession}
+                    style={{
+                        backgroundColor: "#EF5B5B",
+                        borderColor: "#922424",
+                        marginLeft: "5px",
+                        marginRight: "5px",
+                        marginTop: "5px",
+                        marginBottom: "5px",
+                        color: "black"
+                    }}
+                >
+                    Start New Plan
+                </Button>
+                <hr></hr>
                 <Dropdown>
-                    <Dropdown.Toggle id="dropdown1">
+                    <Dropdown.Toggle
+                        id="dropdown1"
+                        style={{
+                            backgroundColor: "#FFBA49",
+                            borderColor: "darkgoldenrod",
+                            marginLeft: "5px",
+                            marginRight: "5px",
+                            marginTop: "5px",
+                            marginBottom: "5px",
+                            color: "black"
+                        }}
+                    >
+                        Save Plan Into:
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu>
+                        {
+                            // eslint-disable-next-line no-extra-parens
+                            planSaveOptions.map((option, index) => (
+                                <Dropdown.Item
+                                    key={index}
+                                    onClick={() => savePlan(option)}
+                                >
+                                    {option}
+                                </Dropdown.Item>
+                            ))
+                        }
+                    </Dropdown.Menu>
+                </Dropdown>
+                <Dropdown>
+                    <Dropdown.Toggle
+                        id="dropdown2"
+                        style={{
+                            backgroundColor: "#998FC7",
+                            borderColor: "#3e3568",
+                            marginLeft: "5px",
+                            marginRight: "5px",
+                            marginTop: "5px",
+                            marginBottom: "5px",
+                            color: "black"
+                        }}
+                    >
+                        Load:
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu>
+                        {
+                            // eslint-disable-next-line no-extra-parens
+                            planSaveOptions.map((option, index) => (
+                                <Dropdown.Item
+                                    key={index}
+                                    onClick={() => loadPlan(option)}
+                                >
+                                    {option}
+                                </Dropdown.Item>
+                            ))
+                        }
+                    </Dropdown.Menu>
+                </Dropdown>
+                <Dropdown>
+                    <Dropdown.Toggle
+                        id="dropdown3"
+                        style={{
+                            backgroundColor: "#D8DBE2",
+                            borderColor: "#2c4d9b",
+                            marginLeft: "5px",
+                            marginRight: "5px",
+                            marginTop: "5px",
+                            marginBottom: "5px",
+                            color: "black"
+                        }}
+                    >
                         Pick a Plan:
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
@@ -371,15 +514,15 @@ export function ViewSemester(): JSX.Element {
                         }
                     </Dropdown.Menu>
                 </Dropdown>
-                <hr></hr>
-                {
-                    // eslint-disable-next-line no-extra-parens
-                    seePlan && (
-                        <DisplayPlan indivPlanSem={indivPlanSem}></DisplayPlan>
-                    )
-                }
             </div>
-            <hr></hr>
+            <hr style={{ backgroundColor: "#0f234c" }}></hr>
+            {
+                // eslint-disable-next-line no-extra-parens
+                seePlan && (
+                    <DisplayPlan indivPlanSem={indivPlanSem}></DisplayPlan>
+                )
+            }
+            <hr style={{ backgroundColor: "#0f234c" }}></hr>
         </div>
     );
 }
