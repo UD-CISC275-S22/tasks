@@ -2,11 +2,11 @@
 //for visualization of semesters and altering the courses within them
 
 //css files
-import "./Semester.css";
 import "../App.css";
 //react and bootstrap
 import React, { useState } from "react";
 import { Button, Dropdown, Form } from "react-bootstrap";
+import "./Semester.css";
 //our own interfaces
 import { Course } from "../Interfaces/course";
 import { Semester } from "../Interfaces/semester";
@@ -407,47 +407,94 @@ export function ViewSemester(): JSX.Element {
     }
     //actual return for the tsx file to App.tsx
     return (
-        <div>
-            <Button onClick={startNewSession}>Start Over</Button>
-            <Dropdown>
-                <Dropdown.Toggle id="dropdown1">
-                    Save Plan Into:
-                </Dropdown.Toggle>
-                <Dropdown.Menu>
-                    {
-                        // eslint-disable-next-line no-extra-parens
-                        planSaveOptions.map((option, index) => (
-                            <Dropdown.Item
-                                key={index}
-                                onClick={() => savePlan(option)}
-                            >
-                                {option}
-                            </Dropdown.Item>
-                        ))
-                    }
-                </Dropdown.Menu>
-            </Dropdown>
-            <Dropdown>
-                <Dropdown.Toggle id="dropdown2">Load:</Dropdown.Toggle>
-                <Dropdown.Menu>
-                    {
-                        // eslint-disable-next-line no-extra-parens
-                        planSaveOptions.map((option, index) => (
-                            <Dropdown.Item
-                                key={index}
-                                onClick={() => loadPlan(option)}
-                            >
-                                {option}
-                            </Dropdown.Item>
-                        ))
-                    }
-                </Dropdown.Menu>
-            </Dropdown>
-            <div>
-                {/*OneorTwo()*/}
-                {/*SemCount !== 1 && displayBoth()*/}
+        <div style={{ backgroundColor: "#0f234c" }}>
+            <div className="DropdownMenu">
+                <Button
+                    onClick={startNewSession}
+                    style={{
+                        backgroundColor: "#EF5B5B",
+                        borderColor: "#922424",
+                        marginLeft: "5px",
+                        marginRight: "5px",
+                        marginTop: "5px",
+                        marginBottom: "5px",
+                        color: "black"
+                    }}
+                >
+                    Start Over
+                </Button>
+                <hr></hr>
                 <Dropdown>
-                    <Dropdown.Toggle id="dropdown3">
+                    <Dropdown.Toggle
+                        id="dropdown1"
+                        style={{
+                            backgroundColor: "#FFBA49",
+                            borderColor: "darkgoldenrod",
+                            marginLeft: "5px",
+                            marginRight: "5px",
+                            marginTop: "5px",
+                            marginBottom: "5px",
+                            color: "black"
+                        }}
+                    >
+                        Save Plan Into:
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu>
+                        {
+                            // eslint-disable-next-line no-extra-parens
+                            planSaveOptions.map((option, index) => (
+                                <Dropdown.Item
+                                    key={index}
+                                    onClick={() => savePlan(option)}
+                                >
+                                    {option}
+                                </Dropdown.Item>
+                            ))
+                        }
+                    </Dropdown.Menu>
+                </Dropdown>
+                <Dropdown>
+                    <Dropdown.Toggle
+                        id="dropdown2"
+                        style={{
+                            backgroundColor: "#998FC7",
+                            borderColor: "#3e3568",
+                            marginLeft: "5px",
+                            marginRight: "5px",
+                            marginTop: "5px",
+                            marginBottom: "5px",
+                            color: "black"
+                        }}
+                    >
+                        Load:
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu>
+                        {
+                            // eslint-disable-next-line no-extra-parens
+                            planSaveOptions.map((option, index) => (
+                                <Dropdown.Item
+                                    key={index}
+                                    onClick={() => loadPlan(option)}
+                                >
+                                    {option}
+                                </Dropdown.Item>
+                            ))
+                        }
+                    </Dropdown.Menu>
+                </Dropdown>
+                <Dropdown>
+                    <Dropdown.Toggle
+                        id="dropdown3"
+                        style={{
+                            backgroundColor: "#D8DBE2",
+                            borderColor: "#2c4d9b",
+                            marginLeft: "5px",
+                            marginRight: "5px",
+                            marginTop: "5px",
+                            marginBottom: "5px",
+                            color: "black"
+                        }}
+                    >
                         Pick a Plan:
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
@@ -464,15 +511,15 @@ export function ViewSemester(): JSX.Element {
                         }
                     </Dropdown.Menu>
                 </Dropdown>
-                <hr></hr>
-                {
-                    // eslint-disable-next-line no-extra-parens
-                    seePlan && (
-                        <DisplayPlan indivPlanSem={indivPlanSem}></DisplayPlan>
-                    )
-                }
             </div>
-            <hr></hr>
+            <hr style={{ backgroundColor: "#0f234c" }}></hr>
+            {
+                // eslint-disable-next-line no-extra-parens
+                seePlan && (
+                    <DisplayPlan indivPlanSem={indivPlanSem}></DisplayPlan>
+                )
+            }
+            <hr style={{ backgroundColor: "#0f234c" }}></hr>
         </div>
     );
 }
