@@ -66,17 +66,20 @@ import displaySemesters from "./data/displaySemesters.json";
 import { Welcome } from "./Components/welcome";
 import { AddingCourse } from "./Components/addingCourse";
 import { AddingSemester } from "./Components/addingSemester";
-import { AddingPlan } from "./Components/plan";
+import { AddingPlan } from "./Components/addingPlan";
 import { ClearCourse } from "./Components/clearingCourse";
 import { ClearSemester } from "./Components/clearingSemester";
 import { ClearingPlan } from "./Components/clearingPlan";
-import { ViewCourses } from "./Components/course";
-import { ViewSemester } from "./Components/Semester";
+import { ViewCourses } from "./Components/ViewCourses";
+import { ViewSemester } from "./Components/ViewSemester";
 import { courseOrigin } from "./Components/courseOrigin";
+import { EditingSemester } from "./Components/EditingSemester";
 
 import { Course } from "./Interfaces/course";
 import { Semester } from "./Interfaces/semester";
 import { Plan } from "./Interfaces/plan";
+import { PoolingObjects } from "./Interfaces/poolingObjects";
+import { MultiSemester } from "./Components/multiSemester";
 
 const SemesterFinal = displaySemesters.map(
     (semester): Semester => ({
@@ -118,7 +121,8 @@ function App(): JSX.Element {
 
     const [plan, settingPlan] = useState<Plan>(planList[0]);
     const [addingMod, settingAddingMod] = useState(false);
-    function addingSemester(newSemester: Semester) {
+    
+    function settingSemester(newSemester: Semester) {
         const origin = plan.semesters.find(
             (semester: Semester): boolean => semester.id === newSemester.id
         );
@@ -128,7 +132,7 @@ function App(): JSX.Element {
         }
     }
 
-    function clearingSemester(id: number) {
+    function clearSemesterCourses(id: number) {
         const newPlan: Plan = {
             ...plan,
             semesters: plan.semesters.filter(
@@ -140,13 +144,50 @@ function App(): JSX.Element {
             planList.map((p: Plan): Plan => (p.id === newPlan.id ? newPlan : p))
         );
     }
+
+    function editingSemester(plan: Plan) {
+        settingPlanList(planList.map((p: Plan): Plan => (p.id === plan.id ? plan : p )));
+    }
     //constants for welcome message button/modal
-    //const [displayWelcomeMessage, displayWelcomeModal] = useState(true);
-    //const welcomeMessage = () => displayWelcomeModal(false);
-    //const welcomeMessageModal = () => displayWelcomeModal(true);
+    //const [displayWelcomeMessage, displayWelcome] = useState(true);
+    //const welcomeMessage = () => displayWelcome(false);
+    //const welcomeMessage = () => displayWelcome(true);
 
     type CourseRecord = Record<string, Record<string, Course>>;
-    const AllCourseLst: CourseRecord = AllCoursesList;
+    const ALLCOURSELST: CourseRecord = AllCoursesList;
+    const poolingObj: PoolingObjects = {
+        courses: ALLCOURSELST,
+        semesters: plan.semesters
+    };
+
+    //Displaying and Closing Semester Mod Constants
+    const handleCloseAddSemMod = () => settingAddingMod(false);
+    const handleShowAddSemMod = () => settingAddingMod(true);
+
+    //Displaying and Closing AddPlan Mod Constants
+    const [showingPlan, settingShowPlan] = useState(false);
+    const handleShowPlan = () => settingShowPlan(true);
+    const handleCloseShowPlan = () => settingShowPlan(false);
+
+    //Displaying and Closing AddPlan Mod Constants
+    const [addingPlan, settingAddPlan] = useState(false);
+    const handleShowAddPlan = () => settingAddPlan(true);
+    const handleCloseAddPlan = () => settingAddPlan(false);
+    
+    //Displaying and Closing ClearPlan Mod Constants
+    const [clearingPlan, settingClearPlan] = useState(false);
+    const handleShowClearPlan = () => settingClearPlan(true);
+    const handleCloseClearPlan = () => settingClearPlan(false);
+
+    //Displaying and Closing RemovePlan Mod Constants
+    const [removingPlan, settingRemovePlan] = useState(false);
+    const handleShowRemovePlan = () => settingRemovePlan(true);
+    const handleCloseRemovePlan = () => settingRemovePlan(false);
+
+    //Displaying and Closing EditPlan Mod Constants
+    const [editingPlan, settingEditingPlan] = useState(false);
+    const handleShowEditingPlan = () => settingEditingPlan(true);
+    const handleCloseEditingPlan = () => settingEditingPlan(false);
 
     return (
         <div className="App">
@@ -158,32 +199,105 @@ function App(): JSX.Element {
                 <h6>Malika Iyer</h6>
                 <h6>Dina Dawood</h6>
             </header>
-            <hr></hr>
-            {/*This is the collaspe button*/}
-            <button
-                type="button"
-                className="btn btn-info "
-                data-bs-toggle="collapse"
-                data-bs-target="#welcome_message"
-            >
-                Need Help❓
-            </button>
-            <hr></hr>
-            {/*When the button is clicked the message collapses*/}
-            <div id="welcome_message" className="collapse">
+
+            <div>
                 <p>
-                    Welcome to your personal Degree Planner! Some basic tools
-                    have been designed to make your visit accessible to your
-                    needs; this includes creating new plans from scratch and/or
-                    compiling data from a csv file. You will be able to add,
-                    remove, edit, and save various courses/semesters in a
-                    multitude of plans. Scroll to the bottom of the page for
-                    more instructions (will enhance later by making an
-                    expandable/disposable button near the top of the page).
+                    <Welcome></Welcome>
                 </p>
             </div>
 
-            <hr></hr>
+            <Row>
+                <Col>
+                    <header>
+                        <b>{plan.title}</b>
+                    </header>
+                    </Row>
+                    <Button
+                        onClick={handleShowAddPlan} data-testid="addingPlanMod"> Add Plan
+                    </Button>
+                    <AddingPlan
+                        show={addingPlan} handleClose={handleCloseAddPlan} plans={planList} settingPlan={settingPlan} settingPlans={settingPlanList}
+                    ></AddingPlan>
+
+                    <Button
+                        onClick={handleShowPlan} data-testid="switchingBTWPlansMod"
+                    >
+                        Switch Plan
+                    </Button>
+                    {/* <SwitchPlan>
+                        show={showingPlan} 
+                        handleClose={handleCloseShowPlan} 
+                        plan={plan} 
+                        settingPlan={settingPlan}
+                        plans={settingPlanList} 
+                    </SwitchPlan> */}
+                    <MultiSemester
+                        currentPlan={plan}
+                        plans={planList}
+                        settingPlan={settingPlan}
+                        settingPlans={settingPlanList}
+                        editingSemester={editingSemester}
+                        clearSemesterCourses={clearSemesterCourses}
+                    ></MultiSemester>
+                    <Row>
+                        <Col>
+                            <Button
+                                onClick={handleShowAddSemMod} data-testid="addingSemMod"
+                            >
+                                Add Semester
+                            </Button>
+                            <AddingSemester
+                                show={handleShowAddSemMod}
+                                handleClose={handleCloseAddSemMod}
+                                settingSemester={settingSemester}
+                            ></AddingSemester>
+                            
+                            <Button
+                                onClick={handleShowClearPlan} data-testid="clearPlanMod"
+                            >
+                                Clear Plan
+                            </Button>
+                            <ClearingPlan
+                                show={clearingPlan}
+                                handleClose={handleCloseClearPlan}
+                                plan={plan}
+                                settingPlan={settingPlan}
+                                plans={planList}
+                                settingPlans={settingPlanList}
+                            ></ClearingPlan>
+
+                            <Button
+                                onClick={handleShowRemovePlan} data-testid="removingPlanMod"
+                            >
+                                Remove Plan
+                            </Button>
+                            {/* <RemovingPlan>
+                                show={removingPlan}
+                                handleClose={handleCloseRemovePlan}
+                                plan={plan}
+                                settingPlan={settingPlan}
+                                plans={planList}
+                                settingPlans={settingPlanList}
+                            </RemovingPlan> */}
+
+                            <Button
+                                onClick={handleShowEditingPlan} data-testid="editingPlanMod"
+                            >
+                                Edit Plan
+                            </Button>
+                            {/* <EditingPlan
+                                show={handleShowEditingPlan}
+                                handleClose={handleCloseEditingPlan}
+                                plan={plan}
+                                settingPlan={settingPlan}
+                                plans={planList}
+                                settingPlans={settingPlanList}
+                            ></EditingPlan> */}
+
+                        </Col>
+                    </Row>
+                </Col>
+            </Row>
         </div>
     );
 }
