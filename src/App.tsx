@@ -14,7 +14,14 @@ function App(): JSX.Element {
         setModalIsOpen(false);
     };
     useState<number>(-1);
-    const defaultPlan = defaultPlans.defaultPlans;
+    const defaultPlan: plan[] = defaultPlans.defaultPlans.map((item) => ({
+        id: item.id,
+        name: item.name,
+        year: 2023,
+        season: "Fall",
+        semesters: item.semesters,
+        courses: []
+    }));
     const [degreePlans, setDegreePlans] = useState<plan[]>(defaultPlan);
     return (
         <div className="App">
