@@ -58,9 +58,19 @@ export function ViewSemester(): JSX.Element {
     );
     const [plan1SeePlan, setPlan1SeePlan] = useSessionStorage(
         "plan1SeePlan",
-        true
+        false
+    );
+    const [plan2, setPlan2] = useSessionStorage("plan2", blankPlan);
+    const [plan2Semesters, setPlan2Semesters] = useSessionStorage(
+        "plan2Semesters",
+        plan2.semesters
+    );
+    const [plan2SeePlan, setPlan2SeePlan] = useSessionStorage(
+        "plan2SeePlan",
+        false
     );
 
+    //while in the working session itself
     const [plan, setPlan] = useSessionStorage("seePlan", AI_Plan); //The default plan (for now)
     const [seePlan, setSeePlan] = useSessionStorage("seePlan", false); //default is you cant see any plan (until a user selects one)
     const [semesters, setSemesters] = useSessionStorage(
@@ -377,6 +387,10 @@ export function ViewSemester(): JSX.Element {
             setPlan1(plan);
             setPlan1SeePlan(seePlan);
             setPlan1Semesters(semesters);
+        } else if (option === "Plan 2") {
+            setPlan2(plan);
+            setPlan2SeePlan(seePlan);
+            setPlan2Semesters(semesters);
         }
     }
 
@@ -385,6 +399,10 @@ export function ViewSemester(): JSX.Element {
             setPlan(plan1);
             setSeePlan(plan1SeePlan);
             setSemesters(plan1Semesters);
+        } else if (option === "Plan 2") {
+            setPlan(plan2);
+            setSeePlan(plan2SeePlan);
+            setSemesters(plan2Semesters);
         }
     }
     //actual return for the tsx file to App.tsx
