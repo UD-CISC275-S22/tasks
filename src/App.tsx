@@ -3,7 +3,7 @@ import Modal from "react-modal";
 import "./App.css";
 import { plan } from "./PlannerInterfaces/plan";
 import { Plan } from "./Plan";
-import DefaultPlans from "./Defaults.json";
+import defaultPlans from "./Defaults.json";
 
 function App(): JSX.Element {
     const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -14,7 +14,7 @@ function App(): JSX.Element {
         setModalIsOpen(false);
     };
     useState<number>(-1);
-    const defaultPlan = DefaultPlans.defaultPlans;
+    const defaultPlan = defaultPlans.defaultPlans;
     const [degreePlans, setDegreePlans] = useState<plan[]>(defaultPlan);
     return (
         <div className="App">
@@ -108,5 +108,4 @@ function App(): JSX.Element {
         </div>
     );
 }
-
 export default App;
