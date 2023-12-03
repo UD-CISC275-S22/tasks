@@ -16,6 +16,7 @@ import { courseList, defaultCourseList } from "./course";
 import { AI } from "./AI_Plan";
 import { Cyber } from "./Cyber_Plan";
 import { SysNet } from "./SysNet_Plan";
+import { Data } from "./Data_Plan";
 
 //modals
 import { DisplayFall } from "./DisplayFall";
@@ -43,9 +44,12 @@ import { DropAdd } from "./dropAdd";
 const AI_Plan = AI(); //the actual AI plan itself
 const CYBER_Plan = Cyber();
 const SysNet_Plan = SysNet();
+const Data_Plan = Data();
+
 const AI_Semesters = AI_Plan.semesters; //the semesters for the AI plan
 const CYBER_Semesters = CYBER_Plan.semesters;
 const SysNet_Semesters = SysNet_Plan.semesters;
+const Data_Semesters = Data_Plan.semesters;
 
 const DEFAULT_COURSE = AI_Semesters[0].courseList[0].title;
 
@@ -344,6 +348,10 @@ export function ViewSemester(): JSX.Element {
         } else if (planSelected === "Systems and Networks") {
             setPlan(SysNet_Plan);
             setSemesters(SysNet_Semesters);
+            setSeePlan(true);
+        } else if (planSelected === "Data Science") {
+            setPlan(Data_Plan);
+            setSemesters(Data_Semesters);
             setSeePlan(true);
         }
     };
