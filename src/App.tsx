@@ -67,26 +67,26 @@ import { Welcome } from "./Components/welcome";
 import { AddingCourse } from "./Components/addingCourse";
 import { AddingSemester } from "./Components/addingSemester";
 import { AddingPlan } from "./Components/addingPlan";
-import { ClearCourse } from "./Components/clearingCourse";
+import { ClearCourse } from "./Components/removingCourse";
 import { ClearSemester } from "./Components/clearingSemester";
 import { ClearingPlan } from "./Components/clearingPlan";
 import { ViewCourses } from "./Components/ViewCourses";
 import { ViewSemester } from "./Components/ViewSemester";
-import { courseOrigin } from "./Components/courseOrigin";
+import { CourseOrigin } from "./Components/courseOrigin";
 import { EditingSemester } from "./Components/EditingSemester";
+import { MultiSemester } from "./Components/multiSemester";
+import { SwitchSemester } from "./Components/switchingSemesters";
 
 import { Course } from "./Interfaces/course";
 import { Semester } from "./Interfaces/semester";
 import { Plan } from "./Interfaces/plan";
 import { PoolingObjects } from "./Interfaces/poolingObjects";
-import { MultiSemester } from "./Components/multiSemester";
 
 const SemesterFinal = displaySemesters.map(
     (semester): Semester => ({
         ...semester,
         courseList: semester.courseList.map(
             (course): Course => ({
-                id: course.id,
                 title: course.title,
                 name: course.name,
                 description: course.description,
@@ -271,28 +271,28 @@ function App(): JSX.Element {
                             >
                                 Remove Plan
                             </Button>
-                            {/* <RemovingPlan>
+                            <RemovingPlan>
                                 show={removingPlan}
                                 handleClose={handleCloseRemovePlan}
                                 plan={plan}
                                 settingPlan={settingPlan}
                                 plans={planList}
                                 settingPlans={settingPlanList}
-                            </RemovingPlan> */}
+                            </RemovingPlan>
 
                             <Button
                                 onClick={handleShowEditingPlan} data-testid="editingPlanMod"
                             >
                                 Edit Plan
                             </Button>
-                            {/* <EditingPlan
+                            <EditingPlan
                                 show={handleShowEditingPlan}
                                 handleClose={handleCloseEditingPlan}
                                 plan={plan}
                                 settingPlan={settingPlan}
                                 plans={planList}
                                 settingPlans={settingPlanList}
-                            ></EditingPlan> */}
+                            ></EditingPlan>
 
                         </Col>
                     </Row>
