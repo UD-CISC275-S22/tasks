@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 //import React from "react";
 import {
     CoursePlan,
@@ -7,9 +8,9 @@ import {
     yearI
 } from "./interfaces/semester";
 import { Course } from "./interfaces/course";
-//import { v4 as uuidv4 } from "uuid";
-//import { Year } from "./viewCourseComponents";
-//import { CreateCoursePlan } from "./CreateCoursePlan";
+import { v4 as uuidv4 } from "uuid";
+import { Year } from "./viewCourseComponents";
+import { CreateCoursePlan } from "./CreateCoursePlan";
 
 // export function CreatCoursePlan(uuid: string, DB: TotalDB) {}
 // export function deleteCoursePlan() {}
