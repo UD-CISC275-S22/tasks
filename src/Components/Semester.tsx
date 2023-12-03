@@ -8,15 +8,18 @@ import "../App.css";
 import React, { useState } from "react";
 import { Button, Dropdown, Form } from "react-bootstrap";
 //our own interfaces
+
 import { Course } from "../Interfaces/course";
 import { Semester } from "../Interfaces/semester";
 import { Plan } from "../Interfaces/plan";
+
 //individual constants
 import { courseList, defaultCourseList } from "./course";
 import { AI } from "./AI_Plan";
 import { Cyber } from "./Cyber_Plan";
 import { SysNet } from "./SysNet_Plan";
 import { Data } from "./Data_Plan";
+import { Theory } from "./Theory_Plan";
 
 //modals
 import { DisplayFall } from "./DisplayFall";
@@ -24,6 +27,7 @@ import { DisplayWinter } from "./DisplayWinter";
 import { DisplaySpring } from "./DisplaySpring";
 import { DisplaySummer } from "./DisplaySummer";
 import { DisplayPlan } from "./DisplayPlan";
+
 //functions and other imports
 import sample from "../data/AllCourseList.json";
 import CourseEdit from "./CourseEdit";
@@ -45,11 +49,13 @@ const AI_Plan = AI(); //the actual AI plan itself
 const CYBER_Plan = Cyber();
 const SysNet_Plan = SysNet();
 const Data_Plan = Data();
+const Theory_Plan = Theory();
 
 const AI_Semesters = AI_Plan.semesters; //the semesters for the AI plan
 const CYBER_Semesters = CYBER_Plan.semesters;
 const SysNet_Semesters = SysNet_Plan.semesters;
 const Data_Semesters = Data_Plan.semesters;
+const Theory_Semesters = Theory_Plan.semesters;
 
 const DEFAULT_COURSE = AI_Semesters[0].courseList[0].title;
 
@@ -333,7 +339,9 @@ export function ViewSemester(): JSX.Element {
     const planOptions = [
         "Artificial Intelligence",
         "Cybersecurity",
-        "Systems and Networks"
+        "Systems and Networks",
+        "Data Science",
+        "Theory and Computation"
     ];
 
     const handlePlans = (planSelected: string) => {
@@ -352,6 +360,10 @@ export function ViewSemester(): JSX.Element {
         } else if (planSelected === "Data Science") {
             setPlan(Data_Plan);
             setSemesters(Data_Semesters);
+            setSeePlan(true);
+        } else if (planSelected === "Theory and Computation") {
+            setPlan(Theory_Plan);
+            setSemesters(Theory_Semesters);
             setSeePlan(true);
         }
     };
