@@ -1,14 +1,15 @@
-import React, { useEffect } from "react";
+/* eslint-disable no-extra-parens */
+import React from "react"; //, {useEffect}
 import { useState } from "react";
 import "./App.css";
-import { MulitCourseplan, Year } from "./viewCourseComponents";
+import { MulitCourseplan } from "./viewCourseComponents";
 import { CoursePlan, TotalDB, dbMangement, yearI } from "./interfaces/semester";
 import { EditCourseModal } from "./EditModal";
 import { Course } from "./interfaces/course";
 //import { AddCourseModal } from "./AddCourseModal";
 //import { ClearCourseModal } from "./ClearCourseModal";
 import coursePlanData from "./data/couresplans.json";
-import { Container } from "react-bootstrap";
+//import { Container } from "react-bootstrap";
 import { v4 as uuidv4 } from "uuid";
 //import { CreateCoursePlan } from "./CreateCoursePlan";
 import { CoureseplansBoot } from "./NewCoursePlan";
@@ -73,23 +74,20 @@ function App(): JSX.Element {
         setEdit(course);
         updateEditMogal(true);
     }
-    const handleCreatePlan = () => {
-        console.log(" create button clicked");
-    };
 
     const handleImportCSV = () => {
         console.log("Import csv button clicked");
     };
-    function EditModal(cousePlan: CoursePlan) {
-        console.log("edit");
-    }
+
     function setNewCourse(curCourse: Course) {
         if (EditCorseplan) {
+            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
             updateCourse(DbManager, curCourse, curCourse.UUID!);
         } else {
             setEditCoursePlan({
                 ...currentEditCoureplan,
                 years: currentEditCoureplan.years.map((currentYear: yearI) =>
+                    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
                     oneYearUpdate(currentYear, curCourse.UUID!, curCourse)
                 )
             });
@@ -139,10 +137,13 @@ function App(): JSX.Element {
                     />
                 ) : (
                     <CoureseplansBoot
-                        updateCoursePlan={EditModal}
+                        //updateCoursePlan={EditModal}
                         setCourseEdit={setCurrentCourseEdit}
                         curCoursePlan={currentEditCoureplan}
                         setEditCoursePlan={setEditCoursePlan}
+                        updateCoursePlan={function (): void {
+                            throw new Error("Function not implemented.");
+                        }}
                     />
                 )}
             </div>
