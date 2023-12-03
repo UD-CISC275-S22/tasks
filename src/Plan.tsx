@@ -1,4 +1,4 @@
-/*eslint-disable no-extra-parens*/
+/* eslint-disable no-extra-parens */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
@@ -15,7 +15,8 @@ export function Plan({
     setDegreePlans: (newDegreePlans: plan[]) => void;
     currentPlan: plan;
 }): JSX.Element {
-    const [degreeReqView, toggleDegreeReqView] = useState(false);
+    //AAAAAAAAAAAAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+    //const [degreeReqView, toggleDegreeReqView] = useState(false);
     const [plan, setPlan] = useState<plan>({ ...currentPlan });
     const [edit, setEdit] = useState<boolean>(false);
 
@@ -63,7 +64,7 @@ export function Plan({
                 {
                     id: "",
                     name: "New Semester",
-                    year: 2022,
+                    year: 2023,
                     courses: [],
                     season: ""
                 }
@@ -128,7 +129,7 @@ export function Plan({
                 Add Semester
             </Button>
             {/* <Button className="btnadd" onClick={() => saveChanges()}>
-                Save Plan Changes
+                Save Changes
             </Button> */}
             <Button className="btncancel" onClick={() => clearAllSemesters()}>
                 Delete All Semesters
