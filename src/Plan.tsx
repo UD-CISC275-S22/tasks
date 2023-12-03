@@ -1,4 +1,4 @@
-/* eslint-disable no-extra-parens */
+/*eslint-disable no-extra-parens*/
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
@@ -15,7 +15,7 @@ export function Plan({
     setDegreePlans: (newDegreePlans: plan[]) => void;
     currentPlan: plan;
 }): JSX.Element {
-    //const [degreeReqView, toggleDegreeReqView] = useState(false);
+    const [degreeReqView, toggleDegreeReqView] = useState(false);
     const [plan, setPlan] = useState<plan>({ ...currentPlan });
     const [edit, setEdit] = useState<boolean>(false);
 
