@@ -141,25 +141,31 @@ export function DisplaySemester({
         );
     }
 
+    function makeID(): string {
+        return courseID;
+    }
     function addCourse() {
-        // const newCourse = {
-        //     id: courseID,
-        //     name: name,
-        //     credits: credits,
-        //     courseId: courseID,
-        //     preReq: preReq
-        // };
-        // const newSemester = plan.semesters.map(
-        //     (semester: semester): semester =>
-        //         semester.id === semester.id
-        //             ? { ...semester, courses: [...semester.courses, newCourse] }
-        //             : { ...semester }
-        // );
-        // updatePlan({ ...plan, semesters: newSemester });
-        // toggleModal();
-        // setcourseID("");
-        // setCredits(0);
-        // setName("");
+        const newCourse: course = {
+            id: makeID(),
+            name: name,
+            credits: credits,
+            courseID: courseID,
+            preReq: preReq
+        };
+
+        const updatedPlan: plan = {
+            ...plan,
+            semesters: plan.semesters.map((sem: semester) =>
+                sem.id === semester.id
+                    ? { ...sem, courses: [...sem.courses, newCourse] }
+                    : { ...sem }
+            )
+        };
+        updatePlan(updatedPlan);
+        toggleModal();
+        setcourseID("");
+        setCredits(0);
+        setName("");
     }
     //Edits the name of the semester
     function editSemName(event: React.ChangeEvent<HTMLInputElement>) {
