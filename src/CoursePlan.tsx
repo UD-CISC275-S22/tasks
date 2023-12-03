@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "./App.css";
 ///import { Button } from "react-bootstrap";
 import { data } from "./classData";
-import { Button, Form, Table } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import { course } from "./PlannerInterfaces/course";
 import { plan } from "./PlannerInterfaces/plan";
 import { semester } from "./PlannerInterfaces/semester";
@@ -17,58 +17,7 @@ const courseList = data.map(
         preReq: course.preReq
     })
 );
-interface CourseTableProps {
-    data: course[]; // Define the 'data' prop
-}
 
-const CourseTable: React.FC<CourseTableProps> = ({ data }) => {
-    const [courses, setCourses] = useState<course[]>(data);
-
-    const handleDelete = (id: number | string) => {
-        const updatedCourses = courses.filter(
-            (course) => course.id !== String(id)
-        );
-        setCourses(updatedCourses);
-    };
-    //test
-
-    return (
-        <div>
-            <h2>Course Table</h2>
-            <Table striped bordered hover>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Credits</th>
-                        <th>Prerequisites</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {courses.map((course) => (
-                        <tr key={course.id}>
-                            <td>{course.id}</td>
-                            <td>{course.name}</td>
-                            <td>{course.credits}</td>
-                            <td>{course.preReq}</td>
-                            <td>
-                                <Button
-                                    variant="danger"
-                                    onClick={() => handleDelete(course.id)}
-                                >
-                                    Delete
-                                </Button>
-                            </td>
-                        </tr>
-                    ))}
-                </tbody>
-            </Table>
-        </div>
-    );
-};
-
-export default CourseTable;
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function DisplayCourse({
     defaultCourse,
@@ -83,10 +32,11 @@ export function DisplayCourse({
 }): JSX.Element {
     //set/edit courseID
     const [courseID, setCourseID] = useState<string>(defaultCourse.courseID);
-    const [isEditing, setIsEditing] = useState<boolean>(false);
-    const [credits, setCredits] = useState<number>(defaultCourse.credits);
-    const [name, setName] = useState<string>(defaultCourse.name);
-    const [preReqs, setPreReqs] = useState<string>(defaultCourse.preReq);
+    const [isEditing, setIsEditing] = useState<boolean>(false); //If editing course info or not
+    const [credits, setCredits] = useState<number>(defaultCourse.credits); //Credit editing
+    const [name, setName] = useState<string>(defaultCourse.name); //name editing
+    const [preReqs, setPreReqs] = useState<string>(defaultCourse.preReq); //PreReq editing
+
     //Saves changes to use for Plan
     function editCourse(course: course) {
         const replace = semester.courses.findIndex(
