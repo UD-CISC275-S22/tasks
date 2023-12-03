@@ -1,8 +1,8 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 //import React from "react";
 import {
     CoursePlan,
     SemesterI,
-    TotalDB,
     dbMangement,
     seasonT,
     yearI
@@ -173,6 +173,7 @@ export function AddCourseToSemester(
                             ? ({
                                   ...year[season],
                                   courses: [
+                                      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
                                       ...year[season]!.courses,
                                       ...NCourses
                                   ]

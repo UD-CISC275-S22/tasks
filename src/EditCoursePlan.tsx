@@ -1,17 +1,13 @@
+/* eslint-disable no-extra-parens */
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import React, { useState } from "react";
-import {
-    Accordion,
-    AccordionHeader,
-    Button,
-    ButtonGroup,
-    Table
-} from "react-bootstrap";
-import { CoursePlan, SemesterI, seasonT, yearI } from "./interfaces/semester";
+import { Button, ButtonGroup, Table } from "react-bootstrap";
+import { CoursePlan, SemesterI, yearI } from "./interfaces/semester";
 import { Course } from "./interfaces/course";
 //import React, { useState } from "react";
 import "./App.css";
-import { ClearCourseModal } from "./ClearCourseModal";
-import { AddCourseModal } from "./AddCourseModal";
+//import { ClearCourseModal } from "./ClearCourseModal";
+//import { AddCourseModal } from "./AddCourseModal";
 import { UpdateCoureplanYear, removeSemesterYear } from "./DBmanage";
 import { AddSemesterModal } from "./AddSemesterModal";
 //import { JsxAttribute } from "typescript";
@@ -82,6 +78,7 @@ function Year({
     updateYear: (updateYear: yearI) => void;
     addSemesterToYear: () => void;
 }): JSX.Element {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     function DisplaySemester(year: yearI, index: number): SemesterI | null {
         const seasons: SemesterI[] = [];
 
