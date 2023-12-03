@@ -23,11 +23,6 @@ function App(): JSX.Element {
                 James Lloyd, Kerry Ferguson, Matthew Conlon, Caleb Sachetti,
                 Arnav Baliyan
             </p>
-            <Plan
-                degreePlans={degreePlans}
-                setDegreePlans={setDegreePlans}
-                currentPlan={degreePlans[0]}
-            ></Plan>
             <div>
                 <button
                     id="openModalBtn"
@@ -97,8 +92,12 @@ function App(): JSX.Element {
                     </div>
                 </Modal>
             </div>
+            <Plan
+                degreePlans={degreePlans}
+                setDegreePlans={setDegreePlans}
+                currentPlan={degreePlans[0]}
+            ></Plan>
         </div>
     );
 }
-//send help :(
 export default App;

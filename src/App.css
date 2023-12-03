@@ -13,6 +13,7 @@
     }
 }
 
+/*header*/
 .App-header {
     width: 100%;
     background-color: #0000ff;
@@ -40,6 +41,7 @@
     }
 }
 
+/*modal*/
 .ReactModal__Overlay {
     display: flex;
     align-items: center;
@@ -63,6 +65,7 @@
 
 .modal-content {
     position: relative;
+    z-index: 1;
 }
 
 .close {
@@ -90,6 +93,7 @@ tr:nth-child(even) {
     background-color: #dddddd;
 }
 
+/*linear background*/
 body {
     background: linear-gradient(to right, #2547f3, rgb(230, 247, 46));
     background-size: 400% 400%;
@@ -106,4 +110,21 @@ body {
     100% {
         background-position: 0% 50%;
     }
+}
+
+/*buttons*/
+#openModalBtn {
+    color: #000000;
+    background: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    border: rgba(0, 0, 0, 0.5);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+#openModalBtn:hover {
+    background: rgb(200, 200, 200);
 }
