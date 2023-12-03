@@ -1,3 +1,5 @@
+/* eslint-disable no-extra-parens */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
 import { Accordion, AccordionHeader, Table } from "react-bootstrap";
 import { CoursePlan, SemesterI, yearI } from "./interfaces/semester";
