@@ -63,7 +63,7 @@ export function Plan({
                 {
                     id: "",
                     name: "New Semester",
-                    year: 2022,
+                    year: 2023,
                     courses: [],
                     season: ""
                 }
