@@ -18,6 +18,7 @@ import { Cyber } from "./Plans/Cyber_Plan";
 import { SysNet } from "./Plans/SysNet_Plan";
 import { useSessionStorage } from "./useSessionStorage";
 import { blankPlan } from "./Plans/plan";
+import { blankSemester } from "./Plans/plan";
 
 //modals
 import { DisplayFall } from "./DisplayFall";
@@ -379,7 +380,9 @@ export function ViewSemester(): JSX.Element {
     };
 
     function startNewSession() {
+        setPlan(blankPlan);
         setSeePlan(false);
+        setSemesters(blankPlan.semesters);
     }
 
     function savePlan(option: string) {
@@ -421,7 +424,7 @@ export function ViewSemester(): JSX.Element {
                         color: "black"
                     }}
                 >
-                    Start Over
+                    Start New Plan
                 </Button>
                 <hr></hr>
                 <Dropdown>
