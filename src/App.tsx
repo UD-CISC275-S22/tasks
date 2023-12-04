@@ -85,6 +85,19 @@ function App(): JSX.Element {
     function pushCurrList(classesUsed: classes[][]) {
         setUsedClasses(classesUsed);
     }
+    const handleLogout = () => {
+        // console.log(page);
+        // setPage(!page);
+        // console.log("Logging out...");
+        // console.log(page);
+        signOut(auth)
+            .then(() => {
+                console.log("Sign Out was Successful");
+                //onLogout();
+                showHomePage();
+            })
+            .catch((error) => console.log(error));
+    };
 
     /*
     const planExamples = sample.map(
@@ -214,8 +227,8 @@ function App(): JSX.Element {
                                 seeSemesterView={seeSemesterView}
                                 semesterExamples={semesters}
                                 setSemesters={setSemesters}
+                                currentPlan={currentPlan}
                             ></SwitchComponents>
-
                             <SeeAuditPage
                                 canView={majorPageView}
                                 reqList={degreeRequirements}
