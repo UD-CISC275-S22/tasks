@@ -7,7 +7,7 @@ import { blankCourse, fall1, spring1, fall2, spring2 } from "./plan";
 export function AI(): Plan {
     //plan fields
     const title = "BS Computer Science";
-    const concentration = "Artificial Intelligence and Robotics Concentration";
+    const concentration = "Artificial Intelligence and Robotics";
     const id = 0;
 
     //making the courses for each semester in each year (whole 4 year plan)
