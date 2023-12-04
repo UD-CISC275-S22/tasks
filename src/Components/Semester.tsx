@@ -51,10 +51,6 @@ import { DropAdd } from "./dropAdd";
 // const COURSE_LIST = courseList; //list of all the courses
 const AI_Plan = AI(); //the actual AI plan itself
 const CYBER_Plan = Cyber();
-<<<<<<< HEAD
-const AI_Semesters = AI_Plan.semesters; //the semesters for the AI plan
-const CYBER_Semesters = CYBER_Plan.semesters;
-=======
 const SysNet_Plan = SysNet();
 const Data_Plan = Data();
 const Theory_Plan = Theory();
@@ -68,7 +64,6 @@ const Data_Semesters = Data_Plan.semesters;
 const Theory_Semesters = Theory_Plan.semesters;
 const High_Semesters = High_Plan.semesters;
 const Bio_Semesters = Bio_Plan.semesters;
->>>>>>> 00d263499238433b2803086a974662043b4b111d
 
 const DEFAULT_COURSE = AI_Semesters[0].courseList[0].title;
 
@@ -103,7 +98,8 @@ export function ViewSemester(): JSX.Element {
     const DEFAULT_COURSE = AI_Semesters[0].courseList[0].title;
     const [currCourse, setCurrCourse] = useState<string>(DEFAULT_COURSE);
     const [SemesterType, setSemesterType] = useState<string>("Fall"); //can be "Fall", "Spring" or "Both"
-    const [changingSem, setChangingSem] = useState<Semester>(AI_Semesters[0]);
+    const [displayCourseCategory, setDisplayCourseCategory] =
+        useState<string>("AllCourses");
 
     const [SemCount, setSemCount] = useState<number>(2); //default shows 2 semesters
 
@@ -119,6 +115,11 @@ export function ViewSemester(): JSX.Element {
     //Here is where you can add your add courses and remove courses functions
     function updateCurrCourse(event: React.ChangeEvent<HTMLSelectElement>) {
         setCurrCourse(event.target.value);
+    }
+    function updateDisplayCourseCat(
+        event: React.ChangeEvent<HTMLInputElement>
+    ) {
+        setDisplayCourseCategory(event.target.value);
     }
 
     function index(year: number, sem: string): number {
@@ -235,7 +236,7 @@ export function ViewSemester(): JSX.Element {
         const newClasses = newSemester[idx].courseList.filter(
             (course: Course) => currCourse !== course.title
         );
-        newSemester[idx].courseList = [...newClasses];
+        newSemester[idx].courseList = newClasses;
         // looks through the course list in the current semester and filters out the
         // course with the same "Title" as the state "currCourse"
         // **refer to "currCourse" documentation for more info **
@@ -260,12 +261,10 @@ export function ViewSemester(): JSX.Element {
         );
 
         if (exists !== -1) {
-            newSemester[idx].courseList = [
-                ...newSemester[idx].courseList,
-                choice
-            ];
+            newClasses.push(choice);
         }
 
+        newSemester[idx].courseList = newClasses;
         setSemesters({ ...newSemester });
     }
 
