@@ -6,7 +6,6 @@ import ClassIcon from "@mui/icons-material/Class";
 import ChecklistIcon from "@mui/icons-material/Checklist";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import List from "@mui/icons-material/List";
-import AuthDetails from "../AuthDetails";
 import { Logout } from "@mui/icons-material";
 
 export function SideNav2({
