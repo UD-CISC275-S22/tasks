@@ -7,4 +7,5 @@ export interface Course {
     restrict: string;
     breadth: string;
     typ: string;
+    original?: Course;
 }

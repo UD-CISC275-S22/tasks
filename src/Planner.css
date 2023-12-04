@@ -12,6 +12,15 @@ table {
     margin-top: 10px;
 }
 
+.arrow-icon {
+    display: inline-block;
+    transition: transform 0ms;
+}
+
+.rotate {
+    transform: rotate(90deg);
+}
+
 th,
 td {
     border: 1px solid #ddd;
