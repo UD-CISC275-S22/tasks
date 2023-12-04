@@ -446,6 +446,7 @@ export function ViewSemester(): JSX.Element {
             setSemesters(plan2Semesters);
         }
     }
+
     //actual return for the tsx file to App.tsx
     return (
         <div style={{ backgroundColor: "#0f234c" }}>
