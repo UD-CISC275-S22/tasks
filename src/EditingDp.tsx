@@ -8,23 +8,25 @@ import { Course } from "./interfaces/course";
 import { Semester } from "./interfaces/semester";
 import { courseList } from "./courseList";
 
-export function AddDpSemestersCoursesModal({
+export function EditingDp({
     show,
     handleClose,
-    addDp
+    dp,
+    editDp
 }: {
     show: boolean;
     handleClose: () => void;
-    addDp: (newdp: DegreePlan) => void;
+    dp: DegreePlan;
+    editDp: (id: number, newdp: DegreePlan) => void;
 }): JSX.Element {
-    const [semesters, setSemesters] = useState<Semester[]>([]);
+    const [semesters, setSemesters] = useState<Semester[]>(dp.semestersList);
     const [selectedSemester, setSelectedSemester] = useState<string>("Fall");
-    const [title, setTitle] = useState<string>("Example Title");
+    const [title, setTitle] = useState<string>(dp.title);
     const [selectedSemesterId, setSelectedSemesterId] = useState<number | null>(
         null
     );
-
     const [selectedCourseCode, setSelectedCourseCode] = useState<string>("");
+
     const [, setNewCourse] = useState<Course>({
         title: "",
         courseCode: "",
@@ -34,10 +36,9 @@ export function AddDpSemestersCoursesModal({
         courseCoreq: [],
         courseDescription: ""
     });
-
     const handleSelectSemester = (semesterId: number) => {
         setSelectedSemesterId(semesterId);
-        setSelectedCourseCode(""); // Reset the selected course code
+        // Reset the course input fields when selecting a new semester
         setNewCourse({
             courseCode: "",
             title: "",
@@ -120,7 +121,6 @@ export function AddDpSemestersCoursesModal({
             )
         );
     };
-
     function totDpSemesterCredits(): number {
         const totSemestersCredits: number = semesters.reduce(
             (currentTot: number, semester: Semester) =>
@@ -133,34 +133,22 @@ export function AddDpSemestersCoursesModal({
     const semesterOptions = ["Fall", "Winter", "Spring", "Summer"];
 
     const handleCloseModal = () => {
-        setTitle("Example Title");
-        setSelectedSemester("Fall");
-        setSelectedSemesterId(null);
-        setSemesters([]);
-        setSelectedCourseCode(""); // Reset the selected course code
-        setNewCourse({
-            title: "",
-            courseCode: "",
-            credits: 0,
-            degreeRequirements: [],
-            coursePrereq: [],
-            courseCoreq: [],
-            courseDescription: ""
-        });
+        setSemesters(dp.semestersList);
+        setTitle(dp.title);
+        setSelectedCourseCode("");
         handleClose();
     };
-
     const saveChanges = () => {
         const newDp: DegreePlan = {
             title: title,
-            id: 0,
+            id: dp.id,
             totalCredits: totDpSemesterCredits(),
             semestersList: semesters
         };
-        addDp(newDp);
-        handleCloseModal();
+        setSelectedCourseCode("");
+        editDp(dp.id, newDp);
+        handleClose();
     };
-
     return (
         <Modal show={show} onHide={handleClose} animation={false}>
             <Modal.Header closeButton>
@@ -170,7 +158,7 @@ export function AddDpSemestersCoursesModal({
                 <Form.Group>
                     <Form.Label>Title: </Form.Label>
                     <Form.Control
-                        defaultValue="Example Title"
+                        defaultValue={title}
                         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                             setTitle(e.target.value)
                         }

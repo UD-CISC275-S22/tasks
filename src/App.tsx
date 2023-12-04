@@ -73,9 +73,17 @@ export function App(): JSX.Element {
         setIsSiteVisible(!isSiteVisble);
     };
 
+    function editDegreePlan(id: number, newDp: DegreePlan) {
+        setdegreePlans(
+            degreePlans.map(
+                (dp: DegreePlan): DegreePlan => (dp.id === id ? newDp : dp)
+            )
+        );
+    }
+
     return (
         <div>
-            <WelcomeMessage></WelcomeMessage>
+<WelcomeMessage></WelcomeMessage>
             <DpList dp={degreePlans} deleteDp={deleteDp}></DpList>
             <Button onClick={toggleSiteVisability} className="link_wrapper">
                 <a href="#">Continue to Site!</a>
