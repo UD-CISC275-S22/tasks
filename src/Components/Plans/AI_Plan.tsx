@@ -1,58 +1,49 @@
-import { Semester } from "../Interfaces/semester";
-import { Plan } from "../Interfaces/plan";
-import { courseList } from "./course";
+import { Semester } from "../../Interfaces/semester";
+import { Plan } from "../../Interfaces/plan";
+import { courseList } from "../course";
 import { blankCourse, fall1, spring1, fall2, spring2 } from "./plan";
 
-export function SysNet(): Plan {
+//this is the plan for the AI concentration
+export function AI(): Plan {
     //plan fields
     const title = "BS Computer Science";
-    const concentration = "Systems and Networks Concentration";
-    const id = 2;
+    const concentration = "Artificial Intelligence and Robotics Concentration";
+    const id = 0;
 
     //making the courses for each semester in each year (whole 4 year plan)
-    const fall1SysNet = fall1();
-    const spring1SysNet = spring1();
-    const fall2SysNet = fall2();
-    fall2SysNet.push(blankCourse);
-    fall2SysNet.push(blankCourse);
-    const spring2SysNet = spring2();
-    spring2SysNet.push(blankCourse);
-    spring2SysNet.push(blankCourse);
-    spring2SysNet.push(blankCourse);
-    const fall3SysNet = courseList.filter(
-        //id 8 is CISC320, id 9 is CISC361, and id 7 is CISC303
-        (course) => course.id == 8 || course.id == 9 || course.id == 7
+    const fall1AI = fall1();
+    const spring1AI = spring1();
+    let fall2AI = fall2();
+    fall2AI = [...fall2AI, blankCourse, blankCourse];
+    let spring2AI = spring2();
+    spring2AI = [...spring2AI, blankCourse, blankCourse, blankCourse];
+    let fall3AI = courseList.filter(
+        //id 8 is CISC320 and id 35 is CISC304
+        (course) => course.id == 8 || course.id == 35
     );
-    fall3SysNet.push(blankCourse);
-    fall3SysNet.push(blankCourse);
-    const spring3SysNet = courseList.filter(
-        //id 60 is CISC360 and id 10 is CISC372
-        (course) => course.id == 60 || course.id == 10
+    fall3AI = [...fall3AI, blankCourse, blankCourse, blankCourse];
+    let spring3AI = courseList.filter(
+        //id 7 is CISC303 and id 40 is CISC481
+        (course) => course.id == 7 || course.id == 40
     );
-    spring3SysNet.push(blankCourse);
-    spring3SysNet.push(blankCourse);
-    spring3SysNet.push(blankCourse);
-    const fall4SysNet = courseList.filter(
-        //id 18 is UNVI401, id 16 is CISC498, and id 47 is CISC450
-        (course) => course.id == 18 || course.id == 16 || course.id == 47
+    spring3AI = [...spring3AI, blankCourse, blankCourse, blankCourse];
+    let fall4AI = courseList.filter(
+        //id 41 is CISC483 and id 16 is CISC498 and id 39 is CISC442
+        (course) => course.id == 41 || course.id == 16 || course.id == 92
     );
-    fall4SysNet.push(blankCourse);
-    fall4SysNet.push(blankCourse);
-    fall4SysNet.push(blankCourse);
-    const spring4SysNet = courseList.filter(
-        //id 17 is CISC499 and id 19 is UNVI402 and id 61 is CISC471
-        (course) => course.id == 17 || course.id == 19 || course.id == 61
+    fall4AI = [...fall4AI, blankCourse, blankCourse];
+    let spring4AI = courseList.filter(
+        //id 42 is CISC484 and id 17 is CISC499
+        (course) => course.id == 42 || course.id == 17
     );
-    spring4SysNet.push(blankCourse);
-    spring4SysNet.push(blankCourse);
-    spring4SysNet.push(blankCourse);
+    spring4AI = [...spring4AI, blankCourse, blankCourse, blankCourse];
 
     //making the actual semester types
     const fall1Sem: Semester = {
         type: ["Fall"],
         year: 1,
         totalCredits: 15,
-        courseList: fall1SysNet
+        courseList: fall1AI
     };
     const winter1Sem: Semester = {
         type: ["Winter"],
@@ -64,7 +55,7 @@ export function SysNet(): Plan {
         type: ["Spring"],
         year: 1,
         totalCredits: 15,
-        courseList: spring1SysNet
+        courseList: spring1AI
     };
     const summer1Sem: Semester = {
         type: ["Summer"],
@@ -76,7 +67,7 @@ export function SysNet(): Plan {
         type: ["Fall"],
         year: 2,
         totalCredits: 15,
-        courseList: fall2SysNet
+        courseList: fall2AI
     };
     const winter2Sem: Semester = {
         type: ["Winter"],
@@ -88,7 +79,7 @@ export function SysNet(): Plan {
         type: ["Spring"],
         year: 2,
         totalCredits: 15,
-        courseList: spring2SysNet
+        courseList: spring2AI
     };
     const summer2Sem: Semester = {
         type: ["Summer"],
@@ -100,7 +91,7 @@ export function SysNet(): Plan {
         type: ["Fall"],
         year: 3,
         totalCredits: 15,
-        courseList: fall3SysNet
+        courseList: fall3AI
     };
     const winter3Sem: Semester = {
         type: ["Winter"],
@@ -112,7 +103,7 @@ export function SysNet(): Plan {
         type: ["Spring"],
         year: 3,
         totalCredits: 15,
-        courseList: spring3SysNet
+        courseList: spring3AI
     };
     const summer3Sem: Semester = {
         type: ["Summer"],
@@ -124,7 +115,7 @@ export function SysNet(): Plan {
         type: ["Fall"],
         year: 4,
         totalCredits: 15,
-        courseList: fall4SysNet
+        courseList: fall4AI
     };
     const winter4Sem: Semester = {
         type: ["Winter"],
@@ -136,7 +127,7 @@ export function SysNet(): Plan {
         type: ["Spring"],
         year: 4,
         totalCredits: 15,
-        courseList: spring4SysNet
+        courseList: spring4AI
     };
     const summer4Sem: Semester = {
         type: ["Summer"],
@@ -164,7 +155,7 @@ export function SysNet(): Plan {
     };
 
     //now the actual semester array for the AI plan
-    const SysNet_Semesters = [
+    const AI_Semesters = [
         fall1Sem, //INDEX 0
         winter1Sem, //INDEX 1
         spring1Sem, //INDEX 2
@@ -191,7 +182,25 @@ export function SysNet(): Plan {
         title: title,
         concentration: concentration,
         id: id,
-        semesters: SysNet_Semesters,
+        semesters: AI_Semesters,
         credits: 124
     };
 }
+/*
+ * QUESTIONS
+ * what do you mean by fall1/fall2/fall3...ect, are those seperated by year or
+ * does that mean something else?
+ * Are the general courses meant to be edited?
+ */
+
+/*
+ * IDEAS FOR HOW TO CLEAR PLAN
+ * repeat drop down idea to remove desired semester
+ * create a button to remove the desired semester
+ */
+
+/*
+ * DUMMY CODE
+ * function dropPlanSemester () {
+ * }
+ */
