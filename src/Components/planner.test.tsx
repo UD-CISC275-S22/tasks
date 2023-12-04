@@ -12,9 +12,11 @@ describe("Project Component tests", () => {
     });
 
     test("Adding classes to a semester", () => {
-        const planButton = screen.getByText("Plan 2");
+        const planButton = screen.getByText("Create New Degree Plan");
         const viewButton = screen.getByText("View Semesters");
         planButton.click();
+        const thePlan = screen.getByText("Plan 1");
+        thePlan.click();
         viewButton.click();
         expect(
             screen.queryByText(
@@ -44,9 +46,11 @@ describe("Project Component tests", () => {
 
     test("Add semesters", () => {
         const addSem = "Spring 2026";
-        const planButton = screen.getByText("Plan 1");
+        const planButton = screen.getByText("Create New Degree Plan");
         const viewButton = screen.getByText("View Semesters");
         planButton.click();
+        const thePlan = screen.getByText("Plan 1");
+        thePlan.click();
         viewButton.click();
         expect(
             screen.queryByText(
@@ -63,9 +67,11 @@ describe("Project Component tests", () => {
     });
 
     test("Clearing semesters", () => {
-        const planButton = screen.getByText("Plan 1");
+        const planButton = screen.getByText("Create New Degree Plan");
         const viewButton = screen.getByText("View Semesters");
         planButton.click();
+        const thePlan = screen.getByText("Plan 1");
+        thePlan.click();
         viewButton.click();
         expect(
             screen.queryByText(
@@ -89,9 +95,11 @@ describe("Project Component tests", () => {
     });
 
     test("Deleting course from a semester", () => {
-        const planButton = screen.getByText("Plan 2");
+        const planButton = screen.getByText("Create New Degree Plan");
         const viewButton = screen.getByText("View Semesters");
         planButton.click();
+        const thePlan = screen.getByText("Plan 1");
+        thePlan.click();
         viewButton.click();
         expect(
             screen.queryByText(
