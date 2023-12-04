@@ -178,9 +178,13 @@ export function SemesterTable({
 
     //<Button onClick={download}>download</Button>;
 
+    console.log(semesters);
     return (
-        <div className="semesterTable">
-            <h2>{`Plan Name: ${currentPlan}`}</h2>
+        <div
+            className="semesterTable"
+            style={{ overflowY: "scroll", maxHeight: "700px" }}
+        >
+            <h2>{semesters.length === 0 ? "" : `Plan Name: ${currentPlan}`}</h2>
             {/*<Button onClick={download}>download</Button>*/}
 
             {semesters.map((semester) => {
