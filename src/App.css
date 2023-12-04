@@ -13,6 +13,7 @@
     }
 }
 
+/*header*/
 .App-header {
     width: 100%;
     background-color: #0000ff;
@@ -40,6 +41,7 @@
     }
 }
 
+/*modal*/
 .ReactModal__Overlay {
     display: flex;
     align-items: center;
@@ -66,11 +68,16 @@
 }
 
 .close {
+    color: #5c5c5c;
     position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 18px;
+    top: -8px;
+    right: 5px;
+    font-size: 32px;
     cursor: pointer;
+}
+
+.close:hover {
+    color: #000000;
 }
 
 table {
@@ -90,6 +97,7 @@ tr:nth-child(even) {
     background-color: #dddddd;
 }
 
+/*linear background*/
 body {
     background: linear-gradient(to right, #2547f3, rgb(230, 247, 46));
     background-size: 400% 400%;
@@ -106,4 +114,88 @@ body {
     100% {
         background-position: 0% 50%;
     }
+}
+
+/*buttons*/
+#openModalBtn {
+    color: #000000;
+    background: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    border: rgba(0, 0, 0, 0.5);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+#openModalBtn:hover {
+    color: #000000;
+    background: #dddddd;
+}
+
+.btn {
+    color: #000000;
+    background: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    border: rgba(0, 0, 0, 0.5);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.btn:hover {
+    color: #000000;
+    background: #dddddd;
+}
+
+.btn:active {
+    color: #000000;
+    background: #fff;
+}
+
+.btnadd {
+    color: #000000;
+    background: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    border: rgba(0, 0, 0, 0.5);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.btnadd:hover {
+    color: #000000;
+    background: #dddddd;
+}
+
+.btnadd:active {
+    color: #000000;
+    background: #dddddd;
+}
+
+.btncancel {
+    color: #fff;
+    background: #000000;
+    font-weight: bold;
+    border-radius: 5px;
+    border: rgba(0, 0, 0, 0.5);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.btncancel:hover {
+    color: #fff;
+    background: #4e4e4e;
+}
+
+.btncancel:active {
+    color: #fff;
+    background: #000000;
 }
