@@ -85,10 +85,10 @@ export function App(): JSX.Element {
         <div>
             <WelcomeMessage></WelcomeMessage>
             <DpList
-                    dp={degreePlans}
-                    deleteDp={deleteDp}
-                    editDp={editDegreePlan}
-                ></DpList>
+                dp={degreePlans}
+                deleteDp={deleteDp}
+                editDp={editDegreePlan}
+            ></DpList>
             <Button onClick={toggleSiteVisability} className="link_wrapper">
                 <a href="#">Continue to Site!</a>
                 <div className="icon">
