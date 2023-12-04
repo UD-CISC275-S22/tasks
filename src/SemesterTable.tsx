@@ -212,13 +212,13 @@ export function DisplaySemester({
     return (
         <>
             <div>
-                <select>
+                <select id="selectSzn">
                     <option>Winter</option>
                     <option>Spring</option>
                     <option>Summer</option>
                     <option>Fall</option>
                 </select>
-                <select>
+                <select id="selectYr">
                     <option value="2023">2023</option>
                     <option value="2024">2024</option>
                     <option value="2025">2025</option>
