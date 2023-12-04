@@ -4,6 +4,7 @@ import { Course } from "../Interfaces/course";
 import { ClearSemester } from "./clearingSemester";
 import { DropAdd } from "./dropAdd";
 import { Semester } from "../Interfaces/semester";
+import { courseList } from "./course";
 import { Form } from "react-bootstrap";
 
 export interface valueProps {
@@ -12,8 +13,8 @@ export interface valueProps {
     currCourse: string;
     clicked: boolean;
     targetYear: number;
-    dropClass(): void;
-    addClass(): void;
+    dropClass(targetYear: number, targetSem: string): void;
+    addClass(targetYear: number, targetSem: string): void;
     updateCurrCourse(event: React.ChangeEvent<HTMLSelectElement>): void;
     clearSemesterCourses(): void;
     handleClose(): void;
@@ -67,6 +68,7 @@ export function DisplayFall({
             )}
 
             <>
+                {/*
                 <Form.Group controlId="currentCourse">
                     <Form.Label>Select Course Variety</Form.Label>
                     <Form.Check
@@ -98,13 +100,15 @@ export function DisplayFall({
                             displayCourseCategory === "RestrictiveElective"
                         }
                     />
-                </Form.Group>
+                    </Form.Group> */}
                 <DropAdd
                     dropClass={dropClass}
                     addClass={addClass}
+                    targetYear={targetYear}
+                    targetSem={targetSem}
                     updateCurrCourse={updateCurrCourse}
                     currCourse={currCourse}
-                    Course_List={fallCourses}
+                    Course_List={courseList}
                 ></DropAdd>
                 <ClearSemester
                     clearSemesterCourses={clearSemesterCourses}

@@ -186,7 +186,7 @@ export function ViewSemester(): JSX.Element {
 
     //functions for handling which semesters to see
 
-    function dropClass() {
+    function dropClass(targetYear: number, targetSem: string) {
         const idx = index(targetYear, targetSem);
         const newSemester = semesters;
         const newClasses = newSemester[idx].courseList.filter(
@@ -199,22 +199,24 @@ export function ViewSemester(): JSX.Element {
         setSemesters({ ...newSemester });
     }
 
-    function addClass(): void {
+    function addClass(targetYear: number, targetSem: string): void {
         const idx = index(targetYear, targetSem);
         const newSemester = semesters;
         const newClasses = newSemester[idx].courseList;
         //idea was a little connfusing for the variable name so we renamed it choiceIdx and choice is the actual course data structure
-        const choiceIdx = COURSES_LIST.findIndex(
+        const choiceIdx = courseList.findIndex(
             (course: Course) => course.title === currCourse
         );
-        const choice = COURSES_LIST[choiceIdx];
+        const choice = courseList[choiceIdx];
         //checks if it's already there
         //if exists stays as -1 then the course isn't already in the semester list and should be added otherwise nothing happens
 
-        let exists = -1;
-        exists = newClasses.findIndex(
-            (course: Course) => course.id === COURSES_LIST[choiceIdx].id
+        //this finds the index of the course you want to add
+        const exists = newClasses.findIndex(
+            (course: Course) => course.id === courseList[choiceIdx].id
         );
+
+        //this checks if the course title (of the corresponding course id returned (or not returned) from above is already in the list (can't add the same course title twice))
         const coursePresence = newClasses.filter(
             (course: Course) => course.title !== choice.title
         );
@@ -226,7 +228,7 @@ export function ViewSemester(): JSX.Element {
             ];
         }
 
-        return setSemesters({ ...newSemester });
+        setSemesters({ ...newSemester });
     }
 
     //function to change number of semesters shown (can be either 1 or 2 only - can add 0 or more semesters later)
