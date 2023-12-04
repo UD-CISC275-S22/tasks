@@ -13,8 +13,14 @@ import { classes } from "./Interface/classes";
 import { Plan } from "./Interface/Plan";
 import sample from "./data/Dummy.json";
 import { AddToSemester } from "./semester-modification/AddToSemester";
-import { ChosenMajor } from "./Audit/ChosenMajor";
+import { ChosenMajor, generalClasses } from "./Audit/ChosenMajor";
 import { PlanView } from "./PlanView/PlanView";
+import { DownloadPlan } from "./PlanView/DownloadPlan";
+import { SeeAuditPage } from "./Audit/SeeAuditPage";
+import { AddDeletePlan } from "./addPlan/AddDeletePlan";
+import AuthDetails from "./AuthDetails";
+import { auth } from "./firebase";
+import { onAuthStateChanged, User, signOut } from "firebase/auth";
 
 function App(): JSX.Element {
     const [page, setPage] = useState(false);
@@ -24,7 +30,10 @@ function App(): JSX.Element {
     const [addView, setAddView] = useState(false);
     const [seeAudit, setSeeAudit] = useState(false);
     const [displayPlan, setdisplayPlan] = useState(false);
+    const [downloadPlan, setDownloadPlan] = useState(false);
     const [currentPlan, setCurrentPlan] = useState("");
+    const [majorPageView, setMajorPageView] = useState(false);
+    const [addPlanView, setAddPlanView] = useState(false);
 
     const getName = () => {
         setName(name);
@@ -33,7 +42,7 @@ function App(): JSX.Element {
         setPage(!page);
     };
     const flipView = () => {
-        setSeeSemesterView(!seeSemesterView);
+        setSeeSemesterView(true);
     };
 
     const flipModalView = () => {
@@ -51,6 +60,59 @@ function App(): JSX.Element {
     const flipPlan = () => {
         setdisplayPlan(!displayPlan);
     };
+
+    const flipDownload = () => {
+        setDownloadPlan(!downloadPlan);
+    };
+
+    const flipMajorPageView = () => {
+        setMajorPageView(!majorPageView);
+    };
+
+    const flipAddPlanView = () => {
+        setAddPlanView(!addPlanView);
+    };
+
+    //exported const from ChosenMajor.tsx
+    //Classes for each major
+    const [degreeRequirements, setDegreeRequirements] =
+        useState<string[]>(generalClasses);
+    //const [completedReq, setCompletedReq] = useState<string[]>([]);
+    const [usedClasses, setUsedClasses] = useState<classes[][]>([[]]);
+
+    function reqList(finalList: string[]) {
+        if (!degreeRequirements.every((req, IDX) => req === finalList[IDX])) {
+            setUsedClasses([[]]);
+        }
+        setDegreeRequirements(finalList);
+    }
+
+    function pushCurrList(classesUsed: classes[][]) {
+        setUsedClasses(classesUsed);
+    }
+
+    const handleLogout = () => {
+        // console.log(page);
+        // setPage(!page);
+        // console.log("Logging out...");
+        // console.log(page);
+        signOut(auth)
+            .then(() => {
+                console.log("Sign Out was Successful");
+                //onLogout();
+                showHomePage();
+            })
+            .catch((error) => console.log(error));
+    };
+
+    // const handleUserSignOut = () => {
+    //     signOut(auth)
+    //         .then(() => {
+    //             console.log("Sign Out was Successful");
+    //             onLogout();
+    //         })
+    //         .catch((error) => console.log(error));
+    // };
 
     const planExamples = sample.map(
         (plan): Plan => ({
@@ -101,7 +163,7 @@ function App(): JSX.Element {
             {!page ? (
                 <WelcomeMessage
                     showHomePage={showHomePage}
-                    getName={getName}
+                    onLogout={handleLogout}
                 ></WelcomeMessage>
             ) : (
                 <div>
@@ -113,10 +175,13 @@ function App(): JSX.Element {
                             {" "}
                             <SideNav2
                                 flipView={flipView}
+                                flipAddPlanView={flipAddPlanView}
                                 flipPlan={flipPlan}
                                 flipModalView={flipModalView}
                                 flipAudit={flipAudit}
                                 flipAddView={flipAddView}
+                                flipDownload={flipDownload}
+                                handleLogout={handleLogout}
                             ></SideNav2>
                         </Col>
                         <Col sm={10}>
@@ -140,6 +205,8 @@ function App(): JSX.Element {
                                 <ChosenMajor
                                     handleClose={flipAudit}
                                     show={seeAudit}
+                                    majorPageView={flipMajorPageView}
+                                    reqList={reqList}
                                 />
                             )}
                             {displayPlan && (
@@ -151,11 +218,35 @@ function App(): JSX.Element {
                                     setCurrentPlan={setCurrentPlan}
                                 />
                             )}
+                            {downloadPlan && (
+                                <DownloadPlan
+                                    handleClose={flipDownload}
+                                    show={downloadPlan}
+                                    allplans={plans}
+                                />
+                            )}
+                            {addPlanView && (
+                                <AddDeletePlan
+                                    handleClose={flipAddPlanView}
+                                    show={addPlanView}
+                                    allplans={plans}
+                                    setPlans={setPlans}
+                                />
+                            )}
                             <SwitchComponents
                                 seeSemesterView={seeSemesterView}
                                 semesterExamples={semesters}
                                 setSemesters={setSemesters}
                             ></SwitchComponents>
+
+                            <SeeAuditPage
+                                canView={majorPageView}
+                                reqList={degreeRequirements}
+                                plan={semesters}
+                                prevUsedClasses={usedClasses}
+                                pushCurrList={pushCurrList}
+                                stopView={flipMajorPageView}
+                            ></SeeAuditPage>
                         </Col>
                     </Row>
                 </div>

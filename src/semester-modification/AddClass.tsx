@@ -28,7 +28,9 @@ export function AddClass({
             ...updatedSchedule[semesterIndex].classList,
             newClass
         ];
-
+        newClass.originalCode = newClass.code;
+        newClass.originalTitle = newClass.title;
+        newClass.originalCredits = newClass.credits;
         // Get new credit total
         const totalCredits: number = updatedClasses.reduce(
             (total: number, currentClass: classes) =>

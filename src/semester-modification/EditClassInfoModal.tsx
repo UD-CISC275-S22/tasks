@@ -2,19 +2,27 @@ import React from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import { classes } from "../Interface/classes";
 import { useState } from "react";
+import { semester } from "../Interface/semester";
+//import realData from "../data/corrected_data.json";
+
+//import { semester } from "../Interface/semester";
 //import { EditClass } from "./EditClass";
 export function EditClassInfoModal({
-    handleClose,
-    show,
-    courseToEdit
+    courseToEdit,
+    semester,
+    updateSemester
 }: {
-    handleClose: () => void;
-    show: boolean;
     courseToEdit: classes;
+    semester: semester;
+    updateSemester: (semester: semester) => void;
 }): JSX.Element {
     const [newCode, setNewCode] = useState(courseToEdit.code);
     const [newTitle, setNewTitle] = useState(courseToEdit.title);
     const [newCredits, setNewCredits] = useState(courseToEdit.credits);
+    const [ogCode] = useState(courseToEdit.originalCode);
+    const [ogTitle] = useState(courseToEdit.originalTitle);
+    const [ogCredits] = useState(courseToEdit.originalCredits);
+    const [modalView, setModalView] = useState(false);
     //const [newPrereqs, setNewPrereqs] = useState(courseToEdit.preReq);
 
     const inputChange1 = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -36,29 +44,83 @@ export function EditClassInfoModal({
         setNewPrereqs(searchValue4);
     };
     */
-    function editClass(classToEdit: classes): void {
-        classToEdit.code = newCode;
-        classToEdit.title = newTitle;
-        classToEdit.credits = newCredits;
-    }
-    function closingInfoModal() {
-        handleClose();
-        const course: classes = courseToEdit;
-        editClass(course);
+    const flipModalView = () => {
+        setModalView(!modalView);
+    };
+    function editClass(classToEdit: classes) {
+        //const ogCode: string[] = [];
+        //ogCode.push(classToEdit.code);
+        const updatedClass = {
+            ...classToEdit,
+            code: newCode,
+            title: newTitle,
+            credits: newCredits
+        };
+        const classIndex = semester.classList.findIndex(
+            (classes: classes): boolean => classToEdit.code === classes.code
+        );
+        const updatedClasses = [...semester.classList];
+        updatedClasses.splice(classIndex, 1, updatedClass);
+        const totalCredits = updatedClasses.reduce(
+            (total: number, currentClass: classes) =>
+                total + currentClass.credits,
+            0
+        );
+        const updatedSemester = {
+            ...semester,
+            classList: [...updatedClasses],
+            totalCredits: totalCredits
+        };
+        updateSemester(updatedSemester);
+        //console.log(classToEdit.originalCode);
     }
 
-    /*function doneEditing(
-        newCode: string,
-        newTitle: string,
-        newCredits: string
-    ): void {
-        courseToEdit.code = newCode;
-        courseToEdit.title = newTitle;
-        courseToEdit.credits.toString = newCredits.toString;
-    }*/
+    function revertClass(classToEdit: classes) {
+        const updatedClass = {
+            ...classToEdit,
+            code: ogCode !== undefined ? ogCode : classToEdit.code,
+            title: ogTitle !== undefined ? ogTitle : classToEdit.title,
+            credits: ogCredits !== undefined ? ogCredits : classToEdit.credits
+        };
+        const classIndex = semester.classList.findIndex(
+            (classes: classes): boolean => classToEdit.code === classes.code
+        );
+        const updatedClasses = [...semester.classList];
+        updatedClasses.splice(classIndex, 1, updatedClass);
+        const totalCredits = updatedClasses.reduce(
+            (total: number, currentClass: classes) =>
+                total + currentClass.credits,
+            0
+        );
+        const updatedSemester = {
+            ...semester,
+            classList: [...updatedClasses],
+            totalCredits: totalCredits
+        };
+        updateSemester(updatedSemester);
+        flipModalView();
+    }
+
+    function closingInfoModal() {
+        const course: classes = courseToEdit;
+        const noInput =
+            newCode === courseToEdit.code &&
+            newTitle === courseToEdit.title &&
+            newCredits === courseToEdit.credits;
+        if (!noInput) {
+            flipModalView();
+            editClass(course);
+        }
+    }
+    function closingRevertModal() {
+        const course: classes = courseToEdit;
+        flipModalView();
+        revertClass(course);
+    }
     return (
         <div>
-            <Modal show={show} onHide={handleClose} animation={false}>
+            <Button onClick={flipModalView}>Edit Course</Button>
+            <Modal show={modalView} onHide={flipModalView} animation={false}>
                 <Modal.Header closeButton>
                     <Modal.Title>Edit Course Info</Modal.Title>
                 </Modal.Header>
@@ -70,7 +132,7 @@ export function EditClassInfoModal({
                                 type="text"
                                 placeholder="Edit Course Code"
                                 onChange={inputChange1}
-                                data-testid="input1"
+                                data-testid="input4"
                             />
                         </Form.Group>
                         <hr></hr>
@@ -80,7 +142,7 @@ export function EditClassInfoModal({
                                 type="text"
                                 placeholder="Edit Course Title"
                                 onChange={inputChange2}
-                                data-testid="input2"
+                                data-testid="input5"
                             />
                         </Form.Group>
                         <hr></hr>
@@ -90,7 +152,7 @@ export function EditClassInfoModal({
                                 type="text"
                                 placeholder="Edit Course Credits"
                                 onChange={inputChange3}
-                                data-testid="input3"
+                                data-testid="input6"
                             />
                         </Form.Group>
                     </Form.Group>
@@ -98,8 +160,20 @@ export function EditClassInfoModal({
                 <Modal.Footer>
                     <Button
                         onClick={() => {
-                            handleClose();
+                            closingRevertModal();
                         }}
+                    >
+                        Revert
+                    </Button>
+                    <Button
+                        onClick={() => {
+                            flipModalView();
+                        }}
+                        disabled={
+                            courseToEdit.code === "" ||
+                            courseToEdit.title === "" ||
+                            courseToEdit.credits === null
+                        }
                     >
                         Close
                     </Button>
@@ -110,12 +184,6 @@ export function EditClassInfoModal({
                     >
                         Done
                     </Button>
-                    {/*<EditClass
-                        classToEdit={courseToEdit}
-                        newCode={newCode}
-                        newTitle={newTitle}
-                        newCredits={newCredits}
-                    ></EditClass>*/}
                 </Modal.Footer>
             </Modal>
         </div>

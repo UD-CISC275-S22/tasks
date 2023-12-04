@@ -9,6 +9,9 @@ describe("FilteringSearchTests", () => {
                 flipView={function (): void {
                     throw new Error("Function not implemented.");
                 }}
+                flipAddPlanView={function (): void {
+                    throw new Error("Function not implemented.");
+                }}
                 flipPlan={function (): void {
                     throw new Error("Function not implemented.");
                 }}
@@ -19,6 +22,12 @@ describe("FilteringSearchTests", () => {
                     throw new Error("Function not implemented.");
                 }}
                 flipAddView={function (): void {
+                    throw new Error("Function not implemented.");
+                }}
+                flipDownload={function (): void {
+                    throw new Error("Function not implemented.");
+                }}
+                handleLogout={function (): void {
                     throw new Error("Function not implemented.");
                 }}
             />

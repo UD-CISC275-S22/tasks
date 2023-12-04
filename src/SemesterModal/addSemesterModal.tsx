@@ -69,10 +69,31 @@ export function AddSemesterModal({
             (course) => course.code === searchAttribute
         );
         const foundCourse: classes = realData[findIndexCourse];
-        const lastSemester: semester = semesters[semesters.length - 1];
-        const newId: number = lastSemester.id + 1;
-        addSemester(newId, true, [foundCourse], foundCourse.credits, season);
-        handleClose();
+        foundCourse.originalCode = foundCourse.code;
+        foundCourse.originalTitle = foundCourse.title;
+        foundCourse.originalCredits = foundCourse.credits;
+        if (semesters.length === 0) {
+            const newId = 0;
+            addSemester(
+                newId,
+                true,
+                [foundCourse],
+                foundCourse.credits,
+                season
+            );
+            handleClose();
+        } else {
+            const lastSemester: semester = semesters[semesters.length - 1];
+            const newId: number = lastSemester.id + 1;
+            addSemester(
+                newId,
+                true,
+                [foundCourse],
+                foundCourse.credits,
+                season
+            );
+            handleClose();
+        }
     }
 
     return (
