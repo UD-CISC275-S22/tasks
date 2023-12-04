@@ -18,13 +18,11 @@ import { PlanView } from "./PlanView/PlanView";
 import { DownloadPlan } from "./PlanView/DownloadPlan";
 import { SeeAuditPage } from "./Audit/SeeAuditPage";
 import { AddDeletePlan } from "./addPlan/AddDeletePlan";
-import AuthDetails from "./AuthDetails";
 import { auth } from "./firebase";
-import { onAuthStateChanged, User, signOut } from "firebase/auth";
+import { signOut } from "firebase/auth";
 
 function App(): JSX.Element {
     const [page, setPage] = useState(false);
-    const [name, setName] = useState("");
     const [seeSemesterView, setSeeSemesterView] = useState(false);
     const [modalView, setModalView] = useState(false);
     const [addView, setAddView] = useState(false);
@@ -35,9 +33,6 @@ function App(): JSX.Element {
     const [majorPageView, setMajorPageView] = useState(false);
     const [addPlanView, setAddPlanView] = useState(false);
 
-    const getName = () => {
-        setName(name);
-    };
     const showHomePage = () => {
         setPage(!page);
     };
