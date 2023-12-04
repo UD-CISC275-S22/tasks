@@ -18,10 +18,11 @@ import { PlanView } from "./PlanView/PlanView";
 import { DownloadPlan } from "./PlanView/DownloadPlan";
 import { SeeAuditPage } from "./Audit/SeeAuditPage";
 import { AddDeletePlan } from "./addPlan/AddDeletePlan";
+import { auth } from "./firebase";
+import { signOut } from "firebase/auth";
 
 function App(): JSX.Element {
     const [page, setPage] = useState(false);
-    const [name, setName] = useState("");
     const [seeSemesterView, setSeeSemesterView] = useState(false);
     const [modalView, setModalView] = useState(false);
     const [addView, setAddView] = useState(false);
@@ -32,9 +33,6 @@ function App(): JSX.Element {
     const [majorPageView, setMajorPageView] = useState(false);
     const [addPlanView, setAddPlanView] = useState(false);
 
-    const getName = () => {
-        setName(name);
-    };
     const showHomePage = () => {
         setPage(!page);
     };
@@ -87,6 +85,7 @@ function App(): JSX.Element {
     function pushCurrList(classesUsed: classes[][]) {
         setUsedClasses(classesUsed);
     }
+
     /*
     const planExamples = sample.map(
         (plan): Plan => ({
@@ -138,7 +137,7 @@ function App(): JSX.Element {
             {!page ? (
                 <WelcomeMessage
                     showHomePage={showHomePage}
-                    getName={getName}
+                    onLogout={handleLogout}
                 ></WelcomeMessage>
             ) : (
                 <div>
@@ -156,6 +155,7 @@ function App(): JSX.Element {
                                 flipAudit={flipAudit}
                                 flipAddView={flipAddView}
                                 flipDownload={flipDownload}
+                                handleLogout={handleLogout}
                             ></SideNav2>
                         </Col>
                         <Col sm={10}>
