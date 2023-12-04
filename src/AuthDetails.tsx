@@ -1,3 +1,4 @@
+/* eslint-disable no-extra-parens */
 import React, { useEffect, useState } from "react";
 import { auth } from "./firebase";
 import { onAuthStateChanged, User, signOut } from "firebase/auth";
