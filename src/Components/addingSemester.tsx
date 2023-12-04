@@ -25,7 +25,6 @@ export function AddingSemester({
             settingSemester({
                 id: session + year,
                 title: session,
-                year: "" + year,
                 notes: "",
                 courseList: [] as Course[]
             });
@@ -33,7 +32,6 @@ export function AddingSemester({
             settingSemester({
                 id: session + year,
                 title: session,
-                year: "" + year,
                 notes: "",
                 courseList: [] as Course[]
             });
