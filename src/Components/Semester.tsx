@@ -165,13 +165,13 @@ export function ViewSemester(): JSX.Element {
     }
 
     // function removes all courses!
-    function clearSemesterCourses() {
+    function clearSemesterCourses(targetYear: number, targetSem: string) {
         const idx = index(targetYear, targetSem);
         const newSemester = semesters;
         newSemester[idx].courseList = [];
 
         //function to clear all courses within a semester
-        setSemesters({ ...newSemester });
+        setSemesters([...newSemester]);
         handleClose();
     }
 
@@ -202,32 +202,17 @@ export function ViewSemester(): JSX.Element {
     function addClass(targetYear: number, targetSem: string): void {
         const idx = index(targetYear, targetSem);
         const newSemester = semesters;
-        const newClasses = newSemester[idx].courseList;
-        //idea was a little connfusing for the variable name so we renamed it choiceIdx and choice is the actual course data structure
         const choiceIdx = courseList.findIndex(
             (course: Course) => course.title === currCourse
         );
         const choice = courseList[choiceIdx];
-        //checks if it's already there
-        //if exists stays as -1 then the course isn't already in the semester list and should be added otherwise nothing happens
-
-        //this finds the index of the course you want to add
-        const exists = newClasses.findIndex(
-            (course: Course) => course.id === courseList[choiceIdx].id
+        const newClasses = newSemester[idx].courseList.filter(
+            (course: Course) => currCourse !== course.title
         );
-
-        //this checks if the course title (of the corresponding course id returned (or not returned) from above is already in the list (can't add the same course title twice))
-        const coursePresence = newClasses.filter(
-            (course: Course) => course.title !== choice.title
-        );
-
-        if (exists !== -1 && coursePresence.length === 0) {
-            newSemester[idx].courseList = [
-                ...newSemester[idx].courseList,
-                choice
-            ];
-        }
-
+        // looks through the course list in the current semester and filters out the
+        // course with the same "Title" as the state "currCourse"
+        // **refer to "currCourse" documentation for more info **
+        newSemester[idx].courseList = [...newClasses, choice];
         setSemesters({ ...newSemester });
     }
 

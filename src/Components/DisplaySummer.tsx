@@ -4,6 +4,7 @@ import { Course } from "../Interfaces/course";
 import { ClearSemester } from "./clearingSemester";
 import { DropAdd } from "./dropAdd";
 import { Semester } from "../Interfaces/semester";
+import { courseList } from "./course";
 
 export interface valueProps {
     semesters: Semester[];
@@ -11,10 +12,10 @@ export interface valueProps {
     currCourse: string;
     clicked: boolean;
     targetYear: number;
-    dropClass(): void;
-    addClass(): void;
+    dropClass(targetYear: number, targetSem: string): void;
+    addClass(targetYear: number, targetSem: string): void;
     updateCurrCourse(event: React.ChangeEvent<HTMLSelectElement>): void;
-    clearSemesterCourses(): void;
+    clearSemesterCourses(targetYear: number, targetSem: string): void;
     handleClose(): void;
     handleShow(): void;
     index(targetYear: number, targetSem: string): number;
@@ -59,12 +60,16 @@ export function DisplaySummer({
                 <DropAdd
                     dropClass={dropClass}
                     addClass={addClass}
+                    targetYear={targetYear}
+                    targetSem={targetSem}
                     updateCurrCourse={updateCurrCourse}
                     currCourse={currCourse}
-                    Course_List={summerCourses}
+                    Course_List={courseList}
                 ></DropAdd>
                 <ClearSemester
                     clearSemesterCourses={clearSemesterCourses}
+                    targetYear={targetYear}
+                    targetSem={targetSem}
                     show={clicked}
                     handleClose={handleClose}
                     handleShow={handleShow}

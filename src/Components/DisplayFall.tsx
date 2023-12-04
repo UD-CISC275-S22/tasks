@@ -16,7 +16,7 @@ export interface valueProps {
     dropClass(targetYear: number, targetSem: string): void;
     addClass(targetYear: number, targetSem: string): void;
     updateCurrCourse(event: React.ChangeEvent<HTMLSelectElement>): void;
-    clearSemesterCourses(): void;
+    clearSemesterCourses(targetYear: number, targetSem: string): void;
     handleClose(): void;
     handleShow(): void;
     index(targetYear: number, targetSem: string): number;
@@ -112,6 +112,8 @@ export function DisplayFall({
                 ></DropAdd>
                 <ClearSemester
                     clearSemesterCourses={clearSemesterCourses}
+                    targetYear={targetYear}
+                    targetSem={targetSem}
                     show={clicked}
                     handleClose={handleClose}
                     handleShow={handleShow}

@@ -5,12 +5,16 @@ export const ClearSemester = ({
     clearSemesterCourses,
     handleClose,
     handleShow,
-    show
+    show,
+    targetYear,
+    targetSem
 }: {
-    clearSemesterCourses: () => void;
+    clearSemesterCourses: (targetYear: number, targetSem: string) => void;
     handleClose: () => void;
     handleShow: () => void;
     show: boolean;
+    targetYear: number;
+    targetSem: string;
 }) => {
     return (
         <>
@@ -29,7 +33,13 @@ export const ClearSemester = ({
                         </p>
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button onClick={clearSemesterCourses}>Yes</Button>
+                        <Button
+                            onClick={() =>
+                                clearSemesterCourses(targetYear, targetSem)
+                            }
+                        >
+                            Yes
+                        </Button>
                         <Button onClick={handleClose}>No</Button>
                     </Modal.Footer>
                 </Modal>
