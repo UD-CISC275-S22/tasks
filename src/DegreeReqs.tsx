@@ -297,142 +297,171 @@ export function DegreeRequirements({
                 onRequestClose={toggleModal}
                 contentLabel="My dialog"
             >
-                <div className="text-center">
-                    <div className="row">
-                        <h5>
-                            {" "}
-                            <u>University Requirements:</u>{" "}
-                        </h5>
-                        <p>Total Credits in Plan: {totalCreditsInPlan}</p>
-                        <div className="col text-left">
-                            <p>
-                                ENGL 110: {display_requirement_state(engl110)}
-                            </p>
-                            <p>
-                                Discovery Learning Experience:{" "}
-                                {display_requirement_state(DLE)}
-                            </p>
-                            <p>
-                                Breadth Group A (Creative Arts and Humanities):{" "}
-                                {display_requirement_state(groupA)}
-                            </p>
-                            <p>
-                                Breadth Group B (History and Cultural Change):{" "}
-                                {display_requirement_state(groupB)}
-                            </p>
+                <div className="modal-content">
+                    <span className="close" onClick={toggleModal}>
+                        &times;
+                    </span>
+                    <div className="text-center">
+                        <div className="row">
+                            <h5>
+                                {" "}
+                                <u>University Requirements:</u>{" "}
+                            </h5>
+                            <p>Total Credits in Plan: {totalCreditsInPlan}</p>
+                            <div className="col text-left">
+                                <p>
+                                    ENGL 110:{" "}
+                                    {display_requirement_state(engl110)}
+                                </p>
+                                <p>
+                                    Discovery Learning Experience:{" "}
+                                    {display_requirement_state(DLE)}
+                                </p>
+                                <p>
+                                    Breadth Group A (Creative Arts and
+                                    Humanities):{" "}
+                                    {display_requirement_state(groupA)}
+                                </p>
+                                <p>
+                                    Breadth Group B (History and Cultural
+                                    Change): {display_requirement_state(groupB)}
+                                </p>
+                            </div>
+                            <div className="col text-left">
+                                <p>
+                                    First Year Seminar:{" "}
+                                    {display_requirement_state(FYS)}
+                                </p>
+                                <p>
+                                    Multicultural Breadth:{" "}
+                                    {display_requirement_state(multicultural)}
+                                </p>
+                                <p>
+                                    Breadth Group C (Social and Behavioral
+                                    Sciences):{" "}
+                                    {display_requirement_state(groupC)}
+                                </p>
+                                <p>
+                                    Breadth Group D (Mathematics, Natural
+                                    Sciences, and Technology):{" "}
+                                    {display_requirement_state(groupD)}
+                                </p>
+                            </div>
                         </div>
-                        <div className="col text-left">
-                            <p>
-                                First Year Seminar:{" "}
-                                {display_requirement_state(FYS)}
-                            </p>
-                            <p>
-                                Multicultural Breadth:{" "}
-                                {display_requirement_state(multicultural)}
-                            </p>
-                            <p>
-                                Breadth Group C (Social and Behavioral
-                                Sciences): {display_requirement_state(groupC)}
-                            </p>
-                            <p>
-                                Breadth Group D (Mathematics, Natural Sciences,
-                                and Technology):{" "}
-                                {display_requirement_state(groupD)}
-                            </p>
+                        <div className="row">
+                            <h5>
+                                {" "}
+                                <u>Major Requirements:</u>{" "}
+                            </h5>
+                            <div className="col text-left">
+                                <p>
+                                    CISC 108:{" "}
+                                    {display_requirement_state(cisc108)}
+                                </p>
+                                <p>
+                                    CISC 181:{" "}
+                                    {display_requirement_state(cisc181)}
+                                </p>
+                                <p>
+                                    CISC 210:{" "}
+                                    {display_requirement_state(cisc210)}
+                                </p>
+                                <p>
+                                    CISC 220:{" "}
+                                    {display_requirement_state(cisc220)}
+                                </p>
+                                <p>
+                                    CISC 260:{" "}
+                                    {display_requirement_state(cisc260)}
+                                </p>
+                                <p>
+                                    CISC 355:{" "}
+                                    {display_requirement_state(cisc355)}
+                                </p>
+                                <p>
+                                    MATH 210:{" "}
+                                    {display_requirement_state(math210)}
+                                </p>
+                                <p>
+                                    MATH 205 or MATH 350:{" "}
+                                    {display_requirement_state(statsOrProb)}
+                                </p>
+                                <p>
+                                    ENGL 312 or ENGL 410:{" "}
+                                    {display_requirement_state(
+                                        additionalWriting
+                                    )}
+                                </p>
+                                <p>
+                                    Capstone Requirements:{" "}
+                                    {display_requirement_state(capstone)}
+                                </p>
+                                <p>
+                                    27 Credits of Breadths:{" "}
+                                    {display_requirement_state(
+                                        extra9BreadthCreds
+                                    )}
+                                </p>
+                            </div>
+                            <div className="col text-left">
+                                <p>
+                                    CISC 275:{" "}
+                                    {display_requirement_state(cisc275)}
+                                </p>
+                                <p>
+                                    CISC 303:{" "}
+                                    {display_requirement_state(cisc303)}
+                                </p>
+                                <p>
+                                    CISC 320:{" "}
+                                    {display_requirement_state(cisc320)}
+                                </p>
+                                <p>
+                                    CISC 361:{" "}
+                                    {display_requirement_state(cisc361)}
+                                </p>
+                                <p>
+                                    CISC 372:{" "}
+                                    {display_requirement_state(cisc372)}
+                                </p>
+                                <p>
+                                    MATH 241:{" "}
+                                    {display_requirement_state(math241)}
+                                </p>
+                                <p>
+                                    MATH 242:{" "}
+                                    {display_requirement_state(math242)}
+                                </p>
+                                <p>
+                                    CISC 304 or MATH 349:{" "}
+                                    {display_requirement_state(
+                                        additionalMath300
+                                    )}
+                                </p>
+                                <p>
+                                    Lab Science Requirements:{" "}
+                                    {display_requirement_state(sciences)}
+                                </p>
+                                <p>
+                                    18 Technical Elective Credits:{" "}
+                                    {display_requirement_state(
+                                        sixExtraTechCredits
+                                    )}
+                                </p>
+                                <p>
+                                    12 Concentration Elective Credits:{" "}
+                                    {display_requirement_state(
+                                        twelveConcentrationCredits
+                                    )}
+                                </p>
+                            </div>
                         </div>
+                        <p>
+                            At least 124 Total Credits:{" "}
+                            {display_requirement_state(moreThan124Credits)}
+                        </p>
                     </div>
-                    <div className="row">
-                        <h5>
-                            {" "}
-                            <u>Major Requirements:</u>{" "}
-                        </h5>
-                        <div className="col text-left">
-                            <p>
-                                CISC 108: {display_requirement_state(cisc108)}
-                            </p>
-                            <p>
-                                CISC 181: {display_requirement_state(cisc181)}
-                            </p>
-                            <p>
-                                CISC 210: {display_requirement_state(cisc210)}
-                            </p>
-                            <p>
-                                CISC 220: {display_requirement_state(cisc220)}
-                            </p>
-                            <p>
-                                CISC 260: {display_requirement_state(cisc260)}
-                            </p>
-                            <p>
-                                CISC 355: {display_requirement_state(cisc355)}
-                            </p>
-                            <p>
-                                MATH 210: {display_requirement_state(math210)}
-                            </p>
-                            <p>
-                                MATH 205 or MATH 350:{" "}
-                                {display_requirement_state(statsOrProb)}
-                            </p>
-                            <p>
-                                ENGL 312 or ENGL 410:{" "}
-                                {display_requirement_state(additionalWriting)}
-                            </p>
-                            <p>
-                                Capstone Requirements:{" "}
-                                {display_requirement_state(capstone)}
-                            </p>
-                            <p>
-                                27 Credits of Breadths:{" "}
-                                {display_requirement_state(extra9BreadthCreds)}
-                            </p>
-                        </div>
-                        <div className="col text-left">
-                            <p>
-                                CISC 275: {display_requirement_state(cisc275)}
-                            </p>
-                            <p>
-                                CISC 303: {display_requirement_state(cisc303)}
-                            </p>
-                            <p>
-                                CISC 320: {display_requirement_state(cisc320)}
-                            </p>
-                            <p>
-                                CISC 361: {display_requirement_state(cisc361)}
-                            </p>
-                            <p>
-                                CISC 372: {display_requirement_state(cisc372)}
-                            </p>
-                            <p>
-                                MATH 241: {display_requirement_state(math241)}
-                            </p>
-                            <p>
-                                MATH 242: {display_requirement_state(math242)}
-                            </p>
-                            <p>
-                                CISC 304 or MATH 349:{" "}
-                                {display_requirement_state(additionalMath300)}
-                            </p>
-                            <p>
-                                Lab Science Requirements:{" "}
-                                {display_requirement_state(sciences)}
-                            </p>
-                            <p>
-                                18 Technical Elective Credits:{" "}
-                                {display_requirement_state(sixExtraTechCredits)}
-                            </p>
-                            <p>
-                                12 Concentration Elective Credits:{" "}
-                                {display_requirement_state(
-                                    twelveConcentrationCredits
-                                )}
-                            </p>
-                        </div>
-                    </div>
-                    <p>
-                        At least 124 Total Credits:{" "}
-                        {display_requirement_state(moreThan124Credits)}
-                    </p>
                 </div>
-                <button onClick={toggleModal}>Close modal</button>
             </Modal>
         </div>
     );
