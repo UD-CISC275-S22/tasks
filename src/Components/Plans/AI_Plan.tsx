@@ -13,40 +13,30 @@ export function AI(): Plan {
     //making the courses for each semester in each year (whole 4 year plan)
     const fall1AI = fall1();
     const spring1AI = spring1();
-    const fall2AI = fall2();
-    fall2AI.push(blankCourse);
-    fall2AI.push(blankCourse);
-    const spring2AI = spring2();
-    spring2AI.push(blankCourse);
-    spring2AI.push(blankCourse);
-    spring2AI.push(blankCourse);
-    const fall3AI = courseList.filter(
+    let fall2AI = fall2();
+    fall2AI = [...fall2AI, blankCourse, blankCourse];
+    let spring2AI = spring2();
+    spring2AI = [...spring2AI, blankCourse, blankCourse, blankCourse];
+    let fall3AI = courseList.filter(
         //id 8 is CISC320 and id 35 is CISC304
         (course) => course.id == 8 || course.id == 35
     );
-    fall3AI.push(blankCourse);
-    fall3AI.push(blankCourse);
-    fall3AI.push(blankCourse);
-    const spring3AI = courseList.filter(
+    fall3AI = [...fall3AI, blankCourse, blankCourse, blankCourse];
+    let spring3AI = courseList.filter(
         //id 7 is CISC303 and id 40 is CISC481
         (course) => course.id == 7 || course.id == 40
     );
-    spring3AI.push(blankCourse);
-    spring3AI.push(blankCourse);
-    spring3AI.push(blankCourse);
-    const fall4AI = courseList.filter(
+    spring3AI = [...spring3AI, blankCourse, blankCourse, blankCourse];
+    let fall4AI = courseList.filter(
         //id 41 is CISC483 and id 16 is CISC498 and id 39 is CISC442
         (course) => course.id == 41 || course.id == 16 || course.id == 92
     );
-    fall4AI.push(blankCourse);
-    fall4AI.push(blankCourse);
-    const spring4AI = courseList.filter(
+    fall4AI = [...fall4AI, blankCourse, blankCourse];
+    let spring4AI = courseList.filter(
         //id 42 is CISC484 and id 17 is CISC499
         (course) => course.id == 42 || course.id == 17
     );
-    spring4AI.push(blankCourse);
-    spring4AI.push(blankCourse);
-    spring4AI.push(blankCourse);
+    spring4AI = [...spring4AI, blankCourse, blankCourse, blankCourse];
 
     //making the actual semester types
     const fall1Sem: Semester = {

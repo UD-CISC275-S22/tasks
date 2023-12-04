@@ -45,8 +45,8 @@ export function DisplayWinter({
             <h1>Winter Year {targetYear}</h1>
             {winterCourses.map(
                 // eslint-disable-next-line no-extra-parens
-                (course: Course): JSX.Element => (
-                    <div className="Course" key={course.id}>
+                (course: Course, index: number): JSX.Element => (
+                    <div className="Course" key={index}>
                         <span key={course.id}>
                             {course.title}
                             {" - "}

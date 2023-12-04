@@ -13,39 +13,30 @@ export function Cyber(): Plan {
     //making the courses for each semester in each year (whole 4 year plan)
     const fall1Cyber = fall1();
     const spring1Cyber = spring1();
-    const fall2Cyber = fall2();
-    fall2Cyber.push(blankCourse);
-    fall2Cyber.push(blankCourse);
-    const spring2Cyber = spring2();
-    spring2Cyber.push(blankCourse);
-    spring2Cyber.push(blankCourse);
-    spring2Cyber.push(blankCourse);
-    const fall3Cyber = courseList.filter(
+    let fall2Cyber = fall2();
+    fall2Cyber = [...fall2Cyber, blankCourse, blankCourse];
+    let spring2Cyber = spring2();
+    spring2Cyber = [...spring2Cyber, blankCourse, blankCourse, blankCourse];
+    let fall3Cyber = courseList.filter(
         //id 8 is CISC320 and id 9 is CISC361 and id 47 is CISC450
         (course) => course.id == 8 || course.id == 9 || course.id == 47
     );
-    fall3Cyber.push(blankCourse);
-    fall3Cyber.push(blankCourse);
-    const spring3Cyber = courseList.filter(
+    fall3Cyber = [...fall3Cyber, blankCourse, blankCourse];
+    let spring3Cyber = courseList.filter(
         //id 7 is CISC303 and id 10 is CISC372
         (course) => course.id == 7 || course.id == 10
     );
-    spring3Cyber.push(blankCourse);
-    spring3Cyber.push(blankCourse);
-    spring3Cyber.push(blankCourse);
-    const fall4Cyber = courseList.filter(
+    spring3Cyber = [...spring3Cyber, blankCourse, blankCourse, blankCourse];
+    let fall4Cyber = courseList.filter(
         //id 48 is CISC464 and id 16 is CISC498 and id 39 is CISC442
         (course) => course.id == 48 || course.id == 16
     );
-    fall4Cyber.push(blankCourse);
-    fall4Cyber.push(blankCourse);
-    fall4Cyber.push(blankCourse);
-    const spring4Cyber = courseList.filter(
+    fall4Cyber = [...fall4Cyber, blankCourse, blankCourse, blankCourse];
+    let spring4Cyber = courseList.filter(
         //id 42 is CISC484 and id 49 is CPEG465 and id 50 is CISC494
         (course) => course.id == 42 || course.id == 49 || course.id == 50
     );
-    spring4Cyber.push(blankCourse);
-    spring4Cyber.push(blankCourse);
+    spring4Cyber = [...spring4Cyber, blankCourse, blankCourse];
 
     //making the actual semester types
     const fall1Sem: Semester = {

@@ -1,5 +1,6 @@
-import React /*{ useState }*/ from "react";
+import React from "react";
 import "./App.css";
+//import { ViewSemester } from "./Components/Semester";
 import { ViewSemester } from "./Components/Semester";
 //import { Welcome } from "./Components/welcome";
 //import { Button } from "react-bootstrap";
@@ -7,11 +8,6 @@ import { ViewSemester } from "./Components/Semester";
 //import { clearCourse } from "./Components/clearingCourse";
 
 function App(): JSX.Element {
-    //constants for welcome message button/modal
-    //const [displayWelcomeMessage, displayWelcomeModal] = useState(true);
-    //const welcomeMessage = () => displayWelcomeModal(false);
-    //const welcomeMessageModal = () => displayWelcomeModal(true);
-
     return (
         <div className="App">
             <header className="App-header">
@@ -22,36 +18,40 @@ function App(): JSX.Element {
                     Iyer and Dina Dawood (CISC275)
                 </h6>
             </header>
-            <hr></hr>
-            {/*This is the collaspe button*/}
-            <button
-                type="button"
-                className="btn btn-info "
-                data-bs-toggle="collapse"
-                data-bs-target="#welcome_message"
+            <div
+                style={{
+                    backgroundColor: "#F0EFF4",
+                    padding: "20px"
+                }}
             >
-                Need Help❓
-            </button>
-            <hr></hr>
-            {/*When the button is clicked the message collapses*/}
-            <div id="welcome_message" className="collapse">
-                <p>
-                    Welcome to your personal Degree Planner! Some basic tools
-                    have been designed to make your visit accessible to your
-                    needs; this includes creating new plans from scratch and/or
-                    compiling data from a csv file. You will be able to add,
-                    remove, edit, and save various courses/semesters in a
-                    multitude of plans. You will be able to view 1 semester at a
-                    time or multiple semesters at once. You will also be able to
-                    add or remove new courses to each semester, and also add and
-                    delete a plan entirely. You can also skip a semester. There
-                    a templates for each concentration that you can work on and
-                    there are many options to choose from when creating your
-                    plan.
-                </p>
+                {/*This is the collaspe button*/}
+                <button
+                    type="button"
+                    className="btn btn-info "
+                    data-bs-toggle="collapse"
+                    data-bs-target="#welcome_message"
+                >
+                    Need Help❓
+                </button>
+                {/*When the button is clicked the message collapses*/}
+                <div id="welcome_message" className="collapse">
+                    <p style={{ padding: "20px" }}>
+                        Welcome to your personal Degree Planner! Some basic
+                        tools have been designed to make your visit accessible
+                        to your to your needs; this includes creating new plans
+                        from scratch and/or compiling data from a csv file. You
+                        will be able to add, remove, edit, and save various
+                        courses/semesters in a multitude of plans. You will be
+                        able to view 1 semester at a time or multiple semesters
+                        at once. You will also be able to add or remove new
+                        courses to each semester, and also add and delete a plan
+                        entirely. You can also skip a semester. There a a
+                        templates for each concentration that you can work on
+                        and there are many options to choose from when creating
+                        your plan.
+                    </p>
+                </div>
             </div>
-
-            <hr></hr>
             <ViewSemester></ViewSemester>
         </div>
     );
