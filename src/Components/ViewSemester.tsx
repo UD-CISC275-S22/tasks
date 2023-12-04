@@ -383,7 +383,7 @@
 // }
 
 import React, { useState } from "react";
-import { Button, Modal, Container, Col, Row } from "react-bootstrap";
+import { Button, Container, Col, Row } from "react-bootstrap";
 import { Course } from "../Interfaces/course";
 import { Semester } from "../Interfaces/semester";
 import { Plan } from "../Interfaces/plan";
@@ -427,7 +427,7 @@ export function ViewSemester({
     );
 
     return editing ? (
-        <EditSemester
+        <EditingSemester
             editingFunc={editingFunc}
             semester={semester}
             plan={currentPlan}
@@ -436,7 +436,7 @@ export function ViewSemester({
             settingPlans={settingPlans}
             clearSemesterCourses={clearSemesterCourses}
             editingSemester={editingSemester}
-        ></EditSemester>
+        ></EditingSemester>
     ) : (
         <Container>
             <Row>

@@ -23,17 +23,17 @@ export function AddingSemester({
     function saveEdits() {
         if (session === "Fall") {
             settingSemester({
-                id: 0,
+                id: session + year,
                 title: session,
-                year: year,
+                year: "" + year,
                 notes: "",
                 courseList: [] as Course[]
             });
         } else {
             settingSemester({
-                id: 0,
+                id: session + year,
                 title: session,
-                year: year,
+                year: "" + year,
                 notes: "",
                 courseList: [] as Course[]
             });
@@ -63,7 +63,6 @@ export function AddingSemester({
                         >
                             {courseSessions.map((choice: string) => (
                                 <option key={choice} value={choice}>
-                                    {" "}
                                     {choice}
                                 </option>
                             ))}

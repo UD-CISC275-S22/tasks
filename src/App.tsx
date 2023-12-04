@@ -120,8 +120,8 @@ function App(): JSX.Element {
     ]);
 
     const [plan, settingPlan] = useState<Plan>(planList[0]);
-    const [addingMod, settingAddingMod] = useState(false);
-    
+    const [addingMod, setAddingMod] = useState(false);
+
     function settingSemester(newSemester: Semester) {
         const origin = plan.semesters.find(
             (semester: Semester): boolean => semester.id === newSemester.id
@@ -132,7 +132,7 @@ function App(): JSX.Element {
         }
     }
 
-    function clearSemesterCourses(id: number) {
+    function clearSemesterCourses(id: string) {
         const newPlan: Plan = {
             ...plan,
             semesters: plan.semesters.filter(
@@ -146,7 +146,9 @@ function App(): JSX.Element {
     }
 
     function editingSemester(plan: Plan) {
-        settingPlanList(planList.map((p: Plan): Plan => (p.id === plan.id ? plan : p )));
+        settingPlanList(
+            planList.map((p: Plan): Plan => (p.id === plan.id ? plan : p))
+        );
     }
     //constants for welcome message button/modal
     //const [displayWelcomeMessage, displayWelcome] = useState(true);
@@ -161,8 +163,8 @@ function App(): JSX.Element {
     };
 
     //Displaying and Closing Semester Mod Constants
-    const handleCloseAddSemMod = () => settingAddingMod(false);
-    const handleShowAddSemMod = () => settingAddingMod(true);
+    const handleAddingMod = () => setAddingMod(true);
+    const handleCloseAddMod = () => setAddingMod(false);
 
     //Displaying and Closing AddPlan Mod Constants
     const [showingPlan, settingShowPlan] = useState(false);
@@ -173,7 +175,7 @@ function App(): JSX.Element {
     const [addingPlan, settingAddPlan] = useState(false);
     const handleShowAddPlan = () => settingAddPlan(true);
     const handleCloseAddPlan = () => settingAddPlan(false);
-    
+
     //Displaying and Closing ClearPlan Mod Constants
     const [clearingPlan, settingClearPlan] = useState(false);
     const handleShowClearPlan = () => settingClearPlan(true);
@@ -211,26 +213,34 @@ function App(): JSX.Element {
                     <header>
                         <b>{plan.title}</b>
                     </header>
-                    </Row>
                     <Button
-                        onClick={handleShowAddPlan} data-testid="addingPlanMod"> Add Plan
+                        onClick={handleShowAddPlan}
+                        data-testid="addingPlanMod"
+                    >
+                        {" "}
+                        Add Plan
                     </Button>
                     <AddingPlan
-                        show={addingPlan} handleClose={handleCloseAddPlan} plans={planList} settingPlan={settingPlan} settingPlans={settingPlanList}
+                        show={addingPlan}
+                        handleClose={handleCloseAddPlan}
+                        plans={planList}
+                        settingPlan={settingPlan}
+                        settingPlans={settingPlanList}
                     ></AddingPlan>
 
                     <Button
-                        onClick={handleShowPlan} data-testid="switchingBTWPlansMod"
+                        onClick={handleShowPlan}
+                        data-testid="switchingBTWPlansMod"
                     >
                         Switch Plan
                     </Button>
-                    {/* <SwitchPlan>
-                        show={showingPlan} 
-                        handleClose={handleCloseShowPlan} 
-                        plan={plan} 
+                    <SwitchPlan>
+                        show={showingPlan}
+                        handleClose={handleCloseShowPlan}
+                        plan={plan}
                         settingPlan={settingPlan}
-                        plans={settingPlanList} 
-                    </SwitchPlan> */}
+                        plans={settingPlanList}
+                    </SwitchPlan>
                     <MultiSemester
                         currentPlan={plan}
                         plans={planList}
@@ -242,18 +252,20 @@ function App(): JSX.Element {
                     <Row>
                         <Col>
                             <Button
-                                onClick={handleShowAddSemMod} data-testid="addingSemMod"
+                                onClick={handleAddingMod}
+                                data-testid="addingSemMod"
                             >
                                 Add Semester
                             </Button>
                             <AddingSemester
-                                show={handleShowAddSemMod}
-                                handleClose={handleCloseAddSemMod}
+                                show={handleAddingMod}
+                                handleClose={handleCloseAddMod}
                                 settingSemester={settingSemester}
                             ></AddingSemester>
-                            
+
                             <Button
-                                onClick={handleShowClearPlan} data-testid="clearPlanMod"
+                                onClick={handleShowClearPlan}
+                                data-testid="clearPlanMod"
                             >
                                 Clear Plan
                             </Button>
@@ -267,7 +279,8 @@ function App(): JSX.Element {
                             ></ClearingPlan>
 
                             <Button
-                                onClick={handleShowRemovePlan} data-testid="removingPlanMod"
+                                onClick={handleShowRemovePlan}
+                                data-testid="removingPlanMod"
                             >
                                 Remove Plan
                             </Button>
@@ -281,19 +294,19 @@ function App(): JSX.Element {
                             </RemovingPlan>
 
                             <Button
-                                onClick={handleShowEditingPlan} data-testid="editingPlanMod"
+                                onClick={handleShowEditingPlan}
+                                data-testid="editingPlanMod"
                             >
                                 Edit Plan
                             </Button>
                             <EditingPlan
-                                show={handleShowEditingPlan}
+                                show={editingPlan}
                                 handleClose={handleCloseEditingPlan}
                                 plan={plan}
                                 settingPlan={settingPlan}
                                 plans={planList}
                                 settingPlans={settingPlanList}
                             ></EditingPlan>
-
                         </Col>
                     </Row>
                 </Col>

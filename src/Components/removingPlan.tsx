@@ -5,6 +5,7 @@ import { Semester } from "../Interfaces/semester";
 import { Course } from "../Interfaces/course";
 import { Plan } from "../Interfaces/plan";
 
-export function RemovingPlan(){
-    
-}
+export function RemovingPlan({
+    show,
+    handleClose
+)}
