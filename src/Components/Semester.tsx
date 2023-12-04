@@ -98,13 +98,12 @@ export function ViewSemester(): JSX.Element {
     const DEFAULT_COURSE = AI_Semesters[0].courseList[0].title;
     const [currCourse, setCurrCourse] = useState<string>(DEFAULT_COURSE);
     const [SemesterType, setSemesterType] = useState<string>("Fall"); //can be "Fall", "Spring" or "Both"
-    const [displayCourseCategory, setDisplayCourseCategory] =
-        useState<string>("AllCourses");
+    // const [changingSem, setChangingSem] = useState<Semester>(AI_Semesters[0]);
 
     const [SemCount, setSemCount] = useState<number>(2); //default shows 2 semesters
 
     const [clicked, setClicked] = useState<boolean>(false);
-    const [targetSem, setTargetSem] = useState<string>("Fall"); //fall or spring only
+    const [targetSem, setTargetSem] = useState<string>("Fall");
     const [targetYear, setTargetYear] = useState<number>(1);
 
     //states for editing courses - created by Malika
@@ -115,11 +114,6 @@ export function ViewSemester(): JSX.Element {
     //Here is where you can add your add courses and remove courses functions
     function updateCurrCourse(event: React.ChangeEvent<HTMLSelectElement>) {
         setCurrCourse(event.target.value);
-    }
-    function updateDisplayCourseCat(
-        event: React.ChangeEvent<HTMLInputElement>
-    ) {
-        setDisplayCourseCategory(event.target.value);
     }
 
     function index(year: number, sem: string): number {
@@ -198,14 +192,14 @@ export function ViewSemester(): JSX.Element {
         const newClasses = newSemester[idx].courseList.filter(
             (course: Course) => currCourse !== course.title
         );
-        newSemester[idx].courseList = newClasses;
+        newSemester[idx].courseList = [...newClasses];
         // looks through the course list in the current semester and filters out the
         // course with the same "Title" as the state "currCourse"
         // **refer to "currCourse" documentation for more info **
         setSemesters({ ...newSemester });
     }
 
-    function addClass() {
+    function addClass(): void {
         const idx = index(targetYear, targetSem);
         const newSemester = semesters;
         const newClasses = newSemester[idx].courseList;
@@ -221,13 +215,18 @@ export function ViewSemester(): JSX.Element {
         exists = newClasses.findIndex(
             (course: Course) => course.id === COURSES_LIST[choiceIdx].id
         );
+        const coursePresence = newClasses.filter(
+            (course: Course) => course.title !== choice.title
+        );
 
-        if (exists !== -1) {
-            newClasses.push(choice);
+        if (exists !== -1 && coursePresence.length === 0) {
+            newSemester[idx].courseList = [
+                ...newSemester[idx].courseList,
+                choice
+            ];
         }
 
-        newSemester[idx].courseList = newClasses;
-        setSemesters({ ...newSemester });
+        return setSemesters({ ...newSemester });
     }
 
     //function to change number of semesters shown (can be either 1 or 2 only - can add 0 or more semesters later)

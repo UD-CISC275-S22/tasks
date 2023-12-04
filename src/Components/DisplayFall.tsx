@@ -98,8 +98,20 @@ export function DisplayFall({
                             displayCourseCategory === "RestrictiveElective"
                         }
                     />
-                    <Form.Label>Select A Course</Form.Label>
                 </Form.Group>
+                <DropAdd
+                    dropClass={dropClass}
+                    addClass={addClass}
+                    updateCurrCourse={updateCurrCourse}
+                    currCourse={currCourse}
+                    Course_List={fallCourses}
+                ></DropAdd>
+                <ClearSemester
+                    clearSemesterCourses={clearSemesterCourses}
+                    show={clicked}
+                    handleClose={handleClose}
+                    handleShow={handleShow}
+                ></ClearSemester>
             </>
         </div>
     );

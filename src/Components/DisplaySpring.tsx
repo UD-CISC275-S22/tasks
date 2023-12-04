@@ -67,7 +67,7 @@ export function DisplaySpring({
                 )
             )}
 
-            <>
+            <div>
                 <Form.Group controlId="currentCourse">
                     <Form.Label>Select Course Variety</Form.Label>
                     <Form.Check
@@ -99,9 +99,21 @@ export function DisplaySpring({
                             displayCourseCategory === "RestrictiveElective"
                         }
                     />
-                    <Form.Label>Select A Course</Form.Label>
                 </Form.Group>
-            </>
+                <DropAdd
+                    dropClass={dropClass}
+                    addClass={addClass}
+                    updateCurrCourse={updateCurrCourse}
+                    currCourse={currCourse}
+                    Course_List={springCourses}
+                ></DropAdd>
+                <ClearSemester
+                    clearSemesterCourses={clearSemesterCourses}
+                    show={clicked}
+                    handleClose={handleClose}
+                    handleShow={handleShow}
+                ></ClearSemester>
+            </div>
         </div>
     );
 }
