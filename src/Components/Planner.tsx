@@ -14,7 +14,7 @@ import { Button, Row, Col, Form /*Button*/ } from "react-bootstrap";
 import { semester } from "../interfaces/semster";
 
 //-------------------------------------------------------------------------edit
-export function SingleMultipleSemester({
+export function Planner({
     CurrentdegreePlan,
     setCurrentView,
     setCurrentDegreePlan,
@@ -75,6 +75,15 @@ export function SingleMultipleSemester({
                         {course.courseTitle}
                     </Col>
                     <Col>{course.credits}</Col>
+                    <Col>
+                        <Button
+                            onClick={() =>
+                                removeClass(course.courseCode, semArr)
+                            }
+                        >
+                            Remove
+                        </Button>
+                    </Col>
                 </Row>
             )
         );
@@ -99,15 +108,36 @@ export function SingleMultipleSemester({
                         <Row>
                             <Col>Course</Col>
                             <Col>Number of Credits</Col>
+                            <Col>Remove Course</Col>
                         </Row>
                         {addClasstoTable([semester])}
-                        <Button onClick={() => clearAllClassesButton(semester)}>
+                        <Button onClick={() => clearAllClasses(semester)}>
                             Clear All Classes in {semester.name}
+                        </Button>
+                        <br></br>
+                        <Button
+                            onClick={() => removeSemester(semester, semArr)}
+                        >
+                            Remove {semester.name}
                         </Button>
                     </Col>
                 </div>
             </div>
         );
+    }
+    function removeClass(courseCode: string, semsArr: semester[]) {
+        const removedClassArr = semsArr.map((sem: semester): semester => {
+            return {
+                name: sem.name,
+                classes: [
+                    ...sem.classes.filter(
+                        (course: Class): boolean =>
+                            course.courseCode !== courseCode
+                    )
+                ]
+            };
+        });
+        setSemArr(removedClassArr);
     }
     function createSemester(name: string, classes: Class[]) {
         return { name: name, classes: classes };
@@ -142,7 +172,20 @@ export function SingleMultipleSemester({
                         />
                     </div>
                     <div className="separator"></div>
-                    <div style={{ marginLeft: "5px" }}>
+                    <div style={{ marginRight: "5px" }}>
+                        <SlowAdd
+                            onCourseInfo={(
+                                courseInfo: Class & {
+                                    semester: string;
+                                    //year: string;
+                                }
+                            ): void => {
+                                addToCorrectSem(courseInfo, semArr);
+                                console.log(semArr);
+                            }}
+                        />
+                    </div>
+                    {/* <div style={{ marginLeft: "5px" }}>
                         <SlowAdd
                             onCourseInfo={function (courseInfo: Class): void {
                                 // setSemester1(courseInfo.semester);
@@ -152,7 +195,7 @@ export function SingleMultipleSemester({
                                 console.log(semArr);
                             }}
                         />
-                    </div>
+                    </div> */}
                 </div>
             </div>
         );
@@ -161,7 +204,7 @@ export function SingleMultipleSemester({
         semester.classes = [];
         return semester;
     }
-    function clearAllClassesButton(sem: semester) {
+    function clearAllClasses(sem: semester) {
         //Im thinking make a button to clear semesters and then add that to the add table function
         //when clicked update it so classes is an empty array or if that doesn't work create a new semester
         // Make a deep copy, check for the name, and then change it from there
@@ -211,6 +254,12 @@ export function SingleMultipleSemester({
     function updateSemester1(event: React.ChangeEvent<HTMLInputElement>) {
         setSemester1(event.target.value);
     }
+    function removeSemester(sem0: semester, semsArr: semester[]) {
+        const removedClassArr = semsArr.filter(
+            (sem: semester): boolean => sem.name !== sem0.name
+        );
+        setSemArr(removedClassArr);
+    }
     return (
         <div>
             {addCourse()}
@@ -252,7 +301,6 @@ export function SingleMultipleSemester({
                 <Button onClick={clear}> Clear Existing Semesters </Button>
                 <Button onClick={goBackClick}>Go Back to Degree Plans</Button>
             </div>
-            {/* <div>{RemoveSemester()}</div> */}
         </div>
     );
 }

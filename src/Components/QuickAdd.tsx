@@ -31,10 +31,10 @@ function CourseSearch(props: QuickAddProps): JSX.Element {
         );
 
         if (foundCourse) {
-            const newCourse: Class & { semester: string; year: string } = {
+            const newCourse: Class & { semester: string /*; year: string*/ } = {
                 ...foundCourse,
-                semester: "",
-                year: ""
+                semester: "" /*,*/
+                // year: ""
             };
             setCourseInfo(newCourse);
             setCourseFound(true);
@@ -54,7 +54,7 @@ function CourseSearch(props: QuickAddProps): JSX.Element {
 
     const handleAddCourse = () => {
         if (courseInfo) {
-            console.log(courseInfo);
+            //console.log(courseInfo);
             props.onCourseInfo({ ...courseInfo, semester, year });
         }
     };
@@ -79,7 +79,7 @@ function CourseSearch(props: QuickAddProps): JSX.Element {
                     <h6>{courseInfo.courseTitle}</h6>
                     <div>{courseInfo.courseCode}</div>
                     <div>
-                        {"Pre-requisite: "} {courseInfo.preReqs}
+                        {"Pre-requisite(s): "} {courseInfo.preReqs}
                     </div>
                     <div>{courseInfo.credits} Credits</div>
                     <br></br>

@@ -12,9 +12,11 @@ describe("Project Component tests", () => {
     });
 
     test("Adding classes to a semester", () => {
-        const planButton = screen.getByText("Plan 2");
+        const planButton = screen.getByText("Create New Degree Plan");
         const viewButton = screen.getByText("View Semesters");
         planButton.click();
+        const thePlan = screen.getByText("Plan 1");
+        thePlan.click();
         viewButton.click();
         expect(
             screen.queryByText(
@@ -44,9 +46,11 @@ describe("Project Component tests", () => {
 
     test("Add semesters", () => {
         const addSem = "Spring 2026";
-        const planButton = screen.getByText("Plan 1");
+        const planButton = screen.getByText("Create New Degree Plan");
         const viewButton = screen.getByText("View Semesters");
         planButton.click();
+        const thePlan = screen.getByText("Plan 1");
+        thePlan.click();
         viewButton.click();
         expect(
             screen.queryByText(
@@ -63,9 +67,11 @@ describe("Project Component tests", () => {
     });
 
     test("Clearing semesters", () => {
-        const planButton = screen.getByText("Plan 1");
+        const planButton = screen.getByText("Create New Degree Plan");
         const viewButton = screen.getByText("View Semesters");
         planButton.click();
+        const thePlan = screen.getByText("Plan 1");
+        thePlan.click();
         viewButton.click();
         expect(
             screen.queryByText(
@@ -88,17 +94,19 @@ describe("Project Component tests", () => {
         expect(screen.queryByText(" "));
     });
 
-    /*
     test("Deleting course from a semester", () => {
-        const planButton = screen.getByText("Plan 2");
+        const planButton = screen.getByText("Create New Degree Plan");
         const viewButton = screen.getByText("View Semesters");
         planButton.click();
+        const thePlan = screen.getByText("Plan 1");
+        thePlan.click();
         viewButton.click();
         expect(
             screen.queryByText(
                 "Search for your course, or manually input your course."
             )
         );
+
         const addSemester = "Spring 2028";
         const testClass = CLASSES[3].courseCode;
         const enterButton = screen.getByText("Enter");
@@ -108,13 +116,10 @@ describe("Project Component tests", () => {
         expect(screen.queryByText(addSemester));
         expect(screen.queryByText("Course"));
         expect(screen.queryByText("Number of Credits"));
-        expect(screen.queryByText(testClass));
         expect(screen.queryByText("1"));
-        const deleteButton = screen.getByText("Delete Course");
-        const input = screen.getByTestId("courseCode");
-        input.setAttribute("value", testClass);
+        expect(screen.queryByText(testClass));
+        const deleteButton = screen.getByText("Clear All Classes in");
         deleteButton.click();
+        expect(screen.queryByText(" "));
     });
-    */
-    //Updated the test cases, need to fix last test case
 });
