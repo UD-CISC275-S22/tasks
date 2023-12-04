@@ -47,20 +47,24 @@ function App(): JSX.Element {
                         </p>
                         <p>
                             Click the button labeled <b>Add New Plan</b> to
-                            create a plan. You can rename it by clicking the
-                            apropriate icon that pops up next to the button. Use
-                            the <b>Save Plan Changes</b> button to have the plan
+                            create a plan. You can rename it by clicking the{" "}
+                            <b>Edit Name</b> button. Use the <b>Stop Editing</b>{" "}
+                            button to save whatever name you have. Use the{" "}
+                            <b>Save Plan Changes</b> button to have the plan
                             show up in the dropdown that contains all plans
                             (including samples).
                         </p>
                         <p>
-                            You can use the buttons labeled <b>Add Semester</b>{" "}
-                            to (you guessed it) add a semester. You can name the
-                            semester with the same icon as earlier. To add a
-                            course, use the <b>Add Course</b> button.
+                            You can use the button labeled <b>Add Semester</b>{" "}
+                            to (you guessed it) add a semester. Use the drop
+                            down menus to select the season and year. You can
+                            name the semester with the <b>Edit Semester Name</b>{" "}
+                            button. To add a course, use the <b>Add Course</b>{" "}
+                            button. To clear the semester, use the{" "}
+                            <b>Remove All Courses</b> button.
                         </p>
                         <p>
-                            In the dropdown menu, type your course code and
+                            When selecting a course, type your course code and
                             click on the course to confirm your selection. You
                             can then use the <b>Add Course</b> button to add it
                             to your semester. You can use the <b>Edit Course</b>{" "}
