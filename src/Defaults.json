@@ -2,45 +2,8 @@
     "defaultPlans": [
         {
             "id": "1",
-            "name": "Test1",
-            "semesters": [
-                {
-                    "id": "",
-                    "name": "Test Sem",
-                    "year": 2020,
-                    "courses": [
-                        {
-                            "id": "",
-                            "name": "Test",
-                            "credits": 125,
-                            "courseId": "CISC 108",
-                            "preReq": ""
-                        }
-                    ],
-                    "season": ""
-                }
-            ]
-        },
-        {
-            "id": "2",
-            "name": "Test2",
-            "semesters": [
-                {
-                    "id": "",
-                    "name": "Test Sem",
-                    "year": 2020,
-                    "courses": [
-                        {
-                            "id": "",
-                            "name": "Test",
-                            "credits": 123,
-                            "courseId": "CISC 108",
-                            "preReq": ""
-                        }
-                    ],
-                    "season": ""
-                }
-            ]
+            "name": "New Plan",
+            "semesters": []
         }
     ]
 }
