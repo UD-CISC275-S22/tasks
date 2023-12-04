@@ -141,12 +141,8 @@ export function CoureseplansBoot({
                                     zIndex: 99
                                 }}
                             >
-                                <tr
-                                    style={{
-                                        marginBottom: "-1px"
-                                    }}
-                                >
-                                    <th colSpan={5}>Course Catalog</th>
+                                <tr>
+                                    <th colSpan={4}>Course Catalog</th>
                                 </tr>
                                 <tr>
                                     <th>Course Code</th>
