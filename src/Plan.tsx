@@ -5,6 +5,7 @@ import { Button, Form } from "react-bootstrap";
 import { plan } from "./PlannerInterfaces/plan";
 import { semester } from "./PlannerInterfaces/semester";
 import { DisplaySemester } from "./SemesterTable";
+import { DegreeRequirements } from "./DegreeReqs";
 
 export function Plan({
     degreePlans,
@@ -16,7 +17,7 @@ export function Plan({
     currentPlan: plan;
 }): JSX.Element {
     //AAAAAAAAAAAAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
-    //const [degreeReqView, toggleDegreeReqView] = useState(false);
+    const [degreeReqView, toggleDegreeReqView] = useState(false);
     const [plan, setPlan] = useState<plan>({ ...currentPlan });
     const [edit, setEdit] = useState<boolean>(false);
 
@@ -43,14 +44,14 @@ export function Plan({
         ); //Removes plan by id
         setPlan({ ...plan, semesters: newSemesters }); //Update plan
     }
-    // function saveChanges() {
-    //     const replaceIndex = degreePlans.findIndex(
-    //         (current: plan) => current.id === plan.id
-    //     ); //Finds where the plan we have a copy of is
-    //     const newDegreePlans = [...degreePlans]; //Makes a copy of the old list of plans
-    //     newDegreePlans.splice(replaceIndex, 1, plan); //Replaces the old plan in the list with our local version
-    //     setDegreePlans(newDegreePlans); //Updates the list of plans in App
-    // }
+    function saveChanges() {
+        const replaceIndex = degreePlans.findIndex(
+            (current: plan) => current.id === plan.id
+        ); //Finds where the plan we have a copy of is
+        const newDegreePlans = [...degreePlans]; //Makes a copy of the old list of plans
+        newDegreePlans.splice(replaceIndex, 1, plan); //Replaces the old plan in the list with our local version
+        setDegreePlans(newDegreePlans); //Updates the list of plans in App
+    }
 
     function clearAllSemesters() {
         setPlan({ ...plan, semesters: [] });
@@ -105,6 +106,11 @@ export function Plan({
             )}
             {plan.semesters.map((semester: semester) => (
                 <div key={semester.id}>
+                    <DegreeRequirements
+                        show={degreeReqView}
+                        setShow={toggleDegreeReqView}
+                        userSemesters={plan.semesters}
+                    ></DegreeRequirements>
                     <DisplaySemester
                         semester={semester}
                         plan={plan}
@@ -124,13 +130,12 @@ export function Plan({
                     </Button>
                 </div>
             ))}
-            <span></span>
             <Button className="btnadd" onClick={() => addSemester()}>
                 Add Semester
             </Button>
-            {/* <Button className="btnadd" onClick={() => saveChanges()}>
+            <Button className="btnadd" onClick={() => saveChanges()}>
                 Save Changes
-            </Button> */}
+            </Button>
             <Button className="btncancel" onClick={() => clearAllSemesters()}>
                 Delete All Semesters
             </Button>

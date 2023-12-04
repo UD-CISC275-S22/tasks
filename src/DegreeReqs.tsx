@@ -13,13 +13,14 @@ import {
     breadthGroupD,
     TechElecs
 } from "./BreadthCategories";
+import { Button } from "react-bootstrap";
 interface Degree_Requirements_Inputs {
     show: boolean;
     setShow: (b: boolean) => void;
     userSemesters: semester[];
 }
 
-export function DegreeRequirements_Section({
+export function DegreeRequirements({
     userSemesters
 }: Degree_Requirements_Inputs): JSX.Element {
     //set all courses and wider requirements to not meet the set requirements
@@ -287,10 +288,10 @@ export function DegreeRequirements_Section({
     //represents the true of false
 
     return (
-        <div className="App">
-            <button className="btn" onClick={toggleModal}>
+        <div>
+            <Button className="btn" onClick={toggleModal}>
                 Degree Requirements
-            </button>
+            </Button>
             <Modal
                 isOpen={isOpen}
                 onRequestClose={toggleModal}
@@ -372,7 +373,7 @@ export function DegreeRequirements_Section({
                                 {display_requirement_state(statsOrProb)}
                             </p>
                             <p>
-                                ENGL 312 orENGL 410:{" "}
+                                ENGL 312 or ENGL 410:{" "}
                                 {display_requirement_state(additionalWriting)}
                             </p>
                             <p>
