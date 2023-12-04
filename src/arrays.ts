@@ -5,24 +5,29 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    return numbers;
+    if (numbers.length === 0) return [];
+    if (numbers.length === 1) return [numbers[0], numbers[0]];
+    return [numbers[0], numbers[numbers.length - 1]];
 }
+
 
 /**
  * Consume an array of numbers, and return a new array where each
  * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
-    return numbers;
+    return numbers.map(x => x * 3);
 }
+
 
 /**
  * Consume an array of strings and convert them to integers. If
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    return [];
+    return numbers.map(x => parseInt(x) || 0);
 }
+
 
 /**
  * Consume an array of strings and return them as numbers. Note that
@@ -32,8 +37,9 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    return [];
+    return amounts.map(x => parseInt(x.replace('$', '')) || 0);
 };
+
 
 /**
  * Consume an array of messages and return a new list of the messages. However, any
@@ -41,16 +47,18 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    return [];
+    return messages.filter(x => !x.endsWith('?')).map(x => x.endsWith('!') ? x.toUpperCase() : x);
 };
+
 
 /**
  * Consumes an array of words and returns the number of words that are LESS THAN
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return 0;
+    return words.filter(x => x.length < 4).length;
 }
+
 
 /**
  * Consumes an array of colors (e.g., 'red', 'purple') and returns true if ALL
@@ -58,8 +66,9 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    return false;
+    return colors.every(x => ['red', 'blue', 'green'].includes(x.toLowerCase()));
 }
+
 
 /**
  * Consumes an array of numbers, and produces a string representation of the
@@ -69,8 +78,10 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    const sum = addends.reduce((acc, val) => acc + val, 0);
+    return `${sum}=${addends.join('+') || '0'}`;
 }
+
 
 /**
  * Consumes an array of numbers and produces a new array of the same numbers,
@@ -82,5 +93,16 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    return [];
+    let sum = 0;
+    let inserted = false;
+
+    return values.flatMap(x => {
+        sum += x;
+        if (!inserted && x < 0) {
+            inserted = true;
+            return [x, sum - x];
+        }
+        return [x];
+    }).concat(inserted ? [] : [sum]);
 }
+
