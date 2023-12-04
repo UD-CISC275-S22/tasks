@@ -1,5 +1,5 @@
-import { Course, Department } from "../Interfaces/course";
-import { courseList } from "./course";
+import { Course, Department } from "../../Interfaces/course";
+import { courseList } from "../course";
 
 //later: make a state that from user input finds the course that they selected and input
 //that into the courses that don't have a definitive course (Ex. if you need math205 or math350)

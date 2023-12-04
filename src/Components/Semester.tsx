@@ -15,11 +15,11 @@ import { Plan } from "../Interfaces/plan";
 
 //individual constants
 import { courseList, defaultCourseList } from "./course";
-import { AI } from "./AI_Plan";
-import { Cyber } from "./Cyber_Plan";
-import { SysNet } from "./SysNet_Plan";
-import { Data } from "./Data_Plan";
-import { Theory } from "./Theory_Plan";
+import { AI } from "./Plans/AI_Plan";
+import { Cyber } from "./Plans/Cyber_Plan";
+import { SysNet } from "./Plans/SysNet_Plan";
+import { Data } from "./Plans/Data_Plan";
+import { Theory } from "./Plans/Theory_Plan";
 
 //modals
 import { DisplayFall } from "./DisplayFall";

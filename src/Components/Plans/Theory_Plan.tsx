@@ -1,58 +1,72 @@
-import { Semester } from "../Interfaces/semester";
-import { Plan } from "../Interfaces/plan";
-import { courseList } from "./course";
+import { Semester } from "../../Interfaces/semester";
+import { Plan } from "../../Interfaces/plan";
+import { courseList } from "../course";
 import { blankCourse, fall1, spring1, fall2, spring2 } from "./plan";
 
-//this is the plan for the Cybersecurity concentration
-export function Cyber(): Plan {
+//this is the plan for the Theory and Computation concentration
+export function Theory(): Plan {
     //plan fields
     const title = "BS Computer Science";
-    const concentration = "Cybersecurity";
-    const id = 1;
+    const concentration = "Theory and Computation";
+    const id = 0;
 
     //making the courses for each semester in each year (whole 4 year plan)
-    const fall1Cyber = fall1();
-    const spring1Cyber = spring1();
-    const fall2Cyber = fall2();
-    fall2Cyber.push(blankCourse);
-    fall2Cyber.push(blankCourse);
-    const spring2Cyber = spring2();
-    spring2Cyber.push(blankCourse);
-    spring2Cyber.push(blankCourse);
-    spring2Cyber.push(blankCourse);
-    const fall3Cyber = courseList.filter(
-        //id 8 is CISC320 and id 9 is CISC361 and id 47 is CISC450
-        (course) => course.id == 8 || course.id == 9 || course.id == 47
+    const fall1Theory = fall1();
+    const spring1Theory = spring1();
+    spring1Theory.pop(); //removes the extra blank course
+    let temp = courseList.filter(
+        //id 13 is MATH242
+        (course) => course.id == 13
     );
-    fall3Cyber.push(blankCourse);
-    fall3Cyber.push(blankCourse);
-    const spring3Cyber = courseList.filter(
-        //id 7 is CISC303 and id 10 is CISC372
-        (course) => course.id == 7 || course.id == 10
+    spring1Theory.push(temp[0]);
+    const fall2Theory = fall2();
+    fall2Theory.push(blankCourse);
+    fall2Theory.push(blankCourse);
+    const spring2Theory = spring2();
+    temp = courseList.filter(
+        //id 14 is MATH205
+        (course) => course.id == 14
     );
-    spring3Cyber.push(blankCourse);
-    spring3Cyber.push(blankCourse);
-    spring3Cyber.push(blankCourse);
-    const fall4Cyber = courseList.filter(
-        //id 48 is CISC464 and id 16 is CISC498 and id 39 is CISC442
-        (course) => course.id == 48 || course.id == 16
+    spring2Theory.push(temp[0]);
+    spring2Theory.push(blankCourse);
+    spring2Theory.push(blankCourse);
+
+    const fall3Theory = courseList.filter(
+        //id 8 is CISC320, id 35 is CISC304 and id 36 is MATH349
+        (course) => course.id == 8 || course.id == 35 || course.id == 36
     );
-    fall4Cyber.push(blankCourse);
-    fall4Cyber.push(blankCourse);
-    fall4Cyber.push(blankCourse);
-    const spring4Cyber = courseList.filter(
-        //id 42 is CISC484 and id 49 is CPEG465 and id 50 is CISC494
-        (course) => course.id == 42 || course.id == 49 || course.id == 50
+    fall3Theory.push(blankCourse);
+    fall3Theory.push(blankCourse);
+    const spring3Theory = courseList.filter(
+        //id 7 is CISC303,
+        (course) => course.id == 7
     );
-    spring4Cyber.push(blankCourse);
-    spring4Cyber.push(blankCourse);
+    spring3Theory.push(blankCourse);
+    spring3Theory.push(blankCourse);
+    spring3Theory.push(blankCourse);
+    spring3Theory.push(blankCourse);
+    const fall4Theory = courseList.filter(
+        //id 16 is CISC498
+        (course) => course.id == 16
+    );
+    fall4Theory.push(blankCourse);
+    fall4Theory.push(blankCourse);
+    fall4Theory.push(blankCourse);
+    fall4Theory.push(blankCourse);
+    const spring4Theory = courseList.filter(
+        //id 17 is CISC499 and id 72 is CISC401
+        (course) => course.id == 17 || course.id == 72
+    );
+    spring4Theory.push(blankCourse);
+    spring4Theory.push(blankCourse);
+    spring4Theory.push(blankCourse);
 
     //making the actual semester types
     const fall1Sem: Semester = {
         type: ["Fall"],
         year: 1,
         totalCredits: 15,
-        courseList: fall1Cyber
+        courseList: fall1Theory
     };
     const winter1Sem: Semester = {
         type: ["Winter"],
@@ -64,7 +78,7 @@ export function Cyber(): Plan {
         type: ["Spring"],
         year: 1,
         totalCredits: 15,
-        courseList: spring1Cyber
+        courseList: spring1Theory
     };
     const summer1Sem: Semester = {
         type: ["Summer"],
@@ -76,7 +90,7 @@ export function Cyber(): Plan {
         type: ["Fall"],
         year: 2,
         totalCredits: 15,
-        courseList: fall2Cyber
+        courseList: fall2Theory
     };
     const winter2Sem: Semester = {
         type: ["Winter"],
@@ -88,7 +102,7 @@ export function Cyber(): Plan {
         type: ["Spring"],
         year: 2,
         totalCredits: 15,
-        courseList: spring2Cyber
+        courseList: spring2Theory
     };
     const summer2Sem: Semester = {
         type: ["Summer"],
@@ -100,7 +114,7 @@ export function Cyber(): Plan {
         type: ["Fall"],
         year: 3,
         totalCredits: 15,
-        courseList: fall3Cyber
+        courseList: fall3Theory
     };
     const winter3Sem: Semester = {
         type: ["Winter"],
@@ -112,7 +126,7 @@ export function Cyber(): Plan {
         type: ["Spring"],
         year: 3,
         totalCredits: 15,
-        courseList: spring3Cyber
+        courseList: spring3Theory
     };
     const summer3Sem: Semester = {
         type: ["Summer"],
@@ -124,7 +138,7 @@ export function Cyber(): Plan {
         type: ["Fall"],
         year: 4,
         totalCredits: 15,
-        courseList: fall4Cyber
+        courseList: fall4Theory
     };
     const winter4Sem: Semester = {
         type: ["Winter"],
@@ -136,7 +150,7 @@ export function Cyber(): Plan {
         type: ["Spring"],
         year: 4,
         totalCredits: 15,
-        courseList: spring4Cyber
+        courseList: spring4Theory
     };
     const summer4Sem: Semester = {
         type: ["Summer"],
@@ -163,8 +177,8 @@ export function Cyber(): Plan {
         courseList: [blankCourse]
     };
 
-    //now the actual semester array for the AI plan
-    const Cyber_Semesters = [
+    //now the actual semester array for the Theory plan
+    const Theory_Semesters = [
         fall1Sem, //INDEX 0
         winter1Sem, //INDEX 1
         spring1Sem, //INDEX 2
@@ -191,25 +205,7 @@ export function Cyber(): Plan {
         title: title,
         concentration: concentration,
         id: id,
-        semesters: Cyber_Semesters,
+        semesters: Theory_Semesters,
         credits: 124
     };
 }
-/*
- * QUESTIONS
- * what do you mean by fall1/fall2/fall3...ect, are those seperated by year or
- * does that mean something else?
- * Are the general courses meant to be edited?
- */
-
-/*
- * IDEAS FOR HOW TO CLEAR PLAN
- * repeat drop down idea to remove desired semester
- * create a button to remove the desired semester
- */
-
-/*
- * DUMMY CODE
- * function dropPlanSemester () {
- * }
- */
