@@ -51,20 +51,21 @@
 .ReactModal__Content {
     background: #fff;
     padding: 20px;
-    border: none;
+    border: #fff;
     border-radius: 4px;
-    outline: none;
+    outline: #fff;
     width: 80%;
     max-width: 10000px;
     text-align: left;
 }
 
 .custom-overlay {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(76, 59, 59, 0.5);
 }
 
 .modal-content {
     position: relative;
+    border: #fff;
 }
 
 .close {
@@ -203,4 +204,27 @@ body {
 .btncancel:active {
     color: #000000;
     background: #ff0000;
+}
+
+/*dropdowns*/
+#selectSzn {
+    color: #000000;
+    background: #fff;
+    border-radius: 5px;
+}
+
+#selectSzn:hover {
+    color: #000000;
+    background: #dadada;
+}
+
+#selectYr {
+    color: #000000;
+    background: #fff;
+    border-radius: 5px;
+}
+
+#selectYr:hover {
+    color: #000000;
+    background: #dadada;
 }
