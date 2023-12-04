@@ -31,7 +31,40 @@ export const usePlannerFunctions = (initialPlans: Plan) => {
     );
     const [currentPlanIndex, setCurrentPlanIndex] = useState<number>(0);
 
-    const currentPlan = plans[currentPlanIndex];
+    const [currentPlan, setCurrentPlan] = useState(plans[currentPlanIndex]);
+
+    const handleResetCourse = (semesterIndex: number, courseIndex: number) => {
+        const originalCourse =
+            semestersData[semesterIndex].courses[courseIndex].original;
+
+        if (originalCourse) {
+            const updatedSemesters = [...semestersData];
+            updatedSemesters[semesterIndex].courses[courseIndex] = {
+                ...originalCourse
+            };
+            setSemestersData(updatedSemesters);
+        } else {
+            alert("Original course details not found. Reset failed.");
+        }
+    };
+
+    const handleEditCourse = (
+        semesterIndex: number,
+        courseIndex: number,
+        updatedCourse: Course
+    ) => {
+        const updatedSemesters = [...semestersData];
+        updatedSemesters[semesterIndex].courses[courseIndex].original =
+            updatedSemesters[semesterIndex].courses[courseIndex].original || {
+                ...updatedSemesters[semesterIndex].courses[courseIndex]
+            };
+
+        updatedSemesters[semesterIndex].courses[courseIndex] = {
+            ...updatedSemesters[semesterIndex].courses[courseIndex],
+            ...updatedCourse
+        };
+        setSemestersData(updatedSemesters);
+    };
 
     const handlePlanChange = (index: number) => {
         setCurrentPlanIndex(index);
@@ -175,16 +208,6 @@ export const usePlannerFunctions = (initialPlans: Plan) => {
         setSemestersData(updatedSemesters);
     };
 
-    const handleEditCourse = (
-        semesterIndex: number,
-        courseIndex: number,
-        updatedCourse: Course
-    ) => {
-        const updatedSemesters = [...semestersData];
-        updatedSemesters[semesterIndex].courses[courseIndex] = updatedCourse;
-        setSemestersData(updatedSemesters);
-    };
-
     const handleInsertSemester = () => {
         const lastSemester = semestersData[semestersData.length - 1];
         const newSemester: Semester = {
@@ -280,6 +303,8 @@ export const usePlannerFunctions = (initialPlans: Plan) => {
         currentPlan,
         handlePlanChange,
         handleInsertPlan,
-        handleRemovePlan
+        handleRemovePlan,
+        handleResetCourse,
+        setCurrentPlan
     };
 };

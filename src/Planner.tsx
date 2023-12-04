@@ -41,7 +41,8 @@ const Planner: React.FC<Planner> = ({ plan }) => {
         currentPlanIndex,
         handlePlanChange,
         handleInsertPlan,
-        handleRemovePlan
+        handleRemovePlan,
+        handleResetCourse
     } = usePlannerFunctions(plan);
 
     return (
@@ -60,7 +61,19 @@ const Planner: React.FC<Planner> = ({ plan }) => {
                 <button onClick={handleInsertPlan}>Insert New Plan</button>
                 <button onClick={handleRemovePlan}>Remove Current Plan</button>
             </div>
-            <h1 onClick={handleToggleAllSemestersVisibility}>{plan.title}</h1>
+            <h1
+                className="plan-title"
+                onClick={handleToggleAllSemestersVisibility}
+            >
+                <span
+                    className={
+                        allSemestersVisible ? "arrow-icon rotate" : "arrow-icon"
+                    }
+                >
+                    &#x25B6;
+                </span>{" "}
+                {plan.title}
+            </h1>
             {allSemestersVisible && (
                 <div className="button-row">
                     <button onClick={handleInsertSemester}>
@@ -113,6 +126,15 @@ const Planner: React.FC<Planner> = ({ plan }) => {
                                 handleToggleVisibility(semesterIndex)
                             }
                         >
+                            <span
+                                className={
+                                    coursesVisibility[semesterIndex]
+                                        ? "arrow-icon rotate"
+                                        : "arrow-icon"
+                                }
+                            >
+                                &#x25B6;
+                            </span>
                             {semester.id}
                         </h2>
                     )}
@@ -238,6 +260,16 @@ const Planner: React.FC<Planner> = ({ plan }) => {
                                                 }
                                             >
                                                 Edit Course
+                                            </button>
+                                            <button
+                                                onClick={() =>
+                                                    handleResetCourse(
+                                                        semesterIndex,
+                                                        courseIndex
+                                                    )
+                                                }
+                                            >
+                                                Reset Course
                                             </button>
                                             <button
                                                 onClick={() =>
