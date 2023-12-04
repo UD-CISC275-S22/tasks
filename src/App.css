@@ -130,5 +130,72 @@ body {
 }
 
 #openModalBtn:hover {
+    color: #000000;
     background: #dddddd;
+}
+
+.btn {
+    color: #000000;
+    background: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    border: rgba(0, 0, 0, 0.5);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.btn:hover {
+    color: #000000;
+    background: #dddddd;
+}
+
+.btn:active {
+    color: #000000;
+    background: #fff;
+}
+
+.btnadd {
+    color: #000000;
+    background: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    border: rgba(0, 0, 0, 0.5);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.btnadd:hover {
+    color: #000000;
+    background: #dddddd;
+}
+
+.btnadd:active {
+    color: #000000;
+    background: #dddddd;
+}
+
+.btncancel {
+    color: #fff;
+    background: #000000;
+    font-weight: bold;
+    border-radius: 5px;
+    border: rgba(0, 0, 0, 0.5);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.btncancel:hover {
+    color: #fff;
+    background: #4e4e4e;
+}
+
+.btncancel:active {
+    color: #fff;
+    background: #000000;
 }

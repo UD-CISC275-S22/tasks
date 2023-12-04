@@ -29,7 +29,7 @@ function App(): JSX.Element {
                     onClick={openModal}
                     title="Open Modal"
                 >
-                    See Instructions
+                    Need Help?
                 </button>
                 <Modal
                     isOpen={modalIsOpen}
