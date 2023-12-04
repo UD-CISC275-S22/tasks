@@ -22,11 +22,9 @@ import { Data } from "./Plans/Data_Plan";
 import { Theory } from "./Plans/Theory_Plan";
 import { High } from "./Plans/High_Plan";
 import { Bio } from "./Plans/Bio_Plan";
-
 import { useSessionStorage } from "./useSessionStorage";
 import { blankPlan } from "./Plans/plan";
 import { blankSemester } from "./Plans/plan";
-
 //modals
 import { DisplayFall } from "./DisplayFall";
 import { DisplayWinter } from "./DisplayWinter";
@@ -66,6 +64,8 @@ const Data_Semesters = Data_Plan.semesters;
 const Theory_Semesters = Theory_Plan.semesters;
 const High_Semesters = High_Plan.semesters;
 const Bio_Semesters = Bio_Plan.semesters;
+
+const DEFAULT_COURSE = AI_Semesters[0].courseList[0].title;
 
 export function ViewSemester(): JSX.Element {
     //all stuff for saving plans
@@ -406,17 +406,14 @@ export function ViewSemester(): JSX.Element {
             setPlan(Theory_Plan);
             setSemesters(Theory_Semesters);
             setSeePlan(true);
-            return;
         } else if (planSelected === "High Performance Computing") {
             setPlan(High_Plan);
             setSemesters(High_Semesters);
             setSeePlan(true);
-            return;
         } else if (planSelected === "Bioinformatics") {
             setPlan(Bio_Plan);
             setSemesters(Bio_Semesters);
             setSeePlan(true);
-            return;
         }
     };
 

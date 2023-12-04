@@ -1,48 +1,74 @@
-import { Semester } from "../../Interfaces/semester";
-import { Plan } from "../../Interfaces/plan";
-import { courseList } from "../course";
+import { Semester } from "../Interfaces/semester";
+import { Plan } from "../Interfaces/plan";
+import { courseList } from "./course";
 import { blankCourse, fall1, spring1, fall2, spring2 } from "./plan";
 
-export function SysNet(): Plan {
+//this is the plan for the High Performance Computing concentration
+export function High(): Plan {
     //plan fields
     const title = "BS Computer Science";
-    const concentration = "Systems and Networks";
-    const id = 2;
+    const concentration = "High Performance Computing";
+    const id = 0;
 
     //making the courses for each semester in each year (whole 4 year plan)
-    const fall1SysNet = fall1();
-    const spring1SysNet = spring1();
-    let fall2SysNet = fall2();
-    fall2SysNet = [...fall2SysNet, blankCourse, blankCourse];
-    let spring2SysNet = spring2();
-    spring2SysNet = [...spring2SysNet, blankCourse, blankCourse, blankCourse];
-    let fall3SysNet = courseList.filter(
-        //id 8 is CISC320, id 9 is CISC361, and id 7 is CISC303
-        (course) => course.id == 8 || course.id == 9 || course.id == 7
+    const fall1High = fall1();
+    const spring1High = spring1();
+    spring1High.pop(); //removes the extra blank course
+    let temp = courseList.filter(
+        //id 13 is MATH242
+        (course) => course.id == 13
     );
-    fall3SysNet = [...fall3SysNet, blankCourse, blankCourse];
-    let spring3SysNet = courseList.filter(
+    spring1High.push(temp[0]);
+    const fall2High = fall2();
+    temp = courseList.filter(
+        //id 57 is MATH243
+        (course) => course.id == 57
+    );
+    fall2High.push(temp[0]);
+    fall2High.push(blankCourse);
+    const spring2High = spring2();
+    temp = courseList.filter(
+        //id 14 is MATH205
+        (course) => course.id == 14
+    );
+    spring2High.push(temp[0]);
+    spring2High.push(blankCourse);
+    spring2High.push(blankCourse);
+
+    const fall3High = courseList.filter(
+        //id 8 is CISC320, id 7 is CISC303 and id 9 is CISC361
+        (course) => course.id == 8 || course.id == 7 || course.id == 9
+    );
+    fall3High.push(blankCourse);
+    fall3High.push(blankCourse);
+    const spring3High = courseList.filter(
         //id 60 is CISC360 and id 10 is CISC372
         (course) => course.id == 60 || course.id == 10
     );
-    spring3SysNet = [...spring3SysNet, blankCourse, blankCourse, blankCourse];
-    let fall4SysNet = courseList.filter(
-        //id 18 is UNVI401, id 16 is CISC498, and id 47 is CISC450
-        (course) => course.id == 18 || course.id == 16 || course.id == 47
+    spring3High.push(blankCourse);
+    spring3High.push(blankCourse);
+    spring3High.push(blankCourse);
+    const fall4High = courseList.filter(
+        //id 16 is CISC498
+        (course) => course.id == 16
     );
-    fall4SysNet = [...fall4SysNet, blankCourse, blankCourse, blankCourse];
-    let spring4SysNet = courseList.filter(
-        //id 17 is CISC499 and id 19 is UNVI402 and id 61 is CISC471
-        (course) => course.id == 17 || course.id == 19 || course.id == 61
+    fall4High.push(blankCourse);
+    fall4High.push(blankCourse);
+    fall4High.push(blankCourse);
+    fall4High.push(blankCourse);
+    const spring4High = courseList.filter(
+        //id 17 is CISC499 and id 47 is CISC450 and id 61 is CISC471
+        (course) => course.id == 17 || course.id == 47 || course.id == 61
     );
-    spring4SysNet = [...spring4SysNet, blankCourse, blankCourse, blankCourse];
+    spring4High.push(blankCourse);
+    spring4High.push(blankCourse);
 
     //making the actual semester types
     const fall1Sem: Semester = {
         type: ["Fall"],
         year: 1,
         totalCredits: 15,
-        courseList: fall1SysNet
+        courseList: fall1High
     };
     const winter1Sem: Semester = {
         type: ["Winter"],
@@ -54,7 +80,7 @@ export function SysNet(): Plan {
         type: ["Spring"],
         year: 1,
         totalCredits: 15,
-        courseList: spring1SysNet
+        courseList: spring1High
     };
     const summer1Sem: Semester = {
         type: ["Summer"],
@@ -66,7 +92,7 @@ export function SysNet(): Plan {
         type: ["Fall"],
         year: 2,
         totalCredits: 15,
-        courseList: fall2SysNet
+        courseList: fall2High
     };
     const winter2Sem: Semester = {
         type: ["Winter"],
@@ -78,7 +104,7 @@ export function SysNet(): Plan {
         type: ["Spring"],
         year: 2,
         totalCredits: 15,
-        courseList: spring2SysNet
+        courseList: spring2High
     };
     const summer2Sem: Semester = {
         type: ["Summer"],
@@ -90,7 +116,7 @@ export function SysNet(): Plan {
         type: ["Fall"],
         year: 3,
         totalCredits: 15,
-        courseList: fall3SysNet
+        courseList: fall3High
     };
     const winter3Sem: Semester = {
         type: ["Winter"],
@@ -102,7 +128,7 @@ export function SysNet(): Plan {
         type: ["Spring"],
         year: 3,
         totalCredits: 15,
-        courseList: spring3SysNet
+        courseList: spring3High
     };
     const summer3Sem: Semester = {
         type: ["Summer"],
@@ -114,7 +140,7 @@ export function SysNet(): Plan {
         type: ["Fall"],
         year: 4,
         totalCredits: 15,
-        courseList: fall4SysNet
+        courseList: fall4High
     };
     const winter4Sem: Semester = {
         type: ["Winter"],
@@ -126,7 +152,7 @@ export function SysNet(): Plan {
         type: ["Spring"],
         year: 4,
         totalCredits: 15,
-        courseList: spring4SysNet
+        courseList: spring4High
     };
     const summer4Sem: Semester = {
         type: ["Summer"],
@@ -153,8 +179,8 @@ export function SysNet(): Plan {
         courseList: [blankCourse]
     };
 
-    //now the actual semester array for the AI plan
-    const SysNet_Semesters = [
+    //now the actual semester array for the High plan
+    const High_Semesters = [
         fall1Sem, //INDEX 0
         winter1Sem, //INDEX 1
         spring1Sem, //INDEX 2
@@ -181,7 +207,7 @@ export function SysNet(): Plan {
         title: title,
         concentration: concentration,
         id: id,
-        semesters: SysNet_Semesters,
+        semesters: High_Semesters,
         credits: 124
     };
 }

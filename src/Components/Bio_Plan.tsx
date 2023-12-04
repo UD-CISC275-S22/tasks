@@ -1,48 +1,78 @@
-import { Semester } from "../../Interfaces/semester";
-import { Plan } from "../../Interfaces/plan";
-import { courseList } from "../course";
+import { Semester } from "../Interfaces/semester";
+import { Plan } from "../Interfaces/plan";
+import { courseList } from "./course";
 import { blankCourse, fall1, spring1, fall2, spring2 } from "./plan";
 
-export function SysNet(): Plan {
+//this is the plan for the Bio concentration
+export function Bio(): Plan {
     //plan fields
     const title = "BS Computer Science";
-    const concentration = "Systems and Networks";
-    const id = 2;
+    const concentration = "Bioinformatics";
+    const id = 0;
 
     //making the courses for each semester in each year (whole 4 year plan)
-    const fall1SysNet = fall1();
-    const spring1SysNet = spring1();
-    let fall2SysNet = fall2();
-    fall2SysNet = [...fall2SysNet, blankCourse, blankCourse];
-    let spring2SysNet = spring2();
-    spring2SysNet = [...spring2SysNet, blankCourse, blankCourse, blankCourse];
-    let fall3SysNet = courseList.filter(
-        //id 8 is CISC320, id 9 is CISC361, and id 7 is CISC303
-        (course) => course.id == 8 || course.id == 9 || course.id == 7
+    const fall1Bio = fall1();
+    const spring1Bio = spring1();
+    spring1Bio.pop(); //removes the extra blank course
+    let temp = courseList.filter(
+        //id 13 is MATH242
+        (course) => course.id == 13
     );
-    fall3SysNet = [...fall3SysNet, blankCourse, blankCourse];
-    let spring3SysNet = courseList.filter(
-        //id 60 is CISC360 and id 10 is CISC372
-        (course) => course.id == 60 || course.id == 10
+    spring1Bio.push(temp[0]);
+    const fall2Bio = fall2();
+    temp = courseList.filter(
+        //id 25 is CHEM133, id 24 is CHEM103
+        (course) => course.id == 25 || course.id == 24
     );
-    spring3SysNet = [...spring3SysNet, blankCourse, blankCourse, blankCourse];
-    let fall4SysNet = courseList.filter(
-        //id 18 is UNVI401, id 16 is CISC498, and id 47 is CISC450
-        (course) => course.id == 18 || course.id == 16 || course.id == 47
+    fall2Bio.push(temp[0]);
+    fall2Bio.push(blankCourse);
+    const spring2Bio = spring2();
+    temp = courseList.filter(
+        //id 26 is CHEM104, id 14 is MATH205
+        (course) => course.id == 26 || course.id == 14
     );
-    fall4SysNet = [...fall4SysNet, blankCourse, blankCourse, blankCourse];
-    let spring4SysNet = courseList.filter(
-        //id 17 is CISC499 and id 19 is UNVI402 and id 61 is CISC471
-        (course) => course.id == 17 || course.id == 19 || course.id == 61
+    spring2Bio.push(temp[0]);
+    spring2Bio.push(temp[1]);
+    spring2Bio.push(blankCourse);
+    const fall3Bio = courseList.filter(
+        //id 8 is CISC320 and id 28 is BISC207, id 36 is MATH349, id 43 is CHEM213
+        (course) =>
+            course.id == 8 ||
+            course.id == 28 ||
+            course.id == 36 ||
+            course.id == 43
     );
-    spring4SysNet = [...spring4SysNet, blankCourse, blankCourse, blankCourse];
+    const spring3Bio = courseList.filter(
+        //id 7 is CISC303 and id 29 is BISC208, id 37 is ENGL312, id 41 is CISC483
+        (course) =>
+            course.id == 7 ||
+            course.id == 29 ||
+            course.id == 37 ||
+            course.id == 41 ||
+            course.id == 40
+    );
+    spring3Bio.push(blankCourse);
+    const fall4Bio = courseList.filter(
+        //id 18 is UNVI401, id 16 is CISC498, id 89 is BISC401
+        (course) => course.id == 18 || course.id == 16 || course.id == 89
+    );
+    fall4Bio.push(blankCourse);
+    fall4Bio.push(blankCourse);
+    fall4Bio.push(blankCourse);
+    const spring4Bio = courseList.filter(
+        //id 17 is CISC499 and id 19 is UNVI402 and id 90 is CISC436
+        (course) => course.id == 17 || course.id == 19 || course.id == 90
+    );
+    spring4Bio.push(blankCourse);
+    spring4Bio.push(blankCourse);
+    spring4Bio.push(blankCourse);
 
     //making the actual semester types
     const fall1Sem: Semester = {
         type: ["Fall"],
         year: 1,
         totalCredits: 15,
-        courseList: fall1SysNet
+        courseList: fall1Bio
     };
     const winter1Sem: Semester = {
         type: ["Winter"],
@@ -54,7 +84,7 @@ export function SysNet(): Plan {
         type: ["Spring"],
         year: 1,
         totalCredits: 15,
-        courseList: spring1SysNet
+        courseList: spring1Bio
     };
     const summer1Sem: Semester = {
         type: ["Summer"],
@@ -66,7 +96,7 @@ export function SysNet(): Plan {
         type: ["Fall"],
         year: 2,
         totalCredits: 15,
-        courseList: fall2SysNet
+        courseList: fall2Bio
     };
     const winter2Sem: Semester = {
         type: ["Winter"],
@@ -78,7 +108,7 @@ export function SysNet(): Plan {
         type: ["Spring"],
         year: 2,
         totalCredits: 15,
-        courseList: spring2SysNet
+        courseList: spring2Bio
     };
     const summer2Sem: Semester = {
         type: ["Summer"],
@@ -90,7 +120,7 @@ export function SysNet(): Plan {
         type: ["Fall"],
         year: 3,
         totalCredits: 15,
-        courseList: fall3SysNet
+        courseList: fall3Bio
     };
     const winter3Sem: Semester = {
         type: ["Winter"],
@@ -102,7 +132,7 @@ export function SysNet(): Plan {
         type: ["Spring"],
         year: 3,
         totalCredits: 15,
-        courseList: spring3SysNet
+        courseList: spring3Bio
     };
     const summer3Sem: Semester = {
         type: ["Summer"],
@@ -114,7 +144,7 @@ export function SysNet(): Plan {
         type: ["Fall"],
         year: 4,
         totalCredits: 15,
-        courseList: fall4SysNet
+        courseList: fall4Bio
     };
     const winter4Sem: Semester = {
         type: ["Winter"],
@@ -126,7 +156,7 @@ export function SysNet(): Plan {
         type: ["Spring"],
         year: 4,
         totalCredits: 15,
-        courseList: spring4SysNet
+        courseList: spring4Bio
     };
     const summer4Sem: Semester = {
         type: ["Summer"],
@@ -153,8 +183,8 @@ export function SysNet(): Plan {
         courseList: [blankCourse]
     };
 
-    //now the actual semester array for the AI plan
-    const SysNet_Semesters = [
+    //now the actual semester array for the Bio plan
+    const Bio_Semesters = [
         fall1Sem, //INDEX 0
         winter1Sem, //INDEX 1
         spring1Sem, //INDEX 2
@@ -181,7 +211,7 @@ export function SysNet(): Plan {
         title: title,
         concentration: concentration,
         id: id,
-        semesters: SysNet_Semesters,
+        semesters: Bio_Semesters,
         credits: 124
     };
 }
