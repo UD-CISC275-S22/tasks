@@ -3,4 +3,7 @@ export interface classes {
     title: string;
     credits: number;
     preReq: string[];
+    originalCode?: string;
+    originalTitle?: string;
+    originalCredits?: number;
 }

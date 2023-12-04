@@ -1,7 +1,6 @@
 /* eslint-disable no-extra-parens */
 import React from "react";
 import { Button, Form, Modal } from "react-bootstrap";
-//import { FilteringSearch } from "../../FilteringSearch/FilteringSearch";
 import realData from "../data/corrected_data.json";
 import { semester } from "../Interface/semester";
 import { useState } from "react";
@@ -115,15 +114,21 @@ export function AddToSemester({
                                 {filteredCourses.map((course) => {
                                     return (
                                         <div
+                                            className="searchResult"
                                             onClick={() =>
                                                 handleClick(course.code)
                                             }
                                             style={{
-                                                cursor: "pointer"
+                                                cursor: "pointer",
+                                                color: "white",
+                                                textAlign: "center",
+                                                borderBottom: "solid",
+                                                borderBottomColor: "white",
+                                                fontWeight: "bold"
                                             }}
                                             key={course.code}
                                         >
-                                            {course.code.replace(" ", "")}
+                                            {course.code}
                                         </div>
                                     );
                                 })}
