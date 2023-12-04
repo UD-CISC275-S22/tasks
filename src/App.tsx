@@ -258,7 +258,7 @@ function App(): JSX.Element {
                                 Add Semester
                             </Button>
                             <AddingSemester
-                                show={handleAddingMod}
+                                show={addingMod}
                                 handleClose={handleCloseAddMod}
                                 settingSemester={settingSemester}
                             ></AddingSemester>
