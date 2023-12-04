@@ -7,6 +7,7 @@ import { Course } from "./interfaces/course";
 import { v4 as uuidv4 } from "uuid";
 import { AddCourseToSemester } from "./DBmanage";
 import { CourseplanClick } from "./EditCoursePlan";
+import "./App.css";
 
 interface CatalogCourse {
     code: string;
@@ -112,10 +113,12 @@ export function CoureseplansBoot({
 
     return (
         <div>
-            <Button onClick={Save}>Save</Button>
+            <Button onClick={Save} className="save-button">
+                Save
+            </Button>
             <Row>
                 <Col sm={8}>
-                    <div>
+                    <div style={{ marginBottom: ".5rem" }}>
                         <Form.Group controlId="search" as={Row}>
                             <Col sm={3}>
                                 <FormControl
@@ -134,12 +137,16 @@ export function CoureseplansBoot({
                                 className="table-light"
                                 style={{
                                     position: "sticky",
-                                    top: 0,
+                                    top: -1,
                                     zIndex: 99
                                 }}
                             >
-                                <tr>
-                                    <th colSpan={4}>Course Catalog</th>
+                                <tr
+                                    style={{
+                                        marginBottom: "-1px"
+                                    }}
+                                >
+                                    <th colSpan={5}>Course Catalog</th>
                                 </tr>
                                 <tr>
                                     <th>Course Code</th>
@@ -181,6 +188,7 @@ export function CoureseplansBoot({
                                                                         course.descr
                                                                 });
                                                             }}
+                                                            className="add-button"
                                                         >
                                                             ADD
                                                         </Button>
@@ -195,7 +203,13 @@ export function CoureseplansBoot({
                     </div>
                 </Col>
                 <Col sm={4}>
-                    <div style={{ maxHeight: "300px", overflowY: "auto" }}>
+                    <div
+                        style={{
+                            maxHeight: "300px",
+                            overflowY: "auto",
+                            marginTop: "2.85rem"
+                        }}
+                    >
                         <Table striped bordered hover>
                             <thead
                                 className="table-light"
