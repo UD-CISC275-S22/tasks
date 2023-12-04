@@ -8,24 +8,30 @@ import React, { useState } from "react";
 import { Button, Dropdown, Form } from "react-bootstrap";
 import "./Semester.css";
 //our own interfaces
+
 import { Course } from "../Interfaces/course";
 import { Semester } from "../Interfaces/semester";
 import { Plan } from "../Interfaces/plan";
+
 //individual constants
 import { courseList, defaultCourseList } from "./course";
 import { AI } from "./Plans/AI_Plan";
 import { Cyber } from "./Plans/Cyber_Plan";
 import { SysNet } from "./Plans/SysNet_Plan";
+import { Data } from "./Plans/Data_Plan";
+import { Theory } from "./Plans/Theory_Plan";
+import { High } from "./Plans/High_Plan";
+import { Bio } from "./Plans/Bio_Plan";
 import { useSessionStorage } from "./useSessionStorage";
 import { blankPlan } from "./Plans/plan";
 import { blankSemester } from "./Plans/plan";
-
 //modals
 import { DisplayFall } from "./DisplayFall";
 import { DisplayWinter } from "./DisplayWinter";
 import { DisplaySpring } from "./DisplaySpring";
 import { DisplaySummer } from "./DisplaySummer";
 import { DisplayPlan } from "./DisplayPlan";
+
 //functions and other imports
 import sample from "../data/AllCourseList.json";
 import CourseEdit from "./CourseEdit";
@@ -46,9 +52,20 @@ import { DropAdd } from "./dropAdd";
 const AI_Plan = AI(); //the actual AI plan itself
 const CYBER_Plan = Cyber();
 const SysNet_Plan = SysNet();
+const Data_Plan = Data();
+const Theory_Plan = Theory();
+const High_Plan = High();
+const Bio_Plan = Bio();
+
 const AI_Semesters = AI_Plan.semesters; //the semesters for the AI plan
 const CYBER_Semesters = CYBER_Plan.semesters;
 const SysNet_Semesters = SysNet_Plan.semesters;
+const Data_Semesters = Data_Plan.semesters;
+const Theory_Semesters = Theory_Plan.semesters;
+const High_Semesters = High_Plan.semesters;
+const Bio_Semesters = Bio_Plan.semesters;
+
+const DEFAULT_COURSE = AI_Semesters[0].courseList[0].title;
 
 export function ViewSemester(): JSX.Element {
     //all stuff for saving plans
@@ -355,7 +372,11 @@ export function ViewSemester(): JSX.Element {
     const planOptions = [
         "Artificial Intelligence",
         "Cybersecurity",
-        "Systems and Networks"
+        "Systems and Networks",
+        "Data Science",
+        "Theory and Computation",
+        "High Performance Computing",
+        "Bioinformatics"
     ];
 
     const planSaveOptions = ["Plan 1", "Plan 2"];
@@ -376,6 +397,23 @@ export function ViewSemester(): JSX.Element {
             setSemesters(SysNet_Semesters);
             setSeePlan(true);
             return;
+        } else if (planSelected === "Data Science") {
+            setPlan(Data_Plan);
+            setSemesters(Data_Semesters);
+            setSeePlan(true);
+            return;
+        } else if (planSelected === "Theory and Computation") {
+            setPlan(Theory_Plan);
+            setSemesters(Theory_Semesters);
+            setSeePlan(true);
+        } else if (planSelected === "High Performance Computing") {
+            setPlan(High_Plan);
+            setSemesters(High_Semesters);
+            setSeePlan(true);
+        } else if (planSelected === "Bioinformatics") {
+            setPlan(Bio_Plan);
+            setSemesters(Bio_Semesters);
+            setSeePlan(true);
         }
     };
 
