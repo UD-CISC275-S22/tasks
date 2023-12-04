@@ -1,15 +1,370 @@
 .semester-courses {
-    margin: 20px;
+    margin: 10px;
     padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border: 10px solid #ddd;
+    border-radius: 40px;
+}
+
+.insert-Plan {
+    border-radius: 20px;
+    padding: 3px 8px;
+    background-color: #ddd;
+    color: #010210;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    transition: background-color 1s;
+    font-size: 14px;
+    margin-left: 5px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+}
+.insert-Plan:hover {
+    background-color: #a9a9a9;
+    font-size: 15px;
+}
+
+.remove-currentPlan {
+    border-radius: 20px;
+    padding: 3px 8px;
+    background-color: #ddd;
+    color: #010210;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    transition: background-color 1s;
+    font-size: 14px;
+    margin-left: 5px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+}
+.remove-currentPlan:hover {
+    background-color: #a9a9a9;
+    font-size: 15px;
+}
+
+.insert-newSemster {
+    border-radius: 20px;
+    padding: 3px 8px;
+    background-color: #ddd;
+    color: #010210;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    transition: background-color 1s;
+    font-size: 14px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+}
+.insert-newSemster:hover {
+    background-color: #a9a9a9;
+    font-size: 15px;
+}
+
+.clear-allSemesters {
+    border-radius: 20px;
+    padding: 3px 8px;
+    background-color: #ddd;
+    color: #010210;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    transition: background-color 1s;
+    font-size: 14px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+}
+.clear-allSemesters:hover {
+    background-color: #a9a9a9;
+    font-size: 15px;
+}
+
+.skip-Button {
+    border-radius: 20px;
+    padding: 3px 8px;
+    background-color: #ddd;
+    color: #010210;
+    border: 2px solid #826e6e;
+    cursor: pointer;
+    transition: background-color 1s;
+    font-size: 14px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+}
+.skip-Button:hover {
+    background-color: #a9a9a9;
+    font-size: 15px;
+}
+
+.clear-coursesSemesters {
+    border-radius: 20px;
+    padding: 3px 8px;
+    background-color: #ddd;
+    color: #010210;
+    border: 2px solid #826e6e;
+    cursor: pointer;
+    transition: background-color 1s;
+    font-size: 14px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+}
+.clear-coursesSemesters:hover {
+    background-color: #a9a9a9;
+    font-size: 15px;
+}
+
+.insert-newCourse {
+    border-radius: 20px;
+    padding: 3px 8px;
+    background-color: #ddd;
+    color: #010210;
+    border: 2px solid #826e6e;
+    cursor: pointer;
+    transition: background-color 1s;
+    font-size: 14px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+}
+.insert-newCourse:hover {
+    background-color: #a9a9a9;
+    font-size: 15px;
+}
+
+.remove-Semester {
+    border-radius: 20px;
+    padding: 3px 8px;
+    background-color: #ddd;
+    color: #010210;
+    border: 2px solid #826e6e;
+    cursor: pointer;
+    transition: background-color 1s;
+    font-size: 14px;
+    margin-left: 5px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+}
+.remove-Semester:hover {
+    background-color: #a9a9a9;
+    font-size: 15px;
+}
+
+.remove-course {
+    border-radius: 20px;
+    padding: 2px 2px;
+    background-color: #ddd;
+    color: #010210;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    transition: background-color 1s;
+    font-size: 14px;
+    margin-top: 5px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+}
+
+.remove-course:hover {
+    background-color: #a9a9a9;
+    font-size: 15px;
+}
+
+.move-course {
+    border-radius: 20px;
+    padding: 3px 8px;
+    background-color: #ddd;
+    color: #010210;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    transition: background-color 1s;
+    font-size: 14px;
+    margin-top: 5px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+}
+.move-course:hover {
+    background-color: #a9a9a9;
+    font-size: 15px;
+}
+
+.edit-courses {
+    border-radius: 20px;
+    padding: 3px 8px;
+    background-color: #ddd;
+    color: #010210;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    transition: background-color 1s;
+    font-size: 14px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+}
+
+.edit-courses:hover {
+    background-color: #a9a9a9;
+    font-size: 15px;
+}
+
+.reset-course {
+    border-radius: 20px;
+    padding: 3px 8px;
+    background-color: #ddd;
+    color: #010210;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    transition: background-color 1s;
+    font-size: 14px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    margin-top: 5px;
+}
+
+.reset-course:hover {
+    background-color: #a9a9a9;
+    font-size: 15px;
+}
+.move-button {
+    border-radius: 20px;
+    padding: 3px 8px;
+    background-color: rgb(240, 240, 236);
+    color: #010210;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    transition: background-color 1s;
+    font-size: 14px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+}
+
+.move-button:hover {
+    background-color: #a9a9a9;
+    font-size: 15px;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
+    border: 6px solid #ede9e9;
+    margin-bottom: 20px;
+}
+
+th,
+td {
+    border: 1px solid #dddddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: whitesmoke;
+}
+
+tr:nth-child(odd) {
+    background-color: white;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #ffff99;
+}
+
+tr:nth-child(1) {
+    background-color: white;
+}
+
+.search-bar {
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    padding: 15px;
+}
+
+.search-bar input {
+    text-align: center;
+    margin-left: 10px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    width: 750px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.search-bar select {
+    text-align: center;
+    margin-left: 10px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    width: 250px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.search-bar input:hover {
+    background-color: #eae9e9;
+    font-size: 16px;
+}
+
+.search-bar select:hover {
+    background-color: #eae9e9;
+    font-size: 16px;
+}
+
+.plan-buttons {
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    border: 2px solid #e7d2ae;
+    background-color: rgb(253, 210, 167);
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.plan-buttons:hover {
+    font-size: 16px;
+}
+
+.plan-buttons select {
+    text-align: center;
+    margin-left: 10px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    width: 250px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.plan-buttons select:hover {
+    background-color: #eae9e9;
+    font-size: 16px;
+}
+
+.seasons-header {
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    margin-bottom: 30px;
+    padding: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.semester-buttons {
+    display: flex;
+    align-items: center;
+    border: 2px solid #b9acac;
+    background-color: #eae9e9;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.button-container {
+    margin-left: 10px;
+    display: flex;
+    text-align: center;
 }
 
 .arrow-icon {
@@ -19,25 +374,6 @@ table {
 
 .rotate {
     transform: rotate(90deg);
-}
-
-th,
-td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-}
-
-th {
-    background-color: #f2f2f2;
-}
-
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-tr:hover {
-    background-color: #ffff99;
 }
 
 .course-list-container {

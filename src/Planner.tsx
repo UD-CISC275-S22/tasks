@@ -58,8 +58,15 @@ const Planner: React.FC<Planner> = ({ plan }) => {
                         </option>
                     ))}
                 </select>
-                <button onClick={handleInsertPlan}>Insert New Plan</button>
-                <button onClick={handleRemovePlan}>Remove Current Plan</button>
+                <button className="insert-Plan" onClick={handleInsertPlan}>
+                    Insert New Plan
+                </button>
+                <button
+                    className="remove-currentPlan"
+                    onClick={handleRemovePlan}
+                >
+                    Remove Current Plan
+                </button>
             </div>
             <h1
                 className="plan-title"
@@ -76,10 +83,16 @@ const Planner: React.FC<Planner> = ({ plan }) => {
             </h1>
             {allSemestersVisible && (
                 <div className="button-row">
-                    <button onClick={handleInsertSemester}>
+                    <button
+                        className="insert-newSemster"
+                        onClick={handleInsertSemester}
+                    >
                         Insert New Semester
                     </button>
-                    <button onClick={handleClearAllSemesters}>
+                    <button
+                        className="clear-allSemesters"
+                        onClick={handleClearAllSemesters}
+                    >
                         Clear All Semesters
                     </button>
                 </div>
@@ -116,7 +129,28 @@ const Planner: React.FC<Planner> = ({ plan }) => {
             {semestersData.map((semester, semesterIndex) => (
                 <div
                     key={semesterIndex}
-                    style={{ display: allSemestersVisible ? "block" : "none" }}
+                    className="seasons-header"
+                    style={{
+                        display: allSemestersVisible ? "block" : "none",
+                        background:
+                            semester.id === "Fall 2022"
+                                ? "#ffcccb"
+                                : semester.id === "Spring 2023"
+                                ? "#cfe2f3"
+                                : semester.id === "Fall 2023"
+                                ? "#ffcccb"
+                                : semester.id === "Spring 2024"
+                                ? "#cfe2f3"
+                                : semester.id === "Fall 2024"
+                                ? "#ffcccb"
+                                : semester.id === "Spring 2025"
+                                ? "#cfe2f3"
+                                : semester.id === "Fall 2025"
+                                ? "#ffcccb"
+                                : semester.id === "Spring 2026"
+                                ? "#cfe2f3"
+                                : "transparent"
+                    }}
                 >
                     {semester.skip ? (
                         <h2>{semester.id}(Skipped)</h2>
@@ -139,12 +173,16 @@ const Planner: React.FC<Planner> = ({ plan }) => {
                         </h2>
                     )}
                     <div className="semester-buttons">
-                        <button onClick={() => handleSkipToggle(semesterIndex)}>
+                        <button
+                            className="skip-Button"
+                            onClick={() => handleSkipToggle(semesterIndex)}
+                        >
                             {semester.skip ? "Unskip" : "Skip"}
                         </button>
                         {coursesVisibility[semesterIndex] && (
-                            <div>
+                            <div className="button-container">
                                 <button
+                                    className="clear-coursesSemesters"
                                     onClick={() =>
                                         handleClearCourses(semesterIndex)
                                     }
@@ -152,6 +190,7 @@ const Planner: React.FC<Planner> = ({ plan }) => {
                                     Clear Courses in Semester
                                 </button>
                                 <button
+                                    className="insert-newCourse"
                                     onClick={() =>
                                         handleInsertCourse(semesterIndex, {
                                             code: "NEWCOURSE Code",
@@ -170,6 +209,7 @@ const Planner: React.FC<Planner> = ({ plan }) => {
                             </div>
                         )}
                         <button
+                            className="remove-Semester"
                             onClick={() => handleRemoveSemester(semesterIndex)}
                         >
                             Remove Semester
@@ -203,6 +243,7 @@ const Planner: React.FC<Planner> = ({ plan }) => {
                                         <td>{course.typ}</td>
                                         <td>
                                             <button
+                                                className="edit-courses"
                                                 onClick={() =>
                                                     handleEditCourse(
                                                         semesterIndex,
@@ -262,6 +303,7 @@ const Planner: React.FC<Planner> = ({ plan }) => {
                                                 Edit Course
                                             </button>
                                             <button
+                                                className="reset-course"
                                                 onClick={() =>
                                                     handleResetCourse(
                                                         semesterIndex,
@@ -272,6 +314,7 @@ const Planner: React.FC<Planner> = ({ plan }) => {
                                                 Reset Course
                                             </button>
                                             <button
+                                                className="remove-course"
                                                 onClick={() =>
                                                     handleRemoveCourse(
                                                         semesterIndex,
@@ -282,6 +325,7 @@ const Planner: React.FC<Planner> = ({ plan }) => {
                                                 Remove Course
                                             </button>
                                             <button
+                                                className="move-course"
                                                 onClick={() =>
                                                     handleMoveCourseStart(
                                                         semesterIndex,
@@ -338,6 +382,7 @@ const Planner: React.FC<Planner> = ({ plan }) => {
                                                             )}
                                                         </select>
                                                         <button
+                                                            className="move-button"
                                                             onClick={
                                                                 handleMoveCourseConfirm
                                                             }
