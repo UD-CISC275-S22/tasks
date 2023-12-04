@@ -131,7 +131,7 @@ body {
 
 #openModalBtn:hover {
     color: #000000;
-    background: #fff;
+    background: #efefef;
 }
 
 #openModalBtn:active {
@@ -153,7 +153,7 @@ body {
 
 .btn:hover {
     color: #000000;
-    background: #fff;
+    background: #efefef;
 }
 
 .btn:active {
@@ -175,7 +175,7 @@ body {
 
 .btnadd:hover {
     color: #000000;
-    background: #fff;
+    background: #efefef;
 }
 
 .btnadd:active {
