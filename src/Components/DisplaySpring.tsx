@@ -5,6 +5,7 @@ import { ClearSemester } from "./clearingSemester";
 import { DropAdd } from "./dropAdd";
 import { Semester } from "../Interfaces/semester";
 import { Form } from "react-bootstrap";
+import { courseList } from "./course";
 
 export interface valueProps {
     semesters: Semester[];
@@ -12,10 +13,10 @@ export interface valueProps {
     currCourse: string;
     clicked: boolean;
     targetYear: number;
-    dropClass(): void;
-    addClass(): void;
+    dropClass(targetYear: number, targetSem: string): void;
+    addClass(targetYear: number, targetSem: string): void;
     updateCurrCourse(event: React.ChangeEvent<HTMLSelectElement>): void;
-    clearSemesterCourses(): void;
+    clearSemesterCourses(targetYear: number, targetSem: string): void;
     handleClose(): void;
     handleShow(): void;
     index(targetYear: number, targetSem: string): number;
@@ -68,6 +69,7 @@ export function DisplaySpring({
             )}
 
             <div>
+                {/*
                 <Form.Group controlId="currentCourse">
                     <Form.Label>Select Course Variety</Form.Label>
                     <Form.Check
@@ -99,16 +101,20 @@ export function DisplaySpring({
                             displayCourseCategory === "RestrictiveElective"
                         }
                     />
-                </Form.Group>
+                    </Form.Group> */}
                 <DropAdd
                     dropClass={dropClass}
                     addClass={addClass}
+                    targetYear={targetYear}
+                    targetSem={targetSem}
                     updateCurrCourse={updateCurrCourse}
                     currCourse={currCourse}
-                    Course_List={springCourses}
+                    Course_List={courseList}
                 ></DropAdd>
                 <ClearSemester
                     clearSemesterCourses={clearSemesterCourses}
+                    targetYear={targetYear}
+                    targetSem={targetSem}
                     show={clicked}
                     handleClose={handleClose}
                     handleShow={handleShow}
