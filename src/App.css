@@ -118,8 +118,8 @@ body {
 
 /*buttons*/
 #openModalBtn {
-    color: #000000;
-    background: #fff;
+    color: #fff;
+    background: #000000;
     font-weight: bold;
     border-radius: 5px;
     border: rgba(0, 0, 0, 0.5);
@@ -131,12 +131,17 @@ body {
 
 #openModalBtn:hover {
     color: #000000;
-    background: #dddddd;
+    background: #fff;
+}
+
+#openModalBtn:active {
+    color: #fff;
+    background: #000000;
 }
 
 .btn {
-    color: #000000;
-    background: #fff;
+    color: #fff;
+    background: #000000;
     font-weight: bold;
     border-radius: 5px;
     border: rgba(0, 0, 0, 0.5);
@@ -148,17 +153,17 @@ body {
 
 .btn:hover {
     color: #000000;
-    background: #dddddd;
+    background: #fff;
 }
 
 .btn:active {
-    color: #000000;
-    background: #fff;
+    color: #fff;
+    background: #000000;
 }
 
 .btnadd {
-    color: #000000;
-    background: #fff;
+    color: #fff;
+    background: #000000;
     font-weight: bold;
     border-radius: 5px;
     border: rgba(0, 0, 0, 0.5);
@@ -170,16 +175,16 @@ body {
 
 .btnadd:hover {
     color: #000000;
-    background: #dddddd;
+    background: #fff;
 }
 
 .btnadd:active {
-    color: #000000;
-    background: #dddddd;
+    color: #fff;
+    background: #000000;
 }
 
 .btncancel {
-    color: #fff;
+    color: #ff0000;
     background: #000000;
     font-weight: bold;
     border-radius: 5px;
@@ -191,11 +196,11 @@ body {
 }
 
 .btncancel:hover {
-    color: #fff;
-    background: #4e4e4e;
+    color: #000000;
+    background: #ff4444;
 }
 
 .btncancel:active {
-    color: #fff;
-    background: #000000;
+    color: #000000;
+    background: #ff0000;
 }
