@@ -29,7 +29,7 @@ export function SideNav2({
             <ul className="SideNavList2">
                 <li className="row" onClick={() => flipAddPlanView()}>
                     <div id="picture">{<SchoolIcon />}</div>
-                    <div id="name">{"Add Degree Plan"}</div>
+                    <div id="name">{"Add / Delete Degree Plan"}</div>
                 </li>
                 <li
                     className="row"

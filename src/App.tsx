@@ -17,7 +17,7 @@ import { ChosenMajor, generalClasses } from "./Audit/ChosenMajor";
 import { PlanView } from "./PlanView/PlanView";
 import { DownloadPlan } from "./PlanView/DownloadPlan";
 import { SeeAuditPage } from "./Audit/SeeAuditPage";
-import { AddPlan } from "./addPlan/AddPlan";
+import { AddDeletePlan } from "./addPlan/AddDeletePlan";
 
 function App(): JSX.Element {
     const [page, setPage] = useState(false);
@@ -199,7 +199,7 @@ function App(): JSX.Element {
                                 />
                             )}
                             {addPlanView && (
-                                <AddPlan
+                                <AddDeletePlan
                                     handleClose={flipAddPlanView}
                                     show={addPlanView}
                                     allplans={plans}
