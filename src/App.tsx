@@ -11,11 +11,7 @@ import logo from "../src/logo.png";
 // import QuickAdd from "./Components/QuickAdd";
 // import { Class } from "./interfaces/class";
 function App(): JSX.Element {
-    const prevDegreePlan: degreePlan[] = [
-        { name: "Plan 1", semesters: [] },
-        { name: "Plan 2", semesters: [] },
-        { name: "Plan 3", semesters: [] }
-    ];
+    const prevDegreePlan: degreePlan[] = [];
     //-------------------------------------------------------
     // Function to insert a new degree plan
     //creating an array
