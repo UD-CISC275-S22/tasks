@@ -20,6 +20,8 @@ import { Cyber } from "./Cyber_Plan";
 import { SysNet } from "./SysNet_Plan";
 import { Data } from "./Data_Plan";
 import { Theory } from "./Theory_Plan";
+import { High } from "./High_Plan";
+import { Bio } from "./Bio_Plan";
 
 //modals
 import { DisplayFall } from "./DisplayFall";
@@ -50,12 +52,16 @@ const CYBER_Plan = Cyber();
 const SysNet_Plan = SysNet();
 const Data_Plan = Data();
 const Theory_Plan = Theory();
+const High_Plan = High();
+const Bio_Plan = Bio();
 
 const AI_Semesters = AI_Plan.semesters; //the semesters for the AI plan
 const CYBER_Semesters = CYBER_Plan.semesters;
 const SysNet_Semesters = SysNet_Plan.semesters;
 const Data_Semesters = Data_Plan.semesters;
 const Theory_Semesters = Theory_Plan.semesters;
+const High_Semesters = High_Plan.semesters;
+const Bio_Semesters = Bio_Plan.semesters;
 
 const DEFAULT_COURSE = AI_Semesters[0].courseList[0].title;
 
@@ -341,7 +347,9 @@ export function ViewSemester(): JSX.Element {
         "Cybersecurity",
         "Systems and Networks",
         "Data Science",
-        "Theory and Computation"
+        "Theory and Computation",
+        "High Performance Computing",
+        "Bioinformatics"
     ];
 
     const handlePlans = (planSelected: string) => {
@@ -364,6 +372,14 @@ export function ViewSemester(): JSX.Element {
         } else if (planSelected === "Theory and Computation") {
             setPlan(Theory_Plan);
             setSemesters(Theory_Semesters);
+            setSeePlan(true);
+        } else if (planSelected === "High Performance Computing") {
+            setPlan(High_Plan);
+            setSemesters(High_Semesters);
+            setSeePlan(true);
+        } else if (planSelected === "Bioinformatics") {
+            setPlan(Bio_Plan);
+            setSemesters(Bio_Semesters);
             setSeePlan(true);
         }
     };

@@ -3,11 +3,11 @@ import { Plan } from "../Interfaces/plan";
 import { courseList } from "./course";
 import { blankCourse, fall1, spring1, fall2, spring2 } from "./plan";
 
-//this is the plan for the Theory Science concentration
+//this is the plan for the Theory and Computation concentration
 export function Theory(): Plan {
     //plan fields
     const title = "BS Computer Science";
-    const concentration = "Artificial Intelligence and Robotics Concentration";
+    const concentration = "Theory and Computation";
     const id = 0;
 
     //making the courses for each semester in each year (whole 4 year plan)
