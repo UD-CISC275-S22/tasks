@@ -1,5 +1,7 @@
-import { Course, Department } from "../Interfaces/course";
-import { courseList } from "./course";
+import { Course, Department } from "../../Interfaces/course";
+import { Plan } from "../../Interfaces/plan";
+import { Semester } from "../../Interfaces/semester";
+import { courseList } from "../course";
 
 //later: make a state that from user input finds the course that they selected and input
 //that into the courses that don't have a definitive course (Ex. if you need math205 or math350)
@@ -24,31 +26,64 @@ export const blankCourse: Course = {
     requirements: [""]
 };
 
+export const blankSemester: Semester = {
+    type: [""],
+    year: {} as number,
+    totalCredits: {} as number,
+    courseList: [blankCourse]
+};
+
+export const blankPlan: Plan = {
+    title: "",
+    concentration: "",
+    id: {} as number,
+    semesters: [
+        blankSemester,
+        blankSemester,
+        blankSemester,
+        blankSemester,
+        blankSemester,
+        blankSemester,
+        blankSemester,
+        blankSemester,
+        blankSemester,
+        blankSemester,
+        blankSemester,
+        blankSemester,
+        blankSemester,
+        blankSemester,
+        blankSemester,
+        blankSemester,
+        blankSemester,
+        blankSemester,
+        blankSemester
+    ],
+    credits: {} as number
+};
+
 //explain why fall1 and fall2 and spring1 etc.
 //fall1 reprensents semester 1 fall
 //this function returns first fall semester in year 1 of 4 year plan
 export function fall1(): Course[] {
     //id 1 is CISC108, id 101 is EGGG101, id 0 is ENGL110, id 12 is MATH241
-    const fall1Courses = courseList.filter(
+    let fall1Courses = courseList.filter(
         (course) =>
             course.id == 1 ||
             course.id == 101 ||
             course.id == 0 ||
             course.id == 12
     );
-    fall1Courses.push(blankCourse);
+    fall1Courses = [...fall1Courses, blankCourse];
     return fall1Courses;
 }
 
 //this function returns first spring semester in year 1 of 4 year plan
 export function spring1(): Course[] {
     //id 2 is CISC181 and id 3 is CISC210
-    const spring1Courses = courseList.filter(
+    let spring1Courses = courseList.filter(
         (course) => course.id == 2 || course.id == 3
     );
-    spring1Courses.push(blankCourse);
-    spring1Courses.push(blankCourse);
-    spring1Courses.push(blankCourse);
+    spring1Courses = [...spring1Courses, blankCourse, blankCourse, blankCourse];
     return spring1Courses;
 }
 

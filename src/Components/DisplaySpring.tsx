@@ -56,8 +56,8 @@ export function DisplaySpring({
             <h1>Spring Year {targetYear}</h1>
             {springCourses.map(
                 // eslint-disable-next-line no-extra-parens
-                (course: Course): JSX.Element => (
-                    <div className="Course" key={course.id}>
+                (course: Course, index: number): JSX.Element => (
+                    <div className="Course" key={index}>
                         <span key={course.id}>
                             {course.title}
                             {" - "}

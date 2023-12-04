@@ -1,51 +1,41 @@
-import { Semester } from "../Interfaces/semester";
-import { Plan } from "../Interfaces/plan";
-import { courseList } from "./course";
+import { Semester } from "../../Interfaces/semester";
+import { Plan } from "../../Interfaces/plan";
+import { courseList } from "../course";
 import { blankCourse, fall1, spring1, fall2, spring2 } from "./plan";
 
 export function SysNet(): Plan {
     //plan fields
     const title = "BS Computer Science";
-    const concentration = "Systems and Networks Concentration";
+    const concentration = "Systems and Networks";
     const id = 2;
 
     //making the courses for each semester in each year (whole 4 year plan)
     const fall1SysNet = fall1();
     const spring1SysNet = spring1();
-    const fall2SysNet = fall2();
-    fall2SysNet.push(blankCourse);
-    fall2SysNet.push(blankCourse);
-    const spring2SysNet = spring2();
-    spring2SysNet.push(blankCourse);
-    spring2SysNet.push(blankCourse);
-    spring2SysNet.push(blankCourse);
-    const fall3SysNet = courseList.filter(
+    let fall2SysNet = fall2();
+    fall2SysNet = [...fall2SysNet, blankCourse, blankCourse];
+    let spring2SysNet = spring2();
+    spring2SysNet = [...spring2SysNet, blankCourse, blankCourse, blankCourse];
+    let fall3SysNet = courseList.filter(
         //id 8 is CISC320, id 9 is CISC361, and id 7 is CISC303
         (course) => course.id == 8 || course.id == 9 || course.id == 7
     );
-    fall3SysNet.push(blankCourse);
-    fall3SysNet.push(blankCourse);
-    const spring3SysNet = courseList.filter(
+    fall3SysNet = [...fall3SysNet, blankCourse, blankCourse];
+    let spring3SysNet = courseList.filter(
         //id 60 is CISC360 and id 10 is CISC372
         (course) => course.id == 60 || course.id == 10
     );
-    spring3SysNet.push(blankCourse);
-    spring3SysNet.push(blankCourse);
-    spring3SysNet.push(blankCourse);
-    const fall4SysNet = courseList.filter(
+    spring3SysNet = [...spring3SysNet, blankCourse, blankCourse, blankCourse];
+    let fall4SysNet = courseList.filter(
         //id 18 is UNVI401, id 16 is CISC498, and id 47 is CISC450
         (course) => course.id == 18 || course.id == 16 || course.id == 47
     );
-    fall4SysNet.push(blankCourse);
-    fall4SysNet.push(blankCourse);
-    fall4SysNet.push(blankCourse);
-    const spring4SysNet = courseList.filter(
+    fall4SysNet = [...fall4SysNet, blankCourse, blankCourse, blankCourse];
+    let spring4SysNet = courseList.filter(
         //id 17 is CISC499 and id 19 is UNVI402 and id 61 is CISC471
         (course) => course.id == 17 || course.id == 19 || course.id == 61
     );
-    spring4SysNet.push(blankCourse);
-    spring4SysNet.push(blankCourse);
-    spring4SysNet.push(blankCourse);
+    spring4SysNet = [...spring4SysNet, blankCourse, blankCourse, blankCourse];
 
     //making the actual semester types
     const fall1Sem: Semester = {

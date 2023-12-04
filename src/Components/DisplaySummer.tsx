@@ -45,8 +45,8 @@ export function DisplaySummer({
             <h1>Summer Year {targetYear}</h1>
             {summerCourses.map(
                 // eslint-disable-next-line no-extra-parens
-                (course: Course): JSX.Element => (
-                    <div className="Course" key={course.id}>
+                (course: Course, index: number): JSX.Element => (
+                    <div className="Course" key={index}>
                         <span key={course.id}>
                             {course.title}
                             {" - "}
