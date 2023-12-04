@@ -3,12 +3,12 @@
 import React, { useState } from "react";
 import "./App.css";
 import { GenerateCSV, Import } from "./CSV";
-import { WelcomeMessage } from "./Name";
 import { DegreePlan } from "./interfaces/degreeplan";
 import dpsamplejson from "./sampleDpData.json"; //this is the real json data that the user will start with if they are new
 import { Button } from "react-bootstrap";
 import { DpList } from "./DpList";
 import { AddDpSemestersCoursesModal } from "./AddDpSemestersCoursesModal";
+import { WelcomeMessage } from "./Name";
 
 export function App(): JSX.Element {
     //load in json data
@@ -38,6 +38,7 @@ export function App(): JSX.Element {
     const [degreePlans, setdegreePlans] = useState<DegreePlan[]>(loaded_data);
     const [showAddModal, setShowAddModal] = useState<boolean>(false);
     const [availableId, setAvailableId] = useState<number>(default_id);
+    const [isSiteVisble, setIsSiteVisible] = useState(false);
     //handles opening and closing the popup (modal)
     const handleCloseModal = () => setShowAddModal(false);
     const handleShowModal = () => setShowAddModal(true);
@@ -68,6 +69,9 @@ export function App(): JSX.Element {
         localStorage.setItem(SAVE_KEY, JSON.stringify(degreePlans));
         localStorage.setItem(SAVED_ID, JSON.stringify(availableId));
     }
+    const toggleSiteVisability = () => {
+        setIsSiteVisible(!isSiteVisble);
+    };
 
     function editDegreePlan(id: number, newDp: DegreePlan) {
         setdegreePlans(
@@ -79,51 +83,72 @@ export function App(): JSX.Element {
 
     return (
         <div>
-            <div className="App">
-                <header className="App-header">
-                    University of Delaware Computer Science Degree Plan
-                    <p>
-                        <WelcomeMessage></WelcomeMessage>
-                    </p>
-                    <p>
-                        <ul className="horizontal-list">
-                            <li> Aidan Bell </li>
-                            <li>Lawrence Collins </li>
-                            <li>Nicky Reigel</li>
-                            <li>Melvin Rau</li>
-                            <li>Victor Vasquez</li>
-                        </ul>
-                    </p>
-                </header>
-                <DpList
-                    dp={degreePlans}
-                    deleteDp={deleteDp}
-                    editDp={editDegreePlan}
-                ></DpList>
-                <Button className="add_btn" onClick={handleShowModal}>
-                    Add New Degree Plan
-                </Button>
-                <Button onClick={saveData}>Save Degree Plans</Button>
-                <AddDpSemestersCoursesModal
-                    show={showAddModal}
-                    handleClose={handleCloseModal}
-                    addDp={addDp}
-                ></AddDpSemestersCoursesModal>
-                <div>
-                    <Import
-                        importData={importData}
-                        setImportData={setImportData}
-                    />
-                    <GenerateCSV
-                        data={[
-                            ["First Name", "Last Name"],
-                            ["Nicky", "Reigel"],
-                            ["Aidan", "Bell"]
-                        ]}
-                        filename="testexport"
-                    />
+<WelcomeMessage></WelcomeMessage>
+            <DpList dp={degreePlans} deleteDp={deleteDp}></DpList>
+            <Button onClick={toggleSiteVisability} className="link_wrapper">
+                <a href="#">Continue to Site!</a>
+                <div className="icon">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 268.832 268.832"
+                    >
+                        <path d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z" />
+                    </svg>
                 </div>
-            </div>
+            </Button>
+            {isSiteVisble && (
+                <div className="Back-color">
+                    <div className="App">
+                        <header className="App-header2">
+                            University of Delaware Computer Science Degree Plan
+                            <p>
+                                <ul className="horizontal-list">
+                                    <li> Aidan Bell </li>
+                                    <li>Lawrence Collins </li>
+                                    <li>Nicky Reigel</li>
+                                    <li>Melvin Rau</li>
+                                    <li>Victor Vasquez</li>
+                                </ul>
+                            </p>
+                        </header>
+                        <div className="App-blockright">
+                            <p className="BT">
+                                Here you will select your desired courses to
+                                build your degree plan:{" "}
+                            </p>
+
+                            <Button
+                                className="add_btn"
+                                onClick={handleShowModal}
+                            >
+                                Add New Degree Plan
+                            </Button>
+                            <Button onClick={saveData}>
+                                Save Degree Plans
+                            </Button>
+                            <AddDpSemestersCoursesModal
+                                show={showAddModal}
+                                handleClose={handleCloseModal}
+                                addDp={addDp}
+                            ></AddDpSemestersCoursesModal>
+                        </div>
+                        <div className="App-blockleft">
+                            <Import
+                                importData={importData}
+                                setImportData={setImportData}
+                            />
+                            <GenerateCSV
+                                data={[
+                                    ["First Name", "Last Name"],
+                                    ["Nicky", "Reigel"],
+                                    ["Aidan", "Bell"]
+                                ]}
+                                filename="testexport"
+                            />
+                        </div>
+                    </div>{" "}
+                </div>
+            )}
         </div>
     );
 }
