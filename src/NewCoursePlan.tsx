@@ -134,12 +134,12 @@ export function CoureseplansBoot({
                                 className="table-light"
                                 style={{
                                     position: "sticky",
-                                    top: 0,
+                                    top: -1,
                                     zIndex: 99
                                 }}
                             >
                                 <tr>
-                                    <th colSpan={4}>Course Catalog</th>
+                                    <th colSpan={5}>Course Catalog</th>
                                 </tr>
                                 <tr>
                                     <th>Course Code</th>
