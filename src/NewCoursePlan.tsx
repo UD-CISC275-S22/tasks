@@ -142,7 +142,7 @@ export function CoureseplansBoot({
                                 }}
                             >
                                 <tr>
-                                    <th colSpan={4}>Course Catalog</th>
+                                    <th colSpan={5}>Course Catalog</th>
                                 </tr>
                                 <tr>
                                     <th>Course Code</th>
