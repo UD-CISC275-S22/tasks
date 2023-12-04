@@ -2,7 +2,6 @@
     {
         "id": "Fall2023",
         "title": "Fall",
-        "year": "2023",
         "notes": "Additional info by user...",
         "courseList": [
             {
@@ -54,7 +53,6 @@
     {
         "id": "Spring2024",
         "title": "Spring",
-        "year": "2024",
         "notes": "Additional info by user...",
         "courseList": [
             {
