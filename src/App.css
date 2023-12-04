@@ -13,16 +13,19 @@
     }
 }
 
+/*header*/
 .App-header {
     width: 100%;
-    background-color: #282c34;
-    min-height: 40vh;
+    background-color: #0000ff;
+    min-height: 10vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
 }
 
 .App-link {
@@ -36,4 +39,192 @@
     to {
         transform: rotate(360deg);
     }
+}
+
+/*modal*/
+.ReactModal__Overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ReactModal__Content {
+    background: #fff;
+    padding: 20px;
+    border: #fff;
+    border-radius: 4px;
+    outline: #fff;
+    width: 80%;
+    max-width: 10000px;
+    text-align: left;
+}
+
+.custom-overlay {
+    background: rgba(76, 59, 59, 0.5);
+}
+
+.modal-content {
+    position: relative;
+    border: #fff;
+}
+
+.close {
+    color: #5c5c5c;
+    position: absolute;
+    top: -8px;
+    right: 5px;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000000;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+/*linear background*/
+body {
+    background: linear-gradient(to right, #2547f3, rgb(230, 247, 46));
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/*buttons*/
+#openModalBtn {
+    color: #fff;
+    background: #000000;
+    font-weight: bold;
+    border-radius: 5px;
+    border: rgba(0, 0, 0, 0.5);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+#openModalBtn:hover {
+    color: #000000;
+    background: #efefef;
+}
+
+#openModalBtn:active {
+    color: #fff;
+    background: #000000;
+}
+
+.btn {
+    color: #fff;
+    background: #000000;
+    font-weight: bold;
+    border-radius: 5px;
+    border: rgba(0, 0, 0, 0.5);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.btn:hover {
+    color: #000000;
+    background: #efefef;
+}
+
+.btn:active {
+    color: #fff;
+    background: #000000;
+}
+
+.btnadd {
+    color: #fff;
+    background: #000000;
+    font-weight: bold;
+    border-radius: 5px;
+    border: rgba(0, 0, 0, 0.5);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.btnadd:hover {
+    color: #000000;
+    background: #efefef;
+}
+
+.btnadd:active {
+    color: #fff;
+    background: #000000;
+}
+
+.btncancel {
+    color: #ff0000;
+    background: #000000;
+    font-weight: bold;
+    border-radius: 5px;
+    border: rgba(0, 0, 0, 0.5);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.btncancel:hover {
+    color: #000000;
+    background: #ff4444;
+}
+
+.btncancel:active {
+    color: #000000;
+    background: #ff0000;
+}
+
+/*dropdowns*/
+#selectSzn {
+    color: #000000;
+    background: #fff;
+    border-radius: 5px;
+}
+
+#selectSzn:hover {
+    color: #000000;
+    background: #dadada;
+}
+
+#selectYr {
+    color: #000000;
+    background: #fff;
+    border-radius: 5px;
+}
+
+#selectYr:hover {
+    color: #000000;
+    background: #dadada;
 }
