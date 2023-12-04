@@ -140,6 +140,7 @@ Params:
     setImportData: (newData: string) => void
         State setter for imported data
 */
+
 export function Import({
     importData,
     setImportData,
@@ -177,6 +178,8 @@ export function Import({
         <div style={{ textAlign: "center" }}>
             <h1>CSV Degree Plan Import:</h1>
             <form>
+                {" "}
+                <div>{isImported}</div>
                 <input type="file" accept=".csv" onChange={handleFileChange} />
                 <button type="button" onClick={handleImportClick}>
                     Import
