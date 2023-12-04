@@ -5,6 +5,7 @@ import { ClearSemester } from "./clearingSemester";
 import { DropAdd } from "./dropAdd";
 import { Semester } from "../Interfaces/semester";
 import { Form } from "react-bootstrap";
+import CourseEdit from "./CourseEdit";
 
 export interface valueProps {
     semesters: Semester[];
@@ -19,6 +20,11 @@ export interface valueProps {
     handleClose(): void;
     handleShow(): void;
     index(targetYear: number, targetSem: string): number;
+    editedCourse: Course | null;
+    handleSaveChanges(editedCourse: Course): void;
+    handleResetToDefault(editedCourse: Course): void;
+    handleEditClose(): void;
+    handleEditShow(course: Course | undefined): void;
 }
 
 // function to display ONLY the fall semester
@@ -34,7 +40,12 @@ export function DisplayFall({
     clearSemesterCourses,
     handleClose,
     handleShow,
-    index
+    index,
+    editedCourse,
+    handleSaveChanges,
+    handleResetToDefault,
+    handleEditClose,
+    handleEditShow
 }: valueProps): JSX.Element {
     //index now takes in two parameters (targetYear - this is NOT the state and it's already passed in from the Semester.tsx file)
     //targetSem is also NOT the state and it's already passed in from the Semester.tsx file. So both variables are already declared in the indivPlanSem function
@@ -68,37 +79,29 @@ export function DisplayFall({
 
             <>
                 <Form.Group controlId="currentCourse">
-                    <Form.Label>Select Course Variety</Form.Label>
-                    <Form.Check
-                        type="radio"
-                        name="displayCourse1"
-                        onChange={updateDisplayCourseCat}
-                        id="disp-course-all"
-                        label="AllCourses"
-                        value="AllCourses"
-                        checked={displayCourseCategory === "AllCourses"}
-                    />
-                    <Form.Check
-                        type="radio"
-                        name="displayCourse2"
-                        onChange={updateDisplayCourseCat}
-                        id="disp-course-free"
-                        label="FreeElective"
-                        value="FreeElective"
-                        checked={displayCourseCategory === "FreeElective"}
-                    />
-                    <Form.Check
-                        type="radio"
-                        name="displayCourse3"
-                        onChange={updateDisplayCourseCat}
-                        id="disp-course-restricted"
-                        label="RestrictiveElective"
-                        value="RestrictiveElective"
-                        checked={
-                            displayCourseCategory === "RestrictiveElective"
-                        }
-                    />
-                    <Form.Label>Select A Course</Form.Label>
+                    <DropAdd
+                        dropClass={dropClass}
+                        addClass={addClass}
+                        updateCurrCourse={updateCurrCourse}
+                        currCourse={currCourse}
+                        Course_List={fallCourses}
+                        handleEditShow={handleEditShow}
+                    ></DropAdd>
+                    <ClearSemester
+                        clearSemesterCourses={clearSemesterCourses}
+                        show={clicked}
+                        handleClose={handleClose}
+                        handleShow={handleShow}
+                    ></ClearSemester>
+                    {/* CourseEdit modal */}
+                    {editedCourse && (
+                        <CourseEdit
+                            editedCourse={editedCourse}
+                            onSaveChanges={handleSaveChanges}
+                            onResetToDefault={handleResetToDefault}
+                            onClose={handleEditClose}
+                        />
+                    )}
                 </Form.Group>
             </>
         </div>

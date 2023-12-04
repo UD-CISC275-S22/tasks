@@ -7,13 +7,15 @@ export const DropAdd = ({
     addClass,
     updateCurrCourse,
     currCourse,
-    Course_List
+    Course_List,
+    handleEditShow
 }: {
     dropClass: () => void;
     addClass: () => void;
     updateCurrCourse: (event: React.ChangeEvent<HTMLSelectElement>) => void;
     currCourse: string;
     Course_List: Course[];
+    handleEditShow: (course: Course | undefined) => void;
 }) => {
     //added notes
     const [displayCourseCategory, setDisplayCourseCategory] =
@@ -74,6 +76,17 @@ export const DropAdd = ({
             </Form.Group>
             <Button onClick={dropClass}>Remove Class</Button>
             <Button onClick={addClass}>Add Class</Button>
+            <Button
+                onClick={() =>
+                    handleEditShow(
+                        Course_List.find(
+                            (course) => course.title === currCourse
+                        )
+                    )
+                }
+            >
+                Edit Course
+            </Button>
         </>
     );
 };

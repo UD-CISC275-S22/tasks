@@ -69,7 +69,7 @@ export function DisplaySpring({
 
             <>
                 <Form.Group controlId="currentCourse">
-                    <Form.Label>Select Course Variety</Form.Label>
+                    {/* <Form.Label>Select Course Variety</Form.Label>
                     <Form.Check
                         type="radio"
                         name="displayCourse1"
@@ -98,8 +98,20 @@ export function DisplaySpring({
                         checked={
                             displayCourseCategory === "RestrictiveElective"
                         }
-                    />
-                    <Form.Label>Select A Course</Form.Label>
+                    /> */}
+                    {/* <DropAdd
+                        dropClass={dropClass}
+                        addClass={addClass}
+                        updateCurrCourse={updateCurrCourse}
+                        currCourse={currCourse}
+                        Course_List={springCourses}
+                    ></DropAdd>
+                    <ClearSemester
+                        clearSemesterCourses={clearSemesterCourses}
+                        show={clicked}
+                        handleClose={handleClose}
+                        handleShow={handleShow}
+                    ></ClearSemester> */}
                 </Form.Group>
             </>
         </div>

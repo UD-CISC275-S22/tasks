@@ -42,7 +42,6 @@ import { ClearSemester } from "./clearingSemester";
 import { DropAdd } from "./dropAdd";
 // import { courseList } from "./course";
 
-// const COURSE_LIST = courseList; //list of all the courses
 const AI_Plan = AI(); //the actual AI plan itself
 const CYBER_Plan = Cyber();
 const SysNet_Plan = SysNet();
@@ -254,6 +253,11 @@ export function ViewSemester(): JSX.Element {
                     handleClose={handleClose}
                     handleShow={handleShow}
                     index={index}
+                    editedCourse={editedCourse}
+                    handleSaveChanges={handleSaveChanges}
+                    handleResetToDefault={handleResetToDefault}
+                    handleEditClose={handleEditClose}
+                    handleEditShow={handleEditShow}
                 ></DisplayFall>
             );
         } else if (sem === "Spring") {
