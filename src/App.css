@@ -24,6 +24,51 @@
     font-size: calc(10px + 2vmin);
     color: white;
 }
+.App-header2 {
+    font-size: calc(10px + 2vmin);
+    font-weight: 600;
+    background-image: conic-gradient(#553c9a, #ee4b2b, #00c2cb);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-color: #33ff8c;
+}
+.App-blockright {
+    max-width: 50%;
+    width: 100%;
+    text-align: center; /* Align text to the right */
+    font-size: calc(10px + 2vmin);
+    color: black;
+    margin-left: auto; /* Add space on the left */
+}
+
+.App-blockleft {
+    max-width: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: calc(10px + 2vmin);
+    color: black;
+}
+.App-blockright,
+.App-blockleft {
+    display: inline-block;
+}
+.BT {
+    font-weight: bold;
+}
+.Back-color {
+    background-color: lightblue;
+}
+.Back-color2 {
+    background-color: lightyellow;
+}
+
+.div-alignright {
+    text-align: right;
+}
+.div-alignleft {
+    text-align: left;
+}
 
 .App-link {
     color: #61dafb;
@@ -36,4 +81,84 @@
     to {
         transform: rotate(360deg);
     }
+}
+.horizontal-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.horizontal-list li {
+    display: inline-block;
+    margin-right: 10px;
+}
+body {
+    font-family: "Lato", sans-serif;
+}
+.wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+}
+
+.link_wrapper {
+    position: relative;
+    outline: none;
+    background-color: transparent;
+}
+
+a {
+    display: block;
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    background: #333;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 3px solid #333;
+    transition: all 0.35s;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    border: 3px solid transparent;
+    position: absolute;
+    transform: rotate(45deg);
+    right: 0;
+    top: 0;
+    z-index: -1;
+    transition: all 0.35s;
+    background-color: transparent;
+}
+
+.icon svg {
+    width: 30px;
+    position: absolute;
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+    transform: rotate(-45deg);
+    fill: #2ecc71;
+    transition: all 0.35s;
+    background-color: transparent;
+}
+
+a:hover {
+    width: 200px;
+    border: 3px solid #2ecc71;
+    background: transparent;
+    color: #2ecc71;
+    background-color: transparent;
+}
+
+a:hover + .icon {
+    border: 3px solid #2ecc71;
+    right: -25%;
+    background-color: transparent;
 }
