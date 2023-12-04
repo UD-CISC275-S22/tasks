@@ -60,7 +60,6 @@ export function EditingSemester({
                 const newSemester: Semester = {
                     id: saveID,
                     title: session,
-                    year: "" + year,
                     notes: "",
                     courseList: semester.courseList
                 };
@@ -86,7 +85,6 @@ export function EditingSemester({
                 const newSemester: Semester = {
                     id: saveID,
                     title: session,
-                    year: "" + year,
                     notes: "",
                     courseList: semester.courseList
                 };
