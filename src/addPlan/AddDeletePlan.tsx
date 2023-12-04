@@ -2,24 +2,29 @@
 import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import { Plan } from "../Interface/Plan";
+import { semester } from "../Interface/semester";
 
 export function AddDeletePlan({
     handleClose,
     show,
     allplans,
-    setPlans
+    setPlans,
+    setCurrentPlan,
+    setSemesters
 }: {
     handleClose: () => void;
     show: boolean;
     allplans: Plan[];
     setPlans: (plans: Plan[]) => void;
+    setCurrentPlan: (planName: string) => void;
+    setSemesters: (viewSemesteres: semester[]) => void;
 }): JSX.Element {
     const [planName, setPlanName] = useState("");
     const [controlFunction, setControlFunction] = useState(true);
-    const [currentPlan, setCurrentPlan] = useState<string>(allplans[0].name);
+    const [selectPlan, setSelectPlan] = useState<string>("");
 
     function selectedPlan(event: React.ChangeEvent<HTMLSelectElement>): void {
-        setCurrentPlan(event.target.value);
+        setSelectPlan(event.target.value);
     }
 
     const inputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -28,18 +33,23 @@ export function AddDeletePlan({
     };
 
     function createClosingModal() {
-        setPlans([...allplans, { name: planName, semesters: [] }]);
+        if (planName !== "") {
+            setPlans([...allplans, { name: planName, semesters: [] }]);
+            setCurrentPlan(planName);
+        }
         handleClose();
     }
 
     function deleteClosingModal() {
-        const findIndexplan: number = allplans.findIndex(
-            (plan) => plan.name === currentPlan
-        );
-        allplans.splice(findIndexplan, 1);
-        setPlans(allplans);
+        if (selectPlan !== "") {
+            const findIndexplan: number = allplans.findIndex(
+                (plan) => plan.name === selectPlan
+            );
+            allplans.splice(findIndexplan, 1);
+            setPlans(allplans);
+            setSemesters([]);
+        }
         handleClose();
-        console.log(allplans);
     }
 
     return (
@@ -114,20 +124,31 @@ export function AddDeletePlan({
                         </Modal.Header>
                         <Modal.Body>
                             <Form.Group>
-                                <Form.Select
-                                    value={currentPlan}
-                                    onChange={selectedPlan}
-                                    style={{ textAlign: "center" }}
-                                >
-                                    {allplans.map((plan) => (
-                                        <option
-                                            key={plan.name}
-                                            value={plan.name}
-                                        >
-                                            {plan.name}
+                                {allplans.length === 0 ? (
+                                    <div>
+                                        <Modal.Title>
+                                            Please add a degree plan
+                                        </Modal.Title>
+                                    </div>
+                                ) : (
+                                    <Form.Select
+                                        value={selectPlan}
+                                        onChange={selectedPlan}
+                                        style={{ textAlign: "center" }}
+                                    >
+                                        <option>
+                                            Please select a degree plan
                                         </option>
-                                    ))}
-                                </Form.Select>
+                                        {allplans.map((plan) => (
+                                            <option
+                                                key={plan.name}
+                                                value={plan.name}
+                                            >
+                                                {plan.name}
+                                            </option>
+                                        ))}
+                                    </Form.Select>
+                                )}
                             </Form.Group>
                         </Modal.Body>
                         <Modal.Footer>
