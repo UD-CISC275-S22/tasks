@@ -7,6 +7,8 @@ import { Course } from "./interfaces/course";
 import { v4 as uuidv4 } from "uuid";
 import { AddCourseToSemester } from "./DBmanage";
 import { CourseplanClick } from "./EditCoursePlan";
+import { DegreeRequirementCheck } from "./DegreeRequirementCheck";
+import CurrentDegree from "./data/degrees.json";
 
 interface CatalogCourse {
     code: string;
@@ -30,20 +32,24 @@ interface CatalogCourses {
 export function CoureseplansBoot({
     updateCoursePlan,
     setCourseEdit,
-    curCoursePlan,
+    propcurCoursePlan,
     setEditCoursePlan
 }: {
     updateCoursePlan: (cousePlan: CoursePlan) => void;
     setCourseEdit: (course: Course) => void;
-    curCoursePlan: CoursePlan;
+    propcurCoursePlan: CoursePlan;
     setEditCoursePlan: (coureseplan: CoursePlan) => void;
 }) {
     const [curCatalog, setcatalog] = useState<CatalogCourses>(catalog);
+    const [curCoursePlan, setcurCoursePlan] =
+        useState<CoursePlan>(propcurCoursePlan);
+    useEffect(() => setcurCoursePlan(propcurCoursePlan), [propcurCoursePlan]);
     const [queue, setqueue] = useState<Course[]>([]);
     useEffect(() => setEditCoursePlan(curCoursePlan), [curCoursePlan]);
     function addtempCourse(course: Course) {
         setqueue([...queue, course]);
     }
+
     function Save() {
         updateCoursePlan(curCoursePlan);
     }
@@ -75,7 +81,9 @@ export function CoureseplansBoot({
         SetSeachval(event.target.value);
         setcatalog(searchCourses(catalog, event.target.value));
     }
-
+    function nameInput(event: React.ChangeEvent<HTMLInputElement>) {
+        curCoursePlan.name = event.target.value;
+    }
     function searchCourses(
         catalog: CatalogCourses,
         searchTerm: string
@@ -112,7 +120,25 @@ export function CoureseplansBoot({
 
     return (
         <div>
-            <Button onClick={Save}>Save</Button>
+            <Form.Group controlId="search" as={Row}>
+                <Col>
+                    <Form.Label> Name:</Form.Label>
+                    <FormControl
+                        className="float-end"
+                        type="text"
+                        placeholder="Untitled"
+                        onChange={nameInput}
+                    />
+                </Col>
+            </Form.Group>
+            <Button className={"float-end button"} onClick={Save}>
+                Save
+            </Button>
+            <DegreeRequirementCheck
+                currentPlan={curCoursePlan}
+                currentDegree={CurrentDegree[0]}
+            />
+
             <Row>
                 <Col sm={8}>
                     <div>

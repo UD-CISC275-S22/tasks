@@ -80,3 +80,10 @@ button:hover {
     padding: 0;
     margin: 0;
 }
+.fulfilled {
+    background-color: #51db51;
+}
+
+.not-fulfilled {
+    background-color: rgb(222, 98, 98);
+}

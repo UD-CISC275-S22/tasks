@@ -10,6 +10,7 @@ import "./App.css";
 //import { AddCourseModal } from "./AddCourseModal";
 import { UpdateCoureplanYear, removeSemesterYear } from "./DBmanage";
 import { AddSemesterModal } from "./AddSemesterModal";
+
 //import { JsxAttribute } from "typescript";
 //const [CurrentModalCourse, setCurrentModalCourse] = useState<Course>();
 
@@ -114,7 +115,16 @@ function Year({
             <Table style={{ tableLayout: "fixed" }} bordered size="sm">
                 <thead>
                     <tr>
-                        <th colSpan={columncount}>{year.name}</th>
+                        <th colSpan={columncount}>
+                            {year.name}
+                            <Button
+                                variant="primary"
+                                onClick={addSemesterToYear}
+                                className={"float-end"}
+                            >
+                                Add Semester
+                            </Button>
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -260,9 +270,6 @@ function Year({
                     </tr>
                 </tbody>
             </Table>
-            <Button variant="primary" onClick={addSemesterToYear}>
-                Add Semester
-            </Button>
         </div>
     );
 }
@@ -279,12 +286,10 @@ export function CourseplanClick({
 }) {
     const [showAddSemesterModal, setShowAddSemesterModal] = useState(false);
     const [currentYear, setCurrentYear] = useState<yearI | null>(null);
-
     const handleOpenAddSemesterModal = (year: yearI) => {
         setCurrentYear(year);
         setShowAddSemesterModal(true);
     };
-
     const addSemesterToCoursePlan = (
         newSemester: SemesterI,
         yearName: string
@@ -326,7 +331,6 @@ export function CourseplanClick({
                     }
                 />
             ))}
-
             {showAddSemesterModal && currentYear && (
                 <AddSemesterModal
                     show={showAddSemesterModal}

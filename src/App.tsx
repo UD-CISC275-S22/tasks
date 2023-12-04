@@ -19,7 +19,6 @@ import {
     oneYearUpdate,
     updateCourse
 } from "./DBmanage";
-import { degreeRequirementCheck } from "./DegreeRequirementCheck";
 
 function createUUID(db: CoursePlan[]) {
     // Creating a deep copy of db to avoid modifying the original
@@ -52,7 +51,9 @@ function App(): JSX.Element {
     const [data, setdata] = useState<TotalDB>({
         Courseplans: processedPlans
     });
-
+    const [courseplans, setCorseplans] = useState<CoursePlan[]>(
+        data.Courseplans
+    );
     //console.log();
     const DbManager: dbMangement = {
         dataset: data,
@@ -60,8 +61,11 @@ function App(): JSX.Element {
     };
     const [showEditModal, updateEditMogal] = useState<boolean>(false);
     const [currentEditCoureplan, setEditCoursePlan] = useState<CoursePlan>(
-        createFourYearCoursePlan("Click To Edit Name")
+        createFourYearCoursePlan("Untitled")
     );
+    function updateCoursePlan(newCourseplan: CoursePlan) {
+        setCorseplans([...courseplans, newCourseplan]);
+    }
     const handleCloseAddModal = () => updateEditMogal(false);
     //setdata(coursePlanData);
     const [editSelected, setEdit] = useState<Course>({
@@ -96,8 +100,6 @@ function App(): JSX.Element {
         }
     }
 
-    degreeRequirementCheck(degreeData[0], coursePlanData[0]);
-
     return (
         <div className="App">
             <div className="logo">
@@ -118,7 +120,12 @@ function App(): JSX.Element {
                 {EditCorseplan && (
                     <button
                         className="buttonSpacing"
-                        onClick={() => setEditCorseplan(false)}
+                        onClick={() => {
+                            setEditCoursePlan(
+                                createFourYearCoursePlan("Click To Edit Name")
+                            );
+                            setEditCorseplan(false);
+                        }}
                     >
                         New Course Plans
                     </button>
@@ -137,18 +144,16 @@ function App(): JSX.Element {
             <div className="container-fluid">
                 {EditCorseplan ? (
                     <MulitCourseplan
-                        Courseplans={data.Courseplans}
+                        Courseplans={courseplans}
                         setCurrentCourseEdit={setCurrentCourseEdit}
                     />
                 ) : (
                     <CoureseplansBoot
                         //updateCoursePlan={EditModal}
                         setCourseEdit={setCurrentCourseEdit}
-                        curCoursePlan={currentEditCoureplan}
+                        propcurCoursePlan={currentEditCoureplan}
                         setEditCoursePlan={setEditCoursePlan}
-                        updateCoursePlan={function (): void {
-                            throw new Error("Function not implemented.");
-                        }}
+                        updateCoursePlan={updateCoursePlan}
                     />
                 )}
             </div>

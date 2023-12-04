@@ -1,78 +1,83 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { CoursePlan, SemesterI } from "./interfaces/semester";
 import { Degree } from "./interfaces/degree";
 import { Course } from "./interfaces/course";
 import { Table } from "react-bootstrap";
-/*import coursePlanData from "./data/couresplans.json";
-import degreeData from "./data/degrees.json";*/
 
-export function degreeRequirementCheck(
-    currentDegree: Degree,
-    currentPlan: CoursePlan
-): JSX.Element {
-    const coreRequirements = currentDegree.coreCourses;
-
-    const requirements = [
-        ...coreRequirements,
-        ...currentDegree.generalRequirements
-    ];
-
-    let courses: Course[] = [];
-    for (let i = 0; i < currentPlan.years.length; i++) {
-        if (currentPlan.years[i].winter) {
-            const semester = currentPlan.years[i].winter as SemesterI;
-            courses = [...courses, ...semester.courses];
-        }
-        if (currentPlan.years[i].spring) {
-            const semester = currentPlan.years[i].spring as SemesterI;
-            courses = [...courses, ...semester.courses];
-        }
-        if (currentPlan.years[i].summer) {
-            const semester = currentPlan.years[i].summer as SemesterI;
-            courses = [...courses, ...semester.courses];
-        }
-        if (currentPlan.years[i].fall) {
-            const semester = currentPlan.years[i].fall as SemesterI;
-            courses = [...courses, ...semester.courses];
-        }
-    }
-
-    const reqCheck: boolean[] = [];
-    for (const requirement of requirements) {
-        let count = 0;
-        for (const course of courses) {
-            if (requirement === course.ticker) {
-                count++;
-            }
-        }
-        if (count > 0) {
-            reqCheck.push(true);
-        } else {
-            reqCheck.push(false);
-        }
-    }
-
-    return createTable(requirements, reqCheck);
+interface DegreeRequirementCheckProps {
+    currentDegree: Degree;
+    currentPlan: CoursePlan;
 }
 
-export function createTable(
-    requirements: string[],
-    checks: boolean[]
-): JSX.Element {
+export function DegreeRequirementCheck({
+    currentDegree,
+    currentPlan
+}: DegreeRequirementCheckProps): JSX.Element {
+    const [reqCheck, setReqCheck] = useState<boolean[]>([]);
+
+    useEffect(() => {
+        const coreRequirements = currentDegree.coreCourses;
+        const requirements = [
+            ...coreRequirements,
+            ...currentDegree.generalRequirements
+        ];
+
+        let courses: Course[] = [];
+        currentPlan.years.forEach((year) => {
+            ["winter", "spring", "summer", "fall"].forEach((season) => {
+                const semester = year[season as keyof typeof year] as
+                    | SemesterI
+                    | undefined;
+                if (semester) {
+                    courses = [...courses, ...semester.courses];
+                }
+            });
+        });
+
+        const newReqCheck = requirements.map((requirement) => {
+            const count = courses.filter(
+                (course) => course.ticker === requirement
+            ).length;
+            return count > 0;
+        });
+
+        setReqCheck(newReqCheck);
+    }, [currentDegree, currentPlan]);
+
+    return CreateTable({
+        requirements: currentDegree.coreCourses.concat(
+            currentDegree.generalRequirements
+        ),
+        checks: reqCheck
+    });
+}
+
+interface CreateTableProps {
+    requirements: string[];
+    checks: boolean[];
+}
+
+function CreateTable({ requirements, checks }: CreateTableProps): JSX.Element {
     return (
-        <Table>
+        <Table striped bordered hover>
             <thead>
+                <tr>
+                    <th colSpan={2}>Degree Requirements</th>
+                </tr>
                 <tr>
                     <th>Requirement</th>
                     <th>Fulfilled?</th>
                 </tr>
             </thead>
             <tbody>
-                {requirements.map((requirement, index): JSX.Element => {
+                {requirements.map((requirement, index) => {
+                    const rowClass = checks[index]
+                        ? "fulfilled"
+                        : "not-fulfilled";
                     return (
-                        <tr key={index}>
+                        <tr key={index} className={rowClass}>
                             <td>{requirement}</td>
-                            <td>{checks[index]}</td>
+                            <td>{checks[index] ? "Yes" : "No"}</td>
                         </tr>
                     );
                 })}
