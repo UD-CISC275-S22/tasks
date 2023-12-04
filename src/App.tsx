@@ -15,6 +15,9 @@ import sample from "./data/Dummy.json";
 import { AddToSemester } from "./semester-modification/AddToSemester";
 import { ChosenMajor } from "./Audit/ChosenMajor";
 import { PlanView } from "./PlanView/PlanView";
+import AuthDetails from "./AuthDetails";
+import { auth } from "./firebase";
+import { onAuthStateChanged, User, signOut } from "firebase/auth";
 
 function App(): JSX.Element {
     const [page, setPage] = useState(false);
@@ -51,6 +54,29 @@ function App(): JSX.Element {
     const flipPlan = () => {
         setdisplayPlan(!displayPlan);
     };
+
+    const handleLogout = () => {
+        // console.log(page);
+        // setPage(!page);
+        // console.log("Logging out...");
+        // console.log(page);
+        signOut(auth)
+            .then(() => {
+                console.log("Sign Out was Successful");
+                //onLogout();
+                showHomePage();
+            })
+            .catch((error) => console.log(error));
+    };
+
+    // const handleUserSignOut = () => {
+    //     signOut(auth)
+    //         .then(() => {
+    //             console.log("Sign Out was Successful");
+    //             onLogout();
+    //         })
+    //         .catch((error) => console.log(error));
+    // };
 
     const planExamples = sample.map(
         (plan): Plan => ({
@@ -101,7 +127,7 @@ function App(): JSX.Element {
             {!page ? (
                 <WelcomeMessage
                     showHomePage={showHomePage}
-                    getName={getName}
+                    onLogout={handleLogout}
                 ></WelcomeMessage>
             ) : (
                 <div>
@@ -117,6 +143,7 @@ function App(): JSX.Element {
                                 flipModalView={flipModalView}
                                 flipAudit={flipAudit}
                                 flipAddView={flipAddView}
+                                handleLogout={handleLogout}
                             ></SideNav2>
                         </Col>
                         <Col sm={10}>

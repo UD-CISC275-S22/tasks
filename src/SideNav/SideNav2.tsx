@@ -5,19 +5,24 @@ import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 import ClassIcon from "@mui/icons-material/Class";
 import ChecklistIcon from "@mui/icons-material/Checklist";
 import List from "@mui/icons-material/List";
+import AuthDetails from "../AuthDetails";
+import { Logout } from "@mui/icons-material";
 
 export function SideNav2({
     flipView,
     flipPlan,
     flipModalView,
     flipAudit,
-    flipAddView
+    flipAddView,
+    handleLogout
 }: {
     flipView: () => void;
     flipPlan: () => void;
     flipModalView: () => void;
     flipAudit: () => void;
     flipAddView: () => void;
+    handleLogout: () => void;
+    // handleUserSignOut: () => void;
 }): JSX.Element {
     return (
         <div className="SideNav2">
@@ -41,6 +46,10 @@ export function SideNav2({
                 <li className="row" onClick={() => flipAudit()}>
                     <div id="picture">{<ChecklistIcon />}</div>
                     <div id="name">{"Degree Audit"}</div>
+                </li>
+                <li className="row" onClick={() => handleLogout()}>
+                    <div id="picture">{<Logout />}</div>
+                    <div id="name">{"Logout"}</div>
                 </li>
             </ul>
         </div>
