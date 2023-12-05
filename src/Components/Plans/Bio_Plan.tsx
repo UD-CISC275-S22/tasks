@@ -1,7 +1,14 @@
 import { Semester } from "../../Interfaces/semester";
 import { Plan } from "../../Interfaces/plan";
 import { courseList } from "../course";
-import { blankCourse, fall1, spring1, fall2, spring2 } from "./plan";
+import {
+    blankCourse,
+    fall1,
+    spring1,
+    fall2,
+    spring2,
+    blankSemester
+} from "./plan";
 
 //this is the plan for the Bio concentration
 export function Bio(): Plan {
@@ -12,28 +19,25 @@ export function Bio(): Plan {
 
     //making the courses for each semester in each year (whole 4 year plan)
     const fall1Bio = fall1();
-    const spring1Bio = spring1();
-    spring1Bio.pop(); //removes the extra blank course
+    let spring1Bio = spring1();
     let temp = courseList.filter(
         //id 13 is MATH242
         (course) => course.id == 13
     );
-    spring1Bio.push(temp[0]);
-    const fall2Bio = fall2();
+    spring1Bio = [...spring1Bio, blankCourse, blankCourse];
+    let fall2Bio = fall2();
     temp = courseList.filter(
         //id 25 is CHEM133, id 24 is CHEM103
         (course) => course.id == 25 || course.id == 24
     );
-    fall2Bio.push(temp[0]);
-    fall2Bio.push(blankCourse);
-    const spring2Bio = spring2();
+
+    fall2Bio = [...fall2Bio, ...temp, blankCourse];
+    let spring2Bio = spring2();
     temp = courseList.filter(
         //id 26 is CHEM104, id 14 is MATH205
         (course) => course.id == 26 || course.id == 14
     );
-    spring2Bio.push(temp[0]);
-    spring2Bio.push(temp[1]);
-    spring2Bio.push(blankCourse);
+    spring2Bio = [...spring2Bio, ...temp, blankCourse];
     const fall3Bio = courseList.filter(
         //id 8 is CISC320 and id 28 is BISC207, id 36 is MATH349, id 43 is CHEM213
         (course) =>
@@ -42,7 +46,7 @@ export function Bio(): Plan {
             course.id == 36 ||
             course.id == 43
     );
-    const spring3Bio = courseList.filter(
+    let spring3Bio = courseList.filter(
         //id 7 is CISC303 and id 29 is BISC208, id 37 is ENGL312, id 41 is CISC483
         (course) =>
             course.id == 7 ||
@@ -51,22 +55,17 @@ export function Bio(): Plan {
             course.id == 41 ||
             course.id == 40
     );
-    spring3Bio.push(blankCourse);
-    const fall4Bio = courseList.filter(
+    spring3Bio = [...spring3Bio, blankCourse];
+    let fall4Bio = courseList.filter(
         //id 18 is UNVI401, id 16 is CISC498, id 89 is BISC401
         (course) => course.id == 18 || course.id == 16 || course.id == 89
     );
-    fall4Bio.push(blankCourse);
-    fall4Bio.push(blankCourse);
-    fall4Bio.push(blankCourse);
-    const spring4Bio = courseList.filter(
+    fall4Bio = [...fall4Bio, blankCourse, blankCourse, blankCourse];
+    let spring4Bio = courseList.filter(
         //id 17 is CISC499 and id 19 is UNVI402 and id 90 is CISC436
         (course) => course.id == 17 || course.id == 19 || course.id == 90
     );
-    spring4Bio.push(blankCourse);
-    spring4Bio.push(blankCourse);
-    spring4Bio.push(blankCourse);
-
+    spring4Bio = [...spring4Bio, blankCourse, blankCourse, blankCourse];
     //making the actual semester types
     const fall1Sem: Semester = {
         type: ["Fall"],
