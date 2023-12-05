@@ -47,6 +47,10 @@ const DEFAULT_COURSE_LIST = defaultCourseList;
 import { ClearSemester } from "./Buttons/clearingSemester";
 import { StartNewPlan } from "./Buttons/StartNewPlan";
 import { DropAdd } from "./Buttons/dropAdd";
+import { ClearAllSemesters } from "./Buttons/ClearAllSemesters";
+import { SavePlanInto } from "./Buttons/SavePlanInto";
+import { LoadPlan } from "./Buttons/LoadPlan";
+import { PickAPlan } from "./Buttons/PickAPlan";
 // import { courseList } from "./course";
 
 // const COURSE_LIST = courseList; //list of all the courses
@@ -373,19 +377,6 @@ export function ViewSemester(): JSX.Element {
         handleEditClose();
     };
 
-    const planOptions = [
-        "Artificial Intelligence",
-        "Cybersecurity",
-        "Systems and Networks",
-        "Data Science",
-        "Theory and Computation",
-        "High Performance Computing",
-        "Bioinformatics",
-        "Blank Plan"
-    ];
-
-    const planSaveOptions = ["Plan 1", "Plan 2", "Plan 3", "Plan 4"]; //plan 3 and plan 4 need to be added
-
     const handlePlans = (planSelected: string) => {
         if (planSelected === "Artificial Intelligence") {
             setPlan(AI_Plan);
@@ -485,113 +476,11 @@ export function ViewSemester(): JSX.Element {
         <div style={{ backgroundColor: "#0f234c" }}>
             <div className="DropdownMenu">
                 <StartNewPlan startNewSession={startNewSession}></StartNewPlan>
-                <ClearSemester
-                    clearSemester={clearSemester}
-                    handleClose={handleClose}
-                    handleShow={handleShow}
-                    show={clicked}
-                ></ClearSemester>
-                <Button
-                    onClick={() => confirm("Are you sure") && clearAll()}
-                    style={{
-                        backgroundColor: "#99B2DD",
-                        borderColor: "#4D7298",
-                        marginLeft: "5px",
-                        marginRight: "5px",
-                        marginTop: "5px",
-                        marginBottom: "5px",
-                        color: "black"
-                    }}
-                >
-                    Clear ALL Semesters
-                </Button>
-                <Dropdown>
-                    <Dropdown.Toggle
-                        id="dropdown1"
-                        style={{
-                            backgroundColor: "#FFBA49",
-                            borderColor: "darkgoldenrod",
-                            marginLeft: "5px",
-                            marginRight: "5px",
-                            marginTop: "5px",
-                            marginBottom: "5px",
-                            color: "black"
-                        }}
-                    >
-                        Save Plan Into:
-                    </Dropdown.Toggle>
-                    <Dropdown.Menu>
-                        {
-                            // eslint-disable-next-line no-extra-parens
-                            planSaveOptions.map((option, index) => (
-                                <Dropdown.Item
-                                    key={index}
-                                    onClick={() => savePlan(option)}
-                                >
-                                    {option}
-                                </Dropdown.Item>
-                            ))
-                        }
-                    </Dropdown.Menu>
-                </Dropdown>
-                <Dropdown>
-                    <Dropdown.Toggle
-                        id="dropdown2"
-                        style={{
-                            backgroundColor: "#998FC7",
-                            borderColor: "#3e3568",
-                            marginLeft: "5px",
-                            marginRight: "5px",
-                            marginTop: "5px",
-                            marginBottom: "5px",
-                            color: "black"
-                        }}
-                    >
-                        Load:
-                    </Dropdown.Toggle>
-                    <Dropdown.Menu>
-                        {
-                            // eslint-disable-next-line no-extra-parens
-                            planSaveOptions.map((option, index) => (
-                                <Dropdown.Item
-                                    key={index}
-                                    onClick={() => loadPlan(option)}
-                                >
-                                    {option}
-                                </Dropdown.Item>
-                            ))
-                        }
-                    </Dropdown.Menu>
-                </Dropdown>
-                <Dropdown>
-                    <Dropdown.Toggle
-                        id="dropdown3"
-                        style={{
-                            backgroundColor: "#D8DBE2",
-                            borderColor: "#2c4d9b",
-                            marginLeft: "5px",
-                            marginRight: "5px",
-                            marginTop: "5px",
-                            marginBottom: "5px",
-                            color: "black"
-                        }}
-                    >
-                        Pick a Plan:
-                    </Dropdown.Toggle>
-                    <Dropdown.Menu>
-                        {
-                            // eslint-disable-next-line no-extra-parens
-                            planOptions.map((option, index) => (
-                                <Dropdown.Item
-                                    key={index}
-                                    onClick={() => handlePlans(option)}
-                                >
-                                    {option}
-                                </Dropdown.Item>
-                            ))
-                        }
-                    </Dropdown.Menu>
-                </Dropdown>
+                <ClearSemester clearSemester={clearSemester}></ClearSemester>
+                <ClearAllSemesters clearAll={clearAll}></ClearAllSemesters>
+                <SavePlanInto savePlan={savePlan}></SavePlanInto>
+                <LoadPlan loadPlan={loadPlan}></LoadPlan>
+                <PickAPlan handlePlans={handlePlans}></PickAPlan>
             </div>
             <hr style={{ backgroundColor: "#0f234c" }}></hr>
             {

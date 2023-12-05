@@ -1,17 +1,10 @@
 import React from "react";
-import { Button, Dropdown, Modal } from "react-bootstrap";
-import { Course } from "../../Interfaces/course";
+import { Dropdown } from "react-bootstrap";
 
 export const ClearSemester = ({
-    clearSemester,
-    handleClose,
-    handleShow,
-    show
+    clearSemester
 }: {
     clearSemester: (option: string, index: number) => void;
-    handleClose: () => void;
-    handleShow: () => void;
-    show: boolean;
 }) => {
     const selectedYearsCombined = [
         "Fall Year 1",
