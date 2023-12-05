@@ -12,7 +12,10 @@ import logo from "../src/logo.png";
 // import { Class } from "./interfaces/class";
 function App(): JSX.Element {
     //--------------------------------------------------------------------------------------
-    const prevDegreePlan: degreePlan[] = [{ name: "Plan 1", semesters: [] }];
+    const prevDegreePlan: degreePlan[] = [
+        { name: "Plan 1", semesters: [] },
+        { name: "Plan 2", semesters: [] }
+    ];
     //act as the initial value, otherwise the "go back" button will not work
     //--------------------------------------------------------------------------------------
     const [view, setView] = useState<Views>(Views.degreePlanView);

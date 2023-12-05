@@ -55,7 +55,7 @@ export function Planner({
                     : degreePlan
         );
         setCurrentView(Views.degreePlanView);
-        console.log(DegreePlanList);
+        //console.log(DegreePlanList);
         setCurrentDegreePlan(newDegreePlan);
         setDegreePlanList(newDegreePlanList);
         //abstract semArray to App.tsx, pull out and add to App.tsx
