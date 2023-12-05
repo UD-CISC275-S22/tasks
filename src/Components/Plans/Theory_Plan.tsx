@@ -12,54 +12,53 @@ export function Theory(): Plan {
 
     //making the courses for each semester in each year (whole 4 year plan)
     const fall1Theory = fall1();
-    const spring1Theory = spring1();
+    let spring1Theory = spring1();
     spring1Theory.pop(); //removes the extra blank course
     let temp = courseList.filter(
         //id 13 is MATH242
         (course) => course.id == 13
     );
-    spring1Theory.push(temp[0]);
-    const fall2Theory = fall2();
-    fall2Theory.push(blankCourse);
-    fall2Theory.push(blankCourse);
-    const spring2Theory = spring2();
+    spring1Theory = [...spring1Theory, ...temp];
+    let fall2Theory = fall2();
+    fall2Theory = [...fall2Theory, blankCourse, blankCourse];
+    let spring2Theory = spring2();
     temp = courseList.filter(
         //id 14 is MATH205
         (course) => course.id == 14
     );
-    spring2Theory.push(temp[0]);
-    spring2Theory.push(blankCourse);
-    spring2Theory.push(blankCourse);
 
-    const fall3Theory = courseList.filter(
+    spring2Theory = [...spring2Theory, ...temp, blankCourse, blankCourse];
+
+    let fall3Theory = courseList.filter(
         //id 8 is CISC320, id 35 is CISC304 and id 36 is MATH349
         (course) => course.id == 8 || course.id == 35 || course.id == 36
     );
-    fall3Theory.push(blankCourse);
-    fall3Theory.push(blankCourse);
-    const spring3Theory = courseList.filter(
+    fall3Theory = [...fall3Theory, ...temp, blankCourse, blankCourse];
+
+    let spring3Theory = courseList.filter(
         //id 7 is CISC303,
         (course) => course.id == 7
     );
-    spring3Theory.push(blankCourse);
-    spring3Theory.push(blankCourse);
-    spring3Theory.push(blankCourse);
-    spring3Theory.push(blankCourse);
-    const fall4Theory = courseList.filter(
+
+    spring3Theory = [...spring3Theory, blankCourse, blankCourse, blankCourse];
+    let fall4Theory = courseList.filter(
         //id 16 is CISC498
         (course) => course.id == 16
     );
-    fall4Theory.push(blankCourse);
-    fall4Theory.push(blankCourse);
-    fall4Theory.push(blankCourse);
-    fall4Theory.push(blankCourse);
-    const spring4Theory = courseList.filter(
+
+    fall4Theory = [
+        ...fall4Theory,
+        blankCourse,
+        blankCourse,
+        blankCourse,
+        blankCourse
+    ];
+
+    let spring4Theory = courseList.filter(
         //id 17 is CISC499 and id 72 is CISC401
         (course) => course.id == 17 || course.id == 72
     );
-    spring4Theory.push(blankCourse);
-    spring4Theory.push(blankCourse);
-    spring4Theory.push(blankCourse);
+    spring4Theory = [...spring4Theory, blankCourse, blankCourse, blankCourse];
 
     //making the actual semester types
     const fall1Sem: Semester = {
