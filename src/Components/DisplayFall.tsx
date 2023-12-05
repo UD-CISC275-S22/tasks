@@ -4,6 +4,7 @@ import { Course } from "../Interfaces/course";
 import { ClearSemester } from "./clearingSemester";
 import { DropAdd } from "./dropAdd";
 import { Semester } from "../Interfaces/semester";
+import { courseList } from "./course";
 import { Form } from "react-bootstrap";
 import CourseEdit from "./CourseEdit";
 
@@ -13,10 +14,10 @@ export interface valueProps {
     currCourse: string;
     clicked: boolean;
     targetYear: number;
-    dropClass(): void;
-    addClass(): void;
+    dropClass(targetYear: number, targetSem: string): void;
+    addClass(targetYear: number, targetSem: string): void;
     updateCurrCourse(event: React.ChangeEvent<HTMLSelectElement>): void;
-    clearSemesterCourses(): void;
+    clearSemesterCourses(targetYear: number, targetSem: string): void;
     handleClose(): void;
     handleShow(): void;
     index(targetYear: number, targetSem: string): number;
@@ -78,6 +79,7 @@ export function DisplayFall({
             )}
 
             <>
+                {/*
                 <Form.Group controlId="currentCourse">
                     <DropAdd
                         dropClass={dropClass}
@@ -92,17 +94,33 @@ export function DisplayFall({
                         show={clicked}
                         handleClose={handleClose}
                         handleShow={handleShow}
-                    ></ClearSemester>
-                    {/* CourseEdit modal */}
-                    {editedCourse && (
-                        <CourseEdit
-                            editedCourse={editedCourse}
-                            onSaveChanges={handleSaveChanges}
-                            onResetToDefault={handleResetToDefault}
-                            onClose={handleEditClose}
-                        />
-                    )}
-                </Form.Group>
+                ></ClearSemester>*/}
+                <DropAdd
+                    dropClass={dropClass}
+                    addClass={addClass}
+                    targetYear={targetYear}
+                    targetSem={targetSem}
+                    updateCurrCourse={updateCurrCourse}
+                    currCourse={currCourse}
+                    Course_List={courseList}
+                ></DropAdd>
+                <ClearSemester
+                    clearSemesterCourses={clearSemesterCourses}
+                    targetYear={targetYear}
+                    targetSem={targetSem}
+                    show={clicked}
+                    handleClose={handleClose}
+                    handleShow={handleShow}
+                ></ClearSemester>
+                {/* CourseEdit modal */}
+                {editedCourse && (
+                    <CourseEdit
+                        editedCourse={editedCourse}
+                        onSaveChanges={handleSaveChanges}
+                        onResetToDefault={handleResetToDefault}
+                        onClose={handleEditClose}
+                    />
+                )}
             </>
         </div>
     );

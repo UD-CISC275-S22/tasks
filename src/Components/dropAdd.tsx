@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { Course } from "../Interfaces/course";
@@ -8,56 +9,23 @@ export const DropAdd = ({
     updateCurrCourse,
     currCourse,
     Course_List,
-    handleEditShow
+    handleEditShow,
+    targetYear,
+    targetSem
 }: {
-    dropClass: () => void;
-    addClass: () => void;
+    dropClass: (targetYear: number, targetSem: string) => void;
+    addClass: (targetYear: number, targetSem: string) => void;
     updateCurrCourse: (event: React.ChangeEvent<HTMLSelectElement>) => void;
     currCourse: string;
     Course_List: Course[];
     handleEditShow: (course: Course | undefined) => void;
+    targetYear: number;
+    targetSem: string;
 }) => {
-    //added notes
-    const [displayCourseCategory, setDisplayCourseCategory] =
-        useState<string>("AllCourses");
-
-    //update the state of the dsiplay course categoery
-    function updateDisplayCourseCat(
-        event: React.ChangeEvent<HTMLInputElement>
-    ) {
-        setDisplayCourseCategory(event.target.value);
-    }
+    //Dropdown for courses are not treated individually
     return (
         <>
             <Form.Group controlId="currentCourse">
-                <Form.Label>Select Course Variety</Form.Label>
-                <Form.Check
-                    type="radio"
-                    name="displayCourse"
-                    onChange={updateDisplayCourseCat}
-                    id="disp-course-all"
-                    label="AllCourses"
-                    value="AllCourses"
-                    checked={displayCourseCategory === "AllCourses"}
-                />
-                <Form.Check
-                    type="radio"
-                    name="displayCourse"
-                    onChange={updateDisplayCourseCat}
-                    id="disp-course-free"
-                    label="FreeElective"
-                    value="FreeElective"
-                    checked={displayCourseCategory === "FreeElective"}
-                />
-                <Form.Check
-                    type="radio"
-                    name="displayCourse"
-                    onChange={updateDisplayCourseCat}
-                    id="disp-course-restricted"
-                    label="RestrictiveElective"
-                    value="RestrictiveElective"
-                    checked={displayCourseCategory === "RestrictiveElective"}
-                />
                 <Form.Label>Select A Course</Form.Label>
                 <Form.Select value={currCourse} onChange={updateCurrCourse}>
                     {
@@ -74,8 +42,12 @@ export const DropAdd = ({
                     }
                 </Form.Select>
             </Form.Group>
-            <Button onClick={dropClass}>Remove Class</Button>
-            <Button onClick={addClass}>Add Class</Button>
+            <Button onClick={() => dropClass(targetYear, targetSem)}>
+                Remove Class
+            </Button>
+            <Button onClick={() => addClass(targetYear, targetSem)}>
+                Add Class
+            </Button>
             <Button
                 onClick={() =>
                     handleEditShow(

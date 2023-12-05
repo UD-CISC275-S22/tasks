@@ -8,24 +8,30 @@ import React, { useState } from "react";
 import { Button, Dropdown, Form } from "react-bootstrap";
 import "./Semester.css";
 //our own interfaces
+
 import { Course } from "../Interfaces/course";
 import { Semester } from "../Interfaces/semester";
 import { Plan } from "../Interfaces/plan";
+
 //individual constants
 import { courseList, defaultCourseList } from "./course";
 import { AI } from "./Plans/AI_Plan";
 import { Cyber } from "./Plans/Cyber_Plan";
 import { SysNet } from "./Plans/SysNet_Plan";
+import { Data } from "./Plans/Data_Plan";
+import { Theory } from "./Plans/Theory_Plan";
+import { High } from "./Plans/High_Plan";
+import { Bio } from "./Plans/Bio_Plan";
 import { useSessionStorage } from "./useSessionStorage";
 import { blankPlan } from "./Plans/plan";
 import { blankSemester } from "./Plans/plan";
-
 //modals
 import { DisplayFall } from "./DisplayFall";
 import { DisplayWinter } from "./DisplayWinter";
 import { DisplaySpring } from "./DisplaySpring";
 import { DisplaySummer } from "./DisplaySummer";
 import { DisplayPlan } from "./DisplayPlan";
+
 //functions and other imports
 import sample from "../data/AllCourseList.json";
 import CourseEdit from "./CourseEdit";
@@ -45,9 +51,20 @@ import { DropAdd } from "./dropAdd";
 const AI_Plan = AI(); //the actual AI plan itself
 const CYBER_Plan = Cyber();
 const SysNet_Plan = SysNet();
+const Data_Plan = Data();
+const Theory_Plan = Theory();
+const High_Plan = High();
+const Bio_Plan = Bio();
+
 const AI_Semesters = AI_Plan.semesters; //the semesters for the AI plan
 const CYBER_Semesters = CYBER_Plan.semesters;
 const SysNet_Semesters = SysNet_Plan.semesters;
+const Data_Semesters = Data_Plan.semesters;
+const Theory_Semesters = Theory_Plan.semesters;
+const High_Semesters = High_Plan.semesters;
+const Bio_Semesters = Bio_Plan.semesters;
+
+const DEFAULT_COURSE = AI_Semesters[0].courseList[0].title;
 
 export function ViewSemester(): JSX.Element {
     //all stuff for saving plans
@@ -80,13 +97,12 @@ export function ViewSemester(): JSX.Element {
     const DEFAULT_COURSE = AI_Semesters[0].courseList[0].title;
     const [currCourse, setCurrCourse] = useState<string>(DEFAULT_COURSE);
     const [SemesterType, setSemesterType] = useState<string>("Fall"); //can be "Fall", "Spring" or "Both"
-    const [displayCourseCategory, setDisplayCourseCategory] =
-        useState<string>("AllCourses");
+    // const [changingSem, setChangingSem] = useState<Semester>(AI_Semesters[0]);
 
     const [SemCount, setSemCount] = useState<number>(2); //default shows 2 semesters
 
     const [clicked, setClicked] = useState<boolean>(false);
-    const [targetSem, setTargetSem] = useState<string>("Fall"); //fall or spring only
+    const [targetSem, setTargetSem] = useState<string>("Fall");
     const [targetYear, setTargetYear] = useState<number>(1);
 
     //states for editing courses - created by Malika
@@ -97,11 +113,6 @@ export function ViewSemester(): JSX.Element {
     //Here is where you can add your add courses and remove courses functions
     function updateCurrCourse(event: React.ChangeEvent<HTMLSelectElement>) {
         setCurrCourse(event.target.value);
-    }
-    function updateDisplayCourseCat(
-        event: React.ChangeEvent<HTMLInputElement>
-    ) {
-        setDisplayCourseCategory(event.target.value);
     }
 
     function index(year: number, sem: string): number {
@@ -153,13 +164,13 @@ export function ViewSemester(): JSX.Element {
     }
 
     // function removes all courses!
-    function clearSemesterCourses() {
+    function clearSemesterCourses(targetYear: number, targetSem: string) {
         const idx = index(targetYear, targetSem);
         const newSemester = semesters;
         newSemester[idx].courseList = [];
 
         //function to clear all courses within a semester
-        setSemesters({ ...newSemester });
+        setSemesters([...newSemester]);
         handleClose();
     }
 
@@ -174,41 +185,33 @@ export function ViewSemester(): JSX.Element {
 
     //functions for handling which semesters to see
 
-    function dropClass() {
+    function dropClass(targetYear: number, targetSem: string) {
         const idx = index(targetYear, targetSem);
         const newSemester = semesters;
         const newClasses = newSemester[idx].courseList.filter(
             (course: Course) => currCourse !== course.title
         );
-        newSemester[idx].courseList = newClasses;
+        newSemester[idx].courseList = [...newClasses];
         // looks through the course list in the current semester and filters out the
         // course with the same "Title" as the state "currCourse"
         // **refer to "currCourse" documentation for more info **
         setSemesters({ ...newSemester });
     }
 
-    function addClass() {
+    function addClass(targetYear: number, targetSem: string): void {
         const idx = index(targetYear, targetSem);
         const newSemester = semesters;
-        const newClasses = newSemester[idx].courseList;
-        //idea was a little connfusing for the variable name so we renamed it choiceIdx and choice is the actual course data structure
-        const choiceIdx = COURSES_LIST.findIndex(
+        const choiceIdx = courseList.findIndex(
             (course: Course) => course.title === currCourse
         );
-        const choice = COURSES_LIST[choiceIdx];
-        //checks if it's already there
-        //if exists stays as -1 then the course isn't already in the semester list and should be added otherwise nothing happens
-
-        let exists = -1;
-        exists = newClasses.findIndex(
-            (course: Course) => course.id === COURSES_LIST[choiceIdx].id
+        const choice = courseList[choiceIdx];
+        const newClasses = newSemester[idx].courseList.filter(
+            (course: Course) => currCourse !== course.title
         );
-
-        if (exists !== -1) {
-            newClasses.push(choice);
-        }
-
-        newSemester[idx].courseList = newClasses;
+        // looks through the course list in the current semester and filters out the
+        // course with the same "Title" as the state "currCourse"
+        // **refer to "currCourse" documentation for more info **
+        newSemester[idx].courseList = [...newClasses, choice];
         setSemesters({ ...newSemester });
     }
 
@@ -359,7 +362,11 @@ export function ViewSemester(): JSX.Element {
     const planOptions = [
         "Artificial Intelligence",
         "Cybersecurity",
-        "Systems and Networks"
+        "Systems and Networks",
+        "Data Science",
+        "Theory and Computation",
+        "High Performance Computing",
+        "Bioinformatics"
     ];
 
     const planSaveOptions = ["Plan 1", "Plan 2"];
@@ -380,6 +387,23 @@ export function ViewSemester(): JSX.Element {
             setSemesters(SysNet_Semesters);
             setSeePlan(true);
             return;
+        } else if (planSelected === "Data Science") {
+            setPlan(Data_Plan);
+            setSemesters(Data_Semesters);
+            setSeePlan(true);
+            return;
+        } else if (planSelected === "Theory and Computation") {
+            setPlan(Theory_Plan);
+            setSemesters(Theory_Semesters);
+            setSeePlan(true);
+        } else if (planSelected === "High Performance Computing") {
+            setPlan(High_Plan);
+            setSemesters(High_Semesters);
+            setSeePlan(true);
+        } else if (planSelected === "Bioinformatics") {
+            setPlan(Bio_Plan);
+            setSemesters(Bio_Semesters);
+            setSeePlan(true);
         }
     };
 
@@ -412,6 +436,7 @@ export function ViewSemester(): JSX.Element {
             setSemesters(plan2Semesters);
         }
     }
+
     //actual return for the tsx file to App.tsx
     return (
         <div style={{ backgroundColor: "#0f234c" }}>
