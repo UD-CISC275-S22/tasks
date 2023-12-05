@@ -5,7 +5,7 @@
 import "../App.css";
 //react and bootstrap
 import React, { useMemo, useState } from "react";
-import { Button, Dropdown, Form } from "react-bootstrap";
+import { Button, Dropdown, Form, Modal } from "react-bootstrap";
 import "./Semester.css";
 //our own interfaces
 
@@ -44,7 +44,8 @@ const COURSES_LIST = courseList;
 const DEFAULT_COURSE_LIST = defaultCourseList;
 
 //import sample from "../data/AllCourseList.json";
-import { ClearSemester } from "./clearingSemester";
+import { ClearSemester } from "./Buttons/clearingSemester";
+import { StartNewPlan } from "./Buttons/StartNewPlan";
 import { DropAdd } from "./Buttons/dropAdd";
 // import { courseList } from "./course";
 
@@ -168,22 +169,15 @@ export function ViewSemester(): JSX.Element {
         return idx;
     }
 
-    /*
-    // function removes all courses!
-    function clearSemesterCourses(indexChosen: number) {
-        console.log(indexChosen);
-        const newSemesters = [...semesters];
-        console.log(indexChosen);
-        newSemesters[indexChosen].courseList = [blankCourse];
-
-        //function to clear all courses within a semester
-        setSemesters(newSemesters);
-        handleClose();
-    } */
-
     function clearSemester(option: string, index: number) {
         const newSemesters = semesters;
         newSemesters[index].courseList = [blankCourse];
+        setSemesters([...newSemesters]);
+    }
+
+    function clearAll() {
+        const newSemesters = semesters;
+        newSemesters.map((sem: Semester) => (sem.courseList = [blankCourse]));
         setSemesters([...newSemesters]);
     }
 
@@ -386,32 +380,11 @@ export function ViewSemester(): JSX.Element {
         "Data Science",
         "Theory and Computation",
         "High Performance Computing",
-        "Bioinformatics"
+        "Bioinformatics",
+        "Blank Plan"
     ];
 
     const planSaveOptions = ["Plan 1", "Plan 2", "Plan 3", "Plan 4"]; //plan 3 and plan 4 need to be added
-
-    const selectedYearsCombined = [
-        "Fall Year 1",
-        "Winter Year 1",
-        "Spring Year 1",
-        "Summer Year 1",
-        "Fall Year 2",
-        "Winter Year 2",
-        "Spring Year 2",
-        "Summer Year 2",
-        "Fall Year 3",
-        "Winter Year 3",
-        "Spring Year 3",
-        "Summer Year 3",
-        "Fall Year 4",
-        "Winter Year 4",
-        "Spring Year 4",
-        "Summer Year 4",
-        "Fall Year 5",
-        "Winter Year 5",
-        "Spring Year 5"
-    ];
 
     const handlePlans = (planSelected: string) => {
         if (planSelected === "Artificial Intelligence") {
@@ -445,6 +418,10 @@ export function ViewSemester(): JSX.Element {
         } else if (planSelected === "Bioinformatics") {
             setPlan(Bio_Plan);
             setSemesters(Bio_Plan.semesters);
+            setSeePlan(true);
+        } else if (planSelected === "Blank Plan") {
+            setPlan(blankPlan);
+            setSemesters(blankPlan.semesters);
             setSeePlan(true);
         }
     };
@@ -507,11 +484,18 @@ export function ViewSemester(): JSX.Element {
     return (
         <div style={{ backgroundColor: "#0f234c" }}>
             <div className="DropdownMenu">
+                <StartNewPlan startNewSession={startNewSession}></StartNewPlan>
+                <ClearSemester
+                    clearSemester={clearSemester}
+                    handleClose={handleClose}
+                    handleShow={handleShow}
+                    show={clicked}
+                ></ClearSemester>
                 <Button
-                    onClick={startNewSession}
+                    onClick={() => confirm("Are you sure") && clearAll()}
                     style={{
-                        backgroundColor: "#EF5B5B",
-                        borderColor: "#922424",
+                        backgroundColor: "#99B2DD",
+                        borderColor: "#4D7298",
                         marginLeft: "5px",
                         marginRight: "5px",
                         marginTop: "5px",
@@ -519,37 +503,8 @@ export function ViewSemester(): JSX.Element {
                         color: "black"
                     }}
                 >
-                    Start New Plan
+                    Clear ALL Semesters
                 </Button>
-                <Dropdown>
-                    <Dropdown.Toggle
-                        id="dropdown10"
-                        style={{
-                            backgroundColor: "#71B48D",
-                            borderColor: "#1d442d",
-                            marginLeft: "5px",
-                            marginRight: "5px",
-                            marginTop: "5px",
-                            marginBottom: "5px",
-                            color: "black"
-                        }}
-                    >
-                        Clear Semester:
-                    </Dropdown.Toggle>
-                    <Dropdown.Menu>
-                        {
-                            // eslint-disable-next-line no-extra-parens
-                            selectedYearsCombined.map((option, index) => (
-                                <Dropdown.Item
-                                    key={index}
-                                    onClick={() => clearSemester(option, index)}
-                                >
-                                    {option}
-                                </Dropdown.Item>
-                            ))
-                        }
-                    </Dropdown.Menu>
-                </Dropdown>
                 <Dropdown>
                     <Dropdown.Toggle
                         id="dropdown1"

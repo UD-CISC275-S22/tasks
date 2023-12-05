@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
 import { Course } from "../../Interfaces/course";
-import { ClearSemester } from "../clearingSemester";
+import { ClearSemester } from "../Buttons/clearingSemester";
 import { DropAdd } from "../Buttons/dropAdd";
 import { Semester } from "../../Interfaces/semester";
 import { courseList } from "../course";
