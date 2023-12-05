@@ -339,7 +339,7 @@ const Planner: React.FC<Planner> = ({ plan }) => {
                                                 semesterIndex &&
                                                 moveCourseData.courseIndex ===
                                                     courseIndex && (
-                                                    <div>
+                                                    <div className="move-Dropdown">
                                                         <select
                                                             value={
                                                                 moveCourseData.toSemesterId
