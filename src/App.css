@@ -44,12 +44,11 @@
 }
 .center {
     padding-top: 50px;
-    width: 33.33333%;
-    left: -50px;
+    width: 100%;
     text-align: center;
     color: #00539f;
     position: relative;
-    left: 625px;
+    padding: 5%;
 }
 
 .footer {
