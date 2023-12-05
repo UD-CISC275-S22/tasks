@@ -1,14 +1,7 @@
 import { Semester } from "../../Interfaces/semester";
 import { Plan } from "../../Interfaces/plan";
 import { courseList } from "../course";
-import {
-    blankCourse,
-    fall1,
-    spring1,
-    fall2,
-    spring2,
-    blankSemester
-} from "./plan";
+import { blankCourse, fall1, spring1, fall2, spring2 } from "./plan";
 
 //this is the plan for the Bio concentration
 export function Bio(): Plan {
