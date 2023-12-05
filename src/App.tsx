@@ -26,6 +26,25 @@ function App(): JSX.Element {
                     </div>
                 </header>
             </div>
+            <div className="box">
+                <a className="button" href="#popup1">
+                    Help
+                </a>
+            </div>
+
+            <div id="popup1" className="overlay">
+                <div className="popup">
+                    <h2>Button Information</h2>
+                    <a className="close" href="#">
+                        &times;
+                    </a>
+                    <div className="content">
+                        help/ |-- plans/ | |-- insert plan | |-- remove plan |
+                        |-- rename plan |-- semester/ | |-- clear all semesters
+                        | |-- remove semester
+                    </div>
+                </div>
+            </div>
             <div className="Planner">
                 {} <Planner plan={CompSciPlan} />
             </div>
