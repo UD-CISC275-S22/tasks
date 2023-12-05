@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { Course } from "../Interfaces/course";
 import { ClearSemester } from "./clearingSemester";
 import { DropAdd } from "./dropAdd";
@@ -7,6 +7,7 @@ import { Semester } from "../Interfaces/semester";
 import { courseList } from "./course";
 import { SkipSemester } from "./SkipSemester";
 import { Button, Modal } from "react-bootstrap";
+import { isDeleteExpression } from "typescript";
 
 export interface valueProps {
     semesters: Semester[];
@@ -18,7 +19,7 @@ export interface valueProps {
     dropClass(targetYear: number, targetSem: string): void;
     addClass(targetYear: number, targetSem: string): void;
     updateCurrCourse(event: React.ChangeEvent<HTMLSelectElement>): void;
-    clearSemesterCourses(idx: number): void;
+    //clearSemesterCourses(idx: number): void;
     skipSemester(targetYear: number, targetSem: string): void;
     handleShow(): void;
     handleClose(): void;
@@ -38,7 +39,7 @@ export function DisplayWinter({
     dropClass,
     addClass,
     updateCurrCourse,
-    clearSemesterCourses,
+    //clearSemesterCourses,
     skipSemester,
     handleClose,
     handleShow,
@@ -87,32 +88,6 @@ export function DisplayWinter({
                     handleShow={handleShow}
                     CourseLIST={courseList}
                 ></ClearSemester> */}
-                <div className="clear_sem">
-                    <Button onClick={handleShow}>Remove All Courses</Button>
-                </div>
-                <div>
-                    <Modal
-                        show={clicked}
-                        onHide={handleClose}
-                        animation={false}
-                    >
-                        <Modal.Header closeButton>
-                            <Modal.Title>Warning</Modal.Title>
-                        </Modal.Header>
-                        <Modal.Body>
-                            <p>
-                                You are deleting this current semester, do you
-                                confirm?
-                            </p>
-                        </Modal.Body>
-                        <Modal.Footer>
-                            <Button onClick={() => clearSemesterCourses(idx)}>
-                                Yes
-                            </Button>
-                            <Button onClick={handleClose}>No</Button>
-                        </Modal.Footer>
-                    </Modal>
-                </div>
                 <SkipSemester
                     skipSemester={skipSemester}
                     targetYear={targetYear}

@@ -42,15 +42,6 @@ export function DisplayPlan({
     const fifthYearFall = indivPlanSem(5, "Fall", 17);
     const fifthYearWinter = indivPlanSem(5, "Winter", 18);
     const fifthYearSpring = indivPlanSem(5, "Spring", 19);
-
-    //for toggling which semesters they want to see
-    const blankSem: Semester = {
-        type: [""],
-        year: {} as number,
-        totalCredits: {} as number,
-        courseList: [blankCourse]
-    };
-
     const [selectedYear1, setSelectedYear1] = useState<string[]>([""]);
     const [selectedYear2, setSelectedYear2] = useState<string[]>([""]);
     const [selectedYear3, setSelectedYear3] = useState<string[]>([""]);
@@ -101,198 +92,201 @@ export function DisplayPlan({
 
     return (
         <div>
-            <Dropdown>
-                <Dropdown.Toggle
-                    id="dropdown4"
-                    style={{
-                        backgroundColor: "#71B48D",
-                        borderColor: "#1d442d",
-                        marginLeft: "5px",
-                        marginRight: "5px",
-                        marginTop: "5px",
-                        marginBottom: "5px",
-                        color: "black"
-                    }}
-                >
-                    View Year 1 Semesters:
-                </Dropdown.Toggle>
-                <Dropdown.Menu>
-                    {
-                        // eslint-disable-next-line no-extra-parens
-                        year.map((option, index) => (
-                            <Dropdown.Item
-                                key={index}
-                                onClick={() => toggleYear1(option, index)}
-                                active={selectedYear1.includes(option)}
-                            >
-                                {option}
-                            </Dropdown.Item>
-                        ))
-                    }
-                </Dropdown.Menu>
-            </Dropdown>
-            <div className="Semester">
-                {selectedYear1.includes("Fall") && firstYearFall}
-                {selectedYear1.includes("Winter") && firstYearWinter}
-                {selectedYear1.includes("Spring") && firstYearSpring}
-                {selectedYear1.includes("Summer") && firstYearSummer}
-            </div>
-            <Dropdown>
-                <Dropdown.Toggle
-                    id="dropdown5"
-                    style={{
-                        backgroundColor: "#71B48D",
-                        borderColor: "#1d442d",
-                        marginLeft: "5px",
-                        marginRight: "5px",
-                        marginTop: "5px",
-                        marginBottom: "5px",
-                        color: "black"
-                    }}
-                >
-                    View Year 2 Semesters:
-                </Dropdown.Toggle>
-                <Dropdown.Menu>
-                    {
-                        // eslint-disable-next-line no-extra-parens
-                        year.map((option, index) => (
-                            <Dropdown.Item
-                                key={index}
-                                onClick={() => toggleYear2(option, index)}
-                                active={selectedYear2.includes(option)}
-                            >
-                                {option}
-                            </Dropdown.Item>
-                        ))
-                    }
-                </Dropdown.Menu>
-            </Dropdown>
-            <div className="Semester">
-                {selectedYear2.includes("Fall") && secondYearFall}
-                {selectedYear2.includes("Winter") && secondYearWinter}
-                {selectedYear2.includes("Spring") && secondYearSpring}
-                {selectedYear2.includes("Summer") && secondYearSummer}
-            </div>
-            <Dropdown>
-                <Dropdown.Toggle
-                    id="dropdown6"
-                    style={{
-                        backgroundColor: "#71B48D",
-                        borderColor: "#1d442d",
-                        marginLeft: "5px",
-                        marginRight: "5px",
-                        marginTop: "5px",
-                        marginBottom: "5px",
-                        color: "black"
-                    }}
-                >
-                    View Year 3 Semesters:
-                </Dropdown.Toggle>
-                <Dropdown.Menu>
-                    {
-                        // eslint-disable-next-line no-extra-parens
-                        year.map((option, index) => (
-                            <Dropdown.Item
-                                key={index}
-                                onClick={() => toggleYear3(option, index)}
-                                active={selectedYear3.includes(option)}
-                            >
-                                {option}
-                            </Dropdown.Item>
-                        ))
-                    }
-                </Dropdown.Menu>
-            </Dropdown>
-            <div className="Semester">
-                {selectedYear3.includes("Fall") && thirdYearFall}
-                {selectedYear3.includes("Winter") && thirdYearWinter}
-                {selectedYear3.includes("Spring") && thirdYearSpring}
-                {selectedYear3.includes("Summer") && thirdYearSummer}
-            </div>
-            <Dropdown>
-                <Dropdown.Toggle
-                    id="dropdown7"
-                    style={{
-                        backgroundColor: "#71B48D",
-                        borderColor: "#1d442d",
-                        marginLeft: "5px",
-                        marginRight: "5px",
-                        marginTop: "5px",
-                        marginBottom: "5px",
-                        color: "black"
-                    }}
-                >
-                    View Year 4 Semesters:
-                </Dropdown.Toggle>
-                <Dropdown.Menu>
-                    {
-                        // eslint-disable-next-line no-extra-parens
-                        year.map((option, index) => (
-                            <Dropdown.Item
-                                key={index}
-                                onClick={() => toggleYear4(option, index)}
-                                active={selectedYear4.includes(option)}
-                            >
-                                {option}
-                            </Dropdown.Item>
-                        ))
-                    }
-                </Dropdown.Menu>
-            </Dropdown>
-            <div className="Semester">
-                {selectedYear4.includes("Fall") && fourthYearFall}
-                {selectedYear4.includes("Winter") && fourthYearWinter}
-                {selectedYear4.includes("Spring") && fourthYearSpring}
-                {selectedYear4.includes("Summer") && fourthYearSummer}
-            </div>
-            {
-                //eslint-disable-next-line no-extra-parens
-                fifthYear && (
-                    <div>
-                        <Dropdown>
-                            <Dropdown.Toggle
-                                id="dropdown7"
-                                style={{
-                                    backgroundColor: "#71B48D",
-                                    borderColor: "#1d442d",
-                                    marginLeft: "5px",
-                                    marginRight: "5px",
-                                    marginTop: "5px",
-                                    marginBottom: "5px",
-                                    color: "black"
-                                }}
-                            >
-                                View Year 5 Semesters:
-                            </Dropdown.Toggle>
-                            <Dropdown.Menu>
-                                {
-                                    // eslint-disable-next-line no-extra-parens
-                                    year.map((option, index) => (
-                                        <Dropdown.Item
-                                            key={index}
-                                            onClick={() =>
-                                                toggleYear5(option, index)
-                                            }
-                                            active={selectedYear5.includes(
-                                                option
-                                            )}
-                                        >
-                                            {option}
-                                        </Dropdown.Item>
-                                    ))
-                                }
-                            </Dropdown.Menu>
-                        </Dropdown>
-                        <div className="Semester">
-                            {selectedYear5.includes("Fall") && fifthYearFall}
-                            {selectedYear5.includes("Winter") &&
-                                fifthYearWinter}
-                            {selectedYear5.includes("Spring") &&
-                                fifthYearSpring}
+            <div>
+                <Dropdown>
+                    <Dropdown.Toggle
+                        id="dropdown4"
+                        style={{
+                            backgroundColor: "#71B48D",
+                            borderColor: "#1d442d",
+                            marginLeft: "5px",
+                            marginRight: "5px",
+                            marginTop: "5px",
+                            marginBottom: "5px",
+                            color: "black"
+                        }}
+                    >
+                        View Year 1 Semesters:
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu>
+                        {
+                            // eslint-disable-next-line no-extra-parens
+                            year.map((option, index) => (
+                                <Dropdown.Item
+                                    key={index}
+                                    onClick={() => toggleYear1(option, index)}
+                                    active={selectedYear1.includes(option)}
+                                >
+                                    {option}
+                                </Dropdown.Item>
+                            ))
+                        }
+                    </Dropdown.Menu>
+                </Dropdown>
+                <div className="Semester">
+                    {selectedYear1.includes("Fall") && firstYearFall}
+                    {selectedYear1.includes("Winter") && firstYearWinter}
+                    {selectedYear1.includes("Spring") && firstYearSpring}
+                    {selectedYear1.includes("Summer") && firstYearSummer}
+                </div>
+                <Dropdown>
+                    <Dropdown.Toggle
+                        id="dropdown5"
+                        style={{
+                            backgroundColor: "#71B48D",
+                            borderColor: "#1d442d",
+                            marginLeft: "5px",
+                            marginRight: "5px",
+                            marginTop: "5px",
+                            marginBottom: "5px",
+                            color: "black"
+                        }}
+                    >
+                        View Year 2 Semesters:
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu>
+                        {
+                            // eslint-disable-next-line no-extra-parens
+                            year.map((option, index) => (
+                                <Dropdown.Item
+                                    key={index}
+                                    onClick={() => toggleYear2(option, index)}
+                                    active={selectedYear2.includes(option)}
+                                >
+                                    {option}
+                                </Dropdown.Item>
+                            ))
+                        }
+                    </Dropdown.Menu>
+                </Dropdown>
+                <div className="Semester">
+                    {selectedYear2.includes("Fall") && secondYearFall}
+                    {selectedYear2.includes("Winter") && secondYearWinter}
+                    {selectedYear2.includes("Spring") && secondYearSpring}
+                    {selectedYear2.includes("Summer") && secondYearSummer}
+                </div>
+                <Dropdown>
+                    <Dropdown.Toggle
+                        id="dropdown6"
+                        style={{
+                            backgroundColor: "#71B48D",
+                            borderColor: "#1d442d",
+                            marginLeft: "5px",
+                            marginRight: "5px",
+                            marginTop: "5px",
+                            marginBottom: "5px",
+                            color: "black"
+                        }}
+                    >
+                        View Year 3 Semesters:
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu>
+                        {
+                            // eslint-disable-next-line no-extra-parens
+                            year.map((option, index) => (
+                                <Dropdown.Item
+                                    key={index}
+                                    onClick={() => toggleYear3(option, index)}
+                                    active={selectedYear3.includes(option)}
+                                >
+                                    {option}
+                                </Dropdown.Item>
+                            ))
+                        }
+                    </Dropdown.Menu>
+                </Dropdown>
+                <div className="Semester">
+                    {selectedYear3.includes("Fall") && thirdYearFall}
+                    {selectedYear3.includes("Winter") && thirdYearWinter}
+                    {selectedYear3.includes("Spring") && thirdYearSpring}
+                    {selectedYear3.includes("Summer") && thirdYearSummer}
+                </div>
+                <Dropdown>
+                    <Dropdown.Toggle
+                        id="dropdown7"
+                        style={{
+                            backgroundColor: "#71B48D",
+                            borderColor: "#1d442d",
+                            marginLeft: "5px",
+                            marginRight: "5px",
+                            marginTop: "5px",
+                            marginBottom: "5px",
+                            color: "black"
+                        }}
+                    >
+                        View Year 4 Semesters:
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu>
+                        {
+                            // eslint-disable-next-line no-extra-parens
+                            year.map((option, index) => (
+                                <Dropdown.Item
+                                    key={index}
+                                    onClick={() => toggleYear4(option, index)}
+                                    active={selectedYear4.includes(option)}
+                                >
+                                    {option}
+                                </Dropdown.Item>
+                            ))
+                        }
+                    </Dropdown.Menu>
+                </Dropdown>
+                <div className="Semester">
+                    {selectedYear4.includes("Fall") && fourthYearFall}
+                    {selectedYear4.includes("Winter") && fourthYearWinter}
+                    {selectedYear4.includes("Spring") && fourthYearSpring}
+                    {selectedYear4.includes("Summer") && fourthYearSummer}
+                </div>
+                {
+                    //eslint-disable-next-line no-extra-parens
+                    fifthYear && (
+                        <div>
+                            <Dropdown>
+                                <Dropdown.Toggle
+                                    id="dropdown7"
+                                    style={{
+                                        backgroundColor: "#71B48D",
+                                        borderColor: "#1d442d",
+                                        marginLeft: "5px",
+                                        marginRight: "5px",
+                                        marginTop: "5px",
+                                        marginBottom: "5px",
+                                        color: "black"
+                                    }}
+                                >
+                                    View Year 5 Semesters:
+                                </Dropdown.Toggle>
+                                <Dropdown.Menu>
+                                    {
+                                        // eslint-disable-next-line no-extra-parens
+                                        year.map((option, index) => (
+                                            <Dropdown.Item
+                                                key={index}
+                                                onClick={() =>
+                                                    toggleYear5(option, index)
+                                                }
+                                                active={selectedYear5.includes(
+                                                    option
+                                                )}
+                                            >
+                                                {option}
+                                            </Dropdown.Item>
+                                        ))
+                                    }
+                                </Dropdown.Menu>
+                            </Dropdown>
+                            <div className="Semester">
+                                {selectedYear5.includes("Fall") &&
+                                    fifthYearFall}
+                                {selectedYear5.includes("Winter") &&
+                                    fifthYearWinter}
+                                {selectedYear5.includes("Spring") &&
+                                    fifthYearSpring}
+                            </div>
                         </div>
-                    </div>
-                )
-            }
+                    )
+                }
+            </div>
         </div>
     );
 }

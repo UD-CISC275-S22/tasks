@@ -18,7 +18,7 @@ export interface valueProps {
     dropClass(targetYear: number, targetSem: string): void;
     addClass(targetYear: number, targetSem: string): void;
     updateCurrCourse(event: React.ChangeEvent<HTMLSelectElement>): void;
-    clearSemesterCourses(idx: number): void;
+    //clearSemesterCourses(idx: number): void;
     skipSemester(targetYear: number, targetSem: string): void;
     handleClose(): void;
     handleShow(): void;
@@ -38,7 +38,7 @@ export function DisplayFall({
     dropClass,
     addClass,
     updateCurrCourse,
-    clearSemesterCourses,
+    //clearSemesterCourses,
     skipSemester,
     handleClose,
     handleShow,
@@ -130,32 +130,6 @@ export function DisplayFall({
                     handleShow={handleShow}
                     CourseLIST={courseList}
                 ></ClearSemester> */}
-                <div className="clear_sem">
-                    <Button onClick={handleShow}>Remove All Courses</Button>
-                </div>
-                <div>
-                    <Modal
-                        show={clicked}
-                        onHide={handleClose}
-                        animation={false}
-                    >
-                        <Modal.Header closeButton>
-                            <Modal.Title>Warning</Modal.Title>
-                        </Modal.Header>
-                        <Modal.Body>
-                            <p>
-                                You are deleting this current semester, do you
-                                confirm?
-                            </p>
-                        </Modal.Body>
-                        <Modal.Footer>
-                            <Button onClick={() => clearSemesterCourses(idx)}>
-                                Yes
-                            </Button>
-                            <Button onClick={handleClose}>No</Button>
-                        </Modal.Footer>
-                    </Modal>
-                </div>
                 <SkipSemester
                     skipSemester={skipSemester}
                     targetYear={targetYear}

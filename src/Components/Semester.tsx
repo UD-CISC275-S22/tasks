@@ -4,7 +4,7 @@
 //css files
 import "../App.css";
 //react and bootstrap
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { Button, Dropdown, Form } from "react-bootstrap";
 import "./Semester.css";
 //our own interfaces
@@ -168,27 +168,34 @@ export function ViewSemester(): JSX.Element {
         return idx;
     }
 
+    /*
     // function removes all courses!
-    function clearSemesterCourses(idx: number) {
-        const newSemester = semesters[idx];
-        newSemester.courseList = [blankCourse];
-        const newSemesters = { ...semesters };
-        newSemesters[idx] = newSemester;
+    function clearSemesterCourses(indexChosen: number) {
+        console.log(indexChosen);
+        const newSemesters = [...semesters];
+        console.log(indexChosen);
+        newSemesters[indexChosen].courseList = [blankCourse];
 
         //function to clear all courses within a semester
-        setSemesters({ ...newSemesters });
+        setSemesters(newSemesters);
         handleClose();
+    } */
+
+    function clearSemester(option: string, index: number) {
+        const newSemesters = semesters;
+        newSemesters[index].courseList = [blankCourse];
+        setSemesters([...newSemesters]);
     }
 
     function skipSemester(targetYear: number, targetSem: string) {
         const idx = index(targetYear, targetSem);
-        const newSemester = semesters;
-        newSemester[idx].courseList = [];
+        const newSemesters = [...semesters];
+        newSemesters[idx].courseList = [blankCourse];
 
         //function to clear all courses within a semester
-        setSemesters({ ...newSemester });
+        setSemesters(newSemesters);
         setFifthYear(true);
-        handleClose();
+        handleFifthClose();
     }
 
     //functions for visibility of the modal of clearing semesters (the warning)
@@ -212,32 +219,32 @@ export function ViewSemester(): JSX.Element {
 
     function dropClass(targetYear: number, targetSem: string) {
         const idx = index(targetYear, targetSem);
-        const newSemester = semesters;
-        const newClasses = newSemester[idx].courseList.filter(
+        const newSemesters = [...semesters];
+        const newClasses = newSemesters[idx].courseList.filter(
             (course: Course) => currCourse !== course.title
         );
-        newSemester[idx].courseList = [...newClasses];
+        newSemesters[idx].courseList = [...newClasses];
         // looks through the course list in the current semester and filters out the
         // course with the same "Title" as the state "currCourse"
         // **refer to "currCourse" documentation for more info **
-        setSemesters({ ...newSemester });
+        setSemesters(newSemesters);
     }
 
     function addClass(targetYear: number, targetSem: string): void {
         const idx = index(targetYear, targetSem);
-        const newSemester = semesters;
+        const newSemesters = [...semesters];
         const choiceIdx = courseList.findIndex(
             (course: Course) => course.title === currCourse
         );
         const choice = courseList[choiceIdx];
-        const newClasses = newSemester[idx].courseList.filter(
+        const newClasses = newSemesters[idx].courseList.filter(
             (course: Course) => currCourse !== course.title
         );
         // looks through the course list in the current semester and filters out the
         // course with the same "Title" as the state "currCourse"
         // **refer to "currCourse" documentation for more info **
-        newSemester[idx].courseList = [...newClasses, choice];
-        setSemesters({ ...newSemester });
+        newSemesters[idx].courseList = [...newClasses, choice];
+        setSemesters(newSemesters);
     }
 
     function indivPlanSem(year: number, sem: string, id: number): JSX.Element {
@@ -255,7 +262,7 @@ export function ViewSemester(): JSX.Element {
                     dropClass={dropClass}
                     addClass={addClass}
                     updateCurrCourse={updateCurrCourse}
-                    clearSemesterCourses={clearSemesterCourses}
+                    //clearSemesterCourses={clearSemesterCourses}
                     skipSemester={skipSemester}
                     handleClose={handleClose}
                     handleFifthShow={handleFifthShow}
@@ -277,7 +284,7 @@ export function ViewSemester(): JSX.Element {
                     dropClass={dropClass}
                     addClass={addClass}
                     updateCurrCourse={updateCurrCourse}
-                    clearSemesterCourses={clearSemesterCourses}
+                    //clearSemesterCourses={clearSemesterCourses}
                     skipSemester={skipSemester}
                     handleClose={handleClose}
                     handleShow={handleShow}
@@ -299,7 +306,7 @@ export function ViewSemester(): JSX.Element {
                     dropClass={dropClass}
                     addClass={addClass}
                     updateCurrCourse={updateCurrCourse}
-                    clearSemesterCourses={clearSemesterCourses}
+                    //clearSemesterCourses={clearSemesterCourses}
                     skipSemester={skipSemester}
                     handleClose={handleClose}
                     handleShow={handleShow}
@@ -321,7 +328,7 @@ export function ViewSemester(): JSX.Element {
                     dropClass={dropClass}
                     addClass={addClass}
                     updateCurrCourse={updateCurrCourse}
-                    clearSemesterCourses={clearSemesterCourses}
+                    //clearSemesterCourses={clearSemesterCourses}
                     skipSemester={skipSemester}
                     handleClose={handleClose}
                     handleShow={handleShow}
@@ -383,6 +390,28 @@ export function ViewSemester(): JSX.Element {
     ];
 
     const planSaveOptions = ["Plan 1", "Plan 2", "Plan 3", "Plan 4"]; //plan 3 and plan 4 need to be added
+
+    const selectedYearsCombined = [
+        "Fall Year 1",
+        "Winter Year 1",
+        "Spring Year 1",
+        "Summer Year 1",
+        "Fall Year 2",
+        "Winter Year 2",
+        "Spring Year 2",
+        "Summer Year 2",
+        "Fall Year 3",
+        "Winter Year 3",
+        "Spring Year 3",
+        "Summer Year 3",
+        "Fall Year 4",
+        "Winter Year 4",
+        "Spring Year 4",
+        "Summer Year 4",
+        "Fall Year 5",
+        "Winter Year 5",
+        "Spring Year 5"
+    ];
 
     const handlePlans = (planSelected: string) => {
         if (planSelected === "Artificial Intelligence") {
@@ -492,7 +521,35 @@ export function ViewSemester(): JSX.Element {
                 >
                     Start New Plan
                 </Button>
-                <hr></hr>
+                <Dropdown>
+                    <Dropdown.Toggle
+                        id="dropdown10"
+                        style={{
+                            backgroundColor: "#71B48D",
+                            borderColor: "#1d442d",
+                            marginLeft: "5px",
+                            marginRight: "5px",
+                            marginTop: "5px",
+                            marginBottom: "5px",
+                            color: "black"
+                        }}
+                    >
+                        Clear Semester:
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu>
+                        {
+                            // eslint-disable-next-line no-extra-parens
+                            selectedYearsCombined.map((option, index) => (
+                                <Dropdown.Item
+                                    key={index}
+                                    onClick={() => clearSemester(option, index)}
+                                >
+                                    {option}
+                                </Dropdown.Item>
+                            ))
+                        }
+                    </Dropdown.Menu>
+                </Dropdown>
                 <Dropdown>
                     <Dropdown.Toggle
                         id="dropdown1"
