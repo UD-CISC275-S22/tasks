@@ -14,7 +14,7 @@ export const PickAPlan = ({
         "Theory and Computation",
         "High Performance Computing",
         "Bioinformatics",
-        "Blank Plan"
+        "Custom Concentration"
     ];
 
     return (

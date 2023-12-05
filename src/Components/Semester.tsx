@@ -1,18 +1,12 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-//for visualization of semesters and altering the courses within them
-
+//react and bootstrap
+import React, { useState } from "react";
 //css files
 import "../App.css";
-//react and bootstrap
-import React, { useMemo, useState } from "react";
-import { Button, Dropdown, Form, Modal } from "react-bootstrap";
 import "./Semester.css";
 //our own interfaces
-
 import { Course } from "../Interfaces/course";
 import { Semester } from "../Interfaces/semester";
-import { Plan } from "../Interfaces/plan";
-
 //individual constants
 import { courseList, defaultCourseList } from "./course";
 import { AI } from "./Default Plans/AI_Plan";
@@ -25,36 +19,28 @@ import { Bio } from "./Default Plans/Bio_Plan";
 import { useSessionStorage } from "./useSessionStorage";
 import { blankCourse, blankPlan } from "./Default Plans/plan";
 import { blankSemester } from "./Default Plans/plan";
-//modals
+//semester modals
 import { DisplayFall } from "./DisplaySemester/DisplayFall";
 import { DisplayWinter } from "./DisplaySemester/DisplayWinter";
 import { DisplaySpring } from "./DisplaySemester/DisplaySpring";
 import { DisplaySummer } from "./DisplaySemester/DisplaySummer";
 import { DisplayPlan } from "./DisplaySemester/DisplayPlan";
-
 //functions and other imports
-import sample from "../data/AllCourseList.json";
-import CourseEdit from "./CourseEdit";
-import { updateCourseList, findCourse, displayCourse } from "./course";
-
+import { updateCourseList, findCourse } from "./course";
 //A variable able to use for the list of courses within the JSON file.
 const COURSES_LIST = courseList;
-
 //variable to use DEFAULT list of courses from JSON file - Malika
 const DEFAULT_COURSE_LIST = defaultCourseList;
-
-//import sample from "../data/AllCourseList.json";
+//all custom button imports
 import { ClearSemester } from "./Buttons/clearingSemester";
 import { StartNewPlan } from "./Buttons/StartNewPlan";
-import { DropAdd } from "./Buttons/dropAdd";
 import { ClearAllSemesters } from "./Buttons/ClearAllSemesters";
 import { SavePlanInto } from "./Buttons/SavePlanInto";
 import { LoadPlan } from "./Buttons/LoadPlan";
 import { PickAPlan } from "./Buttons/PickAPlan";
-// import { courseList } from "./course";
 
-// const COURSE_LIST = courseList; //list of all the courses
-let AI_Plan = AI(); //the actual AI plan itself
+//all the default concentration plans
+let AI_Plan = AI();
 let CYBER_Plan = Cyber();
 let SysNet_Plan = SysNet();
 let Data_Plan = Data();
@@ -62,8 +48,9 @@ let Theory_Plan = Theory();
 let High_Plan = High();
 let Bio_Plan = Bio();
 
+/* ----------------------------------------------------------------------------------------------------- */
 export function ViewSemester(): JSX.Element {
-    //all stuff for saving plans
+    //states for saving plans (4 options)
     const [plan1, setPlan1] = useSessionStorage("plan1", blankPlan);
     const [plan1Semesters, setPlan1Semesters] = useSessionStorage(
         "plan1Semesters",
@@ -101,18 +88,20 @@ export function ViewSemester(): JSX.Element {
         false
     );
 
-    //this state is handled by skipping semester
+    //fifth year states
+    const [fifthYearClicked, setFifthYearClicked] = useState<boolean>(false);
     const [fifthYear, setFifthYear] = useSessionStorage("fifthYear", false);
-    //while in the working session itself
-    const [plan, setPlan] = useSessionStorage("plan", AI_Plan); //The default plan (for now)
+
+    //while in the working session itself - current changes user is making
+    const [plan, setPlan] = useSessionStorage("plan", AI_Plan); //The default plan is AI
     const [seePlan, setSeePlan] = useSessionStorage("seePlan", false); //default is you cant see any plan (until a user selects one)
     const [semesters, setSemesters] = useSessionStorage(
         "semesters",
         AI_Plan.semesters
-    ); //the default semesters (for now)
+    ); //the default semesters (should always match with what the plan is)
     const [currCourse, setCurrCourse] = useState<string>("ENGL110");
 
-    const [fifthYearClicked, setFifthYearClicked] = useState<boolean>(false);
+    //state for handling if the yes or no button for skip semester warning was clicked
     const [clicked, setClicked] = useState<boolean>(false);
 
     //states for editing courses - created by Malika
@@ -183,6 +172,7 @@ export function ViewSemester(): JSX.Element {
         const newSemesters = semesters;
         newSemesters.map((sem: Semester) => (sem.courseList = [blankCourse]));
         setSemesters([...newSemesters]);
+        handleClose();
     }
 
     function skipSemester(targetYear: number, targetSem: string) {
@@ -410,7 +400,7 @@ export function ViewSemester(): JSX.Element {
             setPlan(Bio_Plan);
             setSemesters(Bio_Plan.semesters);
             setSeePlan(true);
-        } else if (planSelected === "Blank Plan") {
+        } else if (planSelected === "Custom Concentration") {
             setPlan(blankPlan);
             setSemesters(blankPlan.semesters);
             setSeePlan(true);
@@ -477,7 +467,12 @@ export function ViewSemester(): JSX.Element {
             <div className="DropdownMenu">
                 <StartNewPlan startNewSession={startNewSession}></StartNewPlan>
                 <ClearSemester clearSemester={clearSemester}></ClearSemester>
-                <ClearAllSemesters clearAll={clearAll}></ClearAllSemesters>
+                <ClearAllSemesters
+                    clearAll={clearAll}
+                    handleClose={handleClose}
+                    handleShow={handleShow}
+                    show={clicked}
+                ></ClearAllSemesters>
                 <SavePlanInto savePlan={savePlan}></SavePlanInto>
                 <LoadPlan loadPlan={loadPlan}></LoadPlan>
                 <PickAPlan handlePlans={handlePlans}></PickAPlan>
