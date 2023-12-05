@@ -12,56 +12,58 @@ export function High(): Plan {
 
     //making the courses for each semester in each year (whole 4 year plan)
     const fall1High = fall1();
-    const spring1High = spring1();
+    let spring1High = spring1();
     spring1High.pop(); //removes the extra blank course
     let temp = courseList.filter(
         //id 13 is MATH242
         (course) => course.id == 13
     );
-    spring1High.push(temp[0]);
-    const fall2High = fall2();
+    spring1High = [...spring1High, ...temp];
+
+    let fall2High = fall2();
     temp = courseList.filter(
         //id 57 is MATH243
         (course) => course.id == 57
     );
-    fall2High.push(temp[0]);
-    fall2High.push(blankCourse);
-    const spring2High = spring2();
+    fall2High = [...fall2High, ...temp, blankCourse];
+
+    let spring2High = spring2();
     temp = courseList.filter(
         //id 14 is MATH205
         (course) => course.id == 14
     );
-    spring2High.push(temp[0]);
-    spring2High.push(blankCourse);
-    spring2High.push(blankCourse);
+    spring2High = [...spring2High, ...temp, blankCourse, blankCourse];
 
-    const fall3High = courseList.filter(
+    let fall3High = courseList.filter(
         //id 8 is CISC320, id 7 is CISC303 and id 9 is CISC361
         (course) => course.id == 8 || course.id == 7 || course.id == 9
     );
-    fall3High.push(blankCourse);
-    fall3High.push(blankCourse);
-    const spring3High = courseList.filter(
+    fall3High = [...fall3High, blankCourse, blankCourse];
+
+    let spring3High = courseList.filter(
         //id 60 is CISC360 and id 10 is CISC372
         (course) => course.id == 60 || course.id == 10
     );
-    spring3High.push(blankCourse);
-    spring3High.push(blankCourse);
-    spring3High.push(blankCourse);
-    const fall4High = courseList.filter(
+    spring3High = [...spring3High, blankCourse, blankCourse, blankCourse];
+
+    let fall4High = courseList.filter(
         //id 16 is CISC498
         (course) => course.id == 16
     );
-    fall4High.push(blankCourse);
-    fall4High.push(blankCourse);
-    fall4High.push(blankCourse);
-    fall4High.push(blankCourse);
-    const spring4High = courseList.filter(
+
+    fall4High = [
+        ...fall4High,
+        blankCourse,
+        blankCourse,
+        blankCourse,
+        blankCourse
+    ];
+
+    let spring4High = courseList.filter(
         //id 17 is CISC499 and id 47 is CISC450 and id 61 is CISC471
         (course) => course.id == 17 || course.id == 47 || course.id == 61
     );
-    spring4High.push(blankCourse);
-    spring4High.push(blankCourse);
+    spring4High = [...spring4High, blankCourse, blankCourse];
 
     //making the actual semester types
     const fall1Sem: Semester = {

@@ -165,13 +165,13 @@ export function ViewSemester(): JSX.Element {
     }
 
     // function removes all courses!
-    function clearSemesterCourses() {
+    function clearSemesterCourses(targetYear: number, targetSem: string) {
         const idx = index(targetYear, targetSem);
         const newSemester = semesters;
         newSemester[idx].courseList = [];
 
         //function to clear all courses within a semester
-        setSemesters({ ...newSemester });
+        setSemesters([...newSemester]);
         handleClose();
     }
 
@@ -186,7 +186,7 @@ export function ViewSemester(): JSX.Element {
 
     //functions for handling which semesters to see
 
-    function dropClass() {
+    function dropClass(targetYear: number, targetSem: string) {
         const idx = index(targetYear, targetSem);
         const newSemester = semesters;
         const newClasses = newSemester[idx].courseList.filter(
@@ -199,36 +199,21 @@ export function ViewSemester(): JSX.Element {
         setSemesters({ ...newSemester });
     }
 
-    function addClass(): void {
+    function addClass(targetYear: number, targetSem: string): void {
         const idx = index(targetYear, targetSem);
         const newSemester = semesters;
-        const newClasses = newSemester[idx].courseList;
-        //idea was a little connfusing for the variable name so we renamed it choiceIdx and choice is the actual course data structure
-        const choiceIdx = COURSES_LIST.findIndex(
+        const choiceIdx = courseList.findIndex(
             (course: Course) => course.title === currCourse
         );
-        const choice = COURSES_LIST[choiceIdx];
-        //checks if it's already there
-        //if exists stays as -1 then the course isn't already in the semester list and should be added otherwise nothing happens
-
-        let exists = -1;
-        exists = newClasses.findIndex(
-            (course: Course) => course.id === COURSES_LIST[choiceIdx].id
+        const choice = courseList[choiceIdx];
+        const newClasses = newSemester[idx].courseList.filter(
+            (course: Course) => currCourse !== course.title
         );
-        //(MM)checks if course being added is already present in the semester adding the course
-        const coursePresence = newClasses.filter(
-            (course: Course) => course.title !== choice.title
-        );
-
-        //(MM)Added coursePresence check
-        if (exists !== -1 && coursePresence.length === 0) {
-            newSemester[idx].courseList = [
-                ...newSemester[idx].courseList,
-                choice
-            ];
-        }
-
-        return setSemesters({ ...newSemester });
+        // looks through the course list in the current semester and filters out the
+        // course with the same "Title" as the state "currCourse"
+        // **refer to "currCourse" documentation for more info **
+        newSemester[idx].courseList = [...newClasses, choice];
+        setSemesters({ ...newSemester });
     }
 
     //function to change number of semesters shown (can be either 1 or 2 only - can add 0 or more semesters later)
@@ -447,6 +432,7 @@ export function ViewSemester(): JSX.Element {
             setSemesters(plan2Semesters);
         }
     }
+
     //actual return for the tsx file to App.tsx
     return (
         <div style={{ backgroundColor: "#0f234c" }}>

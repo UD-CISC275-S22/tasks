@@ -8,13 +8,17 @@ export const DropAdd = ({
     addClass,
     updateCurrCourse,
     currCourse,
-    Course_List
+    Course_List,
+    targetYear,
+    targetSem
 }: {
-    dropClass: () => void;
-    addClass: () => void;
+    dropClass: (targetYear: number, targetSem: string) => void;
+    addClass: (targetYear: number, targetSem: string) => void;
     updateCurrCourse: (event: React.ChangeEvent<HTMLSelectElement>) => void;
     currCourse: string;
     Course_List: Course[];
+    targetYear: number;
+    targetSem: string;
 }) => {
     //Dropdown for courses are not treated individually
     return (
@@ -36,8 +40,12 @@ export const DropAdd = ({
                     }
                 </Form.Select>
             </Form.Group>
-            <Button onClick={dropClass}>Remove Class</Button>
-            <Button onClick={addClass}>Add Class</Button>
+            <Button onClick={() => dropClass(targetYear, targetSem)}>
+                Remove Class
+            </Button>
+            <Button onClick={() => addClass(targetYear, targetSem)}>
+                Add Class
+            </Button>
         </>
     );
 };
