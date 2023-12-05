@@ -12,7 +12,7 @@ function App(): JSX.Element {
                         <div className="center">
                             <h1>University of Delaware Scheduler</h1>
                             <div className="div2">
-                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
                             </div>
                             <span>
                                 Welcome to our UD Scheduler! Here you can make a
