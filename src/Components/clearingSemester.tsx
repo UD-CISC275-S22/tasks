@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Modal } from "react-bootstrap";
+import { Course } from "../Interfaces/course";
 
 export const ClearSemester = ({
     clearSemesterCourses,
@@ -7,14 +8,16 @@ export const ClearSemester = ({
     handleShow,
     show,
     targetYear,
-    targetSem
+    targetSem,
+    CourseLIST
 }: {
-    clearSemesterCourses: (targetYear: number, targetSem: string) => void;
+    clearSemesterCourses: (list: Course[]) => void;
     handleClose: () => void;
     handleShow: () => void;
     show: boolean;
     targetYear: number;
     targetSem: string;
+    CourseLIST: Course[];
 }) => {
     return (
         <>
@@ -34,9 +37,7 @@ export const ClearSemester = ({
                     </Modal.Body>
                     <Modal.Footer>
                         <Button
-                            onClick={() =>
-                                clearSemesterCourses(targetYear, targetSem)
-                            }
+                            onClick={() => clearSemesterCourses(CourseLIST)}
                         >
                             Yes
                         </Button>

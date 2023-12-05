@@ -23,7 +23,7 @@ import { Theory } from "./Plans/Theory_Plan";
 import { High } from "./Plans/High_Plan";
 import { Bio } from "./Plans/Bio_Plan";
 import { useSessionStorage } from "./useSessionStorage";
-import { blankPlan } from "./Plans/plan";
+import { blankCourse, blankPlan } from "./Plans/plan";
 import { blankSemester } from "./Plans/plan";
 //modals
 import { DisplayFall } from "./DisplayFall";
@@ -49,23 +49,13 @@ import { DropAdd } from "./dropAdd";
 // import { courseList } from "./course";
 
 // const COURSE_LIST = courseList; //list of all the courses
-const AI_Plan = AI(); //the actual AI plan itself
-const CYBER_Plan = Cyber();
-const SysNet_Plan = SysNet();
-const Data_Plan = Data();
-const Theory_Plan = Theory();
-const High_Plan = High();
-const Bio_Plan = Bio();
-
-const AI_Semesters = AI_Plan.semesters; //the semesters for the AI plan
-const CYBER_Semesters = CYBER_Plan.semesters;
-const SysNet_Semesters = SysNet_Plan.semesters;
-const Data_Semesters = Data_Plan.semesters;
-const Theory_Semesters = Theory_Plan.semesters;
-const High_Semesters = High_Plan.semesters;
-const Bio_Semesters = Bio_Plan.semesters;
-
-const DEFAULT_COURSE = AI_Semesters[0].courseList[0].title;
+let AI_Plan = AI(); //the actual AI plan itself
+let CYBER_Plan = Cyber();
+let SysNet_Plan = SysNet();
+let Data_Plan = Data();
+let Theory_Plan = Theory();
+let High_Plan = High();
+let Bio_Plan = Bio();
 
 export function ViewSemester(): JSX.Element {
     //all stuff for saving plans
@@ -87,24 +77,38 @@ export function ViewSemester(): JSX.Element {
         "plan2SeePlan",
         false
     );
+    const [plan3, setPlan3] = useSessionStorage("plan3", blankPlan);
+    const [plan3Semesters, setPlan3Semesters] = useSessionStorage(
+        "plan3Semesters",
+        [blankSemester]
+    );
+    const [plan3SeePlan, setPlan3SeePlan] = useSessionStorage(
+        "plan3SeePlan",
+        false
+    );
+    const [plan4, setPlan4] = useSessionStorage("plan4", blankPlan);
+    const [plan4Semesters, setPlan4Semesters] = useSessionStorage(
+        "plan4Semesters",
+        [blankSemester]
+    );
+    const [plan4SeePlan, setPlan4SeePlan] = useSessionStorage(
+        "plan4SeePlan",
+        false
+    );
 
+    //this state is handled by skipping semester
+    const [fifthYear, setFifthYear] = useSessionStorage("fifthYear", false);
     //while in the working session itself
     const [plan, setPlan] = useSessionStorage("plan", AI_Plan); //The default plan (for now)
     const [seePlan, setSeePlan] = useSessionStorage("seePlan", false); //default is you cant see any plan (until a user selects one)
     const [semesters, setSemesters] = useSessionStorage(
-        "seePlan",
-        AI_Semesters
+        "semesters",
+        AI_Plan.semesters
     ); //the default semesters (for now)
-    const DEFAULT_COURSE = AI_Semesters[0].courseList[0].title;
-    const [currCourse, setCurrCourse] = useState<string>(DEFAULT_COURSE);
-    const [SemesterType, setSemesterType] = useState<string>("Fall"); //can be "Fall", "Spring" or "Both"
-    // const [changingSem, setChangingSem] = useState<Semester>(AI_Semesters[0]);
+    const [currCourse, setCurrCourse] = useState<string>("ENGL110");
 
-    const [SemCount, setSemCount] = useState<number>(2); //default shows 2 semesters
-
+    const [fifthYearClicked, setFifthYearClicked] = useState<boolean>(false);
     const [clicked, setClicked] = useState<boolean>(false);
-    const [targetSem, setTargetSem] = useState<string>("Fall");
-    const [targetYear, setTargetYear] = useState<number>(1);
 
     //states for editing courses - created by Malika
     const [showEditModal, setShowEditModal] = useState(false);
@@ -165,13 +169,25 @@ export function ViewSemester(): JSX.Element {
     }
 
     // function removes all courses!
-    function clearSemesterCourses(targetYear: number, targetSem: string) {
+    function clearSemesterCourses(idx: number) {
+        const newSemester = semesters[idx];
+        newSemester.courseList = [blankCourse];
+        const newSemesters = { ...semesters };
+        newSemesters[idx] = newSemester;
+
+        //function to clear all courses within a semester
+        setSemesters({ ...newSemesters });
+        handleClose();
+    }
+
+    function skipSemester(targetYear: number, targetSem: string) {
         const idx = index(targetYear, targetSem);
         const newSemester = semesters;
         newSemester[idx].courseList = [];
 
         //function to clear all courses within a semester
-        setSemesters([...newSemester]);
+        setSemesters({ ...newSemester });
+        setFifthYear(true);
         handleClose();
     }
 
@@ -180,8 +196,16 @@ export function ViewSemester(): JSX.Element {
         setClicked(false);
     }
 
+    function handleFifthClose() {
+        setFifthYearClicked(false);
+    }
+
     function handleShow() {
         setClicked(true);
+    }
+
+    function handleFifthShow() {
+        setFifthYearClicked(true);
     }
 
     //functions for handling which semesters to see
@@ -216,29 +240,6 @@ export function ViewSemester(): JSX.Element {
         setSemesters({ ...newSemester });
     }
 
-    //function to change number of semesters shown (can be either 1 or 2 only - can add 0 or more semesters later)
-    function changeSemCount(): void {
-        if (SemCount === 2) {
-            setSemCount(1);
-            setSemesterType("Fall");
-        } else {
-            setSemCount(2);
-            setSemesterType("Both");
-        }
-    }
-
-    //function to change the semester type to display
-    function changeSemester(): void {
-        let newSemType = "Default";
-        if (SemesterType == "Fall") {
-            newSemType = "Spring";
-        } else {
-            newSemType = "Fall";
-        }
-        setSemesterType(newSemType); //set the new semester type to display
-        /* ADD OTHER TYPES OF SEMESTERS LATER */
-    }
-
     function indivPlanSem(year: number, sem: string, id: number): JSX.Element {
         //returns 1 fall, spring, winter or summer semester
         if (sem === "Fall") {
@@ -246,15 +247,19 @@ export function ViewSemester(): JSX.Element {
                 <DisplayFall
                     key={id}
                     semesters={semesters}
-                    targetSem={"Fall"}
+                    targetSem={sem}
                     currCourse={currCourse}
                     clicked={clicked}
+                    fifthYearClicked={fifthYearClicked}
                     targetYear={year}
                     dropClass={dropClass}
                     addClass={addClass}
                     updateCurrCourse={updateCurrCourse}
                     clearSemesterCourses={clearSemesterCourses}
+                    skipSemester={skipSemester}
                     handleClose={handleClose}
+                    handleFifthShow={handleFifthShow}
+                    handleFifthClose={handleFifthClose}
                     handleShow={handleShow}
                     index={index}
                 ></DisplayFall>
@@ -264,16 +269,20 @@ export function ViewSemester(): JSX.Element {
                 <DisplaySpring
                     key={id}
                     semesters={semesters}
-                    targetSem={"Spring"}
+                    targetSem={sem}
                     currCourse={currCourse}
                     clicked={clicked}
+                    fifthYearClicked={fifthYearClicked}
                     targetYear={year}
                     dropClass={dropClass}
                     addClass={addClass}
                     updateCurrCourse={updateCurrCourse}
                     clearSemesterCourses={clearSemesterCourses}
+                    skipSemester={skipSemester}
                     handleClose={handleClose}
                     handleShow={handleShow}
+                    handleFifthShow={handleFifthShow}
+                    handleFifthClose={handleFifthClose}
                     index={index}
                 ></DisplaySpring>
             );
@@ -282,16 +291,20 @@ export function ViewSemester(): JSX.Element {
                 <DisplayWinter
                     key={id}
                     semesters={semesters}
-                    targetSem={"Winter"}
+                    targetSem={sem}
                     currCourse={currCourse}
                     clicked={clicked}
+                    fifthYearClicked={fifthYearClicked}
                     targetYear={year}
                     dropClass={dropClass}
                     addClass={addClass}
                     updateCurrCourse={updateCurrCourse}
                     clearSemesterCourses={clearSemesterCourses}
+                    skipSemester={skipSemester}
                     handleClose={handleClose}
                     handleShow={handleShow}
+                    handleFifthShow={handleFifthShow}
+                    handleFifthClose={handleFifthClose}
                     index={index}
                 ></DisplayWinter>
             );
@@ -300,16 +313,20 @@ export function ViewSemester(): JSX.Element {
                 <DisplaySummer
                     key={id}
                     semesters={semesters}
-                    targetSem={"Summer"}
+                    targetSem={sem}
                     currCourse={currCourse}
                     clicked={clicked}
+                    fifthYearClicked={fifthYearClicked}
                     targetYear={year}
                     dropClass={dropClass}
                     addClass={addClass}
                     updateCurrCourse={updateCurrCourse}
                     clearSemesterCourses={clearSemesterCourses}
+                    skipSemester={skipSemester}
                     handleClose={handleClose}
                     handleShow={handleShow}
+                    handleFifthShow={handleFifthShow}
+                    handleFifthClose={handleFifthClose}
                     index={index}
                 ></DisplaySummer>
             );
@@ -365,48 +382,56 @@ export function ViewSemester(): JSX.Element {
         "Bioinformatics"
     ];
 
-    const planSaveOptions = ["Plan 1", "Plan 2"];
+    const planSaveOptions = ["Plan 1", "Plan 2", "Plan 3", "Plan 4"]; //plan 3 and plan 4 need to be added
 
     const handlePlans = (planSelected: string) => {
         if (planSelected === "Artificial Intelligence") {
             setPlan(AI_Plan);
-            setSemesters(AI_Semesters);
+            setSemesters(AI_Plan.semesters);
             setSeePlan(true);
             return;
         } else if (planSelected === "Cybersecurity") {
             setPlan(CYBER_Plan);
-            setSemesters(CYBER_Semesters);
+            setSemesters(CYBER_Plan.semesters);
             setSeePlan(true);
             return;
         } else if (planSelected === "Systems and Networks") {
             setPlan(SysNet_Plan);
-            setSemesters(SysNet_Semesters);
+            setSemesters(SysNet_Plan.semesters);
             setSeePlan(true);
             return;
         } else if (planSelected === "Data Science") {
             setPlan(Data_Plan);
-            setSemesters(Data_Semesters);
+            setSemesters(Data_Plan.semesters);
             setSeePlan(true);
             return;
         } else if (planSelected === "Theory and Computation") {
             setPlan(Theory_Plan);
-            setSemesters(Theory_Semesters);
+            setSemesters(Theory_Plan.semesters);
             setSeePlan(true);
         } else if (planSelected === "High Performance Computing") {
             setPlan(High_Plan);
-            setSemesters(High_Semesters);
+            setSemesters(High_Plan.semesters);
             setSeePlan(true);
         } else if (planSelected === "Bioinformatics") {
             setPlan(Bio_Plan);
-            setSemesters(Bio_Semesters);
+            setSemesters(Bio_Plan.semesters);
             setSeePlan(true);
         }
     };
 
     function startNewSession() {
+        AI_Plan = AI();
+        CYBER_Plan = Cyber();
+        SysNet_Plan = SysNet();
+        Data_Plan = Data();
+        Theory_Plan = Theory();
+        High_Plan = High();
+        Bio_Plan = Bio();
         setPlan(blankPlan);
         setSeePlan(false);
         setSemesters(blankPlan.semesters);
+        setFifthYear(false);
     }
 
     function savePlan(option: string) {
@@ -418,6 +443,14 @@ export function ViewSemester(): JSX.Element {
             setPlan2(plan);
             setPlan2SeePlan(seePlan);
             setPlan2Semesters(semesters);
+        } else if (option === "Plan 3") {
+            setPlan3(plan);
+            setPlan3SeePlan(seePlan);
+            setPlan3Semesters(semesters);
+        } else if (option === "Plan 4") {
+            setPlan4(plan);
+            setPlan4SeePlan(seePlan);
+            setPlan4Semesters(semesters);
         }
     }
 
@@ -430,6 +463,14 @@ export function ViewSemester(): JSX.Element {
             setPlan(plan2);
             setSeePlan(plan2SeePlan);
             setSemesters(plan2Semesters);
+        } else if (option === "Plan 3") {
+            setPlan(plan3);
+            setSeePlan(plan3SeePlan);
+            setSemesters(plan3Semesters);
+        } else if (option === "Plan 4") {
+            setPlan(plan4);
+            setSeePlan(plan4SeePlan);
+            setSemesters(plan4Semesters);
         }
     }
 
@@ -544,7 +585,10 @@ export function ViewSemester(): JSX.Element {
             {
                 // eslint-disable-next-line no-extra-parens
                 seePlan && (
-                    <DisplayPlan indivPlanSem={indivPlanSem}></DisplayPlan>
+                    <DisplayPlan
+                        indivPlanSem={indivPlanSem}
+                        fifthYear={fifthYear}
+                    ></DisplayPlan>
                 )
             }
             <hr style={{ backgroundColor: "#0f234c" }}></hr>

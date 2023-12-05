@@ -9,9 +9,13 @@ export interface valueProps {
     //function below acts like the display both function except it returns either a DisplayFall or DisplaySpring component
     //it only returns one or the other to avoid rendering confusion of the site. The id parameter is for the key for the component (just an identifier)
     indivPlanSem(year: number, sem: string, id: number): JSX.Element;
+    fifthYear: boolean;
 }
 
-export function DisplayPlan({ indivPlanSem }: valueProps): JSX.Element {
+export function DisplayPlan({
+    indivPlanSem,
+    fifthYear
+}: valueProps): JSX.Element {
     //makes individual components of DisplayFall and DisplaySpring for each year
     //first number is the year, second is the type and the third is the key value for the component
     const firstYearFall = indivPlanSem(1, "Fall", 1);
@@ -32,9 +36,9 @@ export function DisplayPlan({ indivPlanSem }: valueProps): JSX.Element {
     const fourthYearFall = indivPlanSem(4, "Fall", 13);
     const fourthYearWinter = indivPlanSem(4, "Winter", 14);
     const fourthYearSpring = indivPlanSem(4, "Spring", 15);
+    const fourthYearSummer = indivPlanSem(4, "Summer", 16);
 
     //these next ones are extra semesters in case someone needs them but will not display
-    const fourthYearSummer = indivPlanSem(4, "Summer", 16);
     const fifthYearFall = indivPlanSem(5, "Fall", 17);
     const fifthYearWinter = indivPlanSem(5, "Winter", 18);
     const fifthYearSpring = indivPlanSem(5, "Spring", 19);
@@ -82,6 +86,14 @@ export function DisplayPlan({ indivPlanSem }: valueProps): JSX.Element {
             setSelectedYear4(selectedYear4.filter((item) => item !== option));
         } else {
             setSelectedYear4([...selectedYear4, option]);
+        }
+    };
+
+    const toggleYear5 = (option: string, index: number) => {
+        if (selectedYear5.includes(option)) {
+            setSelectedYear5(selectedYear5.filter((item) => item !== option));
+        } else {
+            setSelectedYear5([...selectedYear5, option]);
         }
     };
 
@@ -233,6 +245,54 @@ export function DisplayPlan({ indivPlanSem }: valueProps): JSX.Element {
                 {selectedYear4.includes("Spring") && fourthYearSpring}
                 {selectedYear4.includes("Summer") && fourthYearSummer}
             </div>
+            {
+                //eslint-disable-next-line no-extra-parens
+                fifthYear && (
+                    <div>
+                        <Dropdown>
+                            <Dropdown.Toggle
+                                id="dropdown7"
+                                style={{
+                                    backgroundColor: "#71B48D",
+                                    borderColor: "#1d442d",
+                                    marginLeft: "5px",
+                                    marginRight: "5px",
+                                    marginTop: "5px",
+                                    marginBottom: "5px",
+                                    color: "black"
+                                }}
+                            >
+                                View Year 5 Semesters:
+                            </Dropdown.Toggle>
+                            <Dropdown.Menu>
+                                {
+                                    // eslint-disable-next-line no-extra-parens
+                                    year.map((option, index) => (
+                                        <Dropdown.Item
+                                            key={index}
+                                            onClick={() =>
+                                                toggleYear5(option, index)
+                                            }
+                                            active={selectedYear5.includes(
+                                                option
+                                            )}
+                                        >
+                                            {option}
+                                        </Dropdown.Item>
+                                    ))
+                                }
+                            </Dropdown.Menu>
+                        </Dropdown>
+                        <div className="Semester">
+                            {selectedYear5.includes("Fall") && fifthYearFall}
+                            {selectedYear5.includes("Winter") &&
+                                fifthYearWinter}
+                            {selectedYear5.includes("Spring") &&
+                                fifthYearSpring}
+                        </div>
+                    </div>
+                )
+            }
         </div>
     );
 }

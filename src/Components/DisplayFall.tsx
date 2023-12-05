@@ -5,7 +5,8 @@ import { ClearSemester } from "./clearingSemester";
 import { DropAdd } from "./dropAdd";
 import { Semester } from "../Interfaces/semester";
 import { courseList } from "./course";
-import { Form } from "react-bootstrap";
+import { Button, Form, Modal } from "react-bootstrap";
+import { SkipSemester } from "./SkipSemester";
 
 export interface valueProps {
     semesters: Semester[];
@@ -13,12 +14,16 @@ export interface valueProps {
     currCourse: string;
     clicked: boolean;
     targetYear: number;
+    fifthYearClicked: boolean;
     dropClass(targetYear: number, targetSem: string): void;
     addClass(targetYear: number, targetSem: string): void;
     updateCurrCourse(event: React.ChangeEvent<HTMLSelectElement>): void;
-    clearSemesterCourses(targetYear: number, targetSem: string): void;
+    clearSemesterCourses(idx: number): void;
+    skipSemester(targetYear: number, targetSem: string): void;
     handleClose(): void;
     handleShow(): void;
+    handleFifthShow(): void;
+    handleFifthClose(): void;
     index(targetYear: number, targetSem: string): number;
 }
 
@@ -29,12 +34,16 @@ export function DisplayFall({
     currCourse,
     clicked,
     targetYear,
+    fifthYearClicked,
     dropClass,
     addClass,
     updateCurrCourse,
     clearSemesterCourses,
+    skipSemester,
     handleClose,
     handleShow,
+    handleFifthClose,
+    handleFifthShow,
     index
 }: valueProps): JSX.Element {
     //index now takes in two parameters (targetYear - this is NOT the state and it's already passed in from the Semester.tsx file)
@@ -110,14 +119,51 @@ export function DisplayFall({
                     currCourse={currCourse}
                     Course_List={courseList}
                 ></DropAdd>
+                {/*
                 <ClearSemester
+                    key={idx}
                     clearSemesterCourses={clearSemesterCourses}
                     targetYear={targetYear}
                     targetSem={targetSem}
                     show={clicked}
                     handleClose={handleClose}
                     handleShow={handleShow}
-                ></ClearSemester>
+                    CourseLIST={courseList}
+                ></ClearSemester> */}
+                <div className="clear_sem">
+                    <Button onClick={handleShow}>Remove All Courses</Button>
+                </div>
+                <div>
+                    <Modal
+                        show={clicked}
+                        onHide={handleClose}
+                        animation={false}
+                    >
+                        <Modal.Header closeButton>
+                            <Modal.Title>Warning</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                            <p>
+                                You are deleting this current semester, do you
+                                confirm?
+                            </p>
+                        </Modal.Body>
+                        <Modal.Footer>
+                            <Button onClick={() => clearSemesterCourses(idx)}>
+                                Yes
+                            </Button>
+                            <Button onClick={handleClose}>No</Button>
+                        </Modal.Footer>
+                    </Modal>
+                </div>
+                <SkipSemester
+                    skipSemester={skipSemester}
+                    targetYear={targetYear}
+                    targetSem={targetSem}
+                    fifthYearClicked={fifthYearClicked}
+                    handleFifthShow={handleFifthShow}
+                    handleFifthClose={handleFifthClose}
+                ></SkipSemester>
             </>
         </div>
     );
