@@ -26,42 +26,43 @@ function App(): JSX.Element {
                     </div>
                 </header>
             </div>
-            <div>
-                <Planner plan={CompSciPlan} />
+            <div className="Planner">
+                {} <Planner plan={CompSciPlan} />
             </div>
-            <div className="ending"></div>
-            <div className="ResourceSection">
-                <div>
-                    2023 University of Delaware Resources &nbsp;
-                    <a
-                        href="https://catalog.udel.edu/content.php?catoid=47&navoid=8860"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        Catalog
-                    </a>
-                    &nbsp;
-                    <a
-                        href="https://catalog.udel.edu/content.php?catoid=47&navoid=8860"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        Programs
-                    </a>
-                    &nbsp;
-                    <a
-                        href="https://udapps.nss.udel.edu/CoursesSearch/"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        UD Course Search
-                    </a>
-                    &nbsp;
+            <div className="ending">
+                <div className="footer">
+                    <div>
+                        2023 University of Delaware Resources &nbsp;
+                        <a
+                            href="https://catalog.udel.edu/content.php?catoid=47&navoid=8860"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            Catalog
+                        </a>
+                        &nbsp;
+                        <a
+                            href="https://catalog.udel.edu/content.php?catoid=47&navoid=8860"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            Programs
+                        </a>
+                        &nbsp;
+                        <a
+                            href="https://udapps.nss.udel.edu/CoursesSearch/"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            UD Course Search
+                        </a>
+                        &nbsp;
+                    </div>
+                    <span>
+                        Developed by: Andrew Fonseca, Shrey Patel, Mann
+                        Patel,Thiago Vazquez, Devlan Horner
+                    </span>
                 </div>
-                <span>
-                    Developed by: Andrew Fonseca, Shrey Patel, Mann Patel,Thiago
-                    Vazquez, Devlan Horner
-                </span>
             </div>
         </div>
     );
