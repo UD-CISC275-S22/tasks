@@ -215,10 +215,12 @@ export function ViewSemester(): JSX.Element {
         exists = newClasses.findIndex(
             (course: Course) => course.id === COURSES_LIST[choiceIdx].id
         );
+        //(MM)checks if course being added is already present in the semester adding the course
         const coursePresence = newClasses.filter(
             (course: Course) => course.title !== choice.title
         );
 
+        //(MM)Added coursePresence check
         if (exists !== -1 && coursePresence.length === 0) {
             newSemester[idx].courseList = [
                 ...newSemester[idx].courseList,
