@@ -11,13 +11,9 @@ import logo from "../src/logo.png";
 // import QuickAdd from "./Components/QuickAdd";
 // import { Class } from "./interfaces/class";
 function App(): JSX.Element {
-    //const prevDegreePlan: degreePlan[] = [];
-
-    const prevDegreePlan: degreePlan[] = [
-        { name: "Plan 1", semesters: [] },
-        { name: "Plan 2", semesters: [] },
-        { name: "Plan 3", semesters: [] }
-    ];
+    //--------------------------------------------------------------------------------------
+    const prevDegreePlan: degreePlan[] = [{ name: "Plan 1", semesters: [] }];
+    //act as the initial value, otherwise the "go back" button will not work
     //--------------------------------------------------------------------------------------
     const [view, setView] = useState<Views>(Views.degreePlanView);
     const [currDegreePlan, setcurrDegreePlan] = useState<degreePlan>(
@@ -33,6 +29,7 @@ function App(): JSX.Element {
             </header>
             {view === Views.degreePlanView && (
                 <DegreePlanView
+                    setDegreePlanList={setDegreePlanList}
                     setCurrentView={setView}
                     setCurrentDegreePlan={setcurrDegreePlan}
                     degreePlanList={degreePlanList}

@@ -4,15 +4,19 @@ import { degreePlan } from "../interfaces/degreePlan";
 //import { SingleMultipleSemester } from "./SingleMultipleSemester";
 import { Views } from "../interfaces/viewProps";
 import { Button } from "react-bootstrap";
-interface degreePlanViewProps {
+import { InsertDegreePlan, RemoveDegreePlan } from "./InsertRemoveDegreePlan";
+
+export interface degreePlanViewProps {
     setCurrentView: (view: Views) => void;
     setCurrentDegreePlan: (degreePlan: degreePlan) => void;
     degreePlanList: degreePlan[];
+    setDegreePlanList: (degreePlan: degreePlan[]) => void;
 }
 export const DegreePlanView = ({
     setCurrentView,
     //setCurrentDegreePlan,
-    degreePlanList
+    degreePlanList,
+    setDegreePlanList
 }: degreePlanViewProps): JSX.Element => {
     const [viewDegreePlan, setviewDegreePlan] = useState<degreePlan>();
 
@@ -36,6 +40,12 @@ export const DegreePlanView = ({
     return (
         <div>
             <ul>
+                <InsertDegreePlan
+                    setDegreePlanList={setDegreePlanList}
+                    setCurrentView={setCurrentView}
+                    setCurrentDegreePlan={() => setDegreePlanList}
+                    degreePlanList={degreePlanList}
+                ></InsertDegreePlan>
                 {degreePlanList.map((plan) => (
                     <li key={plan.name}>
                         <Button onClick={() => DegreePlanClick(plan)}>

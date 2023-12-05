@@ -1,35 +1,51 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
+import { degreePlanViewProps } from "./DegreePlanView";
 import { degreePlan } from "../interfaces/degreePlan";
+//------------------------------------------------------------------------------------
+// Function to insert a new degree plan, creating an array
+// Function to remove  a new degree plan, removing an array
 
-export function InsertRemoveDegreePlan(): JSX.Element {
-    const prevDegreePlan: degreePlan[] = [];
-    //------------------------------------------------------------------------------------
-    // Function to insert a new degree plan, creating an array
-    // Function to remove  a new degree plan, removing an array
+export function InsertDegreePlan({
+    setDegreePlanList,
+    degreePlanList
+}: degreePlanViewProps): JSX.Element {
+    const updatedDegreePlans = [
+        ...degreePlanList,
+        {
+            name: `Plan ${degreePlanList.length + 1}`,
+            semesters: []
+        }
+    ];
+    //return updatedDegreePlans;
+    return (
+        <Button onClick={() => setDegreePlanList(updatedDegreePlans)}>
+            Create New Degree Plan
+        </Button>
+    );
+}
 
-    function insertDegreePlan(
-        prevDegreePlans: degreePlan[],
-        newPlan: degreePlan
-    ): degreePlan[] {
-        const updatedDegreePlans = [...prevDegreePlans, newPlan];
-        return updatedDegreePlans;
-    }
-    function removeDegreePlan(
-        prevDegreePlans: degreePlan[],
-        removePlan: degreePlan
-    ): degreePlan[] {
-        const updatedDegreePlans = prevDegreePlans.filter(
-            (degreePlan: degreePlan): boolean =>
-                degreePlan.name !== removePlan.name
-        );
-        return updatedDegreePlans;
-    }
+export function RemoveDegreePlan(
+    degreePlanList: degreePlan[],
+    setDegreePlanList: (degreePlan: degreePlan[]) => void,
+    removePlan: degreePlan
+): JSX.Element {
+    const updatedDegreePlans = degreePlanList.filter(
+        (degreePlan: degreePlan): boolean => degreePlan.name !== removePlan.name
+    );
+    //return updatedDegreePlans;
+    return (
+        <Button onClick={() => setDegreePlanList(updatedDegreePlans)}>
+            Remove
+        </Button>
+    );
+}
 
-    //-------------------------------------------------------------------------------------
-    const [degreePlanList, setDegreePlanList] =
+//-------------------------------------------------------------------------------------
+/*const [degreePlanList, setDegreePlanList] =
         useState<degreePlan[]>(prevDegreePlan);
-
+        */
+/*
     return (
         <div>
             <Button
@@ -49,8 +65,8 @@ export function InsertRemoveDegreePlan(): JSX.Element {
                     <li key={plan.name}>
                         <Button
                             onClick={() =>
-                                setDegreePlanList((prevDegreePlans) =>
-                                    removeDegreePlan(prevDegreePlans, plan)
+                                setDegreePlanList((degreePlanList) =>
+                                    removeDegreePlan(degreePlanList, plan)
                                 )
                             }
                         >
@@ -62,3 +78,4 @@ export function InsertRemoveDegreePlan(): JSX.Element {
         </div>
     );
 }
+*/
