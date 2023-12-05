@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
 import { Dropdown } from "react-bootstrap";
-import { Semester } from "../Interfaces/semester";
-import { blankCourse } from "./Plans/plan";
-import { useSessionStorage } from "./useSessionStorage";
+import { Semester } from "../../Interfaces/semester";
+import { blankCourse } from "../Default Plans/plan";
+import { useSessionStorage } from "../useSessionStorage";
 
 export interface valueProps {
     //function below acts like the display both function except it returns either a DisplayFall or DisplaySpring component

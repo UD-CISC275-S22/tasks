@@ -15,22 +15,22 @@ import { Plan } from "../Interfaces/plan";
 
 //individual constants
 import { courseList, defaultCourseList } from "./course";
-import { AI } from "./Plans/AI_Plan";
-import { Cyber } from "./Plans/Cyber_Plan";
-import { SysNet } from "./Plans/SysNet_Plan";
-import { Data } from "./Plans/Data_Plan";
-import { Theory } from "./Plans/Theory_Plan";
-import { High } from "./Plans/High_Plan";
-import { Bio } from "./Plans/Bio_Plan";
+import { AI } from "./Default Plans/AI_Plan";
+import { Cyber } from "./Default Plans/Cyber_Plan";
+import { SysNet } from "./Default Plans/SysNet_Plan";
+import { Data } from "./Default Plans/Data_Plan";
+import { Theory } from "./Default Plans/Theory_Plan";
+import { High } from "./Default Plans/High_Plan";
+import { Bio } from "./Default Plans/Bio_Plan";
 import { useSessionStorage } from "./useSessionStorage";
-import { blankCourse, blankPlan } from "./Plans/plan";
-import { blankSemester } from "./Plans/plan";
+import { blankCourse, blankPlan } from "./Default Plans/plan";
+import { blankSemester } from "./Default Plans/plan";
 //modals
-import { DisplayFall } from "./DisplayFall";
-import { DisplayWinter } from "./DisplayWinter";
-import { DisplaySpring } from "./DisplaySpring";
-import { DisplaySummer } from "./DisplaySummer";
-import { DisplayPlan } from "./DisplayPlan";
+import { DisplayFall } from "./DisplaySemester/DisplayFall";
+import { DisplayWinter } from "./DisplaySemester/DisplayWinter";
+import { DisplaySpring } from "./DisplaySemester/DisplaySpring";
+import { DisplaySummer } from "./DisplaySemester/DisplaySummer";
+import { DisplayPlan } from "./DisplaySemester/DisplayPlan";
 
 //functions and other imports
 import sample from "../data/AllCourseList.json";
@@ -45,7 +45,7 @@ const DEFAULT_COURSE_LIST = defaultCourseList;
 
 //import sample from "../data/AllCourseList.json";
 import { ClearSemester } from "./clearingSemester";
-import { DropAdd } from "./dropAdd";
+import { DropAdd } from "./Buttons/dropAdd";
 // import { courseList } from "./course";
 
 // const COURSE_LIST = courseList; //list of all the courses

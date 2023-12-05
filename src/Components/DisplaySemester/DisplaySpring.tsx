@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
-import { Course } from "../Interfaces/course";
-import { ClearSemester } from "./clearingSemester";
-import { DropAdd } from "./dropAdd";
-import { Semester } from "../Interfaces/semester";
+import { Course } from "../../Interfaces/course";
+import { ClearSemester } from "../clearingSemester";
+import { DropAdd } from "../Buttons/dropAdd";
+import { Semester } from "../../Interfaces/semester";
 import { Button, Form, Modal } from "react-bootstrap";
-import { courseList } from "./course";
-import { SkipSemester } from "./SkipSemester";
+import { courseList } from "../course";
+import { SkipSemester } from "../Buttons/SkipSemester";
 
 export interface valueProps {
     semesters: Semester[];
@@ -78,39 +78,6 @@ export function DisplaySpring({
             )}
 
             <div>
-                {/*
-                <Form.Group controlId="currentCourse">
-                    <Form.Label>Select Course Variety</Form.Label>
-                    <Form.Check
-                        type="radio"
-                        name="displayCourse1"
-                        onChange={updateDisplayCourseCat}
-                        id="disp-course-all"
-                        label="AllCourses"
-                        value="AllCourses"
-                        checked={displayCourseCategory === "AllCourses"}
-                    />
-                    <Form.Check
-                        type="radio"
-                        name="displayCourse2"
-                        onChange={updateDisplayCourseCat}
-                        id="disp-course-free"
-                        label="FreeElective"
-                        value="FreeElective"
-                        checked={displayCourseCategory === "FreeElective"}
-                    />
-                    <Form.Check
-                        type="radio"
-                        name="displayCourse3"
-                        onChange={updateDisplayCourseCat}
-                        id="disp-course-restricted"
-                        label="RestrictiveElective"
-                        value="RestrictiveElective"
-                        checked={
-                            displayCourseCategory === "RestrictiveElective"
-                        }
-                    />
-                    </Form.Group> */}
                 <DropAdd
                     dropClass={dropClass}
                     addClass={addClass}
@@ -120,17 +87,6 @@ export function DisplaySpring({
                     currCourse={currCourse}
                     Course_List={courseList}
                 ></DropAdd>
-                {/*
-                <ClearSemester
-                    key={idx}
-                    clearSemesterCourses={clearSemesterCourses}
-                    targetYear={targetYear}
-                    targetSem={targetSem}
-                    show={clicked}
-                    handleClose={handleClose}
-                    handleShow={handleShow}
-                    CourseLIST={courseList}
-                ></ClearSemester> */}
                 <SkipSemester
                     skipSemester={skipSemester}
                     targetYear={targetYear}

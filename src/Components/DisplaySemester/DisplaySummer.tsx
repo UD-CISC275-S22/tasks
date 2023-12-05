@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
-import { Course } from "../Interfaces/course";
-import { ClearSemester } from "./clearingSemester";
-import { DropAdd } from "./dropAdd";
-import { Semester } from "../Interfaces/semester";
-import { courseList } from "./course";
-import { SkipSemester } from "./SkipSemester";
+import { Course } from "../../Interfaces/course";
+import { ClearSemester } from "../clearingSemester";
+import { DropAdd } from "../Buttons/dropAdd";
+import { Semester } from "../../Interfaces/semester";
+import { courseList } from "../course";
+import { SkipSemester } from "../Buttons/SkipSemester";
 import { Button, Modal } from "react-bootstrap";
 
 export interface valueProps {
@@ -76,17 +76,6 @@ export function DisplaySummer({
                     currCourse={currCourse}
                     Course_List={courseList}
                 ></DropAdd>
-                {/*
-                <ClearSemester
-                    key={idx}
-                    clearSemesterCourses={clearSemesterCourses}
-                    targetYear={targetYear}
-                    targetSem={targetSem}
-                    show={clicked}
-                    handleClose={handleClose}
-                    handleShow={handleShow}
-                    CourseLIST={courseList}
-                ></ClearSemester> */}
                 <SkipSemester
                     skipSemester={skipSemester}
                     targetYear={targetYear}

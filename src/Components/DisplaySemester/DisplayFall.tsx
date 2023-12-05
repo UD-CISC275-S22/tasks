@@ -1,13 +1,12 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { useMemo, useState } from "react";
-import { Course } from "../Interfaces/course";
-import { ClearSemester } from "./clearingSemester";
-import { DropAdd } from "./dropAdd";
-import { Semester } from "../Interfaces/semester";
-import { courseList } from "./course";
-import { SkipSemester } from "./SkipSemester";
-import { Button, Modal } from "react-bootstrap";
-import { isDeleteExpression } from "typescript";
+import React, { useState } from "react";
+import { Course } from "../../Interfaces/course";
+import { ClearSemester } from "../clearingSemester";
+import { DropAdd } from "../Buttons/dropAdd";
+import { Semester } from "../../Interfaces/semester";
+import { courseList } from "../course";
+import { Button, Form, Modal } from "react-bootstrap";
+import { SkipSemester } from "../Buttons/SkipSemester";
 
 export interface valueProps {
     semesters: Semester[];
@@ -21,15 +20,15 @@ export interface valueProps {
     updateCurrCourse(event: React.ChangeEvent<HTMLSelectElement>): void;
     //clearSemesterCourses(idx: number): void;
     skipSemester(targetYear: number, targetSem: string): void;
-    handleShow(): void;
     handleClose(): void;
+    handleShow(): void;
     handleFifthShow(): void;
     handleFifthClose(): void;
     index(targetYear: number, targetSem: string): number;
 }
 
 // function to display ONLY the fall semester
-export function DisplayWinter({
+export function DisplayFall({
     semesters,
     targetSem,
     currCourse,
@@ -50,12 +49,21 @@ export function DisplayWinter({
     //index now takes in two parameters (targetYear - this is NOT the state and it's already passed in from the Semester.tsx file)
     //targetSem is also NOT the state and it's already passed in from the Semester.tsx file. So both variables are already declared in the indivPlanSem function
     const idx = index(targetYear, targetSem);
-    const winterCourses = semesters[idx].courseList;
+    const fallCourses = semesters[idx].courseList;
 
+    const [displayCourseCategory, setDisplayCourseCategory] =
+        useState<string>("AllCourses");
+
+    //update the state of the dsiplay course categoery
+    function updateDisplayCourseCat(
+        event: React.ChangeEvent<HTMLInputElement>
+    ) {
+        setDisplayCourseCategory(event.target.value);
+    }
     return (
-        <div className="Winter">
-            <h1>Winter Year {targetYear}</h1>
-            {winterCourses.map(
+        <div className="Fall">
+            <h1>Fall Year {targetYear}</h1>
+            {fallCourses.map(
                 // eslint-disable-next-line no-extra-parens
                 (course: Course, index: number): JSX.Element => (
                     <div className="Course" key={index}>
@@ -67,7 +75,7 @@ export function DisplayWinter({
                     </div>
                 )
             )}
-            <div>
+            <>
                 <DropAdd
                     dropClass={dropClass}
                     addClass={addClass}
@@ -77,17 +85,6 @@ export function DisplayWinter({
                     currCourse={currCourse}
                     Course_List={courseList}
                 ></DropAdd>
-                {/*
-                <ClearSemester
-                    key={idx}
-                    clearSemesterCourses={clearSemesterCourses}
-                    targetYear={targetYear}
-                    targetSem={targetSem}
-                    show={clicked}
-                    handleClose={handleClose}
-                    handleShow={handleShow}
-                    CourseLIST={courseList}
-                ></ClearSemester> */}
                 <SkipSemester
                     skipSemester={skipSemester}
                     targetYear={targetYear}
@@ -96,7 +93,7 @@ export function DisplayWinter({
                     handleFifthShow={handleFifthShow}
                     handleFifthClose={handleFifthClose}
                 ></SkipSemester>
-            </div>
+            </>
         </div>
     );
 }
