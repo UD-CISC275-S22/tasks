@@ -5,8 +5,8 @@ import "../App.css";
 export function CourseOrigin(currentCourse: Course, cOrigin: string[]) {
     type CourseRecord = Record<string, Record<string, Course>>;
     const ALLCOURSELST: CourseRecord = AllCoursesList;
-    const addingCourseCheck = cOrigin[0].split(" ", 1);
-    const originalCourse = ALLCOURSELST[addingCourseCheck[0]][cOrigin[0]];
+    const courseCheck = cOrigin[0].split(" ", 1);
+    const originalCourse = ALLCOURSELST[courseCheck[0]][cOrigin[0]];
 
     currentCourse.title = originalCourse.title;
     currentCourse.name = originalCourse.name;
