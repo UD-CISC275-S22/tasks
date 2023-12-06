@@ -5,7 +5,7 @@ import { Semester } from "../Interfaces/semester";
 import { Plan } from "../Interfaces/plan";
 import "../App.css"
 
-export function SwitchPlan({
+export function SwitchingPlan({
     show,
     handleClose,
     currentPlan,

@@ -7,5 +7,18 @@ import { Plan } from "../Interfaces/plan";
 
 export function RemovingPlan({
     show,
-    handleClose
-)}
+    handleClose,
+    plan,
+    settingPlan,
+    plans,
+    settingPlans
+}: {
+    show: boolean;
+    handleClose: () => void;
+    plan: Plan;
+    settingPlan: (t: Plan) => void;
+    plans: Plan[];
+    settingPlans: (t: Plan[]) => void;
+}): JSX.Element {
+    const hello = 1;
+}
