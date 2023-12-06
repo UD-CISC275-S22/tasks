@@ -9,6 +9,7 @@ export function AddDeletePlan({
     show,
     allplans,
     setPlans,
+    currentPlan,
     setCurrentPlan,
     setSemesters
 }: {
@@ -16,6 +17,7 @@ export function AddDeletePlan({
     show: boolean;
     allplans: Plan[];
     setPlans: (plans: Plan[]) => void;
+    currentPlan: string;
     setCurrentPlan: (planName: string) => void;
     setSemesters: (viewSemesteres: semester[]) => void;
 }): JSX.Element {
@@ -35,7 +37,6 @@ export function AddDeletePlan({
     function createClosingModal() {
         if (planName !== "") {
             setPlans([...allplans, { name: planName, semesters: [] }]);
-            setCurrentPlan(planName);
         }
         handleClose();
     }
@@ -46,8 +47,14 @@ export function AddDeletePlan({
                 (plan) => plan.name === selectPlan
             );
             allplans.splice(findIndexplan, 1);
+            // Included this if statement because the plan name
+            // displayed on the table view should only be erased if that
+            // specific plan is currenlty being displayed and the user wants remove it
+            if (selectPlan === currentPlan) {
+                setCurrentPlan("");
+                setSemesters([]);
+            }
             setPlans(allplans);
-            setSemesters([]);
         }
         handleClose();
     }

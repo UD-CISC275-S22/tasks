@@ -138,6 +138,8 @@ function App(): JSX.Element {
         }
     }
 
+    console.log(currentPlan);
+
     useEffect(() => updatingPlans(), [semesters]);
 
     return (
@@ -178,6 +180,7 @@ function App(): JSX.Element {
                                     show={modalView}
                                     semesters={semesters}
                                     settingSemester={setSemesters}
+                                    currentPlan={currentPlan}
                                 />
                             )}
                             {addView && (
@@ -186,6 +189,7 @@ function App(): JSX.Element {
                                     show={addView}
                                     semesters={semesters}
                                     onAddClass={onAddClass}
+                                    currentPlan={currentPlan}
                                 />
                             )}
                             {seeAudit && (
@@ -203,7 +207,6 @@ function App(): JSX.Element {
                                     allplans={plans}
                                     changeViewSemesters={setSemesters}
                                     setCurrentPlan={setCurrentPlan}
-                                    currentPlan={currentPlan}
                                 />
                             )}
                             {downloadPlan && (
@@ -219,6 +222,7 @@ function App(): JSX.Element {
                                     show={addPlanView}
                                     allplans={plans}
                                     setPlans={setPlans}
+                                    currentPlan={currentPlan}
                                     setCurrentPlan={setCurrentPlan}
                                     setSemesters={setSemesters}
                                 />

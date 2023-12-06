@@ -11,12 +11,14 @@ export function AddSemesterModal({
     handleClose,
     show,
     semesters,
-    settingSemester
+    settingSemester,
+    currentPlan
 }: {
     handleClose: () => void;
     show: boolean;
     semesters: semester[];
     settingSemester: (Sems: semester[]) => void;
+    currentPlan: string;
 }): JSX.Element {
     const [searchAttribute, setSearchAttribute] = useState("");
     const [season, setSeason] = useState("");
@@ -103,61 +105,69 @@ export function AddSemesterModal({
                     <Modal.Title>Semester</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <Form.Group>
-                        <Form.Label>Semester Name:</Form.Label>
-                        <Form.Group controlId="SemesterName">
-                            <Form.Control
-                                type="text"
-                                placeholder="Provide a name for the semester"
-                                onChange={inputChange1}
-                                data-testid="input1"
-                            />
+                    {currentPlan === "" ? (
+                        <div>
+                            <Modal.Title>
+                                Please select a degree plan to view
+                            </Modal.Title>
+                        </div>
+                    ) : (
+                        <Form.Group>
+                            <Form.Label>Semester Name:</Form.Label>
+                            <Form.Group controlId="SemesterName">
+                                <Form.Control
+                                    type="text"
+                                    placeholder="Provide a name for the semester"
+                                    onChange={inputChange1}
+                                    data-testid="input1"
+                                />
+                            </Form.Group>
+                            <hr></hr>
+                            <Form.Label>Course:</Form.Label>
+                            <Form.Group controlId="formFilterSearch">
+                                <Form.Control
+                                    type="text"
+                                    value={searchAttribute.replace(" ", "")}
+                                    onChange={inputChange}
+                                    placeholder="Search by Course Code"
+                                    onClick={flipVisibility}
+                                    data-testid="input2"
+                                />
+                            </Form.Group>
+                            {visible && (
+                                <div
+                                    style={{
+                                        backgroundColor: "gold",
+                                        height: "auto",
+                                        overflowY: "scroll",
+                                        maxHeight: "125px"
+                                    }}
+                                >
+                                    {filteredCourses.map((course) => {
+                                        return (
+                                            <div
+                                                className="searchResult"
+                                                onClick={() =>
+                                                    handleClick(course.code)
+                                                }
+                                                style={{
+                                                    cursor: "pointer",
+                                                    color: "white",
+                                                    textAlign: "center",
+                                                    borderBottom: "solid",
+                                                    borderBottomColor: "white",
+                                                    fontWeight: "bold"
+                                                }}
+                                                key={course.code}
+                                            >
+                                                {course.code}
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                            )}
                         </Form.Group>
-                        <hr></hr>
-                        <Form.Label>Course:</Form.Label>
-                        <Form.Group controlId="formFilterSearch">
-                            <Form.Control
-                                type="text"
-                                value={searchAttribute.replace(" ", "")}
-                                onChange={inputChange}
-                                placeholder="Search by Course Code"
-                                onClick={flipVisibility}
-                                data-testid="input2"
-                            />
-                        </Form.Group>
-                        {visible && (
-                            <div
-                                style={{
-                                    backgroundColor: "gold",
-                                    height: "auto",
-                                    overflowY: "scroll",
-                                    maxHeight: "125px"
-                                }}
-                            >
-                                {filteredCourses.map((course) => {
-                                    return (
-                                        <div
-                                            className="searchResult"
-                                            onClick={() =>
-                                                handleClick(course.code)
-                                            }
-                                            style={{
-                                                cursor: "pointer",
-                                                color: "white",
-                                                textAlign: "center",
-                                                borderBottom: "solid",
-                                                borderBottomColor: "white",
-                                                fontWeight: "bold"
-                                            }}
-                                            key={course.code}
-                                        >
-                                            {course.code}
-                                        </div>
-                                    );
-                                })}
-                            </div>
-                        )}
-                    </Form.Group>
+                    )}
                 </Modal.Body>
                 <Modal.Footer>
                     <Button
@@ -170,7 +180,11 @@ export function AddSemesterModal({
                     <Button
                         data-testid="Done"
                         onClick={() => {
-                            closingModal();
+                            if (currentPlan === "") {
+                                handleClose();
+                            } else {
+                                closingModal();
+                            }
                         }}
                     >
                         Done
