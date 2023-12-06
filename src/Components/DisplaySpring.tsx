@@ -69,39 +69,6 @@ export function DisplaySpring({
             )}
 
             <div>
-                {/*
-                <Form.Group controlId="currentCourse">
-                    {/* <Form.Label>Select Course Variety</Form.Label>
-                    <Form.Check
-                        type="radio"
-                        name="displayCourse1"
-                        onChange={updateDisplayCourseCat}
-                        id="disp-course-all"
-                        label="AllCourses"
-                        value="AllCourses"
-                        checked={displayCourseCategory === "AllCourses"}
-                    />
-                    <Form.Check
-                        type="radio"
-                        name="displayCourse2"
-                        onChange={updateDisplayCourseCat}
-                        id="disp-course-free"
-                        label="FreeElective"
-                        value="FreeElective"
-                        checked={displayCourseCategory === "FreeElective"}
-                    />
-                    <Form.Check
-                        type="radio"
-                        name="displayCourse3"
-                        onChange={updateDisplayCourseCat}
-                        id="disp-course-restricted"
-                        label="RestrictiveElective"
-                        value="RestrictiveElective"
-                        checked={
-                            displayCourseCategory === "RestrictiveElective"
-                        }
-                    />
-                    </Form.Group> */}
                 <DropAdd
                     dropClass={dropClass}
                     addClass={addClass}

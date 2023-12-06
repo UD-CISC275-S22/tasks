@@ -55,25 +55,20 @@ export function findCourse(courseList: Course[], id: number): Course | null {
 export const updateCourseList = (
     courseList: Course[],
     editedCourse: Course
-): Course[] => {
-    // Find index of the course to be updated
+): void => {
+    //find index of the course to be updated
     const index = courseList.findIndex(
         (course) => course.id === editedCourse.id
     );
 
-    // If course is found, create a new array with the updated course
+    //if course is found, update in courseList
     if (index !== -1) {
-        return [
-            ...courseList.slice(0, index),
-            {
-                ...editedCourse,
-                department: editedCourse.department as Department
-            },
-            ...courseList.slice(index + 1)
-        ];
+        courseList[index] = {
+            ...editedCourse,
+            department: editedCourse.department as Department
+        };
     } else {
         console.error("Course not found in courseList");
-        return courseList; // Return the original array if course is not found
     }
 };
 

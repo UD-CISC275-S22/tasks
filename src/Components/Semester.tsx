@@ -46,7 +46,6 @@ const DEFAULT_COURSE_LIST = defaultCourseList;
 //import sample from "../data/AllCourseList.json";
 import { ClearSemester } from "./clearingSemester";
 import { DropAdd } from "./dropAdd";
-// import { courseList } from "./course";
 
 const AI_Plan = AI(); //the actual AI plan itself
 const CYBER_Plan = Cyber();
@@ -336,14 +335,35 @@ export function ViewSemester(): JSX.Element {
         setShowEditModal(false);
     };
 
-    const handleSaveChanges = (editedCourse: Course) => {
-        //update courseList with edited values
-        updateCourseList(COURSES_LIST, editedCourse);
+    //function to handle editCourse Modal - Malika
+    const handleSaveChanges = (
+        editedCourse: Course,
+        targetYear: number,
+        targetSem: string
+    ) => {
+        const idx = index(targetYear, targetSem);
+        const newSemester = semesters;
+
+        //edit the original course list with updated values
+        updateCourseList(semesters[idx].courseList, editedCourse);
+        updateCourseList(courseList, editedCourse);
+
+        //map through courseList of the current semester and if the id's are equal, make course = editedCourse
+        const newCourseList = newSemester[idx].courseList.map(
+            (course: Course): Course =>
+                course.id === editedCourse.id ? editedCourse : course
+        );
+
+        //make the semester's courseList equal to the newCourseList with the editedCourse
+        newSemester[idx].courseList = [...newCourseList];
+        setSemesters({ ...newSemester });
 
         setEditedCourse(null);
         setCurrCourse("");
+
         // Close the modal
         handleEditClose();
+        // }
     };
 
     const handleResetToDefault = (editedCourse: Course) => {

@@ -22,7 +22,11 @@ export interface valueProps {
     handleShow(): void;
     index(targetYear: number, targetSem: string): number;
     editedCourse: Course | null;
-    handleSaveChanges(editedCourse: Course): void;
+    handleSaveChanges(
+        editedCourse: Course,
+        targetYear: number,
+        targetSem: string
+    ): void;
     handleResetToDefault(editedCourse: Course): void;
     handleEditClose(): void;
     handleEditShow(course: Course | undefined): void;
@@ -52,6 +56,7 @@ export function DisplayFall({
     //targetSem is also NOT the state and it's already passed in from the Semester.tsx file. So both variables are already declared in the indivPlanSem function
     const idx = index(targetYear, targetSem);
     const fallCourses = semesters[idx].courseList;
+    console.log("fallCourses:", fallCourses);
 
     const [displayCourseCategory, setDisplayCourseCategory] =
         useState<string>("AllCourses");
@@ -77,24 +82,7 @@ export function DisplayFall({
                     </div>
                 )
             )}
-
             <>
-                {/*
-                <Form.Group controlId="currentCourse">
-                    <DropAdd
-                        dropClass={dropClass}
-                        addClass={addClass}
-                        updateCurrCourse={updateCurrCourse}
-                        currCourse={currCourse}
-                        Course_List={fallCourses}
-                        handleEditShow={handleEditShow}
-                    ></DropAdd>
-                    <ClearSemester
-                        clearSemesterCourses={clearSemesterCourses}
-                        show={clicked}
-                        handleClose={handleClose}
-                        handleShow={handleShow}
-                ></ClearSemester>*/}
                 <DropAdd
                     dropClass={dropClass}
                     addClass={addClass}
@@ -103,6 +91,7 @@ export function DisplayFall({
                     updateCurrCourse={updateCurrCourse}
                     currCourse={currCourse}
                     Course_List={courseList}
+                    handleEditShow={handleEditShow}
                 ></DropAdd>
                 <ClearSemester
                     clearSemesterCourses={clearSemesterCourses}
@@ -117,6 +106,8 @@ export function DisplayFall({
                     <CourseEdit
                         editedCourse={editedCourse}
                         onSaveChanges={handleSaveChanges}
+                        targetYear={targetYear}
+                        targetSem={targetSem}
                         onResetToDefault={handleResetToDefault}
                         onClose={handleEditClose}
                     />
