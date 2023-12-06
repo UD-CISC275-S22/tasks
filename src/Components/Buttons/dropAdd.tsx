@@ -7,18 +7,18 @@ export const DropAdd = ({
     dropClass,
     addClass,
     updateCurrCourse,
+    handleEditShow,
     currCourse,
     Course_List,
-    handleEditShow,
     targetYear,
     targetSem
 }: {
     dropClass: (targetYear: number, targetSem: string) => void;
     addClass: (targetYear: number, targetSem: string) => void;
     updateCurrCourse: (event: React.ChangeEvent<HTMLSelectElement>) => void;
-    currCourse: string;
-    Course_List: Course[];
     handleEditShow: (course: Course | undefined) => void;
+    currCourse: number;
+    Course_List: Course[];
     targetYear: number;
     targetSem: string;
 }) => {
@@ -32,10 +32,7 @@ export const DropAdd = ({
                         //Needed to disable prettier here because there was an "extra parenths" error that couldn't be resolved by any means. Will need to ask the professor but we wanted to showcase the funcitonality of the dropdown for the MVP
                         // eslint-disable-next-line no-extra-parens
                         Course_List.map((courseName: Course) => (
-                            <option
-                                key={courseName.title}
-                                value={courseName.title}
-                            >
+                            <option key={courseName.id} value={courseName.id}>
                                 {courseName.title}
                             </option>
                         ))
@@ -51,9 +48,7 @@ export const DropAdd = ({
             <Button
                 onClick={() =>
                     handleEditShow(
-                        Course_List.find(
-                            (course) => course.title === currCourse
-                        )
+                        Course_List.find((course) => course.id === currCourse)
                     )
                 }
             >
