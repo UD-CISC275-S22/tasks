@@ -9,6 +9,7 @@ export const DropAdd = ({
     updateCurrCourse,
     currCourse,
     Course_List,
+    handleEditShow,
     targetYear,
     targetSem
 }: {
@@ -17,6 +18,7 @@ export const DropAdd = ({
     updateCurrCourse: (event: React.ChangeEvent<HTMLSelectElement>) => void;
     currCourse: string;
     Course_List: Course[];
+    handleEditShow: (course: Course | undefined) => void;
     targetYear: number;
     targetSem: string;
 }) => {
@@ -45,6 +47,17 @@ export const DropAdd = ({
             </Button>
             <Button onClick={() => addClass(targetYear, targetSem)}>
                 Add Class
+            </Button>
+            <Button
+                onClick={() =>
+                    handleEditShow(
+                        Course_List.find(
+                            (course) => course.title === currCourse
+                        )
+                    )
+                }
+            >
+                Edit Course
             </Button>
         </div>
     );
