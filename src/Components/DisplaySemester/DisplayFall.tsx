@@ -119,7 +119,7 @@ export function DisplayFall({
                             targetSem={targetSem}
                             onResetToDefault={handleResetToDefault}
                             onClose={handleEditClose}
-                        ></CourseEdit>
+                        />
                     )
                 }
             </>

@@ -350,22 +350,36 @@ export function ViewSemester(): JSX.Element {
         setShowEditModal(false);
     };
 
+    //function to handle editCourse Modal - Malika
     const handleSaveChanges = (
         editedCourse: Course,
         targetYear: number,
         targetSem: string
     ) => {
-        //update courseList with edited values
         const idx = index(targetYear, targetSem);
         const newSemester = [...semesters];
-        //updateCourseList(semesters[idx].courseList, editedCourse);
-        const newCourseList = updateCourseList(courseList, editedCourse);
+
+        //edit the original course list with updated values
+        console.log("semesters[idx].courseList: ", semesters[idx].courseList);
+        updateCourseList(semesters[idx].courseList, editedCourse);
+        updateCourseList(courseList, editedCourse);
+
+        //map through courseList of the current semester and if the id's are equal, make course = editedCourse
+        const newCourseList = newSemester[idx].courseList.map(
+            (course: Course): Course =>
+                course.id === editedCourse.id ? editedCourse : course
+        );
+
+        //make the semester's courseList equal to the newCourseList with the editedCourse
         newSemester[idx].courseList = [...newCourseList];
         setSemesters(newSemester);
+
         setEditedCourse(null);
         setCurrCourse("");
+
         // Close the modal
         handleEditClose();
+        // }
     };
 
     const handleResetToDefault = (editedCourse: Course) => {
