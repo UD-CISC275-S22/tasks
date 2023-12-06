@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import { Planner } from "./Planner";
 import { CompSciPlan } from "./degrees/CompSci";
+import image from "./UDMonogramC.jpg";
 
 function App(): JSX.Element {
     return (
@@ -10,7 +11,14 @@ function App(): JSX.Element {
                 <header>
                     <div id="main">
                         <div className="center">
-                            <h1>University of Delaware Scheduler</h1>
+                            <img
+                                className="logo"
+                                src={image}
+                                width={150}
+                                height={150}
+                                alt="UD"
+                            ></img>
+                            <h1> University of Delaware Scheduler</h1>
                             <div className="div2">
                                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
                             </div>
@@ -20,7 +28,18 @@ function App(): JSX.Element {
                                 during the spring and fall semester to ensure
                                 your on the right track to graduate at your
                                 expected year! Please Check the bottom see your
-                                desired major.
+                                desired major. Insert Plan when clicked you will
+                                be able to add a create a new plan, When
+                                clicking on remove plan it will remove plan that
+                                you have highlighted. When Clicking on Rename
+                                Plan you will be able to click on it making it
+                                so that you will be able to rename the plan that
+                                is highlighted. When clicking on Insert New
+                                Semester it will create either Fall or Spring
+                                semester. Clear all Semester will remove all
+                                semesters on the current plan your working on.
+                                Remove semester will remove the semester you
+                                highlighted.
                             </span>
                         </div>
                     </div>
