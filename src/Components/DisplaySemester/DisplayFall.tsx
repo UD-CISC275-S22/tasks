@@ -66,6 +66,7 @@ export function DisplayFall({
     //targetSem is also NOT the state and it's already passed in from the Semester.tsx file. So both variables are already declared in the indivPlanSem function
     const idx = index(targetYear, targetSem);
     const fallCourses = semesters[idx].courseList;
+    console.log("fall courses: ", fallCourses);
 
     const [displayCourseCategory, setDisplayCourseCategory] =
         useState<string>("AllCourses");
@@ -96,9 +97,9 @@ export function DisplayFall({
                     dropClass={dropClass}
                     addClass={addClass}
                     targetYear={targetYear}
+                    handleEditShow={handleEditShow}
                     targetSem={targetSem}
                     updateCurrCourse={updateCurrCourse}
-                    handleEditShow={handleEditShow}
                     currCourse={currCourse}
                     Course_List={courseList}
                 ></DropAdd>

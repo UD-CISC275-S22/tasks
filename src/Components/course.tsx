@@ -60,6 +60,7 @@ export const updateCourseList = (
     const index = courseList.findIndex(
         (course) => course.id === editedCourse.id
     );
+    console.log("index in updateCourseList in course.tsx: ", index);
 
     //if course is found, update in courseList
     if (index !== -1) {
