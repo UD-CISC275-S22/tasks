@@ -39,8 +39,8 @@ import { SavePlanInto } from "./Buttons/SavePlanInto";
 import { LoadPlan } from "./Buttons/LoadPlan";
 import { PickAPlan } from "./Buttons/PickAPlan";
 import { requiredClasses } from "./Buttons/requiredClasses";
-
 import CourseEdit from "./CourseEdit";
+import { CoreBS } from "../Interfaces/requirements";
 
 //all the default concentration plans
 let AI_Plan = AI();
