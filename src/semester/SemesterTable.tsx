@@ -178,12 +178,8 @@ export function SemesterTable({
 
     //<Button onClick={download}>download</Button>;
 
-    console.log(semesters);
     return (
-        <div
-            className="semesterTable"
-            style={{ overflowY: "scroll", maxHeight: "700px" }}
-        >
+        <div className="semesterTable">
             <h2>{currentPlan === "" ? "" : `Plan Name: ${currentPlan}`}</h2>
             {/*<Button onClick={download}>download</Button>*/}
 
