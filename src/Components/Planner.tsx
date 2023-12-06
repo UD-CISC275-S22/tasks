@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Class } from "../interfaces/class";
 import QuickAdd from "./QuickAdd";
 import SlowAdd from "./SlowAdd";
+import EditCourse from "./EditCourses";
 //import DeleteCourses from "./DeleteCourses";
 
 // ------------add this
@@ -11,7 +12,6 @@ import { Views } from "../interfaces/viewProps";
 //------------------------------------------------
 
 import { Button, Row, Col, Form /*Button*/ } from "react-bootstrap";
-// import { degreePlan } from "../interfaces/degreePlan";
 import { semester } from "../interfaces/semster";
 
 //-------------------------------------------------------------------------edit
@@ -31,13 +31,31 @@ export function Planner({
     //export function SingleMultipleSemester(): JSX.Element { ----------------adding to DegreePlan
     const [semester1, setSemester1] = useState<string>("");
     const [semArr, setSemArr] = useState<semester[]>([]);
-    //-----------------------comment out
-    //const [semArr, setSemArr] = useState<semester[]>(
-    //CurrentdegreePlan.semesters
-    //);
+    const [editingCourse, setEditingCourse] = useState<Class | null>(null);
+    const [courses, setCourses] = useState<Class[]>([]); // State for courses
+
+    const handleEditClick = (course: Class) => {
+        setEditingCourse(course);
+    };
+
+    const handleEditFormSubmit = (updatedCourse: Class) => {
+        // Assuming you have an array of courses in state
+        const updatedCourses = courses.map((course: Class) =>
+            course.courseCode === updatedCourse.courseCode
+                ? updatedCourse
+                : course
+        );
+
+        // Update your state with the new array of courses
+        setCourses(updatedCourses);
+
+        // Clear the editing state
+        setEditingCourse(null);
+    };
 
     const [semArrClicked, setSemArrClicked] = useState<semester[]>(semArr);
     const [clicked, setClicked] = useState<boolean>(false);
+
     //add clear Semester here-----------------------------------------------------EDIT
     function clear() {
         setSemArr([]); //clears semester array, one issue: when wanting to go back, we need to save all the changes made,
@@ -56,6 +74,7 @@ export function Planner({
                     : degreePlan
         );
         setCurrentView(Views.degreePlanView);
+        //console.log(DegreePlanList);
         setCurrentDegreePlan(newDegreePlan);
         setDegreePlanList(newDegreePlanList);
         //abstract semArray to App.tsx, pull out and add to App.tsx
@@ -267,6 +286,27 @@ export function Planner({
     }
     return (
         <div>
+            <div>
+                {/* Display your courses */}
+                {courses.map((course) => (
+                    <div key={course.courseCode}>
+                        <p>{course.courseTitle}</p>
+                        <p>{course.courseCode}</p>
+                        <p>{course.credits}</p>
+                        <Button onClick={() => handleEditClick(course)}>
+                            Edit
+                        </Button>
+                    </div>
+                ))}
+
+                {/* Render the EditCourse component when editing */}
+                {editingCourse && (
+                    <EditCourse
+                        course={editingCourse}
+                        onEditFormSubmit={handleEditFormSubmit}
+                    />
+                )}
+            </div>
             {addCourse()}
             {/* add Clear Semesters and goBack button */}
             <Form.Group controlId="formCreateSemester">
