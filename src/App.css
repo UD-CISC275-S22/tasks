@@ -73,7 +73,7 @@
     border-radius: 8px;
     padding: 5px;
 }
-body {
+/* body {
     font-family: Arial, sans-serif;
     background-size: cover;
     height: 100vh;
@@ -163,7 +163,7 @@ h1 {
     .popup {
         width: 70%;
     }
-}
+} */
 .Planner {
     position: relative;
 }
@@ -173,4 +173,7 @@ h1 {
 
 .prerequisite:selected {
     color: green;
+}
+.Logo {
+    text-align: left;
 }
