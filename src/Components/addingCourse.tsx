@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Button, Modal, Form, Col, Row } from "react-bootstrap";
+import { addingCoursetoCurrSem } from "./addingCoursetoCurrSem";
+
 import { Course } from "../Interfaces/course";
 import { Semester } from "../Interfaces/semester";
 import { Plan } from "../Interfaces/plan";
 import AllCourseList from "../data/AllCourseList.json";
-import { CourseOrigin } from "./courseOrigin";
 import "../App.css";
 
 export function AddingCourse({
@@ -20,34 +21,97 @@ export function AddingCourse({
     plan: Plan;
     settingPlan: (t: Plan) => void;
 }) {
-    const [courseIDs, settingCourseID] = useState<string>("");
+    const [courseTitles, settingCourseTitle] = useState<string>("");
     type CourseRecord = Record<string, Record<string, Course>>;
     const ALLCOURSELST: CourseRecord = AllCourseList;
 
     function saveEdits() {
-        const courseCheck = courseIDs.split(" ", 1);
-        if (ALLCOURSELST[courseCheck[0].toUpperCase()]) {
-            if (
-                ALLCOURSELST[courseCheck[0].toUpperCase()][
-                    courseIDs.toUpperCase()
-                ]
-            ) {
-                const addedCourseCheck =
-                    ALLCOURSELST[courseCheck[0].toUpperCase()][
-                        courseIDs.toUpperCase()
-                    ];
-                const courseIndexing = currentSemester.courseList.findIndex(
-                    (c: Course): boolean => c.title === addedCourseCheck.title
-                );
-                const newSemester = { ...currentSemester };
-                if (courseIndexing > -1) {
-                    newSemester.courseList.splice(courseIndexing, 1);
+        if (courseTitles.search(" ") === -1) {
+            const regularExpression = /\d+/g;
+            const expressionsMatch = courseTitles.match(regularExpression);
+
+            if (expressionsMatch) {
+                const firstTitleIndex = expressionsMatch[0].charAt(0);
+                const firstTitleIndexing =
+                    courseTitles.indexOf(firstTitleIndex);
+                const titleID = courseTitles.substring(0, 0 + firstTitleIndex);
+                const titleCode = courseTitles.substring(firstTitleIndexing);
+
+                if (ALLCOURSELST[titleID]) {
+                    if (ALLCOURSELST[titleID][titleID + " " + titleCode]) {
+                        const addedCourseCheck =
+                            ALLCOURSELST[titleID + " " + titleCode];
+                        const courseIndexing =
+                            currentSemester.courseList.findIndex(
+                                (c: Course): boolean =>
+                                    c.title === addedCourseCheck.title
+                            );
+                        const newSemester = { ...currentSemester };
+                        if (courseIndexing > -1) {
+                            newSemester.courseList.splice(courseIndexing, 1);
+                        }
+                        addingCoursetoCurrSem(
+                            addedCourseCheck,
+                            currentSemester,
+                            plan,
+                            settingPlan
+                        );
+                        settingPlan({
+                            ...plan,
+                            semesters: plan.semesters.map(
+                                (semester: Semester): Semester =>
+                                    semester.id === newSemester.id
+                                        ? newSemester
+                                        : semester
+                            )
+                        });
+                        plan.credits += parseInt(addedCourseCheck.credits);
+                    }
                 }
-                //plan.credits += parseInt(addedCourseCheck.credits);
+                settingCourseTitle("");
+                handleClose();
             }
+        } else {
+            const courseCheck = courseTitles.split(" ", 1);
+            if (ALLCOURSELST[courseCheck[0].toUpperCase()]) {
+                if (
+                    ALLCOURSELST[courseCheck[0].toUpperCase()][
+                        courseTitles.toUpperCase()
+                    ]
+                ) {
+                    const addedCourseCheck =
+                        ALLCOURSELST[courseCheck[0]][
+                            courseTitles.toUpperCase()
+                        ];
+                    const courseIndexing = currentSemester.courseList.findIndex(
+                        (c: Course): boolean =>
+                            c.title === addedCourseCheck.title
+                    );
+                    const newSemester = { ...currentSemester };
+                    if (courseIndexing > -1) {
+                        newSemester.courseList.splice(courseIndexing, 1);
+                    }
+                    addingCoursetoCurrSem(
+                        addedCourseCheck,
+                        currentSemester,
+                        plan,
+                        settingPlan
+                    );
+                    settingPlan({
+                        ...plan,
+                        semesters: plan.semesters.map(
+                            (semester: Semester): Semester =>
+                                semester.id === newSemester.id
+                                    ? newSemester
+                                    : semester
+                        )
+                    });
+                    plan.credits += parseInt(addedCourseCheck.credits);
+                }
+            }
+            settingCourseTitle("");
+            handleClose();
         }
-        settingCourseID("");
-        handleClose();
     }
     return (
         <Modal show={show} close={handleClose} animation={false}>
@@ -55,25 +119,33 @@ export function AddingCourse({
                 <Modal.Title> Add Course </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <Form.Group controlId="courseID" as={Row}>
+                <Form.Group controlId="courseTitle" as={Row}>
                     <Form.Label column sm={3}>
-                        Course ID: (Ex. CISC108)
+                        Title: (Ex. CISC 108)
                     </Form.Label>
                     <Col>
                         <Form.Control
-                            value={courseIDs}
+                            value={courseTitles}
                             onChange={(
                                 event: React.ChangeEvent<HTMLInputElement>
-                            ) => settingCourseID(event.target.value)}
+                            ) => settingCourseTitle(event.target.value)}
                         />
                     </Col>
                 </Form.Group>
             </Modal.Body>
             <Modal.Footer>
-                <Button onClick={handleClose} data-testid="closeModAC">
+                <Button
+                    onClick={handleClose}
+                    variant="primary"
+                    data-testid="closeModAC"
+                >
                     Close
                 </Button>
-                <Button onClick={saveEdits} data-testid="saveModAC">
+                <Button
+                    onClick={saveEdits}
+                    variant="success"
+                    data-testid="saveModAC"
+                >
                     Save
                 </Button>
             </Modal.Footer>
