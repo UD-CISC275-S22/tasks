@@ -38,6 +38,7 @@ import { ClearAllSemesters } from "./Buttons/ClearAllSemesters";
 import { SavePlanInto } from "./Buttons/SavePlanInto";
 import { LoadPlan } from "./Buttons/LoadPlan";
 import { PickAPlan } from "./Buttons/PickAPlan";
+import CourseEdit from "./CourseEdit";
 
 //all the default concentration plans
 let AI_Plan = AI();
@@ -257,6 +258,11 @@ export function ViewSemester(): JSX.Element {
                     handleFifthClose={handleFifthClose}
                     handleShow={handleShow}
                     index={index}
+                    editedCourse={editedCourse}
+                    handleSaveChanges={handleSaveChanges}
+                    handleResetToDefault={handleResetToDefault}
+                    handleEditClose={handleEditClose}
+                    handleEditShow={handleEditShow}
                 ></DisplayFall>
             );
         } else if (sem === "Spring") {
@@ -344,10 +350,18 @@ export function ViewSemester(): JSX.Element {
         setShowEditModal(false);
     };
 
-    const handleSaveChanges = (editedCourse: Course) => {
+    const handleSaveChanges = (
+        editedCourse: Course,
+        targetYear: number,
+        targetSem: string
+    ) => {
         //update courseList with edited values
-        updateCourseList(COURSES_LIST, editedCourse);
-
+        const idx = index(targetYear, targetSem);
+        const newSemester = [...semesters];
+        //updateCourseList(semesters[idx].courseList, editedCourse);
+        const newCourseList = updateCourseList(courseList, editedCourse);
+        newSemester[idx].courseList = [...newCourseList];
+        setSemesters(newSemester);
         setEditedCourse(null);
         setCurrCourse("");
         // Close the modal

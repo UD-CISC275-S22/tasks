@@ -55,7 +55,7 @@ export function findCourse(courseList: Course[], id: number): Course | null {
 export const updateCourseList = (
     courseList: Course[],
     editedCourse: Course
-): void => {
+): Course[] => {
     //find index of the course to be updated
     const index = courseList.findIndex(
         (course) => course.id === editedCourse.id
@@ -70,6 +70,8 @@ export const updateCourseList = (
     } else {
         console.error("Course not found in courseList");
     }
+
+    return courseList;
 };
 
 export function displayCourse(course: Course): JSX.Element {

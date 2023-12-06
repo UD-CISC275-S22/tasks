@@ -7,6 +7,7 @@ import { Semester } from "../../Interfaces/semester";
 import { courseList } from "../course";
 import { Button, Form, Modal } from "react-bootstrap";
 import { SkipSemester } from "../Buttons/SkipSemester";
+import CourseEdit from "../CourseEdit";
 
 export interface valueProps {
     semesters: Semester[];
@@ -25,6 +26,15 @@ export interface valueProps {
     handleFifthShow(): void;
     handleFifthClose(): void;
     index(targetYear: number, targetSem: string): number;
+    editedCourse: Course | null;
+    handleSaveChanges(
+        editedCourse: Course,
+        targetYear: number,
+        targetSem: string
+    ): void;
+    handleResetToDefault(editedCourse: Course): void;
+    handleEditClose(): void;
+    handleEditShow(course: Course | undefined): void;
 }
 
 // function to display ONLY the fall semester
@@ -44,7 +54,12 @@ export function DisplayFall({
     handleShow,
     handleFifthClose,
     handleFifthShow,
-    index
+    index,
+    editedCourse,
+    handleSaveChanges,
+    handleResetToDefault,
+    handleEditClose,
+    handleEditShow
 }: valueProps): JSX.Element {
     //index now takes in two parameters (targetYear - this is NOT the state and it's already passed in from the Semester.tsx file)
     //targetSem is also NOT the state and it's already passed in from the Semester.tsx file. So both variables are already declared in the indivPlanSem function
@@ -93,6 +108,20 @@ export function DisplayFall({
                     handleFifthShow={handleFifthShow}
                     handleFifthClose={handleFifthClose}
                 ></SkipSemester>
+                {/* CourseEdit modal */}
+                {
+                    //eslint-disable-next-line no-extra-parens
+                    editedCourse && (
+                        <CourseEdit
+                            editedCourse={editedCourse}
+                            onSaveChanges={handleSaveChanges}
+                            targetYear={targetYear}
+                            targetSem={targetSem}
+                            onResetToDefault={handleResetToDefault}
+                            onClose={handleEditClose}
+                        ></CourseEdit>
+                    )
+                }
             </>
         </div>
     );
