@@ -77,27 +77,27 @@ const Planner: React.FC<Planner> = ({ plan }) => {
                         allSemestersVisible ? "arrow-icon rotate" : "arrow-icon"
                     }
                 >
-                    &#x25B6;
+                    &#10148;
                 </span>{" "}
                 {plan.title}
             </h1>
-            {allSemestersVisible && (
-                <div className="button-row">
-                    <button
-                        className="insert-newSemster"
-                        onClick={handleInsertSemester}
-                    >
-                        Insert New Semester
-                    </button>
-                    <button
-                        className="clear-allSemesters"
-                        onClick={handleClearAllSemesters}
-                    >
-                        Clear All Semesters
-                    </button>
-                </div>
-            )}
             <div className="search-bar">
+                {allSemestersVisible && (
+                    <div className="button-row">
+                        <button
+                            className="insert-newSemster"
+                            onClick={handleInsertSemester}
+                        >
+                            Insert New Semester
+                        </button>
+                        <button
+                            className="clear-allSemesters"
+                            onClick={handleClearAllSemesters}
+                        >
+                            Clear All Semesters
+                        </button>
+                    </div>
+                )}
                 <select
                     value={selectedSemester || ""}
                     onChange={e => setSelectedSemester(e.target.value || null)}
@@ -153,7 +153,7 @@ const Planner: React.FC<Planner> = ({ plan }) => {
                     }}
                 >
                     {semester.skip ? (
-                        <h2>{semester.id}(Skipped)</h2>
+                        <h2>{semester.id} (Skipped)</h2>
                     ) : (
                         <h2
                             onClick={() =>
@@ -167,8 +167,8 @@ const Planner: React.FC<Planner> = ({ plan }) => {
                                         : "arrow-icon"
                                 }
                             >
-                                &#x25B6;
-                            </span>
+                                &#10148;
+                            </span>{" "}
                             {semester.id}
                         </h2>
                     )}
@@ -339,7 +339,7 @@ const Planner: React.FC<Planner> = ({ plan }) => {
                                                 semesterIndex &&
                                                 moveCourseData.courseIndex ===
                                                     courseIndex && (
-                                                    <div>
+                                                    <div className="move-Dropdown">
                                                         <select
                                                             value={
                                                                 moveCourseData.toSemesterId
