@@ -54,7 +54,7 @@ import { Semester } from "../Interfaces/semester";
 import { Plan } from "../Interfaces/plan";
 import { ClearCourse } from "./removingCourse";
 import { CourseOrigin } from "./courseOrigin";
-import { SwitchSemester } from "./switchingSemesters";
+import { SwitchingSemesters } from "./SwitchingSemesters";
 import "../App.css";
 
 export function ViewCourses({
@@ -196,14 +196,14 @@ export function ViewCourses({
                             >
                                 Switch Semester
                             </Button>
-                            <SwitchSemester
+                            <SwitchingSemesters
                                 show={showSwitchMod}
                                 handleClose={handleCloseSwitchMod}
                                 course={course}
                                 currentPlan={currentPlan}
                                 settingPlan={settingPlan}
                                 courseSemester={courseSemester}
-                            ></SwitchSemester>
+                            ></SwitchingSemesters>
 
                             <Button
                                 onClick={savingEdits}
