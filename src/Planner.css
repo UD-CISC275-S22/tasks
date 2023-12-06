@@ -389,12 +389,10 @@ tr:nth-child(1) {
 
 .course-list-container {
     max-height: 200px;
-    max-width: 760px;
     overflow-y: auto;
     border: 2px solid #ddd;
     border-radius: 25px;
     margin-bottom: 15px;
-    margin-left: 945px;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
