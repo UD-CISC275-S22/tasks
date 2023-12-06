@@ -2,24 +2,31 @@
 import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import { Plan } from "../Interface/Plan";
+import { semester } from "../Interface/semester";
 
 export function AddDeletePlan({
     handleClose,
     show,
     allplans,
-    setPlans
+    setPlans,
+    currentPlan,
+    setCurrentPlan,
+    setSemesters
 }: {
     handleClose: () => void;
     show: boolean;
     allplans: Plan[];
     setPlans: (plans: Plan[]) => void;
+    currentPlan: string;
+    setCurrentPlan: (planName: string) => void;
+    setSemesters: (viewSemesteres: semester[]) => void;
 }): JSX.Element {
     const [planName, setPlanName] = useState("");
     const [controlFunction, setControlFunction] = useState(true);
-    const [currentPlan, setCurrentPlan] = useState<string>(allplans[0].name);
+    const [selectPlan, setSelectPlan] = useState<string>("");
 
     function selectedPlan(event: React.ChangeEvent<HTMLSelectElement>): void {
-        setCurrentPlan(event.target.value);
+        setSelectPlan(event.target.value);
     }
 
     const inputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -28,18 +35,28 @@ export function AddDeletePlan({
     };
 
     function createClosingModal() {
-        setPlans([...allplans, { name: planName, semesters: [] }]);
+        if (planName !== "") {
+            setPlans([...allplans, { name: planName, semesters: [] }]);
+        }
         handleClose();
     }
 
     function deleteClosingModal() {
-        const findIndexplan: number = allplans.findIndex(
-            (plan) => plan.name === currentPlan
-        );
-        allplans.splice(findIndexplan, 1);
-        setPlans(allplans);
+        if (selectPlan !== "") {
+            const findIndexplan: number = allplans.findIndex(
+                (plan) => plan.name === selectPlan
+            );
+            allplans.splice(findIndexplan, 1);
+            // Included this if statement because the plan name
+            // displayed on the table view should only be erased if that
+            // specific plan is currenlty being displayed and the user wants remove it
+            if (selectPlan === currentPlan) {
+                setCurrentPlan("");
+                setSemesters([]);
+            }
+            setPlans(allplans);
+        }
         handleClose();
-        console.log(allplans);
     }
 
     return (
@@ -56,20 +73,10 @@ export function AddDeletePlan({
                             justifyContent: "space-around"
                         }}
                     >
-                        <Button
-                            color={
-                                controlFunction === true ? "green" : undefined
-                            }
-                            onClick={() => setControlFunction(true)}
-                        >
+                        <Button onClick={() => setControlFunction(true)}>
                             Add Plan
                         </Button>
-                        <Button
-                            color={
-                                controlFunction === false ? "green" : undefined
-                            }
-                            onClick={() => setControlFunction(false)}
-                        >
+                        <Button onClick={() => setControlFunction(false)}>
                             Delete Plan
                         </Button>
                     </div>
@@ -114,20 +121,31 @@ export function AddDeletePlan({
                         </Modal.Header>
                         <Modal.Body>
                             <Form.Group>
-                                <Form.Select
-                                    value={currentPlan}
-                                    onChange={selectedPlan}
-                                    style={{ textAlign: "center" }}
-                                >
-                                    {allplans.map((plan) => (
-                                        <option
-                                            key={plan.name}
-                                            value={plan.name}
-                                        >
-                                            {plan.name}
+                                {allplans.length === 0 ? (
+                                    <div>
+                                        <Modal.Title>
+                                            Please add a degree plan
+                                        </Modal.Title>
+                                    </div>
+                                ) : (
+                                    <Form.Select
+                                        value={selectPlan}
+                                        onChange={selectedPlan}
+                                        style={{ textAlign: "center" }}
+                                    >
+                                        <option>
+                                            Please select a degree plan
                                         </option>
-                                    ))}
-                                </Form.Select>
+                                        {allplans.map((plan) => (
+                                            <option
+                                                key={plan.name}
+                                                value={plan.name}
+                                            >
+                                                {plan.name}
+                                            </option>
+                                        ))}
+                                    </Form.Select>
+                                )}
                             </Form.Group>
                         </Modal.Body>
                         <Modal.Footer>

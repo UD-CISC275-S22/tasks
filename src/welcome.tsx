@@ -1,3 +1,4 @@
+/* eslint-disable no-extra-parens */
 // WelcomeMessage.tsx
 import React, { useState } from "react";
 import "./welcome.css";

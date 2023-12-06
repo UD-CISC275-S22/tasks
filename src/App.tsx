@@ -11,20 +11,18 @@ import { AddSemesterModal } from "./SemesterModal/addSemesterModal";
 import { semester } from "./Interface/semester";
 import { classes } from "./Interface/classes";
 import { Plan } from "./Interface/Plan";
-import sample from "./data/Dummy.json";
+//import sample from "./data/Dummy.json";
 import { AddToSemester } from "./semester-modification/AddToSemester";
 import { ChosenMajor, generalClasses } from "./Audit/ChosenMajor";
 import { PlanView } from "./PlanView/PlanView";
 import { DownloadPlan } from "./PlanView/DownloadPlan";
 import { SeeAuditPage } from "./Audit/SeeAuditPage";
 import { AddDeletePlan } from "./addPlan/AddDeletePlan";
-import AuthDetails from "./AuthDetails";
 import { auth } from "./firebase";
-import { onAuthStateChanged, User, signOut } from "firebase/auth";
+import { signOut } from "firebase/auth";
 
 function App(): JSX.Element {
     const [page, setPage] = useState(false);
-    const [name, setName] = useState("");
     const [seeSemesterView, setSeeSemesterView] = useState(false);
     const [modalView, setModalView] = useState(false);
     const [addView, setAddView] = useState(false);
@@ -35,9 +33,6 @@ function App(): JSX.Element {
     const [majorPageView, setMajorPageView] = useState(false);
     const [addPlanView, setAddPlanView] = useState(false);
 
-    const getName = () => {
-        setName(name);
-    };
     const showHomePage = () => {
         setPage(!page);
     };
@@ -90,7 +85,6 @@ function App(): JSX.Element {
     function pushCurrList(classesUsed: classes[][]) {
         setUsedClasses(classesUsed);
     }
-
     const handleLogout = () => {
         // console.log(page);
         // setPage(!page);
@@ -105,15 +99,7 @@ function App(): JSX.Element {
             .catch((error) => console.log(error));
     };
 
-    // const handleUserSignOut = () => {
-    //     signOut(auth)
-    //         .then(() => {
-    //             console.log("Sign Out was Successful");
-    //             onLogout();
-    //         })
-    //         .catch((error) => console.log(error));
-    // };
-
+    /*
     const planExamples = sample.map(
         (plan): Plan => ({
             ...plan,
@@ -125,7 +111,8 @@ function App(): JSX.Element {
             }))
         })
     );
-    const [plans, setPlans] = useState<Plan[]>(planExamples);
+*/
+    const [plans, setPlans] = useState<Plan[]>([]);
 
     const [semesters, setSemesters] = useState<semester[]>([]);
 
@@ -150,6 +137,8 @@ function App(): JSX.Element {
             setPlans(plans);
         }
     }
+
+    console.log(currentPlan);
 
     useEffect(() => updatingPlans(), [semesters]);
 
@@ -191,6 +180,7 @@ function App(): JSX.Element {
                                     show={modalView}
                                     semesters={semesters}
                                     settingSemester={setSemesters}
+                                    currentPlan={currentPlan}
                                 />
                             )}
                             {addView && (
@@ -199,6 +189,7 @@ function App(): JSX.Element {
                                     show={addView}
                                     semesters={semesters}
                                     onAddClass={onAddClass}
+                                    currentPlan={currentPlan}
                                 />
                             )}
                             {seeAudit && (
@@ -231,14 +222,17 @@ function App(): JSX.Element {
                                     show={addPlanView}
                                     allplans={plans}
                                     setPlans={setPlans}
+                                    currentPlan={currentPlan}
+                                    setCurrentPlan={setCurrentPlan}
+                                    setSemesters={setSemesters}
                                 />
                             )}
                             <SwitchComponents
                                 seeSemesterView={seeSemesterView}
                                 semesterExamples={semesters}
                                 setSemesters={setSemesters}
+                                currentPlan={currentPlan}
                             ></SwitchComponents>
-
                             <SeeAuditPage
                                 canView={majorPageView}
                                 reqList={degreeRequirements}
