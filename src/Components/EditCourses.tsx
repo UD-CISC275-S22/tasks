@@ -1,66 +1,68 @@
 /* eslint-disable no-extra-parens */
 import React, { useState } from "react";
 import { Class } from "../interfaces/class";
-import QuickAdd from "./QuickAdd";
-import SlowAdd from "./SlowAdd";
-import DeleteCourse from "./DeleteCourses";
 
-import { Button } from "react-bootstrap";
+function EditCourse({
+    course,
+    onEditFormSubmit
+}: {
+    course: Class;
+    onEditFormSubmit: (updatedCourse: Class) => void;
+}) {
+    const [editedCourse, setEditedCourse] = useState<Class>(course);
 
-function EditCourses(): JSX.Element {
-    const [courses, setCourses] = useState<Class[]>([]);
-    const [editCourseCode, setEditCourseCode] = useState<string | null>(null);
+    const handleInputChange = (
+        e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+    ) => {
+        const { name, value } = e.target;
 
-    const handleCourseInfo = (courseInfo: Class) => {
-        if (editCourseCode) {
-            // Edit existing course
-            setCourses((prevCourses) =>
-                prevCourses.map((course) =>
-                    course.courseCode === editCourseCode
-                        ? { ...courseInfo }
-                        : course
-                )
-            );
-            setEditCourseCode(null);
-        } else {
-            // Add new course here
-            setCourses([...courses, courseInfo]);
-        }
+        setEditedCourse((prevCourse) => ({
+            ...prevCourse,
+            [name]: name === "credits" ? parseFloat(value) : value
+        }));
     };
 
-    const handleDeleteCourse = (courseCode: string) => {
-        setCourses(
-            courses.filter((course) => course.courseCode !== courseCode)
-        );
-        setEditCourseCode(null);
-    };
-
-    const handleEditCourse = (courseCode: string) => {
-        setEditCourseCode(courseCode);
-        //pre-filling the form with existing course data
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        // Submit the edited course info
+        onEditFormSubmit(editedCourse);
     };
 
     return (
         <div>
-            <SlowAdd onCourseInfo={handleCourseInfo} />
-            <QuickAdd onCourseInfo={handleCourseInfo} />
-            <DeleteCourse onDeleteCourse={handleDeleteCourse} />
-
-            {/* course components here */}
-            <h2>Courses</h2>
-            <ul>
-                {courses.map((course) => (
-                    <li key={course.courseCode}>
-                        {course.courseTitle} - {course.courseCode}
-                        <Button
-                            onClick={() => handleEditCourse(course.courseCode)}
-                        >
-                            Edit
-                        </Button>
-                    </li>
-                ))}
-            </ul>
+            <h3>Edit Course</h3>
+            <form onSubmit={handleSubmit}>
+                <label>
+                    Course Title:
+                    <input
+                        type="text"
+                        name="courseTitle"
+                        value={editedCourse.courseTitle}
+                        onChange={handleInputChange}
+                    />
+                </label>
+                <label>
+                    Course Code:
+                    <input
+                        type="text"
+                        name="courseCode"
+                        value={editedCourse.courseCode}
+                        onChange={handleInputChange}
+                    />
+                </label>
+                <label>
+                    Credits:
+                    <input
+                        type="number"
+                        name="credits"
+                        value={editedCourse.credits.toString()}
+                        onChange={handleInputChange}
+                    />
+                </label>
+                <button type="submit">Save Changes</button>
+            </form>
         </div>
     );
 }
-export default EditCourses;
+
+export default EditCourse;
