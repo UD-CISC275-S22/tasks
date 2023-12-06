@@ -38,6 +38,8 @@ import { ClearAllSemesters } from "./Buttons/ClearAllSemesters";
 import { SavePlanInto } from "./Buttons/SavePlanInto";
 import { LoadPlan } from "./Buttons/LoadPlan";
 import { PickAPlan } from "./Buttons/PickAPlan";
+import { requiredClasses } from "./Buttons/requiredClasses";
+
 import CourseEdit from "./CourseEdit";
 
 //all the default concentration plans
@@ -219,6 +221,19 @@ export function ViewSemester(): JSX.Element {
             (course: Course) => currCourse !== course.id
         );
         newSemesters[idx].courseList = [...newClasses];
+        // looks through the course list in the current semester and filters out the
+        // course with the same "Title" as the state "currCourse"
+        // **refer to "currCourse" documentation for more info **
+        setSemesters(newSemesters);
+    }
+
+    function requiredClasses(targetYear: number, targetSem: string) {
+        const idx = index(targetYear, targetSem);
+        const newSemesters = [...semesters];
+        const filteredClasses = newSemesters[idx].courseList.filter(
+            (course: Course) => currCourse !== course.id
+        );
+        newSemesters[idx].courseList = [...filteredClasses];
         // looks through the course list in the current semester and filters out the
         // course with the same "Title" as the state "currCourse"
         // **refer to "currCourse" documentation for more info **
