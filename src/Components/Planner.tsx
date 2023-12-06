@@ -153,7 +153,7 @@ export function Planner({
                             <Col>Course</Col>
                             <Col>Number of Credits</Col>
                             <Col>Remove Course</Col>
-                            <Col>Remove Course</Col>
+                            <Col>Edit Course</Col>
                         </Row>
                         {addClasstoTable([semester])}
                         <Button
@@ -309,7 +309,8 @@ export function Planner({
             (sem: semester): boolean => sem.name !== sem0.name
         );
         setSemArr(removedClassArr);
-        setSemArrClicked(semArr);
+        setClicked(!clicked);
+        setSemArrClicked(removedClassArr);
     }
     return (
         <div>
