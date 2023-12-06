@@ -57,7 +57,9 @@ export function AddClass({
 
         // Create a new array of classes for the updated semester
         const preReqBoolean = checkPreReqs(newClass.preReq, semIdsLower);
-        console.log(preReqBoolean);
+        console.log(
+            "Does this " + newClass + " have all prereqs met" + preReqBoolean
+        );
         const updatedClasses: classes[] = [
             ...updatedSchedule[semesterIndex].classList,
             newClass
