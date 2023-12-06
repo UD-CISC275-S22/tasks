@@ -36,7 +36,7 @@ export const requiredClasses = ({
                 </Form.Select>
             </Form.Group>
             <Button onClick={() => requiredClass(targetYear, targetSem)}>
-                Remove Class
+                Required Classes
             </Button>
         </div>
     );
