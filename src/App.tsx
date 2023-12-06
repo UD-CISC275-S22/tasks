@@ -64,18 +64,25 @@ import degreeList from "./data/degreeList.json";
 import displaySemesters from "./data/displaySemesters.json";
 
 import { Welcome } from "./Components/welcome";
+import { CourseOrigin } from "./Components/courseOrigin";
+
 import { AddingCourse } from "./Components/addingCourse";
 import { AddingSemester } from "./Components/addingSemester";
 import { AddingPlan } from "./Components/addingPlan";
+
 import { ClearCourse } from "./Components/removingCourse";
 import { ClearSemester } from "./Components/clearingSemester";
 import { ClearingPlan } from "./Components/clearingPlan";
+
 import { ViewCourses } from "./Components/ViewCourses";
 import { ViewSemester } from "./Components/ViewSemester";
-import { CourseOrigin } from "./Components/courseOrigin";
+import { ViewPooling } from "./Components/ViewPooling";
+
 import { EditingSemester } from "./Components/EditingSemester";
 import { MultiSemester } from "./Components/multiSemester";
-import { SwitchSemester } from "./Components/switchingSemesters";
+
+import { SwitchingSemesters } from "./Components/SwitchingSemesters";
+import { SwitchingPlan } from "./Components/SwitchingPlan";
 
 import { Course } from "./Interfaces/course";
 import { Semester } from "./Interfaces/semester";
@@ -234,13 +241,13 @@ function App(): JSX.Element {
                     >
                         Switch Plan
                     </Button>
-                    <SwitchPlan>
+                    <SwitchingPlan>
                         show={showingPlan}
                         handleClose={handleCloseShowPlan}
                         plan={plan}
                         settingPlan={settingPlan}
                         plans={settingPlanList}
-                    </SwitchPlan>
+                    </SwitchingPlan>
                     <MultiSemester
                         currentPlan={plan}
                         plans={planList}
