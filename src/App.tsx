@@ -76,14 +76,6 @@ function App(): JSX.Element {
                             target="_blank"
                             rel="noreferrer"
                         >
-                            Catalog
-                        </a>
-                        &nbsp;
-                        <a
-                            href="https://catalog.udel.edu/content.php?catoid=47&navoid=8860"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
                             Programs
                         </a>
                         &nbsp;
