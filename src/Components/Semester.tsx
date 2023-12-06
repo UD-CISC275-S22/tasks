@@ -39,6 +39,7 @@ import { SavePlanInto } from "./Buttons/SavePlanInto";
 import { LoadPlan } from "./Buttons/LoadPlan";
 import { PickAPlan } from "./Buttons/PickAPlan";
 import CourseEdit from "./CourseEdit";
+import { ExportCSV } from "./Buttons/ExportCSV";
 
 //all the default concentration plans
 let AI_Plan = AI();
@@ -524,6 +525,8 @@ export function ViewSemester(): JSX.Element {
         }
     }
 
+    const allPlans = [plan1, plan2, plan3, plan4];
+
     //actual return for the tsx file to App.tsx
     return (
         <div style={{ backgroundColor: "#0f234c" }}>
@@ -539,6 +542,7 @@ export function ViewSemester(): JSX.Element {
                 <SavePlanInto savePlan={savePlan}></SavePlanInto>
                 <LoadPlan loadPlan={loadPlan}></LoadPlan>
                 <PickAPlan handlePlans={handlePlans}></PickAPlan>
+                <ExportCSV plans={allPlans}></ExportCSV>
             </div>
             <hr style={{ backgroundColor: "#0f234c" }}></hr>
             {
