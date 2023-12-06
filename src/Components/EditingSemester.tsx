@@ -106,7 +106,7 @@ export function EditingSemester({
             <Row>
                 <Col>
                     <Form.Group controlId="semesterID" as={Row}>
-                        <Form.Label column sm={3}>
+                        <Form.Label column sm={1}>
                             Year:
                         </Form.Label>
                         <Col>
@@ -118,7 +118,7 @@ export function EditingSemester({
                         </Col>
                     </Form.Group>
                     <Form.Group controlId="semesterTitle" as={Row}>
-                        <Form.Label column sm={3}>
+                        <Form.Label column sm={1}>
                             Session:
                         </Form.Label>
                         <Col>
@@ -128,7 +128,6 @@ export function EditingSemester({
                             >
                                 {courseSessions.map((choice: string) => (
                                     <option key={choice} value={choice}>
-                                        {" "}
                                         {choice}
                                     </option>
                                 ))}
@@ -163,7 +162,7 @@ export function EditingSemester({
                         variant="danger"
                         data-testid="clearSemesterCoursesMod"
                     >
-                        Clear Sem
+                        Clear Semester
                     </Button>
                 </Col>
             </Row>
