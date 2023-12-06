@@ -26,7 +26,7 @@ function App(): JSX.Element {
                     </div>
                 </header>
             </div>
-            <div className="box">
+            {/* <div className="box">
                 <a className="button" href="#popup1">
                     Help
                 </a>
@@ -44,7 +44,7 @@ function App(): JSX.Element {
                         | |-- remove semester
                     </div>
                 </div>
-            </div>
+            </div> */}
             <div className="Planner">
                 {} <Planner plan={CompSciPlan} />
             </div>
