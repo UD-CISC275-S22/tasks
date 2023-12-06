@@ -9,7 +9,13 @@ import Form from "react-bootstrap/Form";
 
 interface CourseEditProps {
     editedCourse: Course;
-    onSaveChanges: (editedCourse: Course) => void;
+    onSaveChanges: (
+        editedCourse: Course,
+        targetYear: number,
+        targetSem: string
+    ) => void;
+    targetYear: number;
+    targetSem: string;
     onResetToDefault: (editedCourse: Course) => void;
     onClose: () => void;
 }
@@ -18,19 +24,25 @@ const CourseEdit: React.FC<CourseEditProps> = ({
     editedCourse,
     onSaveChanges,
     onResetToDefault,
-    onClose
+    onClose,
+    targetYear,
+    targetSem
 }) => {
     const [newTitle, setNewTitle] = useState<string>(editedCourse.title);
     const [newName, setNewName] = useState<string>(editedCourse.name);
     const [newCredits, setNewCredits] = useState<number>(editedCourse.credits);
 
     const handleSaveChanges = () => {
-        onSaveChanges({
-            ...editedCourse,
-            title: newTitle,
-            name: newName,
-            credits: newCredits
-        });
+        onSaveChanges(
+            {
+                ...editedCourse,
+                title: newTitle,
+                name: newName,
+                credits: newCredits
+            },
+            targetYear,
+            targetSem
+        );
         onClose();
     };
 
