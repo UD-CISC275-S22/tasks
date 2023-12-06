@@ -16,6 +16,8 @@ const semesterExamples = sample.map(
     })
 );
 
+const currentPlan = "dildo";
+
 describe("SemesterTable", () => {
     beforeEach(() => {
         const mockSetSemesters = jest.fn();
@@ -23,6 +25,7 @@ describe("SemesterTable", () => {
             <SemesterTable
                 semesters={semesterExamples}
                 setSemesters={mockSetSemesters}
+                currentPlan={currentPlan}
             />
         );
     });

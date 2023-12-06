@@ -6,6 +6,7 @@ import ClassIcon from "@mui/icons-material/Class";
 import ChecklistIcon from "@mui/icons-material/Checklist";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import List from "@mui/icons-material/List";
+import { Logout } from "@mui/icons-material";
 
 export function SideNav2({
     flipView,
@@ -14,7 +15,8 @@ export function SideNav2({
     flipModalView,
     flipAudit,
     flipAddView,
-    flipDownload
+    flipDownload,
+    handleLogout
 }: {
     flipView: () => void;
     flipAddPlanView: () => void;
@@ -23,13 +25,15 @@ export function SideNav2({
     flipAudit: () => void;
     flipAddView: () => void;
     flipDownload: () => void;
+    handleLogout: () => void;
+    // handleUserSignOut: () => void;
 }): JSX.Element {
     return (
         <div className="SideNav2">
             <ul className="SideNavList2">
                 <li className="row" onClick={() => flipAddPlanView()}>
                     <div id="picture">{<SchoolIcon />}</div>
-                    <div id="name">{"Add Degree Plan"}</div>
+                    <div id="name">{"Add / Delete Degree Plan"}</div>
                 </li>
                 <li
                     className="row"
@@ -56,6 +60,10 @@ export function SideNav2({
                 <li className="row" onClick={() => flipDownload()}>
                     <div id="picture">{<FileDownloadIcon />}</div>
                     <div id="name">{"Download Plan"}</div>
+                </li>
+                <li className="row" onClick={() => handleLogout()}>
+                    <div id="picture">{<Logout />}</div>
+                    <div id="name">{"Logout"}</div>
                 </li>
             </ul>
         </div>

@@ -50,10 +50,12 @@ function downloadBlob(
 //Created a function to map all the given semesters into their own view.
 export function SemesterTable({
     semesters,
-    setSemesters
+    setSemesters,
+    currentPlan
 }: {
     semesters: semester[];
     setSemesters: (sems: semester[]) => void;
+    currentPlan: string;
 }): JSX.Element {
     //drag course is being used for ability to drag. Not complete yet.
     const [dragCourse, setDragCourse] = useState<classes>();
@@ -176,9 +178,13 @@ export function SemesterTable({
 
     //<Button onClick={download}>download</Button>;
 
+    console.log(semesters);
     return (
-        <div className="semesterTable">
-            <h2>Semester Schedule</h2>
+        <div
+            className="semesterTable"
+            style={{ overflowY: "scroll", maxHeight: "700px" }}
+        >
+            <h2>{currentPlan === "" ? "" : `Plan Name: ${currentPlan}`}</h2>
             {/*<Button onClick={download}>download</Button>*/}
 
             {semesters.map((semester) => {

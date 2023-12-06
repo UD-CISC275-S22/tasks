@@ -20,6 +20,7 @@ describe("FilteringSearchTests", () => {
                 settingSemester={function (): void {
                     throw new Error("Function not implemented.");
                 }}
+                currentPlan=""
             />
         );
     });
