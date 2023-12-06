@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 //react and bootstrap
 import React, { useState } from "react";
@@ -28,7 +29,6 @@ import { DisplayPlan } from "./DisplaySemester/DisplayPlan";
 //functions and other imports
 import { updateCourseList, findCourse } from "./course";
 //A variable able to use for the list of courses within the JSON file.
-const COURSES_LIST = courseList;
 //variable to use DEFAULT list of courses from JSON file - Malika
 const DEFAULT_COURSE_LIST = defaultCourseList;
 //all custom button imports
@@ -38,6 +38,7 @@ import { ClearAllSemesters } from "./Buttons/ClearAllSemesters";
 import { SavePlanInto } from "./Buttons/SavePlanInto";
 import { LoadPlan } from "./Buttons/LoadPlan";
 import { PickAPlan } from "./Buttons/PickAPlan";
+import CourseEdit from "./CourseEdit";
 
 //all the default concentration plans
 let AI_Plan = AI();
@@ -99,7 +100,7 @@ export function ViewSemester(): JSX.Element {
         "semesters",
         AI_Plan.semesters
     ); //the default semesters (should always match with what the plan is)
-    const [currCourse, setCurrCourse] = useState<string>("ENGL110");
+    const [currCourse, setCurrCourse] = useState<number>(0);
 
     //state for handling if the yes or no button for skip semester warning was clicked
     const [clicked, setClicked] = useState<boolean>(false);
@@ -107,11 +108,17 @@ export function ViewSemester(): JSX.Element {
     //states for editing courses - created by Malika
     const [showEditModal, setShowEditModal] = useState(false);
     const [editedCourse, setEditedCourse] = useState<Course | null>(null);
+    const [COURSES_LIST, setCOURSES_LIST] = useSessionStorage(
+        "courses",
+        courseList
+    );
+    //let COURSES_LIST = courses as Course[];
 
     //NOTE FOR MICHAEL: Here is where you can add your add courses and remove courses functions
     //Here is where you can add your add courses and remove courses functions
     function updateCurrCourse(event: React.ChangeEvent<HTMLSelectElement>) {
-        setCurrCourse(event.target.value);
+        const val = Number(event.target.value);
+        setCurrCourse(val);
     }
 
     function index(year: number, sem: string): number {
@@ -209,7 +216,7 @@ export function ViewSemester(): JSX.Element {
         const idx = index(targetYear, targetSem);
         const newSemesters = [...semesters];
         const newClasses = newSemesters[idx].courseList.filter(
-            (course: Course) => currCourse !== course.title
+            (course: Course) => currCourse !== course.id
         );
         newSemesters[idx].courseList = [...newClasses];
         // looks through the course list in the current semester and filters out the
@@ -221,12 +228,16 @@ export function ViewSemester(): JSX.Element {
     function addClass(targetYear: number, targetSem: string): void {
         const idx = index(targetYear, targetSem);
         const newSemesters = [...semesters];
-        const choiceIdx = courseList.findIndex(
-            (course: Course) => course.title === currCourse
+        const choiceIdx = COURSES_LIST.findIndex(
+            (course: Course) => course.id === currCourse
         );
-        const choice = courseList[choiceIdx];
+        if (choiceIdx === -1) {
+            alert("Course not found");
+            return;
+        }
+        const choice = COURSES_LIST[choiceIdx];
         const newClasses = newSemesters[idx].courseList.filter(
-            (course: Course) => currCourse !== course.title
+            (course: Course) => currCourse !== course.id
         );
         // looks through the course list in the current semester and filters out the
         // course with the same "Title" as the state "currCourse"
@@ -242,6 +253,7 @@ export function ViewSemester(): JSX.Element {
                 <DisplayFall
                     key={id}
                     semesters={semesters}
+                    courseList={COURSES_LIST}
                     targetSem={sem}
                     currCourse={currCourse}
                     clicked={clicked}
@@ -257,6 +269,11 @@ export function ViewSemester(): JSX.Element {
                     handleFifthClose={handleFifthClose}
                     handleShow={handleShow}
                     index={index}
+                    editedCourse={editedCourse}
+                    handleSaveChanges={handleSaveChanges}
+                    handleResetToDefault={handleResetToDefault}
+                    handleEditClose={handleEditClose}
+                    handleEditShow={handleEditShow}
                 ></DisplayFall>
             );
         } else if (sem === "Spring") {
@@ -264,6 +281,7 @@ export function ViewSemester(): JSX.Element {
                 <DisplaySpring
                     key={id}
                     semesters={semesters}
+                    courseList={COURSES_LIST}
                     targetSem={sem}
                     currCourse={currCourse}
                     clicked={clicked}
@@ -279,6 +297,11 @@ export function ViewSemester(): JSX.Element {
                     handleFifthShow={handleFifthShow}
                     handleFifthClose={handleFifthClose}
                     index={index}
+                    editedCourse={editedCourse}
+                    handleSaveChanges={handleSaveChanges}
+                    handleResetToDefault={handleResetToDefault}
+                    handleEditClose={handleEditClose}
+                    handleEditShow={handleEditShow}
                 ></DisplaySpring>
             );
         } else if (sem === "Winter") {
@@ -286,6 +309,7 @@ export function ViewSemester(): JSX.Element {
                 <DisplayWinter
                     key={id}
                     semesters={semesters}
+                    courseList={COURSES_LIST}
                     targetSem={sem}
                     currCourse={currCourse}
                     clicked={clicked}
@@ -301,6 +325,11 @@ export function ViewSemester(): JSX.Element {
                     handleFifthShow={handleFifthShow}
                     handleFifthClose={handleFifthClose}
                     index={index}
+                    editedCourse={editedCourse}
+                    handleSaveChanges={handleSaveChanges}
+                    handleResetToDefault={handleResetToDefault}
+                    handleEditClose={handleEditClose}
+                    handleEditShow={handleEditShow}
                 ></DisplayWinter>
             );
         } else if (sem === "Summer") {
@@ -308,6 +337,7 @@ export function ViewSemester(): JSX.Element {
                 <DisplaySummer
                     key={id}
                     semesters={semesters}
+                    courseList={COURSES_LIST}
                     targetSem={sem}
                     currCourse={currCourse}
                     clicked={clicked}
@@ -323,6 +353,11 @@ export function ViewSemester(): JSX.Element {
                     handleFifthShow={handleFifthShow}
                     handleFifthClose={handleFifthClose}
                     index={index}
+                    editedCourse={editedCourse}
+                    handleSaveChanges={handleSaveChanges}
+                    handleResetToDefault={handleResetToDefault}
+                    handleEditClose={handleEditClose}
+                    handleEditShow={handleEditShow}
                 ></DisplaySummer>
             );
         }
@@ -344,23 +379,51 @@ export function ViewSemester(): JSX.Element {
         setShowEditModal(false);
     };
 
-    const handleSaveChanges = (editedCourse: Course) => {
-        //update courseList with edited values
-        updateCourseList(COURSES_LIST, editedCourse);
+    //function to handle editCourse Modal - Malika
+    const handleSaveChanges = (
+        editedCourse: Course,
+        targetYear: number,
+        targetSem: string
+    ) => {
+        const idx = index(targetYear, targetSem);
+        const newSemester = [...semesters];
+
+        //edit the original course list with updated values
+        const newSelectedSemCourses = updateCourseList(
+            newSemester[idx].courseList,
+            editedCourse
+        );
+        newSemester[idx].courseList = [...newSelectedSemCourses];
+        const newCourses = updateCourseList(COURSES_LIST, editedCourse);
+        setCOURSES_LIST([...newCourses]);
+
+        //map through courseList of the current semester and if the id's are equal, make course = editedCourse
+        /*
+        const newCourseList = newSemester[idx].courseList.map(
+            (course: Course): Course =>
+                course.id === editedCourse.id ? editedCourse : course
+        ); */
+
+        //make the semester's courseList equal to the newCourseList with the editedCourse
+        //newSemester[idx].courseList = [...newCourseList];
+        setSemesters(newSemester);
 
         setEditedCourse(null);
-        setCurrCourse("");
+        setCurrCourse(editedCourse.id);
+
         // Close the modal
         handleEditClose();
+        // }
     };
 
     const handleResetToDefault = (editedCourse: Course) => {
         console.log("Edited course exists");
         const defaultCourse = findCourse(DEFAULT_COURSE_LIST, editedCourse.id);
+        //const beforeCourse = editedCourse;
         if (defaultCourse) {
             setEditedCourse(defaultCourse);
-
-            updateCourseList(COURSES_LIST, defaultCourse);
+            const newCourseList = updateCourseList(COURSES_LIST, defaultCourse);
+            setCOURSES_LIST([...newCourseList]);
         }
 
         // Close the modal
@@ -481,10 +544,13 @@ export function ViewSemester(): JSX.Element {
             {
                 // eslint-disable-next-line no-extra-parens
                 seePlan && (
-                    <DisplayPlan
-                        indivPlanSem={indivPlanSem}
-                        fifthYear={fifthYear}
-                    ></DisplayPlan>
+                    <div>
+                        <h5 style={{ color: "white" }}>{plan.concentration}</h5>
+                        <DisplayPlan
+                            indivPlanSem={indivPlanSem}
+                            fifthYear={fifthYear}
+                        ></DisplayPlan>
+                    </div>
                 )
             }
             <hr style={{ backgroundColor: "#0f234c" }}></hr>
