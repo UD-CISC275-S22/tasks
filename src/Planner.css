@@ -288,17 +288,20 @@ tr:nth-child(1) {
 }
 
 .search-bar {
+    display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 15px;
     margin-bottom: 10px;
     margin-top: 5px;
-    padding: 15px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    background-color: #d4f4ec;
 }
 
 .search-bar input {
     text-align: center;
-    margin-left: 10px;
     border: 2px solid #ddd;
     border-radius: 25px;
     width: 750px;
@@ -307,7 +310,7 @@ tr:nth-child(1) {
 
 .search-bar select {
     text-align: center;
-    margin-left: 10px;
+    margin-left: 370px;
     border: 2px solid #ddd;
     border-radius: 25px;
     width: 250px;
@@ -386,12 +389,12 @@ tr:nth-child(1) {
 
 .course-list-container {
     max-height: 200px;
-    max-width: 750px;
+    max-width: 760px;
     overflow-y: auto;
     border: 2px solid #ddd;
     border-radius: 25px;
     margin-bottom: 15px;
-    margin-left: 285px;
+    margin-left: 945px;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 

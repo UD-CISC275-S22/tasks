@@ -81,23 +81,23 @@ const Planner: React.FC<Planner> = ({ plan }) => {
                 </span>{" "}
                 {plan.title}
             </h1>
-            {allSemestersVisible && (
-                <div className="button-row">
-                    <button
-                        className="insert-newSemster"
-                        onClick={handleInsertSemester}
-                    >
-                        Insert New Semester
-                    </button>
-                    <button
-                        className="clear-allSemesters"
-                        onClick={handleClearAllSemesters}
-                    >
-                        Clear All Semesters
-                    </button>
-                </div>
-            )}
             <div className="search-bar">
+                {allSemestersVisible && (
+                    <div className="button-row">
+                        <button
+                            className="insert-newSemster"
+                            onClick={handleInsertSemester}
+                        >
+                            Insert New Semester
+                        </button>
+                        <button
+                            className="clear-allSemesters"
+                            onClick={handleClearAllSemesters}
+                        >
+                            Clear All Semesters
+                        </button>
+                    </div>
+                )}
                 <select
                     value={selectedSemester || ""}
                     onChange={e => setSelectedSemester(e.target.value || null)}
@@ -153,7 +153,7 @@ const Planner: React.FC<Planner> = ({ plan }) => {
                     }}
                 >
                     {semester.skip ? (
-                        <h2>{semester.id}(Skipped)</h2>
+                        <h2>{semester.id} (Skipped)</h2>
                     ) : (
                         <h2
                             onClick={() =>
