@@ -32,7 +32,7 @@ export function Planner({
     const [semester1, setSemester1] = useState<string>("");
     const [semArr, setSemArr] = useState<semester[]>([]);
     const [editingCourse, setEditingCourse] = useState<Class | null>(null);
-    const [courses, setCourses] = useState<Class[]>([]); // State for courses
+    //const [courses, setCourses] = useState<Class[]>([]); // State for courses
 
     const handleEditClick = (course: Class) => {
         setEditingCourse(course);
@@ -40,14 +40,27 @@ export function Planner({
 
     const handleEditFormSubmit = (updatedCourse: Class) => {
         // Assuming you have an array of courses in state
-        const updatedCourses = courses.map((course: Class) =>
-            course.courseCode === updatedCourse.courseCode
-                ? updatedCourse
-                : course
-        );
+        // const updatedCourses = semArr.map((course: Class) =>
+        //     course.courseCode === updatedCourse.courseCode
+        //         ? updatedCourse
+        //         : course
+        // );
+        const deepCopy = semArr.map((sem: semester): semester => ({ ...sem }));
+        const updatedCourses = deepCopy.map((sem: semester): semester => {
+            return {
+                name: sem.name,
+                classes: [
+                    ...sem.classes.map(
+                        (course: Class): Class =>
+                            updatedCourse.courseCode ? updatedCourse : course
+                    )
+                ]
+            };
+        });
 
         // Update your state with the new array of courses
-        setCourses(updatedCourses);
+        setSemArr(updatedCourses);
+        console.log(semArr);
 
         // Clear the editing state
         setEditingCourse(null);
@@ -104,6 +117,17 @@ export function Planner({
                             Remove
                         </Button>
                     </Col>
+                    <Col>
+                        <Button onClick={() => handleEditClick(course)}>
+                            Edit
+                        </Button>
+                        {editingCourse && (
+                            <EditCourse
+                                course={editingCourse}
+                                onEditFormSubmit={handleEditFormSubmit}
+                            />
+                        )}
+                    </Col>
                 </Row>
             )
         );
@@ -116,7 +140,7 @@ export function Planner({
         return finalTable;
     }
     function addtable(semester: semester) {
-        console.log(semester.classes);
+        // console.log(semester.classes);
         return (
             <div>
                 <div>
@@ -129,9 +153,13 @@ export function Planner({
                             <Col>Course</Col>
                             <Col>Number of Credits</Col>
                             <Col>Remove Course</Col>
+                            <Col>Edit Course</Col>
                         </Row>
                         {addClasstoTable([semester])}
-                        <Button onClick={() => clearAllClasses(semester)}>
+                        <Button
+                            onClick={() => clearAllClasses(semester)}
+                            disabled={semester.classes.length === 0}
+                        >
                             Clear All Classes in {semester.name}
                         </Button>
                         <br></br>
@@ -141,6 +169,7 @@ export function Planner({
                             Remove {semester.name}
                         </Button>
                     </Col>
+                    <br></br>
                 </div>
             </div>
         );
@@ -158,6 +187,7 @@ export function Planner({
             };
         });
         setSemArr(removedClassArr);
+        setSemArrClicked(semArr);
     }
     function createSemester(name: string, classes: Class[]) {
         return { name: name, classes: classes };
@@ -171,7 +201,7 @@ export function Planner({
             return sem;
         });
         setSemArr(updatedSem);
-        console.log(semArr);
+        // console.log(semArr);
     }
     function addCourse(): JSX.Element {
         //console.log(semesterClasses);
@@ -201,7 +231,7 @@ export function Planner({
                                 }
                             ): void => {
                                 addToCorrectSem(courseInfo, semArr);
-                                console.log(semArr);
+                                // console.log(semArr);
                             }}
                         />
                     </div>
@@ -239,7 +269,7 @@ export function Planner({
     }
 
     function addForClickedSem(clickedArr: semester[]) {
-        console.log(semArr.map((e) => e.name));
+        // console.log(semArr.map((e) => e.name));
         const tables = clickedArr.map((clickedSem: semester): JSX.Element => {
             const semester = semArr.find(
                 (element) => element.name === clickedSem.name
@@ -279,12 +309,14 @@ export function Planner({
             (sem: semester): boolean => sem.name !== sem0.name
         );
         setSemArr(removedClassArr);
+        setClicked(!clicked);
+        setSemArrClicked(removedClassArr);
     }
     return (
         <div>
             <div>
                 {/* Display your courses */}
-                {courses.map((course) => (
+                {/* {courses.map((course) => (
                     <div key={course.courseCode}>
                         <p>{course.courseTitle}</p>
                         <p>{course.courseCode}</p>
@@ -293,15 +325,14 @@ export function Planner({
                             Edit
                         </Button>
                     </div>
-                ))}
-
+                ))} */}
                 {/* Render the EditCourse component when editing */}
-                {editingCourse && (
+                {/* {editingCourse && (
                     <EditCourse
                         course={editingCourse}
                         onEditFormSubmit={handleEditFormSubmit}
                     />
-                )}
+                )} */}
             </div>
             {addCourse()}
             {/* add Clear Semesters and goBack button */}
@@ -338,6 +369,7 @@ export function Planner({
                     ? addForClickedSem(semArrClicked)
                     : "Enter and Click semester(s) to view classes"}
             </div>
+            <br></br>
             <div>
                 <Button onClick={clear}> Clear Existing Semesters </Button>
                 <Button onClick={goBackClick}>Go Back to Degree Plans</Button>
