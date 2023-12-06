@@ -35,7 +35,7 @@ export const blankSemester: Semester = {
 
 export const blankPlan: Plan = {
     title: "",
-    concentration: "",
+    concentration: "Custom",
     id: {} as number,
     semesters: [
         blankSemester,
