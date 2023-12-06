@@ -184,7 +184,7 @@ export function SemesterTable({
             className="semesterTable"
             style={{ overflowY: "scroll", maxHeight: "700px" }}
         >
-            <h2>{semesters.length === 0 ? "" : `Plan Name: ${currentPlan}`}</h2>
+            <h2>{currentPlan === "" ? "" : `Plan Name: ${currentPlan}`}</h2>
             {/*<Button onClick={download}>download</Button>*/}
 
             {semesters.map((semester) => {
