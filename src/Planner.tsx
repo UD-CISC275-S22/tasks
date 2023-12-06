@@ -77,7 +77,7 @@ const Planner: React.FC<Planner> = ({ plan }) => {
                         allSemestersVisible ? "arrow-icon rotate" : "arrow-icon"
                     }
                 >
-                    &#x25B6;
+                    &#10148;
                 </span>{" "}
                 {plan.title}
             </h1>
@@ -167,8 +167,8 @@ const Planner: React.FC<Planner> = ({ plan }) => {
                                         : "arrow-icon"
                                 }
                             >
-                                &#x25B6;
-                            </span>
+                                &#10148;
+                            </span>{" "}
                             {semester.id}
                         </h2>
                     )}
