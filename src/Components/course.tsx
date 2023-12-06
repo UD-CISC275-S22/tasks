@@ -65,12 +65,15 @@ export const updateCourseList = (
     if (index !== -1) {
         courseList[index] = {
             ...editedCourse,
-            department: editedCourse.department as Department
+            semester: editedCourse.semester,
+            department: editedCourse.department as Department,
+            prereq: editedCourse.prereq,
+            coreq: editedCourse.coreq,
+            requirements: editedCourse.requirements
         };
     } else {
-        console.error("Course not found in courseList");
+        console.error("Course not find in courseList");
     }
-
     return courseList;
 };
 

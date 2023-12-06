@@ -4,15 +4,15 @@ import { Course } from "../../Interfaces/course";
 import { ClearSemester } from "../Buttons/clearingSemester";
 import { DropAdd } from "../Buttons/dropAdd";
 import { Semester } from "../../Interfaces/semester";
-import { courseList } from "../course";
 import { Button, Form, Modal } from "react-bootstrap";
 import { SkipSemester } from "../Buttons/SkipSemester";
 import CourseEdit from "../CourseEdit";
 
 export interface valueProps {
     semesters: Semester[];
+    courseList: Course[];
     targetSem: string;
-    currCourse: string;
+    currCourse: number;
     clicked: boolean;
     targetYear: number;
     fifthYearClicked: boolean;
@@ -40,6 +40,7 @@ export interface valueProps {
 // function to display ONLY the fall semester
 export function DisplayFall({
     semesters,
+    courseList,
     targetSem,
     currCourse,
     clicked,
@@ -97,6 +98,7 @@ export function DisplayFall({
                     targetYear={targetYear}
                     targetSem={targetSem}
                     updateCurrCourse={updateCurrCourse}
+                    handleEditShow={handleEditShow}
                     currCourse={currCourse}
                     Course_List={courseList}
                 ></DropAdd>
