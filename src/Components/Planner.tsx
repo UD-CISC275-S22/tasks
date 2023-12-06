@@ -207,6 +207,10 @@ export function Planner({
         //console.log(semesterClasses);
         return (
             <div>
+                <h3 style={{ color: "#1348e7" }}>
+                    First, add your semester at the bottom of the page. Next add
+                    your courses.
+                </h3>
                 <h4>Search for your course, or manually input your course.</h4>
                 <div style={{ display: "flex", justifyContent: "center" }}>
                     <div style={{ marginRight: "5px" }}>
