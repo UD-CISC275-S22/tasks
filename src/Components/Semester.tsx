@@ -356,9 +356,10 @@ export function ViewSemester(): JSX.Element {
         targetSem: string
     ) => {
         const idx = index(targetYear, targetSem);
-        const newSemester = semesters;
+        const newSemester = [...semesters];
 
         //edit the original course list with updated values
+        console.log("semesters[idx].courseList: ", semesters[idx].courseList);
         updateCourseList(semesters[idx].courseList, editedCourse);
         updateCourseList(courseList, editedCourse);
 
@@ -370,7 +371,7 @@ export function ViewSemester(): JSX.Element {
 
         //make the semester's courseList equal to the newCourseList with the editedCourse
         newSemester[idx].courseList = [...newCourseList];
-        setSemesters({ ...newSemester });
+        setSemesters(newSemester);
 
         setEditedCourse(null);
         setCurrCourse("");
