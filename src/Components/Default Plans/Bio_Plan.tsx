@@ -3,70 +3,68 @@ import { Plan } from "../../Interfaces/plan";
 import { courseList } from "../course";
 import { blankCourse, fall1, spring1, fall2, spring2 } from "./plan";
 
-//this is the plan for the Theory and Computation concentration
-export function Theory(): Plan {
+//this is the plan for the Bio concentration
+export function Bio(): Plan {
     //plan fields
     const title = "BS Computer Science";
-    const concentration = "Theory and Computation";
+    const concentration = "Bioinformatics";
     const id = 0;
 
     //making the courses for each semester in each year (whole 4 year plan)
-    const fall1Theory = fall1();
-    const spring1Theory = spring1();
-    spring1Theory.pop(); //removes the extra blank course
+    const fall1Bio = fall1();
+    let spring1Bio = spring1();
     let temp = courseList.filter(
         //id 13 is MATH242
         (course) => course.id == 13
     );
-    spring1Theory.push(temp[0]);
-    const fall2Theory = fall2();
-    fall2Theory.push(blankCourse);
-    fall2Theory.push(blankCourse);
-    const spring2Theory = spring2();
+    spring1Bio = [...spring1Bio, blankCourse, blankCourse];
+    let fall2Bio = fall2();
     temp = courseList.filter(
-        //id 14 is MATH205
-        (course) => course.id == 14
+        //id 25 is CHEM133, id 24 is CHEM103
+        (course) => course.id == 25 || course.id == 24
     );
-    spring2Theory.push(temp[0]);
-    spring2Theory.push(blankCourse);
-    spring2Theory.push(blankCourse);
 
-    const fall3Theory = courseList.filter(
-        //id 8 is CISC320, id 35 is CISC304 and id 36 is MATH349
-        (course) => course.id == 8 || course.id == 35 || course.id == 36
+    fall2Bio = [...fall2Bio, ...temp, blankCourse];
+    let spring2Bio = spring2();
+    temp = courseList.filter(
+        //id 26 is CHEM104, id 14 is MATH205
+        (course) => course.id == 26 || course.id == 14
     );
-    fall3Theory.push(blankCourse);
-    fall3Theory.push(blankCourse);
-    const spring3Theory = courseList.filter(
-        //id 7 is CISC303,
-        (course) => course.id == 7
+    spring2Bio = [...spring2Bio, ...temp, blankCourse];
+    const fall3Bio = courseList.filter(
+        //id 8 is CISC320 and id 28 is BISC207, id 36 is MATH349, id 43 is CHEM213
+        (course) =>
+            course.id == 8 ||
+            course.id == 28 ||
+            course.id == 36 ||
+            course.id == 43
     );
-    spring3Theory.push(blankCourse);
-    spring3Theory.push(blankCourse);
-    spring3Theory.push(blankCourse);
-    spring3Theory.push(blankCourse);
-    const fall4Theory = courseList.filter(
-        //id 16 is CISC498
-        (course) => course.id == 16
+    let spring3Bio = courseList.filter(
+        //id 7 is CISC303 and id 29 is BISC208, id 37 is ENGL312, id 41 is CISC483
+        (course) =>
+            course.id == 7 ||
+            course.id == 29 ||
+            course.id == 37 ||
+            course.id == 41 ||
+            course.id == 40
     );
-    fall4Theory.push(blankCourse);
-    fall4Theory.push(blankCourse);
-    fall4Theory.push(blankCourse);
-    fall4Theory.push(blankCourse);
-    const spring4Theory = courseList.filter(
-        //id 17 is CISC499 and id 72 is CISC401
-        (course) => course.id == 17 || course.id == 72
+    spring3Bio = [...spring3Bio, blankCourse];
+    let fall4Bio = courseList.filter(
+        //id 18 is UNVI401, id 16 is CISC498, id 89 is BISC401
+        (course) => course.id == 18 || course.id == 16 || course.id == 89
     );
-    spring4Theory.push(blankCourse);
-    spring4Theory.push(blankCourse);
-    spring4Theory.push(blankCourse);
-
+    fall4Bio = [...fall4Bio, blankCourse, blankCourse, blankCourse];
+    let spring4Bio = courseList.filter(
+        //id 17 is CISC499 and id 19 is UNVI402 and id 90 is CISC436
+        (course) => course.id == 17 || course.id == 19 || course.id == 90
+    );
+    spring4Bio = [...spring4Bio, blankCourse, blankCourse, blankCourse];
     //making the actual semester types
     const fall1Sem: Semester = {
         type: ["Fall"],
         year: 1,
         totalCredits: 15,
-        courseList: fall1Theory
+        courseList: fall1Bio
     };
     const winter1Sem: Semester = {
         type: ["Winter"],
@@ -78,7 +76,7 @@ export function Theory(): Plan {
         type: ["Spring"],
         year: 1,
         totalCredits: 15,
-        courseList: spring1Theory
+        courseList: spring1Bio
     };
     const summer1Sem: Semester = {
         type: ["Summer"],
@@ -90,7 +88,7 @@ export function Theory(): Plan {
         type: ["Fall"],
         year: 2,
         totalCredits: 15,
-        courseList: fall2Theory
+        courseList: fall2Bio
     };
     const winter2Sem: Semester = {
         type: ["Winter"],
@@ -102,7 +100,7 @@ export function Theory(): Plan {
         type: ["Spring"],
         year: 2,
         totalCredits: 15,
-        courseList: spring2Theory
+        courseList: spring2Bio
     };
     const summer2Sem: Semester = {
         type: ["Summer"],
@@ -114,7 +112,7 @@ export function Theory(): Plan {
         type: ["Fall"],
         year: 3,
         totalCredits: 15,
-        courseList: fall3Theory
+        courseList: fall3Bio
     };
     const winter3Sem: Semester = {
         type: ["Winter"],
@@ -126,7 +124,7 @@ export function Theory(): Plan {
         type: ["Spring"],
         year: 3,
         totalCredits: 15,
-        courseList: spring3Theory
+        courseList: spring3Bio
     };
     const summer3Sem: Semester = {
         type: ["Summer"],
@@ -138,7 +136,7 @@ export function Theory(): Plan {
         type: ["Fall"],
         year: 4,
         totalCredits: 15,
-        courseList: fall4Theory
+        courseList: fall4Bio
     };
     const winter4Sem: Semester = {
         type: ["Winter"],
@@ -150,7 +148,7 @@ export function Theory(): Plan {
         type: ["Spring"],
         year: 4,
         totalCredits: 15,
-        courseList: spring4Theory
+        courseList: spring4Bio
     };
     const summer4Sem: Semester = {
         type: ["Summer"],
@@ -177,8 +175,8 @@ export function Theory(): Plan {
         courseList: [blankCourse]
     };
 
-    //now the actual semester array for the Theory plan
-    const Theory_Semesters = [
+    //now the actual semester array for the Bio plan
+    const Bio_Semesters = [
         fall1Sem, //INDEX 0
         winter1Sem, //INDEX 1
         spring1Sem, //INDEX 2
@@ -205,7 +203,7 @@ export function Theory(): Plan {
         title: title,
         concentration: concentration,
         id: id,
-        semesters: Theory_Semesters,
+        semesters: Bio_Semesters,
         credits: 124
     };
 }

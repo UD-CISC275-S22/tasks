@@ -1,7 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
-import { Course } from "../Interfaces/course";
+import { Course } from "../../Interfaces/course";
 
 export const DropAdd = ({
     dropClass,
@@ -9,7 +9,6 @@ export const DropAdd = ({
     updateCurrCourse,
     currCourse,
     Course_List,
-    handleEditShow,
     targetYear,
     targetSem
 }: {
@@ -18,13 +17,12 @@ export const DropAdd = ({
     updateCurrCourse: (event: React.ChangeEvent<HTMLSelectElement>) => void;
     currCourse: string;
     Course_List: Course[];
-    handleEditShow: (course: Course | undefined) => void;
     targetYear: number;
     targetSem: string;
 }) => {
     //Dropdown for courses are not treated individually
     return (
-        <>
+        <div>
             <Form.Group controlId="currentCourse">
                 <Form.Label>Select A Course</Form.Label>
                 <Form.Select value={currCourse} onChange={updateCurrCourse}>
@@ -48,17 +46,6 @@ export const DropAdd = ({
             <Button onClick={() => addClass(targetYear, targetSem)}>
                 Add Class
             </Button>
-            <Button
-                onClick={() =>
-                    handleEditShow(
-                        Course_List.find(
-                            (course) => course.title === currCourse
-                        )
-                    )
-                }
-            >
-                Edit Course
-            </Button>
-        </>
+        </div>
     );
 };

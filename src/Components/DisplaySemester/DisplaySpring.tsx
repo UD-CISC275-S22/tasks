@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
-import { Course } from "../Interfaces/course";
-import { ClearSemester } from "./clearingSemester";
-import { DropAdd } from "./dropAdd";
-import { Semester } from "../Interfaces/semester";
-import { courseList } from "./course";
-import { Form } from "react-bootstrap";
-import CourseEdit from "./CourseEdit";
+import { Course } from "../../Interfaces/course";
+import { ClearSemester } from "../Buttons/clearingSemester";
+import { DropAdd } from "../Buttons/dropAdd";
+import { Semester } from "../../Interfaces/semester";
+import { Button, Form, Modal } from "react-bootstrap";
+import { courseList } from "../course";
+import { SkipSemester } from "../Buttons/SkipSemester";
 
 export interface valueProps {
     semesters: Semester[];
@@ -14,49 +14,42 @@ export interface valueProps {
     currCourse: string;
     clicked: boolean;
     targetYear: number;
+    fifthYearClicked: boolean;
     dropClass(targetYear: number, targetSem: string): void;
     addClass(targetYear: number, targetSem: string): void;
     updateCurrCourse(event: React.ChangeEvent<HTMLSelectElement>): void;
-    clearSemesterCourses(targetYear: number, targetSem: string): void;
+    //clearSemesterCourses(idx: number): void;
+    skipSemester(targetYear: number, targetSem: string): void;
     handleClose(): void;
     handleShow(): void;
+    handleFifthShow(): void;
+    handleFifthClose(): void;
     index(targetYear: number, targetSem: string): number;
-    editedCourse: Course | null;
-    handleSaveChanges(
-        editedCourse: Course,
-        targetYear: number,
-        targetSem: string
-    ): void;
-    handleResetToDefault(editedCourse: Course): void;
-    handleEditClose(): void;
-    handleEditShow(course: Course | undefined): void;
 }
 
 // function to display ONLY the fall semester
-export function DisplayFall({
+export function DisplaySpring({
     semesters,
     targetSem,
     currCourse,
     clicked,
     targetYear,
+    fifthYearClicked,
     dropClass,
     addClass,
     updateCurrCourse,
-    clearSemesterCourses,
+    //clearSemesterCourses,
+    skipSemester,
     handleClose,
     handleShow,
-    index,
-    editedCourse,
-    handleSaveChanges,
-    handleResetToDefault,
-    handleEditClose,
-    handleEditShow
+    handleFifthClose,
+    handleFifthShow,
+    index
 }: valueProps): JSX.Element {
     //index now takes in two parameters (targetYear - this is NOT the state and it's already passed in from the Semester.tsx file)
     //targetSem is also NOT the state and it's already passed in from the Semester.tsx file. So both variables are already declared in the indivPlanSem function
     const idx = index(targetYear, targetSem);
-    const fallCourses = semesters[idx].courseList;
-    console.log("fallCourses:", fallCourses);
+    const springCourses = semesters[idx].courseList;
 
     const [displayCourseCategory, setDisplayCourseCategory] =
         useState<string>("AllCourses");
@@ -67,10 +60,11 @@ export function DisplayFall({
     ) {
         setDisplayCourseCategory(event.target.value);
     }
+
     return (
-        <div className="Fall">
-            <h1>Fall Year {targetYear}</h1>
-            {fallCourses.map(
+        <div className="Spring">
+            <h1>Spring Year {targetYear}</h1>
+            {springCourses.map(
                 // eslint-disable-next-line no-extra-parens
                 (course: Course, index: number): JSX.Element => (
                     <div className="Course" key={index}>
@@ -82,7 +76,8 @@ export function DisplayFall({
                     </div>
                 )
             )}
-            <>
+
+            <div>
                 <DropAdd
                     dropClass={dropClass}
                     addClass={addClass}
@@ -91,28 +86,16 @@ export function DisplayFall({
                     updateCurrCourse={updateCurrCourse}
                     currCourse={currCourse}
                     Course_List={courseList}
-                    handleEditShow={handleEditShow}
                 ></DropAdd>
-                <ClearSemester
-                    clearSemesterCourses={clearSemesterCourses}
+                <SkipSemester
+                    skipSemester={skipSemester}
                     targetYear={targetYear}
                     targetSem={targetSem}
-                    show={clicked}
-                    handleClose={handleClose}
-                    handleShow={handleShow}
-                ></ClearSemester>
-                {/* CourseEdit modal */}
-                {editedCourse && (
-                    <CourseEdit
-                        editedCourse={editedCourse}
-                        onSaveChanges={handleSaveChanges}
-                        targetYear={targetYear}
-                        targetSem={targetSem}
-                        onResetToDefault={handleResetToDefault}
-                        onClose={handleEditClose}
-                    />
-                )}
-            </>
+                    fifthYearClicked={fifthYearClicked}
+                    handleFifthShow={handleFifthShow}
+                    handleFifthClose={handleFifthClose}
+                ></SkipSemester>
+            </div>
         </div>
     );
 }

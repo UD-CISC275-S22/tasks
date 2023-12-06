@@ -3,72 +3,69 @@ import { Plan } from "../../Interfaces/plan";
 import { courseList } from "../course";
 import { blankCourse, fall1, spring1, fall2, spring2 } from "./plan";
 
-//this is the plan for the High Performance Computing concentration
-export function High(): Plan {
+//this is the plan for the Theory and Computation concentration
+export function Theory(): Plan {
     //plan fields
     const title = "BS Computer Science";
-    const concentration = "High Performance Computing";
+    const concentration = "Theory and Computation";
     const id = 0;
 
     //making the courses for each semester in each year (whole 4 year plan)
-    const fall1High = fall1();
-    const spring1High = spring1();
-    spring1High.pop(); //removes the extra blank course
+    const fall1Theory = fall1();
+    let spring1Theory = spring1();
+    spring1Theory.pop(); //removes the extra blank course
     let temp = courseList.filter(
         //id 13 is MATH242
         (course) => course.id == 13
     );
-    spring1High.push(temp[0]);
-    const fall2High = fall2();
-    temp = courseList.filter(
-        //id 57 is MATH243
-        (course) => course.id == 57
-    );
-    fall2High.push(temp[0]);
-    fall2High.push(blankCourse);
-    const spring2High = spring2();
+    spring1Theory = [...spring1Theory, ...temp];
+    let fall2Theory = fall2();
+    fall2Theory = [...fall2Theory, blankCourse, blankCourse];
+    let spring2Theory = spring2();
     temp = courseList.filter(
         //id 14 is MATH205
         (course) => course.id == 14
     );
-    spring2High.push(temp[0]);
-    spring2High.push(blankCourse);
-    spring2High.push(blankCourse);
 
-    const fall3High = courseList.filter(
-        //id 8 is CISC320, id 7 is CISC303 and id 9 is CISC361
-        (course) => course.id == 8 || course.id == 7 || course.id == 9
+    spring2Theory = [...spring2Theory, ...temp, blankCourse, blankCourse];
+
+    let fall3Theory = courseList.filter(
+        //id 8 is CISC320, id 35 is CISC304 and id 36 is MATH349
+        (course) => course.id == 8 || course.id == 35 || course.id == 36
     );
-    fall3High.push(blankCourse);
-    fall3High.push(blankCourse);
-    const spring3High = courseList.filter(
-        //id 60 is CISC360 and id 10 is CISC372
-        (course) => course.id == 60 || course.id == 10
+    fall3Theory = [...fall3Theory, ...temp, blankCourse, blankCourse];
+
+    let spring3Theory = courseList.filter(
+        //id 7 is CISC303,
+        (course) => course.id == 7
     );
-    spring3High.push(blankCourse);
-    spring3High.push(blankCourse);
-    spring3High.push(blankCourse);
-    const fall4High = courseList.filter(
+
+    spring3Theory = [...spring3Theory, blankCourse, blankCourse, blankCourse];
+    let fall4Theory = courseList.filter(
         //id 16 is CISC498
         (course) => course.id == 16
     );
-    fall4High.push(blankCourse);
-    fall4High.push(blankCourse);
-    fall4High.push(blankCourse);
-    fall4High.push(blankCourse);
-    const spring4High = courseList.filter(
-        //id 17 is CISC499 and id 47 is CISC450 and id 61 is CISC471
-        (course) => course.id == 17 || course.id == 47 || course.id == 61
+
+    fall4Theory = [
+        ...fall4Theory,
+        blankCourse,
+        blankCourse,
+        blankCourse,
+        blankCourse
+    ];
+
+    let spring4Theory = courseList.filter(
+        //id 17 is CISC499 and id 72 is CISC401
+        (course) => course.id == 17 || course.id == 72
     );
-    spring4High.push(blankCourse);
-    spring4High.push(blankCourse);
+    spring4Theory = [...spring4Theory, blankCourse, blankCourse, blankCourse];
 
     //making the actual semester types
     const fall1Sem: Semester = {
         type: ["Fall"],
         year: 1,
         totalCredits: 15,
-        courseList: fall1High
+        courseList: fall1Theory
     };
     const winter1Sem: Semester = {
         type: ["Winter"],
@@ -80,7 +77,7 @@ export function High(): Plan {
         type: ["Spring"],
         year: 1,
         totalCredits: 15,
-        courseList: spring1High
+        courseList: spring1Theory
     };
     const summer1Sem: Semester = {
         type: ["Summer"],
@@ -92,7 +89,7 @@ export function High(): Plan {
         type: ["Fall"],
         year: 2,
         totalCredits: 15,
-        courseList: fall2High
+        courseList: fall2Theory
     };
     const winter2Sem: Semester = {
         type: ["Winter"],
@@ -104,7 +101,7 @@ export function High(): Plan {
         type: ["Spring"],
         year: 2,
         totalCredits: 15,
-        courseList: spring2High
+        courseList: spring2Theory
     };
     const summer2Sem: Semester = {
         type: ["Summer"],
@@ -116,7 +113,7 @@ export function High(): Plan {
         type: ["Fall"],
         year: 3,
         totalCredits: 15,
-        courseList: fall3High
+        courseList: fall3Theory
     };
     const winter3Sem: Semester = {
         type: ["Winter"],
@@ -128,7 +125,7 @@ export function High(): Plan {
         type: ["Spring"],
         year: 3,
         totalCredits: 15,
-        courseList: spring3High
+        courseList: spring3Theory
     };
     const summer3Sem: Semester = {
         type: ["Summer"],
@@ -140,7 +137,7 @@ export function High(): Plan {
         type: ["Fall"],
         year: 4,
         totalCredits: 15,
-        courseList: fall4High
+        courseList: fall4Theory
     };
     const winter4Sem: Semester = {
         type: ["Winter"],
@@ -152,7 +149,7 @@ export function High(): Plan {
         type: ["Spring"],
         year: 4,
         totalCredits: 15,
-        courseList: spring4High
+        courseList: spring4Theory
     };
     const summer4Sem: Semester = {
         type: ["Summer"],
@@ -179,8 +176,8 @@ export function High(): Plan {
         courseList: [blankCourse]
     };
 
-    //now the actual semester array for the High plan
-    const High_Semesters = [
+    //now the actual semester array for the Theory plan
+    const Theory_Semesters = [
         fall1Sem, //INDEX 0
         winter1Sem, //INDEX 1
         spring1Sem, //INDEX 2
@@ -207,7 +204,7 @@ export function High(): Plan {
         title: title,
         concentration: concentration,
         id: id,
-        semesters: High_Semesters,
+        semesters: Theory_Semesters,
         credits: 124
     };
 }
