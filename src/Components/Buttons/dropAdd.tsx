@@ -1,3 +1,6 @@
+/* eslint-disable indent */
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable no-extra-parens */
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
