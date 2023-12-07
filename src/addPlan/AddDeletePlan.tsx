@@ -73,20 +73,10 @@ export function AddDeletePlan({
                             justifyContent: "space-around"
                         }}
                     >
-                        <Button
-                            color={
-                                controlFunction === true ? "green" : undefined
-                            }
-                            onClick={() => setControlFunction(true)}
-                        >
+                        <Button onClick={() => setControlFunction(true)}>
                             Add Plan
                         </Button>
-                        <Button
-                            color={
-                                controlFunction === false ? "green" : undefined
-                            }
-                            onClick={() => setControlFunction(false)}
-                        >
+                        <Button onClick={() => setControlFunction(false)}>
                             Delete Plan
                         </Button>
                     </div>

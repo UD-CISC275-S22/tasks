@@ -13,7 +13,7 @@ export function DownloadPlan({
     show: boolean;
     allplans: Plan[];
 }) {
-    const [viewPlan, setViewPlan] = useState<string>(allplans[0].name);
+    const [viewPlan, setViewPlan] = useState<string>("");
     function selectedPlan(event: React.ChangeEvent<HTMLSelectElement>): void {
         setViewPlan(event.target.value);
     }
@@ -58,13 +58,20 @@ export function DownloadPlan({
         pom.setAttribute("download", filename);
         pom.click();
     }
-    const findIndexplan: number = allplans.findIndex(
-        (plan) => plan.name === viewPlan
-    );
-    const csv = arrayToCSV([allplans[findIndexplan].semesters]);
+
     const download = () => {
-        downloadBlob(csv, ".csv", "text/csv;charset=utf-8;");
+        console.log(viewPlan);
+        if (viewPlan !== "") {
+            const findIndexplan: number = allplans.findIndex(
+                (plan) => plan.name === viewPlan
+            );
+            console.log(findIndexplan);
+            const csv = arrayToCSV([allplans[findIndexplan].semesters]);
+            downloadBlob(csv, ".csv", "text/csv;charset=utf-8;");
+        }
+        handleClose();
     };
+
     return (
         <div>
             <Modal show={show} onHide={handleClose} animation={false}>
@@ -72,19 +79,28 @@ export function DownloadPlan({
                     <Modal.Title>Choose Plan</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <Form.Group>
-                        <Form.Select
-                            value={viewPlan}
-                            onChange={selectedPlan}
-                            style={{ textAlign: "center" }}
-                        >
-                            {allplans.map((plan) => (
-                                <option key={plan.name} value={plan.name}>
-                                    {plan.name}
+                    {allplans.length === 0 ? (
+                        <div>
+                            <Modal.Title>Please add a degree plan</Modal.Title>
+                        </div>
+                    ) : (
+                        <Form.Group>
+                            <Form.Select
+                                value={viewPlan}
+                                onChange={selectedPlan}
+                                style={{ textAlign: "center" }}
+                            >
+                                <option>
+                                    Please select a degree plan to download
                                 </option>
-                            ))}
-                        </Form.Select>
-                    </Form.Group>
+                                {allplans.map((plan) => (
+                                    <option key={plan.name} value={plan.name}>
+                                        {plan.name}
+                                    </option>
+                                ))}
+                            </Form.Select>
+                        </Form.Group>
+                    )}
                 </Modal.Body>
                 <Modal.Footer>
                     <Button
