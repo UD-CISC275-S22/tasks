@@ -226,6 +226,18 @@ export function ViewSemester(): JSX.Element {
     }
 
     function addClass(targetYear: number, targetSem: string): void {
+        const RequiredCourseList = [
+            "CISC108",
+            "CISC181",
+            "CISC210",
+            "CISC220",
+            "CISC260",
+            "CISC275",
+            "CISC303",
+            "CISC320",
+            "CISC361",
+            "CISC372"
+        ];
         const idx = index(targetYear, targetSem);
         const newSemesters = [...semesters];
         const choiceIdx = COURSES_LIST.findIndex(
@@ -242,6 +254,8 @@ export function ViewSemester(): JSX.Element {
         // looks through the course list in the current semester and filters out the
         // course with the same "Title" as the state "currCourse"
         // **refer to "currCourse" documentation for more info **
+        console.log(RequiredCourseList.indexOf("CISC108"));
+        console.log(RequiredCourseList.indexOf("Bob"));
         newSemesters[idx].courseList = [...newClasses, choice];
         setSemesters(newSemesters);
     }
