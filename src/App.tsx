@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import Image1 from "./Images/Delaware-Blue-Hens-Logo.png";
 import Image2 from "./Images/Udel-Crest.png";
+import Image3 from "./Images/UniversityofDelawareLogo.png";
 import WelcomeMessage from "./welcome";
 import { SideNav2 } from "./SideNav/SideNav2";
 import { SwitchComponents } from "./SwitchComponents";
@@ -146,7 +147,7 @@ function App(): JSX.Element {
         <div className="App">
             <header className="App-header">
                 <img src={Image1} className="logo" />
-                <h1 className="Title">Udel CS Course Scheduler</h1>
+                <h1 className="Title">Course Scheduler</h1>
                 <img src={Image2} className="logo" />
             </header>
             {!page ? (
@@ -155,7 +156,12 @@ function App(): JSX.Element {
                     onLogout={handleLogout}
                 ></WelcomeMessage>
             ) : (
-                <div>
+                <div
+                    style={{
+                        backgroundImage:
+                            "linear-gradient(#fcf0a7 10%, #ffd902 85%)"
+                    }}
+                >
                     {
                         //prettier giving issues with large ternary else. Will be fixed by end of sprint.
                     }
@@ -207,6 +213,16 @@ function App(): JSX.Element {
                                     allplans={plans}
                                     changeViewSemesters={setSemesters}
                                     setCurrentPlan={setCurrentPlan}
+                                />
+                            )}
+                            {currentPlan === "" && (
+                                <img
+                                    src={Image3}
+                                    alt=""
+                                    style={{
+                                        maxHeight: "650px",
+                                        maxWidth: "650px"
+                                    }}
                                 />
                             )}
                             {downloadPlan && (
