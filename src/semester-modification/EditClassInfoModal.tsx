@@ -3,7 +3,7 @@ import { Button, Form, Modal } from "react-bootstrap";
 import { classes } from "../Interface/classes";
 import { useState } from "react";
 import { semester } from "../Interface/semester";
-import { red } from "@mui/material/colors";
+//import { red } from "@mui/material/colors";
 //import realData from "../data/corrected_data.json";
 
 //import { semester } from "../Interface/semester";
