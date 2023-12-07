@@ -38,7 +38,9 @@ import { ClearAllSemesters } from "./Buttons/ClearAllSemesters";
 import { SavePlanInto } from "./Buttons/SavePlanInto";
 import { LoadPlan } from "./Buttons/LoadPlan";
 import { PickAPlan } from "./Buttons/PickAPlan";
+import { RequiredClasses } from "./Buttons/requiredClasses";
 import CourseEdit from "./CourseEdit";
+import { CoreBS } from "../Interfaces/requirements";
 
 //all the default concentration plans
 let AI_Plan = AI();
@@ -223,6 +225,25 @@ export function ViewSemester(): JSX.Element {
         // course with the same "Title" as the state "currCourse"
         // **refer to "currCourse" documentation for more info **
         setSemesters(newSemesters);
+    }
+
+    function requiredClasses(targetYear: number, targetSem: string) {
+        const idx = index(targetYear, targetSem);
+        const newSemesters = [...semesters];
+        const core = CoreBS;
+
+        /*The substring (0,7) is so that it only looks for the first 7 indexs 
+        so insead of CISC181 - Introduction to Computer Science II 
+        it will look for CISC181*/
+        const filteredClasses = newSemesters[idx].courseList.filter(
+            (aCourse: Course) => core.includes(aCourse.name.substring(0, 7))
+        );
+        /*     newSemesters[idx].courseList = [...filteredClasses];
+        // looks through the course list in the current semester and filters out the
+        // course with the same "Title" as the state "currCourse"
+        // **refer to "currCourse" documentation for more info **
+        setSemesters(newSemesters);
+        */
     }
 
     function addClass(targetYear: number, targetSem: string): void {
@@ -529,6 +550,18 @@ export function ViewSemester(): JSX.Element {
         <div style={{ backgroundColor: "#0f234c" }}>
             <div className="DropdownMenu">
                 <StartNewPlan startNewSession={startNewSession}></StartNewPlan>
+                <RequiredClasses
+                    requiredClass={requiredClasses}
+                    updateCurrCourse={function (
+                        event: React.ChangeEvent<HTMLSelectElement>
+                    ): void {
+                        throw new Error("Function not implemented.");
+                    }}
+                    currCourse={0}
+                    Course_List={[]}
+                    targetYear={0}
+                    targetSem={""}
+                ></RequiredClasses>
                 <ClearSemester clearSemester={clearSemester}></ClearSemester>
                 <ClearAllSemesters
                     clearAll={clearAll}
