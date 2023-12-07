@@ -48,7 +48,10 @@ export function AddClass({
             //         ...course.code
             //     ]
             // );
-            const isFulfilled = prequesite.every((prereq: string): boolean =>
+            const stringPreReq = prequesite.map((preR: string): string =>
+                preR.split(" ").join("")
+            );
+            const isFulfilled = stringPreReq.every((prereq: string): boolean =>
                 previousClassList.includes(prereq)
             );
             console.log(isFulfilled);
@@ -56,7 +59,10 @@ export function AddClass({
         }
 
         // Create a new array of classes for the updated semester
-        const preReqBoolean = checkPreReqs(newClass.preReq, semIdsLower);
+        const preReqBoolean: boolean = checkPreReqs(
+            newClass.preReq,
+            semIdsLower
+        );
         console.log(
             "Does this " + newClass + " have all prereqs met" + preReqBoolean
         );
