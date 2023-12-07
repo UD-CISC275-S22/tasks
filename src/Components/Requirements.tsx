@@ -1,3 +1,4 @@
+export {};
 //import React, { useState } from "react";
 //import Course from "./draggingCourses";
 //import { Plan } from "../Interfaces/plan";
