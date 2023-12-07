@@ -60,6 +60,7 @@ export const updateCourseList = (
     const index = courseList.findIndex(
         (course) => course.id === editedCourse.id
     );
+    console.log("index in updateCourseList in course.tsx: ", index);
 
     //if course is found, update in courseList
     if (index !== -1) {
@@ -108,11 +109,7 @@ export function displayCourse(course: Course): JSX.Element {
                     </Tooltip>
                 }
             >
-                <span key={course.id}>
-                    {isHovered
-                        ? `${course.title} - ${course.name}`
-                        : `${course.title} - ${course.name}`}
-                </span>
+                <span>{`${course.title} - ${course.name}`}</span>
             </OverlayTrigger>
         </div>
     );
