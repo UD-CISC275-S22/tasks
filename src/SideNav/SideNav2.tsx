@@ -57,11 +57,11 @@ export function SideNav2({
                     <div id="picture">{<ChecklistIcon />}</div>
                     <div id="name">{"Degree Audit"}</div>
                 </li>
-                <li className="row" onClick={() => flipDownload()}>
+                <li className="rowDownload" onClick={() => flipDownload()}>
                     <div id="picture">{<FileDownloadIcon />}</div>
                     <div id="name">{"Download Plan"}</div>
                 </li>
-                <li className="row" onClick={() => handleLogout()}>
+                <li className="rowLogout" onClick={() => handleLogout()}>
                     <div id="picture">{<Logout />}</div>
                     <div id="name">{"Logout"}</div>
                 </li>

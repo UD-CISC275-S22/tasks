@@ -3,6 +3,7 @@ import { Button, Form, Modal } from "react-bootstrap";
 import { classes } from "../Interface/classes";
 import { useState } from "react";
 import { semester } from "../Interface/semester";
+import { red } from "@mui/material/colors";
 //import realData from "../data/corrected_data.json";
 
 //import { semester } from "../Interface/semester";
@@ -158,13 +159,20 @@ export function EditClassInfoModal({
                     </Form.Group>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button
+                    <button
+                        type="button"
+                        className="btn btn-outline-danger"
                         onClick={() => {
                             closingRevertModal();
                         }}
+                        disabled={
+                            newCode === ogCode &&
+                            newTitle === ogTitle &&
+                            newCredits === ogCredits
+                        }
                     >
                         Revert
-                    </Button>
+                    </button>
                     <Button
                         onClick={() => {
                             flipModalView();
