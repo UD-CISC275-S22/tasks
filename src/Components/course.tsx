@@ -109,11 +109,7 @@ export function displayCourse(course: Course): JSX.Element {
                     </Tooltip>
                 }
             >
-                <span key={course.id}>
-                    {isHovered
-                        ? `${course.title} - ${course.name}`
-                        : `${course.title} - ${course.name}`}
-                </span>
+                <span>{`${course.title} - ${course.name}`}</span>
             </OverlayTrigger>
         </div>
     );
