@@ -31,22 +31,7 @@ export function Planner({
     //export function SingleMultipleSemester(): JSX.Element { ----------------adding to DegreePlan
     const [semester1, setSemester1] = useState<string>("");
     const [semArr, setSemArr] = useState<semester[]>([]);
-    const [editingCourse, setEditingCourse] = useState<Class>({
-        courseTitle: "",
-        courseCode: "",
-        numPreReqs: 0,
-        preReqs: [],
-        semester: "",
-        credits: 0,
-        canEditCredits: false,
-        taken: false,
-        note: ""
-    });
     //const [courses, setCourses] = useState<Class[]>([]); // State for courses
-
-    const handleEditClick = (course: Class) => {
-        setEditingCourse(course);
-    };
 
     const handleEditFormSubmit = (
         OGcourseCode: string,
