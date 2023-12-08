@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import Image1 from "./Images/Delaware-Blue-Hens-Logo.png";
 import Image2 from "./Images/Udel-Crest.png";
+import Image3 from "./Images/UniversityofDelawareLogo.png";
 import WelcomeMessage from "./welcome";
 import { SideNav2 } from "./SideNav/SideNav2";
 import { SwitchComponents } from "./SwitchComponents";
@@ -13,7 +14,11 @@ import { classes } from "./Interface/classes";
 import { Plan } from "./Interface/Plan";
 //import sample from "./data/Dummy.json";
 import { AddToSemester } from "./semester-modification/AddToSemester";
-import { ChosenMajor, generalClasses } from "./Audit/ChosenMajor";
+import {
+    ChosenMajor,
+    generalClasses,
+    generalCredits
+} from "./Audit/ChosenMajor";
 import { PlanView } from "./PlanView/PlanView";
 import { DownloadPlan } from "./PlanView/DownloadPlan";
 import { SeeAuditPage } from "./Audit/SeeAuditPage";
@@ -72,14 +77,19 @@ function App(): JSX.Element {
     //Classes for each major
     const [degreeRequirements, setDegreeRequirements] =
         useState<string[]>(generalClasses);
-    //const [completedReq, setCompletedReq] = useState<string[]>([]);
-    const [usedClasses, setUsedClasses] = useState<classes[][]>([[]]);
+    const [basicCredits] = useState<number[]>(generalCredits);
+    const [usedClasses, setUsedClasses] = useState<classes[][]>([]);
+    const [major, setMajor] = useState<string>("");
 
     function reqList(finalList: string[]) {
-        if (!degreeRequirements.every((req, IDX) => req === finalList[IDX])) {
-            setUsedClasses([[]]);
-        }
         setDegreeRequirements(finalList);
+    }
+
+    function setNewMajor(newMajor: string) {
+        if (major !== newMajor) {
+            setUsedClasses([]);
+        }
+        setMajor(newMajor);
     }
 
     function pushCurrList(classesUsed: classes[][]) {
@@ -146,7 +156,7 @@ function App(): JSX.Element {
         <div className="App">
             <header className="App-header">
                 <img src={Image1} className="logo" />
-                <h1 className="Title">Udel CS Course Scheduler</h1>
+                <h1 className="Title">Course Scheduler</h1>
                 <img src={Image2} className="logo" />
             </header>
             {!page ? (
@@ -155,7 +165,12 @@ function App(): JSX.Element {
                     onLogout={handleLogout}
                 ></WelcomeMessage>
             ) : (
-                <div>
+                <div
+                    style={{
+                        backgroundImage:
+                            "linear-gradient(#fcf0a7 10%, #ffd902 85%)"
+                    }}
+                >
                     {
                         //prettier giving issues with large ternary else. Will be fixed by end of sprint.
                     }
@@ -198,6 +213,7 @@ function App(): JSX.Element {
                                     show={seeAudit}
                                     majorPageView={flipMajorPageView}
                                     reqList={reqList}
+                                    newMajor={setNewMajor}
                                 />
                             )}
                             {displayPlan && (
@@ -207,6 +223,16 @@ function App(): JSX.Element {
                                     allplans={plans}
                                     changeViewSemesters={setSemesters}
                                     setCurrentPlan={setCurrentPlan}
+                                />
+                            )}
+                            {currentPlan === "" && (
+                                <img
+                                    src={Image3}
+                                    alt=""
+                                    style={{
+                                        maxHeight: "650px",
+                                        maxWidth: "650px"
+                                    }}
                                 />
                             )}
                             {downloadPlan && (
@@ -238,6 +264,8 @@ function App(): JSX.Element {
                                 reqList={degreeRequirements}
                                 plan={semesters}
                                 prevUsedClasses={usedClasses}
+                                major={major}
+                                creditList={basicCredits}
                                 pushCurrList={pushCurrList}
                                 stopView={flipMajorPageView}
                             ></SeeAuditPage>

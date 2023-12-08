@@ -135,7 +135,10 @@ export function SemesterTable({
     //<Button onClick={download}>download</Button>;
 
     return (
-        <div className="semesterTable">
+        <div
+            className="semesterTable"
+            style={{ overflowY: "scroll", maxHeight: "700px" }}
+        >
             <h2>{currentPlan === "" ? "" : `Plan Name: ${currentPlan}`}</h2>
             {/*<Button onClick={download}>download</Button>*/}
 

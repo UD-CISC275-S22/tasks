@@ -50,14 +50,3 @@ export function RemoveClass({
         </div>
     );
 }
-
-{
-    /* <RemoveClass
-    schedule={currSemesterArr}
-    scheduleID={currentSemester.id}
-    classToDelete={classItem}
-    onRemoveClass={function (updatedSchedule: semester[]): void {
-        setCurrSemesterArr(updatedSchedule);
-    }}
-></RemoveClass>; */
-}
