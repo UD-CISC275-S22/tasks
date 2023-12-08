@@ -1,4 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
+/*
 import { Button, Form } from "react-bootstrap";
 import { Course } from "../../Interfaces/course";
 import React from "react";
@@ -12,7 +13,7 @@ In semester.tsx I imported CoreBS from the requirements.ts interface so that I c
 in that array to the class in each plan as a starting point because if we can get that to work we can get the rest to work
 I think i'm close to getting the courses to display got I got a little lost so that is where I am currently at atm
 Please feel free to continue where I left off and add or remove whatever you need to
-PLEASE DOCUMENT THE CHANGES THAT YOU DO*/
+PLEASE DOCUMENT THE CHANGES THAT YOU DO
 export const RequiredClasses = ({
     requiredClass,
     updateCurrCourse,
@@ -51,3 +52,4 @@ export const RequiredClasses = ({
         </div>
     );
 };
+*/
