@@ -36,20 +36,20 @@ describe("SemesterView", () => {
     });
     const setDragCourseHandler = jest.fn();
 
-    beforeEach(() => {
-        render(
-            <SemesterView
-                key={semesterExample.id}
-                semester={semesterExample}
-                handleOnDragOver={DragOverHandler}
-                handleOnDrop={DropHandler}
-                clearSemester={clearSemesterHandler}
-                setDragCourse={setDragCourseHandler}
-                clearCourses={jest.fn()}
-                updateSemester={jest.fn()}
-            />
-        );
-    });
+    // beforeEach(() => {
+    //     render(
+    //         <SemesterView
+    //             key={semesterExample.id}
+    //             semester={semesterExample}
+    //             handleOnDragOver={DragOverHandler}
+    //             handleOnDrop={DropHandler}
+    //             clearSemester={clearSemesterHandler}
+    //             setDragCourse={setDragCourseHandler}
+    //             clearCourses={jest.fn()}
+    //             updateSemester={jest.fn()}
+    //         />
+    //     );
+    // });
     test("SemesterView renders a heading with the season of the semester.", () => {
         screen.getByRole("heading", { name: semesterExample.season });
     });
