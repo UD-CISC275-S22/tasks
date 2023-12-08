@@ -71,7 +71,7 @@ export function SeeAuditPage({
     }
 
     function setCredits(IDX: number) {
-        const holder = [...creditList];
+        const holder = [...newCredit];
         holder[IDX] =
             holder[IDX] -
             usedClasses[IDX].reduce(
@@ -124,7 +124,8 @@ export function SeeAuditPage({
                                         <Button
                                             onClick={() => {
                                                 usedClasses[IDX] = [];
-                                                setNewCredit(creditList);
+                                                newCredit[IDX] =
+                                                    creditList[IDX];
                                                 pushCurrList(usedClasses);
                                             }}
                                         >
