@@ -29,6 +29,11 @@ function App(): JSX.Element {
         <div className="App">
             <header className="App-header">
                 <img src={logo} width="100" alt="BH" /> CS Degree Planner
+                <h5>
+                    Welcome! To get started, create a new degree plan, click on
+                    the plan you would like to view, and click &ldquo;View
+                    Plan&ldquo;
+                </h5>
             </header>
             {view === Views.degreePlanView && (
                 <DegreePlanView
