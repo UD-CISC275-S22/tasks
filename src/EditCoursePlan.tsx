@@ -52,8 +52,7 @@ function Semester({
                             <td>{rendCourse.ticker}</td>
                             <td>{rendCourse.name}</td>
                             <td>{rendCourse.credits}</td>
-                            <Button
-                                variant="danger"
+                            <button
                                 onClick={(e) => {
                                     e.stopPropagation();
                                     if (rendCourse.UUID) {
@@ -63,9 +62,12 @@ function Semester({
                                         );
                                     }
                                 }}
+                                style={{
+                                    backgroundColor: "red"
+                                }}
                             >
                                 Delete
-                            </Button>
+                            </button>
                         </tr>
                     );
                 })}
