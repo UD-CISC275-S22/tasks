@@ -10,6 +10,8 @@ export function SeeAuditPage({
     reqList,
     plan,
     prevUsedClasses,
+    major,
+    creditList,
     pushCurrList,
     stopView
 }: {
@@ -17,18 +19,22 @@ export function SeeAuditPage({
     reqList: string[];
     plan: semester[];
     prevUsedClasses: classes[][];
+    major: string;
+    creditList: number[];
     pushCurrList: (usedClasses: classes[][]) => void;
     stopView: () => void;
 }): JSX.Element {
     const [usedClasses, setUsedClasses] =
         useState<classes[][]>(prevUsedClasses);
     const [showModal, setShowModal] = useState(false);
+    const [newCredit, setNewCredit] = useState<number[]>(creditList);
     const [selectedClass, setSelectedClass] = useState<number>(0);
+    //Base case only occurs if no option is available
     const [classToAdd, setClassToAdd] = useState<classes>({
-        code: "MATH166",
-        title: "SPECIAL PROBLEM",
-        credits: 3,
-        preReq: ["No prerequisites."]
+        code: "",
+        title: "",
+        credits: 0,
+        preReq: [""]
     });
 
     function endView() {
@@ -56,22 +62,40 @@ export function SeeAuditPage({
             const holder = [...usedClasses];
 
             if (selectedClass >= 0 && selectedClass < holder.length) {
-                holder[selectedClass] = [classToAdd];
+                holder[selectedClass].push(classToAdd);
                 setUsedClasses(holder);
             }
         }
+        setCredits(selectedClass);
         handleClose();
+    }
+
+    function setCredits(IDX: number) {
+        const holder = [...creditList];
+        holder[IDX] =
+            holder[IDX] -
+            usedClasses[IDX].reduce(
+                (total: number, classList: classes) =>
+                    total + classList.credits,
+                0
+            );
+        holder[IDX] = holder[IDX] < 0 ? 0 : holder[IDX];
+        setNewCredit(holder);
     }
 
     if (canView) {
         return (
             <div>
-                <table>
+                <h3>{major}</h3>
+                <table className="table table-hover table-dark">
                     <thead>
                         <tr>
-                            <th>Requirement</th>
-                            <th>Filled Classes</th>
-                            <th>Add Class To Fill</th>
+                            <th scope="col">Requirement</th>
+                            <th scope="col">Filled Classes</th>
+                            <th scope="col">Add Class To Fill</th>
+                            <th scope="col">Reset List</th>
+                            <th scope="col">Credits</th>
+                            <th scope="col">Complete</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -83,8 +107,8 @@ export function SeeAuditPage({
                                         {usedClasses[IDX] == null
                                             ? (usedClasses[IDX] = [])
                                             : usedClasses[IDX].map(
-                                                  (usedClass) => usedClass.code
-                                              )}
+                                                  (classes) => classes.code
+                                              ).join(", ")}
                                     </td>
                                     <td>
                                         <Button
@@ -93,8 +117,25 @@ export function SeeAuditPage({
                                                 handleClose();
                                             }}
                                         >
-                                            Fill Requirement
+                                            Add Class
                                         </Button>
+                                    </td>
+                                    <td>
+                                        <Button
+                                            onClick={() => {
+                                                usedClasses[IDX] = [];
+                                                setNewCredit(creditList);
+                                                pushCurrList(usedClasses);
+                                            }}
+                                        >
+                                            Reset
+                                        </Button>
+                                    </td>
+                                    <td>{newCredit[IDX]}</td>
+                                    <td>
+                                        {newCredit[IDX] == 0
+                                            ? "Complete"
+                                            : "Incomplete"}
                                     </td>
                                 </tr>
                             );
