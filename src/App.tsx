@@ -161,9 +161,9 @@ function App(): JSX.Element {
 
             <Row>
                 <Col>
-                    <header>
+                    <h3>
                         <b>{plan.title}</b>
-                    </header>
+                    </h3>
 
                     <p></p>
                     <Button

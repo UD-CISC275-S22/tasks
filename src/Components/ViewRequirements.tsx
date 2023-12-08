@@ -126,7 +126,7 @@ export function ViewRequirements({
     function switchingDegreeInfo() {
         if (degree === "BA Core") {
             settingDegreeInfo(Degrees[0]);
-        } else if (degree === "BS Core") {
+        } else {
             settingDegreeInfo(Degrees[1]);
         }
     }
