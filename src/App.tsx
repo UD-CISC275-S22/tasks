@@ -14,7 +14,11 @@ import { classes } from "./Interface/classes";
 import { Plan } from "./Interface/Plan";
 //import sample from "./data/Dummy.json";
 import { AddToSemester } from "./semester-modification/AddToSemester";
-import { ChosenMajor, generalClasses } from "./Audit/ChosenMajor";
+import {
+    ChosenMajor,
+    generalClasses,
+    generalCredits
+} from "./Audit/ChosenMajor";
 import { PlanView } from "./PlanView/PlanView";
 import { DownloadPlan } from "./PlanView/DownloadPlan";
 import { SeeAuditPage } from "./Audit/SeeAuditPage";
@@ -73,14 +77,19 @@ function App(): JSX.Element {
     //Classes for each major
     const [degreeRequirements, setDegreeRequirements] =
         useState<string[]>(generalClasses);
-    //const [completedReq, setCompletedReq] = useState<string[]>([]);
-    const [usedClasses, setUsedClasses] = useState<classes[][]>([[]]);
+    const [basicCredits] = useState<number[]>(generalCredits);
+    const [usedClasses, setUsedClasses] = useState<classes[][]>([]);
+    const [major, setMajor] = useState<string>("");
 
     function reqList(finalList: string[]) {
-        if (!degreeRequirements.every((req, IDX) => req === finalList[IDX])) {
-            setUsedClasses([[]]);
-        }
         setDegreeRequirements(finalList);
+    }
+
+    function setNewMajor(newMajor: string) {
+        if (major !== newMajor) {
+            setUsedClasses([]);
+        }
+        setMajor(newMajor);
     }
 
     function pushCurrList(classesUsed: classes[][]) {
@@ -204,6 +213,7 @@ function App(): JSX.Element {
                                     show={seeAudit}
                                     majorPageView={flipMajorPageView}
                                     reqList={reqList}
+                                    newMajor={setNewMajor}
                                 />
                             )}
                             {displayPlan && (
@@ -254,6 +264,8 @@ function App(): JSX.Element {
                                 reqList={degreeRequirements}
                                 plan={semesters}
                                 prevUsedClasses={usedClasses}
+                                major={major}
+                                creditList={basicCredits}
                                 pushCurrList={pushCurrList}
                                 stopView={flipMajorPageView}
                             ></SeeAuditPage>
