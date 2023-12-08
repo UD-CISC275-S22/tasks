@@ -27,6 +27,9 @@ describe("FilteringSearchTests", () => {
                 flipDownload={function (): void {
                     throw new Error("Function not implemented.");
                 }}
+                handleLogout={function (): void {
+                    throw new Error("Function not implemented.");
+                }}
             />
         );
         expect(screen.getByText(/Add Degree Plan/i)).toBeInTheDocument();

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import Image1 from "./Images/Delaware-Blue-Hens-Logo.png";
 import Image2 from "./Images/Udel-Crest.png";
+import Image3 from "./Images/UniversityofDelawareLogo.png";
 import WelcomeMessage from "./welcome";
 import { SideNav2 } from "./SideNav/SideNav2";
 import { SwitchComponents } from "./SwitchComponents";
@@ -11,7 +12,7 @@ import { AddSemesterModal } from "./SemesterModal/addSemesterModal";
 import { semester } from "./Interface/semester";
 import { classes } from "./Interface/classes";
 import { Plan } from "./Interface/Plan";
-import sample from "./data/Dummy.json";
+//import sample from "./data/Dummy.json";
 import { AddToSemester } from "./semester-modification/AddToSemester";
 import {
     ChosenMajor,
@@ -21,11 +22,12 @@ import {
 import { PlanView } from "./PlanView/PlanView";
 import { DownloadPlan } from "./PlanView/DownloadPlan";
 import { SeeAuditPage } from "./Audit/SeeAuditPage";
-import { AddPlan } from "./addPlan/AddPlan";
+import { AddDeletePlan } from "./addPlan/AddDeletePlan";
+import { auth } from "./firebase";
+import { signOut } from "firebase/auth";
 
 function App(): JSX.Element {
     const [page, setPage] = useState(false);
-    const [name, setName] = useState("");
     const [seeSemesterView, setSeeSemesterView] = useState(false);
     const [modalView, setModalView] = useState(false);
     const [addView, setAddView] = useState(false);
@@ -36,9 +38,6 @@ function App(): JSX.Element {
     const [majorPageView, setMajorPageView] = useState(false);
     const [addPlanView, setAddPlanView] = useState(false);
 
-    const getName = () => {
-        setName(name);
-    };
     const showHomePage = () => {
         setPage(!page);
     };
@@ -96,7 +95,21 @@ function App(): JSX.Element {
     function pushCurrList(classesUsed: classes[][]) {
         setUsedClasses(classesUsed);
     }
+    const handleLogout = () => {
+        // console.log(page);
+        // setPage(!page);
+        // console.log("Logging out...");
+        // console.log(page);
+        signOut(auth)
+            .then(() => {
+                console.log("Sign Out was Successful");
+                //onLogout();
+                showHomePage();
+            })
+            .catch((error) => console.log(error));
+    };
 
+    /*
     const planExamples = sample.map(
         (plan): Plan => ({
             ...plan,
@@ -108,7 +121,8 @@ function App(): JSX.Element {
             }))
         })
     );
-    const [plans, setPlans] = useState<Plan[]>(planExamples);
+*/
+    const [plans, setPlans] = useState<Plan[]>([]);
 
     const [semesters, setSemesters] = useState<semester[]>([]);
 
@@ -134,22 +148,29 @@ function App(): JSX.Element {
         }
     }
 
+    console.log(currentPlan);
+
     useEffect(() => updatingPlans(), [semesters]);
 
     return (
         <div className="App">
             <header className="App-header">
                 <img src={Image1} className="logo" />
-                <h1 className="Title">Udel CS Course Scheduler</h1>
+                <h1 className="Title">Course Scheduler</h1>
                 <img src={Image2} className="logo" />
             </header>
             {!page ? (
                 <WelcomeMessage
                     showHomePage={showHomePage}
-                    getName={getName}
+                    onLogout={handleLogout}
                 ></WelcomeMessage>
             ) : (
-                <div>
+                <div
+                    style={{
+                        backgroundImage:
+                            "linear-gradient(#fcf0a7 10%, #ffd902 85%)"
+                    }}
+                >
                     {
                         //prettier giving issues with large ternary else. Will be fixed by end of sprint.
                     }
@@ -164,6 +185,7 @@ function App(): JSX.Element {
                                 flipAudit={flipAudit}
                                 flipAddView={flipAddView}
                                 flipDownload={flipDownload}
+                                handleLogout={handleLogout}
                             ></SideNav2>
                         </Col>
                         <Col sm={10}>
@@ -173,6 +195,7 @@ function App(): JSX.Element {
                                     show={modalView}
                                     semesters={semesters}
                                     settingSemester={setSemesters}
+                                    currentPlan={currentPlan}
                                 />
                             )}
                             {addView && (
@@ -181,6 +204,7 @@ function App(): JSX.Element {
                                     show={addView}
                                     semesters={semesters}
                                     onAddClass={onAddClass}
+                                    currentPlan={currentPlan}
                                 />
                             )}
                             {seeAudit && (
@@ -201,6 +225,16 @@ function App(): JSX.Element {
                                     setCurrentPlan={setCurrentPlan}
                                 />
                             )}
+                            {currentPlan === "" && (
+                                <img
+                                    src={Image3}
+                                    alt=""
+                                    style={{
+                                        maxHeight: "650px",
+                                        maxWidth: "650px"
+                                    }}
+                                />
+                            )}
                             {downloadPlan && (
                                 <DownloadPlan
                                     handleClose={flipDownload}
@@ -209,19 +243,22 @@ function App(): JSX.Element {
                                 />
                             )}
                             {addPlanView && (
-                                <AddPlan
+                                <AddDeletePlan
                                     handleClose={flipAddPlanView}
                                     show={addPlanView}
                                     allplans={plans}
                                     setPlans={setPlans}
+                                    currentPlan={currentPlan}
+                                    setCurrentPlan={setCurrentPlan}
+                                    setSemesters={setSemesters}
                                 />
                             )}
                             <SwitchComponents
                                 seeSemesterView={seeSemesterView}
                                 semesterExamples={semesters}
                                 setSemesters={setSemesters}
+                                currentPlan={currentPlan}
                             ></SwitchComponents>
-
                             <SeeAuditPage
                                 canView={majorPageView}
                                 reqList={degreeRequirements}

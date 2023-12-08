@@ -17,15 +17,18 @@ export function PlanView({
     changeViewSemesters: (viewSemesteres: semester[]) => void;
     setCurrentPlan: (name: string) => void;
 }): JSX.Element {
-    const [viewPlan, setViewPlan] = useState<string>(allplans[0].name);
+    const [viewPlan, setViewPlan] = useState<string>("");
 
     function viewSemesterTable(): void {
-        const findIndexplan: number = allplans.findIndex(
-            (plan) => plan.name === viewPlan
-        );
-        const foundplan: Plan = allplans[findIndexplan];
-        changeViewSemesters(foundplan.semesters);
-        setCurrentPlan(viewPlan);
+        if (viewPlan !== "") {
+            const findIndexplan: number = allplans.findIndex(
+                (plan) => plan.name === viewPlan
+            );
+            console.log(viewPlan);
+            const foundplan: Plan = allplans[findIndexplan];
+            changeViewSemesters(foundplan.semesters);
+            setCurrentPlan(viewPlan);
+        }
         handleClose();
     }
 
@@ -41,17 +44,26 @@ export function PlanView({
                 </Modal.Header>
                 <Modal.Body>
                     <Form.Group>
-                        <Form.Select
-                            value={viewPlan}
-                            onChange={selectedPlan}
-                            style={{ textAlign: "center" }}
-                        >
-                            {allplans.map((plan) => (
-                                <option key={plan.name} value={plan.name}>
-                                    {plan.name}
-                                </option>
-                            ))}
-                        </Form.Select>
+                        {allplans.length === 0 ? (
+                            <div>
+                                <Modal.Title>
+                                    Please add a degree plan
+                                </Modal.Title>
+                            </div>
+                        ) : (
+                            <Form.Select
+                                value={viewPlan}
+                                onChange={selectedPlan}
+                                style={{ textAlign: "center" }}
+                            >
+                                <option>Please select a degree plan</option>
+                                {allplans.map((plan) => (
+                                    <option key={plan.name} value={plan.name}>
+                                        {plan.name}
+                                    </option>
+                                ))}
+                            </Form.Select>
+                        )}
                     </Form.Group>
                 </Modal.Body>
                 <Modal.Footer>

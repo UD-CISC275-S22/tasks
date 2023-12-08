@@ -43,7 +43,7 @@ export function SemesterView({
             onDragOver={(e) => handleOnDragOver(e)}
         >
             <div>
-                <h3>{semester.season}</h3>
+                <h3>{`Semester Name: ${semester.season}`}</h3>
             </div>
             <table className="table table-hover table-dark">
                 <thead>
