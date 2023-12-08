@@ -5,10 +5,9 @@ import { CoursePlan, SemesterI, dbMangement } from "./interfaces/semester";
 import catalog from "./data/catalog.json";
 import { Course } from "./interfaces/course";
 import { v4 as uuidv4 } from "uuid";
-import { AddCourseToSemester } from "./DBmanage";
+import { AddCourseToSemester, DeleteCourseFromSemester } from "./DBmanage";
 import { CourseplanClick } from "./EditCoursePlan";
-import { DegreeRequirementCheck } from "./DegreeRequirementCheck";
-import CurrentDegree from "./data/degrees.json";
+import "./App.css";
 
 interface CatalogCourse {
     code: string;
@@ -32,24 +31,22 @@ interface CatalogCourses {
 export function CoureseplansBoot({
     updateCoursePlan,
     setCourseEdit,
-    propcurCoursePlan,
-    setEditCoursePlan
+    curCoursePlan,
+    setEditCoursePlan,
+    deletecourse
 }: {
     updateCoursePlan: (cousePlan: CoursePlan) => void;
     setCourseEdit: (course: Course) => void;
-    propcurCoursePlan: CoursePlan;
+    curCoursePlan: CoursePlan;
     setEditCoursePlan: (coureseplan: CoursePlan) => void;
+    deletecourse: (courseUUID: string, currentSemester: SemesterI) => void;
 }) {
     const [curCatalog, setcatalog] = useState<CatalogCourses>(catalog);
-    const [curCoursePlan, setcurCoursePlan] =
-        useState<CoursePlan>(propcurCoursePlan);
-    useEffect(() => setcurCoursePlan(propcurCoursePlan), [propcurCoursePlan]);
     const [queue, setqueue] = useState<Course[]>([]);
     useEffect(() => setEditCoursePlan(curCoursePlan), [curCoursePlan]);
     function addtempCourse(course: Course) {
         setqueue([...queue, course]);
     }
-
     function Save() {
         updateCoursePlan(curCoursePlan);
     }
@@ -60,6 +57,20 @@ export function CoureseplansBoot({
         );
         setqueue([]);
         //setEditCoursePlan();
+    }
+
+    function clickToDeleteFromSemester(
+        courseUUID: string,
+        currentSemester: SemesterI
+    ) {
+        console.log("click registeredqwe");
+        const updatedCoursePlan = DeleteCourseFromSemester(
+            currentSemester,
+            courseUUID,
+            curCoursePlan
+        );
+
+        setEditCoursePlan(updatedCoursePlan); // Update your state here
     }
     function setCourseplanDebug(courseplan: CoursePlan) {
         console.log("debug");
@@ -81,9 +92,7 @@ export function CoureseplansBoot({
         SetSeachval(event.target.value);
         setcatalog(searchCourses(catalog, event.target.value));
     }
-    function nameInput(event: React.ChangeEvent<HTMLInputElement>) {
-        curCoursePlan.name = event.target.value;
-    }
+
     function searchCourses(
         catalog: CatalogCourses,
         searchTerm: string
@@ -120,28 +129,12 @@ export function CoureseplansBoot({
 
     return (
         <div>
-            <Form.Group controlId="search" as={Row}>
-                <Col>
-                    <Form.Label> Name:</Form.Label>
-                    <FormControl
-                        className="float-end"
-                        type="text"
-                        placeholder="Untitled"
-                        onChange={nameInput}
-                    />
-                </Col>
-            </Form.Group>
-            <Button className={"float-end button"} onClick={Save}>
+            <Button onClick={Save} className="save-button">
                 Save
             </Button>
-            <DegreeRequirementCheck
-                currentPlan={curCoursePlan}
-                currentDegree={CurrentDegree[0]}
-            />
-
             <Row>
                 <Col sm={8}>
-                    <div>
+                    <div style={{ marginBottom: ".5rem" }}>
                         <Form.Group controlId="search" as={Row}>
                             <Col sm={3}>
                                 <FormControl
@@ -207,6 +200,7 @@ export function CoureseplansBoot({
                                                                         course.descr
                                                                 });
                                                             }}
+                                                            className="add-button"
                                                         >
                                                             ADD
                                                         </Button>
@@ -221,7 +215,13 @@ export function CoureseplansBoot({
                     </div>
                 </Col>
                 <Col sm={4}>
-                    <div style={{ maxHeight: "300px", overflowY: "auto" }}>
+                    <div
+                        style={{
+                            maxHeight: "300px",
+                            overflowY: "auto",
+                            marginTop: "2.85rem"
+                        }}
+                    >
                         <Table striped bordered hover>
                             <thead
                                 className="table-light"
@@ -270,6 +270,7 @@ export function CoureseplansBoot({
                     setCurrentCourseEdit={setCourseEdit}
                     selectedSemester={clickToAddToSemeser}
                     UpdateCourseplan={setCourseplanDebug}
+                    deletecourse={clickToDeleteFromSemester}
                 ></CourseplanClick>
             </Row>
         </div>
