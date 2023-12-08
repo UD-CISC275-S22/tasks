@@ -31,39 +31,54 @@ export function Planner({
     //export function SingleMultipleSemester(): JSX.Element { ----------------adding to DegreePlan
     const [semester1, setSemester1] = useState<string>("");
     const [semArr, setSemArr] = useState<semester[]>([]);
-    const [editingCourse, setEditingCourse] = useState<Class | null>(null);
+    const [editingCourse, setEditingCourse] = useState<Class>({
+        courseTitle: "",
+        courseCode: "",
+        numPreReqs: 0,
+        preReqs: [],
+        semester: "",
+        credits: 0,
+        canEditCredits: false,
+        taken: false,
+        note: ""
+    });
     //const [courses, setCourses] = useState<Class[]>([]); // State for courses
 
     const handleEditClick = (course: Class) => {
         setEditingCourse(course);
     };
 
-    const handleEditFormSubmit = (updatedCourse: Class) => {
+    const handleEditFormSubmit = (
+        OGcourseCode: string,
+        updatedCourse: Class
+    ) => {
         // Assuming you have an array of courses in state
         // const updatedCourses = semArr.map((course: Class) =>
         //     course.courseCode === updatedCourse.courseCode
         //         ? updatedCourse
         //         : course
         // );
-        const deepCopy = semArr.map((sem: semester): semester => ({ ...sem }));
-        const updatedCourses = deepCopy.map((sem: semester): semester => {
+        //const deepCopy = semArr.map((sem: semester): semester => ({ ...sem }));
+        console.log(updatedCourse, OGcourseCode);
+        const updatedCourses = semArr.map((sem: semester): semester => {
             return {
                 name: sem.name,
                 classes: [
                     ...sem.classes.map(
                         (course: Class): Class =>
-                            updatedCourse.courseCode ? updatedCourse : course
+                            OGcourseCode === course.courseCode
+                                ? updatedCourse
+                                : course
                     )
                 ]
             };
         });
-
         // Update your state with the new array of courses
         setSemArr(updatedCourses);
         console.log(semArr);
 
         // Clear the editing state
-        setEditingCourse(null);
+        // setEditingCourse(null);
     };
 
     const [semArrClicked, setSemArrClicked] = useState<semester[]>(semArr);
@@ -118,15 +133,10 @@ export function Planner({
                         </Button>
                     </Col>
                     <Col>
-                        <Button onClick={() => handleEditClick(course)}>
-                            Edit
-                        </Button>
-                        {editingCourse && (
-                            <EditCourse
-                                course={editingCourse}
-                                onEditFormSubmit={handleEditFormSubmit}
-                            />
-                        )}
+                        <EditCourse
+                            course={course}
+                            onEditFormSubmit={handleEditFormSubmit}
+                        />
                     </Col>
                 </Row>
             )
