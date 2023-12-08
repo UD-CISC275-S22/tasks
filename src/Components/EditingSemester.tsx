@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Col, Form, Row, Container, Button } from "react-bootstrap";
-import "../App.css";
 
 import { Semester } from "../Interfaces/semester";
 import { Plan } from "../Interfaces/plan";
+import "../App.css";
 
 type ChangeEvent = React.ChangeEvent<
     HTMLTextAreaElement | HTMLInputElement | HTMLSelectElement
@@ -13,8 +13,6 @@ export function EditingSemester({
     semester,
     plan,
     settingPlan,
-    plans,
-    settingPlans,
     editingSemester,
     clearSemesterCourses,
     editingFunc
@@ -49,7 +47,7 @@ export function EditingSemester({
     function savingSemesterEdits() {
         let newPlan: Plan;
         if (session === "Fall") {
-            const saveID = session + year;
+            const saveID = session.slice(0, 3) + year;
             const originalID = plan.semesters.findIndex(
                 (s: Semester): boolean => saveID === s.id
             );
@@ -59,7 +57,7 @@ export function EditingSemester({
             ) {
                 const newSemester: Semester = {
                     id: saveID,
-                    title: session,
+                    title: session + " " + year,
                     notes: "",
                     courseList: semester.courseList
                 };
@@ -84,7 +82,7 @@ export function EditingSemester({
             ) {
                 const newSemester: Semester = {
                     id: saveID,
-                    title: session,
+                    title: session + " " + year,
                     notes: "",
                     courseList: semester.courseList
                 };
@@ -102,70 +100,72 @@ export function EditingSemester({
         editingFunc();
     }
     return (
-        <Container>
-            <Row>
-                <Col>
-                    <Form.Group controlId="semesterID" as={Row}>
-                        <Form.Label column sm={1}>
-                            Year:
-                        </Form.Label>
-                        <Col>
-                            <Form.Control
-                                value={year}
-                                type="number"
-                                onChange={switchYearOffering}
-                            ></Form.Control>
-                        </Col>
-                    </Form.Group>
-                    <Form.Group controlId="semesterTitle" as={Row}>
-                        <Form.Label column sm={1}>
-                            Session:
-                        </Form.Label>
-                        <Col>
-                            <Form.Select
-                                value={session}
-                                onChange={switchSemesterOffering}
-                            >
-                                {courseSessions.map((choice: string) => (
-                                    <option key={choice} value={choice}>
-                                        {choice}
-                                    </option>
-                                ))}
-                            </Form.Select>
-                        </Col>
-                    </Form.Group>
+        <div>
+            <Container>
+                <Row>
+                    <Col>
+                        <Form.Group controlId="semesterID" as={Row}>
+                            <Form.Label column sm={2}>
+                                Term:
+                            </Form.Label>
+                            <Col>
+                                <Form.Control
+                                    value={year}
+                                    type="number"
+                                    onChange={switchYearOffering}
+                                />
+                            </Col>
+                        </Form.Group>
+                        <Form.Group controlId="semesterTitle" as={Row}>
+                            <Form.Label column sm={2}>
+                                Session:
+                            </Form.Label>
+                            <Col>
+                                <Form.Select
+                                    value={session}
+                                    onChange={switchSemesterOffering}
+                                >
+                                    {courseSessions.map((choice: string) => (
+                                        <option key={choice} value={choice}>
+                                            {choice}
+                                        </option>
+                                    ))}
+                                </Form.Select>
+                            </Col>
+                        </Form.Group>
 
-                    <Form.Group controlId="semesterNotes" as={Row}>
-                        <Form.Label column sm={3}>
-                            Notes:
-                        </Form.Label>
-                        <Col>
-                            <Form.Control
-                                value={notes}
-                                onChange={editingNotes}
-                                as="textarea"
-                                rows={4}
-                            ></Form.Control>
-                        </Col>
-                    </Form.Group>
+                        <Form.Group controlId="semesterNotes" as={Row}>
+                            <Form.Label column sm={2}>
+                                Notes:
+                            </Form.Label>
+                            <Col>
+                                <Form.Control
+                                    value={notes}
+                                    onChange={editingNotes}
+                                    as="textarea"
+                                    rows={2}
+                                />
+                            </Col>
+                        </Form.Group>
 
-                    <Button
-                        onClick={savingSemesterEdits}
-                        variant="success"
-                        data-testid="savingSemesterEditsMod"
-                    >
-                        Save
-                    </Button>
+                        <Button
+                            onClick={savingSemesterEdits}
+                            variant="success"
+                            data-testid="saveModES"
+                        >
+                            Save
+                        </Button>
 
-                    <Button
-                        onClick={() => clearSemesterCourses(semester.id)}
-                        variant="danger"
-                        data-testid="clearSemesterCoursesMod"
-                    >
-                        Clear Semester
-                    </Button>
-                </Col>
-            </Row>
-        </Container>
+                        <Button
+                            onClick={() => clearSemesterCourses(semester.id)}
+                            variant="danger"
+                            data-testid="clearModES"
+                        >
+                            Remove
+                        </Button>
+                    </Col>
+                </Row>
+            </Container>
+        </div>
     );
 }

@@ -1,70 +1,14 @@
-// import React /*{ useState }*/ from "react";
-// import "./App.css";
-// import { ViewSemester } from "./Components/Semester";
-// //import { Welcome } from "./Components/welcome";
-// //import { Button } from "react-bootstrap";
-// //import { clearSemester } from "./Components/clearingSemester";
-// //import { clearCourse } from "./Components/clearingCourse";
-
-// function App(): JSX.Element {
-//     //constants for welcome message button/modal
-//     //const [displayWelcomeMessage, displayWelcomeModal] = useState(true);
-//     //const welcomeMessage = () => displayWelcomeModal(false);
-//     //const welcomeMessageModal = () => displayWelcomeModal(true);
-
-//     return (
-//         <div className="App">
-//             <header className="App-header">
-//                 UD CISC275 - Degree Planner
-//                 <h6>Matthew Mestre</h6>
-//                 <h6>Bryant Ferguson</h6>
-//                 <h6>Ava West</h6>
-//                 <h6>Malika Iyer</h6>
-//                 <h6>Dina Dawood</h6>
-//             </header>
-//             <hr></hr>
-//             {/*This is the collaspe button*/}
-//             <button
-//                 type="button"
-//                 className="btn btn-info "
-//                 data-bs-toggle="collapse"
-//                 data-bs-target="#welcome_message"
-//             >
-//                 Need Help❓
-//             </button>
-//             <hr></hr>
-//             {/*When the button is clicked the message collapses*/}
-//             <div id="welcome_message" className="collapse">
-//                 <p>
-//                     Welcome to your personal Degree Planner! Some basic tools
-//                     have been designed to make your visit accessible to your
-//                     needs; this includes creating new plans from scratch and/or
-//                     compiling data from a csv file. You will be able to add,
-//                     remove, edit, and save various courses/semesters in a
-//                     multitude of plans. Scroll to the bottom of the page for
-//                     more instructions (will enhance later by making an
-//                     expandable/disposable button near the top of the page).
-//                 </p>
-//             </div>
-
-//             <hr></hr>
-//             <ViewSemester></ViewSemester>
-//         </div>
-//     );
-// }
-
-// export default App;
-
 import React, { useState } from "react";
 import { Button, Col, Row } from "react-bootstrap";
 import "./App.css";
 
-import AllCoursesList from "./data/AllCourseList.json";
-import degreeList from "./data/degreeList.json";
+import AllCourseList from "./data/AllCourseList.json";
+// import degreeList from "./data/degreeList.json";
 import displaySemesters from "./data/displaySemesters.json";
 
 import { Welcome } from "./Components/welcome";
 import { CourseOrigin } from "./Components/courseOrigin";
+import { AddingCoursetoCurrSem } from "./Components/AddingCoursetoCurrSem";
 
 import { AddingCourse } from "./Components/addingCourse";
 import { AddingSemester } from "./Components/addingSemester";
@@ -77,12 +21,16 @@ import { ClearingPlan } from "./Components/clearingPlan";
 import { ViewCourses } from "./Components/ViewCourses";
 import { ViewSemester } from "./Components/ViewSemester";
 import { ViewPooling } from "./Components/ViewPooling";
+import { ViewRequirements } from "./Components/ViewRequirements";
 
 import { EditingSemester } from "./Components/EditingSemester";
+import { EditingPlan } from "./Components/EditingPlan";
 import { MultiSemester } from "./Components/multiSemester";
 
 import { SwitchingSemesters } from "./Components/SwitchingSemesters";
 import { SwitchingPlan } from "./Components/SwitchingPlan";
+
+import { RemovingPlan } from "./Components/RemovingPlan";
 
 import { Course } from "./Interfaces/course";
 import { Semester } from "./Interfaces/semester";
@@ -157,13 +105,10 @@ function App(): JSX.Element {
             planList.map((p: Plan): Plan => (p.id === plan.id ? plan : p))
         );
     }
-    //constants for welcome message button/modal
-    //const [displayWelcomeMessage, displayWelcome] = useState(true);
-    //const welcomeMessage = () => displayWelcome(false);
-    //const welcomeMessage = () => displayWelcome(true);
 
     type CourseRecord = Record<string, Record<string, Course>>;
-    const ALLCOURSELST: CourseRecord = AllCoursesList;
+
+    const ALLCOURSELST: CourseRecord = AllCourseList;
     const poolingObj: PoolingObjects = {
         courses: ALLCOURSELST,
         semesters: plan.semesters
@@ -202,15 +147,14 @@ function App(): JSX.Element {
         <div className="App">
             <header className="App-header">
                 UD CISC275 - Degree Planner
-                <h6>Matthew Mestre</h6>
-                <h6>Bryant Ferguson</h6>
-                <h6>Ava West</h6>
-                <h6>Malika Iyer</h6>
-                <h6>Dina Dawood</h6>
+                <p></p>
+                <h6>Ava West, Bryant Ferguson, Dina Dawood</h6>
+                <h6>Malika Iyer, Matthew Mestre</h6>
             </header>
 
-            <div>
+            <div className="Welcome">
                 <p>
+                    <p></p>
                     <Welcome></Welcome>
                 </p>
             </div>
@@ -220,11 +164,12 @@ function App(): JSX.Element {
                     <header>
                         <b>{plan.title}</b>
                     </header>
+
+                    <p></p>
                     <Button
                         onClick={handleShowAddPlan}
                         data-testid="addingPlanMod"
                     >
-                        {" "}
                         Add Plan
                     </Button>
                     <AddingPlan
@@ -238,16 +183,18 @@ function App(): JSX.Element {
                     <Button
                         onClick={handleShowPlan}
                         data-testid="switchingBTWPlansMod"
+                        variant="warning"
                     >
                         Switch Plan
                     </Button>
-                    <SwitchingPlan>
+                    <SwitchingPlan
                         show={showingPlan}
                         handleClose={handleCloseShowPlan}
                         plan={plan}
                         settingPlan={settingPlan}
-                        plans={settingPlanList}
-                    </SwitchingPlan>
+                        plans={planList}
+                    ></SwitchingPlan>
+                    <p></p>
                     <MultiSemester
                         currentPlan={plan}
                         plans={planList}
@@ -258,9 +205,12 @@ function App(): JSX.Element {
                     ></MultiSemester>
                     <Row>
                         <Col>
+                            <p></p>
+
                             <Button
                                 onClick={handleAddingMod}
                                 data-testid="addingSemMod"
+                                variant="success"
                             >
                                 Add Semester
                             </Button>
@@ -270,9 +220,12 @@ function App(): JSX.Element {
                                 settingSemester={settingSemester}
                             ></AddingSemester>
 
+                            <p></p>
+
                             <Button
                                 onClick={handleShowClearPlan}
                                 data-testid="clearPlanMod"
+                                variant="warning"
                             >
                                 Clear Plan
                             </Button>
@@ -288,17 +241,18 @@ function App(): JSX.Element {
                             <Button
                                 onClick={handleShowRemovePlan}
                                 data-testid="removingPlanMod"
+                                variant="danger"
                             >
                                 Remove Plan
                             </Button>
-                            <RemovingPlan>
+                            <RemovingPlan
                                 show={removingPlan}
                                 handleClose={handleCloseRemovePlan}
                                 plan={plan}
                                 settingPlan={settingPlan}
                                 plans={planList}
                                 settingPlans={settingPlanList}
-                            </RemovingPlan>
+                            ></RemovingPlan>
 
                             <Button
                                 onClick={handleShowEditingPlan}
@@ -314,9 +268,20 @@ function App(): JSX.Element {
                                 plans={planList}
                                 settingPlans={settingPlanList}
                             ></EditingPlan>
+                            <p></p>
                         </Col>
                     </Row>
                 </Col>
+                <body>
+                    <Col sm={4}>
+                        <p></p>
+                        <ViewRequirements
+                            plan={plan}
+                            settingPlan={settingPlan}
+                            poolingObjects={poolingObj}
+                        ></ViewRequirements>
+                    </Col>
+                </body>
             </Row>
         </div>
     );

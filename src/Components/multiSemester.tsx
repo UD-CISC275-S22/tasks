@@ -20,7 +20,7 @@ export function MultiSemester({
     editingSemester: (plan: Plan) => void;
 }): JSX.Element {
     return (
-        <Stack gap={3}>
+        <Stack gap={5}>
             {currentPlan.semesters.map((semester: Semester) => (
                 <div key={semester.id}>
                     <ViewSemester
@@ -32,6 +32,7 @@ export function MultiSemester({
                         settingPlans={settingPlans}
                         clearSemesterCourses={clearSemesterCourses}
                     ></ViewSemester>
+                    <p></p>
                 </div>
             ))}
         </Stack>

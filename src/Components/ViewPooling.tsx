@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Modal, Form } from "react-bootstrap";
 
-import { addingCoursetoCurrSem } from "./addingCoursetoCurrSem";
+import { AddingCoursetoCurrSem } from "./AddingCoursetoCurrSem";
 import { Course } from "../Interfaces/course";
 import { Semester } from "../Interfaces/semester";
 import { Plan } from "../Interfaces/plan";
@@ -23,13 +23,11 @@ export function ViewPooling({
     const [semesterPooling, settingSemesterPooling] = useState("");
     const currentCoursesPool: Course[][] = plan.semesters.map(
         (currentSemesterDisplayed: Semester) =>
-            currentSemesterDisplayed.courseList.map(
-                (currentCoursesPool: Course) => ({
-                    ...currentCoursesPool
-                })
-            )
+            currentSemesterDisplayed.courseList.map((courseP: Course) => ({
+                ...courseP
+            }))
     );
-    const allCoursesPool: string[][] = currentCoursesPool.map(
+    const allPools: string[][] = currentCoursesPool.map(
         (courseLst2: Course[]) =>
             courseLst2.map(
                 (currentCoursesDisplay: Course) => currentCoursesDisplay.title
@@ -37,7 +35,7 @@ export function ViewPooling({
     );
 
     const changingDimensions = [] as string[];
-    const currentCoursesPoolDim = changingDimensions.concat(...allCoursesPool);
+    const flattenCurrentCoursesPool = changingDimensions.concat(...allPools);
 
     const [courses] = useState<Record<string, Record<string, Course>>>(
         pooling.courses
@@ -70,7 +68,7 @@ export function ViewPooling({
             const courseCheck = course.title.split(" ", 1);
             const newCourse: Course =
                 pooling.courses[courseCheck[0]][course.title];
-            addingCoursetoCurrSem(
+            AddingCoursetoCurrSem(
                 newCourse,
                 plan.semesters[0],
                 plan,
@@ -84,7 +82,7 @@ export function ViewPooling({
             const courseCheck = course.title.split(" ", 1);
             const newCourse: Course =
                 pooling.courses[courseCheck[0]][course.title];
-            addingCoursetoCurrSem(
+            AddingCoursetoCurrSem(
                 newCourse,
                 currentSemesterView,
                 plan,
@@ -104,91 +102,120 @@ export function ViewPooling({
     }
 
     return (
-        <Modal show={show} onClose={handleClose}>
-            <Modal.Header closeButton>
-                <Modal.Title>Course Pool: </Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-                <Form.Group controlId="options">
-                    <Form.Label>
-                        <b>Select Course: </b>
-                    </Form.Label>
-                    <Form.Select
-                        title="poolingCourseslst"
-                        value={course.title}
-                        onChange={courseOrder}
-                        data-testid="poolingCoursesLst"
-                    >
-                        {Object.entries(courses).map(
-                            ([, grouping]: [string, Record<string, Course>]) =>
-                                Object.entries(grouping).map(
-                                    ([, cValue]: [string, Course]) =>
-                                        !currentCoursesPoolDim.includes(
-                                            cValue.title
-                                        ) && (
-                                            <option
-                                                key={cValue.title}
-                                                value={cValue.title}
-                                            >
-                                                {" "}
-                                                {cValue.title}{" "}
-                                            </option>
-                                        )
-                                )
-                        )}
-                    </Form.Select>
+        <div>
+            <Modal show={show} onClose={handleClose}>
+                <Modal.Header>
+                    <Modal.Title>Course Dropdown</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Form.Group controlId="options">
+                        <Form.Label>
+                            <b>Select a Course: </b>
+                        </Form.Label>
+                        <Form.Select
+                            value={course.title}
+                            onChange={courseOrder}
+                            data-testid="poolingCoursesLst"
+                        >
+                            {Object.entries(courses).map(
+                                ([, grouping]: [
+                                    string,
+                                    Record<string, Course>
+                                ]) =>
+                                    Object.entries(grouping).map(
+                                        ([, cValue]: [string, Course]) =>
+                                            !flattenCurrentCoursesPool.includes(
+                                                cValue.title
+                                            ) && (
+                                                <option
+                                                    key={cValue.title}
+                                                    value={cValue.title}
+                                                >
+                                                    {cValue.title}
+                                                </option>
+                                            )
+                                    )
+                            )}
+                        </Form.Select>
 
-                    <div>
-                        <div>Title: {course.title}</div>
-                        <div>Name: {course.name}</div>
-                        <div>Description: {course.description}</div>
-                        <div>Credits: {course.credits}</div>
-                        <div>Offered: {course.semester}</div>
-                        <div>Department: {course.department}</div>
-                        <div>Prerequisite: {course.prereq}</div>
-                        <div>Corequisite: {course.coreq}</div>
-                        <div>Requirements: {course.requirements}</div>
-                    </div>
-                </Form.Group>
-                {plan.semesters.length != 0 && (
-                    <Modal.Body>
-                        <Form.Group controlId="options">
-                            <Form.Label>
-                                <b>Transfer to Current Semester: </b>
-                            </Form.Label>
-                            <Form.Select
-                                title="semesterOrder/updating"
-                                value={semesterPooling}
-                                onChange={semesterOrder}
-                                data-testid="semesterOrder/Updating"
-                            >
-                                {plan.semesters.map((s: Semester) => (
-                                    <option
-                                        key={s.title}
-                                        value={s.title}
-                                    ></option>
-                                ))}
-                            </Form.Select>
-                        </Form.Group>
-                        <Modal.Footer>
-                            <Button
-                                variant="warning"
-                                onClick={cancelEdits}
-                                data-testid="cancelPoolingMod"
-                            >
-                                Cancel
-                            </Button>
-                            <Button
-                                variant="success"
-                                onClick={saveEdits}
-                                data-testid="savingPoolingMod"
-                            >
-                                Add
-                            </Button>
-                        </Modal.Footer>
-                    </Modal.Body>
-                )}
-            </Modal.Body>
-        </Modal>
+                        <div>
+                            <div>
+                                <b>ID: </b>
+                                {course.title}
+                            </div>
+                            <div>
+                                <b>Name: </b>
+                                {course.name}
+                            </div>
+                            <div>
+                                <b>Description: </b>
+                                {course.description}
+                            </div>
+                            <div>
+                                <b>Credits: </b>
+                                {course.credits}
+                            </div>
+                            <div>
+                                <b>Offered: </b>
+                                {course.semester}
+                            </div>
+                            <div>
+                                <b>Department: </b>
+                                {course.department}
+                            </div>
+                            <div>
+                                <b>Prerequisite: </b>
+                                {course.prereq}
+                            </div>
+                            <div>
+                                <b>Corequisite: </b>
+                                {course.coreq}
+                            </div>
+                            <div>
+                                <b>Requirements: </b>
+                                {course.requirements}
+                            </div>
+                        </div>
+                    </Form.Group>
+                    {plan.semesters.length != 0 && (
+                        <Modal.Body>
+                            <Form.Group controlId="options">
+                                <Form.Label>
+                                    <b>Transfer to Semester of Choice: </b>
+                                </Form.Label>
+                                <Form.Select
+                                    value={semesterPooling}
+                                    onChange={semesterOrder}
+                                    data-testid="semesterOrderVP"
+                                >
+                                    {plan.semesters.map((s: Semester) => (
+                                        <option
+                                            key={s.title}
+                                            value={s.title}
+                                        ></option>
+                                    ))}
+                                </Form.Select>
+                            </Form.Group>
+                            <Modal.Footer>
+                                <Button
+                                    variant="link"
+                                    onClick={cancelEdits}
+                                    data-testid="cancelModVP"
+                                >
+                                    Cancel
+                                </Button>
+                                <Button
+                                    variant="success"
+                                    onClick={saveEdits}
+                                    data-testid="savingPoolingMod"
+                                >
+                                    Transfer
+                                </Button>
+                            </Modal.Footer>
+                        </Modal.Body>
+                    )}
+                </Modal.Body>
+            </Modal>
+        </div>
     );
 }

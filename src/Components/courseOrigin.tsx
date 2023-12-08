@@ -1,10 +1,10 @@
-import AllCoursesList from "../data/AllCourseList.json";
+import AllCourseList from "../data/AllCourseList.json";
 import { Course } from "../Interfaces/course";
 import "../App.css";
 
 export function CourseOrigin(currentCourse: Course, cOrigin: string[]) {
     type CourseRecord = Record<string, Record<string, Course>>;
-    const ALLCOURSELST: CourseRecord = AllCoursesList;
+    const ALLCOURSELST: CourseRecord = AllCourseList;
     const courseCheck = cOrigin[0].split(" ", 1);
     const originalCourse = ALLCOURSELST[courseCheck[0]][cOrigin[0]];
 

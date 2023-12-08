@@ -383,7 +383,7 @@
 // }
 
 import React, { useState } from "react";
-import { Button, Container, Col, Row } from "react-bootstrap";
+import { Button, Container, Col, Row, Table } from "react-bootstrap";
 import { Course } from "../Interfaces/course";
 import { Semester } from "../Interfaces/semester";
 import { Plan } from "../Interfaces/plan";
@@ -441,40 +441,51 @@ export function ViewSemester({
         <Container>
             <Row>
                 <Col>
-                    <h4>{semester.title}</h4>
+                    <h4>
+                        <b>{semester.title}</b>
+                    </h4>
                 </Col>
             </Row>
             <Row>
-                <p> Notes: {semester.notes}</p>
+                <p>
+                    <b>Notes: </b>
+                    {semester.notes}
+                </p>
             </Row>
             <Row>
                 <p>
-                    Credits:
+                    <b>Credits: </b>
                     {checkingCredits.reduce(
                         (total: number, c: Course) => total + Number(c.credits),
                         0
                     )}
                 </p>
             </Row>
-            <Row>
-                <p>
-                    <u>Courses</u>
-                </p>
-                {semester.courseList.map((c: Course) => (
-                    <Col key={c.title} sm="4">
-                        <ViewCourses
-                            course={c}
-                            courseSemester={semester}
-                            currentPlan={currentPlan}
-                            settingPlan={settingPlan}
-                        ></ViewCourses>
-                        <p></p>
-                    </Col>
-                ))}
-            </Row>
+            <div className="CourSem">
+                <Table bordered>
+                    <thead>
+                        <th>
+                            <b>Courses</b>
+                        </th>
+                    </thead>
+                    <tbody>
+                        {semester.courseList.map((c: Course) => (
+                            <Col key={c.title} sm="3">
+                                <ViewCourses
+                                    course={c}
+                                    courseSemester={semester}
+                                    currentPlan={currentPlan}
+                                    settingPlan={settingPlan}
+                                ></ViewCourses>
+                            </Col>
+                        ))}
+                    </tbody>
+                </Table>
+            </div>
             <p></p>
             <Row>
                 <Col>
+                    <p></p>
                     <Button
                         onClick={handleAddingMod}
                         data-testid="addCourseMod"
@@ -489,6 +500,8 @@ export function ViewSemester({
                         plan={currentPlan}
                         settingPlan={settingPlan}
                     ></AddingCourse>
+                    <p></p>
+
                     <Button
                         onClick={editingFunc}
                         data-testid="editingSemesterMod"

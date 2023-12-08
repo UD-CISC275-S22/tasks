@@ -1,63 +1,78 @@
-import React from "react";
-import { Button, Modal, Form } from "react-bootstrap";
-import { Semester } from "../Interfaces/semester";
-import { Plan } from "../Interfaces/plan";
-import "../App.css";
+import React, { useState } from "react";
+import { Button, Modal, Row, Col, Form } from "react-bootstrap";
 
-export function ClearingPlan({
+import { Plan } from "../Interfaces/plan";
+
+export function EditingPlan({
     show,
     handleClose,
     plan,
-    plans,
     settingPlan,
+    plans,
     settingPlans
 }: {
     show: boolean;
     handleClose: () => void;
     plan: Plan;
-    plans: Plan[];
     settingPlan: (t: Plan) => void;
+    plans: Plan[];
     settingPlans: (t: Plan[]) => void;
 }): JSX.Element {
+    const [planTitle, settingPlanTitle] = useState<string>(plan.title);
+
     function saveEdits() {
-        plan.semesters = [] as Semester[];
+        plan.title = planTitle;
         const planIndexing = plans.findIndex(
             (p: Plan): boolean => p.id === plan.id
         );
+
         plans[planIndexing] = plan;
         settingPlan(plan);
         settingPlans(plans);
         handleClose();
     }
+
     function cancelEdits() {
+        settingPlanTitle(plan.title);
         handleClose();
     }
+
     return (
         <Modal show={show} onClose={handleClose}>
             <Modal.Header>
                 <Modal.Title>
-                    <b>Warning!</b>
+                    <h4>Name Your Plan!</h4>
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <Form.Label>
-                    You are clearing this entire plan, do you confirm?
-                </Form.Label>
+                <Form.Group controlId="planTitle" as={Row}>
+                    <Form.Label column sm={2}>
+                        Name:
+                    </Form.Label>
+                    <Col>
+                        <Form.Control
+                            value={planTitle}
+                            onChange={(
+                                event: React.ChangeEvent<HTMLInputElement>
+                            ) => settingPlanTitle(event.target.value)}
+                        ></Form.Control>
+                    </Col>
+                </Form.Group>
             </Modal.Body>
             <Modal.Footer>
                 <Button
-                    variant="link"
                     onClick={cancelEdits}
-                    data-testid="cancelButtonCP"
+                    data-testid="cancelModEP"
+                    variant="link"
                 >
                     Cancel
                 </Button>
                 <Button
-                    variant="success"
                     onClick={saveEdits}
-                    data-testid="confirmationButtonCP"
+                    data-testid="saveModEP"
+                    variant="success"
                 >
-                    Confirm
+                    Save
                 </Button>
             </Modal.Footer>
         </Modal>

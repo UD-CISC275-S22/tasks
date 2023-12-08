@@ -14,7 +14,7 @@ export const CoreBA = [
     "CISC275",
     "MATH210",
     "MATH241",
-    "ENGL11O"
+    "ENGL110"
 ];
 
 /*CSBS*/
@@ -33,7 +33,7 @@ export const CoreBS = [
     "MATH241",
     "MATH242",
     "CISC355",
-    "ENGL11O"
+    "ENGL110"
 ];
 
 /*University and College Requirements*/
@@ -49,8 +49,7 @@ export const labSciences = [
     "CHEM104",
     "CHEM134",
     "GEOL105",
-    "GEOL1115",
-    "GEOL107",
+    "GEOL115",
     "GEOL107",
     "GEOL110",
     "PHYS207",
@@ -80,12 +79,12 @@ export const Bioinformatics = [
     "CISC372",
     "CISC436",
     "MATH242",
-    "MATH349",
-    [
-        ["CHEM213", "CHEM215"],
-        ["CHEM321", "CHEM325"]
-    ],
-    ["CISC483", "CISC484"]
+    "MATH349"
+    // [
+    //     ["CHEM213", "CHEM215"],
+    //     ["CHEM321", "CHEM325"]
+    // ],
+    // ["CISC483", "CISC484"]
 ];
 
 export const Cybersecurity = [
@@ -94,8 +93,8 @@ export const Cybersecurity = [
     "CISC450",
     "CISC464",
     "CPEG465",
-    "CISC494",
-    ["CPEG472", "CPEG473", "CPEG475", "CPEG476", "CPEG495"]
+    "CISC494"
+    // ["CPEG472", "CPEG473", "CPEG475", "CPEG476", "CPEG495"]
 ];
 
 export const DataScience = [
@@ -106,9 +105,9 @@ export const DataScience = [
     "MATH205",
     "MATH242",
     "MATH243",
-    "MATH349",
-    ["CISC483", "CISC484"],
-    ["MATH302", "MATH350", "MATH426"]
+    "MATH349"
+    // ["CISC483", "CISC484"],
+    // ["MATH302", "MATH350", "MATH426"]
 ];
 
 export const HighPerformanceComputingMath = [
@@ -120,8 +119,8 @@ export const HighPerformanceComputingMath = [
     "MATH242",
     "MATH243",
     "MATH351",
-    "MATH428",
-    ["CISC300+", "MATH205", "MATH350", "CISC387", "CISC487"]
+    "MATH428"
+    // ["CISC300+", "MATH205", "MATH350", "CISC387", "CISC487"]
 ];
 
 export const HighPerformanceComputingData = [
@@ -134,17 +133,17 @@ export const HighPerformanceComputingData = [
     "MATH243",
     "CISC437",
     "MATH350",
-    "MATH450",
-    ["CISC483", "CISC484"],
-    [
-        "CISC300+",
-        "MATH302",
-        "MATH349",
-        "MATH451",
-        "MATH535",
-        "CISC387",
-        "CISC487"
-    ]
+    "MATH450"
+    // ["CISC483", "CISC484"],
+    // [
+    //     "CISC300+",
+    //     "MATH302",
+    //     "MATH349",
+    //     "MATH451",
+    //     "MATH535",
+    //     "CISC387",
+    //     "CISC487"
+    // ]
 ];
 
 export const SystemsNetworks = [
@@ -152,45 +151,46 @@ export const SystemsNetworks = [
     "CISC361",
     "CISC372",
     "CISC450",
-    "CISC471",
-    ["MATH205", "MATH350"],
-    [
-        "CISC464",
-        "CPEG465",
-        "CPEG470",
-        "CPEG476",
-        "CPEG473",
-        "CPEG475",
-        "CPEG497"
-    ],
-    [
-        "CISC437",
-        "CISC453",
-        "CISC459",
-        "CISC464",
-        "CISC474",
-        "CISC475",
-        "CISC479",
-        "CPEG473",
-        "CPEG497"
-    ]
+    "CISC471"
+    // [
+    //     "CISC464",
+    //     "CPEG465",
+    //     "CPEG470",
+    //     "CPEG476",
+    //     "CPEG473",
+    //     "CPEG475",
+    //     "CPEG497"
+    // ],
+    // [
+    //     "CISC437",
+    //     "CISC453",
+    //     "CISC459",
+    //     "CISC464",
+    //     "CISC474",
+    //     "CISC475",
+    //     "CISC479",
+    //     "CPEG473",
+    //     "CPEG497"
+    // ]
 ];
 
 export const TheoryComputationDiscrete = [
     "CISC304",
     "CISC401",
     "MATH242",
-    "MATH349",
-    ["CISC4O4", "MATH245", "MATH315", "MATH451"]
+    "MATH349"
+    // ["CISC4O4", "MATH245", "MATH315", "MATH451"]
 ];
 
 export const TheoryComputationCont = [
     "CISC304",
     "CISC401",
     "MATH242",
-    "MATH349",
-    ["MATH243", "MATH302", "MATH535", "MATH426"]
+    "MATH349"
+    // ["MATH243", "MATH302", "MATH535", "MATH426"]
 ];
+
+export const None = [""];
 
 export const Concentrations = [
     ArtificialIntelligence,
@@ -201,8 +201,11 @@ export const Concentrations = [
     HighPerformanceComputingData,
     SystemsNetworks,
     TheoryComputationDiscrete,
-    TheoryComputationCont
+    TheoryComputationCont,
+    None
 ];
+
+export const Degrees = [CoreBA, CoreBS];
 
 /*University FYE Requirement*/
 export const FYE = ["ARSC116", "BHAN135"];

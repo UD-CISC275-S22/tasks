@@ -29,9 +29,15 @@
     color: #61dafb;
 }
 
-.welcomeMessageButton{
-background-color: lightskyblue;
+.Welcome {
+    display: flex;
+    justify-content: right;    
 }
+
+.CourSem {
+    display: flex;
+}
+
 @keyframes App-logo-spin {
     from {
         transform: rotate(0deg);

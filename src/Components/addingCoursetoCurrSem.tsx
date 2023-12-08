@@ -4,7 +4,7 @@ import { Semester } from "../Interfaces/semester";
 import { Plan } from "../Interfaces/plan";
 import "../App.css";
 
-export function addingCoursetoCurrSem(
+export function AddingCoursetoCurrSem(
     course: Course,
     currentSemester: Semester,
     plan: Plan,

@@ -1,9 +1,10 @@
 import React from "react";
 import { Button, Modal } from "react-bootstrap";
 import "../App.css";
-import { Semester } from "../Interfaces/semester";
 // import courseListAll from "../data/AllCourseList.json";
+
 import { Course } from "../Interfaces/course";
+import { Semester } from "../Interfaces/semester";
 import { Plan } from "../Interfaces/plan";
 
 export function ClearCourse({
@@ -39,18 +40,20 @@ export function ClearCourse({
         handleClose();
     }
     return (
-        <Modal show={show} close={handleClose} animation={false}>
-            <Modal.Header closeButton>
+        <Modal show={show} onClose={handleClose}>
+            <Modal.Header>
                 <Modal.Title>
-                    {" "}
-                    You are deleting this current course, do you confirm?{" "}
+                    <b>Warning!</b>
                 </Modal.Title>
             </Modal.Header>
+            <Modal.Body>
+                <p> You are deleting this course, do you confirm?</p>
+            </Modal.Body>
             <Modal.Footer>
-                <Button variant="secondary" onClick={handleClose}>
+                <Button variant="link" onClick={handleClose}>
                     Close
                 </Button>
-                <Button variant="warning" onClick={saveEdits}>
+                <Button variant="success" onClick={saveEdits}>
                     Clear
                 </Button>
             </Modal.Footer>

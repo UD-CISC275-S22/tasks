@@ -23,15 +23,15 @@ export function AddingSemester({
     function saveEdits() {
         if (session === "Fall") {
             settingSemester({
-                id: session + year,
-                title: session,
+                id: session.slice(0, 3) + year,
+                title: session + " " + year,
                 notes: "",
                 courseList: [] as Course[]
             });
         } else {
             settingSemester({
-                id: session + year,
-                title: session,
+                id: session.slice(0, 3) + year,
+                title: session + " " + year,
                 notes: "",
                 courseList: [] as Course[]
             });
@@ -44,53 +44,63 @@ export function AddingSemester({
     };
 
     return (
-        <Modal show={show} close={handleClose}>
-            <Modal.Header closeButton>
-                <Modal.Title>Semester Edits</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-                <Form.Group controlId="semesterTitle" as={Row}>
-                    <Form.Label column sm={3}>
-                        Session:
-                    </Form.Label>
-                    <Col>
-                        <Form.Select
-                            value={session}
-                            onChange={changingSession}
-                            data-testid="sessionBox"
-                        >
-                            {courseSessions.map((choice: string) => (
-                                <option key={choice} value={choice}>
-                                    {choice}
-                                </option>
-                            ))}
-                        </Form.Select>
-                    </Col>
-                </Form.Group>
-                <Form.Group controlId="semesterID" as={Row}>
-                    <Form.Label column sm={3}>
-                        Session Term:
-                    </Form.Label>
-                    <Col>
-                        <Form.Control
-                            type="number"
-                            value={year}
-                            onChange={(
-                                event: React.ChangeEvent<HTMLInputElement>
-                            ) => settingYear(parseInt(event.target.value))}
-                            data-testid="termBox"
-                        />
-                    </Col>
-                </Form.Group>
-            </Modal.Body>
-            <Modal.Footer>
-                <Button onClick={handleClose} data-testid="addSemesterCloseMod">
-                    Close
-                </Button>
-                <Button onClick={saveEdits} data-testid="addSemesterSaveMod">
-                    Save
-                </Button>
-            </Modal.Footer>
-        </Modal>
+        <div>
+            <Modal show={show} onClose={handleClose}>
+                <Modal.Header>
+                    <Modal.Title>Semester Edits</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Form.Group controlId="semesterTitle" as={Row}>
+                        <Form.Label column sm={2}>
+                            Session:
+                        </Form.Label>
+                        <Col>
+                            <Form.Select
+                                value={session}
+                                onChange={changingSession}
+                                data-testid="sessionBoxAS"
+                            >
+                                {courseSessions.map((choice: string) => (
+                                    <option key={choice} value={choice}>
+                                        {choice}
+                                    </option>
+                                ))}
+                            </Form.Select>
+                        </Col>
+                    </Form.Group>
+                    <Form.Group controlId="semesterID" as={Row}>
+                        <Form.Label column sm={2}>
+                            Term:
+                        </Form.Label>
+                        <Col>
+                            <Form.Control
+                                type="number"
+                                value={year}
+                                onChange={(
+                                    event: React.ChangeEvent<HTMLInputElement>
+                                ) => settingYear(parseInt(event.target.value))}
+                                data-testid="termBoxAS"
+                            />
+                        </Col>
+                    </Form.Group>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button
+                        onClick={handleClose}
+                        data-testid="cancelModAS"
+                        variant="link"
+                    >
+                        Cancel
+                    </Button>
+                    <Button
+                        onClick={saveEdits}
+                        data-testid="saveModAS"
+                        variant="success"
+                    >
+                        Save
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+        </div>
     );
 }

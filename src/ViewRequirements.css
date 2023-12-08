@@ -1,0 +1,28 @@
+.ViewReqs {
+    display: flex;
+    justify-content: center;
+}
+
+/* .courses-in-semester {
+    display: flex;
+} */
+
+.table-core {
+    float: left;
+}
+
+.table-conc {
+    float: right;
+}
+
+.table-add {
+    float: left;
+}
+
+.table-sci {
+    float: left;
+}
+
+.table-breadth {
+    display: flex;
+}

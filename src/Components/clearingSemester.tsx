@@ -36,23 +36,27 @@ export function ClearSemester({
         handleClose();
     }
     return (
-        <Modal show={show} close={handleClose} animation={false}>
-            <Modal.Header closeButton>
-                <Modal.Title>Warning!</Modal.Title>
+        <Modal show={show} onClose={handleClose}>
+            <Modal.Header>
+                <Modal.Title>
+                    <b>Warning!</b>
+                </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <p>You are deleting this current semester, do you confirm?</p>
+                <p>You are deleting this entire semester, do you confirm?</p>
             </Modal.Body>
             <Modal.Footer>
                 <Button
                     onClick={handleClose}
                     data-testid="clearSemesterCancelMod"
+                    variant="link"
                 >
                     Cancel
                 </Button>
                 <Button
                     onClick={saveEdits}
                     data-testid="clearSemesterDeleteMod"
+                    variant="success"
                 >
                     Clear
                 </Button>

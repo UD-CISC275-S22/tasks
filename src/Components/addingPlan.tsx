@@ -327,8 +327,8 @@ export function AddingPlan({
     }
 
     return (
-        <Modal show={show} close={handleClose} animation={false}>
-            <Modal.Header closeButton>
+        <Modal show={show} onClose={handleClose}>
+            <Modal.Header>
                 <Modal.Title>Plan Name:</Modal.Title>
             </Modal.Header>
             <Modal.Body>
@@ -352,7 +352,7 @@ export function AddingPlan({
             </Modal.Body>
             <Modal.Footer>
                 <Button
-                    variant="secondary"
+                    variant="link"
                     onClick={handleClose}
                     data-testid="closeButtonAP"
                 >

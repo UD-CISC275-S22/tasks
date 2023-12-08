@@ -1,7 +1,7 @@
 import { Course } from "./course";
 
 export interface Semester {
-    //random id number
+    //Offered session and year
     id: string;
     //name of semester
     title: string;

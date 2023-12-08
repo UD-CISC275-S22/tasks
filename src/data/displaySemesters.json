@@ -1,7 +1,7 @@
 [
     {
-        "id": "Fall2023",
-        "title": "Fall",
+        "id": "F2023",
+        "title": "Fall 2023",
         "notes": "Additional info by user...",
         "courseList": [
             {
@@ -51,8 +51,8 @@
         ]
     },
     {
-        "id": "Spring2024",
-        "title": "Spring",
+        "id": "S2024",
+        "title": "Spring 2024",
         "notes": "Additional info by user...",
         "courseList": [
             {

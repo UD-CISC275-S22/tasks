@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Modal, Button } from "react-bootstrap";
+import "../App.css";
 
 export function Welcome() {
     const [show, settingDisplay] = useState(true);
@@ -8,9 +9,11 @@ export function Welcome() {
 
     return (
         <div>
-            <Button onClick={handleShow}> Need Help❓</Button>
-            <Modal show={show} close={handleClose} animation={false}>
-                <Modal.Header closeButton>
+            <Button onClick={handleShow} className="Welcome">
+                Need Help❓
+            </Button>
+            <Modal show={show} onClose={handleClose}>
+                <Modal.Header>
                     <Modal.Title>Degree Planner</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
@@ -23,6 +26,11 @@ export function Welcome() {
                     more instructions (will enhance this later by making an
                     expandable/disposable button near the top of the page).
                 </Modal.Body>
+                <Modal.Footer>
+                    <Button onClick={handleClose} data-testid="closeModWelcome">
+                        Close
+                    </Button>
+                </Modal.Footer>
             </Modal>
         </div>
     );

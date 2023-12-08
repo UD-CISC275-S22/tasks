@@ -53,7 +53,7 @@ import { Course } from "../Interfaces/course";
 import { Semester } from "../Interfaces/semester";
 import { Plan } from "../Interfaces/plan";
 import { ClearCourse } from "./removingCourse";
-import { CourseOrigin } from "./courseOrigin";
+// import { CourseOrigin } from "./courseOrigin";
 import { SwitchingSemesters } from "./SwitchingSemesters";
 import "../App.css";
 
@@ -190,9 +190,11 @@ export function ViewCourses({
                     <Button onClick={isVisibile}> {course.title} </Button>
                     {visible && (
                         <div>
+                            <p></p>
                             <Button
                                 onClick={handleShowSwitchMod}
                                 data-testid="switchSemMod"
+                                variant="secondary"
                             >
                                 Switch Semester
                             </Button>
@@ -204,17 +206,21 @@ export function ViewCourses({
                                 settingPlan={settingPlan}
                                 courseSemester={courseSemester}
                             ></SwitchingSemesters>
+                            <p></p>
 
                             <Button
                                 onClick={savingEdits}
                                 data-testid="editingMod"
+                                variant="warning"
                             >
-                                Edit
+                                {editingMod}
                             </Button>
+                            <p></p>
 
                             <Button
                                 onClick={handleShowAddingMod}
                                 data-testid="removingCourseMod"
+                                variant="danger"
                             >
                                 Remove Course
                             </Button>
@@ -226,10 +232,12 @@ export function ViewCourses({
                                 currentCourse={course}
                                 currentSemester={courseSemester}
                             ></ClearCourse>
+                            <p></p>
 
                             <Button
                                 onClick={backtrackOrigin}
                                 data-testid="backtrackOriginMod"
+                                variant="success"
                             >
                                 Reset
                             </Button>
@@ -237,13 +245,10 @@ export function ViewCourses({
                             {!editing && (
                                 <div className="App-aligncenter">
                                     <div>
-                                        <b>Title:</b> {course.title}
+                                        <b>ID:</b> {course.title}
                                     </div>
                                     <div>
                                         <b>Name:</b> {course.name}
-                                    </div>
-                                    <div>
-                                        <b>Description:</b> {course.description}
                                     </div>
                                     <div>
                                         <b>Credits:</b> {course.credits}
@@ -261,6 +266,9 @@ export function ViewCourses({
                                         <b>Coreq:</b> {course.coreq}
                                     </div>
                                     <div>
+                                        <b>Description:</b> {course.description}
+                                    </div>
+                                    <div>
                                         <b>Requirements:</b>
                                         {course.requirements}
                                     </div>
@@ -269,59 +277,59 @@ export function ViewCourses({
                             {editing && (
                                 <div>
                                     <Form.Group controlId="courseTitle">
-                                        <Form.Label>Course ID: </Form.Label>
+                                        <Form.Label>ID: </Form.Label>
                                         <Form.Control
                                             value={title}
                                             onChange={saveTitle}
                                         />
                                     </Form.Group>
                                     <Form.Group controlId="courseName">
-                                        <Form.Label>Course Name: </Form.Label>
+                                        <Form.Label>Name: </Form.Label>
                                         <Form.Control
                                             value={name}
                                             onChange={saveName}
                                         />
+                                        <Form.Group controlId="courseCredits">
+                                            <Form.Label>Credits: </Form.Label>
+                                            <Form.Control
+                                                value={credits}
+                                                onChange={saveCredits}
+                                            />
+                                        </Form.Group>
+                                        <Form.Group controlId="courseOffering">
+                                            <Form.Label>Offering: </Form.Label>
+                                            <Form.Control
+                                                value={offering}
+                                                onChange={saveOffering}
+                                            />
+                                        </Form.Group>
+                                        <Form.Group controlId="courseDepartment">
+                                            <Form.Label>Department:</Form.Label>
+                                            <Form.Control
+                                                value={department}
+                                                onChange={saveDepartment}
+                                            />
+                                        </Form.Group>
+                                        <Form.Group controlId="coursePrereq">
+                                            <Form.Label>Prereqs: </Form.Label>
+                                            <Form.Control
+                                                value={prereq}
+                                                onChange={savePrereq}
+                                            />
+                                        </Form.Group>
+                                        <Form.Group controlId="courseCoreq">
+                                            <Form.Label>Coreqs: </Form.Label>
+                                            <Form.Control
+                                                value={coreq}
+                                                onChange={saveCoreq}
+                                            />
+                                        </Form.Group>
                                     </Form.Group>
                                     <Form.Group controlId="courseDescription">
                                         <Form.Label>Description: </Form.Label>
                                         <Form.Control
                                             value={description}
                                             onChange={saveDescription}
-                                        />
-                                    </Form.Group>
-                                    <Form.Group controlId="courseCredits">
-                                        <Form.Label>Credits: </Form.Label>
-                                        <Form.Control
-                                            value={credits}
-                                            onChange={saveCredits}
-                                        />
-                                    </Form.Group>
-                                    <Form.Group controlId="courseOffering">
-                                        <Form.Label>Offering: </Form.Label>
-                                        <Form.Control
-                                            value={offering}
-                                            onChange={saveOffering}
-                                        />
-                                    </Form.Group>
-                                    <Form.Group controlId="courseDepartment">
-                                        <Form.Label>Department: </Form.Label>
-                                        <Form.Control
-                                            value={department}
-                                            onChange={saveDepartment}
-                                        />
-                                    </Form.Group>
-                                    <Form.Group controlId="coursePrereq">
-                                        <Form.Label>Prereqs: </Form.Label>
-                                        <Form.Control
-                                            value={prereq}
-                                            onChange={savePrereq}
-                                        />
-                                    </Form.Group>
-                                    <Form.Group controlId="courseCoreq">
-                                        <Form.Label>Coreqs: </Form.Label>
-                                        <Form.Control
-                                            value={coreq}
-                                            onChange={saveCoreq}
                                         />
                                     </Form.Group>
                                     <Form.Group controlId="courseRequirements">
