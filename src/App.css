@@ -47,9 +47,8 @@ button {
     align-items: center;
     gap: 10px;
     color: white;
-
 }
-.UDbutton{
+.UDbutton {
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -58,6 +57,8 @@ button:hover {
 }
 
 .button {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,10 +81,37 @@ button:hover {
     padding: 0;
     margin: 0;
 }
-.fulfilled {
-    background-color: #51db51;
+
+.save-button {
+    border: none;
+    border-radius: 30px;
+    padding: 0.5rem;
+    background-color: #00539f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    margin: auto;
 }
 
-.not-fulfilled {
-    background-color: rgb(222, 98, 98);
+.save-button:hover {
+    background-color: #0072ce;
+}
+
+.add-button {
+    border: none;
+    border-radius: 30px;
+    padding: 0.5rem;
+    background-color: #00539f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    margin: auto;
+}
+
+.add-button:hover {
+    background-color: #0072ce;
 }
