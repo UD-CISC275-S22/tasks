@@ -8,17 +8,26 @@ import { Course } from "./interfaces/course";
 import "./App.css";
 //import { ClearCourseModal } from "./ClearCourseModal";
 //import { AddCourseModal } from "./AddCourseModal";
-import { UpdateCoureplanYear, removeSemesterYear } from "./DBmanage";
+import {
+    DeleteCourseFromSemester,
+    UpdateCoureplanYear,
+    removeSemesterYear
+} from "./DBmanage";
 import { AddSemesterModal } from "./AddSemesterModal";
 //import { JsxAttribute } from "typescript";
 //const [CurrentModalCourse, setCurrentModalCourse] = useState<Course>();
 
 function Semester({
     rendSemester,
-    edit
+    edit,
+    clickToDeleteFromSemester
 }: {
     rendSemester: SemesterI;
     edit: (course: Course) => void;
+    clickToDeleteFromSemester: (
+        courseUUID: string,
+        currentSemester: SemesterI
+    ) => void;
 }): JSX.Element {
     return (
         <Table striped bordered hover className="tight">
@@ -43,6 +52,20 @@ function Semester({
                             <td>{rendCourse.ticker}</td>
                             <td>{rendCourse.name}</td>
                             <td>{rendCourse.credits}</td>
+                            <Button
+                                variant="danger"
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    if (rendCourse.UUID) {
+                                        clickToDeleteFromSemester(
+                                            rendCourse.UUID,
+                                            rendSemester
+                                        );
+                                    }
+                                }}
+                            >
+                                Delete
+                            </Button>
                         </tr>
                     );
                 })}
@@ -70,13 +93,18 @@ function Year({
     editCourse,
     selectedSemester,
     updateYear,
-    addSemesterToYear
+    addSemesterToYear,
+    clickToDeleteFromSemester
 }: {
     year: yearI;
     editCourse: (course: Course) => void;
     selectedSemester: (semester: SemesterI) => void;
     updateYear: (updateYear: yearI) => void;
     addSemesterToYear: () => void;
+    clickToDeleteFromSemester: (
+        courseUUID: string,
+        currentSemester: SemesterI
+    ) => void;
 }): JSX.Element {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     function DisplaySemester(year: yearI, index: number): SemesterI | null {
@@ -252,6 +280,9 @@ function Year({
                                                 ] as SemesterI
                                             }
                                             edit={editCourse}
+                                            clickToDeleteFromSemester={
+                                                clickToDeleteFromSemester
+                                            }
                                         ></Semester>
                                     </td>
                                 ) : null;
@@ -276,6 +307,7 @@ export function CourseplanClick({
     setCurrentCourseEdit: (course: Course) => void;
     selectedSemester: (semester: SemesterI) => void;
     UpdateCourseplan: (courseplan: CoursePlan) => void;
+    deletecourse: (courseUUID: string, currentSemester: SemesterI) => void;
 }) {
     const [showAddSemesterModal, setShowAddSemesterModal] = useState(false);
     const [currentYear, setCurrentYear] = useState<yearI | null>(null);
@@ -284,7 +316,18 @@ export function CourseplanClick({
         setCurrentYear(year);
         setShowAddSemesterModal(true);
     };
-
+    const handleDeleteCourse = (
+        courseUUID: string,
+        currentSemester: SemesterI
+    ) => {
+        console.log("click registeredqwe");
+        const updatedCoursePlan = DeleteCourseFromSemester(
+            currentSemester,
+            courseUUID,
+            Courseplan
+        );
+        UpdateCourseplan(updatedCoursePlan);
+    };
     const addSemesterToCoursePlan = (
         newSemester: SemesterI,
         yearName: string
@@ -321,6 +364,7 @@ export function CourseplanClick({
                             )
                         )
                     }
+                    clickToDeleteFromSemester={handleDeleteCourse}
                     addSemesterToYear={() =>
                         handleOpenAddSemesterModal(curyear)
                     }

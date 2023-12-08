@@ -3,6 +3,7 @@
 import {
     CoursePlan,
     SemesterI,
+    TotalDB,
     dbMangement,
     seasonT,
     yearI
@@ -15,23 +16,37 @@ import { Year } from "./viewCourseComponents";
 // export function deleteCoursePlan() {}
 // export function addToCoursePlan() {}
 
-// export function deleteCourse(rW: dbMangement, courseplan,) {
-//     rW.stateSetter({
-//         name: rW.dataset.name,
-//         firstsemester: {
-//             ...rW.dataset.firstsemester,
-//             courses: rW.dataset.firstsemester.courses.filter(
-//                 (course: Course): boolean => course.ticker !== idticker
-//             )
-//         },
-//         secondsemester: {
-//             ...rW.Courseplan.secondsemester,
-//             courses: rW.Courseplan.secondsemester.courses.filter(
-//                 (course: Course): boolean => course.ticker !== idticker
-//             )
-//         }
-//     });
-// }
+export function DeleteCourseFromSemester(
+    selectedSemester: SemesterI,
+    courseUUID: string,
+    courseplan: CoursePlan
+): CoursePlan {
+    return {
+        ...courseplan,
+        years: courseplan.years.map((year: yearI): yearI => {
+            const updatedSeasons: { [key in seasonT]?: SemesterI | null } = {};
+
+            (Object.keys(year) as seasonT[]).forEach((season) => {
+                const currentSeason = year[season];
+                if (currentSeason !== null && currentSeason.courses) {
+                    updatedSeasons[season] = {
+                        ...currentSeason,
+                        courses: currentSeason.courses.filter(
+                            (course) => course.UUID !== courseUUID
+                        )
+                    };
+                } else {
+                    updatedSeasons[season] = currentSeason; // keep the season as it is if it's null or doesn't have courses
+                }
+            });
+
+            return {
+                ...year,
+                ...updatedSeasons
+            };
+        })
+    };
+}
 
 export function updateCourse(
     dbManager: dbMangement,

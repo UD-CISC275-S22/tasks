@@ -3,23 +3,30 @@ import React from "react"; //, {useEffect}
 import { useState } from "react";
 import "./App.css";
 import { MulitCourseplan } from "./viewCourseComponents";
-import { CoursePlan, TotalDB, dbMangement, yearI } from "./interfaces/semester";
+import {
+    CoursePlan,
+    SemesterI,
+    TotalDB,
+    dbMangement,
+    yearI
+} from "./interfaces/semester";
 import { EditCourseModal } from "./EditModal";
 import { Course } from "./interfaces/course";
 //import { AddCourseModal } from "./AddCourseModal";
 //import { ClearCourseModal } from "./ClearCourseModal";
 import coursePlanData from "./data/couresplans.json";
-import degreeData from "./data/degrees.json";
+//import degreeData from "./data/degrees.json";
 import { Container } from "react-bootstrap";
 import { v4 as uuidv4 } from "uuid";
 //import { CreateCoursePlan } from "./CreateCoursePlan";
 import { CoureseplansBoot } from "./NewCoursePlan";
 import {
+    DeleteCourseFromSemester,
     createFourYearCoursePlan,
     oneYearUpdate,
     updateCourse
 } from "./DBmanage";
-import { degreeRequirementCheck } from "./DegreeRequirementCheck";
+//import { degreeRequirementCheck } from "./DegreeRequirementCheck";
 
 function createUUID(db: CoursePlan[]) {
     // Creating a deep copy of db to avoid modifying the original
@@ -76,7 +83,19 @@ function App(): JSX.Element {
         setEdit(course);
         updateEditMogal(true);
     }
+    function deleteCourseFromCoursePlan(
+        courseUUID: string,
+        semester: SemesterI
+    ) {
+        const updatedCoursePlans = data.Courseplans.map((coursePlan) => {
+            return DeleteCourseFromSemester(semester, courseUUID, coursePlan);
+        });
 
+        setdata({
+            ...data,
+            Courseplans: updatedCoursePlans
+        });
+    }
     const handleImportCSV = () => {
         console.log("Import csv button clicked");
     };
@@ -96,7 +115,7 @@ function App(): JSX.Element {
         }
     }
 
-    degreeRequirementCheck(degreeData[0], coursePlanData[0]);
+    //degreeRequirementCheck(degreeData[0], coursePlanData[0]);
 
     return (
         <div className="App">
@@ -149,6 +168,7 @@ function App(): JSX.Element {
                         updateCoursePlan={function (): void {
                             throw new Error("Function not implemented.");
                         }}
+                        deletecourse={deleteCourseFromCoursePlan}
                     />
                 )}
             </div>
@@ -158,6 +178,7 @@ function App(): JSX.Element {
                 handleClose={handleCloseAddModal}
                 currentCourse={editSelected}
                 updateCoursePass={setNewCourse}
+                dbManager={{ dataset: data, stateSetter: setdata }}
             ></EditCourseModal>
         </div>
     );

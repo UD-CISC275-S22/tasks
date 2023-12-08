@@ -5,7 +5,7 @@ import { CoursePlan, SemesterI, dbMangement } from "./interfaces/semester";
 import catalog from "./data/catalog.json";
 import { Course } from "./interfaces/course";
 import { v4 as uuidv4 } from "uuid";
-import { AddCourseToSemester } from "./DBmanage";
+import { AddCourseToSemester, DeleteCourseFromSemester } from "./DBmanage";
 import { CourseplanClick } from "./EditCoursePlan";
 import "./App.css";
 
@@ -32,12 +32,14 @@ export function CoureseplansBoot({
     updateCoursePlan,
     setCourseEdit,
     curCoursePlan,
-    setEditCoursePlan
+    setEditCoursePlan,
+    deletecourse
 }: {
     updateCoursePlan: (cousePlan: CoursePlan) => void;
     setCourseEdit: (course: Course) => void;
     curCoursePlan: CoursePlan;
     setEditCoursePlan: (coureseplan: CoursePlan) => void;
+    deletecourse: (courseUUID: string, currentSemester: SemesterI) => void;
 }) {
     const [curCatalog, setcatalog] = useState<CatalogCourses>(catalog);
     const [queue, setqueue] = useState<Course[]>([]);
@@ -55,6 +57,20 @@ export function CoureseplansBoot({
         );
         setqueue([]);
         //setEditCoursePlan();
+    }
+
+    function clickToDeleteFromSemester(
+        courseUUID: string,
+        currentSemester: SemesterI
+    ) {
+        console.log("click registeredqwe");
+        const updatedCoursePlan = DeleteCourseFromSemester(
+            currentSemester,
+            courseUUID,
+            curCoursePlan
+        );
+
+        setEditCoursePlan(updatedCoursePlan); // Update your state here
     }
     function setCourseplanDebug(courseplan: CoursePlan) {
         console.log("debug");
@@ -254,6 +270,7 @@ export function CoureseplansBoot({
                     setCurrentCourseEdit={setCourseEdit}
                     selectedSemester={clickToAddToSemeser}
                     UpdateCourseplan={setCourseplanDebug}
+                    deletecourse={clickToDeleteFromSemester}
                 ></CourseplanClick>
             </Row>
         </div>
