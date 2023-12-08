@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable no-extra-parens */
 import React, { useState } from "react";
 import { degreePlan } from "../interfaces/degreePlan";
 //import { SingleMultipleSemester } from "./SingleMultipleSemester";
