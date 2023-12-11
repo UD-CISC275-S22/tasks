@@ -116,6 +116,56 @@ export function Planner({
             setSemArr(newSemArr);
         }
     }
+
+    //----------------------------------------------------IMPORT/EXPORT
+    const handleExportSemesters = () => {
+        const fileName = prompt(
+            "Please enter a name for your file: ",
+            "semester.json"
+        );
+        //Default filename is semester.json
+        if (fileName === null) return; //If user clicks cancel, do nothing
+        const allSemesters = [...semArr, ...CurrentdegreePlan.semesters];
+        const jsonContent = JSON.stringify(allSemesters); //Convet the array of semesters to a json string
+        const blob = new Blob([jsonContent], { type: "application/json" }); //Create a blob of the json content
+
+        const link = document.createElement("a");
+        link.href = window.URL.createObjectURL(blob);
+        link.download = fileName;
+
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
+    const fileRef = React.createRef<HTMLInputElement>();
+
+    const handleImportClick = () => {
+        if (fileRef.current) {
+            fileRef.current.click();
+        }
+    };
+    const handleImportSemesters = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const file = e.target;
+        if (file.files && file.files[0]) {
+            const reader = new FileReader(); //FileReader reads through the JSON file
+
+            reader.onload = (e) => {
+                try {
+                    const importedSemesters = JSON.parse(
+                        e.target?.result as string
+                    );
+
+                    setSemArr(importedSemesters); //update semArr state with imported semesters
+                } catch (err) {
+                    window.alert("Invalid file. Please try again");
+                    file.value = "";
+                } //Used ChatGPT to help out here. I was unsure of how to check for invalid file formats, so I had ChatGPT explain some options, and this seemed like the best one.
+                // Before the file is read, the file input is checked to see if it is a valid file. If it is not, the file input is cleared and the user is alerted.
+            };
+            reader.readAsText(file.files[0]);
+        }
+    };
     //----------------------------------------------------EDIT
 
     //const [degreePlan, setDegreePlan] = useState<degreePlan>();
@@ -338,6 +388,17 @@ export function Planner({
     }
     return (
         <div>
+            <div>
+                <Button onClick={handleExportSemesters}>Export</Button>
+                <Button onClick={handleImportClick}>Import</Button>
+                <input
+                    type="file"
+                    accept=".json"
+                    ref={fileRef}
+                    style={{ display: "none" }}
+                    onChange={handleImportSemesters}
+                />
+            </div>
             <div>
                 {/* Display your courses */}
                 {/* {courses.map((course) => (
