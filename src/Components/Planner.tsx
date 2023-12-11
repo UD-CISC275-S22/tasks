@@ -1,5 +1,5 @@
 /* eslint-disable no-extra-parens */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Class } from "../interfaces/class";
 import QuickAdd from "./QuickAdd";
 import SlowAdd from "./SlowAdd";
@@ -33,6 +33,66 @@ export function Planner({
     const [semester1, setSemester1] = useState<string>("");
     const [semArr, setSemArr] = useState<semester[]>([]);
     //const [courses, setCourses] = useState<Class[]>([]); // State for courses
+
+    useEffect(() => {
+        setSemArr(CurrentdegreePlan.semesters || []);
+    }, [CurrentdegreePlan]);
+
+    function saveToLocalStorage(degreePlan: degreePlan, showMessage = true) {
+        try {
+            const storedValue = localStorage.getItem("degreePlans");
+            const savedDegreePlans = storedValue ? JSON.parse(storedValue) : [];
+            const existingIndex = savedDegreePlans.findIndex(
+                (plan: { name: string }) => plan.name === degreePlan.name
+            );
+
+            if (existingIndex !== -1) {
+                savedDegreePlans[existingIndex] = degreePlan;
+            } else {
+                savedDegreePlans.push(degreePlan);
+            }
+
+            localStorage.setItem(
+                "degreePlans",
+                JSON.stringify(savedDegreePlans)
+            );
+
+            if (showMessage) {
+                alert("Degree Plan saved successfully!");
+            }
+        } catch (error) {
+            console.error("Error handling localStorage:", error);
+            alert("Error handling localStorage. Please try again.");
+        }
+    }
+
+    function saveDegreePlan() {
+        const updatedDegreePlan: degreePlan = {
+            ...CurrentdegreePlan,
+            semesters: semArr
+        };
+        setCurrentDegreePlan(updatedDegreePlan);
+        saveToLocalStorage(updatedDegreePlan);
+    }
+
+    function loadFromLocalStorage(planName: string): degreePlan | null {
+        try {
+            const storedValue = localStorage.getItem("degreePlans");
+            const savedDegreePlans = storedValue ? JSON.parse(storedValue) : [];
+
+            const loadedDegreePlan = savedDegreePlans.find(
+                (plan: degreePlan) => plan.name === planName
+            );
+
+            return loadedDegreePlan || null;
+        } catch (error) {
+            console.error(
+                "Error loading degree plan from localStorage:",
+                error
+            );
+            return null;
+        }
+    }
 
     const handleEditFormSubmit = (
         OGcourseCode: string,
@@ -75,25 +135,35 @@ export function Planner({
     function clear() {
         setSemArr([]); //clears semester array, one issue: when wanting to go back, we need to save all the changes made,
         //back to the degreePlanList and currentDegreePlan
+        saveDegreePlan();
     }
     function goBackClick() {
-        //go back button and Save function
         const newDegreePlan: degreePlan = {
             ...CurrentdegreePlan,
             semesters: semArr
         };
+
+        // Save the current degree plan to local storage without showing the message
+        saveToLocalStorage(newDegreePlan, false);
+
         const newDegreePlanList: degreePlan[] = DegreePlanList.map(
             (degreePlan: degreePlan): degreePlan =>
                 degreePlan.name === CurrentdegreePlan.name
                     ? newDegreePlan
                     : degreePlan
         );
-        setCurrentView(Views.degreePlanView);
-        //console.log(DegreePlanList);
-        setCurrentDegreePlan(newDegreePlan);
-        setDegreePlanList(newDegreePlanList);
-        //abstract semArray to App.tsx, pull out and add to App.tsx
-        //then clear it betweent degreePlans and set it to semesters of the degreePlan you click on
+
+        // Load the saved degree plan from local storage
+        const loadedDegreePlan = loadFromLocalStorage(CurrentdegreePlan.name);
+
+        if (loadedDegreePlan) {
+            setCurrentView(Views.degreePlanView);
+            setCurrentDegreePlan(loadedDegreePlan);
+            setDegreePlanList(newDegreePlanList);
+        } else {
+            // Handle the case where loading from local storage fails
+            alert("Error loading degree plan. Please try again.");
+        }
     }
     function revertCourse(course: Class) {
         const revertTo = allClasses.find(
@@ -397,6 +467,7 @@ export function Planner({
             <div>
                 <Button onClick={clear}> Clear Existing Semesters </Button>
                 <Button onClick={goBackClick}>Go Back to Degree Plans</Button>
+                <Button onClick={saveDegreePlan}>Save Degree Plan</Button>
             </div>
         </div>
     );
