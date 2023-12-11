@@ -50,7 +50,7 @@
     cursor: pointer;
     transition: background-color 1s;
     font-size: 14px;
-    margin-left: 5px;
+    margin-left: 10px;
     margin-bottom: 5px;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
         sans-serif;
@@ -69,7 +69,7 @@
     cursor: pointer;
     transition: background-color 1s;
     font-size: 14px;
-    margin-left: 5px;
+    margin-left: 10px;
     margin-bottom: 5px;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
         sans-serif;
