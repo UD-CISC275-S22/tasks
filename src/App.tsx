@@ -1,10 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import { Planner } from "./Planner";
+import { Plan } from "./interfaces/Plan";
+import { PhysicsPlan } from "./degrees/Physics";
+import { EmptyPlan } from "./degrees/EmptyPlan";
 import { CompSciPlan } from "./degrees/CompSci";
 import image from "./UDMonogramC.jpg";
 
 function App(): JSX.Element {
+    const [allPlans] = useState<Plan[]>([EmptyPlan, CompSciPlan, PhysicsPlan]);
+    const initialSelectedPlan =
+        JSON.parse(localStorage.getItem("selectedPlan") || "null") ||
+        allPlans[0];
+
+    const [selectedPlan, setSelectedPlan] = useState(initialSelectedPlan);
+
+    const handlePlanChange = (selectedValue: string) => {
+        const newPlan =
+            allPlans.find(plan => plan.id === selectedValue) || allPlans[0];
+        setSelectedPlan(newPlan);
+        console.log("Selected Plan: ", newPlan);
+        console.log("Current Plan ID: ", selectedValue);
+        window.location.reload();
+    };
+
+    useEffect(() => {
+        localStorage.setItem("selectedPlan", JSON.stringify(selectedPlan));
+    }, [selectedPlan]);
+
+    console.log("Selected Plan in App Component: ", selectedPlan);
+    console.log("Selected Plan Semesters: ", selectedPlan.semesters);
+
     return (
         <div className="App">
             <div className="header">
@@ -65,7 +91,7 @@ function App(): JSX.Element {
                 </div>
             </div> */}
             <div className="Planner">
-                {} <Planner plan={CompSciPlan} />
+                <Planner plan={selectedPlan} onPlanChange={handlePlanChange} />
             </div>
             <div className="ending">
                 <div className="footer">

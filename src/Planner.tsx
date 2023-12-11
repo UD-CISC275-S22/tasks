@@ -5,12 +5,16 @@ import "./Planner.css";
 import CourseList from "./CourseList";
 import { Plan } from "./interfaces/Plan";
 import { usePlannerFunctions } from "./PlannerFunctions";
+import { CompSciPlan } from "./degrees/CompSci";
+import { EmptyPlan } from "./degrees/EmptyPlan";
+import { PhysicsPlan } from "./degrees/Physics";
 
 interface Planner {
     plan: Plan;
+    onPlanChange: (selectedValue: string) => void;
 }
 
-const Planner: React.FC<Planner> = ({ plan }) => {
+const Planner: React.FC<Planner> = ({ plan, onPlanChange }) => {
     const {
         semestersData,
         searchTerm,
@@ -37,25 +41,27 @@ const Planner: React.FC<Planner> = ({ plan }) => {
         moveCourseData,
         handleMoveCourseConfirm,
         setMoveCourseData,
-        plans,
-        currentPlanIndex,
-        handlePlanChange,
+        // plans,
+        // currentPlanIndex,
+        // handlePlanChange,
         handleInsertPlan,
         handleRemovePlan,
         getSeasonsHeaderColor,
         handleResetCourse
     } = usePlannerFunctions(plan);
 
+    const allPlans = [CompSciPlan, PhysicsPlan, EmptyPlan];
+
     return (
         <div className="semester-courses">
             <div className="plan-buttons">
                 <select
-                    value={currentPlanIndex}
-                    onChange={e => handlePlanChange(Number(e.target.value))}
+                    value={plan.id}
+                    onChange={e => onPlanChange(e.target.value)}
                 >
-                    {plans.map((p, index) => (
-                        <option key={p.id} value={index}>
-                            {p.title}
+                    {allPlans.map(plan => (
+                        <option key={plan.id} value={plan.id}>
+                            {plan.title}
                         </option>
                     ))}
                 </select>

@@ -66,9 +66,9 @@ export const usePlannerFunctions = (initialPlans: Plan) => {
         setSemestersData(updatedSemesters);
     };
 
-    const handlePlanChange = (index: number) => {
-        setCurrentPlanIndex(index);
-    };
+    // const handlePlanChange = (index: number) => {
+    //     setCurrentPlanIndex(index);
+    // };
 
     const handleInsertPlan = () => {
         const newPlan: Plan = {
@@ -311,7 +311,7 @@ export const usePlannerFunctions = (initialPlans: Plan) => {
         plans,
         currentPlanIndex,
         currentPlan,
-        handlePlanChange,
+        // handlePlanChange,
         handleInsertPlan,
         handleRemovePlan,
         handleResetCourse,
