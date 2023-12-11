@@ -4,6 +4,7 @@ export interface Class {
     numPreReqs: number;
     preReqs: string[];
     semester: string;
+    OGcode: string;
     credits: number;
     canEditCredits: boolean;
     taken: boolean;
