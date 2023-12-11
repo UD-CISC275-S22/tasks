@@ -16,7 +16,7 @@ function SlowAdd(props: SlowAddProps): JSX.Element {
         credits: 0,
         canEditCredits: true,
         semester: "",
-        //year: "",
+        OGcode: "",
         taken: true,
         note: ""
     });
@@ -73,7 +73,7 @@ function SlowAdd(props: SlowAddProps): JSX.Element {
             credits: credits,
             canEditCredits: true,
             semester: semester,
-            //year: year,
+            OGcode: courseCode,
             taken: false,
             note: ""
         });
@@ -85,7 +85,7 @@ function SlowAdd(props: SlowAddProps): JSX.Element {
             credits: credits,
             canEditCredits: true,
             semester: semester,
-            //year: year,
+            OGcode: courseCode,
             taken: false,
             note: ""
         };

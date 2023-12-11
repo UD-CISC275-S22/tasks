@@ -27,7 +27,6 @@ function EditCourse({
         e.preventDefault();
         // Submit the edited course info
         setIsVisible(false);
-        console.log(course.courseCode);
         onEditFormSubmit(course.courseCode, editedCourse);
     };
 

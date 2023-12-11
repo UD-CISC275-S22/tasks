@@ -4,6 +4,7 @@ import { Class } from "../interfaces/class";
 import QuickAdd from "./QuickAdd";
 import SlowAdd from "./SlowAdd";
 import EditCourse from "./EditCourses";
+import allClasses from "../data/allClasses.json";
 //import DeleteCourses from "./DeleteCourses";
 
 // ------------add this
@@ -59,6 +60,7 @@ export function Planner({
             };
         });
         // Update your state with the new array of courses
+        console.log(OGcourseCode);
         setSemArr(updatedCourses);
         console.log(semArr);
 
@@ -93,7 +95,27 @@ export function Planner({
         //abstract semArray to App.tsx, pull out and add to App.tsx
         //then clear it betweent degreePlans and set it to semesters of the degreePlan you click on
     }
-
+    function revertCourse(course: Class) {
+        const revertTo = allClasses.find(
+            (course0: Class): boolean => course0.courseCode === course.OGcode
+        );
+        if (revertTo) {
+            const newSemArr = semArr.map((sem: semester): semester => {
+                return {
+                    name: sem.name,
+                    classes: [
+                        ...sem.classes.map(
+                            (course1: Class): Class =>
+                                course.OGcode === course1.OGcode
+                                    ? revertTo
+                                    : course1
+                        )
+                    ]
+                };
+            });
+            setSemArr(newSemArr);
+        }
+    }
     //----------------------------------------------------EDIT
 
     //const [degreePlan, setDegreePlan] = useState<degreePlan>();
@@ -122,6 +144,9 @@ export function Planner({
                             course={course}
                             onEditFormSubmit={handleEditFormSubmit}
                         />
+                        <Button onClick={() => revertCourse(course)}>
+                            Revert
+                        </Button>
                     </Col>
                 </Row>
             )
