@@ -1,6 +1,6 @@
 export const EmptyPlan = {
-    id: "123",
-    title: "Computer Science Degree",
+    id: "3",
+    title: "Empty Plan",
     semesters: [
         {
             id: "Fall 2022",

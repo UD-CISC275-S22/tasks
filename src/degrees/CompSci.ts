@@ -1,5 +1,5 @@
 export const CompSciPlan = {
-    id: "123",
+    id: "1",
     title: "Computer Science Degree",
     semesters: [
         {
