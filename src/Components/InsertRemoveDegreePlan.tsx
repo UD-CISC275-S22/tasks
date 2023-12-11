@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import { degreePlanViewProps } from "./DegreePlanView";
 import { degreePlan } from "../interfaces/degreePlan";
-//---------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------
 // Function to insert a new degree plan, creating an array
 // Function to remove  a new degree plan, removing an array
 
@@ -25,11 +25,11 @@ export function InsertDegreePlan({
     );
 }
 
-export function RemoveDegreePlan(
-    degreePlanList: degreePlan[],
-    setDegreePlanList: (degreePlan: degreePlan[]) => void,
+export function RemoveDegreePlan({
+    degreePlanList,
+    setDegreePlanList,
     removePlan: degreePlan
-): JSX.Element {
+}: degreePlanViewProp): JSX.Element {
     const updatedDegreePlans = degreePlanList.filter(
         (degreePlan: degreePlan): boolean => degreePlan.name !== removePlan.name
     );

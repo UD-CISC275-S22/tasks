@@ -50,6 +50,11 @@ export const DegreePlanView = ({
                         <Button onClick={() => DegreePlanClick(plan)}>
                             {plan.name}
                         </Button>
+                        <RemoveDegreePlan
+                            setDegreePlanList={degreePlanList}
+                            removePlan={plan}
+                            degreePlanList={degreePlanList}
+                        ></RemoveDegreePlan>
                     </li>
                 ))}
             </ul>
