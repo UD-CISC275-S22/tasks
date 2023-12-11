@@ -267,6 +267,16 @@ export const usePlannerFunctions = (initialPlans: Plan) => {
         );
     };
 
+    const getSeasonsHeaderColor = (semesterId: string | string[]) => {
+        if (semesterId.includes("Spring")) {
+            return "#cfe2f3";
+        } else if (semesterId.includes("Fall")) {
+            return "#ffcccb";
+        } else {
+            return "transparent";
+        }
+    };
+
     return {
         semestersData,
         setSemestersData,
@@ -305,6 +315,7 @@ export const usePlannerFunctions = (initialPlans: Plan) => {
         handleInsertPlan,
         handleRemovePlan,
         handleResetCourse,
-        setCurrentPlan
+        setCurrentPlan,
+        getSeasonsHeaderColor
     };
 };

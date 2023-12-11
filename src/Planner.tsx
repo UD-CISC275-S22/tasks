@@ -42,6 +42,7 @@ const Planner: React.FC<Planner> = ({ plan }) => {
         handlePlanChange,
         handleInsertPlan,
         handleRemovePlan,
+        getSeasonsHeaderColor,
         handleResetCourse
     } = usePlannerFunctions(plan);
 
@@ -132,24 +133,7 @@ const Planner: React.FC<Planner> = ({ plan }) => {
                     className="seasons-header"
                     style={{
                         display: allSemestersVisible ? "block" : "none",
-                        background:
-                            semester.id === "Fall 2022"
-                                ? "#ffcccb"
-                                : semester.id === "Spring 2023"
-                                ? "#cfe2f3"
-                                : semester.id === "Fall 2023"
-                                ? "#ffcccb"
-                                : semester.id === "Spring 2024"
-                                ? "#cfe2f3"
-                                : semester.id === "Fall 2024"
-                                ? "#ffcccb"
-                                : semester.id === "Spring 2025"
-                                ? "#cfe2f3"
-                                : semester.id === "Fall 2025"
-                                ? "#ffcccb"
-                                : semester.id === "Spring 2026"
-                                ? "#cfe2f3"
-                                : "transparent"
+                        background: getSeasonsHeaderColor(semester.id)
                     }}
                 >
                     {semester.skip ? (
