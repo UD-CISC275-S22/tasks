@@ -51,9 +51,11 @@ export const DegreePlanView = ({
                             {plan.name}
                         </Button>
                         <RemoveDegreePlan
-                            setDegreePlanList={degreePlanList}
+                            setDegreePlanList={setDegreePlanList}
                             removePlan={plan}
                             degreePlanList={degreePlanList}
+                            setCurrentView={setCurrentView}
+                            setCurrentDegreePlan={() => setDegreePlanList}
                         ></RemoveDegreePlan>
                     </li>
                 ))}

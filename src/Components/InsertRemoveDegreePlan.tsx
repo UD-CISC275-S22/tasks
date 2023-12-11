@@ -5,7 +5,9 @@ import { degreePlan } from "../interfaces/degreePlan";
 //------------------------------------------------------------------------------------
 // Function to insert a new degree plan, creating an array
 // Function to remove  a new degree plan, removing an array
-
+interface removePlanProps {
+    removePlan: degreePlan;
+}
 export function InsertDegreePlan({
     setDegreePlanList,
     degreePlanList
@@ -26,10 +28,10 @@ export function InsertDegreePlan({
 }
 
 export function RemoveDegreePlan({
-    degreePlanList,
     setDegreePlanList,
-    removePlan: degreePlan
-}: degreePlanViewProp): JSX.Element {
+    degreePlanList,
+    removePlan
+}: degreePlanViewProps & removePlanProps): JSX.Element {
     const updatedDegreePlans = degreePlanList.filter(
         (degreePlan: degreePlan): boolean => degreePlan.name !== removePlan.name
     );
