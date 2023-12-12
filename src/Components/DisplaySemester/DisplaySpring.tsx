@@ -67,6 +67,11 @@ export function DisplaySpring({
     //targetSem is also NOT the state and it's already passed in from the Semester.tsx file. So both variables are already declared in the indivPlanSem function
     const idx = index(targetYear, targetSem);
     const springCourses = semesters[idx].courseList;
+    const creditsArray = springCourses.map((course: Course) => course.credits);
+    const totalCredits = creditsArray.reduce(
+        (total: number, credVal: number) => total + credVal,
+        0
+    );
 
     const [displayCourseCategory, setDisplayCourseCategory] =
         useState<string>("AllCourses");
@@ -118,6 +123,7 @@ export function DisplaySpring({
             )}
 
             <div>
+                <div>Total Credits: {totalCredits}</div>
                 <DropAdd
                     dropClass={dropClass}
                     addClass={addClass}
