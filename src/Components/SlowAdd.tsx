@@ -51,7 +51,6 @@ function SlowAdd(props: SlowAddProps): JSX.Element {
         const tempValue = e.target.value;
         const preReqArray = tempValue.split(",").map((preReq) => preReq.trim());
         setPreReqs(preReqArray);
-        //Fix later
     };
 
     const handleCredits = (e: React.ChangeEvent<HTMLInputElement>) => {
