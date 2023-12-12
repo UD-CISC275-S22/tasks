@@ -11,6 +11,7 @@ import "./App.css";
 import {
     DeleteCourseFromSemester,
     UpdateCoureplanYear,
+    deleteMultipleCoursesFromSemester,
     removeSemesterYear
 } from "./DBmanage";
 import { AddSemesterModal } from "./AddSemesterModal";
@@ -20,15 +21,32 @@ import { AddSemesterModal } from "./AddSemesterModal";
 function Semester({
     rendSemester,
     edit,
-    clickToDeleteFromSemester
+    clickToDeleteFromSemester,
+    updateCoursePlan,
+    coursePlan
 }: {
     rendSemester: SemesterI;
+    updateCoursePlan: (newCoursePlan: CoursePlan) => void;
+    coursePlan: CoursePlan;
     edit: (course: Course) => void;
     clickToDeleteFromSemester: (
         courseUUID: string,
         currentSemester: SemesterI
     ) => void;
 }): JSX.Element {
+    const deleteAllCoursesFromSemester = () => {
+        const courseUUIDs = rendSemester.courses
+            .map((course) => course.UUID)
+            .filter((uuid): uuid is string => uuid !== undefined);
+
+        const updatedCoursePlan = deleteMultipleCoursesFromSemester(
+            courseUUIDs,
+            rendSemester,
+            coursePlan
+        );
+
+        updateCoursePlan(updatedCoursePlan);
+    };
     return (
         <Table striped bordered hover className="tight">
             <thead>
@@ -86,6 +104,18 @@ function Semester({
                     </td>
                 </tr>
             </tfoot>
+            <tfoot>
+                <tr>
+                    <td colSpan={3}>
+                        <button
+                            onClick={deleteAllCoursesFromSemester}
+                            style={{ backgroundColor: "red" }}
+                        >
+                            Delete All Courses
+                        </button>
+                    </td>
+                </tr>
+            </tfoot>
         </Table>
     );
 }
@@ -96,12 +126,16 @@ function Year({
     selectedSemester,
     updateYear,
     addSemesterToYear,
-    clickToDeleteFromSemester
+    clickToDeleteFromSemester,
+    coursePlan,
+    updateCoursePlan
 }: {
     year: yearI;
     editCourse: (course: Course) => void;
     selectedSemester: (semester: SemesterI) => void;
     updateYear: (updateYear: yearI) => void;
+    coursePlan: CoursePlan;
+    updateCoursePlan: (courseplan: CoursePlan) => void;
     addSemesterToYear: () => void;
     clickToDeleteFromSemester: (
         courseUUID: string,
@@ -285,7 +319,9 @@ function Year({
                                             clickToDeleteFromSemester={
                                                 clickToDeleteFromSemester
                                             }
-                                        ></Semester>
+                                            coursePlan={coursePlan}
+                                            updateCoursePlan={updateCoursePlan}
+                                        />
                                     </td>
                                 ) : null;
                             }
@@ -356,6 +392,8 @@ export function CourseplanClick({
                     year={curyear}
                     editCourse={setCurrentCourseEdit}
                     key={curyear.name}
+                    coursePlan={Courseplan}
+                    updateCoursePlan={UpdateCourseplan}
                     selectedSemester={selectedSemester}
                     updateYear={(updatedYear) =>
                         UpdateCourseplan(
