@@ -167,8 +167,8 @@ export function Planner({
     }
     function revertCourse(course: Class) {
         const revertTo = allClasses.find(
-            (course0: Class): boolean => course0.courseCode === course.OGcode
-        );
+            (course0): boolean => course0.courseCode === course.OGcode
+        ) as Class;
         if (revertTo) {
             const newSemArr = semArr.map((sem: semester): semester => {
                 return {
