@@ -1,16 +1,17 @@
 /* eslint-disable no-extra-parens */
 import React, { useState } from "react";
 import { Class } from "../interfaces/class";
+import { Button } from "react-bootstrap";
 
 function EditCourse({
     course,
     onEditFormSubmit
 }: {
     course: Class;
-    onEditFormSubmit: (updatedCourse: Class) => void;
+    onEditFormSubmit: (OGcourseCode: string, updatedCourse: Class) => void;
 }) {
     const [editedCourse, setEditedCourse] = useState<Class>(course);
-
+    const [isVisible, setIsVisible] = useState<boolean>(false);
     const handleInputChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
     ) => {
@@ -25,13 +26,18 @@ function EditCourse({
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         // Submit the edited course info
-        onEditFormSubmit(editedCourse);
+        setIsVisible(false);
+        onEditFormSubmit(course.courseCode, editedCourse);
     };
 
     return (
         <div>
-            <h3>Edit Course</h3>
-            <form onSubmit={handleSubmit}>
+            {/* <h3>Edit Course</h3> */}
+            <Button onClick={() => setIsVisible(!isVisible)}>Edit</Button>
+            <form
+                style={{ display: isVisible ? "inline-block" : "none" }}
+                onSubmit={handleSubmit}
+            >
                 <label>
                     Course Title:
                     <input

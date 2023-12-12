@@ -7,7 +7,7 @@
         "numPreReqs": 0,
         "preReqs": [],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC106",
         "taken": false,
         "note": "Students who received credit in CISC108 are not eligible to take this course without permission"
     },
@@ -19,7 +19,7 @@
         "numPreReqs": 0,
         "preReqs": [],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC108",
         "taken": false,
         "note": "Students who received credit in CISC106 are not eligible to take this course without permission"
     },
@@ -31,7 +31,7 @@
         "numPreReqs": 1,
         "preReqs": ["CISC106", "CISC108"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC181",
         "taken": false,
         "note": ""
     },
@@ -43,7 +43,7 @@
         "numPreReqs": 0,
         "preReqs": [],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC187",
         "taken": false,
         "note": ""
     },
@@ -55,7 +55,7 @@
         "numPreReqs": 2,
         "preReqs": ["GAME201", "CISC104", "CISC106", "CISC108"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC204",
         "taken": false,
         "note": ""
     },
@@ -67,7 +67,7 @@
         "numPreReqs": 1,
         "preReqs": ["CISC106", "CISC108"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC210",
         "taken": false,
         "note": ""
     },
@@ -79,7 +79,7 @@
         "numPreReqs": 1,
         "preReqs": ["CISC210"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC220",
         "taken": false,
         "note": ""
     },
@@ -91,7 +91,7 @@
         "numPreReqs": 1,
         "preReqs": ["CISC108", "MISY160"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC250",
         "taken": false,
         "note": ""
     },
@@ -103,7 +103,7 @@
         "numPreReqs": 1,
         "preReqs": ["CISC210"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC260",
         "taken": false,
         "note": ""
     },
@@ -115,7 +115,7 @@
         "numPreReqs": 2,
         "preReqs": ["CISC181", "CISC220"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC275",
         "taken": false,
         "note": ""
     },
@@ -127,7 +127,7 @@
         "numPreReqs": 0,
         "preReqs": [],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC287",
         "taken": false,
         "note": "Can choose 1-2 credits"
     },
@@ -139,7 +139,7 @@
         "numPreReqs": 2,
         "preReqs": ["MATH210", "CISC220"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC303",
         "taken": false,
         "note": ""
     },
@@ -151,7 +151,7 @@
         "numPreReqs": 2,
         "preReqs": ["CISC220", "MATH210"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC304",
         "taken": false,
         "note": ""
     },
@@ -163,7 +163,7 @@
         "numPreReqs": 2,
         "preReqs": ["MATH210", "CISC220"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC320",
         "taken": false,
         "note": ""
     },
@@ -175,7 +175,7 @@
         "numPreReqs": 0,
         "preReqs": [],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC355",
         "taken": false,
         "note": ""
     },
@@ -187,7 +187,7 @@
         "numPreReqs": 0,
         "preReqs": [],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC356",
         "taken": false,
         "note": "Junior or Senior standing"
     },
@@ -199,7 +199,7 @@
         "numPreReqs": 1,
         "preReqs": ["CISC101", "CISC103", "CISC106", "CISC108"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC357",
         "taken": false,
         "note": "Can choose 1-3 credits\nStudent must have sufficient time in their schedule to visit schools weekly between 9am and 3pm\n Students must pass a background check that clears them for teaching"
     },
@@ -211,7 +211,7 @@
         "numPreReqs": 1,
         "preReqs": ["CISC220"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC358",
         "taken": false,
         "note": ""
     },
@@ -223,7 +223,7 @@
         "numPreReqs": 2,
         "preReqs": ["CISC220", "CISC260"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC360",
         "taken": false,
         "note": ""
     },
@@ -235,7 +235,7 @@
         "numPreReqs": 2,
         "preReqs": ["CISC220", "CISC260"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC361",
         "taken": false,
         "note": "CPEG222 may be substituted for CISC260"
     },
@@ -247,7 +247,7 @@
         "numPreReqs": 1,
         "preReqs": ["CISC220"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC362",
         "taken": false,
         "note": ""
     },
@@ -259,7 +259,7 @@
         "numPreReqs": 0,
         "preReqs": [],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC366",
         "taken": false,
         "note": "Can choose 1-6 credits"
     },
@@ -271,7 +271,7 @@
         "numPreReqs": 2,
         "preReqs": ["CISC220", "CISC260"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC372",
         "taken": false,
         "note": ""
     },
@@ -283,7 +283,7 @@
         "numPreReqs": 1,
         "preReqs": ["CISC220"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC374",
         "taken": false,
         "note": ""
     },
@@ -295,7 +295,7 @@
         "numPreReqs": 0,
         "preReqs": [],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC387",
         "taken": false,
         "note": "Can choose 1-3 credits"
     },
@@ -307,7 +307,7 @@
         "numPreReqs": 1,
         "preReqs": ["CISC303"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC401",
         "taken": false,
         "note": "Students who received credit in CISC601 are not eligible to take this course without permission"
     },
@@ -319,7 +319,7 @@
         "numPreReqs": 1,
         "preReqs": ["CISC304"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC404",
         "taken": false,
         "note": "Students who received credit in CISC604 are not eligible to take this course without permission"
     },
@@ -331,7 +331,7 @@
         "numPreReqs": 1,
         "preReqs": ["MATH305", "MATH351", "MATH349"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC410",
         "taken": false,
         "note": "Students who received credit in MATH353 are not eligible to take this course without permission\nCrosslisted with MATH 426"
     },
@@ -343,7 +343,7 @@
         "numPreReqs": 1,
         "preReqs": ["MATH426", "CISC410", "MATH353"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC411",
         "taken": false,
         "note": "Crosslisted with MATH428"
     },
@@ -355,7 +355,7 @@
         "numPreReqs": 1,
         "preReqs": ["CISC304"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC414",
         "taken": false,
         "note": "Instead of CISC304, students can get permission from the insturctor\nStudents who received credit in CISC614 are not eligible to take this course without permission"
     },
@@ -367,7 +367,7 @@
         "numPreReqs": 1,
         "preReqs": ["CISC275"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC415",
         "taken": false,
         "note": "Students who received credit in CISC615 are not eligible to take this course without permission"
     },
@@ -379,7 +379,7 @@
         "numPreReqs": 1,
         "preReqs": ["CISC220"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC436",
         "taken": false,
         "note": "Instead of CISC220, students can get permission from the insturctor"
     },
@@ -391,7 +391,7 @@
         "numPreReqs": 1,
         "preReqs": ["CISC220"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC437",
         "taken": false,
         "note": "Students who received credit in CISC637 are not eligible to take this course without permission"
     },
@@ -403,7 +403,7 @@
         "numPreReqs": 2,
         "preReqs": ["CISC220", "MATH241"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC440",
         "taken": false,
         "note": "Students who received credit in CISC640 are not eligible to take this course without permission"
     },
@@ -415,7 +415,7 @@
         "numPreReqs": 1,
         "preReqs": ["CISC220"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC442",
         "taken": false,
         "note": "Students who received credit in CISC642 are not eligible to take this course without permission"
     },
@@ -427,7 +427,7 @@
         "numPreReqs": 0,
         "preReqs": [],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC449",
         "taken": false,
         "note": "Students who received credit in CISC649 are not eligible to take this course without permission"
     },
@@ -439,7 +439,7 @@
         "numPreReqs": 1,
         "preReqs": ["CISC260", "CPEG222"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC450",
         "taken": false,
         "note": "Students who received credit in CISC250, CPEG419, CISC650, or ELEG651 are not eligible to take this course without permission"
     },
@@ -451,7 +451,7 @@
         "numPreReqs": 1,
         "preReqs": ["CISC450"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC453",
         "taken": false,
         "note": ""
     },
@@ -463,7 +463,7 @@
         "numPreReqs": 1,
         "preReqs": ["CISC450"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC459",
         "taken": false,
         "note": "Students who received credit in CISC659 are not eligible to take this course without permission"
     },
@@ -475,7 +475,7 @@
         "numPreReqs": 1,
         "preReqs": ["CISC450"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC464",
         "taken": false,
         "note": ""
     },
@@ -487,7 +487,7 @@
         "numPreReqs": 0,
         "preReqs": [],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC465",
         "taken": false,
         "note": "Students who have received credit in CPEG365, CISC 465, CISC665, CPEG665, ELEG 465, ELEG665, MISY 465 or MISY665 are not eligible to take this course without permission"
     },
@@ -499,7 +499,7 @@
         "numPreReqs": 0,
         "preReqs": [],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC466",
         "taken": false,
         "note": "Can choose 1-6 credits"
     },
@@ -511,7 +511,7 @@
         "numPreReqs": 1,
         "preReqs": ["CISC361"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC469",
         "taken": false,
         "note": ""
     },
@@ -523,7 +523,7 @@
         "numPreReqs": 2,
         "preReqs": ["CISC260", "CISC303"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC471",
         "taken": false,
         "note": ""
     },
@@ -535,7 +535,7 @@
         "numPreReqs": 0,
         "preReqs": [],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC472",
         "taken": false,
         "note": ""
     },
@@ -547,7 +547,7 @@
         "numPreReqs": 0,
         "preReqs": [],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC473",
         "taken": false,
         "note": "Requires permission of instructor\nMay be taken twice for credit when topics vary"
     },
@@ -559,7 +559,7 @@
         "numPreReqs": 1,
         "preReqs": ["CISC275"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC474",
         "taken": false,
         "note": ""
     },
@@ -571,7 +571,7 @@
         "numPreReqs": 1,
         "preReqs": ["CISC275"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC475",
         "taken": false,
         "note": "Students who received credit in CISC675 are not eligible to take this course without permission"
     },
@@ -583,7 +583,7 @@
         "numPreReqs": 0,
         "preReqs": [],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC476",
         "taken": false,
         "note": ""
     },
@@ -595,7 +595,7 @@
         "numPreReqs": 1,
         "preReqs": ["CISC361"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC479",
         "taken": false,
         "note": "Can choose 1-6 credits\nStudents who received credit in CISC679 are not eligible to take this course without permission"
     },
@@ -607,7 +607,7 @@
         "numPreReqs": 2,
         "preReqs": ["CISC220", "CISC304"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC481",
         "taken": false,
         "note": "Students who received credit in CISC681 are not eligible to take this course without permission"
     },
@@ -619,7 +619,7 @@
         "numPreReqs": 1,
         "preReqs": ["CISC275"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC482",
         "taken": false,
         "note": "Students who received credit in CISC682 are not eligible to take this course without permission"
     },
@@ -631,7 +631,7 @@
         "numPreReqs": 2,
         "preReqs": ["CISC220", "MATH205", "MATH350"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC483",
         "taken": false,
         "note": ""
     },
@@ -643,7 +643,7 @@
         "numPreReqs": 2,
         "preReqs": ["CISC220", "MATH205", "MATH350"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC484",
         "taken": false,
         "note": "Students who received credit in CISC684 are not eligible to take this course without permission"
     },
@@ -655,7 +655,7 @@
         "numPreReqs": 1,
         "preReqs": ["CISC220"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC486",
         "taken": false,
         "note": "Students who have received credit in CISC686 are not eligible to take this course without permission"
     },
@@ -667,7 +667,7 @@
         "numPreReqs": 0,
         "preReqs": [],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC487",
         "taken": false,
         "note": "Can choose 1-3 credits"
     },
@@ -679,7 +679,7 @@
         "numPreReqs": 1,
         "preReqs": ["CISC220"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC488",
         "taken": false,
         "note": ""
     },
@@ -691,7 +691,7 @@
         "numPreReqs": 0,
         "preReqs": [],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC489",
         "taken": false,
         "note": "Students who received credit in CISC689 are not eligible to take this course without permission"
     },
@@ -703,7 +703,7 @@
         "numPreReqs": 1,
         "preReqs": ["CISC275"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC498",
         "taken": false,
         "note": ""
     },
@@ -715,7 +715,7 @@
         "numPreReqs": 2,
         "preReqs": ["CISC320", "CISC498"],
         "semester": "",
-        "year": "",
+        "OGcode": "CISC499",
         "taken": false,
         "note": ""
     },
@@ -727,7 +727,7 @@
         "numPreReqs": 0,
         "preReqs": [],
         "semester": "",
-        "year": "",
+        "OGcode": "UNIV401",
         "taken": false,
         "note": "Total credits for UNIV401 and UNIV 402 not to exceed six"
     },
@@ -739,7 +739,7 @@
         "numPreReqs": 1,
         "preReqs": ["ENGL110"],
         "semester": "",
-        "year": "",
+        "OGcode": "ENGL312",
         "taken": false,
         "note": ""
     },
@@ -751,7 +751,7 @@
         "numPreReqs": 1,
         "preReqs": ["ENGL110"],
         "semester": "",
-        "year": "",
+        "OGcode": "ENGL410",
         "taken": false,
         "note": ""
     },
@@ -763,7 +763,7 @@
         "numPreReqs": 0,
         "preReqs": [],
         "semester": "",
-        "year": "",
+        "OGcode": "UNIV402",
         "taken": false,
         "note": "Total credits for UNIV401 and UNIV 402 not to exceed six"
     },
@@ -775,7 +775,7 @@
         "numPreReqs": 1,
         "preReqs": ["MATH210", "MATH230"],
         "semester": "",
-        "year": "",
+        "OGcode": "MATH205",
         "taken": false,
         "note": ""
     },
@@ -787,7 +787,7 @@
         "numPreReqs": 1,
         "preReqs": ["MATH243"],
         "semester": "",
-        "year": "",
+        "OGcode": "MATH350",
         "taken": false,
         "note": ""
     },
@@ -799,7 +799,7 @@
         "numPreReqs": 1,
         "preReqs": ["MATH241", "MATH242", "MATH232"],
         "semester": "",
-        "year": "",
+        "OGcode": "MATH210",
         "taken": false,
         "note": ""
     },
@@ -811,7 +811,7 @@
         "numPreReqs": 0,
         "preReqs": [],
         "semester": "",
-        "year": "",
+        "OGcode": "MATH241",
         "taken": false,
         "note": ""
     },
@@ -823,7 +823,7 @@
         "numPreReqs": 1,
         "preReqs": ["MATH241", "MATH232"],
         "semester": "",
-        "year": "",
+        "OGcode": "MATH242",
         "taken": false,
         "note": ""
     },
@@ -835,7 +835,7 @@
         "numPreReqs": 1,
         "preReqs": ["MATH242"],
         "semester": "",
-        "year": "",
+        "OGcode": "MATH243",
         "taken": false,
         "note": ""
     },
@@ -847,7 +847,7 @@
         "numPreReqs": 1,
         "preReqs": ["MATH230", "MATH242"],
         "semester": "",
-        "year": "",
+        "OGcode": "MATH349",
         "taken": false,
         "note": ""
     },
@@ -859,7 +859,7 @@
         "numPreReqs": 0,
         "preReqs": [],
         "semester": "",
-        "year": "",
+        "OGcode": "MATH549",
         "taken": false,
         "note": ""
     },
@@ -871,7 +871,7 @@
         "numPreReqs": 2,
         "preReqs": ["MATH242", "MATH349"],
         "semester": "",
-        "year": "",
+        "OGcode": "MATH302",
         "taken": false,
         "note": "Students who received credit in MATH 305, MATH 342, MATH 351, or MATH 352 are not eligible to take this course without permission"
     },
@@ -883,7 +883,7 @@
         "numPreReqs": 1,
         "preReqs": ["MATH350"],
         "semester": "",
-        "year": "",
+        "OGcode": "MATH450",
         "taken": false,
         "note": ""
     },
@@ -895,7 +895,7 @@
         "numPreReqs": 1,
         "preReqs": ["MATH243"],
         "semester": "",
-        "year": "",
+        "OGcode": "MATH351",
         "taken": false,
         "note": ""
     },
@@ -907,7 +907,7 @@
         "numPreReqs": 2,
         "preReqs": ["MATH210", "MATH242"],
         "semester": "",
-        "year": "",
+        "OGcode": "MATH245",
         "taken": false,
         "note": ""
     },
@@ -919,7 +919,7 @@
         "numPreReqs": 1,
         "preReqs": ["MATH210"],
         "semester": "",
-        "year": "",
+        "OGcode": "MATH315",
         "taken": false,
         "note": ""
     },
@@ -931,7 +931,7 @@
         "numPreReqs": 2,
         "preReqs": ["MATH349", "MATH245"],
         "semester": "",
-        "year": "",
+        "OGcode": "MATH451",
         "taken": false,
         "note": ""
     },
@@ -943,7 +943,7 @@
         "numPreReqs": 0,
         "preReqs": [],
         "semester": "",
-        "year": "",
+        "OGcode": "MATH535",
         "taken": false,
         "note": ""
     },
@@ -955,7 +955,7 @@
         "numPreReqs": 2,
         "preReqs": [],
         "semester": "",
-        "year": "",
+        "OGcode": "BISC207",
         "taken": false,
         "note": "Students who received credit in BISC 205 are not eligible to take this course without permission"
     },
@@ -967,7 +967,7 @@
         "numPreReqs": 1,
         "preReqs": ["BISC207"],
         "semester": "",
-        "year": "",
+        "OGcode": "BISC208",
         "taken": false,
         "note": ""
     },
@@ -979,7 +979,7 @@
         "numPreReqs": 2,
         "preReqs": [],
         "semester": "",
-        "year": "",
+        "OGcode": "CHEM103",
         "taken": false,
         "note": "Must be taken with CHEM133"
     },
@@ -991,7 +991,7 @@
         "numPreReqs": 0,
         "preReqs": [],
         "semester": "",
-        "year": "",
+        "OGcode": "CHEM133",
         "taken": false,
         "note": "Must be taken with CHEM103"
     },
@@ -1003,7 +1003,7 @@
         "numPreReqs": 2,
         "preReqs": ["CHEM103", "CHEM133"],
         "semester": "",
-        "year": "",
+        "OGcode": "CHEM104",
         "taken": false,
         "note": "Must be taken with CHEM134"
     },
@@ -1015,7 +1015,7 @@
         "numPreReqs": 2,
         "preReqs": ["CHEM103", "CHEM133"],
         "semester": "",
-        "year": "",
+        "OGcode": "CHEM134",
         "taken": false,
         "note": "Must be taken with CHEM104"
     },
@@ -1027,7 +1027,7 @@
         "numPreReqs": 0,
         "preReqs": [],
         "semester": "",
-        "year": "",
+        "OGcode": "GEOL105",
         "taken": false,
         "note": "May be taken with GEOL115"
     },
@@ -1039,7 +1039,7 @@
         "numPreReqs": 0,
         "preReqs": [],
         "semester": "",
-        "year": "",
+        "OGcode": "GEOL115",
         "taken": false,
         "note": "Must be taken with GEOL105"
     },
@@ -1051,7 +1051,7 @@
         "numPreReqs": 0,
         "preReqs": [],
         "semester": "",
-        "year": "",
+        "OGcode": "GEOL107",
         "taken": false,
         "note": ""
     },
@@ -1063,7 +1063,7 @@
         "numPreReqs": 0,
         "preReqs": [],
         "semester": "",
-        "year": "",
+        "OGcode": "GEOL110",
         "taken": false,
         "note": ""
     },
@@ -1075,43 +1075,43 @@
         "numPreReqs": 0,
         "preReqs": [],
         "semester": "",
-        "year": "",
+        "OGcode": "PHYS207",
         "taken": false,
         "note": "Must be taken with PHYS227"
     },
     {
-        "courseTitle": "",
+        "courseTitle": "Fundamentals of Physics Laboratory I",
         "courseCode": "PHYS227",
         "credits": 1,
         "canEditCredits": false,
         "numPreReqs": 0,
         "preReqs": [],
         "semester": "",
-        "year": "",
+        "OGcode": "PHYS227",
         "taken": false,
         "note": "Must be taken with PHYS207"
     },
     {
-        "courseTitle": "",
+        "courseTitle": "Fundamentals of Physics II",
         "courseCode": "PHYS208",
         "credits": 3,
         "canEditCredits": false,
         "numPreReqs": 3,
         "preReqs": ["PHYS203", "PHYS207", "PHYS227", "MATH241", "MATH232"],
         "semester": "",
-        "year": "",
+        "OGcode": "PHYS208",
         "taken": false,
         "note": "Must be taken with PHYS228"
     },
     {
-        "courseTitle": "",
+        "courseTitle": "Fundamentals of Physics Laboratory II",
         "courseCode": "PHYS228",
         "credits": 1,
         "canEditCredits": false,
         "numPreReqs": 0,
         "preReqs": [],
         "semester": "",
-        "year": "",
+        "OGcode": "PHYS228",
         "taken": false,
         "note": "Must be taken with PHYS208"
     },
@@ -1123,7 +1123,7 @@
         "numPreReqs": 0,
         "preReqs": [],
         "semester": "",
-        "year": "",
+        "OGcode": "COMM212",
         "taken": false,
         "note": "Students who have received credit in COMM 350 are not eligible to take this course without permission"
     },
@@ -1135,7 +1135,7 @@
         "numPreReqs": 1,
         "preReqs": ["MISY330", "CISC437"],
         "semester": "",
-        "year": "",
+        "OGcode": "MISY430",
         "taken": false,
         "note": ""
     },
@@ -1147,7 +1147,7 @@
         "numPreReqs": 2,
         "preReqs": [],
         "semester": "",
-        "year": "",
+        "OGcode": "ACCT207",
         "taken": false,
         "note": "Not open to freshmen"
     },
@@ -1159,7 +1159,7 @@
         "numPreReqs": 1,
         "preReqs": ["ACCT207"],
         "semester": "",
-        "year": "",
+        "OGcode": "ACCT208",
         "taken": false,
         "note": "Not open to freshmen"
     },
@@ -1171,7 +1171,7 @@
         "numPreReqs": 1,
         "preReqs": ["STAT200"],
         "semester": "",
-        "year": "",
+        "OGcode": "BUAD306",
         "taken": false,
         "note": "Requires junior status"
     },
@@ -1183,7 +1183,7 @@
         "numPreReqs": 0,
         "preReqs": [],
         "semester": "",
-        "year": "",
+        "OGcode": "BUAD309",
         "taken": false,
         "note": "Requires sophomore status"
     },
@@ -1195,7 +1195,7 @@
         "numPreReqs": 0,
         "preReqs": [],
         "semester": "",
-        "year": "",
+        "OGcode": "BUAD301",
         "taken": false,
         "note": "Requires sophomore status"
     },
@@ -1207,7 +1207,7 @@
         "numPreReqs": 2,
         "preReqs": ["ACCT207", "STAT200", "MATH350", "STAT470"],
         "semester": "",
-        "year": "",
+        "OGcode": "FINC311",
         "taken": false,
         "note": ""
     },
@@ -1219,7 +1219,7 @@
         "numPreReqs": 1,
         "preReqs": ["MISY430"],
         "semester": "",
-        "year": "",
+        "OGcode": "MISY431",
         "taken": false,
         "note": ""
     },
@@ -1231,7 +1231,7 @@
         "numPreReqs": 1,
         "preReqs": ["MISY430"],
         "semester": "",
-        "year": "",
+        "OGcode": "MISY432",
         "taken": false,
         "note": ""
     },
@@ -1252,7 +1252,7 @@
             "HOSP364"
         ],
         "semester": "",
-        "year": "",
+        "OGcode": "MISY427",
         "taken": false,
         "note": ""
     },
@@ -1264,7 +1264,7 @@
         "numPreReqs": 1,
         "preReqs": ["MISY225", "MISY261", "CISC108"],
         "semester": "",
-        "year": "",
+        "OGcode": "MISY480",
         "taken": false,
         "note": ""
     }

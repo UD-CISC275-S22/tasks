@@ -1,9 +1,10 @@
 /* eslint-disable no-extra-parens */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Class } from "../interfaces/class";
 import QuickAdd from "./QuickAdd";
 import SlowAdd from "./SlowAdd";
 import EditCourse from "./EditCourses";
+import allClasses from "../data/allClasses.json";
 //import DeleteCourses from "./DeleteCourses";
 
 // ------------add this
@@ -31,39 +32,100 @@ export function Planner({
     //export function SingleMultipleSemester(): JSX.Element { ----------------adding to DegreePlan
     const [semester1, setSemester1] = useState<string>("");
     const [semArr, setSemArr] = useState<semester[]>([]);
-    const [editingCourse, setEditingCourse] = useState<Class | null>(null);
     //const [courses, setCourses] = useState<Class[]>([]); // State for courses
 
-    const handleEditClick = (course: Class) => {
-        setEditingCourse(course);
-    };
+    useEffect(() => {
+        setSemArr(CurrentdegreePlan.semesters || []);
+    }, [CurrentdegreePlan]);
 
-    const handleEditFormSubmit = (updatedCourse: Class) => {
+    function saveToLocalStorage(degreePlan: degreePlan, showMessage = true) {
+        try {
+            const storedValue = localStorage.getItem("degreePlans");
+            const savedDegreePlans = storedValue ? JSON.parse(storedValue) : [];
+            const existingIndex = savedDegreePlans.findIndex(
+                (plan: { name: string }) => plan.name === degreePlan.name
+            );
+
+            if (existingIndex !== -1) {
+                savedDegreePlans[existingIndex] = degreePlan;
+            } else {
+                savedDegreePlans.push(degreePlan);
+            }
+
+            localStorage.setItem(
+                "degreePlans",
+                JSON.stringify(savedDegreePlans)
+            );
+
+            if (showMessage) {
+                alert("Degree Plan saved successfully!");
+            }
+        } catch (error) {
+            console.error("Error handling localStorage:", error);
+            alert("Error handling localStorage. Please try again.");
+        }
+    }
+
+    function saveDegreePlan() {
+        const updatedDegreePlan: degreePlan = {
+            ...CurrentdegreePlan,
+            semesters: semArr
+        };
+        setCurrentDegreePlan(updatedDegreePlan);
+        saveToLocalStorage(updatedDegreePlan);
+    }
+
+    function loadFromLocalStorage(planName: string): degreePlan | null {
+        try {
+            const storedValue = localStorage.getItem("degreePlans");
+            const savedDegreePlans = storedValue ? JSON.parse(storedValue) : [];
+
+            const loadedDegreePlan = savedDegreePlans.find(
+                (plan: degreePlan) => plan.name === planName
+            );
+
+            return loadedDegreePlan || null;
+        } catch (error) {
+            console.error(
+                "Error loading degree plan from localStorage:",
+                error
+            );
+            return null;
+        }
+    }
+
+    const handleEditFormSubmit = (
+        OGcourseCode: string,
+        updatedCourse: Class
+    ) => {
         // Assuming you have an array of courses in state
         // const updatedCourses = semArr.map((course: Class) =>
         //     course.courseCode === updatedCourse.courseCode
         //         ? updatedCourse
         //         : course
         // );
-        const deepCopy = semArr.map((sem: semester): semester => ({ ...sem }));
-        const updatedCourses = deepCopy.map((sem: semester): semester => {
+        //const deepCopy = semArr.map((sem: semester): semester => ({ ...sem }));
+        console.log(updatedCourse, OGcourseCode);
+        const updatedCourses = semArr.map((sem: semester): semester => {
             return {
                 name: sem.name,
                 classes: [
                     ...sem.classes.map(
                         (course: Class): Class =>
-                            updatedCourse.courseCode ? updatedCourse : course
+                            OGcourseCode === course.courseCode
+                                ? updatedCourse
+                                : course
                     )
                 ]
             };
         });
-
         // Update your state with the new array of courses
+        console.log(OGcourseCode);
         setSemArr(updatedCourses);
         console.log(semArr);
 
         // Clear the editing state
-        setEditingCourse(null);
+        // setEditingCourse(null);
     };
 
     const [semArrClicked, setSemArrClicked] = useState<semester[]>(semArr);
@@ -73,27 +135,107 @@ export function Planner({
     function clear() {
         setSemArr([]); //clears semester array, one issue: when wanting to go back, we need to save all the changes made,
         //back to the degreePlanList and currentDegreePlan
+        saveDegreePlan();
     }
     function goBackClick() {
-        //go back button and Save function
         const newDegreePlan: degreePlan = {
             ...CurrentdegreePlan,
             semesters: semArr
         };
+
+        // Save the current degree plan to local storage without showing the message
+        saveToLocalStorage(newDegreePlan, false);
+
         const newDegreePlanList: degreePlan[] = DegreePlanList.map(
             (degreePlan: degreePlan): degreePlan =>
                 degreePlan.name === CurrentdegreePlan.name
                     ? newDegreePlan
                     : degreePlan
         );
-        setCurrentView(Views.degreePlanView);
-        //console.log(DegreePlanList);
-        setCurrentDegreePlan(newDegreePlan);
-        setDegreePlanList(newDegreePlanList);
-        //abstract semArray to App.tsx, pull out and add to App.tsx
-        //then clear it betweent degreePlans and set it to semesters of the degreePlan you click on
+
+        // Load the saved degree plan from local storage
+        const loadedDegreePlan = loadFromLocalStorage(CurrentdegreePlan.name);
+
+        if (loadedDegreePlan) {
+            setCurrentView(Views.degreePlanView);
+            setCurrentDegreePlan(loadedDegreePlan);
+            setDegreePlanList(newDegreePlanList);
+        } else {
+            // Handle the case where loading from local storage fails
+            alert("Error loading degree plan. Please try again.");
+        }
+    }
+    function revertCourse(course: Class) {
+        const revertTo = allClasses.find(
+            (course0: Class): boolean => course0.courseCode === course.OGcode
+        );
+        if (revertTo) {
+            const newSemArr = semArr.map((sem: semester): semester => {
+                return {
+                    name: sem.name,
+                    classes: [
+                        ...sem.classes.map(
+                            (course1: Class): Class =>
+                                course.OGcode === course1.OGcode
+                                    ? revertTo
+                                    : course1
+                        )
+                    ]
+                };
+            });
+            setSemArr(newSemArr);
+        }
     }
 
+    //----------------------------------------------------IMPORT/EXPORT
+    const handleExportSemesters = () => {
+        const fileName = prompt(
+            "Please enter a name for your file: ",
+            "semester.json"
+        );
+        //Default filename is semester.json
+        if (fileName === null) return; //If user clicks cancel, do nothing
+        const allSemesters = [...semArr, ...CurrentdegreePlan.semesters];
+        const jsonContent = JSON.stringify(allSemesters); //Convet the array of semesters to a json string
+        const blob = new Blob([jsonContent], { type: "application/json" }); //Create a blob of the json content
+
+        const link = document.createElement("a");
+        link.href = window.URL.createObjectURL(blob);
+        link.download = fileName;
+
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
+    const fileRef = React.createRef<HTMLInputElement>();
+
+    const handleImportClick = () => {
+        if (fileRef.current) {
+            fileRef.current.click();
+        }
+    };
+    const handleImportSemesters = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const file = e.target;
+        if (file.files && file.files[0]) {
+            const reader = new FileReader(); //FileReader reads through the JSON file
+
+            reader.onload = (e) => {
+                try {
+                    const importedSemesters = JSON.parse(
+                        e.target?.result as string
+                    );
+
+                    setSemArr(importedSemesters); //update semArr state with imported semesters
+                } catch (err) {
+                    window.alert("Invalid file. Please try again");
+                    file.value = "";
+                } //Used ChatGPT to help out here. I was unsure of how to check for invalid file formats, so I had ChatGPT explain some options, and this seemed like the best one.
+                // Before the file is read, the file input is checked to see if it is a valid file. If it is not, the file input is cleared and the user is alerted.
+            };
+            reader.readAsText(file.files[0]);
+        }
+    };
     //----------------------------------------------------EDIT
 
     //const [degreePlan, setDegreePlan] = useState<degreePlan>();
@@ -118,15 +260,13 @@ export function Planner({
                         </Button>
                     </Col>
                     <Col>
-                        <Button onClick={() => handleEditClick(course)}>
-                            Edit
+                        <EditCourse
+                            course={course}
+                            onEditFormSubmit={handleEditFormSubmit}
+                        />
+                        <Button onClick={() => revertCourse(course)}>
+                            Revert
                         </Button>
-                        {editingCourse && (
-                            <EditCourse
-                                course={editingCourse}
-                                onEditFormSubmit={handleEditFormSubmit}
-                            />
-                        )}
                     </Col>
                 </Row>
             )
@@ -319,6 +459,17 @@ export function Planner({
     return (
         <div>
             <div>
+                <Button onClick={handleExportSemesters}>Export</Button>
+                <Button onClick={handleImportClick}>Import</Button>
+                <input
+                    type="file"
+                    accept=".json"
+                    ref={fileRef}
+                    style={{ display: "none" }}
+                    onChange={handleImportSemesters}
+                />
+            </div>
+            <div>
                 {/* Display your courses */}
                 {/* {courses.map((course) => (
                     <div key={course.courseCode}>
@@ -377,6 +528,7 @@ export function Planner({
             <div>
                 <Button onClick={clear}> Clear Existing Semesters </Button>
                 <Button onClick={goBackClick}>Go Back to Degree Plans</Button>
+                <Button onClick={saveDegreePlan}>Save Degree Plan</Button>
             </div>
         </div>
     );
