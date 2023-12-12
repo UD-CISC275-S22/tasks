@@ -115,7 +115,8 @@ export function ViewSemester(): JSX.Element {
         courseList
     );
     //let COURSES_LIST = courses as Course[];
-
+    
+    const [filteredList]
     //NOTE FOR MICHAEL: Here is where you can add your add courses and remove courses functions
     //Here is where you can add your add courses and remove courses functions
     function updateCurrCourse(event: React.ChangeEvent<HTMLSelectElement>) {
@@ -227,16 +228,16 @@ export function ViewSemester(): JSX.Element {
         setSemesters(newSemesters);
     }
 
-    function requiredClasses(targetYear: number, targetSem: string) {
-        const idx = index(targetYear, targetSem);
-        const newSemesters = [...semesters];
+    function requiredClasses() {
+        //const idx = index(targetYear, targetSem);
+        // const newSemesters = [...semesters];
         const core = CoreBS;
 
         /*The substring (0,7) is so that it only looks for the first 7 indexs 
         so insead of CISC181 - Introduction to Computer Science II 
         it will look for CISC181*/
-        const filteredClasses = newSemesters[idx].courseList.filter(
-            (aCourse: Course) => core.includes(aCourse.name.substring(0, 7))
+        const filteredClasses = courseList.filter((aCourse: Course) =>
+            core.includes(aCourse.name.substring(0, 7))
         );
         /*     newSemesters[idx].courseList = [...filteredClasses];
         // looks through the course list in the current semester and filters out the
@@ -557,10 +558,8 @@ export function ViewSemester(): JSX.Element {
                     ): void {
                         throw new Error("Function not implemented.");
                     }}
-                    currCourse={0}
-                    Course_List={[]}
-                    targetYear={0}
-                    targetSem={""}
+                    currCourse={currCourse}
+                    Course_List={courseList}
                 ></RequiredClasses>
                 <ClearSemester clearSemester={clearSemester}></ClearSemester>
                 <ClearAllSemesters
