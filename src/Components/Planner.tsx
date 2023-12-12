@@ -34,9 +34,9 @@ export function Planner({
     const [semArr, setSemArr] = useState<semester[]>([]);
     //const [courses, setCourses] = useState<Class[]>([]); // State for courses
 
-    useEffect(() => {
-        setSemArr(CurrentdegreePlan.semesters || []);
-    }, [CurrentdegreePlan]);
+    // useEffect(() => {
+    //     setSemArr(CurrentdegreePlan.semesters || []);
+    // }, [CurrentdegreePlan]);
 
     function saveToLocalStorage(degreePlan: degreePlan, showMessage = true) {
         try {
@@ -135,7 +135,7 @@ export function Planner({
     function clear() {
         setSemArr([]); //clears semester array, one issue: when wanting to go back, we need to save all the changes made,
         //back to the degreePlanList and currentDegreePlan
-        saveDegreePlan();
+        //saveDegreePlan();
     }
     function goBackClick() {
         const newDegreePlan: degreePlan = {
