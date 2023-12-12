@@ -60,6 +60,7 @@ export const DegreePlanView = ({
         </div>
     );
 };
+
 //map out degreePlanList
 //when click on degreePlan, set currDegreePlan to which ever one we click on -
 //then switches view to semesterView

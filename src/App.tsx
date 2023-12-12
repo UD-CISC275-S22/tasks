@@ -20,10 +20,26 @@ function App(): JSX.Element {
     //--------------------------------------------------------------------------------------
     const [view, setView] = useState<Views>(Views.degreePlanView);
     const [currDegreePlan, setcurrDegreePlan] = useState<degreePlan>(
-        prevDegreePlan[1]
+        prevDegreePlan[0]
     );
     const [degreePlanList, setDegreePlanList] =
         useState<degreePlan[]>(prevDegreePlan);
+
+    // Save function to update the current degree plan
+    const saveCurrentPlan = (updatedPlan: degreePlan) => {
+        console.log("Saving updated plan:", updatedPlan);
+
+        setcurrDegreePlan(updatedPlan);
+
+        // Update the degree plan list by creating a new array with the updated plan
+        const updatedDegreePlanList = degreePlanList.map((plan: degreePlan) =>
+            plan.name === updatedPlan.name ? updatedPlan : plan
+        );
+
+        console.log("Updated degree plan list:", updatedDegreePlanList);
+
+        setDegreePlanList(updatedDegreePlanList);
+    };
 
     return (
         <div className="App">
@@ -41,19 +57,17 @@ function App(): JSX.Element {
                     setCurrentView={setView}
                     setCurrentDegreePlan={setcurrDegreePlan}
                     degreePlanList={degreePlanList}
-                ></DegreePlanView>
+                />
             )}
             {view === Views.semestersView && (
-                // singleMutipleSemester needs to get pass the current degreePlan in order to know which degreePlan to display
-                //try to come up with a save.
-                //<SingleMultipleSemester></SingleMultipleSemester>
                 <Planner
                     setCurrentView={setView}
                     CurrentdegreePlan={currDegreePlan}
                     setCurrentDegreePlan={setcurrDegreePlan}
                     setDegreePlanList={setDegreePlanList}
                     DegreePlanList={degreePlanList}
-                ></Planner>
+                    saveCurrentPlan={saveCurrentPlan}
+                />
             )}
         </div>
     );
