@@ -67,6 +67,11 @@ export function DisplayFall({
     const idx = index(targetYear, targetSem);
     const fallCourses = semesters[idx].courseList;
     console.log("fall courses: ", fallCourses);
+    const creditsArray = fallCourses.map((course: Course) => course.credits);
+    const totalCredits = creditsArray.reduce(
+        (total: number, credVal: number) => total + credVal,
+        0
+    );
 
     const [displayCourseCategory, setDisplayCourseCategory] =
         useState<string>("AllCourses");
@@ -116,6 +121,7 @@ export function DisplayFall({
                 )
             )}
             <>
+                <div>Total Credits: {totalCredits}</div>
                 <DropAdd
                     dropClass={dropClass}
                     addClass={addClass}

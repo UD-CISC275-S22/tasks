@@ -30,11 +30,11 @@ export const RequiredClasses = ({
     targetYear: number;
     targetSem: string;
 }) => {
-    const credits = Course_List.map((course: Course) => course.title);
-    // const totalCredits = credits.reduce(
-    //     (total: number, credVal: number) => total + credVal,
-    //     0
-    // );
+    const credits = Course_List.map((course: Course) => course.credits);
+    const totalCredits = credits.reduce(
+        (total: number, credVal: number) => total + credVal,
+        0
+    );
     return (
         <div>
             <Form.Group controlId="requiredCourses">
@@ -50,7 +50,7 @@ export const RequiredClasses = ({
                     }
                 </Form.Select>
             </Form.Group>
-            <Button onClick={() => console.log(credits)}>
+            <Button onClick={() => console.log(totalCredits)}>
                 Required Classes
             </Button>
         </div>

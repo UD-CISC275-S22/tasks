@@ -40,7 +40,6 @@ export const DropAdd = ({
         "MATH350",
         "MATH210"
     ];
-    const credits = Course_List.map((course: Course) => course.title);
     return (
         <div>
             <Form.Group controlId="currentCourse">
@@ -73,12 +72,7 @@ export const DropAdd = ({
             <Button onClick={() => dropClass(targetYear, targetSem)}>
                 Remove Class
             </Button>
-            <Button
-                onClick={
-                    (() => addClass(targetYear, targetSem),
-                    () => console.log(credits))
-                }
-            >
+            <Button onClick={() => addClass(targetYear, targetSem)}>
                 Add Class
             </Button>
             <Button

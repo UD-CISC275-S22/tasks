@@ -571,8 +571,8 @@ export function ViewSemester(): JSX.Element {
                     ): void {
                         throw new Error("Function not implemented.");
                     }}
-                    currCourse={0}
-                    Course_List={[]}
+                    currCourse={currCourse}
+                    Course_List={courseList}
                     targetYear={0}
                     targetSem={""}
                 ></RequiredClasses>
