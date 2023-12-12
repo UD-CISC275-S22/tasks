@@ -6,7 +6,7 @@ export interface Class {
     semester: string;
     OGcode: string;
     credits: number;
-    canEditCredits: boolean;
+    breadth: string;
     taken: boolean;
     note: string;
 }

@@ -14,7 +14,7 @@ function SlowAdd(props: SlowAddProps): JSX.Element {
         numPreReqs: 0,
         preReqs: [],
         credits: 0,
-        canEditCredits: true,
+        breadth: "",
         semester: "",
         OGcode: "",
         taken: true,
@@ -24,6 +24,7 @@ function SlowAdd(props: SlowAddProps): JSX.Element {
     const [courseCode, setCourseCode] = useState("");
     const [preReqs, setPreReqs] = useState<string[]>([]);
     const [credits, setCredits] = useState(0);
+    const [breadth, setBreadth] = useState("null");
     const [semester, setSemester] = useState("");
     //const [year, setYear] = useState("");
 
@@ -56,6 +57,10 @@ function SlowAdd(props: SlowAddProps): JSX.Element {
     const handleCredits = (e: React.ChangeEvent<HTMLInputElement>) => {
         setCredits(parseFloat(e.target.value));
     };
+
+    const handleBreadthChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+        setBreadth(e.target.value);
+    };
     // const handleYearChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     //     setYear(e.target.value);
     // };
@@ -71,7 +76,7 @@ function SlowAdd(props: SlowAddProps): JSX.Element {
             numPreReqs: preReqs.length,
             preReqs: preReqs,
             credits: credits,
-            canEditCredits: true,
+            breadth: breadth,
             semester: semester,
             OGcode: courseCode,
             taken: false,
@@ -83,7 +88,7 @@ function SlowAdd(props: SlowAddProps): JSX.Element {
             numPreReqs: preReqs.length,
             preReqs: preReqs,
             credits: credits,
-            canEditCredits: true,
+            breadth: breadth,
             semester: semester,
             OGcode: courseCode,
             taken: false,
@@ -146,9 +151,26 @@ function SlowAdd(props: SlowAddProps): JSX.Element {
                     defaultValue={0}
                 />
             </div>
+            <div className="form-group">
+                <label htmlFor="breadth">Breadth: </label>
+                <select
+                    id="breadth"
+                    name="breadth"
+                    value={breadth}
+                    onChange={handleBreadthChange}
+                >
+                    <option value="null">None</option>
+                    <option value="HIST">History and Cultural Change</option>
+                    <option value="SOCI">Social and Behavioral Sciences</option>
+                    <option value="TECH">
+                        Mathematics, Natural Sciences, and Technology
+                    </option>
+                    <option value="ARTS">Creative Arts and Humanities</option>
+                </select>
+            </div>
             <div>
                 <div>
-                    <label htmlFor="semester">Semester: </label>
+                    <label htmlFor="semester">Semester & Year: </label>
                     <input
                         type="text"
                         id="semester"

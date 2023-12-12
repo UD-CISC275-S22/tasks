@@ -27,8 +27,8 @@ function CourseSearch(props: QuickAddProps): JSX.Element {
 
     const handleCourseSearch = () => {
         const foundCourse = allClasses.find(
-            (course: Class) => course.courseCode === courseCode.toUpperCase()
-        );
+            (course) => course.courseCode === courseCode.toUpperCase()
+        ) as Class;
 
         if (foundCourse) {
             const newCourse: Class & { semester: string /*; year: string*/ } = {
