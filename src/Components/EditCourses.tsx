@@ -12,6 +12,7 @@ function EditCourse({
 }) {
     const [editedCourse, setEditedCourse] = useState<Class>(course);
     const [isVisible, setIsVisible] = useState<boolean>(false);
+    const [breadth, setBreadth] = useState<string>(course.breadth);
     const handleInputChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
     ) => {
@@ -19,7 +20,8 @@ function EditCourse({
 
         setEditedCourse((prevCourse) => ({
             ...prevCourse,
-            [name]: name === "credits" ? parseFloat(value) : value
+            [name]: name === "credits" ? parseFloat(value) : value,
+            breadth: breadth
         }));
     };
 
@@ -27,6 +29,7 @@ function EditCourse({
         e.preventDefault();
         // Submit the edited course info
         setIsVisible(false);
+        setBreadth(breadth);
         onEditFormSubmit(course.courseCode, editedCourse);
     };
 
@@ -65,6 +68,29 @@ function EditCourse({
                         onChange={handleInputChange}
                     />
                 </label>
+                <div className="form-group">
+                    <label htmlFor="breadth">Breadth: </label>
+                    <select
+                        id="breadth"
+                        name="breadth"
+                        value={breadth}
+                        onChange={handleInputChange}
+                    >
+                        <option value="null">None</option>
+                        <option value="HIST">
+                            History and Cultural Change
+                        </option>
+                        <option value="SOCI">
+                            Social and Behavioral Sciences
+                        </option>
+                        <option value="TECH">
+                            Mathematics, Natural Sciences, and Technology
+                        </option>
+                        <option value="ARTS">
+                            Creative Arts and Humanities
+                        </option>
+                    </select>
+                </div>
                 <button type="submit">Save Changes</button>
             </form>
         </div>
