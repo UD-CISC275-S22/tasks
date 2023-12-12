@@ -1,7 +1,9 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Button, Form } from "react-bootstrap";
 import { Course } from "../../Interfaces/course";
+//import { Plan } from "../../Interfaces/plan";
 import React from "react";
+//import { courseList } from "../course";
 /*MATT and/or MALIKA READ THIS
 As I discussed with malika earlier, I decided to make a button to incorperate the degree requirements. 
 This is the file that creates the button.
@@ -28,11 +30,14 @@ export const RequiredClasses = ({
     targetYear: number;
     targetSem: string;
 }) => {
-    //Dropdown for courses are not treated individually
+    const credits = Course_List.map((course: Course) => course.title);
+    // const totalCredits = credits.reduce(
+    //     (total: number, credVal: number) => total + credVal,
+    //     0
+    // );
     return (
         <div>
-            <Form.Group controlId="currentCourse">
-                <Form.Label>Select A Course</Form.Label>
+            <Form.Group controlId="requiredCourses">
                 <Form.Select value={currCourse} onChange={updateCurrCourse}>
                     {
                         //Needed to disable prettier here because there was an "extra parenths" error that couldn't be resolved by any means. Will need to ask the professor but we wanted to showcase the funcitonality of the dropdown for the MVP
@@ -45,7 +50,7 @@ export const RequiredClasses = ({
                     }
                 </Form.Select>
             </Form.Group>
-            <Button onClick={() => requiredClass(targetYear, targetSem)}>
+            <Button onClick={() => console.log(credits)}>
                 Required Classes
             </Button>
         </div>
