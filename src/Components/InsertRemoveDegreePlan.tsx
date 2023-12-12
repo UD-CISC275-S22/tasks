@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import { degreePlanViewProps } from "./DegreePlanView";
@@ -6,7 +6,9 @@ import { degreePlan } from "../interfaces/degreePlan";
 //------------------------------------------------------------------------------------
 // Function to insert a new degree plan, creating an array
 // Function to remove  a new degree plan, removing an array
-
+interface removePlanProps {
+    removePlan: degreePlan;
+}
 export function InsertDegreePlan({
     setDegreePlanList,
     degreePlanList
@@ -26,11 +28,11 @@ export function InsertDegreePlan({
     );
 }
 
-export function RemoveDegreePlan(
-    degreePlanList: degreePlan[],
-    setDegreePlanList: (degreePlan: degreePlan[]) => void,
-    removePlan: degreePlan
-): JSX.Element {
+export function RemoveDegreePlan({
+    setDegreePlanList,
+    degreePlanList,
+    removePlan
+}: degreePlanViewProps & removePlanProps): JSX.Element {
     const updatedDegreePlans = degreePlanList.filter(
         (degreePlan: degreePlan): boolean => degreePlan.name !== removePlan.name
     );

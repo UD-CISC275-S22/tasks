@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable no-extra-parens */
 import React, { useState } from "react";
 import { degreePlan } from "../interfaces/degreePlan";
 //import { SingleMultipleSemester } from "./SingleMultipleSemester";
@@ -52,6 +50,13 @@ export const DegreePlanView = ({
                         <Button onClick={() => DegreePlanClick(plan)}>
                             {plan.name}
                         </Button>
+                        <RemoveDegreePlan
+                            setDegreePlanList={setDegreePlanList}
+                            removePlan={plan}
+                            degreePlanList={degreePlanList}
+                            setCurrentView={setCurrentView}
+                            setCurrentDegreePlan={() => setDegreePlanList}
+                        ></RemoveDegreePlan>
                     </li>
                 ))}
             </ul>
