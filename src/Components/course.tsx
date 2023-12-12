@@ -1,8 +1,8 @@
 //all prep stuff for courses will go in here and things like finding the course based off of an id
-import React, { useState } from "react";
+// import React, { useState } from "react";
 //import { Button, Modal} from "react-bootstrap";
 // import { useState } from "react";
-import { OverlayTrigger, Tooltip } from "react-bootstrap";
+// import { OverlayTrigger, Tooltip } from "react-bootstrap";
 import "../App.css";
 //import { Semester } from "../Interfaces/semester";
 import courseListAll from "../data/AllCourseList.json";
@@ -78,39 +78,39 @@ export const updateCourseList = (
     return courseList;
 };
 
-export function displayCourse(course: Course): JSX.Element {
-    const [isHovered, setIsHovered] = useState(false);
+// export function displayCourse(course: Course): JSX.Element {
+//     const [isHovered, setIsHovered] = useState(false);
 
-    const handleMouseEnter = () => {
-        setIsHovered(true);
-    };
+//     const handleMouseEnter = () => {
+//         setIsHovered(true);
+//     };
 
-    const handleMouseLeave = () => {
-        setIsHovered(false);
-    };
+//     const handleMouseLeave = () => {
+//         setIsHovered(false);
+//     };
 
-    return (
-        <div
-            className="Course"
-            key={course.id}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-        >
-            <OverlayTrigger
-                key={course.id}
-                placement="right"
-                overlay={
-                    <Tooltip id={`tooltip-${course.id}`}>
-                        {`Title: ${course.title}, Name: ${
-                            course.name
-                        }, Credits: ${course.credits}, Description: ${
-                            course.description
-                        }, Prerequisites: ${course.prereq.join(", ")}`}
-                    </Tooltip>
-                }
-            >
-                <span>{`${course.title} - ${course.name}`}</span>
-            </OverlayTrigger>
-        </div>
-    );
-}
+//     return (
+//         <div
+//             className="Course"
+//             key={course.id}
+//             onMouseEnter={handleMouseEnter}
+//             onMouseLeave={handleMouseLeave}
+//         >
+//             <OverlayTrigger
+//                 key={course.id}
+//                 placement="right"
+//                 overlay={
+//                     <Tooltip id={`tooltip-${course.id}`}>
+//                         {`Title: ${course.title}, Name: ${
+//                             course.name
+//                         }, Credits: ${course.credits}, Description: ${
+//                             course.description
+//                         }, Prerequisites: ${course.prereq.join(", ")}`}
+//                     </Tooltip>
+//                 }
+//             >
+//                 <span>{`${course.title} - ${course.name}`}</span>
+//             </OverlayTrigger>
+//         </div>
+//     );
+// }
