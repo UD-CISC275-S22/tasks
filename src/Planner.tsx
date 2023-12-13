@@ -198,12 +198,16 @@ const Planner: React.FC<Planner> = ({ plan, onPlanChange }) => {
                                 </button>
                             </div>
                         )}
-                        <button
-                            className="remove-Semester"
-                            onClick={() => handleRemoveSemester(semesterIndex)}
-                        >
-                            Remove Semester
-                        </button>
+                        {semesterIndex !== semestersData.length - 1 && (
+                            <button
+                                className="remove-Semester"
+                                onClick={() =>
+                                    handleRemoveSemester(semesterIndex)
+                                }
+                            >
+                                Remove Semester
+                            </button>
+                        )}
                     </div>
                     {coursesVisibility[semesterIndex] && !semester.skip ? (
                         <table>

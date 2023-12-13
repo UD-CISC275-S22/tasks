@@ -57,6 +57,13 @@ export const EmptyPlan = {
             year: "2026",
             skip: false,
             courses: []
+        },
+        {
+            id: "Free Standing Pool",
+            season: "Free Standing",
+            year: "Pool",
+            skip: false,
+            courses: []
         }
     ]
 };
