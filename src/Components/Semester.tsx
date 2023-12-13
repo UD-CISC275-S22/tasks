@@ -551,7 +551,6 @@ export function ViewSemester(): JSX.Element {
                 <StartNewPlan startNewSession={startNewSession}></StartNewPlan>
                 <RequiredClasses
                     //requiredClass={requiredClasses}
-                    currCourse={currCourse}
                     Course_List={courseList}
                 ></RequiredClasses>
                 <ClearSemester clearSemester={clearSemester}></ClearSemester>
