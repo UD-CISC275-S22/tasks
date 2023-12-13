@@ -40,7 +40,6 @@ import { LoadPlan } from "./Buttons/LoadPlan";
 import { PickAPlan } from "./Buttons/PickAPlan";
 import { RequiredClasses } from "./Buttons/requiredClasses";
 import CourseEdit from "./CourseEdit";
-import { CoreBS } from "../Interfaces/requirements";
 
 //all the default concentration plans
 let AI_Plan = AI();
@@ -115,8 +114,7 @@ export function ViewSemester(): JSX.Element {
         courseList
     );
     //let COURSES_LIST = courses as Course[];
-    ////////////////////////////////////////////////////////
-    const [filteredCourses, setFilteredCourses] = useState([]);
+
     //NOTE FOR MICHAEL: Here is where you can add your add courses and remove courses functions
     //Here is where you can add your add courses and remove courses functions
     function updateCurrCourse(event: React.ChangeEvent<HTMLSelectElement>) {
