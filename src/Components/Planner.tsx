@@ -6,6 +6,7 @@ import SlowAdd from "./SlowAdd";
 import EditCourse from "./EditCourses";
 import allClasses from "../data/allClasses.json";
 //import DeleteCourses from "./DeleteCourses";
+import ComputerScienceRequirements from "./ComputerScienceRequirements";
 
 // ------------add this
 import { degreePlan } from "../interfaces/degreePlan";
@@ -34,8 +35,13 @@ export function Planner({
     //export function SingleMultipleSemester(): JSX.Element { ----------------adding to DegreePlan
     const [semester1, setSemester1] = useState<string>("");
     const [semArr, setSemArr] = useState<semester[]>([]);
+
     const [isPlanChanged, setIsPlanChanged] = useState(false);
     //const [courses, setCourses] = useState<Class[]>([]); // State for courses
+
+    const [selectedMajor, setSelectedMajor] = useState<string | null>(null);
+    //const [courses, setCourses] = useSta te<Class[]>([]); // State for courses
+
     useEffect(() => {
         const savedSemArr = localStorage.getItem(
             `savedSemArr_${CurrentdegreePlan.name}`
@@ -204,6 +210,11 @@ export function Planner({
             };
             reader.readAsText(file.files[0]);
         }
+    };
+    //----------------------------------------------------Requirements
+    const handleMajorSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
+        console.log("Selected major: ", e.target.value);
+        setSelectedMajor(e.target.value);
     };
     //----------------------------------------------------EDIT
 
@@ -501,6 +512,26 @@ export function Planner({
                 <Button onClick={savePlan} disabled={!isPlanChanged}>
                     Save Plan
                 </Button>
+            </div>
+            <div>
+                <h2>Degree Requirements</h2>
+                <p>Please select your major:</p>
+                <select onChange={handleMajorSelect}>
+                    <option value="">None</option>
+                    <option value="CS">Computer Science</option>
+                    <option value="IS">Information Systems</option>
+                </select>
+                {selectedMajor == "CS" && (
+                    <ComputerScienceRequirements
+                        currentDegreePlan={CurrentdegreePlan}
+                    />
+                )}
+                {/* Information Systems Requirement, not finished yet*/}
+                {/* {{selectedMajor == "IS" && (
+                    <InformationSystemsRequirements
+                        currentDegreePlan={CurrentdegreePlan}
+                    />
+                )}} */}
             </div>
         </div>
     );
