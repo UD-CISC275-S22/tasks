@@ -22,7 +22,7 @@ export function Planner({
     setCurrentDegreePlan,
     setDegreePlanList,
     DegreePlanList,
-    saveCurrentPlan // Add this prop
+    saveCurrentPlan
 }: {
     CurrentdegreePlan: degreePlan;
     setCurrentView: (view: Views) => void;
@@ -36,27 +36,36 @@ export function Planner({
     const [semArr, setSemArr] = useState<semester[]>([]);
     const [isPlanChanged, setIsPlanChanged] = useState(false);
     //const [courses, setCourses] = useState<Class[]>([]); // State for courses
-    const planIdentifier = CurrentdegreePlan.name;
-
     useEffect(() => {
-        // Load saved semArr from local storage when the component mounts
         const savedSemArr = localStorage.getItem(
-            `savedSemArr_${planIdentifier}`
+            `savedSemArr_${CurrentdegreePlan.name}`
         );
         if (savedSemArr) {
             setSemArr(JSON.parse(savedSemArr));
         }
-    }, [planIdentifier]); // Update when the plan identifier changes
+    }, [CurrentdegreePlan.name]); // this is supposed to update when the name changes but it doesn't
 
     useEffect(() => {
-        // Save the semArr to local storage whenever it changes
         if (isPlanChanged) {
             localStorage.setItem(
-                `savedSemArr_${planIdentifier}`,
+                `savedSemArr_${CurrentdegreePlan.name}`,
                 JSON.stringify(semArr)
             );
         }
-    }, [semArr, isPlanChanged, planIdentifier]);
+    }, [semArr, isPlanChanged, CurrentdegreePlan.name]);
+
+    const savePlan = () => {
+        setIsPlanChanged(false);
+        setCurrentDegreePlan({ ...CurrentdegreePlan, semesters: semArr });
+
+        setDegreePlanList(
+            DegreePlanList.map((plan) =>
+                plan.name === CurrentdegreePlan.name
+                    ? { ...CurrentdegreePlan, semesters: semArr }
+                    : plan
+            )
+        );
+    };
 
     const handleEditFormSubmit = (
         OGcourseCode: string,
@@ -414,11 +423,6 @@ export function Planner({
         setClicked(!clicked);
         setSemArrClicked(removedClassArr);
     }
-    function savePlan() {
-        setIsPlanChanged(false);
-        saveCurrentPlan({ ...CurrentdegreePlan, semesters: semArr });
-    }
-
     return (
         <div>
             <div>

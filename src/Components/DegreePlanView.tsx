@@ -1,38 +1,37 @@
 /* eslint-disable no-extra-parens */
 import React, { useState } from "react";
-import { degreePlan } from "../interfaces/degreePlan";
-//import { SingleMultipleSemester } from "./SingleMultipleSemester";
-import { Views } from "../interfaces/viewProps";
 import { Button } from "react-bootstrap";
+import { degreePlan } from "../interfaces/degreePlan";
+import { Views } from "../interfaces/viewProps";
 import { InsertDegreePlan, RemoveDegreePlan } from "./InsertRemoveDegreePlan";
 
-export interface degreePlanViewProps {
+export interface DegreePlanViewProps {
     setCurrentView: (view: Views) => void;
     setCurrentDegreePlan: (degreePlan: degreePlan) => void;
     degreePlanList: degreePlan[];
     setDegreePlanList: (degreePlan: degreePlan[]) => void;
 }
+
 export const DegreePlanView = ({
     setCurrentView,
-    //setCurrentDegreePlan,
     degreePlanList,
     setDegreePlanList
-}: degreePlanViewProps): JSX.Element => {
-    const [viewDegreePlan, setviewDegreePlan] = useState<degreePlan>();
+}: DegreePlanViewProps): JSX.Element => {
+    const [viewDegreePlan, setViewDegreePlan] = useState<degreePlan>();
 
-    function DegreePlanClick(selectedPlan: degreePlan) {
-        setviewDegreePlan(selectedPlan);
+    function degreePlanClick(selectedPlan: degreePlan) {
+        setViewDegreePlan(selectedPlan);
     }
 
     function viewSemesterClick() {
         if (viewDegreePlan) {
-            //viewDegreePlan(vi);
             setCurrentView(Views.semestersView);
         }
     }
+
     function goBackClick() {
         if (viewDegreePlan) {
-            //viewDegreePlan({});
+            setViewDegreePlan(undefined);
         }
         setCurrentView(Views.degreePlanView);
     }
@@ -43,12 +42,11 @@ export const DegreePlanView = ({
                 <InsertDegreePlan
                     setDegreePlanList={setDegreePlanList}
                     setCurrentView={setCurrentView}
-                    setCurrentDegreePlan={() => setDegreePlanList}
                     degreePlanList={degreePlanList}
-                ></InsertDegreePlan>
+                />
                 {degreePlanList.map((plan) => (
                     <li key={plan.name}>
-                        <Button onClick={() => DegreePlanClick(plan)}>
+                        <Button onClick={() => degreePlanClick(plan)}>
                             {plan.name}
                         </Button>
                         <RemoveDegreePlan
@@ -56,8 +54,7 @@ export const DegreePlanView = ({
                             removePlan={plan}
                             degreePlanList={degreePlanList}
                             setCurrentView={setCurrentView}
-                            setCurrentDegreePlan={() => setDegreePlanList}
-                        ></RemoveDegreePlan>
+                        />
                     </li>
                 ))}
             </ul>
@@ -66,12 +63,3 @@ export const DegreePlanView = ({
         </div>
     );
 };
-
-//map out degreePlanList
-//when click on degreePlan, set currDegreePlan to which ever one we click on -
-//then switches view to semesterView
-
-//extrafuction I might need to add is when someone goes back to degreeplan view,
-//they have to save all the change you made and update the degreePlanView and update all degreePlanList
-
-//try to add clearSemesters into SingleMutipleSemesters
