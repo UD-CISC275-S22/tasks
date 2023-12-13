@@ -94,6 +94,12 @@ function SlowAdd(props: SlowAddProps): JSX.Element {
             note: ""
         };
         if (courseInfo1) {
+            if (courseInfo1.preReqs.length > 0) {
+                alert(
+                    "WARNING, in order to take this class you need to have taken " +
+                        courseInfo1.preReqs.join(" ")
+                );
+            }
             props.onCourseInfo({ ...courseInfo1 });
         }
         console.log("00000000000000000");

@@ -54,7 +54,13 @@ function CourseSearch(props: QuickAddProps): JSX.Element {
 
     const handleAddCourse = () => {
         if (courseInfo) {
-            //console.log(courseInfo);
+            // Check if the course had any pre-requisites, and if it's true then display message.
+            if (courseInfo.preReqs.length > 0) {
+                alert(
+                    "WARNING, in order to take this class you need to have taken " +
+                        courseInfo.preReqs.join(" ")
+                );
+            }
             props.onCourseInfo({ ...courseInfo, semester, year });
         }
     };
