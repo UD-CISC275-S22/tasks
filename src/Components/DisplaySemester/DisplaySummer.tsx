@@ -6,7 +6,7 @@ import { DropAdd } from "../Buttons/dropAdd";
 import { Semester } from "../../Interfaces/semester";
 import { courseList } from "../course";
 import { SkipSemester } from "../Buttons/SkipSemester";
-import { Button, Modal } from "react-bootstrap";
+import { Button, Modal, OverlayTrigger, Tooltip } from "react-bootstrap";
 import CourseEdit from "../CourseEdit";
 
 export interface valueProps {
@@ -75,11 +75,34 @@ export function DisplaySummer({
                 // eslint-disable-next-line no-extra-parens
                 (course: Course, index: number): JSX.Element => (
                     <div className="Course" key={index}>
-                        <span key={course.id}>
+                        {/* <span key={course.id}>
                             {course.title}
                             {" - "}
                             {course.name}
-                        </span>
+                        </span> */}
+                        <OverlayTrigger
+                            key={course.id}
+                            placement="right"
+                            overlay={
+                                <Tooltip id={`tooltip-${course.id}`}>
+                                    {`Title: ${course.title}, Name: ${
+                                        course.name
+                                    }, Credits: ${
+                                        course.credits
+                                    }, Description: ${
+                                        course.description
+                                    }, Prerequisites: ${course.prereq.join(
+                                        ", "
+                                    )}`}
+                                </Tooltip>
+                            }
+                        >
+                            <span key={course.id}>
+                                {course.title}
+                                {" - "}
+                                {course.name}
+                            </span>
+                        </OverlayTrigger>
                     </div>
                 )
             )}

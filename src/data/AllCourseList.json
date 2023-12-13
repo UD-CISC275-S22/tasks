@@ -3,10 +3,10 @@
         "id": 0,
         "title": "ENGL110",
         "name": "First-Year Writing",
-        "description": "",
+        "description": "Introduction to the process of academic writing that centers on the composition of analytical, research-based essays.",
         "credits": 3,
         "semester": ["Fall", "Winter", "Spring", "Summer"],
-        "department": "",
+        "department": "CAS",
         "prereq": [""],
         "coreq": [""],
         "requirements": ["University Requirments"]

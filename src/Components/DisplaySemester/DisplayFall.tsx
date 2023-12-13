@@ -4,7 +4,7 @@ import { Course } from "../../Interfaces/course";
 import { ClearSemester } from "../Buttons/clearingSemester";
 import { DropAdd } from "../Buttons/dropAdd";
 import { Semester } from "../../Interfaces/semester";
-import { Button, Form, Modal } from "react-bootstrap";
+import { Button, Form, Modal, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { SkipSemester } from "../Buttons/SkipSemester";
 import CourseEdit from "../CourseEdit";
 
@@ -66,6 +66,7 @@ export function DisplayFall({
     //targetSem is also NOT the state and it's already passed in from the Semester.tsx file. So both variables are already declared in the indivPlanSem function
     const idx = index(targetYear, targetSem);
     const fallCourses = semesters[idx].courseList;
+    console.log("fall courses: ", fallCourses);
 
     const [displayCourseCategory, setDisplayCourseCategory] =
         useState<string>("AllCourses");
@@ -83,11 +84,34 @@ export function DisplayFall({
                 // eslint-disable-next-line no-extra-parens
                 (course: Course, index: number): JSX.Element => (
                     <div className="Course" key={index}>
-                        <span key={course.id}>
+                        {/* <span key={course.id}>
                             {course.title}
                             {" - "}
                             {course.name}
-                        </span>
+                        </span> */}
+                        <OverlayTrigger
+                            key={course.id}
+                            placement="right"
+                            overlay={
+                                <Tooltip id={`tooltip-${course.id}`}>
+                                    {`Title: ${course.title}, Name: ${
+                                        course.name
+                                    }, Credits: ${
+                                        course.credits
+                                    }, Description: ${
+                                        course.description
+                                    }, Prerequisites: ${course.prereq.join(
+                                        ", "
+                                    )}`}
+                                </Tooltip>
+                            }
+                        >
+                            <span key={course.id}>
+                                {course.title}
+                                {" - "}
+                                {course.name}
+                            </span>
+                        </OverlayTrigger>
                     </div>
                 )
             )}
@@ -96,9 +120,9 @@ export function DisplayFall({
                     dropClass={dropClass}
                     addClass={addClass}
                     targetYear={targetYear}
+                    handleEditShow={handleEditShow}
                     targetSem={targetSem}
                     updateCurrCourse={updateCurrCourse}
-                    handleEditShow={handleEditShow}
                     currCourse={currCourse}
                     Course_List={courseList}
                 ></DropAdd>

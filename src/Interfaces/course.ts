@@ -1,14 +1,14 @@
 /* eslint-disable prettier/prettier */
 
 /* 
-CANR:
-CAS
-CEOE:
-CEHD:
-COE:
-CHS:
-LBE:
-BPPA:
+CANR:College of Agriculture and Natural Resources
+CAS: College of Arts and Sciences
+CEOE: College of Earth, Ocean and Environment
+CEHD: College of Education and Human Development
+COE: College of Engineering
+CHS: College of Health Sciences
+LBE: 
+BPPA: Biden Public POlicy and Administration
 Honors:
 
 */

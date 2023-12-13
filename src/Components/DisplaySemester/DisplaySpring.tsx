@@ -4,7 +4,7 @@ import { Course } from "../../Interfaces/course";
 import { ClearSemester } from "../Buttons/clearingSemester";
 import { DropAdd } from "../Buttons/dropAdd";
 import { Semester } from "../../Interfaces/semester";
-import { Button, Form, Modal } from "react-bootstrap";
+import { Button, Form, Modal, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { courseList } from "../course";
 import { SkipSemester } from "../Buttons/SkipSemester";
 import CourseEdit from "../CourseEdit";
@@ -85,11 +85,34 @@ export function DisplaySpring({
                 // eslint-disable-next-line no-extra-parens
                 (course: Course, index: number): JSX.Element => (
                     <div className="Course" key={index}>
-                        <span key={course.id}>
+                        {/* <span key={course.id}>
                             {course.title}
                             {" - "}
                             {course.name}
-                        </span>
+                        </span> */}
+                        <OverlayTrigger
+                            key={course.id}
+                            placement="right"
+                            overlay={
+                                <Tooltip id={`tooltip-${course.id}`}>
+                                    {`Title: ${course.title}, Name: ${
+                                        course.name
+                                    }, Credits: ${
+                                        course.credits
+                                    }, Description: ${
+                                        course.description
+                                    }, Prerequisites: ${course.prereq.join(
+                                        ", "
+                                    )}`}
+                                </Tooltip>
+                            }
+                        >
+                            <span key={course.id}>
+                                {course.title}
+                                {" - "}
+                                {course.name}
+                            </span>
+                        </OverlayTrigger>
                     </div>
                 )
             )}
