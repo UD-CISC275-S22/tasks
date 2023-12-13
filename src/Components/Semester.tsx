@@ -573,8 +573,6 @@ export function ViewSemester(): JSX.Element {
                     }}
                     currCourse={currCourse}
                     Course_List={courseList}
-                    targetYear={0}
-                    targetSem={""}
                 ></RequiredClasses>
                 <ClearSemester clearSemester={clearSemester}></ClearSemester>
                 <ClearAllSemesters

@@ -19,22 +19,13 @@ export const RequiredClasses = ({
     requiredClass,
     updateCurrCourse,
     currCourse,
-    Course_List,
-    targetYear,
-    targetSem
+    Course_List
 }: {
     requiredClass: (targetYear: number, targetSem: string) => void;
     updateCurrCourse: (event: React.ChangeEvent<HTMLSelectElement>) => void;
     currCourse: number;
     Course_List: Course[];
-    targetYear: number;
-    targetSem: string;
 }) => {
-    const credits = Course_List.map((course: Course) => course.credits);
-    const totalCredits = credits.reduce(
-        (total: number, credVal: number) => total + credVal,
-        0
-    );
     return (
         <div>
             <Form.Group controlId="requiredCourses">
@@ -50,7 +41,7 @@ export const RequiredClasses = ({
                     }
                 </Form.Select>
             </Form.Group>
-            <Button onClick={() => console.log(totalCredits)}>
+            <Button onClick={() => console.log("I need to fix this")}>
                 Required Classes
             </Button>
         </div>
