@@ -90,11 +90,9 @@ export const Bioinformatics = [
     "CISC436",
     "MATH242",
     "MATH349",
-    [
-        ["CHEM213", "CHEM215"],
-        ["CHEM321", "CHEM325"]
-    ],
-    ["CISC483", "CISC484"]
+    "CHEM215",
+    "CHEM321",
+    "CISC483"
 ];
 
 export const Cybersecurity = [
@@ -103,8 +101,7 @@ export const Cybersecurity = [
     "CISC450",
     "CISC464",
     "CPEG465",
-    "CISC494",
-    ["CPEG472", "CPEG473", "CPEG475", "CPEG476", "CPEG495"]
+    "CISC494"
 ];
 
 export const DataScience = [
@@ -116,11 +113,11 @@ export const DataScience = [
     "MATH242",
     "MATH243",
     "MATH349",
-    ["CISC483", "CISC484"],
-    ["MATH302", "MATH350", "MATH426"]
+    "CISC483",
+    "MATH350"
 ];
 
-export const HighPerformanceComputingMath = [
+export const HighPerformanceComputing = [
     "CISC360",
     "CISC361",
     "CISC372",
@@ -129,31 +126,7 @@ export const HighPerformanceComputingMath = [
     "MATH242",
     "MATH243",
     "MATH351",
-    "MATH428",
-    ["CISC300+", "MATH205", "MATH350", "CISC387", "CISC487"]
-];
-
-export const HighPerformanceComputingData = [
-    "CISC360",
-    "CISC361",
-    "CISC372",
-    "CISC450",
-    "CISC471",
-    "MATH242",
-    "MATH243",
-    "CISC437",
-    "MATH350",
-    "MATH450",
-    ["CISC483", "CISC484"],
-    [
-        "CISC300+",
-        "MATH302",
-        "MATH349",
-        "MATH451",
-        "MATH535",
-        "CISC387",
-        "CISC487"
-    ]
+    "MATH428"
 ];
 
 export const SystemsNetworks = [
@@ -162,43 +135,17 @@ export const SystemsNetworks = [
     "CISC372",
     "CISC450",
     "CISC471",
-    ["MATH205", "MATH350"],
-    [
-        "CISC464",
-        "CPEG465",
-        "CPEG470",
-        "CPEG476",
-        "CPEG473",
-        "CPEG475",
-        "CPEG497"
-    ],
-    [
-        "CISC437",
-        "CISC453",
-        "CISC459",
-        "CISC464",
-        "CISC474",
-        "CISC475",
-        "CISC479",
-        "CPEG473",
-        "CPEG497"
-    ]
+    "MATH205",
+    "CISC464"
 ];
 
-export const TheoryComputationDiscrete = [
+export const TheoryComputation = [
     "CISC304",
     "CISC401",
     "MATH242",
     "MATH349",
-    ["CISC4O4", "MATH245", "MATH315", "MATH451"]
-];
-
-export const TheoryComputationCont = [
-    "CISC304",
-    "CISC401",
-    "MATH242",
-    "MATH349",
-    ["MATH243", "MATH302", "MATH535", "MATH426"]
+    "CISC4O4",
+    "MATH426"
 ];
 
 export const Concentrations = [
@@ -206,11 +153,9 @@ export const Concentrations = [
     Bioinformatics,
     Cybersecurity,
     DataScience,
-    HighPerformanceComputingMath,
-    HighPerformanceComputingData,
+    HighPerformanceComputing,
     SystemsNetworks,
-    TheoryComputationDiscrete,
-    TheoryComputationCont
+    TheoryComputation
 ];
 
 /*University FYE Requirement*/

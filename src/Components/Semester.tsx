@@ -42,8 +42,13 @@ import { RequiredClasses } from "./Buttons/requiredClasses";
 import CourseEdit from "./CourseEdit";
 import {
     ArtificialIntelligence,
+    Bioinformatics,
     CoreBS,
-    Cybersecurity
+    Cybersecurity,
+    DataScience,
+    HighPerformanceComputing,
+    SystemsNetworks,
+    TheoryComputation
 } from "../Interfaces/requirements";
 
 //state for the degree requirements for the different plans
@@ -467,34 +472,40 @@ export function ViewSemester(): JSX.Element {
             setSeePlan(true);
             return;
         } else if (planSelected === "Cybersecurity") {
-            // setcoreClasses(Cybersecurity);
+            setcoreClasses(Cybersecurity);
             setPlan(CYBER_Plan);
             setSemesters(CYBER_Plan.semesters);
             setSeePlan(true);
             return;
         } else if (planSelected === "Systems and Networks") {
+            setcoreClasses(SystemsNetworks);
             setPlan(SysNet_Plan);
             setSemesters(SysNet_Plan.semesters);
             setSeePlan(true);
             return;
         } else if (planSelected === "Data Science") {
+            setcoreClasses(DataScience);
             setPlan(Data_Plan);
             setSemesters(Data_Plan.semesters);
             setSeePlan(true);
             return;
         } else if (planSelected === "Theory and Computation") {
+            setcoreClasses(TheoryComputation);
             setPlan(Theory_Plan);
             setSemesters(Theory_Plan.semesters);
             setSeePlan(true);
         } else if (planSelected === "High Performance Computing") {
+            setcoreClasses(HighPerformanceComputing);
             setPlan(High_Plan);
             setSemesters(High_Plan.semesters);
             setSeePlan(true);
         } else if (planSelected === "Bioinformatics") {
+            setcoreClasses(Bioinformatics);
             setPlan(Bio_Plan);
             setSemesters(Bio_Plan.semesters);
             setSeePlan(true);
         } else if (planSelected === "Custom Concentration") {
+            setcoreClasses(CoreBS);
             setPlan(blankPlan);
             setSemesters(blankPlan.semesters);
             setSeePlan(true);
