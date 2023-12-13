@@ -63,6 +63,14 @@ let High_Plan = High();
 let Bio_Plan = Bio();
 
 /* ----------------------------------------------------------------------------------------------------- */
+/*EVERYONE PLS READ THIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+These are the changes I made to make the degree requirements:
+    lines 44-51: I imported the degree requirements from requirements.ts
+    line 74 I: create a variable to change the state of the required courses based on the selected plan
+    lines 474-510: I called setcoreClasses in the handlePlans function to update the state based on the selected plan
+VIEW THE REQUIREDCLASSES.TSX FILE TO SEE OTHER CHANGES!!!
+/* ----------------------------------------------------------------------------------------------------- */
+
 export function ViewSemester(): JSX.Element {
     //states for the degree requirements based on the selected plan
     const [coreClasses, setcoreClasses] = useState(["", "", ""]);
@@ -470,25 +478,21 @@ export function ViewSemester(): JSX.Element {
             setPlan(AI_Plan);
             setSemesters(AI_Plan.semesters);
             setSeePlan(true);
-            return;
         } else if (planSelected === "Cybersecurity") {
             setcoreClasses(Cybersecurity);
             setPlan(CYBER_Plan);
             setSemesters(CYBER_Plan.semesters);
             setSeePlan(true);
-            return;
         } else if (planSelected === "Systems and Networks") {
             setcoreClasses(SystemsNetworks);
             setPlan(SysNet_Plan);
             setSemesters(SysNet_Plan.semesters);
             setSeePlan(true);
-            return;
         } else if (planSelected === "Data Science") {
             setcoreClasses(DataScience);
             setPlan(Data_Plan);
             setSemesters(Data_Plan.semesters);
             setSeePlan(true);
-            return;
         } else if (planSelected === "Theory and Computation") {
             setcoreClasses(TheoryComputation);
             setPlan(Theory_Plan);

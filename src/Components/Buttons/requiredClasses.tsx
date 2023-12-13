@@ -3,23 +3,29 @@ import { Dropdown } from "react-bootstrap";
 import React from "react";
 import { Course } from "../../Interfaces/course";
 
+//VIEW SEMESTER.TSX FOR OTHER CHANGES!!!
+
+/*this function takes in the degree course requirements and the list of courses 
+in order to find the required classes for each degree plan*/
 export const RequiredClasses = ({
     degreeReq,
     Course_List
 }: {
-    degreeReq: string[];
-    Course_List: Course[];
+    degreeReq: string[]; //the array of core courses for the selected plan
+    Course_List: Course[]; //the list of courses
 }) => {
     const filteredClasses = Course_List.filter((aCourse: Course) =>
+        //filters the course list based on the courses in the degree requirement array
         degreeReq.includes(aCourse.title)
     );
 
+    //creates the dropdown and fills it with the courses
     return (
         <Dropdown>
             <Dropdown.Toggle
                 id="dropdown4"
                 style={{
-                    backgroundColor: "#00FF00",
+                    backgroundColor: "#00FF00", //green
                     borderColor: "black",
                     marginLeft: "5px",
                     marginRight: "5px",
