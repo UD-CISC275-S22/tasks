@@ -502,6 +502,13 @@ export const CompSciPlan = {
                     typ: "Fall and Spring"
                 }
             ]
+        },
+        {
+            id: "Free Standing Pool",
+            season: "Free Standing",
+            year: "Pool",
+            skip: false,
+            courses: []
         }
     ]
 };

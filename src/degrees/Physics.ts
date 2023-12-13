@@ -534,6 +534,13 @@ export const PhysicsPlan: Plan = {
                     typ: "Fall"
                 }
             ]
+        },
+        {
+            id: "Free Standing Pool",
+            season: "Free Standing",
+            year: "Pool",
+            skip: false,
+            courses: []
         }
     ]
 };

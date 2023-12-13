@@ -209,25 +209,31 @@ export const usePlannerFunctions = (initialPlans: Plan) => {
     };
 
     const handleInsertSemester = () => {
+        const SecondToLastSemester = semestersData[semestersData.length - 2];
         const lastSemester = semestersData[semestersData.length - 1];
+        semestersData.pop();
         const newSemester: Semester = {
-            id: getNextSemesterName(lastSemester),
-            season: getNextSeason(lastSemester),
-            year: getNextYear(lastSemester),
+            id: getNextSemesterName(SecondToLastSemester),
+            season: getNextSeason(SecondToLastSemester),
+            year: getNextYear(SecondToLastSemester),
             courses: [],
             skip: false
         };
 
-        setSemestersData(prevSemesters => [...prevSemesters, newSemester]);
-        setCoursesVisibility(prevVisibility => [...prevVisibility, true]);
+        setSemestersData(prevSemesters => [
+            ...prevSemesters,
+            newSemester,
+            lastSemester
+        ]);
+        setCoursesVisibility(prevVisibility => [...prevVisibility, true, true]);
     };
 
     const getNextSemesterName = (lastSemester: Semester | undefined) => {
         if (!lastSemester) return "Fall 2023";
 
         return lastSemester.season === "Fall"
-            ? `Spring ${lastSemester.year}`
-            : `Fall ${parseInt(lastSemester.year, 10) + 1}`;
+            ? `${parseInt(lastSemester.year, 10) + 1}`
+            : `Fall ${lastSemester.year}`;
     };
 
     const getNextSeason = (lastSemester: Semester | undefined) => {
@@ -240,8 +246,8 @@ export const usePlannerFunctions = (initialPlans: Plan) => {
         if (!lastSemester) return "2023";
 
         return lastSemester.season === "Fall"
-            ? lastSemester.year
-            : (parseInt(lastSemester.year, 10) + 1).toString();
+            ? (parseInt(lastSemester.year, 10) + 1).toString()
+            : lastSemester.year;
     };
 
     const handleRemoveSemester = (index: number) => {
