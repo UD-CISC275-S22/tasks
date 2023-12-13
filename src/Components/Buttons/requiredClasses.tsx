@@ -4,7 +4,6 @@ import React from "react";
 import { Course } from "../../Interfaces/course";
 
 export const RequiredClasses = ({
-    //requiredClass,
     degreeReq,
     Course_List
 }: {

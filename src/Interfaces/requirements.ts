@@ -59,11 +59,23 @@ export const labSciences = [
 /* Concentrations */
 
 export const ArtificialIntelligence = [
+    "CISC108",
+    "CISC181",
+    "CISC210",
+    "CISC220",
+    "CISC260",
+    "CISC275",
+    "CISC303",
+    "CISC320",
+    "CISC355",
     "CISC304",
     "CISC442",
     "CISC481",
     "CISC483",
-    "CISC484"
+    "CISC484",
+    "ENGL110",
+    "MATH210",
+    "MATH241"
 ];
 
 export const Bioinformatics = [

@@ -59,6 +59,7 @@ let Bio_Plan = Bio();
 
 /* ----------------------------------------------------------------------------------------------------- */
 export function ViewSemester(): JSX.Element {
+    //states for the degree requirements based on the selected plan
     const [coreClasses, setcoreClasses] = useState(["", "", ""]);
 
     //states for saving plans (4 options)
