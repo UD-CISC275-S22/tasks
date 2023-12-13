@@ -37,8 +37,8 @@ export const RequiredClasses = ({
             <Dropdown.Toggle
                 id="dropdown1"
                 style={{
-                    backgroundColor: "#00FF00",
-                    borderColor: "black",
+                    backgroundColor: "#FFBA49",
+                    borderColor: "darkgoldenrod",
                     marginLeft: "5px",
                     marginRight: "5px",
                     marginTop: "5px",
