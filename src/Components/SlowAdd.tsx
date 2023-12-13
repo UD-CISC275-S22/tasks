@@ -147,7 +147,6 @@ function SlowAdd(props: SlowAddProps): JSX.Element {
                     onChange={handleCredits}
                     min={1}
                     max={10}
-                    defaultValue={0}
                 />
             </div>
             <div className="form-group">
