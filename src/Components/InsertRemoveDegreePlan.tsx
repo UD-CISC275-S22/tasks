@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import { degreePlanViewProps } from "./DegreePlanView";
+import { DegreePlanViewProps } from "./DegreePlanView";
 import { degreePlan } from "../interfaces/degreePlan";
 //-------------------------------------------------------------------------------------
 // Function to insert a new degree plan, creating an array
@@ -12,7 +12,7 @@ interface removePlanProps {
 export function InsertDegreePlan({
     setDegreePlanList,
     degreePlanList
-}: degreePlanViewProps): JSX.Element {
+}: DegreePlanViewProps): JSX.Element {
     const updatedDegreePlans = [
         ...degreePlanList,
         {
@@ -32,7 +32,7 @@ export function RemoveDegreePlan({
     setDegreePlanList,
     degreePlanList,
     removePlan
-}: degreePlanViewProps & removePlanProps): JSX.Element {
+}: DegreePlanViewProps & removePlanProps): JSX.Element {
     const updatedDegreePlans = degreePlanList.filter(
         (degreePlan: degreePlan): boolean => degreePlan.name !== removePlan.name
     );
