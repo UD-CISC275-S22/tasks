@@ -1,33 +1,47 @@
 /* eslint-disable no-extra-parens */
 import React, { useState } from "react";
 //import { Class } from "../interfaces/class";
-import { degreePlan } from "../interfaces/degreePlan";
+//import { degreePlan } from "../interfaces/degreePlan";
+import { semester } from "../interfaces/semster";
 
 interface ComputerScienceRequirementsProps {
-    currentDegreePlan: degreePlan;
+    currentDegreePlan: semester[];
 }
 
+const calculateBreadthCredits = (
+    degreePlan: semester[]
+): Record<string, number> => {
+    const breadthCredits: Record<string, number> = {
+        TECH: 0,
+        ARTS: 0,
+        SOCI: 0,
+        HIST: 0
+    };
+
+    degreePlan.forEach((semester) => {
+        semester.classes.forEach((course) => {
+            if (course.breadth in breadthCredits) {
+                breadthCredits[course.breadth] += course.credits;
+            }
+        });
+    });
+
+    return breadthCredits;
+};
 const ComputerScienceRequirements: React.FC<
     ComputerScienceRequirementsProps
 > = ({ currentDegreePlan }) => {
     console.log(currentDegreePlan);
     const [labTrack, setLabTrack] = useState<string>("Chose Your Lab Track");
-    const [breadthCredits] = useState<Record<string, number>>({
+    const [breadthCredits, setBreadthCredits] = useState<
+        Record<string, number>
+    >({
         TECH: 0,
         ARTS: 0,
         SOCI: 0,
         HIST: 0
     });
     const [degreePlanCourses, setDegreePlanCourses] = useState<string[]>([]);
-
-    currentDegreePlan.semesters.forEach((semester) => {
-        semester.classes.forEach((course) => {
-            setDegreePlanCourses((prevCourses) => [
-                ...prevCourses,
-                course.courseCode
-            ]);
-        });
-    });
 
     const cisCoreRequirements = [
         "CISC108",
@@ -63,13 +77,15 @@ const ComputerScienceRequirements: React.FC<
     };
 
     React.useEffect(() => {
+        //useEffect is a hook that runs after component is rendered
         const newDegreePlanCourses: string[] = [];
-        currentDegreePlan.semesters.forEach((semester) => {
+        currentDegreePlan.forEach((semester) => {
             semester.classes.forEach((course) => {
                 newDegreePlanCourses.push(course.courseCode);
             });
-        });
+        }); //runs through the given semester[] and pushes courseCode to newDegreePlanCourses array
         setDegreePlanCourses(newDegreePlanCourses);
+        setBreadthCredits(calculateBreadthCredits(currentDegreePlan)); //set both the breadthRequirements and degreePlanCourses
     }, [currentDegreePlan]);
 
     const isClassInDegreePlan = (courseCode: string): boolean => {
@@ -77,14 +93,15 @@ const ComputerScienceRequirements: React.FC<
     };
 
     const dropDown = (requirement: string[]) => {
+        //creates a dropdown of the given requirement
         const coursesString = requirement.map((courseCode) => {
             const isInDegreePlan = isClassInDegreePlan(courseCode);
             return (
                 <span
                     key={courseCode}
                     style={{
-                        color: isInDegreePlan ? "green" : "black",
-                        marginRight: "8px" // Adjust margin as needed
+                        color: isInDegreePlan ? "green" : "black", //green if isInDegreePlan, black if not
+                        marginRight: "8px"
                     }}
                 >
                     {courseCode}
@@ -141,8 +158,10 @@ const ComputerScienceRequirements: React.FC<
                 {Object.entries(breadthCredits).map(([breadth, credits]) => (
                     <div key={breadth}>
                         {breadth}: {credits} Credits
-                        {credits < 3 && (
+                        {credits < 3 ? (
                             <span style={{ color: "red" }}> (Incomplete)</span>
+                        ) : (
+                            <span style={{ color: "green" }}> (Complete)</span>
                         )}
                     </div>
                 ))}

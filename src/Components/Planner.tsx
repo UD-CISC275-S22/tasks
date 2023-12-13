@@ -546,9 +546,7 @@ export function Planner({
                     <option value="IS">Information Systems</option>
                 </select>
                 {selectedMajor == "CS" && (
-                    <ComputerScienceRequirements
-                        currentDegreePlan={CurrentdegreePlan}
-                    />
+                    <ComputerScienceRequirements currentDegreePlan={semArr} />
                 )}
                 {/* Information Systems Requirement, not finished yet*/}
                 {/* {{selectedMajor == "IS" && (
