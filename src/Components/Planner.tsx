@@ -7,6 +7,7 @@ import EditCourse from "./EditCourses";
 import allClasses from "../data/allClasses.json";
 //import DeleteCourses from "./DeleteCourses";
 import ComputerScienceRequirements from "./ComputerScienceRequirements";
+import InformationSystemsRequirements from "./InformationSystemsRequirements";
 
 // ------------add this
 import { degreePlan } from "../interfaces/degreePlan";
@@ -524,12 +525,11 @@ export function Planner({
                 {selectedMajor == "CS" && (
                     <ComputerScienceRequirements currentDegreePlan={semArr} />
                 )}
-                {/* Information Systems Requirement, not finished yet*/}
-                {/* {{selectedMajor == "IS" && (
+                {selectedMajor == "IS" && (
                     <InformationSystemsRequirements
-                        currentDegreePlan={CurrentdegreePlan}
+                        currentDegreePlan={semArr}
                     />
-                )}} */}
+                )}
             </div>
         </div>
     );
