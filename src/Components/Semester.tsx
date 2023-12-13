@@ -115,8 +115,8 @@ export function ViewSemester(): JSX.Element {
         courseList
     );
     //let COURSES_LIST = courses as Course[];
-    
-    const [filteredList]
+    ////////////////////////////////////////////////////////
+    const [filteredCourses, setFilteredCourses] = useState([]);
     //NOTE FOR MICHAEL: Here is where you can add your add courses and remove courses functions
     //Here is where you can add your add courses and remove courses functions
     function updateCurrCourse(event: React.ChangeEvent<HTMLSelectElement>) {
@@ -228,7 +228,7 @@ export function ViewSemester(): JSX.Element {
         setSemesters(newSemesters);
     }
 
-    function requiredClasses() {
+    /*function requiredClasses() {
         //const idx = index(targetYear, targetSem);
         // const newSemesters = [...semesters];
         const core = CoreBS;
@@ -236,16 +236,16 @@ export function ViewSemester(): JSX.Element {
         /*The substring (0,7) is so that it only looks for the first 7 indexs 
         so insead of CISC181 - Introduction to Computer Science II 
         it will look for CISC181*/
-        const filteredClasses = courseList.filter((aCourse: Course) =>
-            core.includes(aCourse.name.substring(0, 7))
-        );
-        /*     newSemesters[idx].courseList = [...filteredClasses];
+    // const filteredClasses = courseList.filter((aCourse: Course) =>
+    //    core.includes(aCourse.name.substring(0, 7))
+    // );
+    /*     newSemesters[idx].courseList = [...filteredClasses];
         // looks through the course list in the current semester and filters out the
         // course with the same "Title" as the state "currCourse"
         // **refer to "currCourse" documentation for more info **
         setSemesters(newSemesters);
         */
-    }
+    //}
 
     function addClass(targetYear: number, targetSem: string): void {
         const idx = index(targetYear, targetSem);
@@ -552,7 +552,7 @@ export function ViewSemester(): JSX.Element {
             <div className="DropdownMenu">
                 <StartNewPlan startNewSession={startNewSession}></StartNewPlan>
                 <RequiredClasses
-                    requiredClass={requiredClasses}
+                    //requiredClass={requiredClasses}
                     updateCurrCourse={function (
                         event: React.ChangeEvent<HTMLSelectElement>
                     ): void {
@@ -560,6 +560,9 @@ export function ViewSemester(): JSX.Element {
                     }}
                     currCourse={currCourse}
                     Course_List={courseList}
+                    requiredClass={function (): void {
+                        throw new Error("Function not implemented.");
+                    }}
                 ></RequiredClasses>
                 <ClearSemester clearSemester={clearSemester}></ClearSemester>
                 <ClearAllSemesters
