@@ -56,15 +56,18 @@ export function Planner({
 
     const savePlan = () => {
         setIsPlanChanged(false);
+
         setCurrentDegreePlan({ ...CurrentdegreePlan, semesters: semArr });
 
-        setDegreePlanList(
-            DegreePlanList.map((plan) =>
-                plan.name === CurrentdegreePlan.name
-                    ? { ...CurrentdegreePlan, semesters: semArr }
-                    : plan
-            )
+        const updatedDegreePlanList = DegreePlanList.map((plan) =>
+            plan.name === CurrentdegreePlan.name
+                ? { ...CurrentdegreePlan, semesters: semArr }
+                : plan
         );
+
+        setDegreePlanList(updatedDegreePlanList);
+
+        saveCurrentPlan({ ...CurrentdegreePlan, semesters: semArr });
     };
 
     const handleEditFormSubmit = (
