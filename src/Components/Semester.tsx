@@ -40,6 +40,18 @@ import { LoadPlan } from "./Buttons/LoadPlan";
 import { PickAPlan } from "./Buttons/PickAPlan";
 import { RequiredClasses } from "./Buttons/requiredClasses";
 import CourseEdit from "./CourseEdit";
+import {
+    ArtificialIntelligence,
+    Bioinformatics,
+    CoreBS,
+    Cybersecurity,
+    DataScience,
+    HighPerformanceComputing,
+    SystemsNetworks,
+    TheoryComputation
+} from "../Interfaces/requirements";
+
+//state for the degree requirements for the different plans
 
 //all the default concentration plans
 let AI_Plan = AI();
@@ -51,7 +63,18 @@ let High_Plan = High();
 let Bio_Plan = Bio();
 
 /* ----------------------------------------------------------------------------------------------------- */
+/*EVERYONE PLS READ THIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+These are the changes I made to make the degree requirements:
+    lines 44-51: I imported the degree requirements from requirements.ts
+    line 74 I: create a variable to change the state of the required courses based on the selected plan
+    lines 474-510: I called setcoreClasses in the handlePlans function to update the state based on the selected plan
+VIEW THE REQUIREDCLASSES.TSX FILE TO SEE OTHER CHANGES!!!
+/* ----------------------------------------------------------------------------------------------------- */
+
 export function ViewSemester(): JSX.Element {
+    //states for the degree requirements based on the selected plan
+    const [coreClasses, setcoreClasses] = useState(["", "", ""]);
+
     //states for saving plans (4 options)
     const [plan1, setPlan1] = useSessionStorage("plan1", blankPlan);
     const [plan1Semesters, setPlan1Semesters] = useSessionStorage(
@@ -114,7 +137,6 @@ export function ViewSemester(): JSX.Element {
         courseList
     );
     //let COURSES_LIST = courses as Course[];
-
     //NOTE FOR MICHAEL: Here is where you can add your add courses and remove courses functions
     //Here is where you can add your add courses and remove courses functions
     function updateCurrCourse(event: React.ChangeEvent<HTMLSelectElement>) {
@@ -452,38 +474,42 @@ export function ViewSemester(): JSX.Element {
 
     const handlePlans = (planSelected: string) => {
         if (planSelected === "Artificial Intelligence") {
+            setcoreClasses(ArtificialIntelligence);
             setPlan(AI_Plan);
             setSemesters(AI_Plan.semesters);
             setSeePlan(true);
-            return;
         } else if (planSelected === "Cybersecurity") {
+            setcoreClasses(Cybersecurity);
             setPlan(CYBER_Plan);
             setSemesters(CYBER_Plan.semesters);
             setSeePlan(true);
-            return;
         } else if (planSelected === "Systems and Networks") {
+            setcoreClasses(SystemsNetworks);
             setPlan(SysNet_Plan);
             setSemesters(SysNet_Plan.semesters);
             setSeePlan(true);
-            return;
         } else if (planSelected === "Data Science") {
+            setcoreClasses(DataScience);
             setPlan(Data_Plan);
             setSemesters(Data_Plan.semesters);
             setSeePlan(true);
-            return;
         } else if (planSelected === "Theory and Computation") {
+            setcoreClasses(TheoryComputation);
             setPlan(Theory_Plan);
             setSemesters(Theory_Plan.semesters);
             setSeePlan(true);
         } else if (planSelected === "High Performance Computing") {
+            setcoreClasses(HighPerformanceComputing);
             setPlan(High_Plan);
             setSemesters(High_Plan.semesters);
             setSeePlan(true);
         } else if (planSelected === "Bioinformatics") {
+            setcoreClasses(Bioinformatics);
             setPlan(Bio_Plan);
             setSemesters(Bio_Plan.semesters);
             setSeePlan(true);
         } else if (planSelected === "Custom Concentration") {
+            setcoreClasses(CoreBS);
             setPlan(blankPlan);
             setSemesters(blankPlan.semesters);
             setSeePlan(true);
@@ -550,17 +576,8 @@ export function ViewSemester(): JSX.Element {
             <div className="DropdownMenu">
                 <StartNewPlan startNewSession={startNewSession}></StartNewPlan>
                 <RequiredClasses
-                    //requiredClass={requiredClasses}
-                    updateCurrCourse={function (
-                        event: React.ChangeEvent<HTMLSelectElement>
-                    ): void {
-                        throw new Error("Function not implemented.");
-                    }}
-                    currCourse={currCourse}
+                    degreeReq={coreClasses}
                     Course_List={courseList}
-                    requiredClass={function (): void {
-                        throw new Error("Function not implemented.");
-                    }}
                 ></RequiredClasses>
                 <ClearSemester clearSemester={clearSemester}></ClearSemester>
                 <ClearAllSemesters
