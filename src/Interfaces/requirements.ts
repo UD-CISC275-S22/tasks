@@ -27,11 +27,8 @@ export const CoreBS = [
     "CISC275",
     "CISC303",
     "CISC320",
-    "CISC361",
-    "CISC372",
     "MATH210",
     "MATH241",
-    "MATH242",
     "CISC355",
     "ENGL11O"
 ];

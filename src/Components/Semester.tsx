@@ -40,7 +40,14 @@ import { LoadPlan } from "./Buttons/LoadPlan";
 import { PickAPlan } from "./Buttons/PickAPlan";
 import { RequiredClasses } from "./Buttons/requiredClasses";
 import CourseEdit from "./CourseEdit";
-import { CoreBS } from "../Interfaces/requirements";
+import {
+    ArtificialIntelligence,
+    CoreBS,
+    Cybersecurity
+} from "../Interfaces/requirements";
+
+//state for the degree requirements for the different plans
+const [coreClasses, setcoreClasses] = useState(["", "", ""]);
 
 //all the default concentration plans
 let AI_Plan = AI();
@@ -452,11 +459,13 @@ export function ViewSemester(): JSX.Element {
 
     const handlePlans = (planSelected: string) => {
         if (planSelected === "Artificial Intelligence") {
+            setcoreClasses(ArtificialIntelligence);
             setPlan(AI_Plan);
             setSemesters(AI_Plan.semesters);
             setSeePlan(true);
             return;
         } else if (planSelected === "Cybersecurity") {
+            // setcoreClasses(Cybersecurity);
             setPlan(CYBER_Plan);
             setSemesters(CYBER_Plan.semesters);
             setSeePlan(true);
@@ -550,7 +559,7 @@ export function ViewSemester(): JSX.Element {
             <div className="DropdownMenu">
                 <StartNewPlan startNewSession={startNewSession}></StartNewPlan>
                 <RequiredClasses
-                    //requiredClass={requiredClasses}
+                    degreeReq={coreClasses}
                     Course_List={courseList}
                 ></RequiredClasses>
                 <ClearSemester clearSemester={clearSemester}></ClearSemester>

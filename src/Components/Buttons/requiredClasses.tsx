@@ -2,19 +2,23 @@
 import { Dropdown } from "react-bootstrap";
 import React from "react";
 import { Course } from "../../Interfaces/course";
-import { CoreBS } from "../../Interfaces/requirements";
 
-export const RequiredClasses = ({ Course_List }: { Course_List: Course[] }) => {
-    const core = CoreBS;
-
+export const RequiredClasses = ({
+    //requiredClass,
+    degreeReq,
+    Course_List
+}: {
+    degreeReq: string[];
+    Course_List: Course[];
+}) => {
     const filteredClasses = Course_List.filter((aCourse: Course) =>
-        core.includes(aCourse.title)
+        degreeReq.includes(aCourse.title)
     );
 
     return (
         <Dropdown>
             <Dropdown.Toggle
-                id="dropdown1"
+                id="dropdown4"
                 style={{
                     backgroundColor: "#00FF00",
                     borderColor: "black",
