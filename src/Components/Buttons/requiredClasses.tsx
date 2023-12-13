@@ -2,6 +2,7 @@
 import { Button, Form } from "react-bootstrap";
 import { Course } from "../../Interfaces/course";
 import React from "react";
+import { CoreBS } from "../../Interfaces/requirements";
 /*MATT and/or MALIKA READ THIS
 As I discussed with malika earlier, I decided to make a button to incorperate the degree requirements. 
 This is the file that creates the button.
@@ -17,18 +18,19 @@ export const RequiredClasses = ({
     requiredClass,
     updateCurrCourse,
     currCourse,
-    Course_List,
-    targetYear,
-    targetSem
+    Course_List
 }: {
-    requiredClass: (targetYear: number, targetSem: string) => void;
+    requiredClass: () => void;
     updateCurrCourse: (event: React.ChangeEvent<HTMLSelectElement>) => void;
     currCourse: number;
     Course_List: Course[];
-    targetYear: number;
-    targetSem: string;
 }) => {
     //Dropdown for courses are not treated individually
+    const core = CoreBS;
+
+    const filteredClasses = Course_List.filter((aCourse: Course) =>
+        core.includes(aCourse.title)
+    );
     return (
         <div>
             <Form.Group controlId="currentCourse">
@@ -37,17 +39,15 @@ export const RequiredClasses = ({
                     {
                         //Needed to disable prettier here because there was an "extra parenths" error that couldn't be resolved by any means. Will need to ask the professor but we wanted to showcase the funcitonality of the dropdown for the MVP
                         // eslint-disable-next-line no-extra-parens
-                        Course_List.map((courseName: Course) => (
-                            <option key={courseName.id} value={courseName.id}>
-                                {courseName.title}
+                        filteredClasses.map((aCourse: Course) => (
+                            <option key={aCourse.id} value={aCourse.id}>
+                                {aCourse.title}
                             </option>
                         ))
                     }
                 </Form.Select>
             </Form.Group>
-            <Button onClick={() => requiredClass(targetYear, targetSem)}>
-                Required Classes
-            </Button>
+            <Button onClick={() => requiredClass()}>Required Classes</Button>
         </div>
     );
 };
