@@ -48,7 +48,6 @@ function App(): JSX.Element {
                 <DegreePlanView
                     setDegreePlanList={setDegreePlanList}
                     setCurrentView={setView}
-                    setCurrentDegreePlan={setcurrDegreePlan}
                     degreePlanList={degreePlanList}
                 />
             )}
