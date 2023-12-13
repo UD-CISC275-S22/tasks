@@ -115,8 +115,6 @@ export function ViewSemester(): JSX.Element {
         courseList
     );
     //let COURSES_LIST = courses as Course[];
-    ////////////////////////////////////////////////////////
-    const [filteredCourses, setFilteredCourses] = useState([]);
     //NOTE FOR MICHAEL: Here is where you can add your add courses and remove courses functions
     //Here is where you can add your add courses and remove courses functions
     function updateCurrCourse(event: React.ChangeEvent<HTMLSelectElement>) {
@@ -553,16 +551,8 @@ export function ViewSemester(): JSX.Element {
                 <StartNewPlan startNewSession={startNewSession}></StartNewPlan>
                 <RequiredClasses
                     //requiredClass={requiredClasses}
-                    updateCurrCourse={function (
-                        event: React.ChangeEvent<HTMLSelectElement>
-                    ): void {
-                        throw new Error("Function not implemented.");
-                    }}
                     currCourse={currCourse}
                     Course_List={courseList}
-                    requiredClass={function (): void {
-                        throw new Error("Function not implemented.");
-                    }}
                 ></RequiredClasses>
                 <ClearSemester clearSemester={clearSemester}></ClearSemester>
                 <ClearAllSemesters

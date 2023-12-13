@@ -15,13 +15,12 @@ I think i'm close to getting the courses to display got I got a little lost so t
 Please feel free to continue where I left off and add or remove whatever you need to
 PLEASE DOCUMENT THE CHANGES THAT YOU DO*/
 export const RequiredClasses = ({
-    requiredClass,
-    updateCurrCourse,
+    //requiredClass,
     currCourse,
     Course_List
 }: {
-    requiredClass: () => void;
-    updateCurrCourse: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+    //requiredClass: () => void;
+    //updateCurrCourse: (event: React.ChangeEvent<HTMLSelectElement>) => void;
     currCourse: number;
     Course_List: Course[];
 }) => {
@@ -35,7 +34,7 @@ export const RequiredClasses = ({
         <div>
             <Form.Group controlId="currentCourse">
                 <Form.Label>Select A Course</Form.Label>
-                <Form.Select value={currCourse} onChange={updateCurrCourse}>
+                <Form.Select value={currCourse}>
                     {
                         //Needed to disable prettier here because there was an "extra parenths" error that couldn't be resolved by any means. Will need to ask the professor but we wanted to showcase the funcitonality of the dropdown for the MVP
                         // eslint-disable-next-line no-extra-parens
@@ -47,7 +46,7 @@ export const RequiredClasses = ({
                     }
                 </Form.Select>
             </Form.Group>
-            <Button onClick={() => requiredClass()}>Required Classes</Button>
+            {/* <Button onClick={() => requiredClass()}>Required Classes</Button> */}
         </div>
     );
 };
