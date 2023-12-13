@@ -1,13 +1,11 @@
 /* eslint-disable no-extra-parens */
-import React, { useState } from "react";
+import React from "react";
 import { Button } from "react-bootstrap";
 import { degreePlan } from "../interfaces/degreePlan";
 import { Views } from "../interfaces/viewProps";
-import { InsertDegreePlan, RemoveDegreePlan } from "./InsertRemoveDegreePlan";
 
 export interface DegreePlanViewProps {
     setCurrentView: (view: Views) => void;
-    setCurrentDegreePlan: (degreePlan: degreePlan) => void;
     degreePlanList: degreePlan[];
     setDegreePlanList: (degreePlan: degreePlan[]) => void;
 }
@@ -17,44 +15,59 @@ export const DegreePlanView = ({
     degreePlanList,
     setDegreePlanList
 }: DegreePlanViewProps): JSX.Element => {
-    const [viewDegreePlan, setViewDegreePlan] = useState<degreePlan>();
+    const [viewDegreePlan, setViewDegreePlan] = React.useState<
+        degreePlan | undefined
+    >(undefined);
 
-    function degreePlanClick(selectedPlan: degreePlan) {
+    const degreePlanClick = (selectedPlan: degreePlan) => {
         setViewDegreePlan(selectedPlan);
-    }
+    };
 
-    function viewSemesterClick() {
+    const viewSemesterClick = () => {
         if (viewDegreePlan) {
             setCurrentView(Views.semestersView);
         }
-    }
+    };
 
-    function goBackClick() {
-        if (viewDegreePlan) {
-            setViewDegreePlan(undefined);
-        }
+    const goBackClick = () => {
+        setViewDegreePlan(undefined);
         setCurrentView(Views.degreePlanView);
-    }
+    };
+
+    const insertDegreePlan = () => {
+        const updatedDegreePlans = [
+            ...degreePlanList,
+            {
+                name: `Plan ${degreePlanList.length + 1}`,
+                semesters: []
+            }
+        ];
+        setDegreePlanList(updatedDegreePlans);
+    };
+
+    const removeDegreePlan = (plan: degreePlan) => {
+        const updatedDegreePlans = degreePlanList.filter(
+            (degreePlan) => degreePlan.name !== plan.name
+        );
+        setDegreePlanList(updatedDegreePlans);
+    };
 
     return (
         <div>
             <ul>
-                <InsertDegreePlan
-                    setDegreePlanList={setDegreePlanList}
-                    setCurrentView={setCurrentView}
-                    degreePlanList={degreePlanList}
-                />
+                <li>
+                    <Button onClick={insertDegreePlan}>
+                        Create New Degree Plan
+                    </Button>
+                </li>
                 {degreePlanList.map((plan) => (
                     <li key={plan.name}>
                         <Button onClick={() => degreePlanClick(plan)}>
                             {plan.name}
                         </Button>
-                        <RemoveDegreePlan
-                            setDegreePlanList={setDegreePlanList}
-                            removePlan={plan}
-                            degreePlanList={degreePlanList}
-                            setCurrentView={setCurrentView}
-                        />
+                        <Button onClick={() => removeDegreePlan(plan)}>
+                            Remove
+                        </Button>
                     </li>
                 ))}
             </ul>
