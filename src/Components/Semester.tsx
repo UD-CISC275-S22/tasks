@@ -47,7 +47,6 @@ import {
 } from "../Interfaces/requirements";
 
 //state for the degree requirements for the different plans
-const [coreClasses, setcoreClasses] = useState(["", "", ""]);
 
 //all the default concentration plans
 let AI_Plan = AI();
@@ -60,6 +59,8 @@ let Bio_Plan = Bio();
 
 /* ----------------------------------------------------------------------------------------------------- */
 export function ViewSemester(): JSX.Element {
+    const [coreClasses, setcoreClasses] = useState(["", "", ""]);
+
     //states for saving plans (4 options)
     const [plan1, setPlan1] = useSessionStorage("plan1", blankPlan);
     const [plan1Semesters, setPlan1Semesters] = useSessionStorage(
