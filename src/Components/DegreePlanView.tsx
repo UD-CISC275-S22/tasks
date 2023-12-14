@@ -1,56 +1,72 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable no-extra-parens */
-import React, { useState } from "react";
-import { degreePlan } from "../interfaces/degreePlan";
-//import { SingleMultipleSemester } from "./SingleMultipleSemester";
-import { Views } from "../interfaces/viewProps";
+import React from "react";
 import { Button } from "react-bootstrap";
-import { InsertDegreePlan, RemoveDegreePlan } from "./InsertRemoveDegreePlan";
+import { degreePlan } from "../interfaces/degreePlan";
+import { Views } from "../interfaces/viewProps";
 
-export interface degreePlanViewProps {
+export interface DegreePlanViewProps {
     setCurrentView: (view: Views) => void;
-    setCurrentDegreePlan: (degreePlan: degreePlan) => void;
     degreePlanList: degreePlan[];
     setDegreePlanList: (degreePlan: degreePlan[]) => void;
 }
+
 export const DegreePlanView = ({
     setCurrentView,
-    //setCurrentDegreePlan,
     degreePlanList,
     setDegreePlanList
-}: degreePlanViewProps): JSX.Element => {
-    const [viewDegreePlan, setviewDegreePlan] = useState<degreePlan>();
+}: DegreePlanViewProps): JSX.Element => {
+    const [viewDegreePlan, setViewDegreePlan] = React.useState<
+        degreePlan | undefined
+    >(undefined);
 
-    function DegreePlanClick(selectedPlan: degreePlan) {
-        setviewDegreePlan(selectedPlan);
-    }
+    const degreePlanClick = (selectedPlan: degreePlan) => {
+        setViewDegreePlan(selectedPlan);
+    };
 
-    function viewSemesterClick() {
+    const viewSemesterClick = () => {
         if (viewDegreePlan) {
-            //viewDegreePlan(vi);
             setCurrentView(Views.semestersView);
         }
-    }
-    function goBackClick() {
-        if (viewDegreePlan) {
-            //viewDegreePlan({});
-        }
+    };
+
+    const goBackClick = () => {
+        setViewDegreePlan(undefined);
         setCurrentView(Views.degreePlanView);
-    }
+    };
+
+    const insertDegreePlan = () => {
+        const updatedDegreePlans = [
+            ...degreePlanList,
+            {
+                name: `Plan ${degreePlanList.length + 1}`,
+                semesters: []
+            }
+        ];
+        setDegreePlanList(updatedDegreePlans);
+    };
+
+    const removeDegreePlan = (plan: degreePlan) => {
+        const updatedDegreePlans = degreePlanList.filter(
+            (degreePlan) => degreePlan.name !== plan.name
+        );
+        setDegreePlanList(updatedDegreePlans);
+    };
 
     return (
         <div>
             <ul>
-                <InsertDegreePlan
-                    setDegreePlanList={setDegreePlanList}
-                    setCurrentView={setCurrentView}
-                    setCurrentDegreePlan={() => setDegreePlanList}
-                    degreePlanList={degreePlanList}
-                ></InsertDegreePlan>
+                <li>
+                    <Button onClick={insertDegreePlan}>
+                        Create New Degree Plan
+                    </Button>
+                </li>
                 {degreePlanList.map((plan) => (
                     <li key={plan.name}>
-                        <Button onClick={() => DegreePlanClick(plan)}>
+                        <Button onClick={() => degreePlanClick(plan)}>
                             {plan.name}
+                        </Button>
+                        <Button onClick={() => removeDegreePlan(plan)}>
+                            Remove
                         </Button>
                     </li>
                 ))}
@@ -60,11 +76,3 @@ export const DegreePlanView = ({
         </div>
     );
 };
-//map out degreePlanList
-//when click on degreePlan, set currDegreePlan to which ever one we click on -
-//then switches view to semesterView
-
-//extrafuction I might need to add is when someone goes back to degreeplan view,
-//they have to save all the change you made and update the degreePlanView and update all degreePlanList
-
-//try to add clearSemesters into SingleMutipleSemesters

@@ -1,11 +1,13 @@
 /* eslint-disable no-extra-parens */
-import React, { /*useEffect,*/ useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Class } from "../interfaces/class";
 import QuickAdd from "./QuickAdd";
 import SlowAdd from "./SlowAdd";
 import EditCourse from "./EditCourses";
 import allClasses from "../data/allClasses.json";
 //import DeleteCourses from "./DeleteCourses";
+import ComputerScienceRequirements from "./ComputerScienceRequirements";
+import InformationSystemsRequirements from "./InformationSystemsRequirements";
 
 // ------------add this
 import { degreePlan } from "../interfaces/degreePlan";
@@ -21,78 +23,59 @@ export function Planner({
     setCurrentView,
     setCurrentDegreePlan,
     setDegreePlanList,
-    DegreePlanList
+    DegreePlanList,
+    saveCurrentPlan
 }: {
     CurrentdegreePlan: degreePlan;
     setCurrentView: (view: Views) => void;
     setCurrentDegreePlan: (degreePlan: degreePlan) => void;
     setDegreePlanList: (degreePlan: degreePlan[]) => void;
     DegreePlanList: degreePlan[];
+    saveCurrentPlan: (updatedPlan: degreePlan) => void;
 }): JSX.Element {
     //export function SingleMultipleSemester(): JSX.Element { ----------------adding to DegreePlan
     const [semester1, setSemester1] = useState<string>("");
     const [semArr, setSemArr] = useState<semester[]>([]);
+
+    const [isPlanChanged, setIsPlanChanged] = useState(false);
     //const [courses, setCourses] = useState<Class[]>([]); // State for courses
 
-    // useEffect(() => {
-    //     setSemArr(CurrentdegreePlan.semesters || []);
-    // }, [CurrentdegreePlan]);
+    const [selectedMajor, setSelectedMajor] = useState<string | null>(null);
+    //const [courses, setCourses] = useSta te<Class[]>([]); // State for courses
 
-    function saveToLocalStorage(degreePlan: degreePlan, showMessage = true) {
-        try {
-            const storedValue = localStorage.getItem("degreePlans");
-            const savedDegreePlans = storedValue ? JSON.parse(storedValue) : [];
-            const existingIndex = savedDegreePlans.findIndex(
-                (plan: { name: string }) => plan.name === degreePlan.name
-            );
+    useEffect(() => {
+        const savedSemArr = localStorage.getItem(
+            `savedSemArr_${CurrentdegreePlan.name}`
+        );
+        if (savedSemArr) {
+            setSemArr(JSON.parse(savedSemArr));
+        }
+    }, [CurrentdegreePlan.name]); // this is supposed to update when the name changes but it doesn't
 
-            if (existingIndex !== -1) {
-                savedDegreePlans[existingIndex] = degreePlan;
-            } else {
-                savedDegreePlans.push(degreePlan);
-            }
-
+    useEffect(() => {
+        if (isPlanChanged) {
             localStorage.setItem(
-                "degreePlans",
-                JSON.stringify(savedDegreePlans)
+                `savedSemArr_${CurrentdegreePlan.name}`,
+                JSON.stringify(semArr)
             );
-
-            if (showMessage) {
-                alert("Degree Plan saved successfully!");
-            }
-        } catch (error) {
-            console.error("Error handling localStorage:", error);
-            alert("Error handling localStorage. Please try again.");
         }
-    }
+    }, [semArr, isPlanChanged, CurrentdegreePlan.name]);
 
-    function saveDegreePlan() {
-        const updatedDegreePlan: degreePlan = {
-            ...CurrentdegreePlan,
-            semesters: semArr
-        };
-        setCurrentDegreePlan(updatedDegreePlan);
-        saveToLocalStorage(updatedDegreePlan);
-    }
+    const savePlan = () => {
+        setIsPlanChanged(false);
 
-    function loadFromLocalStorage(planName: string): degreePlan | null {
-        try {
-            const storedValue = localStorage.getItem("degreePlans");
-            const savedDegreePlans = storedValue ? JSON.parse(storedValue) : [];
+        setCurrentDegreePlan({ ...CurrentdegreePlan, semesters: semArr });
 
-            const loadedDegreePlan = savedDegreePlans.find(
-                (plan: degreePlan) => plan.name === planName
-            );
+        const updatedDegreePlanList = DegreePlanList.map((plan) =>
+            plan.name === CurrentdegreePlan.name
+                ? { ...CurrentdegreePlan, semesters: semArr }
+                : plan
+        );
 
-            return loadedDegreePlan || null;
-        } catch (error) {
-            console.error(
-                "Error loading degree plan from localStorage:",
-                error
-            );
-            return null;
-        }
-    }
+        setDegreePlanList(updatedDegreePlanList);
+
+        saveCurrentPlan({ ...CurrentdegreePlan, semesters: semArr });
+    };
 
     const handleEditFormSubmit = (
         OGcourseCode: string,
@@ -123,6 +106,7 @@ export function Planner({
         console.log(OGcourseCode);
         setSemArr(updatedCourses);
         console.log(semArr);
+        setIsPlanChanged(true);
 
         // Clear the editing state
         // setEditingCourse(null);
@@ -133,42 +117,34 @@ export function Planner({
 
     //add clear Semester here-----------------------------------------------------EDIT
     function clear() {
-        setSemArr([]); //clears semester array, one issue: when wanting to go back, we need to save all the changes made,
-        //back to the degreePlanList and currentDegreePlan
-        //saveDegreePlan();
+        // Clears semester array
+        setSemArr([]);
+        setIsPlanChanged(true);
+        setSemArrClicked([]);
     }
     function goBackClick() {
+        //go back button and Save function
         const newDegreePlan: degreePlan = {
             ...CurrentdegreePlan,
             semesters: semArr
         };
-
-        // Save the current degree plan to local storage without showing the message
-        saveToLocalStorage(newDegreePlan, false);
-
         const newDegreePlanList: degreePlan[] = DegreePlanList.map(
             (degreePlan: degreePlan): degreePlan =>
                 degreePlan.name === CurrentdegreePlan.name
                     ? newDegreePlan
                     : degreePlan
         );
-
-        // Load the saved degree plan from local storage
-        const loadedDegreePlan = loadFromLocalStorage(CurrentdegreePlan.name);
-
-        if (loadedDegreePlan) {
-            setCurrentView(Views.degreePlanView);
-            setCurrentDegreePlan(loadedDegreePlan);
-            setDegreePlanList(newDegreePlanList);
-        } else {
-            // Handle the case where loading from local storage fails
-            alert("Error loading degree plan. Please try again.");
-        }
+        setCurrentView(Views.degreePlanView);
+        //console.log(DegreePlanList);
+        setCurrentDegreePlan(newDegreePlan);
+        setDegreePlanList(newDegreePlanList);
+        //abstract semArray to App.tsx, pull out and add to App.tsx
+        //then clear it betweent degreePlans and set it to semesters of the degreePlan you click on
     }
     function revertCourse(course: Class) {
         const revertTo = allClasses.find(
-            (course0: Class): boolean => course0.courseCode === course.OGcode
-        );
+            (course0): boolean => course0.courseCode === course.OGcode
+        ) as Class;
         if (revertTo) {
             const newSemArr = semArr.map((sem: semester): semester => {
                 return {
@@ -235,6 +211,11 @@ export function Planner({
             };
             reader.readAsText(file.files[0]);
         }
+    };
+    //----------------------------------------------------Requirements
+    const handleMajorSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
+        console.log("Selected major: ", e.target.value);
+        setSelectedMajor(e.target.value);
     };
     //----------------------------------------------------EDIT
 
@@ -341,6 +322,7 @@ export function Planner({
             return sem;
         });
         setSemArr(updatedSem);
+        setIsPlanChanged(true);
         // console.log(semArr);
     }
     function addCourse(): JSX.Element {
@@ -528,7 +510,26 @@ export function Planner({
             <div>
                 <Button onClick={clear}> Clear Existing Semesters </Button>
                 <Button onClick={goBackClick}>Go Back to Degree Plans</Button>
-                <Button onClick={saveDegreePlan}>Save Degree Plan</Button>
+                <Button onClick={savePlan} disabled={!isPlanChanged}>
+                    Save Plan
+                </Button>
+            </div>
+            <div>
+                <h2>Degree Requirements</h2>
+                <p>Please select your major:</p>
+                <select onChange={handleMajorSelect}>
+                    <option value="">None</option>
+                    <option value="CS">Computer Science</option>
+                    <option value="IS">Information Systems</option>
+                </select>
+                {selectedMajor == "CS" && (
+                    <ComputerScienceRequirements currentDegreePlan={semArr} />
+                )}
+                {selectedMajor == "IS" && (
+                    <InformationSystemsRequirements
+                        currentDegreePlan={semArr}
+                    />
+                )}
             </div>
         </div>
     );

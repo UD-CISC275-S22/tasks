@@ -1,5 +1,5 @@
 /* eslint-disable no-extra-parens */
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import { Planner } from "./Components/Planner";
 import { degreePlan } from "./interfaces/degreePlan";
@@ -7,23 +7,32 @@ import { Views } from "./interfaces/viewProps";
 import { DegreePlanView } from "./Components/DegreePlanView";
 import logo from "../src/logo.png";
 
-// import SlowAdd from "./Components/SlowAdd";
-// import QuickAdd from "./Components/QuickAdd";
-// import { Class } from "./interfaces/class";
 function App(): JSX.Element {
-    //--------------------------------------------------------------------------------------
-    const prevDegreePlan: degreePlan[] = [
-        { name: "Plan 1", semesters: [] },
-        { name: "Plan 2", semesters: [] }
-    ];
-    //act as the initial value, otherwise the "go back" button will not work
-    //--------------------------------------------------------------------------------------
     const [view, setView] = useState<Views>(Views.degreePlanView);
-    const [currDegreePlan, setcurrDegreePlan] = useState<degreePlan>(
-        prevDegreePlan[1]
-    );
-    const [degreePlanList, setDegreePlanList] =
-        useState<degreePlan[]>(prevDegreePlan);
+    const [currDegreePlan, setcurrDegreePlan] = useState<degreePlan>({
+        name: "",
+        semesters: []
+    });
+    const [degreePlanList, setDegreePlanList] = useState<degreePlan[]>([]);
+
+    useEffect(() => {
+        const initialDegreePlans: degreePlan[] = [
+            { name: "Plan 1", semesters: [] },
+            { name: "Plan 2", semesters: [] }
+        ];
+
+        setDegreePlanList(initialDegreePlans);
+        setcurrDegreePlan(initialDegreePlans[0]);
+    }, []);
+
+    const saveCurrentPlan = (updatedPlan: degreePlan) => {
+        setcurrDegreePlan(updatedPlan);
+        const updatedDegreePlanList = degreePlanList.map((plan) =>
+            plan.name === updatedPlan.name ? updatedPlan : plan
+        );
+
+        setDegreePlanList(updatedDegreePlanList);
+    };
 
     return (
         <div className="App">
@@ -39,21 +48,18 @@ function App(): JSX.Element {
                 <DegreePlanView
                     setDegreePlanList={setDegreePlanList}
                     setCurrentView={setView}
-                    setCurrentDegreePlan={setcurrDegreePlan}
                     degreePlanList={degreePlanList}
-                ></DegreePlanView>
+                />
             )}
             {view === Views.semestersView && (
-                // singleMutipleSemester needs to get pass the current degreePlan in order to know which degreePlan to display
-                //try to come up with a save.
-                //<SingleMultipleSemester></SingleMultipleSemester>
                 <Planner
                     setCurrentView={setView}
                     CurrentdegreePlan={currDegreePlan}
                     setCurrentDegreePlan={setcurrDegreePlan}
                     setDegreePlanList={setDegreePlanList}
                     DegreePlanList={degreePlanList}
-                ></Planner>
+                    saveCurrentPlan={saveCurrentPlan}
+                />
             )}
         </div>
     );

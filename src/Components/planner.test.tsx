@@ -4,7 +4,9 @@ import { Class } from "../interfaces/class";
 import sample from "../data/allClasses.json";
 import App from "../App";
 
-const CLASSES = sample.map((courses): Class => ({ ...courses }));
+const CLASSES = sample.map(
+    (courses): Class => ({ ...courses, breadth: courses.breadth || "null" })
+);
 
 describe("Project Component tests", () => {
     beforeEach(() => {

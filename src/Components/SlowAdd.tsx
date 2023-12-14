@@ -14,7 +14,7 @@ function SlowAdd(props: SlowAddProps): JSX.Element {
         numPreReqs: 0,
         preReqs: [],
         credits: 0,
-        canEditCredits: true,
+        breadth: "",
         semester: "",
         OGcode: "",
         taken: true,
@@ -24,6 +24,7 @@ function SlowAdd(props: SlowAddProps): JSX.Element {
     const [courseCode, setCourseCode] = useState("");
     const [preReqs, setPreReqs] = useState<string[]>([]);
     const [credits, setCredits] = useState(0);
+    const [breadth, setBreadth] = useState("null");
     const [semester, setSemester] = useState("");
     //const [year, setYear] = useState("");
 
@@ -50,11 +51,14 @@ function SlowAdd(props: SlowAddProps): JSX.Element {
         const tempValue = e.target.value;
         const preReqArray = tempValue.split(",").map((preReq) => preReq.trim());
         setPreReqs(preReqArray);
-        //Fix later
     };
 
     const handleCredits = (e: React.ChangeEvent<HTMLInputElement>) => {
         setCredits(parseFloat(e.target.value));
+    };
+
+    const handleBreadthChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+        setBreadth(e.target.value);
     };
     // const handleYearChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     //     setYear(e.target.value);
@@ -71,7 +75,7 @@ function SlowAdd(props: SlowAddProps): JSX.Element {
             numPreReqs: preReqs.length,
             preReqs: preReqs,
             credits: credits,
-            canEditCredits: true,
+            breadth: breadth,
             semester: semester,
             OGcode: courseCode,
             taken: false,
@@ -83,13 +87,19 @@ function SlowAdd(props: SlowAddProps): JSX.Element {
             numPreReqs: preReqs.length,
             preReqs: preReqs,
             credits: credits,
-            canEditCredits: true,
+            breadth: breadth,
             semester: semester,
             OGcode: courseCode,
             taken: false,
             note: ""
         };
         if (courseInfo1) {
+            if (courseInfo1.preReqs.length > 0) {
+                alert(
+                    "WARNING, in order to take this class you need to have taken " +
+                        courseInfo1.preReqs.join(" ")
+                );
+            }
             props.onCourseInfo({ ...courseInfo1 });
         }
         console.log("00000000000000000");
@@ -143,12 +153,28 @@ function SlowAdd(props: SlowAddProps): JSX.Element {
                     onChange={handleCredits}
                     min={1}
                     max={10}
-                    defaultValue={0}
                 />
+            </div>
+            <div className="form-group">
+                <label htmlFor="breadth">Breadth: </label>
+                <select
+                    id="breadth"
+                    name="breadth"
+                    value={breadth}
+                    onChange={handleBreadthChange}
+                >
+                    <option value="null">None</option>
+                    <option value="HIST">History and Cultural Change</option>
+                    <option value="SOCI">Social and Behavioral Sciences</option>
+                    <option value="TECH">
+                        Mathematics, Natural Sciences, and Technology
+                    </option>
+                    <option value="ARTS">Creative Arts and Humanities</option>
+                </select>
             </div>
             <div>
                 <div>
-                    <label htmlFor="semester">Semester: </label>
+                    <label htmlFor="semester">Semester & Year: </label>
                     <input
                         type="text"
                         id="semester"
