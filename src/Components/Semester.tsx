@@ -573,6 +573,14 @@ export function ViewSemester(): JSX.Element {
 
     const allPlans = [plan1, plan2, plan3, plan4];
 
+    let totalClasses = semesters.map((sem: Semester) =>
+        sem.courseList.map((course: Course) => course)
+    );
+    totalClasses = totalClasses.flat();
+    const totalTitleCourses = totalClasses.map(
+        (course: Course): string => course.title
+    );
+
     //actual return for the tsx file to App.tsx
     return (
         <div style={{ backgroundColor: "#0f234c" }}>
@@ -580,7 +588,8 @@ export function ViewSemester(): JSX.Element {
                 <StartNewPlan startNewSession={startNewSession}></StartNewPlan>
                 <RequiredClasses
                     degreeReq={coreClasses}
-                    Course_List={courseList}
+                    Course_List={COURSES_LIST} //changed from courseList to COURSES_LIST
+                    totalClasses={totalTitleCourses}
                 ></RequiredClasses>
                 <ClearSemester clearSemester={clearSemester}></ClearSemester>
                 <ClearAllSemesters
