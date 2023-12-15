@@ -23,8 +23,8 @@ export function AI(): Plan {
     );
     fall3AI = [...fall3AI, blankCourse, blankCourse, blankCourse];
     let spring3AI = courseList.filter(
-        //id 7 is CISC303 and id 40 is CISC481
-        (course) => course.id == 7 || course.id == 40
+        //id 2015 is CISC303 and id 2052 is CISC481
+        (course) => course.id == 2015 || course.id == 2052
     );
     spring3AI = [...spring3AI, blankCourse, blankCourse, blankCourse];
     let fall4AI = courseList.filter(
