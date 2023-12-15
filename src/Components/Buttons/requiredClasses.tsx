@@ -9,10 +9,12 @@ import { Course } from "../../Interfaces/course";
 in order to find the required classes for each degree plan*/
 export const RequiredClasses = ({
     degreeReq,
-    Course_List
+    Course_List,
+    totalClasses
 }: {
     degreeReq: string[]; //the array of core courses for the selected plan
     Course_List: Course[]; //the list of courses
+    totalClasses: string[];
 }) => {
     const filteredClasses = Course_List.filter((aCourse: Course) =>
         //filters the course list based on the courses in the degree requirement array
@@ -40,7 +42,14 @@ export const RequiredClasses = ({
                 {/* eslint-disable-next-line no-extra-parens */}
                 {filteredClasses.map((aCourse: Course) => (
                     <Dropdown.Item key={aCourse.id}>
-                        {aCourse.title}
+                        {console.log(
+                            !totalClasses.includes(aCourse.title) &&
+                                aCourse.title
+                        )}
+                        {!totalClasses.includes(aCourse.title)
+                            ? aCourse.title + "❌"
+                            : aCourse.title + "✅"}
+                        {console.log(totalClasses)}
                     </Dropdown.Item>
                 ))}
             </Dropdown.Menu>
