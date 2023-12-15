@@ -25374,7 +25374,7 @@
         "description": "Analysis and design of logic circuits. Topics include: Boolean algebra and its application to switching circuits, simplification of switching functions, design of logic circuits at gate level and with MSI and LSI components. Analysis and design of synchronous and asynchronous sequential state machines.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25386,7 +25386,7 @@
         "description": "Introduction to microprocessors as embedded devices. Emphasizes Input/Output techniques, interrupts, real-time operation, high-level code debugging and interfacing to various types of sensors and actuators. Projects that address various embedded applications are a major part of the course.",
         "credits": 4,
         "semester": ["Spring"],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25398,7 +25398,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25410,7 +25410,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25422,7 +25422,7 @@
         "description": "Course includes a series of learning modules including electrical safety, use of test equipment, and interfacing microprocessors to sensors. Students complete a design assignment.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25434,7 +25434,7 @@
         "description": "The Cybersecurity Scholars Program will integrate with any major and train you to become a thought leader in cybersecurity! You will collaboratively assess the most pressing cyber-defense questions and develop both cultural and technical solutions.",
         "credits": 1,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25446,7 +25446,7 @@
         "description": "Studies general purpose, special purpose and embedded computer architecture. Principles of digital system design introduced including an introduction to tools for automated design and use of programmable logic devices.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25458,7 +25458,7 @@
         "description": "Principles of computer system design are studied emphasizing tradeoffs involving cost, performance, testability, reliability and manufacturability. Topics include timing analysis, component and subsystem interconnect, noise effects debugging techniques, boundary scan testing and printed circuit layout. Laboratory work involves design and implementation of a computer subsystem.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25470,7 +25470,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25482,7 +25482,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25494,7 +25494,7 @@
         "description": "Students work in small teams on various design challenges. The teams explore entrepreneurship opportunities by forming fictitious companies and selling their ideas.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25506,7 +25506,7 @@
         "description": "Foundation principles, architectures and techniques employed in computer and communication networks. Focuses on mechanisms used in TCP/IP protocol suite. Topics include connection management, end-to-end reliable data transfer, sliding window protocols, quality of service, flow control, congestion control, routing, LANs, framing, error control, analog versus digital transmission, packet versus circuit switching, multiplexing.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25518,7 +25518,7 @@
         "description": "Introduction to compiler design, systax and semantics, code generation and optimization. Design of high performance computers together with high performance optimizing compilers as an integral unit. Software/hardware tradeoffs in pipelined computers, superscaler computers and computers embedded in other systems.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25530,7 +25530,7 @@
         "description": "Course covers hardware/software co-design approaches for building embedded systems. Topics include, but are not limited to:  microprocessors and FPGAs; VHD,; C, and Phython; gate-level, register transfer leve, and IP level design; hardware/software co-design; memory, bus, and IO ports; IP cores and customization; hardware accelerators, and cyber security.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25542,7 +25542,7 @@
         "description": "This course focuses on the design, fabrication, and construction of Printed Circuit Boards and on using FPGA design kits.",
         "credits": 3,
         "semester": ["Fall, Summer and Spring"],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25554,7 +25554,7 @@
         "description": "Course content will include: Advanced current mirrors, voltage references, amplifiers, frequency compensation, negative feedback systems and stability, Opamps, IC layout.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25566,7 +25566,7 @@
         "description": "New commodity computing devices, e.g., GPUs, bring the originally elite highperformance computing into the reach of general public. Principles of program optimization, GPU and IBM Cell architecture, along with concepts and techniques for optimizing general purpose computing on the new hardware.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25578,7 +25578,7 @@
         "description": "With the increasing amount of textual information, it is important to develop effective search engines, such as Google, to help users manage and exploit the information. Examine the underlying technologies of search engines and get hands-on project experience. Requires good programming skills.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25590,7 +25590,7 @@
         "description": "Study of CMOS VLSI devices, circuits and systems implemented in VLSI. CAD tools for the design and simulation of VLSI. Topics include the performance and limitations of VLSI systems, low level circuit design and system design with an emphasis on digital systems. Major chip design project required.",
         "credits": 3,
         "semester": ["Fall, Summer and Spring"],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25602,7 +25602,7 @@
         "description": "This cybersecurity course is an introduction to computer and network security and covers the foundation security policies and methods to provide confidentiality, integrity, and availability, as well as cryptography, auditing, and user security. Topics are reinforced with hands-on exercises run in a virtual machine environment.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25614,7 +25614,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Fall"],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25626,7 +25626,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25638,7 +25638,7 @@
         "description": "This seminar-style cybersecurity course covers one specific discipline of information security known as application security. This discipline (APPSEC) refers to the development of software that can continue to function correctly even under constant scrutiny and attack by determined adversaries.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25650,7 +25650,7 @@
         "description": "This cybersecurity course introduces techniques used to (1) identify strengths and exploit weaknesses in networked systems or hosts, and (2) reverse engineer programs of unknown origin and identify their function so to classify them as malware and highlight the level of risk that they represent.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25662,7 +25662,7 @@
         "description": "This cybersecurity course explores modern Cryptography covering algorithms and cryptosystems, cryptanalysis, and best practices for application and implementation of crypto in software systems.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25674,7 +25674,7 @@
         "description": "This cybersecurity course introduces the virtualization and cloud computing technologies used in most modern online services. The unique and conventional security issues related to protecting these types of systems are addressed and reinforced with hands-on exercises run in a virtual machine environment.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25686,7 +25686,7 @@
         "description": "The main emphasis of this course is cybersecurity for embedded systems devices and Internet of Things. The major topics covered include the instruction set and CPUs of embedded devices, the design of secure computing architectures from assembly program design to operating systems. Additional emphasis is given to Internet of Things applications, such as smart homes, embedded microprocessors and automotive systems.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25698,7 +25698,7 @@
         "description": "This cybersecurity course introduce the theory and practices used to help make a computer program secure and provide the skills needed to implement programs that are free from vulnerabilities.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25710,7 +25710,7 @@
         "description": "Practical treatment of the defensive techniques used to harden computer systems to make them less vulnerable to cyber-attacks. Defect management, configuration/hardening, account control, logs/auditing, and risk assessment are covered and reinforced with hands-on exercises run in a virtual machine environment.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25722,7 +25722,7 @@
         "description": "Introduction to digital forensics as used to analyze criminal evidence in computer systems and digital media. Forensic tools and techniques for storage and memory analysis of windows/linux, network traffic, documentation are covered and reinforced with hands-on exercises run in a virtual machine environment.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25734,7 +25734,7 @@
         "description": "Explore varied topics in cybersecurity to coincide with the interests of students and current faculty. Potential topics include: (1) applications, web or cloud security, (2) risk management and incident response, (3) malware and reverse engineering, or (4) wireless, smartphone, or SCADA security.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25746,7 +25746,7 @@
         "description": "This seminar course explores areas in advanced computer and network security not covered in introductory cybersecurity classes. Provides insight into realistic complex defensive and offensive cybersecurity topics such as DoS attacks, DNS security, Email spam, On-line Authentication, Phishing, Cloud Security, Malware, and Web security.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25758,7 +25758,7 @@
         "description": "Students apply their accumulated classroom knowledge to an electrical and computer engineering design problem.  Students work in small teams and must present their finished designs at the end of the term.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25770,7 +25770,7 @@
         "description": "Students apply their accumulated classroom knowledge to an electrical and computer engineering design problem. Students work in small teams and must present their finished designs at the end of the term.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25782,7 +25782,7 @@
         "description": "Software management studies processes and concepts for planning and monitoring all software life-cycle phases. Topics include management models and structures, project planning including scheduling, effort estimation and risk management, project personnel and organization, project control (monitoring, measurement, correction and performance standards), software configuration management, and process description languages and tools.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25794,7 +25794,7 @@
         "description": "Key software design concepts are introduced. Topics include basic design concepts, principles of good design, design strategies, software architecture and styles of architectural design, and design and architectural notations and languages. Detailed design, including design patterns and component design are also covered. Implementation issues that affect the design, including design support tools and tools for analyzing designs are discussed.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25806,7 +25806,7 @@
         "description": "Rigorous methods to elicit, analyze, and specify the requirements of a software system. The tasks range from identifying stakeholders and their goals producing a precise software specification document. Topics may include data flow diagrams, use cases, UML sequence and collaboration diagrams, finite state machines, requirements for real-time and concurrent systems, entity-relationship diagrams, and logic-based specifications, as well as the analysis of specifications for consistency and completeness.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25818,7 +25818,7 @@
         "description": "Formal approaches to the specification, verification, and design of software systems. Topics include representing programs as transition systems; liveness and safety properties; state space reachability; explicit, symbolic and automata-based model checking; temporal logics; symbolic execution; automated theorem-proving; and relational calculus. Learn to use state-of-the-art tools based on these methods, such as the model checker Spin.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25830,7 +25830,7 @@
         "description": "Study of software testing and maintenance methodologies for modern software. Topics include approaches to automatic test case generation, test oracles, test coverage analysis, regression testing, program understanding, and software maintenance tools. A primary focus will be automation in software testing and maintenance approaches.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25842,7 +25842,7 @@
         "description": "Introduction to compiler design, syntax and semantics, code generation and optimization. Design of high performance computers together with high performance optimizing compilers as an integral unit. Software/hardware tradeoffs in pipelined computers, super-scaler computers, and computers embedded in other systems.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25854,7 +25854,7 @@
         "description": "Course covers hardware/software co-design approaches for building embedded systems. Topics include, but are not limited to: microprocessors and FPGAs; VHD,; C, and Phython; gate-level, register transfer leve, and IP level design; hardware/software co-design; memory, bus, and IO ports; IP cores and customization; hardware accelerators, and cyber security.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25866,7 +25866,7 @@
         "description": "This course focuses on the design, fabrication, and construction of Printed Circuit Boards and on using FPGA design kits.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25878,7 +25878,7 @@
         "description": "Advanced current mirrors, voltage references, amplifiers, frequency compensation, negative feedback systems and stability, Opamps, IC layout.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25890,7 +25890,7 @@
         "description": "Foundation principles, architectures, and techniques employed in computer and communication networks. Focuses on mechanisms used in TCP/IP protocol suite. Topics include connection management, end-to-end reliable data transfer, sliding window protocols, quality of service, flow control, congestion control, routing, LANs, framing, error control, analog versus digital transmission, packet versus circuit switching, multiplexing.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25902,7 +25902,7 @@
         "description": "Provides an introduction to the principles of parallel computer architecture. Begins at a level that assumes experience in introductory undergraduate courses such as digital system design, computer architecture, and microprocessor based systems.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25914,7 +25914,7 @@
         "description": "New commodity computing devices, e.g., GPUs, bring the originally elite highperformance computing into the reach of general public. Principles of program optimization, GPU and IBM Cell architecture, along with concepts and techniques for optimizing general purpose computing onthe new hardware.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25926,7 +25926,7 @@
         "description": "With the increasing amount of textual information, it is important to develop effective search engines, such as Google, to help users manage and exploit the information. Examine the underlying technologies of search engines and get hands-on project experience. Requires good programming skills.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25938,7 +25938,7 @@
         "description": "Study of CMOS VLSI devices, circuits and systems implemented in VLSI. CAD tools for the design and simulation of VLSI. Topics include the performance and limitations of VLSI systems, low level circuit design and system design with an emphasis on digital systems. Major chip design project required.",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25950,7 +25950,7 @@
         "description": "Introduction to computer and network security and covers the foundation security policies and methods to provide confidentiality, integrity, and availability, as well as cryptography, auditing, and user security. Topics are reinforced with hands-on exercises run in a virtual machine environment.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25962,7 +25962,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25974,7 +25974,7 @@
         "description": "This seminar-style cybersecurity course covers one specific discipline of information security known as application security. This discipline (APPSEC) refers to the development of software that can continue to function correctly even under constant scrutiny and attack by determined adversaries.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25986,7 +25986,7 @@
         "description": "This cybersecurity course introduces techniques used to (1) identify strengths and exploit weaknesses in networked systems or hosts, and (2) reverse engineer programs of unknown origin and identify their function so to classify them as malware and highlight the level of risk that they represent.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -25998,7 +25998,7 @@
         "description": "This cybersecurity course explores modern Cryptography covering algorithms and cryptosystems, cryptanalysis, and best practices for application and implementation of crypto in software systems.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26010,7 +26010,7 @@
         "description": "This cybersecurity course introduces the virtualization and cloud computing technologies used in most modern online services. The unique and conventional security issues related to protecting these types of systems are addressed and reinforced with hands-on exercises run in a virtual machine environment.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26022,7 +26022,7 @@
         "description": "The main emphasis of this course is cybersecurity for embedded systems devices and Internet of Things. The major topics covered include the instruction set and CPUs of embedded devices, the design of secure computing architectures from assembly program design to operating systems. Additional emphasis is given to Internet of Things applications, such as smart homes, embedded microprocessors, and automotive systems.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26034,7 +26034,7 @@
         "description": "This cybersecurity course introduce the theory and practices used to help make a computer program secure and provide the skills needed to implement programs that are free from vulnerabilities.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26046,7 +26046,7 @@
         "description": "Technical practicum guided by the individual student\u2019s interests. The student will contribute a significant software engineering project either on campus or in association with an off-campus private business or government agency. Must be arranged with, and approved in advance by, a CIS or ECE faculty member.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26058,7 +26058,7 @@
         "description": "Practical treatment of the defensive techniques used to harden computer systems to make them less vulnerable to cyber-attacks. Defect management, configuration/hardening, account control, logs/auditing, and risk assessment are covered and reinforced with hands-on exercises run in a virtual machine environment.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26070,7 +26070,7 @@
         "description": "Introduction to digital forensics as used to analyze criminal evidence in computer systems and digital media. Forensic tools and techniques for storage and memory analysis of windows/linux, network traffic, documentation are covered and reinforced with hands-on exercises run in a virtual machine environment.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26082,7 +26082,7 @@
         "description": "Examine varied topics in cybersecurity to coincide with the interests of students and current faculty. Potential topics include: (1) applications, web or cloud security, (2) risk management and incident response, (3) malware and reverse engineering, or (4) wireless, smartphone, or SCADA security.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26094,7 +26094,7 @@
         "description": "This seminar course explores areas in advanced computer and network security not covered in introductory cybersecurity classes. Course provides insight into realistic complex defensive and offensive cybersecurity topics such as DoS attacks, DNS security, Email spam, On-line Authentication, Phishing, Cloud Security, Malware, and Web security.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26106,7 +26106,7 @@
         "description": "Focuse on the challenges and opportunities in parallel computing systems and on the design and implementation of future high-end computer systems from multiple peta-scale up to exa-scale computers. Challenges are centered on the definition and specification of parallel program execution models that are sound, scalable and programmable for the intended applications.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26118,7 +26118,7 @@
         "description": "Introduction to reliability challenges in computer systems, including permanent, transient, and intermittent faults. Various types of redundancy for fault tolerant computing will be studied. Hardware/software approaches for reliability enhancement in various computer systems will be examined, emphasizing tradeoffs involving performance, power, and reliability.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26130,7 +26130,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26142,7 +26142,7 @@
         "description": "Independent and laboratory study conducted for the purpose of contributing new data and theory in some field of Cybersecurity in which information is lacking. Although supervised, the work will be independent in character to encourage the development of initiative.",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "CPEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26154,7 +26154,7 @@
         "description": "Responses in American society to the problems of crime. Examines criminal behavior, criminal law, the police, the courts and corrections, as well as selected issues in criminal justice.",
         "credits": 3,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26166,7 +26166,7 @@
         "description": "The nature and extent of illicit drug use in the United States and the sociocultural context. The history and effects of the major drugs of abuse and the social issues since the 1950s that contributed to the increased use of illicit drugs.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26178,7 +26178,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26190,7 +26190,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26202,7 +26202,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26214,7 +26214,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26226,7 +26226,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26238,7 +26238,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26250,7 +26250,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26262,7 +26262,7 @@
         "description": "Introduces legal studies as a multidisciplinary field.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26274,7 +26274,7 @@
         "description": "Defining deviance, research on deviance and explaining deviance.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26286,7 +26286,7 @@
         "description": "Historical definition of delinquency, abuse and neglect, research in delinquency, causes and treatment of delinquents.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26298,7 +26298,7 @@
         "description": "The nature, kinds and causes of crime. Criminal liability, criminal careers and organized racketeering.",
         "credits": 3,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26310,7 +26310,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26322,7 +26322,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Winter"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26334,7 +26334,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26346,7 +26346,7 @@
         "description": "Analysis of forms of behavior in relatively unstructured situations such as crowds, panics, riots and demonstrations; and processes of interaction: susceptibility, contagion, polarization and communication.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26358,7 +26358,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26370,7 +26370,7 @@
         "description": "Overview of the development of emergency management in the United States, including the formation of the profession, integration of formal and informal organizations, crisis response, and perceptions of crime and deviance during emergencies.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26382,7 +26382,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Winter and Summer"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26394,7 +26394,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26406,7 +26406,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26418,7 +26418,7 @@
         "description": "The aim of this course is to give you an introduction to global legal systems, how they operate and what they mean for overall governance. The course questions how legal systems function as parts of their respective societies and how these systems address certain areas of law, such as human rights, criminal and environmental law. During the course, we will also learn about the political, historical and cultural underpinnings that influence what we call \u201claw\u201d.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26430,7 +26430,7 @@
         "description": "Analysis of law as a social process in both historical and comparative perspective. Focuses on various theories of law and society and relevant empirical research.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26442,7 +26442,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26454,7 +26454,7 @@
         "description": "Study of different criminal justice systems across the world including discussions of their approaches to law, policing, courts, and corrections, common law, civil law, Islamic traditions as well as others.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26466,7 +26466,7 @@
         "description": "Introduction to basic structures of international criminal justice systems including international and transnational crime, international courts, transnational policing, and international criminal law.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26478,7 +26478,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26490,7 +26490,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26502,7 +26502,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26514,7 +26514,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26526,7 +26526,7 @@
         "description": "Independent research under the supervision of a faculty member. Requirements include preparation of a research report consistent with the professional literature in the field. Student and faculty member will file a learning contract describing the research and a report with the department chair.",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26538,7 +26538,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26550,7 +26550,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26562,7 +26562,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26574,7 +26574,7 @@
         "description": "Culminates the legal studies minor by requiring an independent research project resulting in a Semesterterpaper. Seminar focuses on a specific substantive issue, provides guidance from professor and chance to share ideas and problems with fellow students.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26586,7 +26586,7 @@
         "description": "Reflects the current state of policy and practice among policy makers and practitioners in the field of domestic violence including legal issues, policy development, primary prevention, and models of best practice. Addresses the role of federal and state law. May include economic justice, mental health and trauma, and alternative models.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26598,7 +26598,7 @@
         "description": "Examines issues in providing services to families in which domestic violence is occurring. Multiple service systems are explored, with emphasis on service coordination, service gaps, and public policy.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26610,7 +26610,7 @@
         "description": "Discuss controversial topics surrounding sex crimes and punishments to develop students\u2019 abilities to think critically about connections between three areas: how we as a society respond to crime through our criminal justice systems; what we believe about crime and punishment; and what empirical research tells us.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26622,7 +26622,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26634,7 +26634,7 @@
         "description": "This INSIDE/OUT class focuses on deep reading of several form of literature. The class investigates the role of women in literature as authors, readers and central characters, and uses literature as a window into social views of gender.   Assigned material explores the particular themes of voice, agency, cultural difference and social structure.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26646,7 +26646,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26658,7 +26658,7 @@
         "description": "Nature and causes of the deviant behaviors and crimes of large organizations. How organizations act, are accused of deviance and defend themselves in cases such as price-fixing, sale of unsafe drugs and illegal spying.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26670,7 +26670,7 @@
         "description": "Violence is a very common part of modern life.  It pervades many aspects of our social interactions, and dominates political discourse and policy issues. The purpose of this course is to critically examine the nature and patterns of violence. A key element of the course that distinguishes it from other courses is that there is a statistical lab component that will be devoted to examining the epidemiology and etiology of violence using read data sets.  Therefore, this class is not just lecture based, but places equal emphasis on statistical techniques to answer empirical questions about violent offending and victimization.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26682,7 +26682,7 @@
         "description": "Examines two major social problems in South Africa: crime and HIV/AIDS.  Explore the problems historically, as well as their current prevalence and implications for the country. Examines sociological theories to broaden our understanding of the social problems which are compared with the US.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26694,7 +26694,7 @@
         "description": "Examines the use of the criminal law and other regulatory sanctions to punish certain types of speech and the efforts of courts to determine which speech is deserving of constitutional protection and therefore beyond governmental control.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26706,7 +26706,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26718,7 +26718,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26730,7 +26730,7 @@
         "description": "Examination of current issues, scholarship, and debates related to crime, law, and social policy. Topics will vary. Taught in the Inside-Out format, in which traditional UD students and incarcerated persons take the class together at a local correctional facility.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26742,7 +26742,7 @@
         "description": "Covers both drug and criminal justice issues, focusing on the drugs-crime nexus and the criminal justice system response. Examines issues of race, gender, victimization, international policy, and new policy responses including drug treatment, harm reduction, and restorative justice. Class is held at a local correctional facility, and half the students are inmates.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26754,7 +26754,7 @@
         "description": "Explores taken for granted systems of surveillance sociologically. Going beyond media constructed understandings, the class is designed to explore multiple forms of surveillant practices and technologies from at both personal and public levels of engagement.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26766,7 +26766,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26778,7 +26778,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26790,7 +26790,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26802,7 +26802,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26814,7 +26814,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26826,7 +26826,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26838,7 +26838,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26850,7 +26850,7 @@
         "description": "",
         "credits": 4,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26862,7 +26862,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26874,7 +26874,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26886,7 +26886,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26898,7 +26898,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26910,7 +26910,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26922,7 +26922,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "CRJU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26934,7 +26934,7 @@
         "description": "Provide the basis for understanding, appreciating, and participating in dance as an art form, cultivated through lectures, films, live performances, and/or studio experiences.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "DANC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26946,7 +26946,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "DANC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26958,7 +26958,7 @@
         "description": "Dance Minor students and others interested in a career in dance will gain knowledge of the wide range of options in the dance field. Careers including performer, choreographer, educator, writer, critic, studio owner, and scientist will be explored in this survey course.",
         "credits": 1,
         "semester": ["Fall"],
-        "department": "",
+        "department": "DANC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26970,7 +26970,7 @@
         "description": "Designed for students who have not previously studied ballet. Students develop technical facility in basic ballet steps, knowledge of ballet class structure, an understanding of ballet class etiquette, and an understanding of the body as an instrument of expression.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "DANC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26982,7 +26982,7 @@
         "description": "Designed for students without prior dance experience. Introduction to the fundamentals of modern dance technique and vocabulary through a varied range of movement experiences. Contraction/release and fall/recovery discussed so as to increase the strength and mobility of the spine, and to find the full use of the breath in movement.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "DANC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -26994,7 +26994,7 @@
         "description": "Designed for students without prior dance experience. Introductory experience in movement vocabularies of the American dance form of jazz, demonstrating its evolution as both an art form and vehicle for individual and group expression. Emphasis on rhythm and style.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "DANC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27006,7 +27006,7 @@
         "description": "Explores the world of dance.  Through video observation, readings, writings, and dancing, students are exposed to many facets of dance as an expression of cultural values. Dance as art, religion, social custom, and political action  examined as evidenced in many human societies.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "DANC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27018,7 +27018,7 @@
         "description": "Dance improvisation provides the student opportunities to explore the processes of discovering, creating, and performing movement spontaneously with an emphasis on freedom of self expression and creative awareness. Through these processes, students develop an understanding of the artistic foundations necessary for performance, choreography, and teaching.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "DANC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27030,7 +27030,7 @@
         "description": "Introduction to elements of dance (time, space, energy) and to principles of composing movement for the solo performer. Develops a foundation of knowledge, skills, and processes for choreography appropriate to dance performance in any dance genre.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "DANC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27042,7 +27042,7 @@
         "description": "View and discuss dance and movement in silent film, MGM movie musicals, dance featured cinema, reality TV shows and dance choreographed specifically for the camera.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "DANC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27054,7 +27054,7 @@
         "description": "Designated for participation in the annual dance minor concert. All students must attend auditions held early in the semester. For those cast in a piece, class time will be rehearsal time. For those not cast, time will be spent as an assigned understudy or stage and tech crew.",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "DANC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27066,7 +27066,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Spring"],
-        "department": "",
+        "department": "DANC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27078,7 +27078,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Fall"],
-        "department": "",
+        "department": "DANC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27090,7 +27090,7 @@
         "description": "Designed for students who have a prior knowledge of basic ballet steps. Development of their technical skills in the ballet movement vocabulary through increasing speed, complexity, and duration of exercises. Development of stability and agility as a dancer emphasized.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "DANC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27102,7 +27102,7 @@
         "description": "Designed for students with prior dance experience. A continuation of DANC 203 with added emphasis on increased technical accuracy, extension of range and control, and clarity of performance for more complex dance sequences.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "DANC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27114,7 +27114,7 @@
         "description": "Designed for students with prior dance experience. A continuation of DANC 204 with added emphasis on increased technical accuracy, extension of range and control, and clarity of performance for more complex dance sequences.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "DANC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27126,7 +27126,7 @@
         "description": "Studies the development, history, communication style, dance form, and processes of creation through the urban expressive cultural phenomenon of hip-hop dance.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "DANC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27138,7 +27138,7 @@
         "description": "Designed for students with prior dance experience. An experiential historical overview of musical theatre dance styles from 20th century America to the present. Explores the roots and reinventions of vernacular dance in America as it revealed itself on the musical theatre stage.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "DANC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27150,7 +27150,7 @@
         "description": "Variable topics course from an array of cultural dance forms. Topics include dance forms of Africa, India, Hawaii, Brazil, among others.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "DANC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27162,7 +27162,7 @@
         "description": "Rehearsal and performance of repertoire from established choreographers. Development of dance performance skills through restaging, rehearsal, and informal and formal presentation of choreography.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "DANC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27174,7 +27174,7 @@
         "description": "Introduction to teaching dance in educational setting with emphasis on designing and delivering developmentally appropriate units of instruction and pedagogical analysis of effective teaching behaviors. Includes classroom management, teaching strategies, and performance-based assessment of pupil achievement.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "DANC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27186,7 +27186,7 @@
         "description": "Study of the body and movement as relevant to dance. Emphasis on anatomical and kinesiological principles, alignment, somatics, prevention and care of injuries, motor learning, and motor development with applications relevant to performance, choreography, and pedagogy.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "DANC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27198,7 +27198,7 @@
         "description": "Explore the fundamental technique, various styles, percussive rhythms and performance of tap dance. Through an in depth investigation of the basics, progressions, historical overview and development of the American dance form of tap, this course will demonstrate its evolution both as an art form and vehicle for individual and group expression. Previous dance experience is recommended but not required.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "DANC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27210,7 +27210,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Spring"],
-        "department": "",
+        "department": "DANC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27222,7 +27222,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "DANC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27234,7 +27234,7 @@
         "description": "Practical experience in an approved dance or dance-related setting. Each credit earned requires a minimum of 30 clock hours.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "DANC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27246,7 +27246,7 @@
         "description": "Interdisciplinary project that combines interest of student\u2019s major with the dance minor. Projects may include research, outreach, technology, or original choreographic works.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "DANC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27258,7 +27258,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "DANC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27270,7 +27270,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "DANC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27282,7 +27282,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "DISA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27294,7 +27294,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "DISA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27306,7 +27306,7 @@
         "description": "Overview of disaster science and management including an historical overview of disasters. Required for all students entering the MS program in Disaster Science and Management. Topics include anatomy of a disaster, government, non government and private sector actors, and policy and regulation.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "DISA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27318,7 +27318,7 @@
         "description": "Overview of international disasters, including impacts on development and a comparative analysis of how disasters are dealt with in different countries.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "DISA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27330,7 +27330,7 @@
         "description": "This course will focus on disaster recovery. We will consider a variety of topics that are critical in disaster recovery trajectories and examine them closely with respect to existing and evolving theory and with respect to transferring theory into application.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "DISA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27342,7 +27342,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "DISA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27354,7 +27354,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "DISA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27366,7 +27366,7 @@
         "description": "Focus on problems that arise before, during, and after emergencies and disasters. These include warnings response and risk perception, emergency response organization, developing Emergency Operations Centers, assessing and providing behavioral health needs, managing volunteers and NGOs, and the particular challenges of facilities.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "DISA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27378,7 +27378,7 @@
         "description": "Provides an understanding of the physical processes and effects of natural hazards with a focus on aspects that are critical to the study of disasters. Explores processes, measures, and impacts of hazards such as earthquakes, tornadoes, tsunamis, hurricanes, floods, droughts and landslide to identify areas prone to reduce potential for Disasters.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "DISA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27390,7 +27390,7 @@
         "description": "",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "DISA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27402,7 +27402,7 @@
         "description": "Internship in organization or agency responsible for emergency or environmental management. Objective is to become familiar with issues, policies and practices pertaining to disasters and complete a project under direct supervision of agency personnel while in the placement position. This class is a requirement for non-thesis MS students. The 120-hour internship requires a report.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "DISA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27414,7 +27414,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "DISA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27426,7 +27426,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "DISA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27438,7 +27438,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "DISA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27450,7 +27450,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "DISA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27462,7 +27462,7 @@
         "description": "This course focuses on preparing students in the disaster science and management program for the Disaster Science and Management PhD Qualifier. Develops students\u2019 ability to frame and conduct interdisciplinary analysis, based on sound knowledge of core themes, logic, and strong analytical methods. Encourages writing that requires balancing knowledge, methods, and expert judgment.",
         "credits": 1,
         "semester": ["Spring"],
-        "department": "",
+        "department": "DISA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27474,7 +27474,7 @@
         "description": "Research and readings in preparation of dissertation topic and/or qualifying examinations for doctoral students before admission to candidacy but after completion of all required course work.",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "DISA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27486,7 +27486,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "DISA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27498,7 +27498,7 @@
         "description": "Takes a nontechnical approach to basic economics. Applies economic conceptsto contemporary issues, problems and policies. Covers both macro and microtopics.",
         "credits": 3,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27510,7 +27510,7 @@
         "description": "Introduces supply and demand concepts with basic economic graphs. Examines models of perfect and imperfect competition and determinants of production price and quantity. Covers microeconomic issues such as the effect of government regulation and environmental problems.",
         "credits": 3,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27522,7 +27522,7 @@
         "description": "Provides teacher candidates with an understanding of the fundamental content and concepts embedded within the core social studies subjects of civics and economics as they relate to K-8 standards-based instruction. Focuses on developing an understanding of the content in the two subject areas and how that content might be taught effectively.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27534,7 +27534,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27546,7 +27546,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27558,7 +27558,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27570,7 +27570,7 @@
         "description": "Applies economic theory to business and managerial decision making. Includes analysis of consumer demand, theory of production and supply and the effects of different market structures and pricing strategies.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27582,7 +27582,7 @@
         "description": "Microeconomic theory of consumers, producers, and markets with special application to public policy issues and analysis.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27594,7 +27594,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27606,7 +27606,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27618,7 +27618,7 @@
         "description": "Price determination and income distribution in a market economy; the behavior of firms and industry under conditions of pure and imperfect competition.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27630,7 +27630,7 @@
         "description": "Uses calculus to study price determination and income distribution in a market economy; and the behavior of firms and industry under conditions of pure and imperfect competition.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27642,7 +27642,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall, Winter and Spring"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27654,7 +27654,7 @@
         "description": "Use calculus and economic tools to introduce the theoretical analysis of the aggregate economy. Topics include aggregation and measurement, business cycle measurement, economic welfare theorems, search and unemployment, economic growth, intertemporal decisions of consumers and firms, credit market imperfections, and business cycle models.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27666,7 +27666,7 @@
         "description": "This course provides an introduction to econometrics, with a focus on application and practice. The main objective of this course is to teach students to use and interpret a basic set of quantitative methods frequently employed in empirical analysis of economic phenomena. Applications of these methods will be emphasized throughout the course. Course topics include a review of estimation and hypothesis testing, linear regression and several extensions to linear regression.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27678,7 +27678,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27690,7 +27690,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27702,7 +27702,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27714,7 +27714,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27726,7 +27726,7 @@
         "description": "Examination of the challenges facing the economies of Latin America, including financial crises, inflation, labor markets, social protection, and trade. The role of institutions and public policy in specific Latin American economies is studied.",
         "credits": 3,
         "semester": ["Winter"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27738,7 +27738,7 @@
         "description": "Uses economic theory to examine the operation and efficiency of energy markets. Topics include regulation, energy efficiency and emission control, and public policies affecting energy markets.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27750,7 +27750,7 @@
         "description": "Seniors in the University\u2019s Milford Professional Development School are required to take this course as part of their internship experience. Provides future elementary teachers enough economics to feel comfortable teaching the required economic standards for grades K-4. Literature selections and lesson activities reinforce the economic concepts.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27762,7 +27762,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27774,7 +27774,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall, Winter and Spring"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27786,7 +27786,7 @@
         "description": "Analysis of selected topics in International Economic, including international trade, international finance and the analysis of non-U.S. economies.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27798,7 +27798,7 @@
         "description": "Analyzes benefits and costs of environmental policy; reviews valuation techniques; assesses efficiency of decentralized, regulatory, tax and marketable permit policies to protect the environment. Uses graphical (non-calculus) economic analysis.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27810,7 +27810,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27822,7 +27822,7 @@
         "description": "Requires completion of at least 120 hours of an economics-related internship with verification by the hiring company. Semesterterpaper relating the real-world duties and experiences of the internship to principles learned in standard economics courses also required.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27834,7 +27834,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27846,7 +27846,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27858,7 +27858,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27870,7 +27870,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27882,7 +27882,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27894,7 +27894,7 @@
         "description": "Investigates impact of costly information on behavior of individuals and markets. Topics include decision making under risk and uncertainty, insurance, consumer-employer search behavior, product liability, industrial safety, futures markets and problems of contract enforcement.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27906,7 +27906,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27918,7 +27918,7 @@
         "description": "Utilizes microeconomic theory to analyze and evaluate the operation of financial markets. Topics include portfolio allocation under certainty and uncertainty, asymmetric information, market efficiency, risk allocation, and behavioral finance.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27930,7 +27930,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27942,7 +27942,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27954,7 +27954,7 @@
         "description": "Analysis of modern theoretical explanations of the economic downturn of 1929-1933, with implications for understanding current economic problems. Theories considered include those based on monetary contractions, consumption and investment instability and international disturbances.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27966,7 +27966,7 @@
         "description": "This course includes advanced topics in econometrics and policy evaluation. The course focuses on causal reasoning: evaluating the causal effects of policies or other economic variables on outcomes of interest. It will demonstrate how causal reasoning and econometrics are applied in microeconomics research. Econometric techniques will be put into practice through data analysis using statistical software.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27978,7 +27978,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -27990,7 +27990,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28002,7 +28002,7 @@
         "description": "Continuation of intermediate macroeconomic theory, including recent developments in the macroeconomic theory.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28014,7 +28014,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28026,7 +28026,7 @@
         "description": "The course analyzes a variety of important economic policies affecting the macro economy. Topics may change from semester to semester. Past topics included assessing policies for: (1) preventing and combating recessions; (2) dealing with international trade, offshoring of jobs, and immigration; (3) reducing global warming; (4) reducing gender disparities in the economy; (5) comparing your generation\u2019s standard of living with your parents\u2019 generation; (6) reducing inequality.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28038,7 +28038,7 @@
         "description": "Investigates current topics in economics, such as healthcare reform, privatizing social security, international trade restrictions and energy policy.  Recent books and journal articles serve as basis for investigating these topics.  Student papers and class discussion form the essences of class sessions.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28050,7 +28050,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28062,7 +28062,7 @@
         "description": "Applies macroeconomic theory in an international context. Uses historical cases to analyze policy making under fixed and flexible exchange rates. Develops alternative models of exchange rate dynamics. Discusses problems and proposed reforms of the international monetary system.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28074,7 +28074,7 @@
         "description": "Review of benefit-cost analysis and welfare theory; techniques for evaluating environmental amenities; the evolution of environmental legislation; and review of case studies of environmental conflicts.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28086,7 +28086,7 @@
         "description": "Traditional microeconomic theory and game theory to analyze cooperative and non-cooperative strategic behavior of firms. Topics include predatory pricing, price discrimination, limit pricing, collusion, mergers, vertical restrictions, franchise arrangements, technological change, and the role of prices in clearing markets.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28098,7 +28098,7 @@
         "description": "Government policies affect business activity both directly and indirectly. This course examines the economic implications of various market regulation mechanisms for firms, consumers, and overall social welfare. Recent developments in antitrust law, environmental governance, and structural industry changes are discussed. Relevant case studies are incorporated.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28110,7 +28110,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28122,7 +28122,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28134,7 +28134,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28146,7 +28146,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28158,7 +28158,7 @@
         "description": "Provides students with experience in the application of mathematics in economics. Applications may vary from semester to semester.  Mathematical topics may include applications of ordinary and partial differential equations, game theory, linear programming, dynamic programming, stochastic programming and calculus of variations.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28170,7 +28170,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28182,7 +28182,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28194,7 +28194,7 @@
         "description": "Business-oriented overview of microeconomic and macroeconomic theory. Approximately two-thirds of the course will focus on microeconomics and one-third on macroeconomics.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28206,7 +28206,7 @@
         "description": "Covers the economics of how markets operate including basics of supply, demand, market failure and the role of government in the economy. Includes methods, strategies, and lessons for the delivery of this content to students in grades 7-12.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28218,7 +28218,7 @@
         "description": "Applies and modifies statistical techniques to economic data; presents the essentials of econometric theory.",
         "credits": 3,
         "semester": ["Verify Offering with Department"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28230,7 +28230,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28242,7 +28242,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28254,7 +28254,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28266,7 +28266,7 @@
         "description": "This course is an overview of Benefit-Cost Analysis using the principles of welfare economics. You will learn those underlying principles and the tools required to conducted a sound Benefit-Cost Analysis. We emphasize principles of good analysis covering measurement, uncertainty, discounting, intangibles, equity, and more.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28278,7 +28278,7 @@
         "description": "Studies supply and demand, theory of price determination in perfectly and imperfectly competitive markets and role of government in the economy. Emphasizes applications such as industrial regulation antitrust policy, the environment and taxation.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28290,7 +28290,7 @@
         "description": "Includes national income accounting, theory of income determination, monetary and fiscal policies, budget deficits and surpluses, and national debt.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28302,7 +28302,7 @@
         "description": "Curriculum applications incorporating proper treatment of economic concepts at elementary and secondary levels. Strategies include techniques of motivation, training and reinforcement.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28314,7 +28314,7 @@
         "description": "Study of the allocation of natural resources, especially marine and coastal zone resources, in modern economics. Application of economic theory to the problems of misallocations and the means of correction, under both free and planned markets.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28326,7 +28326,7 @@
         "description": "Study of the choice of policies to protect the environment, including land, air and water resources. Theory of market failure and externalities, use of economic incentives in policy design, valuation of environmental resources and examination of inefficiencies in existing U.S. environmental policies.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28338,7 +28338,7 @@
         "description": "Research and analysis of public policy issues. Projects must demonstrate applicability to economic education.",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28350,7 +28350,7 @@
         "description": "Studies international trade, free trade vs. protectionism, cartels, balance of trade and payments, role of the financial sector, and monetary policy.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28362,7 +28362,7 @@
         "description": "Emphasizes contemporary economic issues, problems and controversies.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28374,7 +28374,7 @@
         "description": "Covers foundations of microeconomics with emphasis on consumer and producer theory and market equilibrium. Extends the analysis to incorporate uncertainty. Introduces non-cooperative games in static and dynamic settings with full information, as well as general equilibrium theory and welfare analysis.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28386,7 +28386,7 @@
         "description": "Examines the role of dynamic general equilibrium models in macroeconomic theory. Topics include capital accumulation, overlapping generations, economic growth, business cycle, unemployment, inflation, macroeconomic impact of fiscal and monetary policies. Emphasis is placed on tools such as dynamic programming, difference equations, and Markov chains.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28398,7 +28398,7 @@
         "description": "Emphasizes models of strategic behavior, particularly in settings with imperfect information, such as adverse selection, screening and signaling, principal-agent models, mechanism design and auctions. Extends general equilibrium models to include uncertainty and introduces social choice theory. This course is intended for doctoral students.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28410,7 +28410,7 @@
         "description": "Topics include capital accumulation and economic growth, unemployment, inflation, financial markets, the open economy and international monetary economics, economic fluctuations, stabilization policy, fiscal policy, monetary and banking policy. This course is intended for doctoral students.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28422,7 +28422,7 @@
         "description": "Survey of theory, policy and practice of the field of Economic Education, including human capital, educational financing, and production of education.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28434,7 +28434,7 @@
         "description": "Statistical basis for econometric analysis, which includes general linear model, discrete and continuous distributions, methods of estimation, properties of estimators, nested and non-nested hypothesis testing, asymptotic theory. All topics will be illustrated using the General Linear Model.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28446,7 +28446,7 @@
         "description": "Extensions of the General linear model, including heteroskedasticity, autocorrelation, identification and estimation of simultaneous equations, and error in measurement.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28458,7 +28458,7 @@
         "description": "Econometric techniques used in applied microeconomic analysis. Cross-section techniques, limited dependent variables, panel data analysis. Additional topics may also be covered.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28470,7 +28470,7 @@
         "description": "Introduction to time-series methods, including modeling multivariate systems. Development of methods to test and insure goodness-of-fit of time-series models. Additional topics may also be covered. Intended for doctoral students.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28482,7 +28482,7 @@
         "description": "Teaches fundamental numeric methods, including rootfinding, optimization, function approximation, and numeric integration. Applies these methods to economic models of intertemporal choice.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28494,7 +28494,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28506,7 +28506,7 @@
         "description": "Covers the basis of exchange, trade policy, international factor movements and integration. Applies to both historical and current economic development.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28518,7 +28518,7 @@
         "description": "Analyzes topics of current interest in developing countries, such as labor markets, population, human capital and the distribution of income.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28530,7 +28530,7 @@
         "description": "Covers advanced topics in development economics using advanced theoretical and empirical tools. Possible topics include anti-poverty programs in rich and poor countries, migration, child labor, human capital investment, credit and insurance markets, gender, and the design of labor contracts.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28542,7 +28542,7 @@
         "description": "Designed to help PhD students further develop the writing and research skills necessary to complete a successful dissertation. Goal of the class is a completed dissertation proposal. Students will normally register for this course during their third year in the PhD program after completion of all required theory and econometric classes.",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28554,7 +28554,7 @@
         "description": "Compares the role of money in various macroeconomic models: transactions demand for money, long Semestertereffects of inflation and government deficit finance decisions in intertemporal models, capital theory and the pricing of financial securities as well as theories of tSemestermesterstructure of interest rates.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28566,7 +28566,7 @@
         "description": "Advanced topics in International Macroeconomics, including arbitrage and pricing relationships in foreign exchange markets, exchange rate forecasting, capital and trade flows as long run determinants of exchange rates, debt sustainability, fixed versus flexible exchange rate regimes, and currency unions and currency crises.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28578,7 +28578,7 @@
         "description": "Uses microeconomic theory and game theory to analyze the strategic interaction among firms. Topics include vertical and horizontal integration, vertical restrictions, cartels and collusion, pricing practices, entry deterrence, diffusion of technology, product differentiation, and government regulation of industry.",
         "credits": 3,
         "semester": ["Verify Offering with Department."],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28590,7 +28590,7 @@
         "description": "Advanced topics including a wide range of issues in Industrial Organization and Regulation, such as: the regulation of specific industries and industrial practices, property rights, contracts, congestion pricing, the relative efficiencies of alternative modes of transport, market failures, and intermediation versus direct financing.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28602,7 +28602,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28614,7 +28614,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28626,7 +28626,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28638,7 +28638,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28650,7 +28650,7 @@
         "description": "Households consume, save, borrow, and otherwise make many financial choices.  Neoclassical and behavioral models of these choices will be the subject of this course.  These models necessarily incorporate diverse features, including realistic lifecycle income and household composition dynamics; preferences with respect to risk, time, types of consumption, and past experience; expectations, which are difficult to form (especially about the future), and the smorgasbord of financial choices available around the modern world, including mortgages, credit cards, personal loans, payday loans, durable/installment loans, mobile payments, microfinance products, insurance against various risks, and investment through conservative government bonds and risky business equity.  Financial well-being, machine learning models, and neuroeconomics will also be discussed.  We will focus on developing tools for solving, estimating, and inventing models.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28662,7 +28662,7 @@
         "description": "In this course, students are given a taste of the types of empirical research done under the \u201chousehold finance\u201d umbrella. Students learn how to apply modern econometric methods to empirical problems in household finance with primary focus on identification of causal effects of interest. The course builds a strong foundation of modern methods including instrumental variables, differences-in-differences, regression discontinuity, dynamic treatment effects and field experiments. Examples of covered topics: the impact of regulation on consumer credit and consumption smoothing, causes and consequence of the Great Recession, the impact of fiscal and monetary policy on decision making of the households. Students are strongly encouraged to read outside of the syllabus and to feel free to suggest topics and papers for discussion.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28674,7 +28674,7 @@
         "description": "Covers topics in labor economics, including labor demand, labor supply, investment in human capital, wage determination, and labor market discrimination. Applications to public policy issues will be stressed throughout.",
         "credits": 3,
         "semester": ["Verify Offering with Depart"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28686,7 +28686,7 @@
         "description": "This course is designed to give students the foundation to produce independent research in labor economics. By the end of this course, students should be well-versed in the basics of labor demand and the econometric tools used in frontier labor economic research. In addition, students will be introduced to human capital theory, the concept of skill-biased technological change, the role of monopsony in the labor market, the role of the firm in the labor market and rent-sharing, research on the effects of the minimum wage, equalizing differentials, the impacts of recessions on workers, and the effect of immigration on the U.S. labor market. This course is designed to be complementary to ECON 880.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28698,7 +28698,7 @@
         "description": "",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28710,7 +28710,7 @@
         "description": "Research and readings in preparation of dissertation topic and/or qualifying examinations for doctoral students before admission to candidacy but after completion of all required course work.",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -28722,7 +28722,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "ECON",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
