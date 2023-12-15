@@ -158,6 +158,11 @@ function App(): JSX.Element {
                     <MulitCourseplan
                         Courseplans={data.Courseplans}
                         setCurrentCourseEdit={setCurrentCourseEdit}
+                        setCurrentCourseplanEdit={(courseplan: CoursePlan) => {
+                            setEditCoursePlan(courseplan);
+                            setEditCorseplan(false);
+                        }}
+                        setCoursePlan={setCorseplans}
                     />
                 ) : (
                     <CoureseplansBoot

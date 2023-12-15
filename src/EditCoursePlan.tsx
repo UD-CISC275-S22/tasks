@@ -9,6 +9,8 @@ import "./App.css";
 //import { ClearCourseModal } from "./ClearCourseModal";
 //import { AddCourseModal } from "./AddCourseModal";
 import {
+    UpdateCoureplanYear,
+    clearallsemester,
     DeleteCourseFromSemester,
     UpdateCoureplanYear,
     deleteMultipleCoursesFromSemester,
@@ -184,16 +186,31 @@ function Year({
                 <tbody>
                     <tr>
                         {year.fall && (
-                            <th onClick={() => selectedSemester(year.fall!)}>
+                            <th>
                                 Fall
                                 <ButtonGroup style={{ display: "flex" }}>
                                     <Button
+                                        variant="success"
                                         onClick={() =>
                                             selectedSemester(year.fall!)
                                         }
                                         className="float-end"
                                     >
                                         AddQueue
+                                    </Button>
+                                    <Button
+                                        onClick={() =>
+                                            updateYear({
+                                                ...year,
+                                                fall: {
+                                                    ...year.fall,
+                                                    courses: []
+                                                } as SemesterI
+                                            })
+                                        }
+                                        className="float-end"
+                                    >
+                                        Clear semester
                                     </Button>
                                     <Button
                                         variant="danger"
@@ -214,16 +231,31 @@ function Year({
                             </th>
                         )}
                         {year.winter && (
-                            <th onClick={() => selectedSemester(year.winter!)}>
+                            <th>
                                 winter
                                 <ButtonGroup style={{ display: "flex" }}>
                                     <Button
+                                        variant="success"
                                         onClick={() =>
                                             selectedSemester(year.winter!)
                                         }
                                         className="float-end"
                                     >
                                         AddQueue
+                                    </Button>
+                                    <Button
+                                        onClick={() =>
+                                            updateYear({
+                                                ...year,
+                                                winter: {
+                                                    ...year.winter,
+                                                    courses: []
+                                                } as SemesterI
+                                            })
+                                        }
+                                        className="float-end"
+                                    >
+                                        Clear semester
                                     </Button>
                                     <Button
                                         variant="danger"
@@ -244,16 +276,31 @@ function Year({
                             </th>
                         )}
                         {year.spring && (
-                            <th onClick={() => selectedSemester(year.spring!)}>
+                            <th>
                                 Spring
                                 <ButtonGroup style={{ display: "flex" }}>
                                     <Button
+                                        variant="success"
                                         onClick={() =>
                                             selectedSemester(year.spring!)
                                         }
                                         className="float-end"
                                     >
                                         AddQueue
+                                    </Button>
+                                    <Button
+                                        onClick={() =>
+                                            updateYear({
+                                                ...year,
+                                                spring: {
+                                                    ...year.spring,
+                                                    courses: []
+                                                } as SemesterI
+                                            })
+                                        }
+                                        className="float-end"
+                                    >
+                                        Clear semester
                                     </Button>
                                     <Button
                                         variant="danger"
@@ -278,6 +325,7 @@ function Year({
                                 Summer
                                 <ButtonGroup style={{ display: "flex" }}>
                                     <Button
+                                        variant="success"
                                         onClick={() =>
                                             selectedSemester(year.summer!)
                                         }
@@ -285,6 +333,18 @@ function Year({
                                     >
                                         AddQueue
                                     </Button>
+                                    <Button
+                                        onClick={() =>
+                                            updateYear({
+                                                ...year,
+                                                summer: {
+                                                    ...year.summer,
+                                                    courses: []
+                                                } as SemesterI
+                                            })
+                                        }
+                                        className="float-end"
+                                    ></Button>
                                     <Button
                                         variant="danger"
                                         className="float-end"
@@ -387,6 +447,14 @@ export function CourseplanClick({
 
     return (
         <div>
+            <h2>In progress Course Plan</h2>
+            <Button
+                variant="danger"
+                onClick={() => UpdateCourseplan(clearallsemester(Courseplan))}
+                className="float-end"
+            >
+                Clear all Semester
+            </Button>
             {Courseplan.years.map((curyear) => (
                 <Year
                     year={curyear}

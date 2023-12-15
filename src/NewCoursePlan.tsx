@@ -129,6 +129,18 @@ export function CoureseplansBoot({
 
     return (
         <div>
+            <Form.Group controlId="search" as={Row}>
+                <Col>
+                    <Form.Label> Name:</Form.Label>
+                    <FormControl
+                        className="float-end"
+                        type="text"
+                        placeholder="Untittled"
+                        onChange={nameInput}
+                    />
+                </Col>
+            </Form.Group>
+            <Button className={"float-end button"} onClick={Save}>
             <Button onClick={Save} className="save-button">
                 Save
             </Button>
@@ -164,6 +176,7 @@ export function CoureseplansBoot({
                                     <th>Course Code</th>
                                     <th>Name</th>
                                     <th>Description</th>
+                                    <th>Pre-Reqs</th>
                                     <th>Credits</th>
                                     <th>Action</th>
                                 </tr>
@@ -179,6 +192,7 @@ export function CoureseplansBoot({
                                                     <td>{course.code}</td>
                                                     <td>{course.name}</td>
                                                     <td>{course.descr}</td>
+                                                    <td>{course.preReq}</td>
                                                     <td>{course.credits}</td>
                                                     <td>
                                                         <Button

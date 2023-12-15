@@ -64,7 +64,7 @@ export const EditCourseModal = ({
                                 e: React.ChangeEvent<HTMLInputElement>
                             ) => setName(e.target.value)}
                         ></Form.Control>
-                        <Form.Label>Tcker: </Form.Label>
+                        <Form.Label>Ticker: </Form.Label>
                         <Form.Control
                             value={ticker}
                             onChange={(
@@ -77,6 +77,16 @@ export const EditCourseModal = ({
                             onChange={(
                                 e: React.ChangeEvent<HTMLInputElement>
                             ) => setCredits(Number(e.target.value))}
+                        ></Form.Control>
+                        <Form.Label>
+                            prereq:(Use codes seperated by &quot;and&quot; or
+                            &quot;or&quot;){" "}
+                        </Form.Label>
+                        <Form.Control
+                            value={[prereq]}
+                            onChange={(
+                                e: React.ChangeEvent<HTMLInputElement>
+                            ) => setPrereq(e.target.value)}
                         ></Form.Control>
                     </Form.Group>
                 </Modal.Body>
