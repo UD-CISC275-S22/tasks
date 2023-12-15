@@ -64,6 +64,9 @@ let Theory_Plan = Theory();
 let High_Plan = High();
 let Bio_Plan = Bio();
 
+//csv import libraries - Malika
+//run npm i papaparse and npm install --save-dev @types/papaparse
+import Papa from "papaparse";
 /* ----------------------------------------------------------------------------------------------------- */
 /*EVERYONE PLS READ THIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 These are the changes I made to make the degree requirements:
@@ -567,13 +570,21 @@ export function ViewSemester(): JSX.Element {
         }
     }
 
-    function importPlans(text: string) {
+    function importPlans(data: string) {
         // try {
         //     const parsedData = JSON.parse(text);
         //     setPlan(parsedData);
         // } catch (error) {
         //     console.error("Error parsing JSON:", error);
         // }
+        Papa.parse(data, {
+            header: true,
+            dynamicTyping: true,
+            complete: function (results) {
+                setPlan(results.data);
+                // console.log(results.data);
+            }
+        });
     }
 
     const allPlans = [plan1, plan2, plan3, plan4];
