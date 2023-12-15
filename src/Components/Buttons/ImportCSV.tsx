@@ -1,70 +1,84 @@
-import React, { useRef } from "react";
-import CSVReader, { CSVReaderRef } from "react-csv-reader";
-import { parse, ParseError } from "csv-parse";
-import { Button } from "react-bootstrap";
-import { Plan } from "../../Interfaces/plan";
+import React, { useState, ChangeEvent } from "react";
+import { Button, Modal } from "react-bootstrap";
 
-type CSVData = string[];
+interface ImportProps {
+    show: boolean;
+    showImportfileModal: () => void;
+    handleClose: () => void;
+    importPlans: (data: string) => void;
+}
 
 export const ImportCSV = ({
-    plans,
-    handleImport
-}: {
-    plans: Plan[];
-    handleImport: (data: Plan[]) => void;
-}) => {
-    const csvReaderRef = useRef<CSVReaderRef>(null);
+    show,
+    showImportfileModal,
+    handleClose,
+    importPlans
+}: ImportProps) => {
+    const [selectedFile, setSelectedFile] = useState<File | null>(null);
 
-    const handleForce = (data: CSVData) => {
-        const headers = [
-            "title",
-            "concentration",
-            "id",
-            "semesters",
-            "credits"
-        ];
-
-        parse(
-            data.join("\n"),
-            { delimiter: ",", columns: headers },
-            (err: ParseError | undefined, result: Plan[]) => {
-                if (err) {
-                    console.error("Error parsing CSV:", err);
-                    return;
-                }
-                // 'result' contains the parsed CSV data
-                handleImport(result);
-            }
-        );
+    const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
+        const file = event.target.files && event.target.files[0];
+        if (file) {
+            setSelectedFile(file);
+        }
     };
 
-    const openFileBrowser = () => {
-        if (csvReaderRef.current) {
-            csvReaderRef.current.openFileBrowser();
+    const handleImport = () => {
+        if (selectedFile) {
+            const reader = new FileReader();
+            reader.onload = (event) => {
+                if (event.target) {
+                    const fileData = event.target.result as string;
+                    handleClose();
+                    importPlans(fileData);
+                }
+            };
+            reader.readAsText(selectedFile);
         }
     };
 
     return (
         <>
-            <CSVReader
-                ref={csvReaderRef}
-                onFileLoaded={handleForce}
-                onError={(error) => console.log(error)}
-            />
-            <Button
-                style={{
-                    backgroundColor: "#EF5B5B",
-                    borderColor: "#922424",
-                    marginLeft: "5px",
-                    marginRight: "5px",
-                    marginTop: "5px",
-                    marginBottom: "5px",
-                    color: "black"
-                }}
-                onClick={openFileBrowser}
-            >
-                Import CSV
-            </Button>
+            <div>
+                <Button
+                    onClick={showImportfileModal}
+                    style={{
+                        backgroundColor: "#99B2DD",
+                        borderColor: "#4D7298",
+                        marginLeft: "5px",
+                        marginRight: "5px",
+                        marginTop: "5px",
+                        marginBottom: "5px",
+                        color: "black"
+                    }}
+                >
+                    Import CSV
+                </Button>
+            </div>
+            <div>
+                <Modal show={show} onHide={handleClose}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Import File</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <input type="file" onChange={handleFileChange} />
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={handleClose}>
+                            Close
+                        </Button>
+                        <Button
+                            id="dropdown8"
+                            onClick={() => {
+                                handleImport();
+                                handleClose();
+                            }}
+                        >
+                            Import
+                        </Button>
+                    </Modal.Footer>
+                </Modal>
+            </div>
         </>
     );
 };

@@ -38,6 +38,7 @@ import { ClearAllSemesters } from "./Buttons/ClearAllSemesters";
 import { SavePlanInto } from "./Buttons/SavePlanInto";
 import { LoadPlan } from "./Buttons/LoadPlan";
 import { PickAPlan } from "./Buttons/PickAPlan";
+import { ImportCSV } from "./Buttons/ImportCSV";
 import { RequiredClasses } from "./Buttons/requiredClasses";
 import CourseEdit from "./CourseEdit";
 import {
@@ -136,6 +137,12 @@ export function ViewSemester(): JSX.Element {
         "courses",
         courseList
     );
+
+    //states for importing plans
+    const [showImportModal, setShowImportModal] = useState(false);
+    const showImportfileModal = () => setShowImportModal(true);
+    const closeImportModal = () => setShowImportModal(false);
+
     //let COURSES_LIST = courses as Course[];
     //NOTE FOR MICHAEL: Here is where you can add your add courses and remove courses functions
     //Here is where you can add your add courses and remove courses functions
@@ -559,6 +566,15 @@ export function ViewSemester(): JSX.Element {
         }
     }
 
+    function importPlans(text: string) {
+        try {
+            const parsedData = JSON.parse(text);
+            setPlan(parsedData);
+        } catch (error) {
+            console.error("Error parsing JSON:", error);
+        }
+    }
+
     //actual return for the tsx file to App.tsx
     return (
         <div style={{ backgroundColor: "#0f234c" }}>
@@ -578,6 +594,12 @@ export function ViewSemester(): JSX.Element {
                 <SavePlanInto savePlan={savePlan}></SavePlanInto>
                 <LoadPlan loadPlan={loadPlan}></LoadPlan>
                 <PickAPlan handlePlans={handlePlans}></PickAPlan>
+                <ImportCSV
+                    show={showImportModal}
+                    showImportfileModal={showImportfileModal}
+                    handleClose={closeImportModal}
+                    importPlans={importPlans}
+                ></ImportCSV>
             </div>
             <hr style={{ backgroundColor: "#0f234c" }}></hr>
             {
