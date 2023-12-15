@@ -37746,7 +37746,7 @@
         "description": "Broad overview of environmental science and studies. Introduction to the science and policy issues associated with environmental work, explore specific perspectives and approaches.  Case studies are used to highlight current pressing issues and work ongoing at the university.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ENSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37758,7 +37758,7 @@
         "description": "Exploration of the field of environmental science, ranging in topics from changes in population to climate change, with a focus on the various components of the environment.  For each topic, students will gain background knowledge on the topic, and then explore deeper through case studies.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37770,7 +37770,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37782,7 +37782,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "ENSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37794,7 +37794,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37806,7 +37806,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "ENSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37818,7 +37818,7 @@
         "description": "Integrative framework necessary to understand the systems approach to environmental science and its intersection with environmental policy and management. Introduction to systems theory within environmental science and its relevance to environmental policy.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37830,7 +37830,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "ENSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37842,7 +37842,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "ENSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37854,7 +37854,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37866,7 +37866,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37878,7 +37878,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37890,7 +37890,7 @@
         "description": "Introduction to field measurement techniques and field analysis during a travel and field learning experience to an alpine area. Field mapping, observation, use of handheld instrumentation, and field estimation methods.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ENSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37902,7 +37902,7 @@
         "description": "Discussion of the history and state of environmental science as through detailed exploration of a current environmental problem. Survey of research topics and methodologies in the current scientific literature related to the topic of interest.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ENSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37914,7 +37914,7 @@
         "description": "Internship experience that integrates environmental science and/or studies learning goals in an experiential environment. To satisfy the Field Experience requirement, the internship MUST include data collection, analysis and interpretation and weekly reports/logs that include student reflection on the internship experience. Internship must be approved by the environmental science and studies program and include oversight by a faculty member.",
         "credits": 2,
         "semester": ["Fall, Summer and Spring"],
-        "department": "",
+        "department": "ENSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37926,7 +37926,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "ENSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37938,7 +37938,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "ENSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37950,7 +37950,7 @@
         "description": "Constitutes a directed research experience for honors students. Topics of research will be in the realm of environmental science and/or studies, depending on the interests and expertise of the student and supervising faculty member.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37962,7 +37962,7 @@
         "description": "Introduction to statistical methods for analyzing environmental data. Relevant probability and sampling theory is introduced, as well as procedures for summarizing, modeling and estimating and making inferences from environmental data. A computer-based statistical package is used to explore behavior of different statistical techniques with a variety of environmental data sets.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37974,7 +37974,7 @@
         "description": "Broad overview of environmental science and studies. Introduction to the science and policy issues associated with environmental work, explore specific perspectives and approaches. Case studies are used to highlight current pressing issues and work ongoing at the university.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENVR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37986,7 +37986,7 @@
         "description": "Integrative framework necessary to understand the systems approach to environmental science and its intersection with environmental policy and management. Introduction to systems theory within environmental science and its relevance to environmental policy.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENVR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37998,7 +37998,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENVR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38010,7 +38010,7 @@
         "description": "Internship experience that integrates environmental science and/or studies learning goals in an experiential environment. To satisfy the Field Experience requirement, the internship MUST include data collection, analysis and interpretation and weekly reports/logs that include student reflection on the internship experience. Internship must be approved by the environmental science and studies program and include oversight by a faculty member.",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "ENVR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38022,7 +38022,7 @@
         "description": "Constitutes a directed research experience for honors students. Topics of research will be in the realm of environmental science and/or studies, depending on the interests and expertise of the student and supervising faculty member.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENVR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38034,7 +38034,7 @@
         "description": "How can fiction help us understand and apply science? In this interdisciplinary class, we\u2019ll use climate fiction, climate change science, journalism reports, movies, and research on science communication to understand the role narratives can play in creating visions of the future and motivating us to take action. Students will learn to integrate across disciplines and explore how narratives in fiction and non-fiction writing shape public perceptions of scientific research.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38046,7 +38046,7 @@
         "description": "Our Earth\u2019s physical geography derives from dynamic interactions among the four environmental spheres - the atmosphere (air), hydrosphere (water), biosphere (life), and landforms (rocks and soils). Explores the physical elements of our environment, the processes involved in their development, their distribution, and their interrelationships. Natural processes and modification by humans serve as the central focus, as well as the emphasizing the specialized geographic tools used to study our environment.",
         "credits": 3,
         "semester": ["Fall, Winter and Spring"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38058,7 +38058,7 @@
         "description": "Examination of the spatial distribution of human activities worldwide. Particular attention is given to those factors and processes that have led to spatial inequality and locational conflict from the international scale to the neighborhood scale.",
         "credits": 3,
         "semester": ["Fall, Winter and Spring"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38070,7 +38070,7 @@
         "description": "Explores the nature of human-environment interactions and examines how nature-society interactions evolve and change over time. These interactions are viewed from different cultures and regional perspectives.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38082,7 +38082,7 @@
         "description": "Introduction to processes responsible for the development, modification, distribution and variety of landforms and soils. Implications for human activities. Analysis of topographic maps and air photo interpretation. Together GEOG 101 and GEOG 106 form a comprehensive introduction to physical geography and its tools.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38094,7 +38094,7 @@
         "description": "Laboratory investigation of processes responsible for creating and modifying our dynamic physical environment.  Lab offers interpretation of maps, examination of environmental data, understanding the development of landforms, and interpretation of maps and imagery (aerial and satellite).",
         "credits": 1,
         "semester": ["Fall"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38106,7 +38106,7 @@
         "description": "Introduction to the geographic regions of the world and the changing relations between regions. Emphasis is on environmental, economic, and political geographic relationships between industrial and developing nations.",
         "credits": 3,
         "semester": ["Fall, Summer and Spring"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38118,7 +38118,7 @@
         "description": "Introduction to those physical and biological processes that shape our climatic environment. Important themes include the exchanges of energy and mass between the atmosphere and both vegetation and built environments; and the influence of climate on humans and humans on climate.",
         "credits": 4,
         "semester": ["Spring"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38130,7 +38130,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38142,7 +38142,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38154,7 +38154,7 @@
         "description": "Introductory study of people, landscapes and cultures through time. Emphasis is on culture, ethics and aesthetics as contexts for human perceptions and the creation of varied human habitats.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38166,7 +38166,7 @@
         "description": "Understanding climate and climate change is important for everyone.  Explores climate change and its impacts at local, regional, and global levels.  Policy and decision making, as well as adaptation and mitigation will be discussed with a focus on current events.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38178,7 +38178,7 @@
         "description": "Analysis of the atmosphere, weather elements, air masses, fronts and storms. Principles of weather forecasting, especially as it relates to severe weather.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38190,7 +38190,7 @@
         "description": "Meteorology lab will introduce students to basic concepts in meteorology through the completion of experiments and mapping analysis exercises.",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38202,7 +38202,7 @@
         "description": "Racism is a hot-button issue globally. Although thoroughly debunked and are more widely condemned than ever, it nevertheless continues to surface in government policies, popular representations, and brutal acts of violence. What is it that makes racism so intractable? This course works to answer that question by analyzing racism as a problem that\u2019s deeply embedded in Western societies, albeit similarly prevalent in many non-Western countries. We\u2019ll also look at how racism connects with other social categories such as Indigeneity, gender, sexuality, disability, religion and class. And in addition to considering how racism has operated to oppress, exclude and scapegoat, we\u2019ll also be attentive to how marginalized groups have fought back.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38214,7 +38214,7 @@
         "description": "Physical, historical and cultural geography of Latin America.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38226,7 +38226,7 @@
         "description": "Introduces the physical, economic, cultural and political geography of China. Particular emphasis is placed on the diversity of physical environments, cultures, and economic activity within China.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38238,7 +38238,7 @@
         "description": "There is no greater challenge facing society than climate change. Coastal landscapes are disappearing, once bountiful farmlands are suffering drought, ocean currents and air streams are being altered, and diseases are spreading beyond normal observed extents. This class provides a foundation for addressing these issues.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38250,7 +38250,7 @@
         "description": "Provides an introduction to the past, present, and future impacts of humans on Earth. Topics include anthropogenic impacts on vegetation, animals, soils, water, landforms, and the atmosphere, and possible future impacts as a result of global change. Particular attention is paid to the interconnections among environmental systems and the influence of human activities.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38262,7 +38262,7 @@
         "description": "Physical, social and economic problems involved in integrating resource management and maintaining environmental quality.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38274,7 +38274,7 @@
         "description": "Introduces concepts of environmental, economic, and social sustainability and synergies and tradeoffs in the context of food systems; Explores the importance of food systems as both a challenge to and solution for meeting the UN\u2019s Sustainable Development Goals for year 2030.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38286,7 +38286,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38298,7 +38298,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38310,7 +38310,7 @@
         "description": "A survey of computational, statistical, and graphical techniques used in scientific data analysis with particular emphasis on the special nature of geographic and spatial data. Includes scripting language programming.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38322,7 +38322,7 @@
         "description": "Explores the fundamental connections between geographic inquiry and methods used when conducting research and data analysis in human geography.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38334,7 +38334,7 @@
         "description": "Environments, cultures, utilization of resources, problems of development and future opportunities in central and western European countries. Field trips to see geographic features (alpine landscapes) specific to Austria.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38346,7 +38346,7 @@
         "description": "Some of the socio-economic, political, historical and cultural factors that have created and reinforced distinctively separate spaces for diverse groups of people in the United States are examined. Using films, novels, academic articles, media accounts, and census information about their own hometowns, students will examine attitudes and actions that socially and spatially relegate ethnic and socio-economic minorities to less-than-privileged places. Besides looking at the role of race/ethnicity in the creation of a distinctively American social geography we will address how religion, class, gender, and generational differences shape the ways that people imagine, design, regulate, defend and give meaning to the spaces that they inhabit.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38358,7 +38358,7 @@
         "description": "Examines the geographies (territory, location, place, scale, culture) of large- and small-scale economic processes and human practices. Considers the historical and contemporary factors that shape the current spatial economic order and diverse economies.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38370,7 +38370,7 @@
         "description": "Course readings and off-campus fieldwork in this applied geography DLE course will address geopolitical issues faced by real people in real places. Topics and nearby fieldwork locations vary by semester, depending on community partnerships and project parameters set up by the instructor ahead of time.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38382,7 +38382,7 @@
         "description": "Study of the physical occurrence and distribution of water in all parts of the hydrologic cycle: introduces the nature of human demands for water, the possibilities of obtaining additional supplies and the difficult legal, economic and political questions of management of water resources.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38394,7 +38394,7 @@
         "description": "Spatial relationships of urban areas, focusing on the structure of towns, the organization of urban space and the external relationships of cities.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38406,7 +38406,7 @@
         "description": "Interdisciplinary introduction to alternative/complementary disciplinary approaches to the study of human movement between states. Offered on a rotational basis by faculty involved in the University of Delaware migration group.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38418,7 +38418,7 @@
         "description": "Understanding the earth\u2019s climate and how the climate is changing is a fundamental part of modern earth system science. Explores the scientific basis for the study of climate and climate change, including long Semesterterand modern change, with a discussion of current topics.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38430,7 +38430,7 @@
         "description": "Biosphere-atmosphere interactions and corresponding feedbacks are examined in detail. Emphasis also is placed on the influences of weather and climate on plants, animals, and humans.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38442,7 +38442,7 @@
         "description": "Broad principles of the field. Human mobility and stasis. Material and symbolic landscapes. Individual and group values in landscape formation and change.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38454,7 +38454,7 @@
         "description": "City landscapes as expressions of attitudes and ideals. Oriental and Western; classical, modern and future. Humanizing the urban landscape.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38466,7 +38466,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38478,7 +38478,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Spring"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38490,7 +38490,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38502,7 +38502,7 @@
         "description": "Fundamental geographic concepts and principles necessary to effectively use GIS to examine geographic problems. Hands-on training is provided in the use of professional GIS software in the context of collecting, managing, processing, analysis and presenting geographic data. Emphases is placed on the nature of spatial data, modeling techniques, spatial analysis and cartographic design.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38514,7 +38514,7 @@
         "description": "Using a mixture of guided self-study and lecture, students learn modern programming for application to environmental data analysis and atmospheric and geological modeling. Older language features and use of legacy codes are also covered lightly.",
         "credits": 2,
         "semester": ["Fall"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38526,7 +38526,7 @@
         "description": "The energetic interaction of sunlight with the atmosphere and oceans influences the entire earth system. Examines the theory of radiative transfer within the ocean and atmosphere, and then explores several areas of applicable research including climate modeling and remote sensing.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38538,7 +38538,7 @@
         "description": "Fundamentals of the climate system: components, interactions, and variability; the ocean\u2019s role in the climate system: heat storage, sea level, and the carbon cycle; the ocean and climate change: observed variability, means, trends, and extremes, and using models and observations to attribute change.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38550,7 +38550,7 @@
         "description": "Hydrologic and sediment transport processes in rivers and watersheds. Morphology and evolution of rivers and watersheds. Depositional processes and evolution of floodplains. Structure and interpretation of fluvial deposits in the geologic record.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38562,7 +38562,7 @@
         "description": "Investigates the nature of the Earth\u2019s climate by examining the physical processes that maintain our climate system. Focuses primarily on the flow of energy and moisture in the global climate and its geographic variation on scales of hundreds to thousands of kilometers. Human-induced modifications to the climate system, such as urbanization, anthropogenic global warming, desertification, and tropical deforestation, are also discussed. The lab portion of the class teaches descriptive, analytical, programming and mapping skills to model our climate system and to illustrate the analyses of climate datasets.",
         "credits": 4,
         "semester": ["Spring"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38574,7 +38574,7 @@
         "description": "Explores the fundamental concepts of meteorology that are needed to understand onshore, offshore, and airborne wind energy. Topics include: forces affecting winds; terrain and land-use effects; air turbulence; numerical modeling; wind power and energy from turbines; and wind measurement technologies.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38586,7 +38586,7 @@
         "description": "Hazards become disasters when they affect people.  This class is about understanding the social policies and practices that turn hazards into disasters. In this discussion-based seminar, we will explore case studies of hazards - heat wave, wildfire, hurricane, and climate change - and the environmental justice (EJ) issues that arise.  Students will think critically, work to see issues from multiple viewpoints, and improve their ability to understand the social and environmental justice issues in current events.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38598,7 +38598,7 @@
         "description": "An introduction to meteorological processes that affect air pollution, such as diffusion, atmospheric stability, and turbulence, with a focus on the atmospheric boundary layer.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38610,7 +38610,7 @@
         "description": "Examines facts and fallacies regarding global warming and climate science and assesses the current state of scientific understanding of and  ability to forecast climate change.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38622,7 +38622,7 @@
         "description": "Climate change will affect people and communities around the world in numerous ways, including physical safety, food and water security, and changing cultural practices. This course explores the legal, policy, engineering, and social tools we have available to adapt to these changing risks.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38634,7 +38634,7 @@
         "description": "Introduction to composition and structure of the atmosphere. Includes atmospheric thermodynamics through introductory cloud physics.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38646,7 +38646,7 @@
         "description": "Physics and thermodynamics of cloud particles and precipitation. Includes cloud droplet growth, aggregation, precipitation, ice crystal formation, atmospheric electricity, optics, cloud-radiation interactions, acoustics and weather radar.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38658,7 +38658,7 @@
         "description": "Focuses on food, resources, energy and population issues in relationship to economic development and the global environment. The main objective is to engage students in discussion and debate on sustainable development policies.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38670,7 +38670,7 @@
         "description": "Investigates atmospheric motion in a quantitative manner. Expands basic conservation laws to derive the equations of atmospheric motion and to develop the concepts of vorticity and circulation. Discusses atmospheric wave motion and general circulation.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38682,7 +38682,7 @@
         "description": "Variable content. Students will use interdisciplinary methods to investigate the history of racial inequalities in Delaware and the experiences of Black and Indigenous communities. Student research will lead to public-facing projects based on the discovery, exploration, and interpretation of historic sites and collections. This course enables students to participate in the University of Delaware\u2019s effort to acknowledge the ramifications of past social injustice and map out paths forward.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38694,7 +38694,7 @@
         "description": "Examines existing policy responses to climate change to achieve meaningful CO2 reductions. Specific attention given to possibilities and limits of scientific knowledge and technology in formulating policies to address climate risk.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38706,7 +38706,7 @@
         "description": "Examination of the historical and contemporary factors shaping the global food system. Studying processes and practices, such as production and consumption, policymaking, activism, commodity exchange; as well as, actors including states, producers and consumers, farmworkers, farmers and policymakers. Consider how production and consumption are framed and discuss the spatial organization of access to food and agricultural resources through digging into issues related to food justice and food sovereignty on local and global scales.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38718,7 +38718,7 @@
         "description": "Examines key linkages between hydrology and ecosystem processes in natural and human impacted watersheds. Topics include water quantity and quality and material source, transport and fate in terrestrial and aquatic ecosystems, as affected by biotic and abiotic stressors, including changes in land-use and climate.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38730,7 +38730,7 @@
         "description": "Introduction to hydrologic science. Topics include precipitation, snowmelt, evapotranspiration, infiltration, groundwater, runoff, streamflow, water resources management, and hydrologic applications of remote sensing and geographic information systems. Case studies illustrate hydrological response to changes in land-use and climate.  Group studies include field measurements and computer simulations.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38742,7 +38742,7 @@
         "description": "Examines theory and methods for planning for more sustainable communities and regions in a global context in the twenty-first century. Sustainable development is defined and theories of sustainable planning presented that meet goals in the areas of environment, economy, and equity (the Three Es). After discussion of issues central to sustainable planning, course looks at tools and policies for sustainable planning and how planning practices can become more oriented to sustainability.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38754,7 +38754,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38766,7 +38766,7 @@
         "description": "The nature of geography, its history, methodology and applications in research and societal problems. A pre-professional course.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38778,7 +38778,7 @@
         "description": "Considers the relationships between environmental and social processes from the theoretical, philosophical and methodological perspectives of geography. Explores the ethical and contextual implications of framing environmental questions and posing solutions. Examines approaches to the geographical analysis of environmental problems.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38790,7 +38790,7 @@
         "description": "Impacts of global migration on immigrant-receiving and/or immigrant-sending communities are examined to understand the experience of home. Perceptions, policies and practices contributing to social-spatial exclusion/inclusion at multiple scales are addressed. Project-based fieldwork enables students to gain first-hand knowledge of the experiences of mobility and adjustment.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38802,7 +38802,7 @@
         "description": "General theoretical and practical considerations of research in climatology.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38814,7 +38814,7 @@
         "description": "The collection, visualization and application of meteorological data is emphasized in the context of diagnosing and forecasting atmospheric systems. The interpretation of meteorological observations and numerical models is a major focus of this class.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38826,7 +38826,7 @@
         "description": "The application of theory and real-time observations in diagnosing present and predicting future weather. Focus is on application of quasi-geostrophic theory and isnetropic analysis in weather forecasting. Analysis and interpretation of meteorological observations and numerical models will be emphasized and applied to jet streams, mid-latitude cyclones and fronts.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38838,7 +38838,7 @@
         "description": "A focused introduction to the range of industrial and governmental certification systems which have developed to consider sustainability criteria across supply chains of products from mines to markets. Students will gain skills on compliance assurance and auditing using these systems.",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38850,7 +38850,7 @@
         "description": "Study of the hydrologic cycle as it relates to water in the atmosphere and in and on the earth\u2019s surface. Hydrologic processes including precipitation, soil moisture, evapotranspiration, runoff and streamflow are examined.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38862,7 +38862,7 @@
         "description": "Introduces students to the basic numerical techniques used in current models to predicting and/or simulating weather. Topics include: conservation equations of the atmosphere; numerical methods of solution; boundary and initial conditions; coordinate systems; parameterization schemes; and model application and evaluation. Particular emphasis will be placed on the Weather Research and Forecasting (WRF) model. Students will learn to run the WRF model and use it as a benchmark for testing and applying the techniques learned in class.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38874,7 +38874,7 @@
         "description": "Covers the factors that cause natural variations in Earth\u2019s climate on different time scales, focusing on biotic, geologic, and geochemical records. Includes discussion of changing continental configurations, atmospheric greenhouse gas levels, and the Earth-Sun geometry on ocean circulation and climate change.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38886,7 +38886,7 @@
         "description": "High-resolution climate information is needed for adaptation to and mitigation of the impacts of climate variability and change. The primary objective of this course is to understand regional climate processes, modeling techniques, and analysis tools.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38898,7 +38898,7 @@
         "description": "Deep-sea mining is an emerging industry that could unlock previously untapped resources, but it carries environmental risks. Prospects that hold the most value are also home to species found nowhere else in the world. Students will be introduced to deep-sea mining and the affected ecosystems.",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38910,7 +38910,7 @@
         "description": "On the job experience in governmental or private planning, consulting, environmental or engineering agencies.",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38922,7 +38922,7 @@
         "description": "A field course in Australia that will consider ways of effectively developing ecological and social restoration plans after a mining operation finishes its operational cycle. Course will focus on a case of indigenous community relations.",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38934,7 +38934,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38946,7 +38946,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38958,7 +38958,7 @@
         "description": "Investigates the ethics, limitations, and implications of how geographic information is gathered, digitized, analyzed, and communicated in the media-enriched and socially-networked world we live in. A digital geography project is completed to examine how digital technologies are transforming knowledge production in the sciences, social sciences, and humanities.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38970,7 +38970,7 @@
         "description": "This course will introduce ecological economics as a transdisciplinary framework to economic, social, and environmental problem solving applied to the field of minerals and mining industries.  \u201cTransdisciplinary\u201d implies a problem-orientation that draws from a diverse web of knowledge across the natural sciences, social sciences, and humanities.",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38982,7 +38982,7 @@
         "description": "Advanced study of geographic information science and systems (GIS) including more complex spatial data models, editing and topology, data encoding, data quality, preprocessing techniques, spatial analysis, and cartography and visualization techniques. Hands-on experience using commercial and/or open source GIS package.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -38994,7 +38994,7 @@
         "description": "A picture is worth a thousand words.  A map is worth much more.  This course provides a broad introduction to cartography, surveying the science, art, and ethics of making and using maps.  Students will learn to design appealing maps that effectively communicate geospatial information.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39006,7 +39006,7 @@
         "description": "Technical skills training focused on a specific aspect of the processing, analysis, modeling, and visualization of geographic data. The course content of each 3 credit course will vary to target a specialized techical topic using high end software such as ArcGIS and ENVI.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39018,7 +39018,7 @@
         "description": "Use of satellite observations to study the climate system. Discussions consider the development of satellite climatology, sensors, platforms and methodologies used to estimate climate variables from radiance measurements. Aspects of climate that are emphasized include cloud climatologies, cloud systems, atmospheric moisture, radiation budget, land-surface conditions.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39030,7 +39030,7 @@
         "description": "",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39042,7 +39042,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39054,7 +39054,7 @@
         "description": "The primary objective of this interdisciplinary course is to introduce students to different earth-observing satellites, and to train them in identifying, preparing, and analyzing satellite data required for their own research projects.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39066,7 +39066,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39078,7 +39078,7 @@
         "description": "This course is designed for advanced-level students with prior remote sensing knowledge. The goal of this course is to enable students to systematically review the recent developments in remote sensing methods, and to apply advanced geospatial skills in their own research.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39090,7 +39090,7 @@
         "description": "First of its kind experiential learning Atelier class.Atelier will focus on how coexistence between agriculture and mining can be better managed in Kursk region using ecological economics approaches. Students will be staying in Russia for two weeks.",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39102,7 +39102,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39114,7 +39114,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39126,7 +39126,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39138,7 +39138,7 @@
         "description": "Introduction to contemporary American geography, especially its research andeducational frontiers.  Also emphasizes theoretical and practicalconsiderations in formulating, carrying out and evaluating geographicresearch.  Students additionally are required to attend (and then discuss) theDepartment\u2019s Friday afternoon guest lectures.RESTRICTIONS:Open to graduate students in geography and climatology only.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39150,7 +39150,7 @@
         "description": "Drawing on readings, discussion, exercises, and empirical projects, our goal is to understand the general linkages between theory, method, and research design in human geography; how to identify and use appropriate methods; how to conduct fieldwork, how to make sense out of qualitative data through analysis; how to write about and disseminate research. In addition, we will examine issues of ethics, representation, postionality, and validity in qualitative research.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39162,7 +39162,7 @@
         "description": "Explores the application of GIS to environmental problems. Reviews current research in the field, and implements relevant techniques for analysis of a variety of environmental problems.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39174,7 +39174,7 @@
         "description": "Using a mixture of guided self-study and lecture, students learn modern programming for application to environmental data analysis and atmospheric and geological modeling. Older language features and use of legacy codes are also covered lightly.",
         "credits": 2,
         "semester": ["Fall"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39186,7 +39186,7 @@
         "description": "Fundamentals of ocean and atmosphere remote sensing including space platforms, their orbits, instruments, data retrieval and image processing methods. Oceanographic and atmospheric applications of remote sensing and new developments in sensors and data analyses.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39198,7 +39198,7 @@
         "description": "The energetic interaction of sunlight with the atmosphere and oceans influences the entire earth system. Examines the theory of radiative transfer within the ocean and atmosphere, and then explores several areas of applicable research including climate modeling and remote sensing.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39210,7 +39210,7 @@
         "description": "Fundamentals of the climate system: components, interactions, and variability; the ocean\u2019s role in the climate system: heat storage, sea level, and the carbon cycle; the ocean and climate change: observed variability, means, trends, and extremes, and using models and observations to attribute change.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39222,7 +39222,7 @@
         "description": "Hydrologic and sediment transport processes in rivers and watersheds. Morphology and evolution of rivers and watersheds. Depositional processes and evolution of floodplains. Structure and interpretation of fluvial deposits in the geologic record.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39234,7 +39234,7 @@
         "description": "Energy and moisture exchange between the atmosphere and land surface for characteristc natural and human-modified environments.",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39246,7 +39246,7 @@
         "description": "This course explores the fundamental concepts of meteorology that are needed to understand onshore, offshore, and airborne wind energy. Topics include: forces affecting winds; terrain and land-use effects; air turbulence; numerical modeling; wind power and energy from turbines; and wind measurement technologies.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39258,7 +39258,7 @@
         "description": "Hazards become disasters when they affect people.  This class is about understanding the social policies and practices that turn hazards into disasters. In this discussion-based seminar, we will explore case studies of hazards - heat wave, wildfire, hurricane, and climate change - and the environmental justice (EJ) issues that arise.  Students will think critically, work to see issues from multiple viewpoints, and improve their ability to understand the social and environmental justice issues in current events.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39270,7 +39270,7 @@
         "description": "An introduction to meteorological processes that affect air pollution, such as diffusion, atmospheric stability, and turbulence, with a focus on the atmospheric boundary layer.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39282,7 +39282,7 @@
         "description": "How can fiction help us understand and apply science? In this interdisciplinary class, we\u2019ll use climate fiction, climate change science, journalism reports, movies, and research on science communication to understand the role narratives can play in creating visions of the future and motivating us to take action. Students will learn to integrate across disciplines and explore how narratives in fiction and non-fiction writing shape public perceptions of scientific research.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39294,7 +39294,7 @@
         "description": "Climate change will affect people and communities around the world in numerous ways, including physical safety, food and water security, and changing cultural practices. This course explores the legal, policy, engineering, and social tools we have available to adapt to these changing risks.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39306,7 +39306,7 @@
         "description": "Introduction to composition and structure of the atmosphere. Includes atmospheric thermodynamics through introductory cloud physics.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39318,7 +39318,7 @@
         "description": "Physics and thermodynamics of cloud particles and precipitation. Includes cloud droplet growth, aggregation, precipitation, ice crystal formation, atmospheric electricity, optics, cloud-radiation interactions, acoustics and weather radar.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39330,7 +39330,7 @@
         "description": "Focuses on food, resources, energy and population issues in relationship to economic development and the global environment. Engages students in discussion and debate on sustainable development policies.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39342,7 +39342,7 @@
         "description": "Investigates atmospheric motion in a quantitative manner. Expands basic conservation laws to derive the equations of atmospheric motion and to develop the concepts of vorticity and circulation. Discusses atmospheric wave motion and general circulation.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39354,7 +39354,7 @@
         "description": "Variable content. Students will use interdisciplinary methods to investigate the history of racial inequalities in Delaware and the experiences of Black and Indigenous communities. Student research will lead to public-facing projects based on the discovery, exploration, and interpretation of historic sites and collections. This course enables students to participate in the University of Delaware\u2019s effort to acknowledge the ramifications of past social injustice and map out paths forward.",
         "credits": 3,
         "semester": ["Verify Offering with Dept"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39366,7 +39366,7 @@
         "description": "Examination of the historical and contemporary factors shaping the global food system. Studying processes and practices-such as production and consumption, policymaking, activism, commodity exchange-as well as, actors including states, producers and consumers, farmworkers, farmers and policymakers. Consider how production and consumption are framed and discuss the spatial organization of access to food and agricultural resources through digging into issues related to food justice and food sovereignty on local and global scales.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39378,7 +39378,7 @@
         "description": "Introduction to hydrologic science. Topics include precipitation, snowmelt, evapotranspiration, infiltration, groundwater, runoff, streamflow, water resources management, and hydrologic applications of remote sensing and geographic information systems. Case studies illustrate hydrological response to changes in land-use and climate.  Group studies include field measurements and computer simulations.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39390,7 +39390,7 @@
         "description": "Examines theory and methods for planning for more sustainable communities and regions in a global context in the twenty-first century. Sustainable development is defined and theories of sustainable planning presented that meet goals in the areas of environment, economy, and equity (the Three Es). After discussion of issues central to sustainable planning, course looks at tools for sustainable planning and how current land use and regional planning is and can become more oriented to sustainability. The University of Delaware is featured as an example of sustainable planning.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39402,7 +39402,7 @@
         "description": "Seminar addresses a specific research issue within historic preservation including hypothesis construction, design of research methodology and evaluation of results. Emphasis on use of primary sources and application of data-base techniques.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39414,7 +39414,7 @@
         "description": "Study of the unique physics and dynamics of the ocean and atmosphere that occur in polar regions, particularly at the interfaces between atmosphere, ice, ocean and land. Emphasis will be on exploring cutting edge research in these rapidly changing environments.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39426,7 +39426,7 @@
         "description": "Considers the relationships between environmental and social processes from theoretical, philosophical, and methodological perspectives of geography. Explores the ethical and contextual implications implied in framing environmental questions and posing solutions. Examines approaches to the geographical analysis of environmental problems.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39438,7 +39438,7 @@
         "description": "Introduction to instrumentation and techniques involved in microclimatic monitoring and sampling. Field observation carried out in varying environmental situations.",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39450,7 +39450,7 @@
         "description": "General theoretical and practical considerations of research in climatology.",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39462,7 +39462,7 @@
         "description": "The collection, visualization and application of meteorological data is emphasized in the context of diagnosing and forecasting atmospheric systems. The interpretation of meteorological observations and numerical models is a major focus of this class.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39474,7 +39474,7 @@
         "description": "The application of theory and real-time observations in diagnosing present and predicting future weather. Focus is on application of quasi-geostrophic theory and isentropic analysis in weather forecasting. Analysis and interpretation of meteorological observations and numerical models will be emphasized and applied to jet streams, mid-latitude cyclones and fronts.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39486,7 +39486,7 @@
         "description": "A focused introduction to the range of industrial and governmental certification systems which have developed to consider sustainability criteria across supply chains of products from mines to markets. Students will gain skills on compliance assurance and auditing using these systems.",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39498,7 +39498,7 @@
         "description": "Study of the hydrologic cycle as it relates to water in the atmosphere and in and on the earth\u2019s surface. Hydrologic processes including precipitation, soil moisture, evapotranspiration, runoff and streamflow will be examined.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39510,7 +39510,7 @@
         "description": "Investigation of the physical processes controlling global climate, starting with the earth-sun relationship and adding additional processes to increase complexity and realism. Extensive use of models to explore the importance of each process.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39522,7 +39522,7 @@
         "description": "Covers the factors that cause natural variations in Earth-s climate on different time scales, focusing on biotic, geologic, and geochemical records. Includes discussion of changing continental configurations, atmospheric greenhouse gas levels, and the Earth-Sun geometry on ocean circulation and climate change.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39534,7 +39534,7 @@
         "description": "Global change is impacting an increasing number of sectors in science, engineering and policy, creating a need for high-resolution regional climate data used in impact assessments and mitigation plans. The primary objective is to understand regional climate processes, modeling techniques, and tools for analysis.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39546,7 +39546,7 @@
         "description": "Multiple regression and time series analysis; model validation; sampling; principal components; factor analysis; cluster analysis; discriminant analysis; and statistical software routines.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39558,7 +39558,7 @@
         "description": "Introduction to numerical methods used to solve the equations of ocean motion. Topics range from basic numerical concepts with applications to general transport and shallow-water equations to an overview of turbulence and ocean circulation models that are employed to understand weather and climate.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39570,7 +39570,7 @@
         "description": "Some research applications require inferences to be drawn from point, line, orareal data, rather than from the traditional univariate or multivariate framework. A number of such techniques have been developed including adaptations from classical statistical methods and novel approaches to account for the spatial nature of data. Explore the emerging literature on statistical methodologies that have been explicitly developed for the solution of spatial problems.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39582,7 +39582,7 @@
         "description": "Deep-sea mining is an emerging industry that could unlock previously untapped resources, but it carries environmental risks. Prospects that hold the most value are also home to species found nowhere else in the world. Students will be introduced to deep-sea mining and the affected ecosystems.",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39594,7 +39594,7 @@
         "description": "A field course in Australia that will consider ways of effectively developing ecological and social restoration plans after a mining operation finishes its operational cycle. Course will focus on a case of indigenous community relations.",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39606,7 +39606,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39618,7 +39618,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39630,7 +39630,7 @@
         "description": "This course will introduce ecological economics as a transdisciplinary framework to economic, social, and environmental problem solving applied to the field of minerals and mining industries.  \u201cTransdisciplinary\u201d implies a problem-orientation that draws from a diverse web of knowledge across the natural sciences, social sciences, and humanities.",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39642,7 +39642,7 @@
         "description": "Introduces the principles and concepts of geographic information science to effectively use a professional level geographic information system. Practical hands-on exposure to \u201creal\u201d data and GIS software and hardware is provided through exercises and a final project.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39654,7 +39654,7 @@
         "description": "Advanced study of geographic information science and systems (GIS) including more complex spatial data models, editing and topology, data encoding, data quality, preprocessing techniques, spatial analysis, and cartography and visualization techniques. Hands-on experience using commercial and/or open source GIS package.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39666,7 +39666,7 @@
         "description": "Principles underlying geographic information systems (GIS) are examined, and sample geographic problems are analyzed. Design and programming of modules for data acquisition and storage, map projection, map overlay, spatial data analyses, and graphic output are considered.  Geographic themes and data vary each time the seminar is offered.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39678,7 +39678,7 @@
         "description": "Technical skills training focused on a specific aspect of the processing, analysis, modeling, and visualization of geographic data. The course content of each 3 credit course will vary to target a specialized technical topic using high end software such as ArcGIS and ENVI. May be repeated for a total of nine credits when topics vary.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39690,7 +39690,7 @@
         "description": "Use of satellite observations to study the climate system. Discussions consider the development of satellite climatology, sensors, platforms and methodologies used to estimate climate variables from radiance measurements. Aspects of climate that are emphasized include cloud climatologies, cloud systems, atmospheric moisture, radiation budget, land-surface conditions.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39702,7 +39702,7 @@
         "description": "Approaches the topic from an interdisciplinary and industrial ecology perspective with attention to key skills needed to evaluate the environmental and social impacts of the sector. Experiential field study focusing on mining and extractives policy and sustainability issues offered with several international universities, including Australia\u2019s University of Queensland\u2019s Sustainable Minerals Institute and Russia\u2019s National University of Science and Technology MISIS.",
         "credits": 2,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39714,7 +39714,7 @@
         "description": "Utilizing GIScience and environmental data analytics, students will develop a plan of action to mitigate or solve an environmental problem in a full length project report. Involves data analysis, reflection, writing, and self-assessment.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39726,7 +39726,7 @@
         "description": "The primary objective of this interdisciplinary course is to introduce students to different earth-observing satellites, and to train them in identifying, preparing, and analyzing satellite data required for their own research projects.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39738,7 +39738,7 @@
         "description": "Introduces important technology of remote sensing to further our understanding of Earth\u2019s environment. Gain an in-depth look at the principles, techniques and applications of remote sensing. Basic skills in computer processing of digital satellite images using ENVI and ArcGIS software are provided.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39750,7 +39750,7 @@
         "description": "This course is designed for advanced-level students with prior remote sensing knowledge. The goal of this course is to enable students to systematically review the recent developments in remote sensing methods, and to apply advanced geospatial skills in their own research.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39762,7 +39762,7 @@
         "description": "First of its kind experiential learning Atelier class. Atelier will focus on how coexistence between agriculture and mining can be better managed in Kursk region using ecological economics approaches. Students will be staying in Russia for two weeks.",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39774,7 +39774,7 @@
         "description": "A picture is worth a thousand words.  A map is worth much more.  This course provides a broad introduction to cartography, surveying the science, art, and ethics of making and using maps.  Students will learn to design appealing maps that effectively communicate geospatial information.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39786,7 +39786,7 @@
         "description": "Covers the principles and application of risk management methods to achieve a range of objectives including operational performance, human well-being, environmental impact and stakeholder related objectives. Students will be expected to identify, demonstrate and critique the use of some risk management methods.",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39798,7 +39798,7 @@
         "description": "Provides an understanding of the physical processes and effects of natural hazards with a focus on aspects that are critical to the study of disasters. Explores processes, measures, and impacts of hazards such as earthquakes, tornadoes, tsunamis, hurricanes, floods, droughts and landslide to identify areas prone to reduce potential for Disasters.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39810,7 +39810,7 @@
         "description": "Selected topics in geomorphology. Topics vary according to instructor preference.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39822,7 +39822,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39834,7 +39834,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39846,7 +39846,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39858,7 +39858,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39870,7 +39870,7 @@
         "description": "Research and readings in preparation of dissertation topic and/or qualifying examinations for doctoral students before admission to candidacy but after completion of all required course work.",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39882,7 +39882,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "GEOG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39894,7 +39894,7 @@
         "description": "Introduces the concepts of fashion, style, and culture as they relate to how products are conceived and developed. The impact of cultural contexts and societal diversity on apparel industry practices are considered.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39906,7 +39906,7 @@
         "description": "Basic clothing construction procedures, fitting techniques and methods of evaluation for apparel are addressed. Construction skills are developed through a set of seam samples and construction of a blouse and skirt using a commercial pattern.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39918,7 +39918,7 @@
         "description": "Introduction to design through the physical application of various art media as applied to the study of 2- dimensional and 3-dimensional design. Study of design criteria and artistic objectives as they relate to the environment. Explore current and emerging technologies in fashion design.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39930,7 +39930,7 @@
         "description": "Create awareness of career opportunities and develop techniques for success in the fields of fashion merchandising and apparel design.",
         "credits": 1,
         "semester": ["Fall"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39942,7 +39942,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39954,7 +39954,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39966,7 +39966,7 @@
         "description": "Introduction to apparel product development, apparel garment analysis, basic textiles, and sewing methods; introduction to the product development calendar and the tech pack, sizing and fit, costing, overview of production and technology used in apparel product development.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39978,7 +39978,7 @@
         "description": "Introduction to emerging cannon of theory and practice regarding Sustainability as it relates to fashion. Centered on four components of Sustainability and Social Responsibility:  Labor, Environment, Consumption and Body Image.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -39990,7 +39990,7 @@
         "description": "Examines the culture and clothing practices of various ethinic groups and their influences on Western apparel fashion and textile arts during the 20th and 21st Centuries.",
         "credits": 3,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40002,7 +40002,7 @@
         "description": "Clothing as a mirror of civilization in Western Europe and the Middle East from antiquity through the 16th century. Influence of societal, economic and aesthetic factors upon the development of clothing.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40014,7 +40014,7 @@
         "description": "Science principles are the basis for understanding fibers. Relationships between the chemical and physical characteristics of fibers and properties such as tensile strength, flammability, elasticity, moisture absorption, dye affinity, and recyclability are explored. Understanding science principles in relation to textile properties provides basis for evaluation of textile products.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40026,7 +40026,7 @@
         "description": "An overview of the fashion business by examining the fundamental concepts and strategies related to merchandising and retailing of fashion and apparel products. Current practices and trends in the fashion industry are examined.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40038,7 +40038,7 @@
         "description": "Fundamental concepts related to yarns, fabric, structures, coloration and finishes. Emphasis placed upon structural properties as they related to end-use characteristics and finishing processes. Discusses environmental problems related to textile production, dyeing and finishing.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40050,7 +40050,7 @@
         "description": "Comparative study of foundation principles and processes of apparel design and production utilizing draping, flat pattern, drafting and computer-aided design techniques. Includes development of master patterns, execution of advanced garment assembly processes, and communication of design plans using effective layout and presentation skills. Apparel design problems introduce the interplay among functional, aesthetic, social, technical, and sustainable factors.  Introduction to the tech pack.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40062,7 +40062,7 @@
         "description": "Clothing design and production in America and Western Europe since 1600. Study of craft skills, growth of ready-to-wear industry, and Haute Couture.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40074,7 +40074,7 @@
         "description": "Drawing from the fashion model; emphasis on rendering clothing character, fabrics and fashion details using various media; introduction to flat sketching via computer; translation of drawings to finished fashion illustrations.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40086,7 +40086,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40098,7 +40098,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40110,7 +40110,7 @@
         "description": "Advanced flat pattern and drafting using the torso block to design tailored jackets and coats through the lenses of aesthetics, function/fit, sustainability, and marketability. Design projects require research of a design concept for a target market, consideration of sustainable design solutions, sketching, development of presentation boards, patternmaking, and construction of a complete garment.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40122,7 +40122,7 @@
         "description": "Examination of similarities and differences in the dress of culturally distinct groups: analysis of functions served by dress and textiles factors influencing changes in cultural forms of dress.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40134,7 +40134,7 @@
         "description": "An off-campus supervised and coordinated field study program in fashion/apparel related areas.",
         "credits": 3,
         "semester": ["Winter and Summer"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40146,7 +40146,7 @@
         "description": "Study of the domestic and/or international textiles and apparel and allied fashion industries through a variey of instructional methods including industry visits, research projects and service learning activities. Instructional methods vary by countries visited and courses offered.",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40158,7 +40158,7 @@
         "description": "Exploration of three dimensional methods of apparel design. Focuses on design and execution of draped garment structures. Design projects require research of a design concept for a target market, consideration of sustainable design solutions, sketching, development of presentation boards, patternmaking, and construction of a complete garment.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40170,7 +40170,7 @@
         "description": "Development of oral, written, and graphic presentation skills used for communication in the fashion industry. Multimedia presentation applications are utilized.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40182,7 +40182,7 @@
         "description": "Students will explore definitions of \u201ccitizen artist\u201d and \u201cteaching artist\u201d and how these labels connect social consciousness with their specific discipline. Students will explore Lincoln Center Education\u2019s \u201cSix Fundamentals of Teaching Artistry,\u201d and experience them firsthand through sample workshops and group discussion.  Students will gain skills in regards to programming, audience engagement, curriculum integration, artistic activation, and more.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40194,7 +40194,7 @@
         "description": "Focuses on computer applications related to mathematical concepts and calculations used in developing merchandise budgets. Spreadsheets are used to develop merchandise plans for sales, inventories, markdowns, shrinkage, receipts, open-to-buy and gross margin. Other industry-related planning systems are examined.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40206,7 +40206,7 @@
         "description": "Introduction to directional trend research and analysis and collection design for targeted markets. Apply relevant industry technology for fashion design, emphasizing concept development, visualization, storyboard layout, and design presentation.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40218,7 +40218,7 @@
         "description": "Global and country specific factors that impact distribution systems for and consumption of fashion related products. Understanding consumers of fashion products within a global context and motivations for pursuing a global marketing and retailing strategy.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40230,7 +40230,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40242,7 +40242,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40254,7 +40254,7 @@
         "description": "The product development process as applied in the apparel industry. Focuses on business planning, marketing, market research, distribution, the product development calendar, and challenges relating to apparel business situations. Evaluates how product development activities supports sustainability. Builds on basic information learned in FASH 180.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40266,7 +40266,7 @@
         "description": "Explores current issues and challenges in the fashion and apparel industry and the role of research and discovery of new knowledge for solving them.  Students apply knowledge about research methods and discovery in carrying out projects generating new knowledge and solutions. Research outcomes are communicated appropriately for a targeted audience of academics or industry professionals.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40278,7 +40278,7 @@
         "description": "This course focuses on study of clothing and appearance as important contributors to meaning of fashion through individual and collective behaviors in social contexts.  Theories from social psychology are applied to understand the processes of which clothing and appearance cues are managed and perceived by individuals and groups and the important functions they play in society.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40290,7 +40290,7 @@
         "description": "A continuation of FASH 330. A merchandise budget developed in FASH 330 is translated into an inventory unit plan. Emphasis is on assortment planning, and responsible sourcing and purchasing. Computer applications are involved.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40302,7 +40302,7 @@
         "description": "Conceptualization and development of a professional portfolio of design work. Refinement of visual presentation skills and professional development emphasized. Includes critique by apparel industry professionals.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40314,7 +40314,7 @@
         "description": "This course introduces students to the special characteristics inherent in working with fine gauge knits and stretch-woven fabrications. Exploring a combination of draping, fitting, sloper developing, and patternmaking techniques, students create samples and garments using specialized machinery. Using their understanding of stretch fundamentals, they design and execute original stretch designs.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40326,7 +40326,7 @@
         "description": "Each class will consist of a combination of lectures and demonstrations aiming at teaching design process within the context of problem solving, considering design thinking of both product oriented as well as process oriented students. Students will be asked to bring objects related to their own personal interests into class, and share their individual user experience. Classes will take place in a variety of campus locations based on assembly equipment and technology needed for demonstrations.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40338,7 +40338,7 @@
         "description": "Practicum at the University of Delaware Fashion and Textile Collection. Cover all aspects of proper care, storage and exhibition techniques for flat textiles, apparel and accessories. Experiences may include museum education, object accession, and database management.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40350,7 +40350,7 @@
         "description": "A study of the significance of brand management for fashion companies as a competitive strategy for building sales and customer base. Introduction to the essential elements of branding, the course covers major activities of brand management and marketing with a focus on apparel firms. Apparel branding examined in global context due to the global nature of industry and its impact on fashion consumers around the world.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40362,7 +40362,7 @@
         "description": "The product development process as applied in the apparel industry. Focuses on all phases of apparel product development for a targeted market from conceptualization through execution of sample garments for mass production. Other topics include business planning, marketing, market research, distribution, and the product development calendar. Evaluates how product development activities support sustainability. Further develops skills in apparel industry technologies. Industry collaboration and field work are required.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40374,7 +40374,7 @@
         "description": "Global interdependencies that influence production, distribution, and consumer consumption. Study of the roles of government, industry, and consumers in the global economy with a focus on the apparel industry. Analyzes practices to improve sustainability in production of apparel.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40386,7 +40386,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Spring"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40398,7 +40398,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40410,7 +40410,7 @@
         "description": "Integrates advanced apparel design techniques and experiences as students design a collection of ensembles based on a theme incorporating social, cultural, and environmental sustainability. Articulating the design process through oral, written, and visual methods is emphasized.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40422,7 +40422,7 @@
         "description": "A capstone course that integrates product planning and development, distribution, marketing, sourcing, and sustainability. Students will work on case studies and industry projects that require analysis, synthesis, and application of knowledge and skills within the global apparel industry.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40434,7 +40434,7 @@
         "description": "Explores current issues and challenges in the fashion and apparel industry and the role of research and discovery of new knowledge for solving them. Students apply knowledge about research methods and discovery in carrying out projects generating new knowledge and solutions. Research outcomes are communicated appropriately for a targeted audience of academics or industry professionals.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40446,7 +40446,7 @@
         "description": "Study of clothing and appearance as contributors to human interactions; consideration of the importance of clothing in individual and collective behavior. Analysis of how dress reflects self-feelings, establishes social identities and affects interpersonal encounters.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40458,7 +40458,7 @@
         "description": "An off-campus supervised and coordinated field study program in fashion/apparel related areas that allows students to apply acquired knowledge and skills in a corporate or professional setting.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40470,7 +40470,7 @@
         "description": "This course introduces students to the special characteristics inherent in working with various gauge knits and stretch fabrications. Exploring a combination of draping, fitting, sloper developing, and assembly techniques specific to stretch- woven fabrications, along with basics of machine knitting and knit design software, students create original samples and garments that expand their design knowledge.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40482,7 +40482,7 @@
         "description": "Each class will consist of a <strong>combination of lectures and demonstrations</strong> aiming at teaching design process within the context of problem solving, considering design thinking of both product oriented as well as process oriented students.  Students will be asked to bring objects related to their own personal interests into class, and share their individual user experience. Group quizzes and spontaneous critiques and discussions will be common.  Classes will take place in a variety of campus locations based on assembly equipment and technology needed for demonstrations.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40494,7 +40494,7 @@
         "description": "Practicum at the University of Delaware Historic Costume and Textiles Collection. Learn proper care, storage and display techniques for flat textiles, apparel and accessories. Experiences may include museum education, object accession, and database management.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40506,7 +40506,7 @@
         "description": "A study of the significance of brand management for fashion companies as a competitive strategy for building sales and customer base. Introduction to essential elements of branding. Examines major activities of brand management and marketing with a focus on apparel firms. Apparel branding examined in the global context due to global nature of industry and its impact on consumers around the world.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40518,7 +40518,7 @@
         "description": "Apparel product development for a targeted market from conceptualization through execution of sample garments for mass production. Develop skills in computer-aided pattern designing, grading, marker making and data management (e.g., sizing, specifications, operations and costing). Includes field trip.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40530,7 +40530,7 @@
         "description": "Analyzes the global apparel and textile industries, the supply chains and the economic, political, socio-cultural, geographical and technological factors that influence global sourcing and buying decisions. Considers the importance of both financial and social goals, and strategies for social responsibility, labor compliance, and sourcing apparel.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40542,7 +40542,7 @@
         "description": "Exploration of current research and industry needs in the field.",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40554,7 +40554,7 @@
         "description": "Individual study, individual service learning project, group experiential learning (e.g., travel, internship, service learning), research that allows students to synthesize learnings across courses.",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40566,7 +40566,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40578,7 +40578,7 @@
         "description": "Engage in all phases of a professional project under the guidance of a faculty member and document the results in written form. The professional project should reflect the ability to conduct an individual study, individual service learning project, group experiential learning, or research project in which students synthesize learning across courses in the Fashion and Apparel Studies M.S. program.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40590,7 +40590,7 @@
         "description": "",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40602,7 +40602,7 @@
         "description": "",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40614,7 +40614,7 @@
         "description": "",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40626,7 +40626,7 @@
         "description": "",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40638,7 +40638,7 @@
         "description": "",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40650,7 +40650,7 @@
         "description": "",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40662,7 +40662,7 @@
         "description": "",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40674,7 +40674,7 @@
         "description": "",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40686,7 +40686,7 @@
         "description": "",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40698,7 +40698,7 @@
         "description": "",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40710,7 +40710,7 @@
         "description": "Analysis and interpretation of research in fashion and apparel studies. Examination of qualitative and quantitative research methodologies. Emphasis is placed on theory development and research design.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40722,7 +40722,7 @@
         "description": "Introduction to research methods for fashion and apparel studies including survey research, experimental research, focus group research, field research, and content analysis. Emphasis on research procedures, generating and testing hypothesis, designing and conducting research, data analysis, and reporting research results.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40734,7 +40734,7 @@
         "description": "Study of consumer behavior toward fashion products in a global context. Theories will be investigated from the context of the required readings.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40746,7 +40746,7 @@
         "description": "Use of advanced apparel design techniques in the development and execution of a collection of garments for juried design exhibition.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40758,7 +40758,7 @@
         "description": "Interdisciplinary approaches to collaborative thinking and problem solving, implementing variety of methods (e.g., environmental scanning, concept/knowledge mapping, scenario building, futuring/forecasting, visioning, scenario building, strategic planning) to the sustainable resolution of global contemporary issues challenging the textile/apparel/retail complex.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40770,7 +40770,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40782,7 +40782,7 @@
         "description": "Exploration of the academic research process, encompassing its conceptualization, design, execution, and dissemination phases.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40794,7 +40794,7 @@
         "description": "Engage in all phases of original scholarship under the guidance of their graduate committee and document the results in written form, including the process.",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "FASH",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
