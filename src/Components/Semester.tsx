@@ -568,12 +568,12 @@ export function ViewSemester(): JSX.Element {
     }
 
     function importPlans(text: string) {
-        try {
-            const parsedData = JSON.parse(text);
-            setPlan(parsedData);
-        } catch (error) {
-            console.error("Error parsing JSON:", error);
-        }
+        // try {
+        //     const parsedData = JSON.parse(text);
+        //     setPlan(parsedData);
+        // } catch (error) {
+        //     console.error("Error parsing JSON:", error);
+        // }
     }
 
     const allPlans = [plan1, plan2, plan3, plan4];
@@ -589,7 +589,6 @@ export function ViewSemester(): JSX.Element {
         (total: number, course: Course): number => total + course.credits,
         0
     );
-
 
     //actual return for the tsx file to App.tsx
     return (
