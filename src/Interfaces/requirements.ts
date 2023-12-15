@@ -27,11 +27,8 @@ export const CoreBS = [
     "CISC275",
     "CISC303",
     "CISC320",
-    "CISC361",
-    "CISC372",
     "MATH210",
     "MATH241",
-    "MATH242",
     "CISC355",
     "ENGL110"
 ];
@@ -61,11 +58,27 @@ export const labSciences = [
 /* Concentrations */
 
 export const ArtificialIntelligence = [
+    "CISC108",
+    "CISC181",
+    "CISC210",
+    "CISC220",
+    "CISC260",
+    "CISC275",
     "CISC304",
-    "CISC442",
+    "CISC355",
+    "CISC372",
+    "CISC437",
     "CISC481",
     "CISC483",
-    "CISC484"
+    "EGGG101",
+    "ENGL11O",
+    "MATH205",
+    "MATH210",
+    "MATH241",
+    "MATH242",
+    "MATH243",
+    "MATH349",
+    "MATH350"
 ];
 
 export const Bioinformatics = [
@@ -79,12 +92,19 @@ export const Bioinformatics = [
     "CISC372",
     "CISC436",
     "MATH242",
+<<<<<<< HEAD
     "MATH349"
     // [
     //     ["CHEM213", "CHEM215"],
     //     ["CHEM321", "CHEM325"]
     // ],
     // ["CISC483", "CISC484"]
+=======
+    "MATH349",
+    "CHEM215",
+    "CHEM321",
+    "CISC483"
+>>>>>>> main
 ];
 
 export const Cybersecurity = [
@@ -94,23 +114,43 @@ export const Cybersecurity = [
     "CISC464",
     "CPEG465",
     "CISC494"
+<<<<<<< HEAD
     // ["CPEG472", "CPEG473", "CPEG475", "CPEG476", "CPEG495"]
+=======
+>>>>>>> main
 ];
 
 export const DataScience = [
+    "CISC108",
+    "CISC181",
+    "CISC210",
+    "CISC220",
+    "CISC260",
+    "CISC275",
     "CISC304",
+    "CISC355",
     "CISC372",
     "CISC437",
     "CISC481",
+    "CISC483",
+    "EGGG101",
+    "ENGL11O",
     "MATH205",
+    "MATH210",
+    "MATH241",
     "MATH242",
     "MATH243",
+<<<<<<< HEAD
     "MATH349"
     // ["CISC483", "CISC484"],
     // ["MATH302", "MATH350", "MATH426"]
+=======
+    "MATH349",
+    "MATH350"
+>>>>>>> main
 ];
 
-export const HighPerformanceComputingMath = [
+export const HighPerformanceComputing = [
     "CISC360",
     "CISC361",
     "CISC372",
@@ -120,6 +160,7 @@ export const HighPerformanceComputingMath = [
     "MATH243",
     "MATH351",
     "MATH428"
+<<<<<<< HEAD
     // ["CISC300+", "MATH205", "MATH350", "CISC387", "CISC487"]
 ];
 
@@ -144,6 +185,8 @@ export const HighPerformanceComputingData = [
     //     "CISC387",
     //     "CISC487"
     // ]
+=======
+>>>>>>> main
 ];
 
 export const SystemsNetworks = [
@@ -151,6 +194,7 @@ export const SystemsNetworks = [
     "CISC361",
     "CISC372",
     "CISC450",
+<<<<<<< HEAD
     "CISC471"
     // [
     //     "CISC464",
@@ -172,12 +216,18 @@ export const SystemsNetworks = [
     //     "CPEG473",
     //     "CPEG497"
     // ]
+=======
+    "CISC471",
+    "MATH205",
+    "CISC464"
+>>>>>>> main
 ];
 
-export const TheoryComputationDiscrete = [
+export const TheoryComputation = [
     "CISC304",
     "CISC401",
     "MATH242",
+<<<<<<< HEAD
     "MATH349"
     // ["CISC4O4", "MATH245", "MATH315", "MATH451"]
 ];
@@ -188,6 +238,11 @@ export const TheoryComputationCont = [
     "MATH242",
     "MATH349"
     // ["MATH243", "MATH302", "MATH535", "MATH426"]
+=======
+    "MATH349",
+    "CISC4O4",
+    "MATH426"
+>>>>>>> main
 ];
 
 export const None = [""];
@@ -197,12 +252,15 @@ export const Concentrations = [
     Bioinformatics,
     Cybersecurity,
     DataScience,
-    HighPerformanceComputingMath,
-    HighPerformanceComputingData,
+    HighPerformanceComputing,
     SystemsNetworks,
+<<<<<<< HEAD
     TheoryComputationDiscrete,
     TheoryComputationCont,
     None
+=======
+    TheoryComputation
+>>>>>>> main
 ];
 
 export const Degrees = [CoreBA, CoreBS];
