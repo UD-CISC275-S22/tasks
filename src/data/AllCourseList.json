@@ -6,7 +6,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ACCT",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -18,7 +18,7 @@
         "description": "Survey of financial and managerial accounting concepts for the non-business major. Students learn about financial statements for merchandising, manufacturing, and service companies. Topics include: accounting cycle, budgeting, standard costing, contribution margins, cost-volume-profit analysis, and decision making.",
         "credits": 4,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "ACCT",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -30,7 +30,7 @@
         "description": "An introduction to financial accounting. Topics: the accounting cycle, merchandise accounting, accounting procedures for cash, receivables, payables, inventories, plant and equipment, stocks and bonds.",
         "credits": 3,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "ACCT",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42,7 +42,7 @@
         "description": "Introduction to managerial accounting. Topics: manufacturing accounting, cost-volume-profit analysis, job-order accounting, budgeting, standard costs and variance analysis, contribution approach to decision analysis, absorption and variable costing.",
         "credits": 3,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "ACCT",
         "prereq": ["ACCT207"],
         "coreq": [""],
         "requirements": [""]
@@ -54,7 +54,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ACCT",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -66,7 +66,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "ACCT",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -78,7 +78,7 @@
         "description": "Accounting information and its place within an organization\u2019s overall management information system. Emphasis on information and document flow, internal control, data organization, and analysis, design, development, and audit of computer-based accounting systems. Includes some computer work.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ACCT",
         "prereq": ["ACCT208, MISY160 or CISC101"],
         "coreq": [""],
         "requirements": [""]
@@ -90,7 +90,7 @@
         "description": "This course introduces the fundamental concepts of information and cybersecurity. It covers how to protect the confidentiality, integrity, and availability of data and information systems that modern organizations depend upon. The domains examined include network security, risk management, governance, physical security, cryptography, business continuity, and legal issues. Special consideration is given to studying major information security incidents and cybersecurity trends. You will learn about the threats and vulnerabilities facing computer systems and tools and techniques used to secure them.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ACCT",
         "prereq": ["MISY160, MISY250"],
         "coreq": [""],
         "requirements": [""]
@@ -102,7 +102,7 @@
         "description": "Explores taxable entities, tax aspects of selecting a business form, incomeconcepts, business deductions, tax factors in the acquisition, use, anddisposition of fixed assets, nontaxable transactions, capital gains andlosses, and tax planning.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ACCT",
         "prereq": ["ACCT200 or ACCT207"],
         "coreq": [""],
         "requirements": [""]
@@ -114,7 +114,7 @@
         "description": "In-depth coverage of financial accounting. Topics include: environment and conceptual framework of financial accounting; review of the accounting process; preparation of financial statements; recognition and measurement of current assets, property, plant and equipment and current liabilities.",
         "credits": 3,
         "semester": ["Fall, Winter and Spring"],
-        "department": "",
+        "department": "ACCT",
         "prereq": ["ACCT207, ACCT208"],
         "coreq": [""],
         "requirements": [""]
@@ -126,7 +126,7 @@
         "description": "Continuation of ACCT 315. Topics include: recognition and measurement of investments, long-Semesterterliabilities and stockholders\u2019 equity; dilutive securities and earning per share calculations; revenue recognition; accounting for income taxes, pensions and leases; accounting changes and error analysis; financial reporting and changing prices; preparation of the statement of cash flows; and disclosure requirements in financial reporting.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ACCT",
         "prereq": ["ACCT315"],
         "coreq": [""],
         "requirements": [""]
@@ -138,7 +138,7 @@
         "description": "Expose students to personal responsibilities and need for integrity. Provide a philosophical framework for ethical analysis. Review the ethical obligations of accountants. Discuss situations that present ethical conflicts and determine morally appropriate resolutions.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ACCT",
         "prereq": ["ACCT315"],
         "coreq": [""],
         "requirements": [""]
@@ -150,7 +150,7 @@
         "description": "Process, job order and standard costing; variable and absorption costing; budgeting, decentralization, and transfer pricing; and cost analysis for managerial applications.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ACCT",
         "prereq": ["ACCT208"],
         "coreq": [""],
         "requirements": [""]
@@ -162,7 +162,7 @@
         "description": "Formation, use and performance of contracts, including both Common Law and the Uniform Commercial Code (Article 2, Sales). Other topics covered include product liability, negotiable instruments and accountants\u2019 legal liability.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ACCT",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -174,7 +174,7 @@
         "description": "Covers variety of areas of law, including agency, partnerships, corporations, unfair competition, debtor-creditor relationships, bankruptcy, secured transactions, real and personal property, wills and trusts.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ACCT",
         "prereq": ["ACCT350"],
         "coreq": [""],
         "requirements": [""]
@@ -186,7 +186,7 @@
         "description": "Focuses on the legal environment of business, including objectives of the law, sources of the law, regulatory and judicial process, and effect of government and society on the formation and evolution of the law.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ACCT",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -198,7 +198,7 @@
         "description": "Requires 8-12 hours of training in tax preparation for people with incomes low enough to qualify for the EITC (Earned Income Tax Credit). In addition, at least 34 hours of service preparing returns for this type of taxpayer is expected.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ACCT",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -210,7 +210,7 @@
         "description": "Requires at least 120 hours of an accounting-related internship with verification by the hiring company. Semesterterpaper relating the real-world duties and experiences of the internship to principles learned in traditional accounting classes also required.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ACCT",
         "prereq": ["ACCT315, ACCT327"],
         "coreq": [""],
         "requirements": [""]
@@ -222,7 +222,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ACCT",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -234,7 +234,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ACCT",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -246,7 +246,7 @@
         "description": "Seminar on selected topics in international accounting. Combines lectures and visits to local organizations.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ACCT",
         "prereq": ["ACCT207"],
         "coreq": [""],
         "requirements": [""]
@@ -258,7 +258,7 @@
         "description": "Exposes students to the different phases of big data projects: discovery, collection, enrichment, analysis, and decision making. Students learn how to actually implement Big Data solutions.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ACCT",
         "prereq": ["ACCT302 or MISY330"],
         "coreq": [""],
         "requirements": [""]
@@ -270,7 +270,7 @@
         "description": "Addresses current information technology challenges in today\u2019s business environment. Although content will constantly change to reflect current technology and emerging issues, topics include: big data, openness in today\u2019s information systems, the cloud computing environment, the role of XML, digital financial reporting, ERP and Web services, the interoperability of information systems, and the Resource Description Framework.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ACCT",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -282,7 +282,7 @@
         "description": "Covers the traditional model of accounting for information users external to the firm as well as modern descriptive research. Examines institutional environment and impact of the organization on development of accounting theory and practice.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ACCT",
         "prereq": ["ACCT316"],
         "coreq": [""],
         "requirements": [""]
@@ -294,7 +294,7 @@
         "description": "Analysis of recent revenue acts; use of federal law and regulations todetermine tax liability.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ACCT",
         "prereq": ["ACCT315"],
         "coreq": [""],
         "requirements": [""]
@@ -306,7 +306,7 @@
         "description": "Advanced federal tax concepts including income taxation of corporations, partnerships, estates, and trusts as well as wealth transfer taxes (Estate and Gift Tax).",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ACCT",
         "prereq": ["ACCT413"],
         "coreq": [""],
         "requirements": [""]
@@ -318,7 +318,7 @@
         "description": "Introduction to branch accounting, consolidations, partnerships, fund accounting for state and local governments, and accounting for international transactions. Other relevant topics may also be covered.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ACCT",
         "prereq": ["ACCT316"],
         "coreq": [""],
         "requirements": [""]
@@ -330,7 +330,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ACCT",
         "prereq": ["ACCT313 or ACCT413, ACCT352 or ACCT350/ACCT450 "],
         "coreq": [""],
         "requirements": [""]
@@ -342,7 +342,7 @@
         "description": "Introduction to standards and procedures underlying contemporaryauditing.  Topics include ethics, legal liability, internal control, auditevidence, audit reports, statistical sampling, the audit of computerizedsystems, operational auditing, other engagements and services.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ACCT",
         "prereq": ["ACCT316"],
         "coreq": [""],
         "requirements": [""]
@@ -354,7 +354,7 @@
         "description": "Focuses on the efficient conservation and transfer of wealth. Studies the legal, tax, financial, and non-financial aspects of this financial planning process, covering topics such as trusts, wills, probate, advance directives, gift planning, wealth transfers, and related taxes.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ACCT",
         "prereq": ["ACCT350 or ACCT352"],
         "coreq": [""],
         "requirements": [""]
@@ -366,7 +366,7 @@
         "description": "Study of contemporary models of accounting for information users external to the firm. Includes an examination of the institutional environment and the impact of the institutions on the development of accounting theory and practices.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ACCT",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -378,7 +378,7 @@
         "description": "Explores the role of accounting and information systems in accomplishing thestrategic goals of the corporation.  Students exposed to accountinginformation from large data bases, enterprise-wide computing environments andcases and projects related to strategic problem solving across functionalareas of business.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ACCT",
         "prereq": ["ACCT302, ACCT316"],
         "coreq": [""],
         "requirements": [""]
@@ -390,7 +390,7 @@
         "description": "Covers internal audit from a broad perspective and the important role in today\u2019s companies. Topics include: Governance, Ethics, Business Processes, Risk Assessments, Controls, and Information Technology.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ACCT",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -402,7 +402,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ACCT",
         "prereq": ["ACCT352 or ACCT350"],
         "coreq": [""],
         "requirements": [""]
@@ -414,7 +414,7 @@
         "description": "Explores important legal issues faced by entrepreneurs as they put their ideas into action. Topics are sequenced to mirror the entrepreneurial process, beginning with pre-startup issues like partnership agreements and intellectual property, continuing to entity formation, governance and ownership issues, and ending with emerging growth and exit transactions.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ACCT",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -426,7 +426,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ACCT",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -438,7 +438,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "ACCT",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -450,7 +450,7 @@
         "description": "Describes the functions of international accounting; foreign currency transactions, financial statement translation, inflation, auditing and taxation. Current issues are covered as appropriate.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ACCT",
         "prereq": ["ACCT207, ACCT315"],
         "coreq": [""],
         "requirements": [""]
@@ -462,7 +462,7 @@
         "description": "Provides a foundation for knowledge as professional accountants in intermediate financial accounting topics under US GAAP. Material included goes beyond the basics for analyzing and recording advanced accounting transactions.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ACCT",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -474,7 +474,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ACCT",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -486,7 +486,7 @@
         "description": "Surveys concepts underlying financial accounting and external reporting. Provides an understanding of accounting methods, standards, and terminology so that students can interpret and evaluate financial statements. Students are encouraged to participate in class and group discussions involving contemporary investment issues and decisions.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ACCT",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -498,7 +498,7 @@
         "description": "Examines the use and impact of accounting information on decision making and strategic choice and on the role of information in organization control.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ACCT",
         "prereq": ["ACCT620, FINC650"],
         "coreq": [""],
         "requirements": [""]
@@ -510,7 +510,7 @@
         "description": "Exposes students to the different phases of big data projects: discovery, collection, enrichment, analysis, and decision making. Students learn how to actually implement Big Data solutions.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ACCT",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -522,7 +522,7 @@
         "description": "Introduces the fundamentals of modern database concepts. Covers relational database design and implementation techniques, as well as the current relational database standard - the structured query language (SQL). Explore advanced topics such as big data analytics.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ACCT",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -534,7 +534,7 @@
         "description": "Covers a broad range of topics currently affecting business analytics and information systems. The goal of the course is to understand how current and emerging technologies influence the current business environment and how the current environment impacts technology development.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ACCT",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -546,7 +546,7 @@
         "description": "Explores the management, organizational and technical challenges of developingsystems. Analyzes business processes within a data-driven developmentmethodology. Students will elicit requirements, weigh alternatives and designand implement solutions. Data, process and object modeling will be covered.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ACCT",
         "prereq": ["ACCT604"],
         "coreq": [""],
         "requirements": [""]
@@ -558,7 +558,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "ACCT",
         "prereq": ["ACCT207"],
         "coreq": [""],
         "requirements": [""]
@@ -570,7 +570,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "ACCT",
         "prereq": ["ACCT610"],
         "coreq": [""],
         "requirements": [""]
@@ -582,7 +582,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "ACCT",
         "prereq": ["ACCT610"],
         "coreq": [""],
         "requirements": [""]
@@ -594,7 +594,7 @@
         "description": "Federal tax course for MS in Accounting students who have not had an equivalent undergraduate course in federal taxation.  Covers income and expense recognition, tax accounting periods and method, individual tax provisions, tax credits, and property transactions.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ACCT",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -606,7 +606,7 @@
         "description": "Introduces master\u2019s student to techniques and tools of technical tax research. Advanced federal tax concepts including income taxation of corporations, partnerships, estates, and trusts as well as wealth transfer taxes (Estate and Gift Tax).",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ACCT",
         "prereq": [""],
         "coreq": ["ACCT413"],
         "requirements": [""]
@@ -618,7 +618,7 @@
         "description": "Coverage includes the remaining topics required for the Financial Accounting and Reporting (FAR) section of the CPA exam. These topics include: partnerships, business combinations, foreign currency transactions, and governmental/not for profit accounting.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ACCT",
         "prereq": ["ACCT612"],
         "coreq": [""],
         "requirements": [""]
@@ -630,7 +630,7 @@
         "description": "Introduction to the basic concepts underlying assurance and auditing services. Explores the judgment required of the auditor as a professional in a changing and demanding legal, ethical, and business environment. The emphasis will be on understanding why and how audits are performed. Critical evaluation of auditing issues and development of oral and written communication skills will also be emphasized.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ACCT",
         "prereq": ["ACCT612"],
         "coreq": [""],
         "requirements": [""]
@@ -642,7 +642,7 @@
         "description": "Focuses on the efficient conservation and transfer of wealth.  Studies the legal, tax, financial, and non-financial aspects of this financial planning process, covering topics such as trusts, wills, probate, advance directives, gift planning, wealth transfers, and related taxes.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ACCT",
         "prereq": ["ACCT350 or ACCT352"],
         "coreq": [""],
         "requirements": [""]
@@ -654,7 +654,7 @@
         "description": "Study of contemporary models of accounting for information users external to the firm. Includes an examination of the institutional environment and the impact of the institutions on the development of accounting theory and practices.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ACCT",
         "prereq": ["ACCT316"],
         "coreq": [""],
         "requirements": [""]
@@ -666,7 +666,7 @@
         "description": "Examines contemporary aspects of financial statement analysis such as the supply and demand for accounting information, statistical properties of accounting numbers and the impact of information on securities prices.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ACCT",
         "prereq": ["ACCT600 or ACCT316"],
         "coreq": [""],
         "requirements": [""]
@@ -678,7 +678,7 @@
         "description": "Covers internal audit from a broad perspective and the important role in today\u2019s companies. Topics include: Governance, Ethics, Business Processes, Risk Assessments, Controls, and Information Technology.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ACCT",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -690,7 +690,7 @@
         "description": "This course provides an abbreviated introduction to auditing concepts and theories, explores analytical approaches and tools that can be harnessed for conducting rigorous statistical analysis, and examines the methods utilized for accessing, integrating, and analyzing large amounts of data on audit engagements. The course features extensive use of case studies, student self-study, student-lead learning and team assignments.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ACCT",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -702,7 +702,7 @@
         "description": "Formation, use and performance of contracts, including both Common Law and the Uniform Commercial Code (Article 2, Sales). Other topics include product liability, negotiable instruments and accountants\u2019 legal liability. Covers variety of areas of law, including agency, partnerships, corporations, unfair competition, debtor-creditor relationships, bankruptcy, secured transactions, real and personal property, wills and trusts.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ACCT",
         "prereq": ["ACCT207"],
         "coreq": [""],
         "requirements": [""]
@@ -714,7 +714,7 @@
         "description": "Explores important legal issues faced by entrepreneurs as they put their ideas into action. Topics are sequenced to mirror the entrepreneurial process, beginning with pre-startup issues like partnership agreements and intellectual property, continuing to entity formation, governance and ownership issues, and ending with emerging growth and exit transactions.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ACCT",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -726,7 +726,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "ACCT",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -738,7 +738,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "ACCT",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -750,7 +750,7 @@
         "description": "Describes functions of international accounting: foreign currency transactions, financial statement translation, inflation, auditing, and taxation. Comparative approach is stressed. Current issues are covered as appropriate.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ACCT",
         "prereq": ["ACCT620 or ACCT316"],
         "coreq": [""],
         "requirements": [""]
@@ -762,7 +762,7 @@
         "description": "Explores the management, organizational and technical challenges of developingsystems. Analyzes business processes within a data-driven developmentmethodology. Students will elicit requirements, weigh alternatives and designand implement solutions. Data, process and object modeling will be covered.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ACCT",
         "prereq": ["ACCT604"],
         "coreq": [""],
         "requirements": [""]
@@ -774,7 +774,7 @@
         "description": "Study of contemporary models of accounting for information users external to the firm. Includes an examination of the institutional environment and the impact of the institutions on the development of accounting theory and practices.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ACCT",
         "prereq": ["ACCT316"],
         "coreq": [""],
         "requirements": [""]
@@ -786,7 +786,7 @@
         "description": "Analysis of current and prospective developments in professional auditing. Topics include auditing computerized systems and the use of statistical sampling by the auditor.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ACCT",
         "prereq": ["ACCT417"],
         "coreq": [""],
         "requirements": [""]
@@ -798,7 +798,7 @@
         "description": "Selected problems of current interest to the accounting profession.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ACCT",
         "prereq": ["ACCT316, ACCT327"],
         "coreq": [""],
         "requirements": [""]
@@ -810,7 +810,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "ACCT",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -822,7 +822,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "ACCT",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -834,7 +834,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "ACCT",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -846,7 +846,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AGED",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -858,7 +858,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "AGED",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -870,7 +870,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "AGED",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -882,7 +882,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "AGED",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -894,7 +894,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "AGED",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -906,7 +906,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "AGED",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -918,7 +918,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "AGED",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -930,7 +930,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "AGED",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -942,7 +942,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "AGED",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -954,7 +954,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "AGED",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -966,7 +966,7 @@
         "description": "Introduction to sustainable food systems for students with little or no background in agricultural sciences. The history, common practices, regulations, economics, nutritional, environmental and sustainability issues surrounding the organic food industry are discussed within the broad context of sustainable food systems. Students will actively participate in growing crops organically and conventionally on the Newark Farm to develop a fuller understanding of challenges and opportunities of organic farming.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AGRI",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -978,7 +978,7 @@
         "description": "Broad overview of Delaware agriculture and its associated industries. Topics include agronomic, vegetable, fruit, and livestock production; management of water and other natural resources; agricultural statistics, marketing, and promotion; food safety, supply, and security; state government; the importance and impact of technology (GMOs and precision ag); impact on corporate America and on climate; social media.  Classroom blog, guest speakers, workforce preparation, and various field trips allow for interactive and hands-on experiences.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AGRI",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -990,7 +990,7 @@
         "description": "Focuses on academic services, career exploration and preparation, campusresources, and practical skills that are helpful in mastering the freshmanyear.",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "AGRI",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1002,7 +1002,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "AGRI",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1014,7 +1014,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "AGRI",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1026,7 +1026,7 @@
         "description": "Communication skills as they relate to leadership styles will be explored.  Practical experience in oral and written communication as well as social media will occur with a hybrid course with one session in class and on on-line.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "AGRI",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1038,7 +1038,7 @@
         "description": "Introduction to the concept of One Health: the integration of human, animal and environmental health. Specific focus will be given to bacterial, viral and fungal zoontic and emerging diseases, agriculture, and the use and misuse of antibiotics in animal and human health.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AGRI",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1050,7 +1050,7 @@
         "description": "The focus of this course is on promoting environmental stewardship, enhancement of the quality of life for farm families and communities, increasing production for human food and fiber needs, and protection of the environment and expansion of the natural resources supply. Topics such as ecological, economic and social concerns related to agriculture, its impact on human health and philosophical considerations associated with agricultural production may also be addressed in this course.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AGRI",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1062,7 +1062,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AGRI",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1074,7 +1074,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "AGRI",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1086,7 +1086,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "AGRI",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1098,7 +1098,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "AGRI",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1110,7 +1110,7 @@
         "description": "Capstone experience for students in the Agriculture and Natural Resources interdisciplinary major.  A culminating and integrative experience that examines issues facing the agriculture and natural resource fields.",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "AGRI",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1122,7 +1122,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "AGRI",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1134,7 +1134,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "AGRI",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1146,7 +1146,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "AGRI",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1158,7 +1158,7 @@
         "description": "Survey course which briefly covers topics relating to the Air Force and defense. Focuses on the structure and missions of Air Force organizations, officership and professionalism. Introduction into the use of communication skills.",
         "credits": 1,
         "semester": ["Fall"],
-        "department": "",
+        "department": "AFSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1170,7 +1170,7 @@
         "description": "Continuation of AFSC 110. Survey course which briefly covers topics relating to the Air Force and defense. Focuses on the structure and missions of Air Force organizations, officership and professionalism. Introduction into the use of communication skills.",
         "credits": 1,
         "semester": ["Spring"],
-        "department": "",
+        "department": "AFSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1182,7 +1182,7 @@
         "description": "This course (to be taken in conjunction with AFSC 110 and AFSC 111 respectively) is a weekly laboratory that touches on the topics of Air Force customs and courtesies, health and physical fitness, and drill and ceremonies.",
         "credits": 0,
         "semester": ["Fall"],
-        "department": "",
+        "department": "AFSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1194,7 +1194,7 @@
         "description": "Continuation of AFSC 150. Provides instruction on the ROTC program and an overview to Air Force skills and life.",
         "credits": 0,
         "semester": ["Spring"],
-        "department": "",
+        "department": "AFSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1206,7 +1206,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "AFSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1218,7 +1218,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "AFSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1230,7 +1230,7 @@
         "description": "Survey course focused on the beginnings of manned flight and the development of aerospace power in the United States, including the employment of air power in WWI, WWII, Korea, Vietnam, the Gulf War and the peaceful employment of U.S. air power in civic actions, scientific missions and support of space exploration.",
         "credits": 1,
         "semester": ["Fall"],
-        "department": "",
+        "department": "AFSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1242,7 +1242,7 @@
         "description": "Continuation of AFSC 210. Survey course focused on the beginnings of manned flight and the development of aerospace power in the United States, including the employment of air power in WWI, WWII, Korea, Vietnam, the Gulf War and the peaceful employment of U.S. air power in civic actions, scientific missions and support of space exploration.",
         "credits": 1,
         "semester": ["Spring"],
-        "department": "",
+        "department": "AFSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1254,7 +1254,7 @@
         "description": "This course (to be taken in conjunction with AFSC 210 and AFSC 211 respectively) provides you with the opportunity to demonstrate fundamental management skills and prepares you for Field Training.",
         "credits": 0,
         "semester": ["Fall"],
-        "department": "",
+        "department": "AFSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1266,7 +1266,7 @@
         "description": "This course (to be taken in conjunction with AFSC 210 and AFSC 211 respectively) provides you with the opportunity to demonstrate fundamental management skills and prepares you for Field Training.",
         "credits": 0,
         "semester": ["Spring"],
-        "department": "",
+        "department": "AFSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1278,7 +1278,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "AFSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1290,7 +1290,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Spring"],
-        "department": "",
+        "department": "AFSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1302,7 +1302,7 @@
         "description": "This course is a study in the anatomy of leadership, the need for quality and management leadership, the role of discipline in leadership situations and the variables affecting leadership. Case studies are used to examine Air Force leadership and management situations as a means of demonstrating and exercising practical application of the concepts. Deal with actual problems and complete projects associated with planning and managing the Leadership Laboratory.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "AFSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1314,7 +1314,7 @@
         "description": "Continuation of AFSC 310. This course is a study in the anatomy of leadership, the need for quality and management leadership, the role of discipline in leadership situations and the variables affecting leadership. Case studies are used to examine Air Force leadership and management situations as a means of demonstrating and exercising practical application of the concepts. Deal with actual problems and complete projects associated with planning and managing the Leadership Laboratory.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "AFSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1326,7 +1326,7 @@
         "description": "This course (taken in conjunction with AFSC 310 and AFSC 311 respectively) provides you the opportunity to develop your fundamental management skills while planning and conducting cadet activities.",
         "credits": 0,
         "semester": ["Fall"],
-        "department": "",
+        "department": "AFSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1338,7 +1338,7 @@
         "description": "This course (taken in conjunction with AFSC 310 and AFSC 311 respectively) provides you the opportunity to develop your fundamental management skills while planning and conducting cadet activities.",
         "credits": 0,
         "semester": ["Spring"],
-        "department": "",
+        "department": "AFSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1350,7 +1350,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Spring"],
-        "department": "",
+        "department": "AFSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1362,7 +1362,7 @@
         "description": "Learn about the role of the professional military leader in a democratic society; societal attitudes toward the armed forces; the requisites for maintaining adequate national defense structure; the impact of technological and international developments on strategic preparedness and the overall policy-making process; and military law. In addition, you will study topics that will prepare you for your first active-duty assignment as an officer in the Air Force.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "AFSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1374,7 +1374,7 @@
         "description": "Continuation of AFSC 410 . Learn about the role of the professional military leader in a democratic society; societal attitudes toward the armed forces; the requisites for maintaining adequate national defense structure; the impact of technological and international developments on strategic preparedness and the overall policy-making process; and military law. In addition, you will study topics that will prepare you for your first active-duty assignment as an officer in the Air Force.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "AFSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1386,7 +1386,7 @@
         "description": "This course (taken in conjunction with AFSC 410 and AFSC 411 respectively) provides you with the opportunity to use your leadership skills in planning and conducting cadet activities. It prepares you for commissioning and entry into the active-duty Air Force.",
         "credits": 0,
         "semester": ["Fall"],
-        "department": "",
+        "department": "AFSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1398,7 +1398,7 @@
         "description": "This course (taken in conjunction with AFSC 410 and AFSC 411 respectively) provides you with the opportunity to use your leadership skills in planning and conducting cadet activities. It prepares you for commissioning and entry into the active-duty Air Force.",
         "credits": 0,
         "semester": ["Spring"],
-        "department": "",
+        "department": "AFSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1410,7 +1410,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Spring"],
-        "department": "",
+        "department": "AFSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1422,7 +1422,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "AFSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1434,7 +1434,7 @@
         "description": "The study of various styles of rock music. Introduction to folk, country, blues, and jazz as predecessors to rock. Intended for the non-music major. No music reading skills required.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1446,7 +1446,7 @@
         "description": "Assesses the status of Black America in the modern technological order through an examination of the major spheres of institutional life, including employment, education politics, criminal justice and the military.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1458,7 +1458,7 @@
         "description": "Introduction to African history south of the Sahara, from the earliest times to 1914. Introduces major themes in African history: pre-colonial African political, social and economic institutions; diversity in African political organizations; slave trade and colonialism.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1470,7 +1470,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1482,7 +1482,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1494,7 +1494,7 @@
         "description": "This course takes a multidisciplinary approach to the study of peoples of African descent in Caribbean and Latin American context. This course begins with continental Africa from early times (concerning the TransAtlantic Slave Trade and continues to contemporary times. The course reviews the geography, history, social, political, and economic developments of peoples of African descent in the Caribbean and Latin America. It also reviews the evolution and implication of the Atlantic slave trade and the dispersal of peoples of African descent in the Caribbean and Latin American realm and the effects of enslavement involving cultural development.",
         "credits": 3,
         "semester": ["Fall, Winter and Spring"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1506,7 +1506,7 @@
         "description": "Explores architecture in Africa as a representation both of political power and social/religious complexity. Architecture\u2019s relationship to art forms a component of course content. Always regionally focused, lecture vary by semester among these five zones: West Africa and the Maghreb, the Sahel (West Africa and East Africa), East Africa and the Nile Valley, Southern Africa, and Central Africa.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1518,7 +1518,7 @@
         "description": "Urbanization, rural-urban social differences and the organization of urban communities by race, class, ethnicity and stage in the life cycle.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1530,7 +1530,7 @@
         "description": "The impact of important issues involving African American people in contemporary American society. Critical theoretical analyses of trends that affect programs of the Black community writ large.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1542,7 +1542,7 @@
         "description": "Historic and contemporary aspects of African American culture. A multi-faceted approach utilizing resources from music, literature, history, folklore, religion and sociology.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1554,7 +1554,7 @@
         "description": "Chronological study of the style changes in jazz from the late 19th century to the present. Emphasis on the sociological, economic and technological influences of the period and on the principal personalities who have been primarily responsible for change.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1566,7 +1566,7 @@
         "description": "Examination of the social construction of race and its importance in institutions and social identify. History of race in the United States, including access to rights and privileges and how groups worked for racial equality. and how race structures relationships among diverse groups in society. Includes analysis of rights and privileges denied or extended to groups and how disadvantaged groups work towards racial equality.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1578,7 +1578,7 @@
         "description": "Literature by African American Writers from the eighteenth through twenty-first centuries.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1590,7 +1590,7 @@
         "description": "This course examines African American struggles for freedom, equality, and citizenship from the 1940s to the present.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1602,7 +1602,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1614,7 +1614,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Winter and Summer"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1626,7 +1626,7 @@
         "description": "This course examines the interrelationship of sports, media, and culture in today\u2019s society and how that interrelationship sometimes reinforces or challenge social values. It draws on the cultural identification of class, race, and gender to identify sports values and cultural values. Drawing on theories of culture, rhetoric, and social criticism, we will examine media\u2019s role in telling the story of sports and, in telling that story, shapes cultural values. Students will study several critical approaches to sports and public discourse and will apply those approaches to journalism, public relations, the news and popular media, and other forms of mass communication.",
         "credits": 3,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1638,7 +1638,7 @@
         "description": "Racism is a hot-button issue globally. Although thoroughly debunked and are more widely condemned than ever, it nevertheless continues to surface in government policies, popular representations, and brutal acts of violence. What is it that makes racism so intractable? This course works to answer that question by analyzing racism as a problem that\u2019s deeply em-bedded in Western societies, albeit similarly prevalent in many non-Western countries. We\u2019ll also look at how racism connects with other social categories such as Indigeneity, gender, sexuality, disability, religion and class. And in addition to considering how racism has oper-ated to oppress, exclude and scapegoat, we\u2019ll also be attentive to how marginalized groups have fought back.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1650,7 +1650,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1662,7 +1662,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1674,7 +1674,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1686,7 +1686,7 @@
         "description": "In order to challenge discrimination and oppression, it is vital to understand how systems of discrimination develop and are perpetuated and how these are challenged. This class will familiarize students with key concepts and issues in social justice, including: social construction, discrimination, privilege, systemic oppression, implicit bias and social activism. Because issues of social justice span the globe, this class will emphasize the links between both American and global social justice issues.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1698,7 +1698,7 @@
         "description": "Culminate in the creation of new theatrical works based in African American History using Theatre, Music, Dance, Writing, Literature, Painting, Sculpture, Sets, Costumes, Lighting, Sound, and Multi-media.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1710,7 +1710,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1722,7 +1722,7 @@
         "description": "This course focuses on visual, literary, and sonic representations of black womanhood of the 20<sup>th</sup> and 21<sup>st</sup> centuries in the context of black woman-authored speculative fiction and discourses of futurity. Through closely looking at and listening to visual, literary, and sonic texts by black women, we will consider social constructions of race, gender, and sexuality; the significance of self-fashioning; and notions of community and belonging.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1734,7 +1734,7 @@
         "description": "Through an interdisciplinary lens this course explores current social, political, educational and economic inequities facing the black community and critically assess their causes, effects, and possible solutions (i.e. disenfranchisement, the school-to-prison pipeline, mass incarceration, policing, and poverty).",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1746,7 +1746,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1758,7 +1758,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1770,7 +1770,7 @@
         "description": "Topics vary.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1782,7 +1782,7 @@
         "description": "This course explores how Black women\u2019s experiences in church and society affect about the meaning of God, Jesus and salvation. This introduction to womanist theology demonstrates how Christian faith can be rooted in their experiences. As black Christian women define faith for themselves, they analyze church teachings, challenge church structures and re-interpret media.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1794,7 +1794,7 @@
         "description": "Recent topics include Passing the Torch: An Interdisciplinary Look at a World Poised for Change; Living in History; Representations of Race, Class and Gender in the Media; Sexual Identity in Contemporary Culture. May be repeated for credit when topics vary.",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1806,7 +1806,7 @@
         "description": "Lecture series in which faculty and guest speakers discuss their research on contemporary and historical perspectives on race, ethnicity and culture. Research presented from several disciplines, including sociology, history, literature, anthropology and psychology, among others.",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1818,7 +1818,7 @@
         "description": "The history of African American life and culture to the Civil War.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1830,7 +1830,7 @@
         "description": "Evaluate various forms of media by black cultural producers that prompt nuanced understandings of black social life, from documentary and mainstream film to Black Twitter to video games.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1842,7 +1842,7 @@
         "description": "Provides an overview of the major themes, issues, and debates in African American History from the Civil War to the contemporary era. Through readings, lectures, discussions, and films, the course will address: the process of emancipation, Reconstruction, Jim Crow segregation and racial violence, black cultural production, the modern black freedom struggles, and black life in the 21st century.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1854,7 +1854,7 @@
         "description": "Readings and discussions of Black philosophies, ideologies and concepts as reflected in the thought of significant Black figures.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1866,7 +1866,7 @@
         "description": "Survey course in Delaware Black history. The Black American in Delaware from colonial times to recent developments.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1878,7 +1878,7 @@
         "description": "Introduction to the political and civic cultures underpinning and supporting different political systems. Topics may vary depending on host country.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1890,7 +1890,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1902,7 +1902,7 @@
         "description": "This course looks at the breadth and depth of international Black design from the 20th century to contemporary times, concentrating on African American designers. Using historical and cultural analysis to place designed objects in their context, students understand the symbiotic relationships among design, politics, history, and culture",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1914,7 +1914,7 @@
         "description": "A critical race history of blacks as subjects, producers, and theorists of photography. Includes examination of issues, ideas, and creativity with respect to African American and African diasporic photography from the late nineteenth century to the present day. Topics range from portraiture and documentary photography to considerations of race and representation, black consciousness, strategies of resistance and identity formation, class, sex, and gender.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1926,7 +1926,7 @@
         "description": "Examine classic black feminist texts and cutting-edge scholarship on body politics and popular culture. Together, these materials will illuminate the vibrancy and diversity of fashion in the African diaspora emphasizing its political implications. Our exploration of underground and mainstream fashion cultures just might change what we think we know about black feminism and its cultural-political legacies.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1938,7 +1938,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1950,7 +1950,7 @@
         "description": "Black women are a force in U.S. popular culture. This course introduces students to cutting-edge black feminist and queer theory as it examines representations of black women in contemporary media culture.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1962,7 +1962,7 @@
         "description": "Provides an insight and understanding of race as an intricate part of the political process in the United States. Role of race in United States politics is explored primarily through the political experiences of black Americans and how the political system has responded.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1974,7 +1974,7 @@
         "description": "20th Century international liberation artists\u2019 works are examined from interdisciplinary perspectives. Students will observe and write about art works using behavioral science methods. Interaction with contemporary social change artists and one visual project are part of the course.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1986,7 +1986,7 @@
         "description": "Examines the art and visual culture of the African diaspora since the 1960s. Topics include the Black Arts Movement in the USA and UK, Abstract Expressionism, the Afri-Cobra movement, recycled stereotypes, installation art, and performance art.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -1998,7 +1998,7 @@
         "description": "Focus on the historical, geographical, and cultural specificities of cultures in the African diaspora. Addresses the following main topics: history and geography of the African diaspora; slavery and responses to slavery (rebellions and revolutions); the \u2018big thinkers\u2019 of the African Diaspora, cultural manifestations (music and religion); discourses of whiteness, and ways to remember the Motherland.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2010,7 +2010,7 @@
         "description": "Critically examines a number of metaphysical, epistemological, and ethical issues related to the science of race, gender, and sexual orientation. Topics may include (a) evolution of sex and gender, (b) gender and cognition, (c) biological basis (or lack thereof) of sexual orientation/preference (d) evolutionary, cognitive, historical, and political origins of race thinking, (d) relationships between everyday conceptions of race and gender as compared with scientific conceptions of race and gender, and (e) ethical issues raised by humankind classification schemes.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2022,7 +2022,7 @@
         "description": "This course brings into focus the lived experiences of Black women throughout United States history through the end of the Civil War. Beginning with the first African women to encounter North American shores in the 17<sup>th</sup> century, Black women\u2019s knowledge, creativity, activism, and community leadership have been integral to both Black people\u2019s perseverance, and to the evolution of this country. Throughout this course, Black women\u2019s voices will be central. We will read Black women\u2019s writing, examine the ways Black women fashioned their own bodies, and we will survey Black women\u2019s art throughout this early period. We will examine a wide range of sources including periodicals, slave narratives, memoir/autobiography, oral history, poetry, visual art, film, and music, in addition to assigned secondary literature. In doing so, this course surveys the multitude of Black women\u2019s experiences and perspectives across class, region, and time. We will move both chronologically and thematically as we explore core themes such as labor, motherhood, sisterhood, sexuality, resistance, respectability, and political activism. A primary goal will be to consider how Black women have worked to determine their own lives and possess their own bodies while other groups have sought to dominate and control them.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2034,7 +2034,7 @@
         "description": "Utilize the practical tools of rhetorical criticism to examine, attempt to understand and analyze the advocacy and discourse of African Americans throughout history and the present. The methods utilized will include classical and contemporary African rhetorical theories as well as classical and contemporary theories of rhetorical analysis better known to European and North American scholars. Choose specific speakers and engage in a rhetorical criticism of some element of the discourse of that speaker.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2046,7 +2046,7 @@
         "description": "Examines major themes in Caribbean history from the pre-Columbian period to the end of slavery in 1838. Discussion of the demographic and ecological consequences of European contact, sugar, and slavery, the evolution of Creole cultures and slave resistance.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2058,7 +2058,7 @@
         "description": "Examines the period from 1838 to the present. Includes a discussion of the social and economic adjustments to emancipation, the making of plural societies with the importation of Asian laborers, American imperialism, and political and social movements of the twentieth century.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2070,7 +2070,7 @@
         "description": "Social institutions and cultural traditions of Africa; political, economic, legal and kinship systems, and modes of thought.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2082,7 +2082,7 @@
         "description": "Explores the diversity of African American women\u2019s lives and development of women, work, and culture from 1865 through the late 20th century. Examines the social, political, religious and economic factors affecting change and transformation in the lives of African American women. Provides a broad introduction to the interdisciplinary field of African American and Women\u2019s Studies.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2094,7 +2094,7 @@
         "description": "Field experience combined with a seminar emphasizing professional issues in human services and human resources, including portfolio development and career planning. Students should arrange for a 50-hour field placement prior to the first week of class (see instructor).",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2106,7 +2106,7 @@
         "description": "In this class we will examine the institution of slavery from 1619 through the Civil War. This course has a number of goals, one of which is to examine the peculiar institution over space and time within colonial and antebellum America.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2118,7 +2118,7 @@
         "description": "Introduction to African American Theatre and the impact of African Americans in theatre performance. Critical discussions of plays and historical events, and allows students to uncover how non-traditional casting affects the playing and development of a theatrical performance. Explore the similarities and differences of theatrical styles and tactics as they pertain to African American theatre and performance.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2130,7 +2130,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2142,7 +2142,7 @@
         "description": "Special topics, ranging from the beginnings to contemporary American literature; may include studies in a single author or authors (e.g., the detective stories of Poe) or period and genre studies (e.g., the Harlem Renaissance or the humor of the old southwest). Variable content.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2154,7 +2154,7 @@
         "description": "Examines how race affects work-related experiences and opportunities of black workers in the United States.  Explores ways in which race, class, gender and other systems of social organization operate to determine access to resources, how resource access is managed and restricted, and to what extent workers are able to achieve economic and occupational mobility. Also looks at cultural and social capital formation and their impact on Black workers\u2019 employment outcomes.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2166,7 +2166,7 @@
         "description": "Explores the multiple, complex and historically changing meanings of race and ethnicity in Latin America, and the consequences of discrimination towards specific groups. Regions covered are the Caribbean, Mexico and Central America, and the Andean, Atlantic and Southern Cone regions of South America.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2178,7 +2178,7 @@
         "description": "Explores black women and their struggles to define and redefine themselves in the US, from the age of slavery to the modern era. Examines the historical evolution of black feminist theory starting with slave narratives and ending with contemporary readings.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2190,7 +2190,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2202,7 +2202,7 @@
         "description": "Study of selected topics in 20th century British, American and world literature, e.g., the contemporary epic novel, post-colonial writing and politics.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2214,7 +2214,7 @@
         "description": "A detailed examination of racial inequality, including the social construction of race, the nature of oppression and advantage, government policies, and resistance strategies. There will be attention to the status of men, women, and social class diversity within racial-ethnic communities.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2226,7 +2226,7 @@
         "description": "This course examines the hemispheric history of maroons and marronage in slaveholding Latin America, the Caribbean, and the United States. Maroons and their communities, or communities of those some would call \u201crunaway slaves,\u201d were an ever-present feature of slaveholding societies throughout the Americas. Everywhere they existed, from Brazil to Jamaica, from Virginia to Suriname, or from Mexico to Haiti, they proved the indomitable spirit of African people and their descendants, and the great failures of the institution of slavery. Throughout the course, we will look closely at the demographic, economic, and geographic opportunities for enslaved mobility and resistance that shaped the formation of the Atlantic world. The central focus will be an analysis of the historical impact of marronage across the Americas from 1502 to 1865.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2238,7 +2238,7 @@
         "description": "Examine the history of people of African descent in the western region of the United States from the Spanish colonial era to the present. Focus on contributions of men and women who shaped history of the region, of black America, and of the entire nation.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2250,7 +2250,7 @@
         "description": "Interdisciplinary exploration of the interactions between African Americans and Native Americans in the Americas (with a specific focus on the U.S.) from the colonial era to the present. Themes explored will be Transatlantic slavery and early Black-Indian continental contacts; American Indians as slaves and slave owners; the Black-Indian experience in the Jim Crow South and frontier West; Afro-Indian people and the politics of mixed-race identity; and contemporary African American and Native American relations in the U.S.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2262,7 +2262,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2274,7 +2274,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2286,7 +2286,7 @@
         "description": "Examine the institution of slavery in the Americas through the perspective of the slaves who endured it. Letters, speeches, interviews, and narratives will be examined within the historical context of 18th and 19th-century slave society. The goal of the course is to (1) gain a deeper understanding of the slave experience from the slave\u2019s point of view, (2) examine the historical dimensions of slave testimony and its use as historical evidence, and (3) understand the gendered, regional, period, and spatial nuances of the slave experience.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2298,7 +2298,7 @@
         "description": "This course bridges how social media has changed our relationship to struggles for racial and gender equity and freedom with studies of art and visual culture of black protest in the 21<sup>st </sup>century. We will look closely at how artists of African descent in particular have used fine art, film, and popular music to spur social change in the digital age. Considering the current U.S. political climate, ongoing racial and gender violence, and debates about the relationship between art and public life, this course is particularly urgent.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2310,7 +2310,7 @@
         "description": "This course examines the history and scholarship of African American music from the age of slavery to the 1990s. Focusing on African American sacred and secular music, we will investigate how different musical genres\u2013including spiritual, blues, jazz, gospel, rhythm, and the birth of hip hop\u2013reflected African Americans\u2019 social, political, and economic experiences.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2322,7 +2322,7 @@
         "description": "In examining the philosophy of hip-hop, we will look at its ontology, epistemology, and ethics. We will ask the following questions: What does hip-hop say about the meaning of life and who we are? What does hip-hop say about how we come to know things and what knowledge is? What does hip-hop say about how we should act? How should society be structured?",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2334,7 +2334,7 @@
         "description": "Critical look at the evolution of Gangster Rap music and culture in low-income Black communities. Also focuses on how \u201cstreet identified\u201d Black youth and adults\u2013or those engaged in crime as a lifestyle\u2013have organized a sociopolitical and economic movement through their music.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2346,7 +2346,7 @@
         "description": "Contemporary cultures and societies of Latin America, with emphasis on historical perspective. Looks at both rural and urban populations, the elite, the military, the church, students, and workers.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2358,7 +2358,7 @@
         "description": "Examines the development of a \u201cstreet identity\u201d in Black men within the community and in the criminal justice system, particularly as a result of inadequate economic and educational opportunity.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2370,7 +2370,7 @@
         "description": "Consideration of multiculturalism as it pertains to American culture or literature in English from Africa and other non-European societies. Variable in historical range, geography, and genre.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2382,7 +2382,7 @@
         "description": "Develops methodology-based skills allowing for systematic thought and conduct of research on Black Americans in the African Diaspora.",
         "credits": 4,
         "semester": ["Fall"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2394,7 +2394,7 @@
         "description": "Focuses on the social and political history of Brazil over five hundred years, from first indigenous contact with Europeans through independence, formation of the Republic, modernization and contemporary issues facing the country. Ends by examining Brazil\u2019s changing place on the global stage.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2406,7 +2406,7 @@
         "description": "This course is colloquy formatted and specifically either with one text or various texts. Text is construed as either written, imaged, filmic, etc. etc. etc. Dialogues and disagreements are encouraged to help us reconceive (which is in keeping with Africana Studies) paradigms of knowledge. All of the work in the course connects to the student\u2019s concentration and thus the readings are in a multivariate intellectual context and thus works within varying disciplinary identities that serve to develop divergent understanding.",
         "credits": 3,
         "semester": ["Fall, Winter and Spring"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2418,7 +2418,7 @@
         "description": "Traces the rise, development, and varied expressions of the drive towards the liberation and unity of black people on the continent (Africa) and in the diaspora. Covers liberation struggles in Africa and the Civil Rights movement in the United States.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2430,7 +2430,7 @@
         "description": "Surveys the complex historical development of South African society. Topics include African resistance to white expansion, wars of resistance, the impact of agricultural and labor laws on African societies, tensions in white society, Afrikaners in power since 1948, and African struggles for freedom.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2442,7 +2442,7 @@
         "description": "This course will acquaint students with the history of African-American religious practices from slavery to the present. It will also introduce students to African-American religious diversity including the practice of Islam, African traditional religions (such as Yoruba, Vodun and Santeria), Buddhism, Humanism and New Thought religions. Particular attention will be given to the roles of women in the various religious traditions.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2454,7 +2454,7 @@
         "description": "Analysis of current American social issues that show interrelationship of race,class and gender. Readings from sociology, Afro-American studies, feminist studies, history and literature.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2466,7 +2466,7 @@
         "description": "Experience of Black Americans as viewed from a psychological perspective. Psychological theory and research pertaining to Black Americans; reactions to oppression, collective behavior, personality development, and life styles.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2478,7 +2478,7 @@
         "description": "An examination of contemporary American poverty with attention to race and gender as fundamental dimensions of inequality. Social policy, employment and family composition are key topics.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2490,7 +2490,7 @@
         "description": "Examine sexuality as a structure of power and identity. Study how race is sexualized and sexuality is racialized. Explore the impact of binary thinking (white/non-white, straight/gay) on social relationships. The perspective of racial minorities, particularly African-Americans, is emphasized. Review research on culture, history, and policy.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2502,7 +2502,7 @@
         "description": "This course examines the critical role that women are playing in politics across Africa today - from grassroots activists to leaders in national office. It examines African feminisms before investigating women\u2019s political roles during pre-colonial and colonial periods, struggles for independence and national liberation, and after independence, including women in conflict and peacebuilding, women\u2019s movements and women in transitions, and women as legislators, ministers, judges, and traditional leaders.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2514,7 +2514,7 @@
         "description": "Examines the health status of socially disadvantaged racial and ethnic groups in the US. Attention will be focused on the patterned ways in which the health of these groups is embedded in the social, cultural, political, and economic contexts, and arrangements of US society.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2526,7 +2526,7 @@
         "description": "Overview of politics and society in sub-Saharan Africa including: colonialism, the rise of nationalism, decolonization, single-party and military rule, the role of social movements and religious, class, gender, and ethnic identities and the move toward economic and political liberalization.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2538,7 +2538,7 @@
         "description": "This course will interrogate how Black identity shapes conceptions of womanhood and manhood over space and time. In particular, we will examine the varied ways that Black people have defined, understood, and challenged individual and communal notions of femininity and masculinity. In doing so, we will consider how a gendered analysis shapes our understanding of family, power, sexuality, activism, and resistance. Focusing on a range of scholarly interventions from classic as well as recent texts, we will explore major themes and developments in the interpretation of Black gender history. While the course is designed for historians, it explicitly incorporates scholarship in other disciplines to encourage students to develop interdisciplinary approaches to the study of Black life.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2550,7 +2550,7 @@
         "description": "This class considers politics in Africa from the pre-colonial period through the present, through literature. We read six African novels that help us to better understand life in one part of Africa before the onset of colonialism, the experience of colonialism, the early years of independence, strife and war, the roles of ethnicity, gender and religion, the hope and aspirations of recent political transitions and the increasing place of \u2018new diasporas.\u2019",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2562,7 +2562,7 @@
         "description": "Explores theoretical/historical intersection of race class &amp; democracy in U. S. Focuses on a number of distinct historical eras (American Founding; Reconstruction, etc), movements by Ferguson and New Jim Crow, and political competition over legacy and continued legitimacy of major policy developments since Progressive era re: race and class. Close study of eras will reveal refinements/evolution over time and provide practical basis for assessing competing theoretical frameworks.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2574,7 +2574,7 @@
         "description": "Examination of selected topics in contemporary African politics. Topics will vary.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2586,7 +2586,7 @@
         "description": "Analysis of important themes in the study of African American and African diasporic culture and history in relationship to museums and histories of display. Topics may vary each time the course is offered.",
         "credits": 4,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2598,7 +2598,7 @@
         "description": "Study of contemporary politics by country. Course is only taught abroad. May be repeated for credit when topics vary.",
         "credits": 3,
         "semester": ["Winter"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2610,7 +2610,7 @@
         "description": "Black portraiture is everywhere\u2013museum archives, the White House, the cover of Vanity Fair, and the University of Delaware. Looking to the past, present, and the University of Delaware\u2019s Paul R. Jones collection, you will examine the evolution and recent popularity of the black portrait. You will also investigate how artists of African descent have changed the conventions of portraiture and ideas about picturing the self. What do we expect a portrait to do? What is \u201cblack\u201d about \u201cthe black portrait\u201d? You will answer these and other questions in this seminar.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2622,7 +2622,7 @@
         "description": "Introduces various colonial policies of the European powers in Africa, emphasizing the comparisons and contrasts among these policies. Attention paid to the effect of Colonialism on Africa\u2019s economic, social and political development.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2634,7 +2634,7 @@
         "description": "In this seminar, which bridges Art History and Africana Studies, students will study and construct a genealogy of African American Art. As a topic seminar, students will engage with a range of subjects foundational to the history of African-American art and examine art in a variety of forms and mediums. Examples of topics include: The Idea of Black Art, Black Art before the 20th century, The Place of Africa in African-American Art, Global-Local Art and African-Diaspora, among others.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2646,7 +2646,7 @@
         "description": "The complex and performative nature of museums vis-a-vis race, remembrance, and reconciliation with a focus on Black American and African Diasporic history and culture. What role[s] do objects, history, and culture perform under such curatorial and museum mandates and visions? How do changing socio-political and cultural landscapes and challenges to representational politics shape museum practices? Considered here are black cultural institutions, their formation and foundation, as well as exhibition histories of black visual art and culture.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2658,7 +2658,7 @@
         "description": "This seminar course examines the histories of enslaved flight, truancy, resistance, and refusal in the First State. While this course does center slavery and fugitive movement in and through Delaware, we will also necessarily examine the interconnected histories of Delaware\u2019s neighboring states - Virginia, Maryland, and Pennsylvania - in an effort to best understand enslaved life in Delaware and the larger mid-Atlantic world of the Upper South. We will assess a wide range of historical sources including periodicals, state mandates, runaway slave advertisements, and slave narratives, in addition to assigned secondary literature.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2670,7 +2670,7 @@
         "description": "Thematic, collections-based study of African American collections and their digital curation.  Includes the study of archival and theoretical challenges in making the collection and others like it available to the public through various curated platforms.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2682,7 +2682,7 @@
         "description": "Variable content. Students will use interdisciplinary methods to investigate the history of racial inequalities in Delaware and the experiences of Black and Indigenous communities. Student research will lead to public-facing projects based on the discovery, exploration, and interpretation of historic sites and collections. This course enables students to participate in the University of Delaware\u2019s effort to acknowledge the ramifications of past social injustice and map out paths forward.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2694,7 +2694,7 @@
         "description": "This internship is intended to provide students with an opportunity to make connections between the theory and practice of academic study and the practical application of that study in a professional work environment.",
         "credits": 3,
         "semester": ["Fall, Summer and Spring"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2706,7 +2706,7 @@
         "description": "",
         "credits": 6,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2718,7 +2718,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2730,7 +2730,7 @@
         "description": "Students will be guided by a faculty member and will also be guided on various research approaches in Africana Studies. The outcome will be a high quality research paper that will be assessed by a faculty member as well as public delivery.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2742,7 +2742,7 @@
         "description": "Selected topics focusing on current issues affecting families from an interdisciplinary and global perspective.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2754,7 +2754,7 @@
         "description": "This course works in conjunction with the student teaching of AFRA Social Studies Education Concentration students. It fulfills an important role in training student teachers. This course prepares student-teachers to teach from an Africana Studies focus, one which includes contributions and perspectives of people of African origin. Through student teaching and field experience, students will have an opportunity to express the totality of their growth, development, and learning as an undergraduate.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2766,7 +2766,7 @@
         "description": "Many scholars and communities believe that experience affects the ways in which people conceive of and practice their faith.  This course explores faith and freedom from various social and cultural perspectives, examining how different groups conceive of God, faith and their own actions in struggles against oppression.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2778,7 +2778,7 @@
         "description": "A required research/methodological component to the AFRA major. Students will integrate the knowledge they have developed throughout their undergraduate academic careers into a final research project.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2790,7 +2790,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2802,7 +2802,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2814,7 +2814,7 @@
         "description": "An introduction to the history, theoretical foundations, ideologies and major works in Africana Studies",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2826,7 +2826,7 @@
         "description": "A multidisciplinary introduction to the range of research methods employed to examine Africana history, cultures, and societies. This course involves a number of guest speakers (most UD faculty in or affiliated with the Africana Studies Department).",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2838,7 +2838,7 @@
         "description": "This course will analyze the long and varied quest for freedom and citizenship waged by African Americans during the long twentieth century. Specifically, we will read scholarship produced primarily within the last decade to examine African American cultures and communities of resistance (with particular attention paid to issues of gender, color, and class) from Reconstruction to the present. While the course designed to introduce students to historical methodologies and historiographical debates, it also incorporates scholarship in other disciplines to encourage students to develop interdisciplinary approaches to the study of African American life.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2850,7 +2850,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2862,7 +2862,7 @@
         "description": "This course will interrogate how Black identity shapes conceptions of womanhood and manhood over space and time. In particular, we will examine the varied ways that Black people have defined, understood, and challenged individual and communal notions of femininity and masculinity. In doing so, we will consider how a gendered analysis shapes our understanding of family, power, sexuality, activism, and resistance. Focusing on a range of scholarly interventions from classic as well as recent texts, we will explore major themes and developments in the interpretation of Black gender history. While the course is designed for historians, it explicitly incorporates scholarship in other disciplines to encourage students to develop interdisciplinary approaches to the study of Black life.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2874,7 +2874,7 @@
         "description": "Black portraiture is everywhere-museum archives, the White House, the cover of Vanity Fair, and the University of Delaware. Looking to the past, present, and the University of Delaware\u2019s Paul R. Jones collection, you will examine the evolution and recent popularity of the black portrait. You will also investigate how artists of African descent have changed the conventions of portraiture and ideas about picturing the self. What do we expect a portrait to do? What is \u201cblack\u201d about \u201cthe black portrait? You will answer these and other questions in this seminar.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2886,7 +2886,7 @@
         "description": "Introduces various colonial policies of the European powers in Africa, emphasizing the comparisons and contrasts among these policies. Attention paid to the effect of Colonialism on Africa\u2019s economic, social and political development.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2898,7 +2898,7 @@
         "description": "The complex and performative nature of museums vis-a-vis race, remembrance and reconciliation with a focus on Black American and African Diasporic history and culture. What role[s] do objects, history, and culture perform under such curatorial and museum mandates and visions? How do changing socio-political and cultural landscapes and challenges to representational politics shape museum practices? Considered here are black cultural institutions, their formation and foundation as well as exhibition histories of black visual art and culture.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2910,7 +2910,7 @@
         "description": "This seminar course examines the histories of enslaved flight, truancy, resistance, and refusal in the First State. While this course does center slavery and fugitive movement in and through Delaware, we will also necessarily examine the interconnected histories of Delaware\u2019s neighboring states - Virginia, Maryland, and Pennsylvania - in an effort to best understand enslaved life in Delaware and the larger mid-Atlantic world of the Upper South. We will assess a wide range of historical sources including periodicals, state mandates, runaway slave advertisements, and slave narratives, in addition to assigned secondary literature.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2922,7 +2922,7 @@
         "description": "Thematic, collections-based study of African American collections and their digital curation. Includes the study of archival and theoretical challenges in making the collection and others like it available to the public through various curated platforms.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2934,7 +2934,7 @@
         "description": "Examines the origin and evolution of the laws and policies that govern the rights of African-Americans and other people of color in the United States. Examines emerging approaches to civil rights scholarship and considers the implications of the Supreme Court\u2019s recent embrace of a conservative posture in civil rights issues.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2946,7 +2946,7 @@
         "description": "Investigation and analysis of various topics and developments of interest and significance to the Black community.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2958,7 +2958,7 @@
         "description": "What does it mean to be a public-scholar activist in the 21st century? Analyzes the concepts, challenges and practices of public scholar-activists, with a focus on inspirational/motivational content. Begin with the connection between the humanities and its connection to black communities and wider society, the lives of public scholar/spiritual activists, and theories about public scholarship. Students will form and reflect on their own identities of public scholars.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2970,7 +2970,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2982,7 +2982,7 @@
         "description": "Variable content. Students will use interdisciplinary methods to investigate the history of racial inequalities in Delaware and the experiences of Black and Indigenous communities. Student research will lead to public-facing projects based on the discovery, exploration, and interpretation of historic sites and collections. This course enables students to participate in the University of Delaware\u2019s effort to acknowledge the ramifications of past social injustice and map out paths forward.",
         "credits": 3,
         "semester": ["Verify Offering with Dept"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -2994,7 +2994,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -3006,7 +3006,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -3018,7 +3018,7 @@
         "description": "<p style=\"text-align:justify;\">Many scholars and communities believe that experience affects the ways in which people conceive of and practice their faith.  This course explores faith and freedom from various social and cultural perspectives, examining how different groups conceive of God, faith and their own actions in struggles against oppression.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -3030,7 +3030,7 @@
         "description": "The thesis seminar is a non-credit seminar in which MA students share their thesis research, preliminary findings and final thesis presentation.",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -3042,7 +3042,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -3054,7 +3054,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -3066,7 +3066,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "AFRA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
