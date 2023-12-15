@@ -1,0 +1,27 @@
+[
+    {
+        "degreeName": "Bachelor of Science in Computer Science",
+        "coreCourses": [
+            "CISC 108",
+            "CISC 181",
+            "CISC 210",
+            "CISC 220",
+            "CISC 275",
+            "EGGG 101",
+            "ENGL 110",
+            "MATH 241"
+        ],
+        "electives": {
+            "requiredNumber": 3,
+            "courseOptions": ["CISC 355", "CISC 367", "MATH 242"]
+        },
+        "generalRequirements": ["EGGG 101", "ENGL 110", "MATH 241"],
+        "prerequisites": {
+            "CISC181": ["CISC 108"],
+            "CISC210": ["CISC 108"],
+            "CISC220": ["CISC 210"],
+            "CISC275": ["CISC 181", "CISC 220"],
+            "MATH242": ["MATH 241"]
+        }
+    }
+]

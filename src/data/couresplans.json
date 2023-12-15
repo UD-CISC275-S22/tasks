@@ -1,0 +1,159 @@
+[
+    {
+        "name": "Bachelor of Computer Science",
+        "years": [
+            {
+                "name": "Year 1",
+                "winter": null,
+                "spring": {
+                    "season": "spring",
+                    "name": "First Semester",
+                    "year": "2023",
+                    "courses": [
+                        {
+                            "ticker": "CISC 108",
+                            "name": "Introduction to Computer Science I",
+                            "credits": 3,
+                            "prereq": ""
+                        },
+                        {
+                            "ticker": "EGGG 101",
+                            "name": "Introduction to Engineering",
+                            "credits": 2,
+                            "prereq": ""
+                        },
+                        {
+                            "ticker": "ENGL 110",
+                            "name": "Seminar in Composition",
+                            "credits": 3,
+                            "prereq": ""
+                        },
+                        {
+                            "ticker": "MATH 241",
+                            "name": "Analytic Geometry and Calculus A",
+                            "credits": 4,
+                            "prereq": "MATH 117 or acceptable score on the Math Placement Exam in accordance with current standards determined by the Department of Mathematical Sciences. See https://www.mathsci.udel.edu/courses-placement/ud-math-placement for more information."
+                        }
+                    ]
+                },
+                "summer": null,
+                "fall": {
+                    "season": "fall",
+                    "name": "Second Semester",
+                    "year": "2023",
+                    "courses": [
+                        {
+                            "ticker": "CISC 181",
+                            "name": "Introduction to Computer Science II",
+                            "credits": 3,
+                            "prereq": "Grade of C- or better in CISC 108 or CISC 106."
+                        },
+                        {
+                            "ticker": "CISC 210",
+                            "name": "Introduction to Systems Programming",
+                            "credits": 3,
+                            "prereq": "A grade of C- or better in CISC 106 or CISC 108."
+                        },
+                        {
+                            "ticker": "MATH 242",
+                            "name": "Analytic Geometry and Calculus B",
+                            "credits": 4,
+                            "prereq": "MATH 241 or MATH 232."
+                        },
+                        {
+                            "ticker": "PHYS 207",
+                            "name": "Fundamentals of Physics I",
+                            "credits": 3,
+                            "prereq": ""
+                        },
+                        {
+                            "ticker": "PHYS 227",
+                            "name": "Fundamentals of Physics Laboratory I",
+                            "credits": 1,
+                            "prereq": ""
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "Year 2",
+                "winter": null,
+                "spring": {
+                    "season": "spring",
+                    "name": "Third Semester",
+                    "year": "2024",
+                    "courses": [
+                        {
+                            "ticker": "CISC 220",
+                            "name": "Data Structures",
+                            "credits": 3,
+                            "prereq": "A minimum grade of C- in CISC 210."
+                        },
+                        {
+                            "ticker": "CISC 260",
+                            "name": "Machine Organization and Assembly Language",
+                            "credits": 3,
+                            "prereq": "A minimum grade of C- in CISC 210."
+                        },
+                        {
+                            "ticker": "MATH 210",
+                            "name": "Discrete Mathematics I",
+                            "credits": 3,
+                            "prereq": ""
+                        },
+                        {
+                            "ticker": "PHYS 208",
+                            "name": "Fundamentals of Physics II",
+                            "credits": 3,
+                            "prereq": "PHYS 203 or PHYS 207 and PHYS 227, MATH 241 or MATH 232."
+                        },
+                        {
+                            "ticker": "PHYS 228",
+                            "name": "Fundamentials of Physics Laboratory II",
+                            "credits": 1,
+                            "prereq": ""
+                        }
+                    ]
+                },
+                "summer": null,
+                "fall": {
+                    "season": "fall",
+                    "name": "Fourth Semester",
+                    "year": "2024",
+                    "courses": [
+                        {
+                            "ticker": "CISC 275",
+                            "name": "Introduction to Software Engineering",
+                            "credits": 3,
+                            "prereq": "Minimum grade of C- in CISC 181 and CISC 220."
+                        },
+                        {
+                            "ticker": "CISC 355",
+                            "name": "Computers, Ethics and Society",
+                            "credits": 3,
+                            "prereq": ""
+                        },
+                        {
+                            "ticker": "MATH 205",
+                            "name": "Statistical Methods",
+                            "credits": 4,
+                            "prereq": "MATH 210 or MATH 230."
+                        },
+                        {
+                            "ticker": "CHEM 103",
+                            "name": "General Chemistry",
+                            "credits": 3,
+                            "prereq": ""
+                        },
+                        {
+                            "ticker": "CHEM 133",
+                            "name": "General Chemistry Laboratory",
+                            "credits": 1,
+                            "prereq": ""
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+]
