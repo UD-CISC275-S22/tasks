@@ -16,8 +16,8 @@ export interface valueProps {
     clicked: boolean;
     targetYear: number;
     fifthYearClicked: boolean;
-    dropClass(targetYear: number, targetSem: string): void;
-    addClass(targetYear: number, targetSem: string): void;
+    dropClass: (targetYear: number, targetSem: string) => void;
+    addClass: (targetYear: number, targetSem: string) => void;
     updateCurrCourse(event: React.ChangeEvent<HTMLSelectElement>): void;
     //clearSemesterCourses(idx: number): void;
     skipSemester(targetYear: number, targetSem: string): void;
@@ -67,6 +67,11 @@ export function DisplayFall({
     const idx = index(targetYear, targetSem);
     const fallCourses = semesters[idx].courseList;
     console.log("fall courses: ", fallCourses);
+    const creditsArray = fallCourses.map((course: Course) => course.credits);
+    const totalCredits = creditsArray.reduce(
+        (total: number, credVal: number) => total + credVal,
+        0
+    );
 
     const [displayCourseCategory, setDisplayCourseCategory] =
         useState<string>("AllCourses");
@@ -116,6 +121,7 @@ export function DisplayFall({
                 )
             )}
             <>
+                <div>Total Credits: {totalCredits}</div>
                 <DropAdd
                     dropClass={dropClass}
                     addClass={addClass}

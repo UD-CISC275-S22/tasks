@@ -1,3 +1,6 @@
+/* eslint-disable indent */
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable no-extra-parens */
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
@@ -23,6 +26,20 @@ export const DropAdd = ({
     targetSem: string;
 }) => {
     //Dropdown for courses are not treated individually
+    const RequiredCourseList = [
+        "CISC108",
+        "CISC181",
+        "CISC210",
+        "CISC220",
+        "CISC260",
+        "CISC275",
+        "CISC303",
+        "CISC320",
+        "CISC361",
+        "CISC372",
+        "MATH350",
+        "MATH210"
+    ];
     return (
         <div>
             <Form.Group controlId="currentCourse">
@@ -31,11 +48,24 @@ export const DropAdd = ({
                     {
                         //Needed to disable prettier here because there was an "extra parenths" error that couldn't be resolved by any means. Will need to ask the professor but we wanted to showcase the funcitonality of the dropdown for the MVP
                         // eslint-disable-next-line no-extra-parens
-                        Course_List.map((courseName: Course) => (
-                            <option key={courseName.id} value={courseName.id}>
-                                {courseName.title}
-                            </option>
-                        ))
+                        Course_List.map((courseName: Course) =>
+                            RequiredCourseList.indexOf(courseName.title) !==
+                            -1 ? (
+                                <option
+                                    key={courseName.id}
+                                    value={courseName.id}
+                                >
+                                    {courseName.title}❗
+                                </option>
+                            ) : (
+                                <option
+                                    key={courseName.id}
+                                    value={courseName.id}
+                                >
+                                    {courseName.title}
+                                </option>
+                            )
+                        )
                     }
                 </Form.Select>
             </Form.Group>

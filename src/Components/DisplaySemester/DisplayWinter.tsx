@@ -68,6 +68,11 @@ export function DisplayWinter({
     //targetSem is also NOT the state and it's already passed in from the Semester.tsx file. So both variables are already declared in the indivPlanSem function
     const idx = index(targetYear, targetSem);
     const winterCourses = semesters[idx].courseList;
+    const creditsArray = winterCourses.map((course: Course) => course.credits);
+    const totalCredits = creditsArray.reduce(
+        (total: number, credVal: number) => total + credVal,
+        0
+    );
 
     return (
         <div className="Winter">
@@ -108,6 +113,7 @@ export function DisplayWinter({
                 )
             )}
             <div>
+                <div>Total Credits: {totalCredits}</div>
                 <DropAdd
                     dropClass={dropClass}
                     addClass={addClass}
