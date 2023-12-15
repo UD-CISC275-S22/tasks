@@ -11682,7 +11682,7 @@
         "description": "Provides a forum for the discussion of topics in biology that relate to material being covered in BISC 207. Papers from the scientific literature and/or world wide web may be discussed.",
         "credits": 1,
         "semester": ["Fall"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -11694,7 +11694,7 @@
         "description": "The study of biological principles at multiple levels of organization. Fosters biological literacy through the exploration of concepts, theories, practices, and new developments and their impact on individuals and society.",
         "credits": 3,
         "semester": ["Fall, Summer and Spring"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -11706,7 +11706,7 @@
         "description": "The study of biological principles at multiple levels of organization. Fosters biological literacy through the exploration of concepts, theories, practices and new developments and their impact on individuals and society. The laboratory component provides concrete examples of some of the principles discussed in the lecture component.",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -11718,7 +11718,7 @@
         "description": "Heredity and human affairs; pedigree analysis; physical and chemical basis of heredity; heredity and environment; radiation and mutation; heredity and diseases; and birth defects.",
         "credits": 3,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -11730,7 +11730,7 @@
         "description": "The structure and function of humans; mechanisms of maintenance and reproductive behavior.",
         "credits": 3,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -11742,7 +11742,7 @@
         "description": "Describes the fundamental processes in ecology and evolution: natural selection, adaptation, population biology, competition, predation, symbiosis and ecosystem dynamics.",
         "credits": 3,
         "semester": ["Fall, Winter and Spring"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -11754,7 +11754,7 @@
         "description": "Biology of normal and malignant cells, and current knowledge of the genetic lesions causing malignancy. Environmental and inherited factors contributing to one\u2019s risk of cancer, and prospects for prevention. Standard and innovative means for detection and treatment of cancer.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -11766,7 +11766,7 @@
         "description": "Structure and function of cells, and selected experiments dealing with the physiology of plants and animals.",
         "credits": 1,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -11778,7 +11778,7 @@
         "description": "Laboratory exercises dealing with probability, selection, karyotyping and pedigrees of humans.",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -11790,7 +11790,7 @@
         "description": "Selected experiments in physiology that demonstrate some of the concepts developed in BISC 106, and a study of human anatomy.",
         "credits": 1,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -11802,7 +11802,7 @@
         "description": "Laboratory exercises to compliment the subject matter of BISC 107.",
         "credits": 1,
         "semester": ["Fall"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -11814,7 +11814,7 @@
         "description": "Examines how individual cultures and advances in technology have impacted our environment. Potential solutions for resolving conflicts are developed by the students and presented in class. Relationships between human cultures, technology, and environmental degradation are stressed.",
         "credits": 4,
         "semester": ["Winter"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -11826,7 +11826,7 @@
         "description": "Discusses human sexual differentiation plus the anatomy and physiology of reproduction by considering the pertinent areas of genetics, cytology, embryology, endocrinology, immunology and physiology. Topics include genetic sex, gonadal sex, phenotypic sex, hormonal sex and behavioral sex.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -11838,7 +11838,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -11850,7 +11850,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -11862,7 +11862,7 @@
         "description": "Microbial activities and their effect on society and individuals.",
         "credits": 3,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -11874,7 +11874,7 @@
         "description": "Historical background of the idea of evolution, the work of Charles Darwin, an exploration of the modern theory of evolution and the contributions to it from other biological disciplines, and philosophical issues related to evolution.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -11886,7 +11886,7 @@
         "description": "One semester course designed as an introduction to the Biological Sciences for nursing majors and health-science related majors. Concepts include Biological Molecules, Cell Structure, Membrane Function, Energy and Enzymes, Cell Division, Genetics, Molecular Biology, Evolution and Ecology. The lecture and laboratory will include applications of these concepts to Human Physiology and Anatomy.",
         "credits": 4,
         "semester": ["Fall"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -11898,7 +11898,7 @@
         "description": "Molecular basis of life. Structure and function of cells, including signal transduction pathways. Energy transformations. Classical Mendelian genetics and the flow of information from DNA to RNA to proteins. Laboratory focuses on the testing of hypotheses, data analysis and scientific writing.",
         "credits": 4,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -11910,7 +11910,7 @@
         "description": "Mechanisms of evolution. Physiology of multicellular plants and animals. Principles of ecology with emphasis on the biology of populations. Laboratory focuses on testing of hypotheses, data analysis and scientific writing. Animal and plant anatomy also studied.",
         "credits": 4,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -11922,7 +11922,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -11934,7 +11934,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -11946,7 +11946,7 @@
         "description": "Physiology of the basic organ systems of humans.",
         "credits": 4,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -11958,7 +11958,7 @@
         "description": "Major groups of microorganisms (algae, protozoa, fungi and bacteria) are studied. Emphasis on the physiology, metabolism, diversity and interactions between and among each group and bacteria and their interactions with humans. Lab included.",
         "credits": 4,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -11970,7 +11970,7 @@
         "description": "Interactions between organisms and their environments, population dynamics and interactions, communities, energy transfer within an ecological system, and components of the ecosystem.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -11982,7 +11982,7 @@
         "description": "The structure and function of eucaryotic cell organelles. Emphasis on dynamic processes such as membrane transport, cell motility and protein trafficking. Current studies from the literature and experimental techniques are also stressed.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -11994,7 +11994,7 @@
         "description": "Principles underlying function of organisms at the organ system level; ionic composition and regulation, respiration, circulation, nutritive metabolism, excretion and neuromuscular activity.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12006,7 +12006,7 @@
         "description": "Laboratory and field exercises demonstrating basic ecological principles and quantitative techniques. Emphasis on population and community phenomena. Natural habitats studied include local fields, forests and streams.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12018,7 +12018,7 @@
         "description": "Starts with a series of inquiry-based laboratory experiences in cell biology, centered on microscopy and using several protist model organisms. In second half of semester, students conduct a 5-6 week hypothesis-driven independent study project. Project proposals are peer-critiqued. Group presentations at end of semester detail the experiments they carried out and discuss how the results fit with previously published data and with original hypotheses.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12030,7 +12030,7 @@
         "description": "Short-Semesterterexperimental research course in animal physiology. Conduct, in a group, an independent research project based on primary literature. Beginning with practicing basic skills on background information research, data collection and quantitative analysis, students construct a research question based on previous findings in the literature, conduct a series of experiment, and communicate the discoveries in formal writings and oral presentation.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12042,7 +12042,7 @@
         "description": "Basic ecological and physical principles with major emphasis on the effect of human-caused environmental changes on populations, communities and ecosystems.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12054,7 +12054,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12066,7 +12066,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12078,7 +12078,7 @@
         "description": "Exploration of special topics in biological sciences at a level appropriate for junior and senior biological sciences majors. Subject matter taught will vary depending on instructor and semester.",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12090,7 +12090,7 @@
         "description": "Introduction to the molecular biology of eucaryotes and procaryotes. Topics include structure and function of proteins and nucleic acids; replication and repair of DNA; biosynthesis of RNA and proteins; membranes, transport, composition and function of the eucaryotic cell, chromosomes, viruses, the immune system and recombinant DNA.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12102,7 +12102,7 @@
         "description": "The physical and chemical basis of heredity, the nature and mechanisms of gene action.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12114,7 +12114,7 @@
         "description": "Microscopic organization, identification and functional anatomy of mammalian organ systems and tissues.",
         "credits": 4,
         "semester": ["Winter"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12126,7 +12126,7 @@
         "description": "Introduction to the process of scientific inquiry as it relates to cellular molecular biology. Learn the theory behind experimental procedures in the field and perform a series of laboratory exercises emphasizing experimental design and data analysis. Pose related scientific questions, design experiments and present results in written, poster or oral format.",
         "credits": 4,
         "semester": ["Spring"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12138,7 +12138,7 @@
         "description": "Students will engage in the scientific process, develop new experimental skills, and collaborate with others through discussion and lab work. This is a student driven, inquiry-based lab where students will take ownership of their project and directly contribute to the cutting-edge research in the field of developmental biology.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12150,7 +12150,7 @@
         "description": "Students conduct laboratory investigations in Mendelian genetics, population and evolutionary genetics, and molecular genetics; learn to use several common bioinformatics tools; and design, perform and analyze original experiments.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12162,7 +12162,7 @@
         "description": "Students will present, evaluate, and discuss recently published research articles on the basic molecular mechanisms that regulate cellular processes in both embryonic development and cancer.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12174,7 +12174,7 @@
         "description": "Explore mechanisms underlying development. Topics: gamete interactions, establishment of body plans, cell signaling and tissue interactions, morphogenetic pattern formation, developmental regulation of gene expression, molecular control of tissue specification and diversification, and the evolutionary comparison of developmental processes. Diseases resulting from developmental defects will be discussed.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12186,7 +12186,7 @@
         "description": "Teaching experience in an undergraduate laboratory or class. Evaluation based on teaching performance and preparation of required material for the laboratory or class.",
         "credits": 2,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12198,7 +12198,7 @@
         "description": "This course provides an integrated lecture series summarizing current knowledge in cancer biology. Topics include: statistics of incidence/survival, pathology, the process of chemical carcinogenesis and sources of carcinogens, genetic and epigenetic mechanisms and consequences, viral and hormonal carcinogenesis as well as current treatment options.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12210,7 +12210,7 @@
         "description": "An examination of the study of animal behavior in which topics range from innate behaviors to learned ones, individual to social behaviors, and include discussion of both qualitative and quantitative techniques used to study behavior.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12222,7 +12222,7 @@
         "description": "Understand population processes by combining a discussion of theory and practical applications. Includes exponential, logistic, and age-specific growth as well as predation, competition, disease, and metapopulations. Model-building exercises actively used to understand theoretical dynamics.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12234,7 +12234,7 @@
         "description": "Developmental biology of the nervous system, including cellular components, neural induction, neurogenesis and neuronal migration, cellular determination, axon outgrowth and pathfinding, synapse formation, programmed cell death, neurotrophic factors, neurodevelopmental disorders, and early critical periods.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12246,7 +12246,7 @@
         "description": "A 3-week intensive, field-based experience in the mechanics of conserving tropical biodiversity. Focuses on group projects quantifying and comparing the diversity of montane cloud forests, lowland rainforests and tropical dry forests.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12258,7 +12258,7 @@
         "description": "The vocabulary describing vertebrate anatomy is introduced and discussed by tracing the evolutionary and developmental histories of major vertebrate organ systems. Laboratory involves detailed dissections of representative vertebrates.",
         "credits": 4,
         "semester": ["Spring"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12270,7 +12270,7 @@
         "description": "Independent research under direction of faculty member.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12282,7 +12282,7 @@
         "description": "Continuation of BISC 451.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12294,7 +12294,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Spring"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12306,7 +12306,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12318,7 +12318,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12330,7 +12330,7 @@
         "description": "The biological basis of adaptive immunity including participating cells, cellular interactions, counted mechanisms and immunopathologies.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12342,7 +12342,7 @@
         "description": "Discussing the biology of viruses using real life examples to generate excitement for an enhanced learning experience.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12354,7 +12354,7 @@
         "description": "Biology of vertebrate organisms dealing specifically with adaptations to the environment, morphology, physiology and taxonomy.",
         "credits": 3,
         "semester": ["Winter"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12366,7 +12366,7 @@
         "description": "Explore the use of genome databases and the tools of bioinformatics, then and apply those skills to design and carry out wet lab experiments, which will involve the isolation and manipulation of DNA and RNA from human and animal subjects.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12378,7 +12378,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12390,7 +12390,7 @@
         "description": "Present status of the theory of biological evolution and its implications in the different areas of biology.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12402,7 +12402,7 @@
         "description": "Topics may vary from section to section. Information about each section is available in the Biology Office prior to registration.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12414,7 +12414,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12426,7 +12426,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12438,7 +12438,7 @@
         "description": "Examination of eucaryotic genes, synthesis and processing of messenger RNA and control of protein synthesis with emphasis on regulation of normal cellular growth and differentiation and the process of cancer cell transformation. Emphasis on recombinant DNA technology, monoclonal antibody production and tissue culture.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12450,7 +12450,7 @@
         "description": "",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12462,7 +12462,7 @@
         "description": "Systemic mammalian physiology: cellular mechanisms, muscle, cardiovascular, respiratory, renal, digestive and endocrine systems. Emphasizes human physiology and includes discussions of primary literature in the field of physiology research.",
         "credits": 4,
         "semester": ["Verify Offering with Department"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12474,7 +12474,7 @@
         "description": "Continuation of BISC 605. Systemic mammalian physiology: respiratory, renal, gastrointestinal, and reproductive systems and metabolism.",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12486,7 +12486,7 @@
         "description": "Introduction to the molecular biology of eucaryotes and procaryotes. Topics include structure and function of proteins and nucleic acids; replication and repair of DNA; biosynthesis of RNA and proteins; membranes, transport, composition and function of the eucaryotic cell, chromosomes, viruses, the immune system and recombinant DNA.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12498,7 +12498,7 @@
         "description": "Focus on how hormones produced by endocrine glands regulate physiological functions. Endocrine glands include pancreas, thyroid, adrenal, pituitary and reproductive organs, which produce hormones affecting reproduction, metabolism, growth and development. Endocrine dysfunction underlies disorders such as diabetes, cancer, stress, obesity, osteoporosis, and infertility.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12510,7 +12510,7 @@
         "description": "Four major sections: (1) cell structure/function; (2) signaling mechanisms and cell fate; (3) protein biosynthesis and trafficking and (4) integrative cell biology. Requires interpreting and evaluating data from primary scientific literature.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12522,7 +12522,7 @@
         "description": "Students will present, evaluate, and discuss recently published research articles on the basic molecular mechanisms that regulate cellular processes in both embryonic development and cancer.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12534,7 +12534,7 @@
         "description": "Explore mechanisms underlying development. Topics: gamete interactions, establishment of body plans, cell signaling and tissue interactions, morphogenetic pattern formation, developmental regulation of gene expression, molecular control of tissue specification and diversification, and the evolutionary comparison of developmental processes. Diseases resulting from developmental defects will be discussed.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12546,7 +12546,7 @@
         "description": "Provides an integrated lecture series summarizing current knowledge in cancer biology. Topics include: statistics of incidence/survival, pathology, the process of chemical carcinogenesis and sources of carcinogens, genetic and epigenetic mechanisms and consequences, viral and hormonal carcinogenesis as well as current treatment options.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12558,7 +12558,7 @@
         "description": "Covers the functional organization of the nervous system from a clinical perspective, with emphasis on the brain stem, cranial nerves, limbic system, and cerebral cortex. Also surveys basic etiology, signs and symptoms of injury to spinal pathways, sensory-motor systems, methods of neurologic testing, and the Mental Status Exam.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12570,7 +12570,7 @@
         "description": "Study of the physiology of the central nervous system, with an emphasis on the cellular and molecular basis of signal transmission in the brain.",
         "credits": 3,
         "semester": ["Verify Offering with Department"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12582,7 +12582,7 @@
         "description": "Understand population processes by combining a discussion of theory and practical applications. Includes exponential, logistic, and age-specific growth as well as predation, competition, disease, and metapopulations. Model-building exercises actively used to understand theoretical dynamics.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12594,7 +12594,7 @@
         "description": "Developmental biology of the nervous system, including cellular components, neural induction, neurogenesis and neuronal migration, cellular determination, axon outgrowth and pathfinding, synapse formation, programmed cell death, neurotrophic factors, neurodevelopmental disorders, and early critical periods.",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12606,7 +12606,7 @@
         "description": "Single-Semester introduction to the numerical analysis of biological data in fields such as molecular and cellular biology. Emphasis on choosing and using the correct analysis method for each experiment by using small number of relatively simple statistical tests.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12618,7 +12618,7 @@
         "description": "Covers the use of genetic model organisms to answer biological questions, including mapping and cloning of human disease genes and the creation of animal models for human genetic diseases. There is an emphasis on examples from the recent scientific literature and building scientific writing skills.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12630,7 +12630,7 @@
         "description": "Exploration of the theory, methods and experiments underlying current research in evolutionary processes determining genetic variation within and between species, estimation of population structure from genetic data, and the genetics of speciation.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12642,7 +12642,7 @@
         "description": "Presents concepts and approaches regarding our current understanding of molecular biology and molecular genetics in eukaryotic organisms. Requires a solid background in biochemistry, cell biology and introductory molecular biology.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12654,7 +12654,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12666,7 +12666,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12678,7 +12678,7 @@
         "description": "Introduces the basic concepts of immunology and describes how different immune responses can either protect the body from infection or lead to immunological based diseases. Focuses on cellular interactions and the resultant molecular responses that lead to immune protection.",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12690,7 +12690,7 @@
         "description": "Basic physiology of the human cardiovascular system, basis of cardiovascular diseases and current treatments. The focus is on heart failure, hypertension, atherosclerosis, thrombosis and leukemia.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12702,7 +12702,7 @@
         "description": "Molecular biology of animal viruses.  Virus structure and organization; mechanisms of penetration, replication, maturation and transformation.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12714,7 +12714,7 @@
         "description": "Explore the molecular mechanisms of infectious diseases. Disease transmission and infection, horizontal gene transfer and pathogenomics are reviewed using primary research literature. Topics include water and food borne, airborne, vector borne and human borne pathogens, their molecular mechanisms of invasion, colonization, virulence and immune avoidance.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12726,7 +12726,7 @@
         "description": "Focus on basic principles of drug/receptor interactions, mechanisms of drug action, and pharmacokinetics. Emphasis on pharmacological problems in the current experimental literature. Goals are to understand drug-receptor theory, interpret agonist/antagonist dose-reponse relationships, and interpret results from experimental literature in written and oral formats.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12738,7 +12738,7 @@
         "description": "Emphasis on the medical and social implications of our knowledge of human genetics. Discusses theoretical and practical principles of genetics useful in studying human variation such as cytogenetics and cell genetics, biochemical genetics, developmental genetics and teratology, principles of genetic counseling, multi-factoral inheritance and the genetics of cancer.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12750,7 +12750,7 @@
         "description": "Provides professional development in ethics, business and communication related to systems biology research applications in stem cell, tissue engineering, and drug delivery technologies. Intended for PhD students in interdisciplinary life science and engineering programs.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12762,7 +12762,7 @@
         "description": "Provides a technical review of systems biology approaches including genomics, transcriptomics, proteomics, metabolomics, and bioinformatics as well as applications in tissue engineering, stem cell differentiation, and drug delivery. Intended for PhD students in interdisciplinary life science and engineering programs.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12774,7 +12774,7 @@
         "description": "Mentored teaching experience in an undergraduate lecture or laboratory course. Evaluation based on teaching performance. Each laboratory section taught will correspond to two credits. Grades will be assigned by the faculty instructor for the course taught.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12786,7 +12786,7 @@
         "description": "Seminar allowing graduate students in the Department of Biology to report on the progress of their research projects. Both students and faculty attend presentations.",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12798,7 +12798,7 @@
         "description": "This course is designed to fulfill the requirement that all individuals participating in federally funded research complete training in the responsible conduct of research.",
         "credits": 1,
         "semester": ["Spring"],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12810,7 +12810,7 @@
         "description": "Various topics in biology.",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12822,7 +12822,7 @@
         "description": "Intensive exploration of advanced topics in biological sciences at a level appropriate for second year graduate students. Subject matter taught will vary depending on instructor and semester.",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12834,7 +12834,7 @@
         "description": "First year doctoral students will complete six weeks of research training in the laboratory of a Biological Sciences faculty member. Students may enroll in either one or two sections of BISC864 in a single semester. Students gain breadth of research training and are better able to identify appropriate dissertation advisors.",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12846,7 +12846,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12858,7 +12858,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12870,7 +12870,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12882,7 +12882,7 @@
         "description": "Independent research leading to the Master\u2019s Thesis.",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12894,7 +12894,7 @@
         "description": "Off or on campus practical learning experience under the supervision of a faculty member requiring two written reports 1) a plan of work outlining the background of the project and the learning objectives for the internship and 2) a scholarly paper outlining the objectives of internship, what was accomplished on each objective and recommendations for future work.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12906,7 +12906,7 @@
         "description": "Independent doctoral dissertation research prior to completion of the Ph.D. Candidacy Examination.",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12918,7 +12918,7 @@
         "description": "Independent dissertation research after completion of the Candidacy Examination.",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "BISC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12930,7 +12930,7 @@
         "description": "Introduces students to the breadth of career opportunities in biomedical engineering, aseptic cell culture techniques, standard test methods, quantitative analysis, and technical communication.",
         "credits": 2,
         "semester": ["Spring"],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12942,7 +12942,7 @@
         "description": "Introduces first year students to college life and provides a learning experience vital to their success at the University, in Engineering, and in Biomedical Engineering.  Course content includes that of the university First Year Seminar, technical skills for engineers, and career opportunities in biomedical engineering.",
         "credits": 2,
         "semester": ["Fall"],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12954,7 +12954,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12966,7 +12966,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12978,7 +12978,7 @@
         "description": "The Cellular Laboratory will teach students the fundamentals of cell culture for use in Biomedical Engineering investigations. Students will acquire skills in aseptic cell culture techniques, standard test methods, quantitative analysis, notebook keeping, report writing and oral presentation.",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -12990,7 +12990,7 @@
         "description": "Introduction to electrical engineering principles applied to biological systems, using MATLAB and LTspice. Course details basic engineering concepts that underlie biomedical systems and signal analysis.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13002,7 +13002,7 @@
         "description": "Introduction to the design, development, and translation of medical devices from bench-to-bedside. Topics include translating the voice of the customer into engineering design requirements, computer-aided design, regulatory pathways, ethics, and teamwork.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13014,7 +13014,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13026,7 +13026,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13038,7 +13038,7 @@
         "description": "Mammalian cellular physiology from a quantitative viewpoint. Principles i) cellular and molecular biology, ii) communication, integration, and homeostasis, iii) and nervous, musculoskeletal, and endocrine systems. Topics include molecular and cellular physiology, neurophysiology, musculoskeletal physiology, sensory physiology, somatic and autonomic nervous system physiology, and endocrine physiology.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13050,7 +13050,7 @@
         "description": "Quantitative approaches to understand the human body during normal function and disease. Examine tissues and organs systems in an integrated manner using principles from engineering kinetics and transport processes. Topics include: anatomy, organ system physiology (cardiovascular, renal, respiratory, gastrointestinal), and pathophysiology.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13062,7 +13062,7 @@
         "description": "Experimental methods in statics and mechanics of solids to evaluate mechanical properties of biologic and non-biologic materials and systems and medical devices. Collection, analysis, and interpretation of data and communication of technical information is emphasized.",
         "credits": 1,
         "semester": ["Fall"],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13074,7 +13074,7 @@
         "description": "Introduction to statics and mechanics of solids with application to biomedical problems.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13086,7 +13086,7 @@
         "description": "Introduction to statics, dynamics and mechanics of solids with application to biomedical problems. Topics include viscoelasticity, particle and 3D kinematics and kinetics, impulse, momentum and energy. Continued from BMEG 310.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13098,7 +13098,7 @@
         "description": "Introduction to the basics of assembling and using instrumentation for the purposes of recording electrophysiological signals. Mechanical, chemical, electrical and biological principles for biomedical measurements. Instrumentation for measuring bioelectrical signals, temperature, blood pressure, and body chemistry are covered.",
         "credits": 4,
         "semester": ["Spring"],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13110,7 +13110,7 @@
         "description": "Developing mathematical models of biomedical processes and experiments. Topics include unit analysis, exponential growth/decay, half-life, exponential vs. age-structured death models, sigmoidal growth models, sigmoidal effect models, mass-action reaction rates, and experimental measurement noise models. Simulation of all of the above using MATLAB.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13122,7 +13122,7 @@
         "description": "Biomedical engineering undergraduate students are introduced to the fundamental principles and techniques involved in the design, execution, and interpretation of biomedical research experiments. In addition to introducing students to analytical techniques used for biomedical data and training them how to properly communicate experimental results, students will have an understanding of their professional and ethical responsibilities as biomedical engineers.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13134,7 +13134,7 @@
         "description": "Gain exposure to current clinical practices, identify unmet clinical needs, and consider future career options. Students will be matched with local clinical sites to provide a unique opportunity for innovative and interdisciplinary approaches to problem solving subject to practical constraints.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13146,7 +13146,7 @@
         "description": "Biomedical engineering problems from industrial and clinical applications are addressed and solved in small groups using problem-based learning methodologies. Team-oriented design project in biomedical engineering, incorporating engineering standards and realistic design constraints. Includes introduction to relevant regulatory, intellectual property, and business management topics.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13158,7 +13158,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13170,7 +13170,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13182,7 +13182,7 @@
         "description": "Human physiology from a quantitative viewpoint. Anatomy and pathology, where appropriate. Functional/structural aspects of mammalian nervous and musculoskeletal systems. Topics include cellular physiology, autonomous nervous system, neurophysiology and cardiovascular system.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13194,7 +13194,7 @@
         "description": "Human physiology from a quantitative viewpoint. Anatomy and pathology, where appropriate. Functional/structural aspects of mammalian nervous and musculoskeletal systems. This is the second in the sequence of two courses covering respiratory, renal, digestive, endocrine and musculoskeletal systems in a quantitative and integrative manner.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13206,7 +13206,7 @@
         "description": "Fundamental and biomedical applications of fluid mechanics. Introduction to diffusive and convective mass and heat transfer with biomedical applications.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13218,7 +13218,7 @@
         "description": "Facilitate an understanding of how dissimilar materials integrate and attach in biological constructs, both naturally and artificially. Specific examples of this include but are not limited to: tendon-to-bone attachments in the musculoskeletal system; gecko feet attachment to smooth surfaces; underwater adhesives; tissue engineered scaffolds to aid attachment healing; etc. Incorporate lectures, interactive activities, and journal club to emphasize critical thinking and an open-forum environment.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13230,7 +13230,7 @@
         "description": "Presents methods for the design and control of electromechanical devices that interact physically with humans to improve biomechanical performance, such as prostheses and exoskeletons. Topics pinclude technologies for sensing and actuation, fundamentals of analog and digital control, methods for the analysis of biological signals such as EMG and of biosignal-based control for human-robot interaction. A mix between standard lectures, laboratory experiments and a final project.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13242,7 +13242,7 @@
         "description": "Integrates concepts across engineering, physiology, and exercise science disciplines and is divided into three core components: 1) Defining Exercise- an overview of acute changes and chronic adaptations to resistance and endurance training from a local and systemic perspective ranging from the cellular to whole body scale. 2) Measuring Exercise, and 3) Designing Exercise Equipment and Tools.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13254,7 +13254,7 @@
         "description": "This course will cover the fundamental physical principles of magnetic resonance imaging (MRI), including signal basis, data sampling, basic signal processing, relaxation contrasts, and image formation. The latter portion of the course will explore advanced contrasts, such as motion encoding, functional MRI, diffusion imaging, and elastography.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13266,7 +13266,7 @@
         "description": "Biomedical applications of microfluidic systems discussed in the context of microfluidic device fabrication, fluid handling, imaging in microfluidic channels, 2D and 3D formats for perfusion culture of cells, micro tissues and organs, micro physiological systems (organ on a chip), microfluidic 3D bioprinting, and microfluidic synthesis. These applications will be used to discuss biological fluid mechanics at the micro and nano length-scales including a physicochemical description of hydrodynamics, scaling laws, mixing phenomena at low Reynolds number, capillarity, double layer phenomena and electrokinetic effects, nanofluidic entropic and confinement effects.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13278,7 +13278,7 @@
         "description": "Biomaterial interactions with the human body, biomaterial degradation, surface properties of biomaterials, acute inflammation, wound healing, implantation issues, and the immune system.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13290,7 +13290,7 @@
         "description": "How our senses, central nervous system, and muscles interact to produce movement. Fundamental principles, theories, computational models, and emerging technological applications of neuromechanics.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13302,7 +13302,7 @@
         "description": "Open-ended team-based design projects in the medical devices or research arena.  Systems approach requiring design strategy and concepts, including reliability, safety, ethics, economic analysis, marketing, FDA regulations, and patents.",
         "credits": 6,
         "semester": ["Fall"],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13314,7 +13314,7 @@
         "description": "Open-ended, team-based, capstone engineering design projects. Systems approach process involving defining requirements, benchmarking, concept generation and selection, prototype fabrication, and testing. Includes safety, ethics, economic analysis, regulatory and industry standards, and intellectual property.",
         "credits": 6,
         "semester": ["Fall"],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13326,7 +13326,7 @@
         "description": "Examine how engineered biomaterials can be implemented to regulate cell function with respect to lineage-specific stem cell differentiation, prevention of de-differentiation during culture and expansion, regulation of migration, and induction of proliferation or apoptosis among others.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13338,7 +13338,7 @@
         "description": "Describes how to use the engineering design process to create, characterize, and evaluate nanoscale structures for biotechnological applications, with an emphasis on noble metal nanoparticles. Topics include understanding and exploiting the physical properties that emerge at the nanoscale; precisely engineering the architecture and properties of noble metal nanoparticles; and rationally designing experiments to evaluate nanomaterials in biological/biomedical settings.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13350,7 +13350,7 @@
         "description": "Covers topics of mechanosensation and mechanotransduction in biological systems. Includes the principles and evolution of mechanosensory/mechanostransduction systems, their cellular machinery and mechanisms, and their role in health, disease and the engineering of tissues.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13362,7 +13362,7 @@
         "description": "Explore the medical device design process, from research and development to regulation and commercialization. Through these devices, key concepts in medical device design will be examined including principles of design, biocompatibility, device degradation, sterilization, manufacturing and benefit/risk ratio and regulation.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13374,7 +13374,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Fall, Winter and Spring"],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13386,7 +13386,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Fall"],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13398,7 +13398,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13410,7 +13410,7 @@
         "description": "Physics, instrumentation, system design, and image reconstruction algorithms will be covered for the following modalities: radiography, x-ray computed tomography (CT), single photon emission computed tomography (SPECT), positron emission tomography (PET), magnetic resonance imaging (MRI), and real-time ultrasound.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13422,7 +13422,7 @@
         "description": "Facilitate an understanding of how dissimilar materials integrate and attach in biological constructs, both naturally and artificially. Specific examples of this include but are not limited to:tendon-to-bone attachments in the musculoskeletal system; gecko feet attachment to smooth surfaces; underwater adhesives; tissue engineered scaffolds to aid attachment healing; etc. Incorporate lectures, interactive activities, and journal club to emphasize critical thinking and an open-forum environment.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13434,7 +13434,7 @@
         "description": "Presents methods for the design and control of electromechanical devices that interact physically with humans to improve biomechanical performance, such as prostheses and exoskeletons. Topics include technologies for sensing and actuation, fundamentals of analog and digital control, methods for the analysis of biological signals such as EMG and of biosignal-based control for human-robot interaction. A mix between standard lectures, laboratory experiments and a final project.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13446,7 +13446,7 @@
         "description": "This course will cover the fundamental physical principles of magnetic resonance imaging (MRI), including signal basis, data sampling, basic signal processing, relaxation contrasts, and image formation. The latter portion of the course will explore advanced contrasts, such as motion encoding, functional MRI, diffusion imaging, and elastography.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13458,7 +13458,7 @@
         "description": "Biomedical applications of microfluidic systems discussed in the context of microfluidic device fabrication, fluid handling, imaging in microfluidic channels, 2D and 3D formats for perfusion culture of cells, micro tissues and organs, micro physiological systems (organ on a chip), microfluidic 3D bioprinting, and microfluidic synthesis. These applications will be used to discuss biological fluid mechanics at the micro and nano length-scales including a physicochemical description of hydrodynamics, scaling laws, mixing phenomena at low Reynolds number, capillarity, double layer phenomena and electrokinetic effects, nanofluidic entropic and confinement effects.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13470,7 +13470,7 @@
         "description": "Biomaterial interactions with the human body, biomaterial degradation, surface properties of biomaterials, acute inflammation, wound healing, implantation issues, and the immune system.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13482,7 +13482,7 @@
         "description": "How our senses, central nervous system, and muscles interact to produce movement. Fundamental principles, theories, computational models, and emerging technological applications of neuromechanics.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13494,7 +13494,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13506,7 +13506,7 @@
         "description": "Describes how to use the engineering design process to create, characterize, and evaluate nanoscale structures for biotechnological applications, with an emphasis on noble metal nanoparticles. Topics include understanding and exploiting the physical properties that emerge at the nanoscale; precisely engineering the architecture and properties of noble metal nanoparticles; and rationally designing experiments to evaluate nanomaterials in biological/biomedical settings.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13518,7 +13518,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13530,7 +13530,7 @@
         "description": "Introduction to fundamental laws and material models used to describe the mechanical behavior of biological tissues. Application of these models to musculoskeletal tissues. Introduction to numerical methods used to simulate the response of these tissue to physiological loading.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13542,7 +13542,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13554,7 +13554,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13566,7 +13566,7 @@
         "description": "Mathematical methods in Human Physiology, covering cellular, tissue, organ, and integrated systems. Dynamic modeling of homeostasis, endocrine regulatory systems, immune response dynamics, mutation and selection. Mathematical methods covered include linear and nonlinear differential equations, Lyapunov analysis, mass action, Hamming spaces, reaction-diffusion equations, and simulation.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13578,7 +13578,7 @@
         "description": "Physics, instrumentation, system design, and image reconstruction algorithms will be covered for the following modalities: radiography, x-ray computed tomography (CT), single photon emission computed tomography (SPECT), positron emission tomography (PET), magnetic resonance imaging (MRI), and real-time ultrasound.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13590,7 +13590,7 @@
         "description": "Computational/mathematical techniques for modeling &amp; analysis of biological systems. Includes properties of gene-regulatory and signaling networks; network reconstruction from data; stochastic modeling to study cellular variation &amp; physiological modeling.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13602,7 +13602,7 @@
         "description": "Communication methods for professional development such as written and oral presentations. Writing proposals, journal papers, and dissertations. Oral presentation of research, proposals, and informal presentations Selecting a research topic, reviewing literature, generating hypotheses, writing study designs.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13614,7 +13614,7 @@
         "description": "Understanding statistical analyses is an essential skill for scientists in academia and industry. Here we will discuss the philosophy of hypothesis testing, simulate datasets via sampling, and perform parametric and nonparametric tests. In additional to traditional tests (mean comparison, regression, ANOVA) we will also introduce some advanced techniques (maximum likelihood, Bayes, bootstrapping, and MCMC).",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13626,7 +13626,7 @@
         "description": "Provides professional development in ethics, business and communication related to systems biology research applications in stem cell, tissue engineering, and drug delivery technologies. Intended for PhD students in interdisciplinary life science and engineering programs.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13638,7 +13638,7 @@
         "description": "Provides a technical review of systems biology approaches including genomics, transcriptomics, proteomics, metabolomics, and bioinformatics as well as applications in tissue engineering, stem cell differentiation, and drug delivery. Intended for PhD students in interdisciplinary life science and engineering programs.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13650,7 +13650,7 @@
         "description": "Survey methods and approaches in algorithms, statistics and machine learning, along with their current applications in bio- and medical- informatics.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13662,7 +13662,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13674,7 +13674,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13686,7 +13686,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13698,7 +13698,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13710,7 +13710,7 @@
         "description": "Lectures and discussions by guest speakers, faculty, and students on specialized topics in biomedical engineering.",
         "credits": 0,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13722,7 +13722,7 @@
         "description": "Research and readings in preparation of dissertation topic and/or qualifying examinations for doctoral students before admission to candidacy but after completion of all required course work.",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13734,7 +13734,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "BMEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13746,7 +13746,7 @@
         "description": "",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "BREG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13758,7 +13758,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "BREG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13770,7 +13770,7 @@
         "description": "",
         "credits": 4,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "BREG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13782,7 +13782,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "BREG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13794,7 +13794,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "BREG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13806,7 +13806,7 @@
         "description": "",
         "credits": 4,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "BREG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13818,7 +13818,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "BREG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13830,7 +13830,7 @@
         "description": "Water supply sources, hydraulics of water distribution systems, water softening, sedimentation, chemical precipitation, filtration, and disinfection.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BREG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13842,7 +13842,7 @@
         "description": "Engineering fundamentals for processing of food materials, including applied thermodynamics and heat transfer principles and operations.",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "BREG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13854,7 +13854,7 @@
         "description": "Structured experience in industry. A minimum of 40 hours of technical activities per credit hour. Upon completion, students present results to the department faculty and industrial sponsor through written reports and oral presentations. Proposals must be approved in advance by the department faculty, and a designated faculty advisor is required.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "BREG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13866,7 +13866,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "BREG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13878,7 +13878,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "BREG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13890,7 +13890,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "BREG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13902,7 +13902,7 @@
         "description": "Examines the importance of soil physics in relation to other disciplines of soil and environmental sciences. Topics include status of water in soil, fundamental principles of water flow, differences between saturated and unstaturated water flow, water balance in the field, infiltration, evapotransportation, heat, gas and solute (contaminant) transport in soil.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BREG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13914,7 +13914,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "BREG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13926,7 +13926,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "BREG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13938,7 +13938,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "BREG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13950,7 +13950,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "BREG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13962,7 +13962,7 @@
         "description": "",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "BUEC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13974,7 +13974,7 @@
         "description": "",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "BUEC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13986,7 +13986,7 @@
         "description": "",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "BUEC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -13998,7 +13998,7 @@
         "description": "",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14010,7 +14010,7 @@
         "description": "Survey of basic business concepts designed for non-business majors. Topics covered include understanding the business environment, management and organizational behavior, marketing, and operations management, with coverage of international business and business ethics.",
         "credits": 3,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14022,7 +14022,7 @@
         "description": "Introduction to business for majors to inform them about each of the functional areas of business through lectures, readings, discussions, guest speakers, cases and projects. Includes topics relating to operations, marketing, finance, management, accounting and management information systems, as well as business ethics, and critical thinking and decision making.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14034,7 +14034,7 @@
         "description": "Introduction to basic concepts from accounting, entrepreneurship, finance, management, marketing and operations management that are pertinent to starting and running new business and social ventures. Topics are covered by subject matter experts.",
         "credits": 4,
         "semester": ["Fall, Winter and Spring"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14046,7 +14046,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14058,7 +14058,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14070,7 +14070,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14082,7 +14082,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14094,7 +14094,7 @@
         "description": "Management of the marketing functions, marketing research, product planning, distribution channels, pricing, personal selling, and advertising. Emphasis on consumer and industrial markets.",
         "credits": 3,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14106,7 +14106,7 @@
         "description": "Focuses on the marketing research process as an aid in marketing decision making. Defining marketing problems, identifying marketing information needs, developing methods to gather information, and applying research results to marketing problems.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14118,7 +14118,7 @@
         "description": "Analysis of major problems faced by operations managers at different levels of management. Topics include scheduling, forecasting, process design, inventory management and quality management.",
         "credits": 3,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14130,7 +14130,7 @@
         "description": "Examines individual, group, and organizational determinants of work behavior in organizations. Theory and concepts relevant to individual differences, attitudes, motivation, teams, leadership, power, and organizational culture and change are discussed with an emphasis on applying this knowledge to the challenges of management in a variety of organizations.",
         "credits": 3,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14142,7 +14142,7 @@
         "description": "Spa and Wellness industries are one of the fastest growing segments in the service industry offering a variety of fitness, wellness, life enhancement, and management opportunities. Globally, hotels and hospitals are adding spa/wellness programs to their offerings, as their customers are increasingly demanding complimentary &amp; alternative medicine (CAM). The geographic market of this segment transcends the national borders into international destinations. This program is offered both on campus or popular spa/wellness destinations in the world.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14154,7 +14154,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14166,7 +14166,7 @@
         "description": "Analytics leverages both the proliferation of data and the advancement of computational tools to bring a new level of sophistication to business decision making. As part of developing an analytic mind and skillset, this course teaches students to properly frame decision problems, represent and understand how to manage uncertainty inherent in those problems, manipulate large data sets using modern software to prescribe recommended actions, and to then compel organizational change through data visualizations.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14178,7 +14178,7 @@
         "description": "Intensive treatment of topics covered in BUAD 306 to include the investigation and development of the decision making process in an operations environment. Emphasis on practical applications.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14190,7 +14190,7 @@
         "description": "This course focuses on understanding the basic concepts, tools, and practices of entrepreneurship and the development of entrepreneurial skills. The entrepreneurial process (opportunity recognition, resource marshaling, and team building driven by communication, creativity, and leadership) and business planning are emphasized.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14202,7 +14202,7 @@
         "description": "Explore basic and advanced marketing topics pertinent to bringing new innovations to market, including: product concept testing and the new product development process; customer behavior as it relates to the adoption of new products; characteristics of high technology and other types of entrepreneurial markets; test marketing; market segmentation, targeting, and positioning; the formulation of go-to-market strategies (including product, distribution, promotional, and pricing strategies); and entrepreneurial selling.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14214,7 +14214,7 @@
         "description": "Sustainable development has received international recognition and a source of business social and economic responsibility. Underlying principles for sustainable business development are complex, involving interaction among social, economic &amp; environmental issues, which makes the subject critical for intellectual enquiry.  The concept of sustainable development is multidisciplinary.  Students have to draw knowledge from various disciplines, such as business and economics, sociology, environmental sciences and public administration among others.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14226,7 +14226,7 @@
         "description": "Emphasizes career development, reflection, and personal assessment. It is designed to accompany a minimum of 100 hours of employment in an entrepreneurial context.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14238,7 +14238,7 @@
         "description": "Requires completion of at least 120 hours of a management, marketing, operations management, or international business internship with verification by the hiring company. Semesterterpaper relating the real-world duties and experiences of the internship to principles learned in traditional business courses also required.",
         "credits": 3,
         "semester": ["Fall, Summer and Spring"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14250,7 +14250,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Fall, Winter and Spring"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14262,7 +14262,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14274,7 +14274,7 @@
         "description": "Surveys the economic, political, and institutional context of international business as well as the strategic operations of the international company. Special attention is given to cross-discipline topics, both in the form of interdisciplinary materials and lectures and institutional and company visits.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14286,7 +14286,7 @@
         "description": "Evaluation of the elements of the national, international, and global environments that influence the context and conduct of international business. Emphasizes aspects of the cultural, political, economic, legal-regulatory, trade, financial, and institutional environments.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14298,7 +14298,7 @@
         "description": "Focuses on management of international business through analysis of opportunities and challenges that face international companies. Develops the perspectives and frameworks that guide how managers direct international business activities.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14310,7 +14310,7 @@
         "description": "Seminar on selected topics in international management. Combines lectures and visits to local organizations. Research paper typically required.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14322,7 +14322,7 @@
         "description": "Seminar on selected topics in international marketing management. Combines lectures and visits to local organizations. Research paper typically required.",
         "credits": 3,
         "semester": ["Winter"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14334,7 +14334,7 @@
         "description": "Seminar on selected topics in international operations management. Combines lectures and visits to local organizations. Research paper typically required.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14346,7 +14346,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14358,7 +14358,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14370,7 +14370,7 @@
         "description": "Explores traditional topic areas (e.g., planning, selection, training, compensation, performance appraisal, career development, legal regulations) and contemporary issues (e.g., workforce diversity, the link between human resource strategy and firm strategy) related to the effective management of human resources in organizations.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14382,7 +14382,7 @@
         "description": "Examines why and how change occurs in business organizations. Students are exposed to organizational theories, organizational design concepts, and practical issues for successfully leading businesses through change.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14394,7 +14394,7 @@
         "description": "Introduces students to the strategy and psychology underlying negotiation and conflict resolution through readings, lectures, and class discussions. Students have the opportunity to put this knowledge into practice by engaging in simulated negotiations with classmates throughout the semester. Topics include preparation, communication, power, emotions, and relationships.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14406,7 +14406,7 @@
         "description": "Examines the behavioral and organizational underpinnings of ethical and unethical workplace behavior, and the various bases (societal, religious, etc.) on which particular management practices can be ethically evaluated. Students are encouraged to develop their skills in articulating and implementing ethical behavior in businesses and other organizations.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14418,7 +14418,7 @@
         "description": "Current topics and emerging issues in the changing global marketplace. May focus on regional issues, global business sectors, current issues in the globalization of business, or a combination of these.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14430,7 +14430,7 @@
         "description": "Provides an analysis of the theories and principles of leadership in organizations. Topics include leadership traits and behaviors, social influence, motivation, and how to cultivate relationships with followers. Examine key aspects of effective teams including member selection, team design and development, collective decision making and team leadership.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14442,7 +14442,7 @@
         "description": "Topical seminar on such management issues as organizational socialization, work motivation, and organization-environment relations. Development of an individual research project is stressed.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14454,7 +14454,7 @@
         "description": "Offers an understanding of management consulting within one\u2019s organization and for external organizations. Also explores fundamental aspects of projects and how they can be managed effectively. Topics include planning, coordinating, managing risk, monitoring, and closing projects. Both conceptual understanding and practical skills for managers are emphasized.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14466,7 +14466,7 @@
         "description": "Considers a wide range of developing trends that will affect the management of human resources in modern organizations. Examples include the role of automation, analytics, privacy, security, legislation, and wellness.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14478,7 +14478,7 @@
         "description": "Case studies and concepts in the determination of top-level company policy andthe solution of problems that cross major functional areas in business.",
         "credits": 3,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14490,7 +14490,7 @@
         "description": "This course focuses on interpretable data modeling for insight and interpretability. Students will learn to model and represent business problems using the language of probabilistic graphical models, translate those models into a form amenable to computation, and visually present computational insights back to stakeholders in a way that communicates insight and inspires action. Major topics include: Probabilistic Models, Causal Modelling, Probabilistic Programming (e.g. Turing.jl or Stan), Sampling Algorithms (e.g. MCMC), and Probabilistic Inference.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14502,7 +14502,7 @@
         "description": "How the different business disciplines work together to manage and grow a small business.  Emphasizes the entrepreneurial, interpersonal and technical skills that small businesses need to be successful. A major component of the class is working on a project with a local small business.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14514,7 +14514,7 @@
         "description": "Analytics leverages both the proliferation of data and the advancement of computational tools to bring a new level of sophistication to business decision making. As a capstone experience, this course places students in the role of \u2018Business Data Analyst.\u2019 Students will work on large real-world datasets to recommend courses of action to businesses. All phases of the analytics process from data capture to creation of an analytics-driven recommendation or prototype solution will be practiced.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14526,7 +14526,7 @@
         "description": "Management of operations and inventories in a variety of organizations including banks, hospitals, government and manufacturing firms. Topics include forecasting, operations planning and scheduling, material requirements planning and purchasing.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14538,7 +14538,7 @@
         "description": "The new technology for quality and productivity. Emphasis on actual implementation of total quality management in general and statistical process control in particular.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14550,7 +14550,7 @@
         "description": "Effective design and implementation of decision support for operations. Selection of appropriate models for decision support. Emphasis on project work in which an actual decision support system is designed and implemented.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14562,7 +14562,7 @@
         "description": "Focuses on how unstructured problems in various areas of operations management can be structured and solved using a variety of tools and techniques. Emphasis on logistics problems and other unstructured problems related to forecasting, inventory management, scheduling, and supply chain management.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14574,7 +14574,7 @@
         "description": "Focus on helping students who have well-developed business ideas and/or existing businesses to accelerate the startup &amp; growth of their companies. Begin with the conduct of a business model audit to determine appropriate goals/milestones for each business. Students will be tasked with developing and implementing strategies to accomplish their goals/milestones. Whenever possible, students will be connected with providers of needed services, financial resources, and mentors.",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14586,7 +14586,7 @@
         "description": "Examines selected topics of current interest in various areas of entrepreneurship.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14598,7 +14598,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14610,7 +14610,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14622,7 +14622,7 @@
         "description": "Directed research for undergraduate Honors students and Summer Scholars. Research must be scholarly research of thesis level potentially leading to an undergraduate thesis.",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14634,7 +14634,7 @@
         "description": "Course is designed to give students hands-on experience and feedback to improve their selling skills. Every industry in every country is in need of well-trained salespeople. Course is designed to help students perform better in selling situations whether working B2B, B2C or selling your own brand in the job interview by teaching the tools and strategies for success. Students will compete in a sales competition at the end of the semester.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14646,7 +14646,7 @@
         "description": "Explore a variety of topics including: determining advertising objectives, media planning including media characteristics, media-market measurements and media purchasing; selecting campaign themes and developing creative strategy for traditional and electronic markets; controlling advertising expenditures; the impact of regulations as well as social and economic effects of advertising.",
         "credits": 3,
         "semester": ["Fall, Winter and Spring"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14658,7 +14658,7 @@
         "description": "Focuses on the interface between marketing management and the social-environmental dynamics of the surrounding society. Students critically analyze concepts and practices relating to socially responsible marketing management to gain an understanding of emerging social and environmental issues relevant to marketing decision making.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14670,7 +14670,7 @@
         "description": "Explores a variety of topics including: the decision processes associated with buying, consuming, and disposing of products, services, and ideas; social, cultural, and psychological influences on consumer decision making and consumption patterns; the relationship between consumer behavior and marketing decision making.",
         "credits": 3,
         "semester": ["Fall, Summer and Spring"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14682,7 +14682,7 @@
         "description": "Focus on decision processes involved in establishing the paths for the movement of products, title, payment, and information between producers and users. Emphasis on the decisions necessary for successful retail operations.",
         "credits": 3,
         "semester": ["Fall, Winter and Spring"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14694,7 +14694,7 @@
         "description": "Analysis of the concepts and practices relating to the marketing of products and services internationally. Focus on the uncontrollable environmental forces facing an international marketer, issues relating to the standardization of marketing strategies across countries and the unique problems of specific international markets.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14706,7 +14706,7 @@
         "description": "Explores various quantitatively-based marketing models used to make decisions related to segmentation, positioning, and the allocation of marketing mix expenditures.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14718,7 +14718,7 @@
         "description": "Explore the possibility and limitations of various digital media and learn how to apply and adapt basic and advanced marketing strategies to construct and critically evaluate digital efforts, their impact, and their practical use in marketing contexts. Develop skills related to<u> </u>search engines, social media, web analytics, and a wide variety of other formats. Examine strategies for creating, managing, and measuring two-way marketing conversations with consumers on a variety of digital platforms, including mobile devices.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14730,7 +14730,7 @@
         "description": "Student teams apply knowledge of marketing and business in a \u201creal world\u201d setting with local, regional, and national profit and nonprofit businesses on marketing projects funded by the companies. Projects involve: defining objectives, collecting relevant data, analyzing, interpreting, and reporting results/recommendations to management.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14742,7 +14742,7 @@
         "description": "Focuses on applying management decision processes and strategies to the integration of the firm\u2019s total marketing mix. Multifaceted problems are studied in firms of various sizes. Students analyze cases, simulations, and other real marketing problems.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14754,7 +14754,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14766,7 +14766,7 @@
         "description": "Organizations today have an influx of data which when used effectively can derive actionable insights for both the sales organization and their clients. Today\u2019s sales leaders need to systematically increase their sophistication in leveraging data, tools and domain expertise to provide customized insights, consulting and guidance to their strategic customers. In this course, you will explore concepts covered in the previous courses within the Enterprise Sales professional certificate, but through the lens of the tools and technologies which enable data-driven decisions. Using the appropriate tools and technologies will permit sales representatives and managers to create value for their clients, ultimately increasing customer satisfaction and likelihood of long-Semesterterclient retention.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14778,7 +14778,7 @@
         "description": "Covers advanced personal selling skills, practices and programs. Emphasis will be placed on sales, presentations, demonstrations and relationship-building skills.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14790,7 +14790,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14802,7 +14802,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14814,7 +14814,7 @@
         "description": "Assesses environmental, institutional, industrial, strategic, and organizational features of globalization and business. Considers frameworks that guide managers\u2019 understanding of globalization and business, how managers interpret the challenges and opportunities of globalization and the implications of globalization to professional development.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14826,7 +14826,7 @@
         "description": "Focuses on data analysis for the purpose of measurement, inference, qualityand productivity improvement, and improved managerial decision making. Exploratory data analysis, graphical analysis, descriptive statistics, inferential statistics, and techniques such as regression are covered.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14838,7 +14838,7 @@
         "description": "Analytics leverages both the proliferation of data and the advancement of computational tools to bring a new level of sophistication to business decision making. As part of developing an analytic mind and skillset, this course teaches students to properly frame decision problems, represent and understand how to manage uncertainty inherent in those problems, manipulate large data sets using modern software to prescribe recommended actions, and to then compel organizational change through data visualizations.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14850,7 +14850,7 @@
         "description": "Managers often find spreadsheets natural, intuitive and user-friendly platforms for organizing information and performing \u2018what if\u2019 analyses. Hence, spreadsheets have therefore become indispensable tools of modern business analysis and decision-making. This class teaches students to structure, represent, analyze, and solve various business problems on Excel spreadsheets. In addition, the course shows students how to leverage mathematical programming solvers to provide prescriptive analytics.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14862,7 +14862,7 @@
         "description": "Analytics leverages both the proliferation of data and the advancement of computational tools to bring a new level of sophistication to business decision making. As a capstone experience, this course places students in the role of Business Data Analyst. Students will work on large real-world datasets to recommend courses of action to businesses. All phases of the analytics process from data capture to creation of an analytics-driven recommendation or prototype solution will be practiced.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14874,7 +14874,7 @@
         "description": "Topics include decision analysis tools, mathematical programming, operations strategy, process management and planning and inventory management concepts.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14886,7 +14886,7 @@
         "description": "Topics include ethics in organizations, and problems and challenges dealing with external environment demands including global issues.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14898,7 +14898,7 @@
         "description": "Focuses on the development of business strategies and management practices for managing the multinational business organization.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14910,7 +14910,7 @@
         "description": "Examines selected topics in global business that may focus on one or more areas of the world (e.g. the European Union, Latin America, Pacific Basin, etc.). May be offered overseas.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14922,7 +14922,7 @@
         "description": "Assesses the professional, economic, political,cultural,institutional, and environmental opportunities and challenges that individuals face in the global business environment. Analytics center on explaining the causes and consequences of the expanding integration of nations. Materials tap varied resources, including contemporary analyses, multimedia profiles, and decision simulations; class design taps various pedagogies, including position papers, discussion boards, and objective assessment; class delivery leverages online technologies.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14934,7 +14934,7 @@
         "description": "Fieldwork designed to allow a student to apply acquired knowledge in a corporate setting. Requires a corporate sponsorship, a performance evaluation to be completed by that sponsor, and a written paper to be submitted to the administrator of internships.",
         "credits": 2,
         "semester": ["Spring"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14946,7 +14946,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14958,7 +14958,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14970,7 +14970,7 @@
         "description": "Develops a knowledge base and requisite skills for managing individual, group, and organizational processes through the use of diagnostic models, cases, and/or simulated exercises.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14982,7 +14982,7 @@
         "description": "Focuses on individual characteristics and group and organizational factors that influence the ability of organizations to generate new products and/or processes, and to implement new products/processes. Students practice skills to diagnose barriers and develop creative organizations.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -14994,7 +14994,7 @@
         "description": "Examines top management\u2019s role in the leadership of organizations and their role in successfully managing organizational change.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15006,7 +15006,7 @@
         "description": "Offers an in-depth perspective of leadership and an analysis of teams and teamwork. Emphasizes the practical application of theoretical concepts.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15018,7 +15018,7 @@
         "description": "Examines selected special topics in management and leadership. May be offered on study abroad.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15030,7 +15030,7 @@
         "description": "Takes an evidence-based approach to examining the science and practice of strategic human resource management. This includes HR planning and recruiting, selection, training and development, performance management, and compensation. Throughout, attention is directed toward issues of ethics and the global management of HR.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15042,7 +15042,7 @@
         "description": "Skill and ability for driving change at the individual, team, and organization levels. Team development skills, leadership skills, and negotiation skills are emphasized though simulation exercises.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15054,7 +15054,7 @@
         "description": "Leaders in organizations increasingly are called upon to be effective across multiple boundaries, such as different societies and language groups, national cultures, regional subcultures, and levels of economic development. Examines the understanding and developes the ability to create connections and promote collaboration across boundaries.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15066,7 +15066,7 @@
         "description": "Explores the strategy and psychology of negotiation and conflict resolution, including topics such as effective preparation and understanding the role of communication, emotions, and relationships. Simulated negotiations provide the opportunity to put knowledge into practice and acquire feedback on negotiation and conflict resolution skills throughout the semester.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15078,7 +15078,7 @@
         "description": "Management of marketing functions in modern profit and non-profit enterprises. Introduction to the marketing management process.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15090,7 +15090,7 @@
         "description": "Focuses on the techniques of research design, data collection, and data analysis for making marketing decisions. Helps students develop an appreciation for the potential contributions and limitations of marketing research data, enabling them to evaluate marketing research activities. Emphasizes interpretation, not computation, from statistical analyses.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15102,7 +15102,7 @@
         "description": "Develops managerial decision-making skills in several areas related to international/global marketing such as environmental analysis, planning/organization, marketing research, segmentation, targeting and positioning/competitive analysis, and method of entry.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15114,7 +15114,7 @@
         "description": "Integrates topics in product management and pricing strategy. Special emphasis is given to the use of conceptual frameworks and analytical methods that may be used to improve product and price decisions. The concepts and methods are applied to real-world case studies.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15126,7 +15126,7 @@
         "description": "Examines selected current marketing topics: e.g., strategy development, opportunity assessment, modeling and marketing programming. Individual inquiry is stressed.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15138,7 +15138,7 @@
         "description": "Analyzes marketing channels as social, economic and political systems. Strong emphasis placed on understanding the behavioral dimension of the channel relationship after focusing on the economic and structural aspects of retailing, wholesaling, and physical distribution. Governmental and other constraints on channel activities are also studied.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15150,7 +15150,7 @@
         "description": "For those with little or no prior experience in advertising. Intended to improve students\u2019 skills with respect to determining advertising strategy. Features a mixture of lecture, case study analysis, class discussion, and team development and presentation of an entire advertising campaign.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15162,7 +15162,7 @@
         "description": "Applied concepts from the social sciences to study factors that influence the acquisition, consumption and disposition of products, services, and ideas. Covers: 1) buyer decision processes; 2) influences on consumer decisions and consumption patterns; and 3) the relationship between buying behavior and strategic decision making.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15174,7 +15174,7 @@
         "description": "Focuses on the issues faced by senior and middle level marketing executives in an organization. Emphasizes developing a comprehensive marketing strategy that is consistent with corporate plans. Issues explored include: opportunity assessment and competitive analysis, segmentation and positioning, and the development of integrated marketing mix programs.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15186,7 +15186,7 @@
         "description": "Studies the marketing of goods and services to businesses, institutions, and the government. Covers organizational buying behavior, product/market planning, sales force and distribution management, pricing and promotion from the perspective of both the buyer and the seller.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15198,7 +15198,7 @@
         "description": "Emphasizes total organization function and performance in a global environment. Examines general management responsibilities for determining objectives and future strategies and seeking commitment for their implementation, integrates functional course concepts to enhance decision making and communication skills through individual and group analyses of specific companies.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15210,7 +15210,7 @@
         "description": "Introduce students to state-of-the-art marketing analytics with data and to teach them how to apply practically these analytics to decisions in the real world. Familiarize the students with relevant and helpful analytics tools. It is not mathematical in nature, but it is hands-on and application-oriented. Attention is focused on interpretation of results and how to obtain them using software.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15222,7 +15222,7 @@
         "description": "Learn the basics of web analytics, search engine analytics, social media analytics, mobile analytics, and an overview of the digital data collection system. Become familiar with analytics terminology and dive deeper into tools required for all digital analytics. Learn to identify the appropriate analytical tool for your specific needs, e.g., website, search engine, social media, mobile, etc. Understand valid and reliable ways to collect and analyze data from the web and gain hands-on experience of conducting digital analytics projects including both quantitative and qualitative data to investigate brand challenges. Learn about understanding and developing a framework for measuring digital campaigns.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15234,7 +15234,7 @@
         "description": "Develop project management skills and gain practical, applied experience through solving a real life management problem in a team-based setting. Includes presentation of problem solution to client organization.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15246,7 +15246,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15258,7 +15258,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "BUAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15270,7 +15270,7 @@
         "description": "Designed for freshmen and transfer students accepted into the Access:ABILITY enrichment program. Students identify opportunities and develop plans for exploring, designing, and/or advocating for inclusive, strengths-based responses to disability in ways that connect to their majors and broaden their perspectives on disability.",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "DIST",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15282,7 +15282,7 @@
         "description": "Participate in required social and community events for the Access:Ability Scholars program. First year students also participate in peer mentoring and small group activities.",
         "credits": 0,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "DIST",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15294,7 +15294,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "DIST",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15306,7 +15306,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "DIST",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15318,7 +15318,7 @@
         "description": "Select and participate in activities that involve disability-related campus or community initiatives. Create individual learning goals focused on broadening their perspectives on disability and a corresponding activities engagement plan. Document learning through various means such as a paper, portfolio, or other media.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "DIST",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15330,7 +15330,7 @@
         "description": "Introduces the field of disability studies. Explores historical and critical perspectives on the definition and construction of disability. Examines current societal and environmental contexts for disability, including students\u2019 own relationships to disability.",
         "credits": 3,
         "semester": ["Fall, Winter and Spring"],
-        "department": "",
+        "department": "DIST",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15342,7 +15342,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "DIST",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15354,7 +15354,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "DIST",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15366,7 +15366,7 @@
         "description": "Varying special topics related to disability studies.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "DIST",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15378,7 +15378,7 @@
         "description": "Through classroom and field experiences, students learn the role of a mentor for youth and adults who have intellectual and developmental disabilities and how to facilitate their academic, social and business relationships in higher education settings, the surrounding campus community, and at local work sites.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "DIST",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15390,7 +15390,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "DIST",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15402,7 +15402,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "DIST",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15414,7 +15414,7 @@
         "description": "Structured independent research or service learning experience focused on disability. The senior project builds upon the student\u2019s earlier work in the Access:ABILITY program and engages people with disabilities and/or their allies in project design, implementation, or interpretation.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "DIST",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15426,7 +15426,7 @@
         "description": "The final milestone for Access:Ability Scholars is the creation of an e-portfolio documenting their experiences, products, and learning reflections from across the program.",
         "credits": 0,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "DIST",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15438,7 +15438,7 @@
         "description": "Culminates the Disability Studies minor. Focuses on community access, independence, inclusion, and productivity of people with disabilities. Examines national disability policy frameworks and applications, person-centered perspectives on delivery of services and supports, and methods of facilitating change. Requires completion of an applied local advocacy project.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "DIST",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15450,7 +15450,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "DIST",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15462,7 +15462,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "DIST",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15474,7 +15474,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "DIST",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15486,7 +15486,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "DIST",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15498,7 +15498,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "DIST",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15510,7 +15510,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "DIST",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15522,7 +15522,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "DIST",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -15534,7 +15534,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "DIST",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
