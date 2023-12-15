@@ -1,4 +1,4 @@
-import React from "react";
+export /*import React from "react";
 import { Button } from "react-bootstrap";
 import { Plan } from "../../Interfaces/plan";
 import { CSVDownload, CSVLink } from "react-csv";
@@ -33,3 +33,4 @@ export const ExportCSV = ({ plans }: { plans: Plan[] }) => {
         </CSVLink>
     );
 };
+*/ {};

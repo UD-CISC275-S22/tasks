@@ -40,7 +40,7 @@ import { LoadPlan } from "./Buttons/LoadPlan";
 import { PickAPlan } from "./Buttons/PickAPlan";
 import { RequiredClasses } from "./Buttons/requiredClasses";
 import CourseEdit from "./CourseEdit";
-import { ExportCSV } from "./Buttons/ExportCSV";
+//import { ExportCSV } from "./Buttons/ExportCSV";
 import {
     ArtificialIntelligence,
     Bioinformatics,
@@ -601,7 +601,7 @@ export function ViewSemester(): JSX.Element {
                 <SavePlanInto savePlan={savePlan}></SavePlanInto>
                 <LoadPlan loadPlan={loadPlan}></LoadPlan>
                 <PickAPlan handlePlans={handlePlans}></PickAPlan>
-                <ExportCSV plans={allPlans}></ExportCSV>
+                {/*<ExportCSV plans={allPlans}></ExportCSV>*/}
             </div>
             <hr style={{ backgroundColor: "#0f234c" }}></hr>
             {

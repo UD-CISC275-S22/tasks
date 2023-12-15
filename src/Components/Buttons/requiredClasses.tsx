@@ -2,7 +2,6 @@
 import { Dropdown } from "react-bootstrap";
 import React from "react";
 import { Course } from "../../Interfaces/course";
-import { Semester } from "../../Interfaces/semester";
 
 //VIEW SEMESTER.TSX FOR OTHER CHANGES!!!
 
