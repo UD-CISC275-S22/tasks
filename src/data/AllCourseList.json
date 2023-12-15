@@ -33666,7 +33666,7 @@
         "description": "Introduction to profession, including disciplines of chemical, civil, computer, electrical, environmental, and mechanical engineering.  Prepares students for success through integration of:  technical problem solving and engineering design, ethical decision-making, teamwork, and communicating to diverse audiences.",
         "credits": 2,
         "semester": ["Fall"],
-        "department": "",
+        "department": "EGGG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -33678,7 +33678,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "EGGG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -33690,7 +33690,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "EGGG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -33702,7 +33702,7 @@
         "description": "An onramp to prototyping, this course provides an introduction to Design Principles, Computer Aided Design (CAD), Material Selection, Laser Cutting/Marking, 3D Printing and Computer Numerical Control (CNC) Machining.  Students will harness their new design literacy to produce functional artifacts across a spectrum of mediums and processes.  The course is split between lecture, skill introduction and skill practice.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "EGGG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -33714,7 +33714,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "EGGG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -33726,7 +33726,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "EGGG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -33738,7 +33738,7 @@
         "description": "Provides an exposure to nanotechnology and engineering as it impacts daily life. Based on current topics in the news, we discuss the underlying science in an approachable manner and consider the relevant societal, economic, and ethical issues. Students will leave with a greater understanding of the emerging technologies that shape our society.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "EGGG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -33750,7 +33750,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "EGGG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -33762,7 +33762,7 @@
         "description": "Advances in technology have allowed us to collect massive amounts of data. A data scientist is a person who has the skills, knowledge, and ability to extract actionable knowledge from the data either for the good of society, advancement of science and technology, business promotion, etc. This course will examine the central question of \u201cWhat is Big Data?\u201d and how can engineers, statisticians, healthcare specialists, computer scientists, social scientists and other professionals employ tools and techniques of data science? This course will cover the topics needed to solve data science problems, which includes data preparation, data characterization and presentation, data analysis and data products. Enrolling in this course will help students develop a deeper understanding of the various phases of Big Data-include: a) Exploratory Data Analysis, b) Machine Learning Techniques, c) Visualization.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "EGGG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -33774,7 +33774,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "EGGG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -33786,7 +33786,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "EGGG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -33798,7 +33798,7 @@
         "description": "Advances in technology have allowed us to collect massive amounts of data. A data scientist is a person who has the skills, knowledge, and ability to extract actionable knowledge from the data either for the good of society, advancement of science and technology, business promotion, etc. This course will examine the central question of \u201cWhat is Big Data?\u201d and how can engineers, statisticians, healthcare specialists, computer scientists, social scientists and other professionals employ tools and techniques of data science? This course will cover the topics needed to solve data science problems, which includes data preparation, data characterization and presentation, data analysis and data products. Enrolling in this course will help students develop a deeper understanding of the various phases of Big Data-include: a) Exploratory Data Analysis, b) Machine Learning Techniques, c) Visualization.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "EGGG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -33810,7 +33810,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "EGGG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -33822,7 +33822,7 @@
         "description": "",
         "credits": 12,
         "semester": [""],
-        "department": "",
+        "department": "EGGG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -33834,7 +33834,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "EGGG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -33846,7 +33846,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -33858,7 +33858,7 @@
         "description": "Gateway introduction to basic tools and strategies used in critical engagement with poety fiction, drama, and nonfiction. Includes fundamental concepts of textual analysis.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -33870,7 +33870,7 @@
         "description": "How texts are shaped by social, political, scientific, technological, artistic, religious, and economic concerns of a given period and how texts, in turn, shape these concerns. Topics vary according to expertise of instructor.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -33882,7 +33882,7 @@
         "description": "ENGL 103 offers incoming freshmen an opportunity to develop the reading and writing skills they will need to succeed at the college level.  Beyond that, however, it gives them a chance to practice the critical reasoning skills that will better enable them to engage meaningfully with the broader issues of their time.  Participants in this class will learn how to communicate their ideas effectively as they analyze and respond to the various arguments surrounding a particular topic chosen for the course.",
         "credits": 3,
         "semester": ["Fall, Summer and Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -33894,7 +33894,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -33906,7 +33906,7 @@
         "description": "Study of the representative works of the genres of Science Fiction and Fantasy; variable content (e.g., historical survey, thematic emphasis, concentration on specific period).",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -33918,7 +33918,7 @@
         "description": "Study of popular fiction (literary, cinematic, and/or multi-media); may focus on period, theme, single author, etc.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -33930,7 +33930,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -33942,7 +33942,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -33954,7 +33954,7 @@
         "description": "The course encourages students\u2019 creative and critical engagement with a wide variety of literature (poetry, prose, drama, film, etc.) by emphasizing how their own work as readers and writers connects them to the world outside the classroom.",
         "credits": 3,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -33966,7 +33966,7 @@
         "description": "Study of Greek, Roman, and Biblical literatures, set in their mythical, historical and cultural contexts, introducing appropriate critical concepts.",
         "credits": 3,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -33978,7 +33978,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall, Winter and Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -33990,7 +33990,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34002,7 +34002,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34014,7 +34014,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34026,7 +34026,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall, Winter and Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34038,7 +34038,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34050,7 +34050,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34062,7 +34062,7 @@
         "description": "Studies writers such as Dante, Chaucer, Rabelais and Cervantes, in translation.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34074,7 +34074,7 @@
         "description": "Studies writers such as Moliere, Voltaire, Goethe, Dostoevski, Thomas Mann and Herman Hesse, in translation.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34086,7 +34086,7 @@
         "description": "Texts that explore and participate in the construction and negotiation of gender, sexuality and identity.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34098,7 +34098,7 @@
         "description": "Representations of ethnicity, social class, race, gender, and other constructions of identity in primary texts (literature, film, visual arts, etc.). Secondary texts expose students to variety of methodologies for studying culture and identity to demystify the process by which scholarship is produced. Students entering the Ethnic &amp; Cultural Studies curriculum are encouraged to think about how scholars go about identifying research questions, laying the foundation for senior theses and collaborative research projects.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34110,7 +34110,7 @@
         "description": "Literature by African American Writers from the eighteenth through twenty-first centuries.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34122,7 +34122,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34134,7 +34134,7 @@
         "description": "This creative writing course introduces students to the basic principles of storytelling and narrative design for games. Working as individuals and on teams, students will practice craft elements important to game writing: working with game mechanics, developing compelling characters, maintaining tension, creating dialogue trees, and designing branching narratives. Guest speakers will include industry professionals speaking to current issues in game writing.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34146,7 +34146,7 @@
         "description": "Designed specifically for English majors who want to explore professional writing careers, this course introduces the rhetorical theory, genre studies, and practical writing skills that form the basis of numerous professional writing and editing disciplines.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34158,7 +34158,7 @@
         "description": "Racism is a hot-button issue globally. Although thoroughly debunked and are more widely condemned than ever, it nevertheless continues to surface in government policies, popular representations, and brutal acts of violence. What is it that makes racism so intractable? This course works to answer that question by analyzing racism as a problem that\u2019s deeply embedded in Western societies, albeit similarly prevalent in many non-Western countries. We\u2019ll also look at how racism connects with other social categories such as Indigeneity, gender, sexuality, disability, religion and class. And in addition to considering how racism has operated to oppress, exclude and scapegoat, we\u2019ll also be attentive to how marginalized groups have fought back.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34170,7 +34170,7 @@
         "description": "For students interested in pursuing writing as a subject of intellectual inquiry in which to understand the roles writing plays in their lives, from work, to school, to civic engagement. Students will understand writing as a complex, cultural, historical, and rhetorical activity.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34182,7 +34182,7 @@
         "description": "This multi-genre creative writing course studies the craft, the formal building blocks, of effective writing. Creating both a strong foundation of terms and techniques, students will read and write in various creative genres. Students will cultivate writing habits and understand writing strategies in order to be both better readers and better writers.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34194,7 +34194,7 @@
         "description": "Survey of literature engaging the relationship between people and the natural world. Texts will be drawn from a variety of genres, and from both American and global cultures. The course serves as one of three required core courses for a minor in Environmental Humanities.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34206,7 +34206,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34218,7 +34218,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34230,7 +34230,7 @@
         "description": "Representations of ethnicity, race, social class, gender, and other constructions of difference in literature, arts, and folk culture.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34242,7 +34242,7 @@
         "description": "Dual emphasis on reading and writing. Offers an introduction to poetry, fiction, and drama, and provides extensive practice in writing about literary subjects.",
         "credits": 3,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34254,7 +34254,7 @@
         "description": "Study of representative works of American literature, set in their historical and cultural contexts, introducing appropriate critical concepts.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34266,7 +34266,7 @@
         "description": "Representative histories, comedies, and tragedies.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34278,7 +34278,7 @@
         "description": "Allows for exploration of a particular aspect of the intersection of literature and culture, and enables in-depth study beyond the period survey course. Topics vary according to the expertise of the instructor.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34290,7 +34290,7 @@
         "description": "Descriptive study of patterns and structures of language use, with an emphasis on standard written and spoken English; attention to punctuation, mechanics, and style.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34302,7 +34302,7 @@
         "description": "Provides an overview of the debates, theories, and promising practices that have shaped secondary English education. Students acquire fundamental professional skills by engaging in basic English teaching activities such as planning and assessing, and participate in a service learning project in a local English classroom.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34314,7 +34314,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34326,7 +34326,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34338,7 +34338,7 @@
         "description": "Instruction in script writing and preparation of a script.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34350,7 +34350,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34362,7 +34362,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34374,7 +34374,7 @@
         "description": "Special topics in writing (for example, autobiography). Variable content.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34386,7 +34386,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34398,7 +34398,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34410,7 +34410,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34422,7 +34422,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34434,7 +34434,7 @@
         "description": "Trains a selected group of upper-division students in writing techniques by applying recent composition theories to students\u2019 own writing. Explores and evaluates fundamental theories of teaching writing.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34446,7 +34446,7 @@
         "description": "History of American or various foreign national cinemas.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34458,7 +34458,7 @@
         "description": "Close study of film genres, major directors, and other topics.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34470,7 +34470,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34482,7 +34482,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34494,7 +34494,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34506,7 +34506,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34518,7 +34518,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34530,7 +34530,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34542,7 +34542,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34554,7 +34554,7 @@
         "description": "Studies of selected topics in Restoration and eighteenth century literature and culture, e.g., the epistolary novel, Restoration and eighteenth century drama and women in eighteenth century literature.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34566,7 +34566,7 @@
         "description": "Study of selected topics in environmental literature with an emphasis on in-depth study beyond the genre survey course. May be taken up to three times when topics vary.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34578,7 +34578,7 @@
         "description": "Studies of significant British texts from the nineteenth century, the social forces they shaped, and those by which they were shaped. Content varies by expertise of instructor.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34590,7 +34590,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34602,7 +34602,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34614,7 +34614,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34626,7 +34626,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34638,7 +34638,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34650,7 +34650,7 @@
         "description": "Special topics, ranging from the beginnings to contemporary American literature; may include studies in a single author or authors (e.g., the detective stories of Poe) or period and genre studies (e.g., the Harlem Renaissance or the humor of the old southwest). Variable content.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34662,7 +34662,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34674,7 +34674,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34686,7 +34686,7 @@
         "description": "Focus on Jewish writers, stories, and/or culture from around the world. Course content will address issues, concepts, or problems such as: anti-Semitism, passing, secularism, Jewish-Christian and Jewish-Muslim relations, Diaspora, homeland, nation, race, ethnicity, and/or the Holocaust.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34698,7 +34698,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34710,7 +34710,7 @@
         "description": "Special topics in an author or authors, a genre, literary movement, or an idea.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34722,7 +34722,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34734,7 +34734,7 @@
         "description": "Study of selected topics in 20th century British, American and world literature, e.g., the contemporary epic novel, post-colonial writing and politics.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34746,7 +34746,7 @@
         "description": "Study of problems in textual interpretation and aesthetics from the ancient world through the present, with attention to both the principal movements in critical theory and the social and philosophical contexts of interpretation. Content varies by expertise of instructor.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34758,7 +34758,7 @@
         "description": "Particular areas or writers to be announced.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34770,7 +34770,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34782,7 +34782,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34794,7 +34794,7 @@
         "description": "Studies of the interrelation of literature and science. Content varies by expertise of instructor.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34806,7 +34806,7 @@
         "description": "Examine the institution of slavery in the Americas through the perspective of the slaves who endured it.  Letters, speeches, interviews and narratives will be examined within the historical context of 18th and 19th century slave society.  The goal of the course is to 1) gain a deeper understanding of the slave experience from the slave\u2019s point of view, 2) examine the historical dimensions of slave testimony and its use as historical evidence, and 3) understand the gendered, regional, period and spatial nuances of the slave experience.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34818,7 +34818,7 @@
         "description": "Special topics in the novel and short story. Topics may emphasize an author or authors, a type or types of fiction, a period or theme.",
         "credits": 3,
         "semester": ["Winter"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34830,7 +34830,7 @@
         "description": "Special topics in an author or authors, a type or types of drama, a period or theme.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34842,7 +34842,7 @@
         "description": "Special topics in a poet or poets, a type or movement, a period or theme.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34854,7 +34854,7 @@
         "description": "Special topics in writing studies and rhetorical theory and history.",
         "credits": 3,
         "semester": ["Fall, Summer and Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34866,7 +34866,7 @@
         "description": "Introduction to and appreciation for broad range of literatures written in English. Encompasses both Western and non-Western literature, with some emphasis on post-Colonial literature.",
         "credits": 3,
         "semester": ["Fall, Winter and Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34878,7 +34878,7 @@
         "description": "Multicultural survey of Anglophone, Francophone, and Hispanic Caribbean literature in its historical and cultural contexts. Emphasis on contemporary novels, short stories, drama, and poems.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34890,7 +34890,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Winter"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34902,7 +34902,7 @@
         "description": "Cultural representations of women by male as well as female writers. Variable in historical range, geography, and genre.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34914,7 +34914,7 @@
         "description": "Consideration of multiculturalism as it pertains to American culture or literature in English from Africa and other non-European societies. Variable in historical range, geography, and genre.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34926,7 +34926,7 @@
         "description": "Studies in selected topics in literary criticism and critical theory.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34938,7 +34938,7 @@
         "description": "Explores the literature, culture and history of Asian Americans and immigrants to the United States variously using fiction, drama, poetry, documentary, photography, narrative film, drama, court cases, primary and secondary historical materials. Patterns of Asian immigration, anti-Asian violence and internment, Asian American resistance in litigation, legislation, and cultural activities, from Gold Rush to globalization.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34950,7 +34950,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34962,7 +34962,7 @@
         "description": "A writing intensive course that trains students to be peer tutors in the University Writing Center. Introduces students to theories of composition as well as principles of rhetoric that inform writing and tutoring instruction. Students selected through an interview and screening process.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34974,7 +34974,7 @@
         "description": "Language variation over time and across geography, culture and dialect. Rhetorical analysis of written and spoken English, attending to style, situation and genre. Applications of grammatical knowledge to describing language use in various contexts. Intended for prospective English teachers.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34986,7 +34986,7 @@
         "description": "Introduces students to the relationships between literacy practices and technology. Requires students to gain proficiency in multimodal practices and to apply their skills to solving a literacy-based problem in their intended field.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -34998,7 +34998,7 @@
         "description": "Emphasizes contemporary theories about helping adolescents learn to write effectively in various genres. Students assist local teachers in conducting writing workshops or assessing student work.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35010,7 +35010,7 @@
         "description": "Through a variety of approaches, texts and histories, this course explores the affordances and constraints of digital writing while also helping students develop their own voice as writers in digital media.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35022,7 +35022,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35034,7 +35034,7 @@
         "description": "Intensive practice in composition. Group discussion and individual conferences. Wide reference to professional poems as well as models. Emphasis on student competence in traditional prosody as well as exploring freer forms.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35046,7 +35046,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35058,7 +35058,7 @@
         "description": "Exploration of a variety of forms, including memoir, literary journalism and personal essay, through readings, exercises and substantial writing projects.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35070,7 +35070,7 @@
         "description": "In-depth reporting, research methods, ethics, and other topics.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35082,7 +35082,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35094,7 +35094,7 @@
         "description": "Special studies and writing in selected kinds of journalism (opinion writing, science journalism) or in an aspect of the profession (history of American journalism, ethics of journalism). Variable content.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35106,7 +35106,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall, Winter and Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35118,7 +35118,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35130,7 +35130,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35142,7 +35142,7 @@
         "description": "Studies of writing in professional settings: technical, business, legal, medical, scientific, environmental, governmental. Includes considerations of rhetoric, design, and use.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35154,7 +35154,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35166,7 +35166,7 @@
         "description": "Focuses on concepts and strategies for designing contemporary websites. Lecture sessions cover such topics as user and task analysis, interface design, website navigation, information architecture, accessibility, and user experience. Lab sessions provide instruction on creating websites in different platforms, including HTML coding.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35178,7 +35178,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35190,7 +35190,7 @@
         "description": "Conventions of written communication in biomedical and scientific-related fields are explored.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35202,7 +35202,7 @@
         "description": "How can fiction help us understand and apply science? In this interdisciplinary class, we\u2019ll use climate fiction, climate change science, journalism reports, movies, and research on science communication to understand the role narratives can play in creating visions of the future and motivating us to take action. Students will learn to integrate across disciplines and explore how narratives in fiction and non-fiction writing shape public perceptions of scientific research.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35214,7 +35214,7 @@
         "description": "Hazards become disasters when they affect people.  This class is about understanding the social policies and practices that turn hazards into disasters. In this discussion-based seminar, we will explore case studies of hazards - heat wave, wildfire, hurricane, and climate change - and the environmental justice (EJ) issues that arise.  Students will think critically, work to see issues from multiple viewpoints, and improve their ability to understand the social and environmental justice issues in current events.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35226,7 +35226,7 @@
         "description": "Focuses on the analytical skills necessary to address a wide range of legal audiences: clients, opponents, judges, regulatory agencies, and legislators. Emphasis on creating a streamlined prose style that is suitable for any legal writing task.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35238,7 +35238,7 @@
         "description": "This course familiarizes students with major forms and strategies of legal argumentation by combining analysis of legal arguments with writing assignments designed to offer students practical training in legal argumentation. This course may also focus on the construction of oral argument. Topics in the course may vary from Semesterterto term, and from instructor to instructor.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35250,7 +35250,7 @@
         "description": "Variable content. Students will use interdisciplinary methods to investigate the history of racial inequalities in Delaware and the experiences of Black and Indigenous communities. Student research will lead to public-facing projects based on the discovery, exploration, and interpretation of historic sites and collections. This course enables students to participate in the University of Delaware\u2019s effort to acknowledge the ramifications of past social injustice and map out paths forward.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35262,7 +35262,7 @@
         "description": "Learning experience, on or off campus, under supervision of faculty member. Instructional learning both in and out of class and beyond existing department courses. Discovery learning experiences such as research, service learning, and fieldwork.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35274,7 +35274,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall, Summer and Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35286,7 +35286,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35298,7 +35298,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35310,7 +35310,7 @@
         "description": "Faculty sponsored research.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35322,7 +35322,7 @@
         "description": "Internship experiences that have been arranged or are currently sponsored by an English Department faculty member.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35334,7 +35334,7 @@
         "description": "Special topics in an author or authors, a type or types of drama, a period or theme.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35346,7 +35346,7 @@
         "description": "Introduction to the analysis of English phonology, morphology, and syntax, including comparison of English with other languages.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35358,7 +35358,7 @@
         "description": "Intensive capstone seminar employs research presentations as the occasion for students to consolidate skills acquired in 100-, 200-, and 300-level coursework. Content varies by expertise of instructor.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35370,7 +35370,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35382,7 +35382,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35394,7 +35394,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35406,7 +35406,7 @@
         "description": "Prepares students to design instruction that integrates all the English Language Arts, including reading, writing, speaking, listening, and viewing. Students gain instructional experience via a 45-hour practicum in their assigned student teaching classroom.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35418,7 +35418,7 @@
         "description": "Accompanies student teaching in secondary English. Addresses professional issues, including instructional design, assessment, classroom management, and building relationships with colleagues and students\u2019 families.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35430,7 +35430,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35442,7 +35442,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35454,7 +35454,7 @@
         "description": "Negotiate the modes of reading and modes of authority encountered in academic work. Introduction to the library and other resources for graduate study in English. Acquire a better understanding of the genres of our profession, especially the academic article and monograph.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35466,7 +35466,7 @@
         "description": "Studies major themes in American material culture of the 17th, 18th or 19th centuries. Topics vary.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35478,7 +35478,7 @@
         "description": "Introduces graduate students to the theories and practices of material culture studies. Explores the principles and theories that inform our investigation; they include (but are not limited to) material concepts; social life of things; modes of object analysis; methodologies and their application; objects as word and image; gendered objects; technology and manufactured things; lived and built environments.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35490,7 +35490,7 @@
         "description": "Survey of medieval culture and ideas as expressed in literature (e.g., Beowulf, The Canterbury Tales, The Divine Comedy) and/or in history, philosophy, etc. (e.g., Boethius, Augustine, Thomas Aquinas), and topics (e.g., orality and literacy, epic and romance, genres).",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35502,7 +35502,7 @@
         "description": "Survey of a wide selection of authors (e.g., More, Wyatt, Sidney, Spenser, Marlowe, Donne, Herbert, Marvell, Jonson, Webster, Middleton, the Cavalier poets, Marvell, Milton); some of Shakespeare\u2019s works may also be included.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35514,7 +35514,7 @@
         "description": "Survey of Romantic and/or Victorian Literature.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35526,7 +35526,7 @@
         "description": "Broadly focused to include multiple genres and/or movements (e.g., turn-of-the-century realism, war poets, modernism, postmodern drama) from before and after World War II. May include American, European and post-colonial, in addition to British literature.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35538,7 +35538,7 @@
         "description": "Study of selected poetry, prose, and drama of the twentieth century, with an emphasis on the major texts of English and American literature during the period. Some attention given to other literary traditions and writings.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35550,7 +35550,7 @@
         "description": "Study of particular themes, movements, or authors in American Literature.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35562,7 +35562,7 @@
         "description": "Black activists of the nineteenth century are called abolitionists so routinely that the appellation goes unmarked and unnoticed. This class will re-center Black activism in relation to the Colored Conventions Movement, which shared its genesis with the antebellum abolitionist movement, but continued, indeed grew, in scope and force after the Civil War.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35574,7 +35574,7 @@
         "description": "Variable content. Students will use interdisciplinary methods to investigate the history of racial inequalities in Delaware and the experiences of Black and Indigenous communities. Student research will lead to public-facing projects based on the discovery, exploration, and interpretation of historic sites and collections. This course enables students to participate in the University of Delaware\u2019s effort to acknowledge the ramifications of past social injustice and map out paths forward.",
         "credits": 3,
         "semester": ["Verify Offering with Dept"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35586,7 +35586,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35598,7 +35598,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35610,7 +35610,7 @@
         "description": "Special topics in the novel, short story, or non-fiction prose works.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35622,7 +35622,7 @@
         "description": "Special topics on a poet or poets, a type or movement, a period or theme.",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35634,7 +35634,7 @@
         "description": "Variable content. Survey of major themes in print and material culture studies, with exploration of research methods, theoretical approaches, and curatorial practices.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35646,7 +35646,7 @@
         "description": "Survey of major periods, themes, or movements in film and media.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35658,7 +35658,7 @@
         "description": "Introduction to the analysis of English phonology, morphology, and syntax, including comparison of English with other languages.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35670,7 +35670,7 @@
         "description": "",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35682,7 +35682,7 @@
         "description": "Introduction to some of the leading problems in contemporary literary theory, with some attention to their historical precedents.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35694,7 +35694,7 @@
         "description": "Topical introduction to one or more cultural theories, providing a survey of scholarship on such varied topics as semiotics, deconstructionism, feminism, material culture, race, ethnicity studies, postcolonial and global studies, and problems of representation and signification in literary and non-literary texts.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35706,7 +35706,7 @@
         "description": "Study of current composition theory, with emphasis on the relationship between theory and classroom practices.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35718,7 +35718,7 @@
         "description": "Special topics in rhetoric and composition, including methods, history, and practice.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35730,7 +35730,7 @@
         "description": "Seminar in Romantic and/or Victorian literature with emphasis on selected writers, genres, and/or topics. Possible course topics: women and nature poetry; Dickens; religious doubt; the provincial novel.",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35742,7 +35742,7 @@
         "description": "Variable content. Concentrated study of an aspect of twentieth century British, European, American and/or post-colonial literatures. Possible focuses: a genre, a set of writers, cultural issues (e.g., gender, race, the Holocaust, aesthetics vs. politics).",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35754,7 +35754,7 @@
         "description": "",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35766,7 +35766,7 @@
         "description": "Concentrated study of particular genres, themes, periods, movements, or schools in British literature.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35778,7 +35778,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35790,7 +35790,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35802,7 +35802,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35814,7 +35814,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35826,7 +35826,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35838,7 +35838,7 @@
         "description": "Concentrated study of a particular genre, period, movement, or school of literature.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35850,7 +35850,7 @@
         "description": "Variable content. Concentrated study of the ways ideas of race and ethnicity shape, and are shaped by, literature and culture. Will include discussion of theoretical and historical conceptualizations of race and ethnicity, and, when relevant, religion, diaspora, nations and nationalisms, colonialism, and/or imperialism.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35862,7 +35862,7 @@
         "description": "Variable content. Concentrated study of the major issues in print culture, the history of the book, material culture studies, and related areas. Will include discussion of methodologies and theoretical approaches.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35874,7 +35874,7 @@
         "description": "Variable content. Concentrated study of Atlantic World or global flows of literature and culture. Will include discussion of methodological and theoretical issues related to the study of transnational cultural exchange.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35886,7 +35886,7 @@
         "description": "Variable content. Concentrated study of a particular genre, period, movement or school of film or other media.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35898,7 +35898,7 @@
         "description": "Close examination of a single topic or a closely related group of topics (e.g., psychoanalysis and interpretation, genre theory, literary historiography, feminist critique) in textual study.",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35910,7 +35910,7 @@
         "description": "Varying topics in linguistics, such as grammatical theory, grammatical analysis, syntax, historical-comparative linguistics, stylistics and grammar testing.",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35922,7 +35922,7 @@
         "description": "Special Topics in Rhetoric and Composition. Possible Topics include: Rhetorics of Disability; Environmental Rhetoric; Advanced Practice.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35934,7 +35934,7 @@
         "description": "Research and readings in preparation of dissertation topic and/or qualifying examinations for doctoral students before admission to candidacy but after completion of all required course work.",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35946,7 +35946,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "ENGL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35958,7 +35958,7 @@
         "description": "This course uses an engineering approach to study land and water management strategies for non-engineering students. Learn the fundamental principles involved in the sustainable management of soil and water resources through the examination of hydrologic and erosion processes. Important environmental topics covered in this course include soils, storm water management, nonpoint source pollution, water and wastewater treatment, wetlands, rainfall, runoff, groundwater, erosion control, and irrigation and drainage. Using basic algebraic principles, students will design vegetative waterways, calculate stormwater runoff, determine evapotranspiration rates, and design basic irrigation and drainage systems.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35970,7 +35970,7 @@
         "description": "Learn basic field skills and receive exposure to the careers, opportunities, and expectations for an ecologist.",
         "credits": 1,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35982,7 +35982,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -35994,7 +35994,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36006,7 +36006,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36018,7 +36018,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36030,7 +36030,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36042,7 +36042,7 @@
         "description": "",
         "credits": 1,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36054,7 +36054,7 @@
         "description": "",
         "credits": 1,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36066,7 +36066,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36078,7 +36078,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36090,7 +36090,7 @@
         "description": "Trains students to acquire and analyze real-world spatial data relevant to current conservation issues for wildlife species. This data will used in Geographic Information Systems and other applications to examine how animals move through their environment, the resources that they use, and the availability of those resources.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36102,7 +36102,7 @@
         "description": "Introduction to the theory and application of genetics as related to the improvement of plants and animals.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36114,7 +36114,7 @@
         "description": "Laboratory exercises concerning genetic concepts, methods and applications using various plant and animal systems. Note: Laboratory requires some out-of-class time for completion of the fruit fly genetics project.",
         "credits": 2,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36126,7 +36126,7 @@
         "description": "Examination of a selection of insects associated with crops, forests, natural areas, gardens, and yards. Emphasis is on getting to know key features of a representation of insect species in the agricultural and urban environments that affect the life and commerce of people including their impactful significance and ecological associations.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36138,7 +36138,7 @@
         "description": "Laboratory and field exercises demonstrating basic ecological principles and quantitative techniques. Emphasis on population and community phenomena. Natural habitats studied include local fields, forests and streams.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36150,7 +36150,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36162,7 +36162,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36174,7 +36174,7 @@
         "description": "A survey of the many ways insects interact with their biotic and abiotic environments; why such interactions determine terrestrial ecosystem diversity and function; and strategies for sustaining productive insect communities.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36186,7 +36186,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36198,7 +36198,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36210,7 +36210,7 @@
         "description": "Examines morphological and physiological adaptations of insects from an evolutionary perspective. Includes the functional anatomy of insects (both internal and external) and how organ systems carry out their physiological tasks. Considers the insect \u201cgroundplan\u201d (in comparison to other arthropods), and reviews all the major organ systems, their functions, and how they carry out these functions. Laboratory emphasizes anatomical variation of external and internal systems of insects and techniques for their study.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36222,7 +36222,7 @@
         "description": "Lecture and laboratory; the collection, preservation and classification of common insect families.",
         "credits": 4,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36234,7 +36234,7 @@
         "description": "Collection, preservation and classification of common insect families. Includes lecture and laboratory.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36246,7 +36246,7 @@
         "description": "Sampling techniques for insect survey or biodiversity studies, including field experience, research design, data preparation, analysis and interpretation.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36258,7 +36258,7 @@
         "description": "Principles of managing insect populations in an environmentally compatible manner to reduce losses caused by insects attacking our food, fiber, buildings, domestic animals and human populations. Diagnostic recognition, control and habits of major pest species.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36270,7 +36270,7 @@
         "description": "In this course students who have no prior hunting experience will be certified in hunter safety, learn about waterfowl population and habitat management, and engage in an optional waterfowl hunt. Course last for 3 days on the Eastern Shore of Maryland.",
         "credits": 1,
         "semester": ["Winter"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36282,7 +36282,7 @@
         "description": "This course currently provides an introduction to policy issues that relate to wildlife management and natural resources.  Students spend the first half of the semester understanding how cultural and socio-economic backgrounds and history affect values relationships to the land and wildlife.  Students also gain understanding and awareness of how to incorporate socio-demographic-economic value differences in addressing stakeholder concerns and wildlife policy development.  The second half of the semester details the historical creation and oversight of policies related to federal agencies toward wildlife and wildlife habitat in the face of a growing and changing society. While the second half provides an overview of many policies, it also uses lengthier case studies to detail the interaction of human dimensions with wildlife conservation. Because wildlife and fisheries management in the 21<sup>st</sup> century has as much to do with human dimensions, economics and equity, social politics, and environmental policy, as it does ecology principles; this course is designed to prepare students to succeed as wildlife and natural resource professionals.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36294,7 +36294,7 @@
         "description": "Research design, field sampling techniques, data analysis and interpretation, and preparation of publication quality manuscripts.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36306,7 +36306,7 @@
         "description": "Students will be introduced to basic principles and methods of wildlife habitat management in forests, grasslands, wetlands, agriculture, and urban areas. Labs include field trips to visit various habitats and learn about habitat management directly from local wildlife professionals. Field clothes required.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36318,7 +36318,7 @@
         "description": "This course introduces students to the field of quantitative ecology, which involves various approaches to analyzing ecological datasets and testing ecological hypotheses. By the end of the course you should be proficient at using the statistical programming software R, be able to plot and analyze ecological datasets and conduct specific ecological analyses including distance sampling analyses and occupancy modeling.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36330,7 +36330,7 @@
         "description": "Avian biology: diversity, evolution, form and function, behavior and communication, reproduction and development, and conservation. Natural history and identification of taxa. Labs with frequent field trips.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36342,7 +36342,7 @@
         "description": "The use of beneficial organisms to manage and control populations of other organisms. Theory, practices, and case histories for manipulation of natural enemies to minimize the impact of pests.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36354,7 +36354,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36366,7 +36366,7 @@
         "description": "Through the use of hands on field experiments and the development of educational outreach displays students learn basic science in the field of pollination ecology. Newark farm will be used to generate data for a long-Semesterterdatabase of pollinator diversity and temporal nutrition assessment. Students will be involved in planting different flowering species on the farm, and colonies at the University of Delaware apiary will be tracked for pollen collection and hive health. Students will be involved in weekly pollen sampling and colony evaluations.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36378,7 +36378,7 @@
         "description": "Biology and ecology of reptiles and amphibians. Evolution, feeding behavior, life history, reproduction, physiology, population structure and dynamics, migration and movements, and conservation.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36390,7 +36390,7 @@
         "description": "Mammal biology: evolution, feeding, homeostasis, communication and reproduction. Natural history and identification of taxa. Occasional field trips.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36402,7 +36402,7 @@
         "description": "Students learn the biology, physiology and systematics of aquatic insects with emphasis on the fauna of North America. For labs we go to Grammies Run in Fair Hill and sample as part of a long-Semesterterdata collection project.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36414,7 +36414,7 @@
         "description": "This course addresses the ecology and evolution of host-parasite interactions. By the end of the course you should have a general understanding of parasite life history strategies, how to quantify and model parasitism and disease, how parasites evolve and disperse and how this is influenced by human activities, and the consequences of parasitism for hosts.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36426,7 +36426,7 @@
         "description": "Understand population processes by combining a discussion of theory and practical applications. Includes exponential, logistic, and age-specific growth as well as predation, competition, disease, and metapopulations. Model-building exercises actively used to understand theoretical dynamics.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36438,7 +36438,7 @@
         "description": "A 3-week intensive, field-based experience in the mechanics of conserving tropical biodiversity. Focuses on group projects quantifying and comparing the diversity of montane cloud forests, lowland rainforests and tropical dry forests.",
         "credits": 3,
         "semester": ["Winter"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36450,7 +36450,7 @@
         "description": "Global debate about anthropocentric use and misuse of earth\u2019s biological and physical resources.",
         "credits": 3,
         "semester": ["Winter"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36462,7 +36462,7 @@
         "description": "Unique challenges facing African wildlife. Identifying and surveying terrestrial vertebrates, human-wildlife interactions, ecotourism, and development of African wildlife conservation. First-hand experience in wildlife conservation by visiting various ecosystems, living with aboriginal people, and seeing the effects of ecotourism and development.",
         "credits": 3,
         "semester": ["Winter"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36474,7 +36474,7 @@
         "description": "Basic philosophical, economic, and ecological aspects of the bottom-up approach to conservation. Students experience this form of conservation first-hand by living with aboriginal people and seeing how they conserve natural resources.",
         "credits": 3,
         "semester": ["Winter"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36486,7 +36486,7 @@
         "description": "Biological principles to the conservation of biological diversity. Integrates topics, and theories from ecology, economics, genetics, biogeography, behavior, reproductive biology, sociology, and wildlife management. Divided into four parts; 1) describing patterns and scales of biological diversity, 2) examining threats 3) managing populations and ecosystems, 4) social aspects of conservation.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36498,7 +36498,7 @@
         "description": "Faculty-supervised employment (usually part-time) or volunteer service at an entomology, ecology, or wildlife conservation-related site such as a research laboratory, pest control firm, museum, government agency or nature center. A signed agreement with faculty sponsor prior to placement and a journal or written report are required.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36510,7 +36510,7 @@
         "description": "Preparation, presentation, and discussion, both oral and written, of an issue based topic in entomology, wildlife conservation, natural resource management, or a related area for peers in a manner similar to that in scientific communication. Preparation includes reading and assessment of research articles.",
         "credits": 1,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36522,7 +36522,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36534,7 +36534,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36546,7 +36546,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36558,7 +36558,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36570,7 +36570,7 @@
         "description": "Lecture-laboratory treating the collection, preservation and classification of immature stages of insects. Emphasis on holometabolous orders, with special attention to aquatic immatures.",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36582,7 +36582,7 @@
         "description": "Examines morphological and physiological adaptations of insects from an evolutionary perspective. Includes the functional anatomy of insects (both internal and external) and how organ systems carry out their physiological tasks. Considers the insect \u201cgroundplan\u201d (in comparison to other arthropods), and reviews all the major organ systems, their functions, and how they carry out these functions. Laboratory emphasizes anatomical variation of external and internal systems of insects and techniques for their study.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36594,7 +36594,7 @@
         "description": "Collection, preservation and classification of common insect families. Includes lecture and laboratory.",
         "credits": 4,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36606,7 +36606,7 @@
         "description": "The collection, classification, preservation and curation of insects. An insect collection is required.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36618,7 +36618,7 @@
         "description": "Principles of managing insect populations in an environmentally compatible manner to reduce losses caused by insects attacking our food, fiber, buildings,domestic animals, and human population. Diagnostic recognition, control and habits of major pest species.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36630,7 +36630,7 @@
         "description": "Introduction to policy issues that relate to wildlife management and natural resources. Students will gain an understanding of current laws, federal agencies, policy formation, and debate the policies of current hot topics.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36642,7 +36642,7 @@
         "description": "Research design, field sampling techniques, data analysis and interpretation, and preparation of publication quality manuscripts. Class and individually designed field projects focus on regional wildlife and their habitats.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36654,7 +36654,7 @@
         "description": "Students will be introduced to basic principles and methods of wildlife habitat management in forests, grasslands, wetlands, agriculture, and urban areas. Labs include field trips to visit various habitats and learn about habitat management directly from local wildlife professionals. Field clothes required.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36666,7 +36666,7 @@
         "description": "This course introduces students to the field of quantitative ecology, which involves various approaches to analyzing ecological datasets and testing ecological hypotheses. By the end of the course you should be proficient at using the statistical programming software R, be able to plot and analyze ecological datasets and conduct specific ecological analyses including distance sampling analyses and occupancy modeling.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36678,7 +36678,7 @@
         "description": "Avian biology: diversity, evolution, form and function, behavior and communication, reproduction and development, and conservation. Natural history and identification of taxa. Labs with frequent field trips.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36690,7 +36690,7 @@
         "description": "Use of beneficial organisms to manage and control populations of other organisms. Theory, practices, and case histories for manipulation of natural enemies to minimize the impact of pests.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36702,7 +36702,7 @@
         "description": "Theoretical treatment of the factors that have dominated the evolution of animal behavior; hypothesis testing emphasized.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36714,7 +36714,7 @@
         "description": "Topics include advanced theoretical principles and methods to explore spatial and temporal relationships among landscape elements, organisms, populations, and ecosystems; causes of landscape pattern; measuring landscape pattern using GIS software, and application of landscape ecological principles in conservation management.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36726,7 +36726,7 @@
         "description": "Through the use of hands on field experiments and the development of educational outreach displays students learn basic science in the field of pollination ecology. Newark farm will be used to generate data for a long-Semesterterdatabase of pollinator diversity and temporal nutrition assessment. Students will be involved in planting different flowering species on the farm, and colonies at the University of Delaware apiary will be tracked for pollen collection and hive health. Students will be involved in weekly pollen sampling and colony evaluations.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36738,7 +36738,7 @@
         "description": "Biology and ecology of reptiles and amphibians. Evolution, feeding behavior, life history, reproduction, physiology, population structure and dynamics, migration and movements, and conservation.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36750,7 +36750,7 @@
         "description": "Mammal biology: evolution, feeding, homeostasis, communication and reproduction. Natural history and identification of taxa. Occasional field trips.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36762,7 +36762,7 @@
         "description": "Biology and systematics of aquatic insects with emphasis on the fauna of North America. Collection of immature aquatic insects required.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36774,7 +36774,7 @@
         "description": "This course addresses the ecology and evolution of host-parasite interactions. By the end of the course you should have a general understanding of parasite life history strategies, how to quantify and model parasitism and disease, how parasites evolve and disperse and how this is influenced by human activities, and the consequences of parasitism for hosts.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36786,7 +36786,7 @@
         "description": "Understand population processes by combining a discussion of theory and practical applications. Includes exponential, logistic, and age-specific growth as well as predation, competition, disease, and metapopulations. Model-building exercises actively used to understand theoretical dynamics.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36798,7 +36798,7 @@
         "description": "Biological principles to the conservation of biological diversity. Integrates topics, and theories from ecology, economics, genetics, biogeography, behavior, reproductive biology, sociology, and wildlife management. Divided into four parts; 1) describing patterns and scales of biological diversity, 2) examining threats 3) managing populations and ecosystems, 4) social aspects of conservation.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36810,7 +36810,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36822,7 +36822,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36834,7 +36834,7 @@
         "description": "Chemically mediated interactions between insects and plants and other organisms involved in the relationship. Perceptual organs, behavioral and physiological response, plant-insect interactions, insect and plant defense, and intraspecific interactions that relate to natural chemicals produced by plants and insects. Presentation-discussion format.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36846,7 +36846,7 @@
         "description": "Interaction of animals with their environment as it influences their distribution, abundance, life history and evolution. Emphasis on primary research literature.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36858,7 +36858,7 @@
         "description": "Discussion-based seminar on a current text and/or topic in the ecological sciences.",
         "credits": 1,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36870,7 +36870,7 @@
         "description": "Explore various methods to analyze wildlife spatial data, including advanced GIS techniques, Resource Selection Models and Species Distribution Models in R and WinBUGS, and the use of standalone programs like MAXENT and PRESENCE.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36882,7 +36882,7 @@
         "description": "Students will develop a suite of tools for modeling environmental and biological data to answer ecological questions with R software. Emphasis will be on model interpretation as it relates to informing management decisions, understanding model assumptions and critical evaluation of competing models.PREREQ:Basic statistics course including regression techniques, prior experience with R is highly recommended.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36894,7 +36894,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36906,7 +36906,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36918,7 +36918,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36930,7 +36930,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36942,7 +36942,7 @@
         "description": "",
         "credits": 0,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36954,7 +36954,7 @@
         "description": "",
         "credits": 0,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36966,7 +36966,7 @@
         "description": "Research and readings in preparation of dissertation topic and/or qualifying examinations for doctoral students before admission to candidacy but after completion of all required course work.",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36978,7 +36978,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "ENWC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -36990,7 +36990,7 @@
         "description": "Introduction to basic concepts from accounting, entrepreneurship, finance, management, marketing and operations management that are pertinent to starting and running new business and social ventures. Topics are covered by subject matter experts.",
         "credits": 4,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37002,7 +37002,7 @@
         "description": "Focuses on the development of practical professional skills, building meaningful relationships and fostering an entrepreneurial mindset. Students will learn how to brand themselves through the use of social media; acquire communication, social influence, and networking skills; and develop an understanding of how to succeed in any workplace.",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37014,7 +37014,7 @@
         "description": "Introduction to the entrepreneurial process involved in idea generation and putting ideas into action. Tools and practices associated with evidence-based entrepreneurship, which can be described as \u201cbuilding a business like a scientist,\u201d are emphasized. Focuses on conceiving, initial testing and pitching a novel idea.",
         "credits": 1,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37026,7 +37026,7 @@
         "description": "Introduction to key concepts and challenges associated with utilizing entrepreneurial ventures as a sustainable and effective means for addressing important societal and environmental problems. Use of an evidence-based process and giving special attention to the needs of beneficiaries in developing revenue generating nonprofit organizations and mission-driven businesses are emphasized as best practices for turning ideas into action.",
         "credits": 1,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37038,7 +37038,7 @@
         "description": "",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37050,7 +37050,7 @@
         "description": "Through workshops, networking opportunities, and reflections, this course provides a solid foundation for developing the personal capacities needed to successfully adapt and thrive amidst rapid change. It is designed to be taken during your first semester as an entrepreneurship major.",
         "credits": 1,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37062,7 +37062,7 @@
         "description": "Through workshops, networking opportunities, and reflections, this course continues to build a solid foundation for developing the personal capacities needed to successfully adapt and thrive amidst rapid change. It is designed to be taken during your second semester as an entrepreneurship major.",
         "credits": 1,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37074,7 +37074,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37086,7 +37086,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Summer"],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37098,7 +37098,7 @@
         "description": "An onramp to prototyping, this course provides an introduction to Design Principles, Computer Aided Design (CAD), Material Selection, Laser Cutting/Marking, 3D Printing and Computer Numerical Control (CNC) Machining.  Students will harness their new design literacy to produce functional artifacts across a spectrum of mediums and processes.  The course is split between lecture, skill introduction and skill practice.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37110,7 +37110,7 @@
         "description": "You can\u2019t lead others until you begin the lifetime, rhythmic process of leading yourself. While this seems intuitive and easy, experience teaches that it is a difficult, ever-lasting challenge. Focuses on developing the mindset, habits, character ethic and capabilities needed to continuously improve your life and the lives of those you care most about. Great questions, great thinking and thoughtful reflection are emphasized.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37122,7 +37122,7 @@
         "description": "",
         "credits": 1,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37134,7 +37134,7 @@
         "description": "Every student / entrepreneur should be able to create a vision of their future and define tangible goals to achieve it. This course will be fast-paced. It will teach and walk students through the process of networking and ideally, obtaining an actual internship to advance toward their desired future.",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37146,7 +37146,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37158,7 +37158,7 @@
         "description": "Focus on understanding the basic concepts, tools, and practices of entrepreneurship and the development of entrepreneurial skills. The entrepreneurial process (opportunity recognition, resource marshaling, and team building driven by communication, creativity, and leadership) and business planning are emphasized.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37170,7 +37170,7 @@
         "description": "Explore basic and advanced marketing topics pertinent to bringing new innovations to market, including: product concept testing and the new product development process; customer behavior as it relates to the adoption of new products; characteristics of high technology and other types of entrepreneurial markets; test marketing; market segmentation, targeting, and positioning; the formulation of go-to-market strategies (including product, distribution, promotional, and pricing strategies); and entrepreneurial selling.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37182,7 +37182,7 @@
         "description": "Focus on the development of entrepreneurial leadership and influence skills through the completion of hands-on tasks in actual business situations.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37194,7 +37194,7 @@
         "description": "Provides foundational tools for understanding customer and societal issues on an individual and contextualized level. User-centered research methods such as observation, depth interviewing, cultural consensus analysis and projective techniques are applied to identifying problems, unmet needs and opportunities. User-centered methods are also utilized to guide idea generation and solution testing as students engage in real-world application across a variety of fields.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37206,7 +37206,7 @@
         "description": "Introduction to creativity theory and creative problem-solving, including the highly valuable capacities of design thinking. Topics include creativity processes, problem-finding, user-experience methods, idea-generating techniques and developing a creative disposition. Students also develop design thinking skills as they engage in creative activity.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37218,7 +37218,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37230,7 +37230,7 @@
         "description": "Emphasizes career development, reflection, and personal assessment. It is designed to accompany a minimum of 100 hours of employment in an entrepreneurial context.",
         "credits": 3,
         "semester": ["Fall, Summer and Spring"],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37242,7 +37242,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37254,7 +37254,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37266,7 +37266,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37278,7 +37278,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37290,7 +37290,7 @@
         "description": "Focus on developing creative, sustainable solutions to address societal problems. The course is designed to empower students to see social entrepreneurship as a force for social change and give them the knowledge, skills and connections needed to make an impact on the lives of others.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37302,7 +37302,7 @@
         "description": "Focus on helping students who have well-developed business ideas and/or existing businesses to accelerate the startup &amp; growth of their companies. Begin with the conduct of a business model audit to determine appropriate goals/milestones for each business. Students will be tasked with developing and implementing strategies to accomplish their goals/milestones. Whenever possible, students will be connected with providers of needed services, financial resources, and mentors.",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37314,7 +37314,7 @@
         "description": "Examines selected topics of current interest in various areas of entrepreneurship.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37326,7 +37326,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37338,7 +37338,7 @@
         "description": "Students work together in interdisciplinary teams to learn and utilize a repeatable method for developing viable business concepts. Core topics include: customer development, lean startup, types of businesses, opportunity recognition, ideation, validation of business model hypotheses, intellectual property, business strategy, team building, and venture capital.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37350,7 +37350,7 @@
         "description": "Involves attempting to develop and launch a high growth potential business. Students work together in interdisciplinary teams to validate their business concepts, optimize business processes and strategies, and begin to acquire customers. Challenges associated with rapid growth are emphasized.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37362,7 +37362,7 @@
         "description": "Explores important legal issues faced by entrepreneurs as they put their ideas into action. Topics are sequenced to mirror the entrepreneurial process, beginning with pre-startup issues like partnership agreements and intellectual property, continuing to entity formation, governance and ownership issues, and ending with emerging growth and exit transactions.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37374,7 +37374,7 @@
         "description": "Presents frameworks for developing commercially feasible products from new technologies. Students work together in teams to complete proof of concept testing that typically involves primary and secondary market research and an assessment of technological feasibility, value, and use for specific applications.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37386,7 +37386,7 @@
         "description": "Examines the sources of capital for new and growing companies with a special emphasis on angel investment, venture capital, private equity, and non-dilutive and other niche options; the management of cash flows; uses of capital; and financial statement presentation and analysis (a cornerstone of valuation, lending/borrowing, and investing). Case examples and live projects are emphasized to provide students with firsthand experience in financial decision making for startup and emerging growth businesses.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37398,7 +37398,7 @@
         "description": "Focus on critical financial, legal, scientific and engineering issues confronted during initial planning stages of a start-up enterprise. Students work in teams to develop a real world business product offering.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37410,7 +37410,7 @@
         "description": "Every company faces an innovation imperative. In other words, they need to continuously improve their products and bring new offerings into the marketplace or risk being disrupted by competitive forces. This course focuses on corporate innovation and intrapreneurship. Unique challenges associated with exploring new ideas while optimizing value delivery and capture from existing products are highlighted. Special attention is given to issues of governance, leadership, technology introduction, portfolio management, corporate social responsibility and sustainability.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37422,7 +37422,7 @@
         "description": "Provides students with guided reflection and learning as they engage in a practical social entrepreneurial engagement of their choice. This may include participation in established programs within the University, such as First Step Grand Challenges, Service Learning Scholar, or others; or may be an internship engagement with an organization, issue, or cause outside the University.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37434,7 +37434,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37446,7 +37446,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37458,7 +37458,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37470,7 +37470,7 @@
         "description": "Provides a toolbox for making design ideas a reality. Learn how to use current computer aided design and manufacturing technology to design and manufacture physical prototypes. Understand and apply iterative design processes towards solving an open-ended design challenge.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37482,7 +37482,7 @@
         "description": "Provides an introduction to the theory and practice of industrial design - an interdisciplinary field involving the engineering, manufacturing, and business aspects of new product development. Students will apply modeling, prototyping, and testing concepts towards creating a commercially viable product.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37494,7 +37494,7 @@
         "description": "Why are novel technologies readily accepted in some communities, yet resisted in other communities?  Students will learn through case studies of historical technologies such as the printing press, farm mechanization, and refrigeration as well as contemporary technologies such as genetically modified foods and solar energy.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37506,7 +37506,7 @@
         "description": "Provides foundational knowledge in research and practice of creativity theory and creative problem-solving in entrepreneurial contexts. Topics include creativity processes, including creative problem solving models and methods, idea-generating techniques, and developing a creative disposition.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37518,7 +37518,7 @@
         "description": "Addresses the integration and application of design processes and design thinking to enhance innovation. Students engage in multidisciplinary exploration of design theory and practice, specifically applying design ideas, principles and approaches.  The role of user-centered research, divergent thinking, and iteration to enhance innovation are emphasized.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37530,7 +37530,7 @@
         "description": "This course focuses on developing creative, sustainable solutions to address societal problems. The course is designed to empower students to see social entrepreneurship as a force for social change and give them the knowledge, skills and connections needed to make an impact on the lives of others.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37542,7 +37542,7 @@
         "description": "Focuse on helping students to accelerate the startup &amp; growth of their companies. It begins with the conduct of a business model audit to determine appropriate goals/milestones. Students then develop and implement strategies to accomplish their goals/milestones.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37554,7 +37554,7 @@
         "description": "This course focuses on one or more special topics in entrepreneurship. Examples include: entrepreneurial leadership, influence &amp; team building, and startup funding.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37566,7 +37566,7 @@
         "description": "Explores the intersection of leadership and entrepreneurship in both theory and practice. Content emphasizes the development of self as leader, and the acquisition of entrepreneurship tools and mindsets to prepare you to succeed in leadership roles in any discipline and with any type of organization, including established companies, startup businesses and social ventures.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37578,7 +37578,7 @@
         "description": "Introduction to a repeatable method for the development of viable business models. Entrepreneurial thinking, different types of startups, unique characteristics of technology markets, and business concepts germane to entrepreneurial contexts are emphasized.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37590,7 +37590,7 @@
         "description": "Students work together in interdisciplinary teams to learn and utilize a repeatable method for developing viable business concepts. Core topics include: customer development, lean startup, types of businesses, opportunity recognition, ideation, validation of business model hypotheses, intellectual property, business strategy, team building, and venture capital.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37602,7 +37602,7 @@
         "description": "Involves attempting to develop and launch a high growth potential business. Students work together in interdisciplinary teams to validate their business concepts, optimize business processes and strategies, and begin to acquire customers. Challenges associated with rapid growth are emphasized.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37614,7 +37614,7 @@
         "description": "Explores important legal issues faced by entrepreneurs as they put their ideas into action. Topics are sequenced to mirror the entrepreneurial process, beginning with pre-startup issues like partnership agreements and intellectual property, continuing to entity formation, governance and ownership issues, and ending with emerging growth and exit transactions.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37626,7 +37626,7 @@
         "description": "Presents frameworks for developing commercially viable products from new technologies. Students work together in teams to complete proof of concept testing that typically involves primary and secondary market research and an assessment of technological feasibility, value, and use for specific applications.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37638,7 +37638,7 @@
         "description": "Examines the sources of capital for new and growing companies with a special emphasis on angel investment, venture capital, private equity, and non-dilutive and other niche options; the management of cash flows; uses of capital; and financial statement presentation and analysis (a cornerstone of valuation, lending/borrowing, and investing). Case examples and live projects are emphasized to provide students with firsthand experience in financial decision making for startup and emerging growth businesses.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37650,7 +37650,7 @@
         "description": "Focuses on critical financial, legal, scientific and engineering issues confronted during initial planning stages of a start-up enterprise. Students work in teams to develop a business plan for a real world business product offering.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37662,7 +37662,7 @@
         "description": "Every company faces an innovation imperative. In other words, they need to continuously improve their products and bring new offerings into the marketplace or risk being disrupted by competitive forces. This course focuses on corporate innovation and intrapreneurship. Unique challenges associated with exploring new ideas while optimizing value delivery and capture from existing products are highlighted. Special attention is given to issues of governance, leadership, technology introduction, portfolio management, corporate social responsibility and sustainability.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37674,7 +37674,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37686,7 +37686,7 @@
         "description": "Provides foundational tools for understanding customer and societal issues on an individual and contextualized level. User-centered research methods such as observation, depth interviewing, cultural consensus analysis and projective techniques are applied to identifying problems, unmet needs and opportunities. User-centered methods are also utilized to guide idea generation and solution testing as students engage in real-world application across a variety of fields.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37698,7 +37698,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37710,7 +37710,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37722,7 +37722,7 @@
         "description": "Complete an eco-entrepreneurship practicum focused on solving an environmental problem confronting society through technology commercialization. Involves working to develop a new and uniquely valuable solution to the problem as well as a viable new venture. Will typically include participation in the REEF@UD program.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -37734,7 +37734,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "ENTR",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
