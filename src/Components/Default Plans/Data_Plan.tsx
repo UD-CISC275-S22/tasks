@@ -48,15 +48,15 @@ export function Data(): Plan {
     spring3Data.push(blankCourse);
     spring3Data.push(blankCourse);
     const fall4Data = courseList.filter(
-        //id 16 is CISC498, id 40 = CISC481
-        (course) => course.id == 40 || course.id == 16
+        //id 2058 is CISC498, id 40 = CISC481
+        (course) => course.id == 2058 || course.id == 16
     );
     fall4Data.push(blankCourse);
     fall4Data.push(blankCourse);
     fall4Data.push(blankCourse);
     const spring4Data = courseList.filter(
-        //id 17 is CISC499
-        (course) => course.id == 17
+        //id 2059 is CISC499
+        (course) => course.id == 2059
     );
     spring4Data.push(blankCourse);
     spring4Data.push(blankCourse);
