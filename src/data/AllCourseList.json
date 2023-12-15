@@ -40806,7 +40806,7 @@
         "description": "Prepares students interested in joining Blue Hen Investment Club(BHIC). Objective is to educate future members of BHIC to make better informed investment decisions. Students get hands-on experience learning.",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40818,7 +40818,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40830,7 +40830,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40842,7 +40842,7 @@
         "description": "Provides non-business majors with an overview of the role of finance within a business organization. Topics include financial statement analysis, time value of money, capital budgeting, valuation and the cost of capital.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40854,7 +40854,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40866,7 +40866,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40878,7 +40878,7 @@
         "description": "Introduces fundamental techniques and concepts related to the financial management of business firms. Topics include the time value of money, valuation, capital budgeting, working capital management, cost of capital, capital structure analysis, short and long Semesterterfinancing.",
         "credits": 3,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40890,7 +40890,7 @@
         "description": "Focuses on the role of the corporate financial manager in shareholder wealth maximization. Enhances the understanding of material covered in FINC 311 through the application of analytical methods, cases and the effective use of information technology in a contemporary financial environment.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40902,7 +40902,7 @@
         "description": "Examines the valuation of securities, the functioning of securities markets and the theory and practice of modern portfolio management. Topics include advanced techniques in security valuation, standards and practices in investment management, portfolio evaluation standards and applications using real-time data.",
         "credits": 3,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40914,7 +40914,7 @@
         "description": "Introduces real estate theory and management. Topics include financing, evaluation and property management, housing policy, and governmental regulation and participation.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40926,7 +40926,7 @@
         "description": "Introduces the financial planning process and provides an overview of the specific areas of risk management and insurance, retirement, and investments. Topics include personal financial statements, cash flow and debt management, asset acquisition, education planning, the regulatory environment, the business of financial planning and ethics.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40938,7 +40938,7 @@
         "description": "Examines insurance and risk management decisions in personal financial planning. Topics include life, medical, disability, property, casualty, homeowners, liability, and auto insurance. Other topics include tax issues, annuities, group life insurance, long Semestertercare, and business insurance.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40950,7 +40950,7 @@
         "description": "Focuses on public (Social Security, Medicare, and Medicaid) and private (defined benefit and defined contribution plans) retirement plans and discusses issues that individuals face in retirement such as life-style choices and medical issues.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40962,7 +40962,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40974,7 +40974,7 @@
         "description": "Requires completion of at least 120 hours of finance-related internship with verification by the hiring company. Semesterterpaper relating the real-world duties and experiences of the internship to principles learned in the classroom also required.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40986,7 +40986,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Spring"],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -40998,7 +40998,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41010,7 +41010,7 @@
         "description": "Seminar at an overseas location on selected topics in international financial management.  Combines lectures and visits to local organizations.  Research paper.",
         "credits": 3,
         "semester": ["Winter"],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41022,7 +41022,7 @@
         "description": "Examines various types of financial institutions. Topics include structure, performance, asset/liability management, regulation and current issues that impact operational structures.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41034,7 +41034,7 @@
         "description": "This capstone seminar course studies three different intersections of topics in global corporate finance: the intersections of a) currency and interest rate risk management, b) capital raising and securities market trading, and c) strategy and international financial management. The course emphasizes reports, exercises, cases, discussions, presentations, and analysis of financial news.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41046,7 +41046,7 @@
         "description": "Examines the management of commercial banks and similar institutions. Topics include funds and capital management, liquidity and credit standards, and lending and trust operations.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41058,7 +41058,7 @@
         "description": "Examines the international monetary environment and its impact on financial planning for the firm. Topics include exchange rates, currency restrictions, tax regulations, direct investment theory, capital budgeting, financing, risk management, and working capital management.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41070,7 +41070,7 @@
         "description": "Introduces the pricing, trading and use of derivative securities (forwards, futures, swaps and options contracts), emphasizing the management of risk arising from the volatility of exchange rates, interest rates and commodity and equity prices.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41082,7 +41082,7 @@
         "description": "Examines current issues in corporate governance. Topics include executive compensation, shareholder resolutions and board of director ownership and accountability.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41094,7 +41094,7 @@
         "description": "Financial modeling techniques to value IPOs, mergers, private equity transactions, and leveraged buyouts. Explore the economic principles supporting these techniques and apply them to various transaction types using real financial data. Focus is on bridging the gap between theory and practice.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41106,7 +41106,7 @@
         "description": "Prepares students intending to pursue careers in finance markets about the latest innovations in the practice of finance. Course primarily consist of seminars delivered by leading finance professionals.",
         "credits": 1,
         "semester": ["Fall"],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41118,7 +41118,7 @@
         "description": "The capstone experience engages students in critical thinking and decision making about personal financial management topics, integrating the knowledge gained in previous courses into a cohesive, inclusive understanding of the financial planning process. A key component of this module will be to develop a comprehensive financial plan.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41130,7 +41130,7 @@
         "description": "Go through the process of managing a trust, addressing corpus and income management, the needs of income and residual beneficiaries, and the legal obligations imposed on a fiduciary for multi-participant trusts and traditional trusts. Utilize a combination of case studies, presentations, and project work to achieve the learning objectives.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41142,7 +41142,7 @@
         "description": "Examines the sources of capital for new and growing companies with a special emphasis on angel investment, venture capital, private equity, and non-dilutive and other niche options; the management of cash flows; uses of capital; and financial statement presentation and analysis (a cornerstone of valuation, lending/borrowing, and investing). Case examples and live projects are emphasized to provide students with firsthand experience in financial decision making for startup and emerging growth businesses.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41154,7 +41154,7 @@
         "description": "An overview of the fixed income markets and instruments within those markets. Focus is on valuation and analysis of fixed income instruments and the roles of different participants within the fixed income markets.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41166,7 +41166,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41178,7 +41178,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41190,7 +41190,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41202,7 +41202,7 @@
         "description": "Examines various types of financial institutions. Topics include structure, performance, asset/liability management, regulation and current issues that impact operational structures.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41214,7 +41214,7 @@
         "description": "Examines the financial management of multinational firms and the interrelationships between financial planning and the international economic environment. Topics include direct investment theory, capital budgeting, financing trade and investments, risk management and working capital management.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41226,7 +41226,7 @@
         "description": "Introduces the pricing, trading and use of derivative securities (forwards, futures, swaps and options contracts), emphasizing the management of risk arising from the volatility of exchange rates, interest rates and commodity and equity prices.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41238,7 +41238,7 @@
         "description": "Financial modeling techniques to value IPOs, mergers, private equity transactions, and leveraged buyouts. Explore the economic principles supporting these techniques and apply them to various transaction types using real financial data. Focus is on bridging the gap between theory and practice.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41250,7 +41250,7 @@
         "description": "",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41262,7 +41262,7 @@
         "description": "Provides an introduction to the fundamental concepts of the finance function with an emphasis on the decision-making techniques relevant to financial and nonfinancial managers. Topics include valuation, risk and return, capital budgeting, cost of capital, financial analysis and planning, and working capital management.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41274,7 +41274,7 @@
         "description": "Examines major policy-making areas in corporate finance and the impact of alternative policies on the value of the firm. Emphasis is placed on strengthening financial decision-making skills. Advanced topics include capital investment policy, financing and capital structure policies, dividend policy, and corporate control.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41286,7 +41286,7 @@
         "description": "Examines the role and functioning of securities markets, valuation techniques, and the theory and practice of portfolio managment. Topics include portfolio construction and evaluation metrics, relative valuation techniques and an introduction to derivative security pricing.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41298,7 +41298,7 @@
         "description": "Emphasis is on financial research and the application of alternative research methods to a project or current interest. Involves individual inquiry, written communication of results, and presentation of findings by each student.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41310,7 +41310,7 @@
         "description": "Examines selected topics of current interest in various areas of finance, including corporate financial management, investment analysis and portfolio management, or financial institutions and markets.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41322,7 +41322,7 @@
         "description": "Introduces issues pertaining to corporate governance and oversight, and examines topics of current interest concerning the relationships between corporate boards, company management, and shareholders.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41334,7 +41334,7 @@
         "description": "Examines the sources of capital for new and growing companies with a special emphasis on angel investment, venture capital, private equity, and non-dilutive and other niche options; the management of cash flows; uses of capital; and financial statement presentation and analysis (a cornerstone of valuation, lending/borrowing, and investing). Case examples and live projects are emphasized to provide students with firsthand experience in financial decision making for startup and emerging growth businesses.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41346,7 +41346,7 @@
         "description": "An overview of the fixed income markets and instruments within those markets. Focus is on valuation and analysis of fixed income instruments and the roles of different participants within the fixed income markets.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41358,7 +41358,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41370,7 +41370,7 @@
         "description": "Discuss the branch of microeconomics called financial economics which has been developed for M.S. students in finance and is also appropriate for Master and Ph.D. students in Economics. Form the necessary building blocks for all of the traditional topics in finance including corporate finance, investments, financial markets and institutions and derivatives.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41382,7 +41382,7 @@
         "description": "Introduces core theoretical topics, empirical methods, and data that are domain of financial economics, mostly by studying journal articles. Focus on research regarding market efficiency, asset pricing, and corporate finance. Topics include financial intermediation, market microstructure, corporate governance, international finance.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41394,7 +41394,7 @@
         "description": "Employ empirical methods to test various hypotheses and financial relationships. Expect to test hypotheses regarding random walks and market efficiency, asset pricing, capital structure, corporate governance, accounting information and returns, and transaction costs. Use SAS to analyze data provided by Compustat, CRSP, NYSE-TAQ, and other sources.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41406,7 +41406,7 @@
         "description": "Focuses on the economic roles and interactions of the units in each sector of the financial services industry. Overview of the current and changing layout of institutions, products, and practices.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41418,7 +41418,7 @@
         "description": "Develops the theoretical and practical foundations of resource allocation across time and risky assets, and of credit risk and systemic considerations. Topics include allocation of resources across time; allocation of resources across risks and credit risk and systemic considerations.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41430,7 +41430,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41442,7 +41442,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41454,7 +41454,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "FINC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41466,7 +41466,7 @@
         "description": "Introduction to the French language and development of speaking, listening, reading and writing skills through the use of basic texts.",
         "credits": 3,
         "semester": ["Fall, Winter and Spring"],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41478,7 +41478,7 @@
         "description": "Completion of basic French. Increasing mastery of the basic skills of speaking, listening, reading and writing.",
         "credits": 3,
         "semester": ["Fall, Winter and Spring"],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41490,7 +41490,7 @@
         "description": "Review of grammar, continued practice in speaking and writing, and reading texts of average difficulty.",
         "credits": 3,
         "semester": ["Fall, Winter and Spring"],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41502,7 +41502,7 @@
         "description": "French for Fashion is a one-credit elementary course (pass/fail) designed for beginners. With its emphasis on Paris and fashion, it prepares students for the winter FASH study abroad program, but anyone may take the course.",
         "credits": 1,
         "semester": ["Fall"],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41514,7 +41514,7 @@
         "description": "",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41526,7 +41526,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41538,7 +41538,7 @@
         "description": "Intensive grammar review of all major verb tenses and grammatical concepts (such as object pronouns). Emphasis is on grammar improvement through reading and writing.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41550,7 +41550,7 @@
         "description": "Practical use of French by means of oral reports and discussions. Emphasis on improvement of basic conversational skills. Grammar review where appropriate, and/or some written work.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41562,7 +41562,7 @@
         "description": "Discussion of topics drawn from contemporary French life. Designed for students who wish to broaden their knowledge of French culture while improving their oral and aural language skills.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41574,7 +41574,7 @@
         "description": "Introduction to contemporary French Caribbean, its history, its culture, its people, their way of life and the issues confronting them. Focuses on Martinique.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41586,7 +41586,7 @@
         "description": "An introduction to contemporary France, its culture, its people, their way of life and the issues confronting them.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41598,7 +41598,7 @@
         "description": "Development of oral proficiency in French through discussion and analysis of major French films. Some written work and grammar review where appropriate.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41610,7 +41610,7 @@
         "description": "Reading and discussion of French literature. Frequent compositions. Grammar review where appropriate.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41622,7 +41622,7 @@
         "description": "Familiarizes students with characteristics of business French (terminology, syntactical patterns, etc.) and policies and practices of the French business community.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41634,7 +41634,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41646,7 +41646,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41658,7 +41658,7 @@
         "description": "A thematic and historical approach to French narrative from the Renaissance to the present day, focusing on the conflict between individual behavior and societal norms. Fosters understanding of French culture, history, and institutions.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41670,7 +41670,7 @@
         "description": "An approach to French literature from the Renaissance to the contemporary era focusing on the themes of love, passion, faith and death, with particular attention to the historical context of the works studied. Through the exploration of poems and theater by major authors including Ronsard, Corneille, Hugo, and Baudelaire, the course fosters understanding of French culture, history, and institutions.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41682,7 +41682,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41694,7 +41694,7 @@
         "description": "Discussion of cultural, social and political topics in French-speaking countries. Vocabulary building, grammar exercises and compositions.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41706,7 +41706,7 @@
         "description": "Strengthens grammar and vocabulary skills in preparation for advanced courses. Class exercises include oral exposes, discussion of articles and videos, textual analysis, and compositions.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41718,7 +41718,7 @@
         "description": "Strengthens grammar and vocabulary skills in preparation for advanced courses, as well as everyday oral communication situations. Class exercises include oral exposes, skits, and discussion of articles &amp; videos.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41730,7 +41730,7 @@
         "description": "Discussion and study of issues related to contemporary cultural, political and social developments in France, including its people in today\u2019s European community.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41742,7 +41742,7 @@
         "description": "Strengthens grammar and vocabulary skills through regular writing practice. Class exercises include compositions, analysis of literary texts, and study of authentic documents.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41754,7 +41754,7 @@
         "description": "Studies the sounds of the French language (both individual phonemes and items of connected speech, such as liaison, linking, intonation, etc.). Helps improve pronunciation of the language.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41766,7 +41766,7 @@
         "description": "A study of French cultural history from Gaul to the French Revolution.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41778,7 +41778,7 @@
         "description": "A study of French cultural history from the French Revolution to 1945.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41790,7 +41790,7 @@
         "description": "Development of strategies to initiate and maintain oral and written communication in the world of business. Acquisition of commercial vocabulary, practice in speaking French in business situations, letter writing and article reading. Functional and cultural approach.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41802,7 +41802,7 @@
         "description": "Explores an area of special interest in French literature or culture studies.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41814,7 +41814,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41826,7 +41826,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41838,7 +41838,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41850,7 +41850,7 @@
         "description": "Study of the sounds, morphology and syntax of the French language, as well as of discursive phenomena. Introduces students to the science of lingustics as applied to French.Taught in French.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41862,7 +41862,7 @@
         "description": "Intensive writing practice in French (seven compositions, all to be revised), with systematic grammar review: past tenses, articles, adjectives, participles, passive voice, the conditional, the subjunctive, concordance of verb tenses, demonstrative pronouns.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41874,7 +41874,7 @@
         "description": "Focuses on vocabulary and translation skills (from French into English and vice-versa).",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41886,7 +41886,7 @@
         "description": "Grammatical structure and stylistics with special attention given to technical vocabulary and discourse.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41898,7 +41898,7 @@
         "description": "Varied activities help students develop their oral expression and comprehension and gain confidence in oral communication situations. Class exercises include oral exposes, skits, discussion of articles and videos.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41910,7 +41910,7 @@
         "description": "Strengthens grammar and vocabulary skills through regular writing practice. Class exercises include compositions, analysis of literary texts, and study of authentic documents. Study of grammar and stylistics, with special attention given to technical vocabulary and discourse.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41922,7 +41922,7 @@
         "description": "Selected readings of master authors and works from the Middle Ages to the Age of Enlightenment. Authors may include Villon, Rabelais, Montaigne, Moliere, Corneille, Mme. de Lafayette, Montesquieu, Voltaire, and others.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41934,7 +41934,7 @@
         "description": "Selected readings of master authors and works from the dawn of Romanticism to the present. Authors may include Prevost, Rousseau, Hugo, Flaubert, Baudelaire, Gide, Proust, Camus, Sartre, Ionesco, Beckett, Duras, and others.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41946,7 +41946,7 @@
         "description": "Survey of French literature to 1500.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41958,7 +41958,7 @@
         "description": "Selected works by Rabelais, the poets of the Pleiade, Montaigne, and others.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41970,7 +41970,7 @@
         "description": "Growth of French dramatic literature before 1715 and analysis of the principal plays of Corneille, Racine, and Moliere.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41982,7 +41982,7 @@
         "description": "Representative novelists, poets, critics and moralists from Descartes and Pascal to La Fontaine, Boileau, Mme. de La Fayette, and others.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -41994,7 +41994,7 @@
         "description": "Novels, plays, essays and poetry of such authors as Montesquieu, Marivaux, Prevost, and Voltaire.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42006,7 +42006,7 @@
         "description": "Novels, plays, essays and poetry of such authors as Diderot, Rousseau, Beaumarchais, and Chenier.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42018,7 +42018,7 @@
         "description": "The novel from Romanticism to Naturalism. Chateaubriand, Balzac, Stendhal, Flaubert, Zola and others.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42030,7 +42030,7 @@
         "description": "Poets and dramatists representative of Romanticism, Realism and the Symbolist movement.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42042,7 +42042,7 @@
         "description": "Main trends from Gide, Celine and Malraux to Camus, Sartre and Beckett, including Surrealism, Existentialism, and the Theatre of the Absurd.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42054,7 +42054,7 @@
         "description": "A study of contemporary French literature, including novels, plays, essays and poetry of such authors as Robbe-Grillet, Sarraute, Perec, Tournier, Duras, Ponge, Bonnefoy, Jaccottet, and Barthes.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42066,7 +42066,7 @@
         "description": "Culture, customs, and political &amp; economic life in France since 1958.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42078,7 +42078,7 @@
         "description": "Study of modern French cultural history through the films of such masters as Vigo, Gance, Pagnol, Renoir, Bresson, Resnais, Malle, and others.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42090,7 +42090,7 @@
         "description": "Works of one or more outstanding authors or on a special theme.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42102,7 +42102,7 @@
         "description": "Study of French theater of different periods and genres, with an emphasis on staging and performance. Class activities include dramatic readings, improvisation, and exercises to improve diction. Culminates in a public presentation of students\u2019 work.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42114,7 +42114,7 @@
         "description": "Examines the social, cultural, political, and historical aspects of various regions of the Francophone world (the Maghreb, Sub-Saharan Africa, the Caribbean, South East Asia [Vietnam] and Lebanon) as well as the Beur (descendants of the first generation of Maghrebi immigrants) phenomenon in the French banlieue (suburbs). Texts and films serve as points of entry into these multicultural communities.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42126,7 +42126,7 @@
         "description": "The cinemas of Francophone Africa from the 1960s to the present. Analysis of how African filmmakers have challenged and refocused prior and degrading images by creating new depictions of their societies, and offering Africa through African eyes. Exploration of the social, historical, and political contexts of these films as well as examination of each of them closely to better understand their aesthetic and narrative characteristics. Appreciation of local frameworks of knowledge and of recent theoretical developments in film studies.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42138,7 +42138,7 @@
         "description": "Focuses on the literary movements of Negritude, Antillanit\u00e9, and Creolit\u00e9, and their relation to Caribbean identity, culture and history, as well as to the field of Francophone postcolonial studies.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42150,7 +42150,7 @@
         "description": "Introduction to literary productions by African, Caribbean, and Asian immigrants in France. Acquire a understanding of relevant strands of current theoretical thinking through close analysis of texts. Examine recurrent themes and forms in immigrant literature, including: representation of identity; concepts of origins; intersection of race, class and gender; and textual strategies underpinning these considerations. Examine different ways these authors are redefining French literature.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42162,7 +42162,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42174,7 +42174,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42186,7 +42186,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42198,7 +42198,7 @@
         "description": "Focuses on vocabulary and translation skills (from French into English and vice versa). Literary, commercial and journalistic texts serve as stylistic models.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42210,7 +42210,7 @@
         "description": "Selected readings of master authors and works from the dawn of Romanticism to the present. Authors may include Prevost, Rousseau, Hugo, Flaubert, Baudelaire, Gide, Proust, Camus, Sartre, Ionesco, Beckett, Duras and others.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42222,7 +42222,7 @@
         "description": "Survey of French literature to 1500.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42234,7 +42234,7 @@
         "description": "Growth of French dramatic literature before 1715 and analysis of the principal plays of Corneille, Racine and Moliere.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42246,7 +42246,7 @@
         "description": "Main trends from Gide, Celine and Malraux to Camus and Beckett, including Surrealism, Existentialism and the Theater of the Absurd.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42258,7 +42258,7 @@
         "description": "Works of one or more outstanding authors or on a special theme.",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42270,7 +42270,7 @@
         "description": "Varying aspects of Francophone studies, such as women\u2019s writing, literature of Quebec, colonial literature, African literature and cinema, literature of immigration.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42282,7 +42282,7 @@
         "description": "Focuses on the literary movements of Negritude, Antillanite, and Creolite, and their relation to Caribbean identity, culture and history, as well as to the field of Francophone postcolonial studies.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42294,7 +42294,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42306,7 +42306,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42318,7 +42318,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42330,7 +42330,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42342,7 +42342,7 @@
         "description": "Study of selected topics, authors and works in the various fields of French literature. Emphasizes preparation of seminar presentations and Semesterterpaper.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FREN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42354,7 +42354,7 @@
         "description": "Examine the major genres of videogames produced around the world, and major critical approaches taken by academics to the study of those games. Issues for discussion may include the dominance of console platforms in some markets and PC gaming in others; ethics and violence in games; representations of gender and race; processes of immersion and identification in different game types; and the effect of increasingly realistic environments and cinematics.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "GAME",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42366,7 +42366,7 @@
         "description": "Examines Japanese videogames from both a ludological and narratological perspective. Genres studies include the JRPG, stealth action, simulation and fighting games.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "GAME",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42378,7 +42378,7 @@
         "description": "Explores the relationship between videogames and culture by analyzing both in-game cultural representation and the real-life economic, political and societal effects of games across Latin America.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "GAME",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42390,7 +42390,7 @@
         "description": "The Game Studies and Esports Internship provides a hands-on educational experience. The internship is based on practical experience working directly in the games and esports industry, combined with traditional academic components. Student activities include the application of important theories/concepts gleaned from prior coursework, informing periodic reflection assignments. Towards the end of spring semester or summer session, students will deliver a formal oral presentation to their fellow Game Studies and esports students, faculty members, and professionals in the field. These presentations will be open to the university community and general public. Lastly, evaluation surveys will be completed by both the student intern and the on-site supervisor. These evaluations will help the course instructor measure the overall quality of the internship learning experience and the quality of the student\u2019s performance.",
         "credits": 3,
         "semester": ["Fall, Winter and Spring"],
-        "department": "",
+        "department": "GAME",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42402,7 +42402,7 @@
         "description": "This Capstone Seminar focuses on the multifaceted process of video game development, distribution and reception. Each week\u2019s discussion will focus on one facet of a typical game development workflow (i.e., Writing, Programming, Sound), or a specific aspect of game reception (i.e., Game Analysis, eSports, Community Outreach). Likewise, the course highlights the fundamental role of diversity and inclusion for understanding game culture and the game industry, examining the intersections of gender, race, sexual identity and nationality on video game production and consumption. Ultimately, this Capstone Seminar will give GAME majors the interdisciplinary tools to understand the many steps involved in game development, as well as the many perspectives that inform the reception of video games by critics and audiences. It will also provide the structure to allow senior GAME majors to complete a final Capstone Project, as the culmination to their studies in the major.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "GAME",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42414,7 +42414,7 @@
         "description": "Geological processes and events that adversely affect humans and civilization. Methods for predicting and dealing with geological hazards. May be taken with a 1 credit lab, GEOL 115.",
         "credits": 3,
         "semester": ["Fall, Summer and Spring"],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42426,7 +42426,7 @@
         "description": "Principles of physical geology and its application in interpreting earth processes. Laboratory covers identification of earth materials and the interpretation of topographic and geologic maps.",
         "credits": 4,
         "semester": ["Fall"],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42438,7 +42438,7 @@
         "description": "Violent geologic activity as illustrated by volcanoes and earthquakes. The nature, causes and origins of volcanic and earthquake activity, their interactions with humans and their potential control.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42450,7 +42450,7 @@
         "description": "Composition, structure, surface features, origin, and evolution of the planets, satellites, asteroids, and comets. Also explores the possible connection between meteorite impacts and mass extinctions. Did an asteroid kill off the dinosaurs?",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42462,7 +42462,7 @@
         "description": "History of the earth and its biota.  Origins, evolution and mass extinctionsof major groups of organisms as demonstrated by the earth\u2019s fossil record.  Laboratory covers identification of basic fossil groups and exercises in interpreting Earth history.",
         "credits": 4,
         "semester": ["Spring"],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42474,7 +42474,7 @@
         "description": "Earth materials, structure and the geologic phenomena that produce them. Physical and temporal aspects of earth history. Laboratory examination of rocks, minerals and fossils. Experiments in geological processes and interpretation of geologic maps.",
         "credits": 4,
         "semester": ["Winter and Spring"],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42486,7 +42486,7 @@
         "description": "Laboratory investigation of environmental geological processes and their impact on society: earthquakes, volcanoes, coastal hazards, rivers and streams, groundwater. Identification of earth materials and study of earth processes using topographical, geological and tectonic maps.",
         "credits": 1,
         "semester": ["Fall, Summer and Spring"],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42498,7 +42498,7 @@
         "description": "Introduction to geology of the coast. \u201cReading\u201d beaches by geological phenomenon and physical processes. Historical and contemporary analysis of how populations have chosen to live with or against the natural dictates of the shore with costly and tragic consequences. One-day field trip required.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42510,7 +42510,7 @@
         "description": "Introduction to field geology using the some of the best geological features of the world found in U.S. national parks. Travel for 3 to 4 weeks to nearly a dozen parks where hands-on experiences are used to evaluate how the Earth works.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42522,7 +42522,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42534,7 +42534,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42546,7 +42546,7 @@
         "description": "Physical, chemical, and optical properties of minerals and other earth materials; structure and composition of rock-forming minerals; Introduction to equilibrium concepts, and basic chemical thermodynamics as applied to earth materials.",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42558,7 +42558,7 @@
         "description": "Processes and history of near-surface geologic environments of the Earth (potential areas of focus may include rivers, hillslopes, coastal environments, deltas, glaciers, periglacial environments, etc.). Human impacts on surficial environments.",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42570,7 +42570,7 @@
         "description": "Understanding climate and climate change is important for everyone.  Explores climate change and its impacts at local, regional, and global levels.  Policy and decision making, as well as adaptation and mitigation will be discussed with a focus on current events.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42582,7 +42582,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42594,7 +42594,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42606,7 +42606,7 @@
         "description": "Origin, composition, structure, distribution, and uses of igneous and metamorphic rocks. Lectures focus on occurrences of rocks as a function of geologic setting. Labs focus on identification of rock types and interpretation of their formation conditions.",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42618,7 +42618,7 @@
         "description": "Study of sediment focusing on how it is transported and deposited including fluid flow and sediment transport, sedimentary structures and textures. Environments of deposition with modern/ancient analogs. Description and correlation of stratigraphic units including facies analysis, basin analysis and concepts of time and methods of absolute dating.",
         "credits": 4,
         "semester": ["Fall"],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42630,7 +42630,7 @@
         "description": "The study of geologic structures, geologic stress and the responses of rocks to stress. Examines plate tectonics and the major structural and tectonic relations generated at plate boundaries.",
         "credits": 4,
         "semester": ["Spring"],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42642,7 +42642,7 @@
         "description": "This is a 30-day-long field course in the western USA focused on advanced training and experience in geological field methods. Key topics include rock descriptions, stratigraphic analysis and correlation, structural methods, and geologic map construction and interpretation.",
         "credits": 4,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42654,7 +42654,7 @@
         "description": "Recognition, biology and paleobiology of major groups of invertebrates. Use of the fossil record in solving environmental and paleoenvironmental problems. Principles of stratigraphy and correlation and origin and development of the geologic time scale.",
         "credits": 4,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42666,7 +42666,7 @@
         "description": "Understanding the earth\u2019s climate and how the climate is changing is a fundamental part of modern earth system science. Explores the scientific basis for the study of climate and climate change, including long Semesterterand modern change, with a discussion of current topics.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42678,7 +42678,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42690,7 +42690,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42702,7 +42702,7 @@
         "description": "Integrated examination of topics and concepts of current interest and importance in geoscience. Topics may vary.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42714,7 +42714,7 @@
         "description": "Undergraduate research carried out under the supervision of the staff. Writtenreport required.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42726,7 +42726,7 @@
         "description": "Hydrologic and sediment transport processes in rivers and watersheds. Morphology and evolution of rivers and watersheds. Depositional processes and evolution of floodplains. Structure and interpretation of fluvial deposits in the geologic record.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42738,7 +42738,7 @@
         "description": "Survey of the stratigraphy and chronology of marine and terrestrial records and theories of climatic change. Studies of the stratigraphy of significant Quaternary successions throughout the world and their correlation and absolute dating.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42750,7 +42750,7 @@
         "description": "Origin and distribution of elements and isotopes in geological materials; principles of geochemical thermodynamics, aqueous geochemistry and mineral-water interactions pertaining to geochemical reactions and transport of the elements in the Earth\u2019s near-surface environment; introduction to terrestrial, oceanic, and atmospheric geochemical cycles.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42762,7 +42762,7 @@
         "description": "The application of geologic principles to matters of environmental concern. Discussion, examples, techniques and case histories in water supply, waste disposal, zoning and land use, mining, legislation, regulation and professionalism emphasizing the role of geologist and the educated citizen.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42774,7 +42774,7 @@
         "description": "OSHA 40-hour safety training certification hazardous waste operations health and safety training program. Includes material from environmental regulations, hazard recognition, toxicology, environmental monitoring, personal protective equipment, site characterization and analysis, site zone and control, health and safety plans, decontamination and spill response recovery.",
         "credits": 3,
         "semester": ["Winter"],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42786,7 +42786,7 @@
         "description": "Introduction to field measurement techniques and field analysis during a travel and field learning experience to an alpine area. Field mapping, observation, use of handheld instrumentation, and field estimation methods.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42798,7 +42798,7 @@
         "description": "Principles of active and passive remote sensing data interpretation for geologists. Study of geomorphic, structural, and lithologic characteristics of the Earth as observed in aerial and satellite data. Emphasis on the use of multispectral, radar, and LiDAR data for geologic mapping.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42810,7 +42810,7 @@
         "description": "Principles of groundwater flow and water chemistry in varied geologic media.Evaluation of groundwater resources and assessment of environmental problemsassociated with groundwater use.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42822,7 +42822,7 @@
         "description": "Erosional, depositional and tectonic processes; morphology and classification, and geologic history of the coastal areas of the world.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42834,7 +42834,7 @@
         "description": "How microorganisms drive geological processes in modern environments, and the roles of microbial life on ancient Earth.  Discussion of literature on topics such as biomineralization, weathering, microfossils, biomarkers, astrobiology, genomics, evolution, and redox history of Earth.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42846,7 +42846,7 @@
         "description": "Introduction to geophysical methods that may include seismic reflection and refraction, side-scan sonar, multibeam sonar, ground-penetration radar (GPR), LiDAR, and resistivity exploration methods and interpretations. Additional topics that could be addressed include seismology, magnetism, gravity, and geodesy.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42858,7 +42858,7 @@
         "description": "Covers the factors that cause natural variations in Earth\u2019s climate on different time scales, focusing on biotic, geologic, and geochemical records. Includes discussion of changing continental configurations, atmospheric greenhouse gas levels, and the Earth-Sun geometry on ocean circulation and climate change.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42870,7 +42870,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42882,7 +42882,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42894,7 +42894,7 @@
         "description": "Study of the geology of the US Southwest. Course includes a one week field trip to the Southwest during Spring Break. Locations to be determined. There will be a student fee for this course. Contact the department for additional information.",
         "credits": 1,
         "semester": ["Spring"],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42906,7 +42906,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42918,7 +42918,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42930,7 +42930,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42942,7 +42942,7 @@
         "description": "",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42954,7 +42954,7 @@
         "description": "Weekly departmental speaker series. Regularly-scheduled lectures by faculty and visiting researchers providing exposure to current research in geoscience.",
         "credits": 1,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42966,7 +42966,7 @@
         "description": "Introduction to groundwater flow and solute transport modeling. Begins with simple analytical models progressing to basic numerical methods and hands-on use of widely-used codes including MODFLOW, MT3DMS, SUTRA. Some MATLAB experience recommended.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42978,7 +42978,7 @@
         "description": "Approaches to writing in the geosciences. Students will write, edit, and prepare a paper for publication.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -42990,7 +42990,7 @@
         "description": "The process and mechanics of publishing scientific papers in scientific journals. Covers organizing data in tables and figures; mechanics of drawing up effective figures; marshaling of tables, figures and scientific ideas into a coherent story; and strategies and techniques used in effective writing. Examples taken from and principles applicable to all fields of science.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -43002,7 +43002,7 @@
         "description": "A seminar and laboratory-based course on various methods in geomicrobiology, with a focus on microscopy techniques, including fluorescence and electron microscopy. Students will be expected to perform some laboratory work outside of class periods. A prior course in geomicrobiology or environmental microbiology is highly recommended.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -43014,7 +43014,7 @@
         "description": "Problem-based exploration of interface between geological and biological processes. Focus on effects of microorganisms and Earth\u2019s chemistry. May include biomineralization, origin and evolution of life, microbial weathering and rock formation, environmental problems. 2 Saturday field trip req.",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -43026,7 +43026,7 @@
         "description": "Hydrologic and sediment transport processes in rivers and watersheds. Morphology and evolution of rivers and watersheds. Depositional processes and evolution of floodplains. Structure and interpretation of fluvial deposits in the geologic record.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -43038,7 +43038,7 @@
         "description": "Geologic occurrence of strategic mineral deposits, their economic importance, domestic and global distribution, and potential for sustainability. Methods of exploration and production of critical technological, agricultural, and industrial mineral commodities.",
         "credits": 1,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -43050,7 +43050,7 @@
         "description": "A comprehensive overview of the chemical, physical and optical properties of minerals with a particular focus on geologic formation of minerals, origin determination and sustainability issues related to sector supply chains.",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -43062,7 +43062,7 @@
         "description": "Survey of the stratigraphy and chronology of marine and terrestrial records and theories of climatic change. Studies of the stratigraphy of significant Quaternary successions throughout the world and their correlation and absolute dating.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -43074,7 +43074,7 @@
         "description": "Origin and distribution of elements and isotopes in geological materials; principles of geochemical thermodynamics, aqueous geochemistry and mineral-water interactions pertaining to geochemical reactions and transport of the elements in the Earth\u2019s near-surface environment; introduction to terrestrial, oceanic, and atmospheric geochemical cycles.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -43086,7 +43086,7 @@
         "description": "The application of geologic principles to matters of environmental concern. Discussion, examples, techniques and case histories in water supply, waste disposal, zoning and land use, mining, legislation, regulation and professionalism emphasizing the role of the geologist and the educated citizen.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -43098,7 +43098,7 @@
         "description": "OSHA 40-Hour safety training certification hazardous waste operations health and safety training program. Includes material from environmental regulations, hazard recognition, toxicology, environmental monitoring, personal protective equipment, site characterization &amp; analysis, site zone &amp; control, health &amp; safety plans, decontamination, and spill response recovery.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -43110,7 +43110,7 @@
         "description": "Survey of the field and laboratory methods and associated technology commonly used in the Earth Sciences. Covers a single topic per offering with a range of themes, such as but not limited to the following: nature of spatial data, map interpretation, basic GPS and GIS, remote sensing, microscope analyses, geochemical analyses, research design, field study design and implementation, scientific and technical writing, preparation of oral presentations, and geostatistics. Contact department or see course current course catalog for offerings.",
         "credits": 1,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -43122,7 +43122,7 @@
         "description": "Principles of active and passive remote sensing data interpretation for geologists. Study of geomorphic, structural, and lithologic characteristics of the Earth as observed in aerial and satellite data. Emphasis on the use of multispectral, radar, and LiDAR data for geologic mapping.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -43134,7 +43134,7 @@
         "description": "Principles of groundwater flow and water chemistry in varied geologic media.Evaluation of groundwater resources and assessment of environmental problemsassociated with groundwater use.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -43146,7 +43146,7 @@
         "description": "Explore the foundations of modern Hydrogeology by analyzing classic papers that advanced the field toward its current state-of-the-art. Topics vary from physical hydrogeology to geochemical aspects, including groundwater age dating and tracers.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -43158,7 +43158,7 @@
         "description": "How microorganisms drive geological processes in modern environments, and the roles of microbial life on ancient Earth. Discussion of literature on topics such as biomineralization, weathering, microfossils, biomarkers, astrobiology, genomics, evolution, and redox history of Earth.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -43170,7 +43170,7 @@
         "description": "Introduction to geophysical methods that may include seismic reflection and refraction, side-scan sonar, multibeam sonar, ground-penetration radar (GPR), LiDAR, and resistivity exploration methods and interpretations. Additional topics that could be addressed include seismology, magnetism, gravity, and geodesy.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -43182,7 +43182,7 @@
         "description": "Multiple regression and time series analysis; model validation; sampling; principal components; factor analysis; cluster analysis; discriminant analysis; and statistical software routines.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -43194,7 +43194,7 @@
         "description": "Covers the factors that cause natural variations in Earth-s climate on different time scales, focusing on biotic, geologic, and geochemical records. Includes discussion of changing continental configurations, atmospheric greenhouse gas levels, and the Earth-Sun geometry on ocean circulation and climate change.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -43206,7 +43206,7 @@
         "description": "Some research applications require inferences to be drawn from point, line, or areal data, rather than from the traditional univariate or multivariate framework. A number of such techniques have been developed including adaptations from classical statistical methods and novel approaches to account for the spatial nature of data. Explore the emerging literature on statistical methodologies that have been explicitly developed for the solution of spatial problems.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -43218,7 +43218,7 @@
         "description": "Investigation of the geological and geotechnical aspects of offshore wind projects. Emphasis on influence of geology and physical properties of sediments and rocks on offshore wind project site selection, design, construction, and operation.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -43230,7 +43230,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -43242,7 +43242,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -43254,7 +43254,7 @@
         "description": "Study of the geology of the US Southwest. Course includes a one week field trip to the Southwest during Spring Break. Locations to be determined. There will be a student fee for this course. Contact the department for additional information.",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -43266,7 +43266,7 @@
         "description": "Selected topics in geophysics. Topics vary according to instructor\u2019s preference.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -43278,7 +43278,7 @@
         "description": "Selected topics in geomorphology. Topics vary according to instructor preference.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -43290,7 +43290,7 @@
         "description": "Introduction to the field of isotope geochemistry and the application of isotope systematics to the study of geological, geochemical, hydrological, atmospheric and marine cycles. Light stable isotopes, uranium thorium decay series nuclides, and long-lived heavy isotopes are considered.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -43302,7 +43302,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -43314,7 +43314,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -43326,7 +43326,7 @@
         "description": "Enables students to begin planning work and research before admission to dissertation candidacy and GEOL 969.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -43338,7 +43338,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -43350,7 +43350,7 @@
         "description": "Research and readings in preparation of dissertation topic and/or qualifying examinations for doctoral students before admission to candidacy but after completion of all required course work.",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -43362,7 +43362,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "GEOL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
