@@ -40,7 +40,7 @@ import { LoadPlan } from "./Buttons/LoadPlan";
 import { PickAPlan } from "./Buttons/PickAPlan";
 import { RequiredClasses } from "./Buttons/requiredClasses";
 import CourseEdit from "./CourseEdit";
-import { ExportCSV } from "./Buttons/ExportCSV";
+import ExportCSV from "./Buttons/ExportCSV";
 import {
     ArtificialIntelligence,
     Bioinformatics,
