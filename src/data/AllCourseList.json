@@ -88794,7 +88794,7 @@
         "description": "Design Thinking workshop teaches how to gauge existing problems and experiences via customer immersion, journey and empathy maps, and behavioral economics in order to understand real challenges and create solutions together with the people they are meant for.",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "PCS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88806,7 +88806,7 @@
         "description": "To prepare students to successful pass the FAA Part 107 remote pilot certificate exam. Topics include regulations, airspace, weather, loading and performance, and operations.",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "PCS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88818,7 +88818,7 @@
         "description": "This intermediate-level course is designed to prepare learners for the Project Management Institute\u00ae\u2019s Agile Certified Practitioner (PMI-ACP)\u00ae exam.\u00a0",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "PCS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88830,7 +88830,7 @@
         "description": "This intermediate-level course is designed to help Agile practitioners decipher and solve the problems that arise regularly in their work.\u00a0",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "PCS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88842,7 +88842,7 @@
         "description": "This intermediate-level course is designed to help Agile practitioners recognize and resolve many of the common issues that emerge when Agile concepts are introduced into Waterfall organizations.",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "PCS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88854,7 +88854,7 @@
         "description": "This introductory-level course explores the methodologies and practices of Agile development and explains the key concepts and principles that form the foundation of Agile project management.\u00a0",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "PCS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88866,7 +88866,7 @@
         "description": "This course outlines the fundamental theories and principles of Scrum frameworks, including the underlying philosophy and essential tools practitioners need to adapt to an Agile way of working. Implemented properly, these techniques can produce extraordinary results for stakeholders and customers. Information in this course is presented in a simple, easy-to-understand format and augmented by interactive games and exercises to improve learner understanding and retention.\u00a0",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "PCS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88878,7 +88878,7 @@
         "description": "This project management program builds successful project managers at all levels of the organization. It supplies comprehensive preparation for the Certified Associate in Project Management (CAPM)\u00ae exam.",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "PCS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88890,7 +88890,7 @@
         "description": "Covering the basics of project management, including project overview, project constraints, communication and change management, and project tools and documentation, the CompTIA Project+\u00ae Exam Prep Course prepares learners for passing the CompTIA Project+\u00ae exam and earning the credential.\u00a0",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "PCS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88902,7 +88902,7 @@
         "description": "This course provides comprehensive preparation for the Program Management Professional (PgMP)\u00ae certification exam.",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "PCS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88914,7 +88914,7 @@
         "description": "This project management program builds successful project managers at all levels of the organization. It provides comprehensive preparation for the Project Management Professional (PMP)\u00ae exam.",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "PCS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88926,7 +88926,7 @@
         "description": "This course is designed to give learners an assessment of their readiness to take the Project Management Institute\u00ae (PMI\u00ae) Project Management Professional (PMP)\u00ae exam.",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "PCS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88938,7 +88938,7 @@
         "description": "The risk management course helps educate project managers in identifying and responding to project risk. The course provides comprehensive preparation for the Project Management Institute\u00ae\u2019s PMI Risk Management Professional (PMI-RMP)\u00ae certification exam.",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "PCS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88950,7 +88950,7 @@
         "description": "This course introduces students to Microsoft\u2019s project management software, MS Project. The popular tool for project managers allows them to develop schedules, allocate resources and duties to specific tasks, and track a project\u2019s progression. It also enables managers to oversee the budget and analyze workloads. Learners, particularly aspiring project managers, are provided a step-by-step tutorial on mastering basic functions that are essential for any project.\u00a0",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "PCS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88962,7 +88962,7 @@
         "description": "This intermediate-level course provides students with essential skills for mastering Microsoft\u2019s project management software, MS Project. The popular tool allows project managers to develop schedules, allocate resources and track progress. It also enables managers to perform variance analysis and combine multiple projects. Aspiring project managers are provided a step-by-step tutorial on various functions that are required for every type of project.",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "PCS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88974,7 +88974,7 @@
         "description": "At the core of strong leadership is the ability to communicate effectively. But many leaders focus solely on their spoken words while ignoring the impact of their nonverbal cues, including facial expressions, hand gestures, body movements and eye gaze. By understanding the impact of body language, leaders can learn how to communicate in a way that builds and sustains positive relationships with employees, clients and business partners. This course provides leaders with tips for reading body language and using it to exude both strength and warmth. It also addresses gender stereotypes and cross-cultural body language and explores the role of body language in virtual communication.",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "PCS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88986,7 +88986,7 @@
         "description": "The Project Management Institute\u00ae (PMI\u00ae) requires all credential holders to earn PDUs in the three areas of the PMI Talent Triangle\u00ae: technical, leadership, and strategic and business management. The four online, self-paced courses in the Strategic PDU Bundle provide practitioners with many of the PDUs needed to fulfill requirements in this important skill area.\u00a0",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "PCS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88998,7 +88998,7 @@
         "description": "Entry-level topics covered include navigating the ribbon, creating and formatting workbooks and worksheets, importing and organizing data, defining tables, formatting and sorting data, setting up filters and subtotals, applying conditional operations using IF statements, inserting various types of charts, working with shapes and images, and securing workbooks and worksheets with password encryption. Students will work independently on exercises and short quizzes throughout the course.",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "PCS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -89010,7 +89010,7 @@
         "description": "",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "PCS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -89022,7 +89022,7 @@
         "description": "Gain the advanced skills for creating interactive dashboard reports and data visualizations in Microsoft\u00ae Excel by using the capabilities of Power View, Power Pivot and DAX formulas. Focus expands from traditional pivot tables to state-of-the-art Power Pivot data modeling. Students will be able to apply these techniques immediately in their place of work.",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "PCS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -89034,7 +89034,7 @@
         "description": "Organizations benefit from diverse leadership, but many women continue to face a variety of challenges on their path to executive roles and responsibilities. This timely, interactive program provides resources, mentorship and a dynamic forum where participants can develop clarity, competence and community to support their leadership goals. Expert facilitators lead focused cohorts of 10 women or fewer through the program to enable deeper learning and to build strong professional networks through small group settings. Key topics include leadership vision, executive communication skills, emotional intelligence and building organizational culture for diversity and inclusion.",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "PCS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -89046,7 +89046,7 @@
         "description": "Students are provided with an in-depth review of the exam materials, real test questions, insight into strategies for succeeding on standardized tests and a comprehensive study plan.",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "PCS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -89058,7 +89058,7 @@
         "description": "Students are armed with the quantitative and verbal skills needed to succeed on the GMAT exam, for example, they learn approaches to math questions presented in abstract form and understanding the key components of arguments in critical reasoning problems.",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "PCS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -89070,7 +89070,7 @@
         "description": "Students will learn the critical thinking, analytical writing, verbal reasoning, and quantitative reasoning skills required to succeed on the GRE exam.",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "PCS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -89082,7 +89082,7 @@
         "description": "Students will learn the logical reasoning, analytical reasoning and reading comprehension required to succeed on the LSAT exam.",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "PCS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -89094,7 +89094,7 @@
         "description": "Students will review \u00a0mathematical concepts to prepare for the questions typically see on the Praxis 5732 exam.",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "PCS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -89106,7 +89106,7 @@
         "description": "Students will review &amp;nbsp;reading &amp; writing concepts to prepare for the questions typically see on the Praxis 5712 and 5722 exams.",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "PCS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -89118,7 +89118,7 @@
         "description": "Students will learn the needed skills of test taking strategies, quantitative subjects, reading and writing subjects needed to succeed on the SAT exam.",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "PCS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -89130,7 +89130,7 @@
         "description": "Presented as a \u201cvisit to the teacher\u2019s desk,\u201d the Summer Bridge Program in Mathematics helps minimize students\u2019 loss of proficiency by providing them with an instructor-led environment for reviewing and practicing skills learned over the previous year as well as receiving guided instruction on topics to be covered in the grade they are entering. Sections available for grades k-6.\u00a0",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "PCS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -89142,7 +89142,7 @@
         "description": "Reading program for 4 year olds to 12th grade.",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "PCS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -89154,7 +89154,7 @@
         "description": "Governor\u2019s School for Excellence is a one-week summer residential program for academically and artistically talented rising juniors from Delaware high schools. Students live on Newark campus and attend either the academic program of discussions, lectures, debates and films revolving around a specific theme, or the visual and performing arts program, providing tutorial instruction with a noted artist and culminates in a performance or public display of the students\u2019 work. Students are nominated by their schools via a competitive application process.",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "PCS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -89166,7 +89166,7 @@
         "description": "The VDLQA symposium is an intensive five-day program, using a mixture of seminar, discussions, writing exercises, and educational site visits, the program\u2019s instructors will cover an overview of Quality Assurance System requirements, the implementation and maintenance of a Quality Assurance System, records, document control, creating and revising standard operating procedures, corrective actions, audits and management reviews.",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "PCS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -89178,7 +89178,7 @@
         "description": "Power Up Your Career seminars offer special career- and personal branding-focused to veterans and active military members, UD graduate and undergraduate students, and UD Professional and Continuing Studies noncredit students at no additional charge. The seminars are offered online, monthly and cover a wide range of topics including, how to ace a virtual interview, why writing email is a skill and how to speak up in meetings.\u00a0",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "PCS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -89190,7 +89190,7 @@
         "description": "Certified Occupational Safety Specialist\u00ae (COSS) is an intensive curriculum-based training course that is recognized nationwide for its rigorous standards and outstanding curriculum. Whether students want to transform their workplace or their careers, the COSS course is the most effective method for the safety practitioner to achieve both. Upon successfully completing the program, participants will obtain the nationally recognized COSS\u00ae designation which is endorsed by the American Association of Safety Councils and the American Council for Construction Education.",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "PCS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -89202,7 +89202,7 @@
         "description": "Students who have seen the difference training can make firsthand through participation in the Certified Occupational Safety Specialist\u00ae (COSS) program can take the next logical step in their careers with the certified occupational safety manager (COSM) designation. COSM for occupational safety managers is an advanced, executive-level safety program consisting of 40 hours of specialized training. After completing 40 hours of training and meeting the prerequisites outlined below, participants will receive the COSM credential.",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "PCS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -89214,7 +89214,7 @@
         "description": "SAF Frontline Safety Training is \u00a0designed to enhance a supervisor\u2019s understanding of the bigger picture of safety, and his or her role in creating a safer work environment. The SAF Frontline Safety Training course is designed to enhance a supervisor\u2019s understanding of the the pivotal role that frontline supervisors play in shaping the safety mindset in the workforce. By learning how to promote safety on a job site, SAF graduates have the knowledge to help lower fatalities, near misses and OSHA citations.",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "PCS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -89226,7 +89226,7 @@
         "description": "The RN Refresher Online Program was created to update and enhance the nursing knowledge and clinical skills of inactive registered nurses preparing for reentry into active practice, addressing foundational competencies for medical-surgical nursing in today\u2019s increasingly complex practice settings.",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "PCS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
