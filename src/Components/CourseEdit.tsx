@@ -47,7 +47,6 @@ const CourseEdit: React.FC<CourseEditProps> = ({
     };
 
     const handleResetToDefault = () => {
-        // You might need to implement logic to reset to default values
         onResetToDefault({
             ...editedCourse
         });

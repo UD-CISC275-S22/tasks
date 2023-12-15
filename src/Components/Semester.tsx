@@ -38,8 +38,21 @@ import { ClearAllSemesters } from "./Buttons/ClearAllSemesters";
 import { SavePlanInto } from "./Buttons/SavePlanInto";
 import { LoadPlan } from "./Buttons/LoadPlan";
 import { PickAPlan } from "./Buttons/PickAPlan";
+import { RequiredClasses } from "./Buttons/requiredClasses";
 import CourseEdit from "./CourseEdit";
 import { ExportCSV } from "./Buttons/ExportCSV";
+import {
+    ArtificialIntelligence,
+    Bioinformatics,
+    CoreBS,
+    Cybersecurity,
+    DataScience,
+    HighPerformanceComputing,
+    SystemsNetworks,
+    TheoryComputation
+} from "../Interfaces/requirements";
+
+//state for the degree requirements for the different plans
 
 //all the default concentration plans
 let AI_Plan = AI();
@@ -51,7 +64,18 @@ let High_Plan = High();
 let Bio_Plan = Bio();
 
 /* ----------------------------------------------------------------------------------------------------- */
+/*EVERYONE PLS READ THIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+These are the changes I made to make the degree requirements:
+    lines 44-51: I imported the degree requirements from requirements.ts
+    line 74 I: create a variable to change the state of the required courses based on the selected plan
+    lines 474-510: I called setcoreClasses in the handlePlans function to update the state based on the selected plan
+VIEW THE REQUIREDCLASSES.TSX FILE TO SEE OTHER CHANGES!!!
+/* ----------------------------------------------------------------------------------------------------- */
+
 export function ViewSemester(): JSX.Element {
+    //states for the degree requirements based on the selected plan
+    const [coreClasses, setcoreClasses] = useState(["", "", ""]);
+
     //states for saving plans (4 options)
     const [plan1, setPlan1] = useSessionStorage("plan1", blankPlan);
     const [plan1Semesters, setPlan1Semesters] = useSessionStorage(
@@ -114,7 +138,6 @@ export function ViewSemester(): JSX.Element {
         courseList
     );
     //let COURSES_LIST = courses as Course[];
-
     //NOTE FOR MICHAEL: Here is where you can add your add courses and remove courses functions
     //Here is where you can add your add courses and remove courses functions
     function updateCurrCourse(event: React.ChangeEvent<HTMLSelectElement>) {
@@ -225,6 +248,25 @@ export function ViewSemester(): JSX.Element {
         // **refer to "currCourse" documentation for more info **
         setSemesters(newSemesters);
     }
+
+    /*function requiredClasses() {
+        //const idx = index(targetYear, targetSem);
+        // const newSemesters = [...semesters];
+        const core = CoreBS;
+
+        /*The substring (0,7) is so that it only looks for the first 7 indexs 
+        so insead of CISC181 - Introduction to Computer Science II 
+        it will look for CISC181*/
+    // const filteredClasses = courseList.filter((aCourse: Course) =>
+    //    core.includes(aCourse.name.substring(0, 7))
+    // );
+    /*     newSemesters[idx].courseList = [...filteredClasses];
+        // looks through the course list in the current semester and filters out the
+        // course with the same "Title" as the state "currCourse"
+        // **refer to "currCourse" documentation for more info **
+        setSemesters(newSemesters);
+        */
+    //}
 
     function addClass(targetYear: number, targetSem: string): void {
         const idx = index(targetYear, targetSem);
@@ -433,38 +475,42 @@ export function ViewSemester(): JSX.Element {
 
     const handlePlans = (planSelected: string) => {
         if (planSelected === "Artificial Intelligence") {
+            setcoreClasses(ArtificialIntelligence);
             setPlan(AI_Plan);
             setSemesters(AI_Plan.semesters);
             setSeePlan(true);
-            return;
         } else if (planSelected === "Cybersecurity") {
+            setcoreClasses(Cybersecurity);
             setPlan(CYBER_Plan);
             setSemesters(CYBER_Plan.semesters);
             setSeePlan(true);
-            return;
         } else if (planSelected === "Systems and Networks") {
+            setcoreClasses(SystemsNetworks);
             setPlan(SysNet_Plan);
             setSemesters(SysNet_Plan.semesters);
             setSeePlan(true);
-            return;
         } else if (planSelected === "Data Science") {
+            setcoreClasses(DataScience);
             setPlan(Data_Plan);
             setSemesters(Data_Plan.semesters);
             setSeePlan(true);
-            return;
         } else if (planSelected === "Theory and Computation") {
+            setcoreClasses(TheoryComputation);
             setPlan(Theory_Plan);
             setSemesters(Theory_Plan.semesters);
             setSeePlan(true);
         } else if (planSelected === "High Performance Computing") {
+            setcoreClasses(HighPerformanceComputing);
             setPlan(High_Plan);
             setSemesters(High_Plan.semesters);
             setSeePlan(true);
         } else if (planSelected === "Bioinformatics") {
+            setcoreClasses(Bioinformatics);
             setPlan(Bio_Plan);
             setSemesters(Bio_Plan.semesters);
             setSeePlan(true);
         } else if (planSelected === "Custom Concentration") {
+            setcoreClasses(CoreBS);
             setPlan(blankPlan);
             setSemesters(blankPlan.semesters);
             setSeePlan(true);
@@ -532,6 +578,10 @@ export function ViewSemester(): JSX.Element {
         <div style={{ backgroundColor: "#0f234c" }}>
             <div className="DropdownMenu">
                 <StartNewPlan startNewSession={startNewSession}></StartNewPlan>
+                <RequiredClasses
+                    degreeReq={coreClasses}
+                    Course_List={courseList}
+                ></RequiredClasses>
                 <ClearSemester clearSemester={clearSemester}></ClearSemester>
                 <ClearAllSemesters
                     clearAll={clearAll}
