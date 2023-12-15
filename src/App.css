@@ -122,3 +122,47 @@ button:hover {
 .not-fulfilled {
     background-color: rgb(222, 98, 98);
 }
+
+.modalBackground {
+    position: fixed; /* Stay in place */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Black with opacity */
+    display: flex;
+    justify-content: center; /* Center the modal horizontally */
+    align-items: center; /* Center the modal vertically */
+    z-index: 1000; /* Sit on top */
+}
+
+.modalContent {
+    background-color: #fff; /* White background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds depth */
+    width: 750px; /* Fixed width, you can adjust as needed */
+    height: 800px;
+    max-height: 90vh; /* Maximum height */
+    overflow-y: auto; /* Enable scroll if content is too long */
+    z-index: 1001; /* Above the background */
+}
+
+.closeButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    color: #333; /* Dark color for visibility */
+}
+
+.HelpTitle {
+    font-size: 36px;
+}
+
+.HelpStep {
+    font-size: 20px;
+}
