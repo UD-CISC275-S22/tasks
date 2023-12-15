@@ -126,7 +126,7 @@ export function CoureseplansBoot({
                     <FormControl
                         className="float-end"
                         type="text"
-                        placeholder="Untitled"
+                        placeholder="Untittled"
                         onChange={nameInput}
                     />
                 </Col>
@@ -171,6 +171,7 @@ export function CoureseplansBoot({
                                     <th>Course Code</th>
                                     <th>Name</th>
                                     <th>Description</th>
+                                    <th>Pre-Reqs</th>
                                     <th>Credits</th>
                                     <th>Action</th>
                                 </tr>
@@ -186,6 +187,7 @@ export function CoureseplansBoot({
                                                     <td>{course.code}</td>
                                                     <td>{course.name}</td>
                                                     <td>{course.descr}</td>
+                                                    <td>{course.preReq}</td>
                                                     <td>{course.credits}</td>
                                                     <td>
                                                         <Button

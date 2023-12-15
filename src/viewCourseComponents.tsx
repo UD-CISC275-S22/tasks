@@ -1,7 +1,7 @@
 /* eslint-disable no-extra-parens */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
-import { Accordion, AccordionHeader, Table } from "react-bootstrap";
+import { Accordion, AccordionHeader, Button, Table } from "react-bootstrap";
 import { CoursePlan, SemesterI, yearI } from "./interfaces/semester";
 import { Course } from "./interfaces/course";
 import "./App.css";
@@ -192,10 +192,14 @@ function Courseplan({
 
 export function MulitCourseplan({
     Courseplans,
-    setCurrentCourseEdit
+    setCurrentCourseEdit,
+    setCurrentCourseplanEdit,
+    setCoursePlan
 }: {
     Courseplans: CoursePlan[];
     setCurrentCourseEdit: (course: Course) => void;
+    setCurrentCourseplanEdit: (courseplan: CoursePlan) => void;
+    setCoursePlan: (coureseplan: CoursePlan[]) => void;
 }) {
     return (
         <div>
@@ -206,7 +210,30 @@ export function MulitCourseplan({
                         key={index.toString()}
                         className="beigebackground"
                     >
-                        <AccordionHeader>{curplan.name}</AccordionHeader>
+                        <AccordionHeader>
+                            {curplan.name}
+                            <Button
+                                onClick={() =>
+                                    setCoursePlan(
+                                        Courseplans.filter(
+                                            (curcourseplan: CoursePlan) =>
+                                                curplan !== curcourseplan
+                                        )
+                                    )
+                                }
+                                className="pull-left"
+                            >
+                                Delete
+                            </Button>
+                            <Button
+                                onClick={() =>
+                                    setCurrentCourseplanEdit(curplan)
+                                }
+                                className="pull-left"
+                            >
+                                Edit
+                            </Button>
+                        </AccordionHeader>
                         <Accordion.Body>
                             <Courseplan
                                 key={curplan.name}
