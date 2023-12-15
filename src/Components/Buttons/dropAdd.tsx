@@ -25,7 +25,7 @@ export const DropAdd = ({
     targetYear: number;
     targetSem: string;
 }) => {
-    //Dropdown for courses are not treated individually
+    //If the prereq is not fulfilled create a pop-up that warns the user that the prereq is not in their course list.
     return (
         <div>
             <Form.Group controlId="currentCourse">
