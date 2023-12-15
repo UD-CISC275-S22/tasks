@@ -14,24 +14,71 @@ import { Year } from "./viewCourseComponents";
 // export function CreatCoursePlan(uuid: string, DB: TotalDB) {}
 // export function deleteCoursePlan() {}
 // export function addToCoursePlan() {}
+export function deleteMultipleCoursesFromSemester(
+    courseUUIDs: string[],
+    selectedSemester: SemesterI,
+    courseplan: CoursePlan
+): CoursePlan {
+    return {
+        ...courseplan,
+        years: courseplan.years.map((year: yearI): yearI => {
+            const updatedSeasons: { [key in seasonT]?: SemesterI | null } = {};
 
-// export function deleteCourse(rW: dbMangement, courseplan,) {
-//     rW.stateSetter({
-//         name: rW.dataset.name,
-//         firstsemester: {
-//             ...rW.dataset.firstsemester,
-//             courses: rW.dataset.firstsemester.courses.filter(
-//                 (course: Course): boolean => course.ticker !== idticker
-//             )
-//         },
-//         secondsemester: {
-//             ...rW.Courseplan.secondsemester,
-//             courses: rW.Courseplan.secondsemester.courses.filter(
-//                 (course: Course): boolean => course.ticker !== idticker
-//             )
-//         }
-//     });
-// }
+            (Object.keys(year) as seasonT[]).forEach((season) => {
+                const currentSeason = year[season];
+                if (currentSeason && currentSeason.courses) {
+                    updatedSeasons[season] = {
+                        ...currentSeason,
+                        courses: currentSeason.courses.filter(
+                            (course) =>
+                                course.UUID &&
+                                !courseUUIDs.includes(course.UUID)
+                        )
+                    };
+                } else {
+                    updatedSeasons[season] = currentSeason;
+                }
+            });
+
+            return {
+                ...year,
+                ...updatedSeasons
+            };
+        })
+    };
+}
+
+export function DeleteCourseFromSemester(
+    selectedSemester: SemesterI,
+    courseUUID: string,
+    courseplan: CoursePlan
+): CoursePlan {
+    return {
+        ...courseplan,
+        years: courseplan.years.map((year: yearI): yearI => {
+            const updatedSeasons: { [key in seasonT]?: SemesterI | null } = {};
+
+            (Object.keys(year) as seasonT[]).forEach((season) => {
+                const currentSeason = year[season];
+                if (currentSeason !== null && currentSeason.courses) {
+                    updatedSeasons[season] = {
+                        ...currentSeason,
+                        courses: currentSeason.courses.filter(
+                            (course) => course.UUID !== courseUUID
+                        )
+                    };
+                } else {
+                    updatedSeasons[season] = currentSeason;
+                }
+            });
+
+            return {
+                ...year,
+                ...updatedSeasons
+            };
+        })
+    };
+}
 
 export function updateCourse(
     dbManager: dbMangement,

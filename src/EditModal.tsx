@@ -2,20 +2,25 @@
 import React, { useEffect, useState } from "react";
 import { Button, Modal, Form } from "react-bootstrap";
 import { Course } from "./interfaces/course";
-import { updateCourse } from "./DBmanage";
+import { updateCourse, DeleteCourseFromSemester } from "./DBmanage";
 import { dbMangement } from "./interfaces/semester";
+import { DeleteCourseModal } from "./DeleteCourseModal";
 
 export const EditCourseModal = ({
     show,
     handleClose,
     currentCourse,
-    updateCoursePass
+    updateCoursePass,
+    dbManager
 }: {
     show: boolean;
     handleClose: () => void;
     currentCourse: Course;
     updateCoursePass: (courseSet: Course) => void;
+    dbManager: dbMangement;
 }) => {
+    const [showDeleteModal, setShowDeleteModal] = useState(false);
+
     const [ticker, setTicker] = useState<string>(currentCourse.ticker);
     const [name, setName] = useState<string>(currentCourse.name);
     const [credits, setCredits] = useState<number>(currentCourse.credits);
@@ -44,10 +49,6 @@ export const EditCourseModal = ({
         console.log(currentCourse.UUID);
         handleClose();
     };
-    // const handleDelete = () => {
-    //     deleteCourse(cRUD, currentCourse.ticker);
-    //     handleClose();
-    // };
     return (
         <div>
             <Modal show={show} onHide={handleClose} animation={true}>
@@ -93,9 +94,7 @@ export const EditCourseModal = ({
                     <Button variant="secondary" onClick={handleClose}>
                         Close
                     </Button>
-                    {/* <Button variant="danger" onClick={handleDelete}>
-                        Delete Course
-                            </Button> */}
+
                     <Button variant="primary" onClick={saveChanges}>
                         Save Changes
                     </Button>
