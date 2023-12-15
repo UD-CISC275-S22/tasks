@@ -461,7 +461,6 @@ export function ViewSemester(): JSX.Element {
     const handleResetToDefault = (editedCourse: Course) => {
         console.log("Edited course exists");
         const defaultCourse = findCourse(DEFAULT_COURSE_LIST, editedCourse.id);
-        //const beforeCourse = editedCourse;
         if (defaultCourse) {
             setEditedCourse(defaultCourse);
             const newCourseList = updateCourseList(COURSES_LIST, defaultCourse);
