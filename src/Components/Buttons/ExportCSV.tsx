@@ -25,7 +25,7 @@ const ExportCSV = (props: ValueProps): JSX.Element => {
                 sem.courseList.forEach((course: Course) => {
                     csv += `${plan.concentration},${
                         sem.year
-                    },${course.title.replace(/,/g, " ")},${course.name},${
+                    },${course.title.replace(/,/g, "")},${course.name},${
                         course.credits
                     }\n`;
                 });
