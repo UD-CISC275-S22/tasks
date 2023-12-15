@@ -59598,7 +59598,7 @@
         "description": "Introduces students to material culture studies, broadly defined as study of all things people make and all the ways people have altered the physical world. Explores the approaches, concepts, and methods of numerous disciplines that investigate material culture.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MCST",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -59610,7 +59610,7 @@
         "description": "Introduction to the design histories and decorative arts of American and European cultures from the 18th century to the present. Examines the historical emergence of design styles (from Chippendale to modern) and forms (such as furniture, ceramics, and craft) while exploring histories of production, consumption, and circulation through global trade and cultural networks. Field trips to area museums may be required.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MCST",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -59622,7 +59622,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "MCST",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -59634,7 +59634,7 @@
         "description": "Balanced emphasis on writing skills, research strategies and interpretation related to the study of material culture. Students will develop research projects drawing on the collections of local and regional personal collectors, museums, libraries, and historical agencies.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "MCST",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -59646,7 +59646,7 @@
         "description": "American art from the Colonies to the present.  Recent topics include  Art and Revolution in Early  America;  Early American Modernism, and American Painting and Sculpture after World War II.",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "MCST",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -59658,7 +59658,7 @@
         "description": "Introduction to sociological perspectives on culture and the arts. Topics include the role of culture in the creation of social inequality, fashion, the social production of art, the culture industry, and outsider art.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "MCST",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -59670,7 +59670,7 @@
         "description": "Provides practical behind-the-scenes experience in collections management, public programming, exhibition design, interpretation, or other aspects of professional life in such cultural institutions as museums, historical societies, or research agencies. To qualify for an internship a minor must demonstrate initiative, motivation, and appropriate skills through a review process. Students select internship placements from a list maintained by the Center for Material Culture Studies or seek approval for internship of their choice outside that list.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "MCST",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -59682,7 +59682,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "MCST",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -59694,7 +59694,7 @@
         "description": "",
         "credits": 6,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "MCST",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -59706,7 +59706,7 @@
         "description": "Introduces graduate students to the theories and practices of material culture studies. Explores the principles and theories that inform our investigation; they include (but are not limited to) material concepts; social life of things; modes of object analysis; methodologies and their application; objects as word and image; gendered objects; technology and manufactured things; lived and built environments.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MCST",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -59718,7 +59718,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "MCST",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -59730,7 +59730,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "MCST",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -59742,7 +59742,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -59754,7 +59754,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -59766,7 +59766,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -59778,7 +59778,7 @@
         "description": "Crystal binding and structure; energetics and structure of lattice defects; elasticity, plasticity, and fracture; phase equilibria and transformations; relations of structure and treatment to properties; structures of inorganic and organic polymers; and electronic and magnetic properties.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -59790,7 +59790,7 @@
         "description": "Considers the first and second laws of thermodynamics and the various thermodynamic variables. Phase equilibria for one component and reaction and heterogeneous equilibrium will be discussed culminating in thermodynamics of condensed systems. Phase diagrams of various binary systems will also be covered. Statistical mechanics of simple gaseous systems will be included and related to previous results from classical thermodynamics.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -59802,7 +59802,7 @@
         "description": "An introduction to chemical reactions of organic and inorganic compounds with emphasis on the kinetics governing the reaction. The transport equation describing diffusion of compounds will also be covered to understand how this affects chemical kinetics.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -59814,7 +59814,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -59826,7 +59826,7 @@
         "description": "Provides an exposure to nanotechnology and engineering as it impacts daily life. Based on current topics in the news, we discuss the underlying science in an approachable manner and consider the relevant societal, economic, and ethical issues. Students will leave with a greater understanding of the emerging technologies that shape our society.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -59838,7 +59838,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -59850,7 +59850,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -59862,7 +59862,7 @@
         "description": "",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -59874,7 +59874,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -59886,7 +59886,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -59898,7 +59898,7 @@
         "description": "",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -59910,7 +59910,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -59922,7 +59922,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -59934,7 +59934,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -59946,7 +59946,7 @@
         "description": "",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -59958,7 +59958,7 @@
         "description": "Degradation of structural materials through interaction with their environment. Electrochemical attack on alloys and its relation to metallurgic structure. Forms of corrosion including high temperature oxidation and biological effects. Corrosion monitoring and deterioration of polymers, concrete and advanced materials. Emphasis on materials selection and corrosion methods.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -59970,7 +59970,7 @@
         "description": "Study of the micromechanical and thermomechanical response of compositematerials. Execution and assessment of experiments conducted to investigatestrength and stiffness characteristics of composite materials.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -59982,7 +59982,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -59994,7 +59994,7 @@
         "description": "Focus on critical financial, legal, scientific and engineering issues confronted during  initial planning stages of a start-up enterprise. Students work in teams to develop a real world business product offering.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60006,7 +60006,7 @@
         "description": "This course focuses on the fundamentals and practical consideration of the myriad techniques that are used to characterize electronic materials. It includes the theoretical underpinnings of the techniques and discusses applicability and limitations.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60018,7 +60018,7 @@
         "description": "Explores the principles and methodologies of tissue engineering with polymeric biomaterials. Both biological and materials science concepts will be introduced. Specific topics include cell growth and differentiation, extracellular matrixcomposition and properties, polymerization methods, polymer characterization methods and mechanical properties, and drug delivery.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60030,7 +60030,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60042,7 +60042,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60054,7 +60054,7 @@
         "description": "Considers the basics of solar energy utilization. Emphasis on photovoltaic systems, including inorganic and organic based systems, as well as hybrid solar cells, followed by consideration of passive and active usage such as solar thermal power.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60066,7 +60066,7 @@
         "description": "Degradation of structural materials through interaction with their environment. Electrochemical attack on alloys and its relation to metallurgical structure. Forms of corrosion including high temperature oxidation and biological effects. Corrosion monitoring and deterioration of polymers, concrete and advanced materials. Emphasis on materials selection and corrosion control methods.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60078,7 +60078,7 @@
         "description": "Introduces general principles of material structure and properties, including chemical and physical bonding, crystal structure, lattices, energy levels, and materials synthesis and chemistry. Introduces the fundamental structure and properties of polymer, solid state and composite materials. Includes a significant laboratory component.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60090,7 +60090,7 @@
         "description": "Introduces mechanical, thermal, electrical, optical, magnetic and biological properties of materials. Considers polymer, solid-state, and composite materials and discusses engineering of material properties via structure, composition, and processing.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60102,7 +60102,7 @@
         "description": "Cover the fundamental theoretical and experimental aspects of vibrational spectroscopy including normal modes of vibration and conditions for scattering, absorption and emission. Experimental methods discussed will include: FT-IR, 2D analysis methods, Raman scattering, neutron scattering, tunneling spectroscopies and AFM-IR spectroscopy.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60114,7 +60114,7 @@
         "description": "Fundamental and engineering aspects of metal, semiconductor, and oxide surfaces; their structure and defects, characterization, electronic properties, adsorption and reaction kinetics and thermodynamics. Applications to catalysis, microelectronics, and environment sensitive behavior.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60126,7 +60126,7 @@
         "description": "Basic theories and in-depth practical aspects of scanning electron microscopy, transmission electron microscopy, elemental analysis, and sample preparation techniques. Hands-on oriented. For some lab assignments, students can be accommodated to prepare and analyze real samples from their own research.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60138,7 +60138,7 @@
         "description": "Design and construct functional molecules and materials through simple and efficient reaction schemes. Topics include: pKa/pH/solvent polarity, efficient chemical reactions (e.g., \u2018click\u2019 chemistry), dynamic covalent chemistry, protection and deprotection schemes, peptide synthesis and conjugation, one-pot reaction schemes, convergent versus divergent syntheses, biomolecular labeling, synthesis and modification of polymer networks/hydrogels, and purification.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60150,7 +60150,7 @@
         "description": "This course focuses on the fundamentals and practical consideration of the myriad techniques that are used to characterize electronic materials. It includes the theoretical underpinnings of the techniques and discusses applicability and limitations.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60162,7 +60162,7 @@
         "description": "Provides an understanding of the science and engineering of macromolecules from a structure/property perspective. Topics include polymerization, chain structure and configuration, polymer size and shape, phase separation behavior, amorphous and crystalline state, glass-rubber transition, cross linking/rubber elasticity, viscoelasticity, rheology polymer processing and mechanical behavior.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60174,7 +60174,7 @@
         "description": "Focuses on the fundamentals of quantum mechanics, such as Schroedinger\u2019s equation, eigenfunctions and eigenvalues, operators, Dirac notation, quantum wells and tunneling, harmonic oscillators, perturbation theory and approximation methods, and the application of quantum mechanics in crystalline materials.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60186,7 +60186,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60198,7 +60198,7 @@
         "description": "Considers the basics of solar energy utilization. Emphasis on photovoltaic systems, including inorganic and organic based systems, as well as hybrid solar cells, followed by consideration of passive and active usage such as solar thermal power.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60210,7 +60210,7 @@
         "description": "Fundamental laws of thermodynamics. Mathematical structure of classical thermodynamics (functions of extensive and intensive variables, state variables, equations of state, Maxwell relations, reduction of partial derivatives, Legendre transforms). Equilibrium and stability criteria. Single- and multi-component phase equilibrium. Partial molar properties. Ergodic hypothesis. Ensembles and partition functions. Quantum fluids (B-E/F-D statistics). Equipartition theorem. Lattice models. Radial distribution function. Basic elements of simulations (Monte Carlo and molecular dynamics).",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60222,7 +60222,7 @@
         "description": "Theory of reaction kinetics. Transport mechanisms in solids. Nucleation and spinodal decomposition. Interfacial attachment and migration. Transition state theory applied to diffusion and phase transformation. Elementary non-equilibrium thermodynamics and phenomenological equations in material transport and phase transformation.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60234,7 +60234,7 @@
         "description": "Provides professional development in ethics, business and communication related to systems biology research applications in stem cell, tissue engineering, and drug delivery technologies. Intended for PhD students in interdisciplinary life science and engineering programs.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60246,7 +60246,7 @@
         "description": "Provides a technical review of systems biology approaches including genomics, transcriptomics, proteomics, metabolomics, and bioinformatics as well as applications in tissue engineering, stem cell differentiation, and drug delivery. Intended for PhD students in interdisciplinary life science and engineering programs.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60258,7 +60258,7 @@
         "description": "Introduction, thermoelastic behavior of laminated composites, statistical strength theories of continuous-fiber composites, short-fiber composites, hybrid composites, two-dimensional textile structural composites, three-dimensional textile structural composites, flexible composites, and nonlinear elastic finite deformation of flexible composites.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60270,7 +60270,7 @@
         "description": "Focuses on understanding molecular orbital theory, linear combination of atomic orbitals for simple molecules and polymers, tight binding and k.p. descriptions of semiconductors. Includes elements of group theory, spin-orbit coupling, effects of strain on band structures, and band alignments at interfaces.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60282,7 +60282,7 @@
         "description": "Provides background in the theoretical and synthetic considerations of polymer synthesis. Topics include theoretical descriptions of molecular weight distributions, step growth polymerizations, chain growth polymerizations, living polymerizations, as well as chemical strategies for the production of various polymers. Specialized topics in the current polymer chemistry literature may also be discussed.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60294,7 +60294,7 @@
         "description": "Chain statistics, thermodynamics, and kinetics are discussed in the context of modern polymer physics characterization techniques, such as dynamic and static light scattering and elastic/inelastic neutron scattering.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60306,7 +60306,7 @@
         "description": "Structure and properties of solid-state materials, including inorganic atomic structure and lattices, calculation of three-dimensional energy bands and band gaps, calculation of density of states, derivation of physical properties from the density of states, electronic properties of materials, models for approximating band structure and phonons.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60318,7 +60318,7 @@
         "description": "Fundamentals and recent developments in the growth of epitaxial films of electronic/optical materials and devices. Topics include vacuum technology, growth thermodynamics, heterojunction physics, materials characterization, and practical considerations. Focus on molecular beam epitaxy, but discuss complementary techniques.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60330,7 +60330,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60342,7 +60342,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60354,7 +60354,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60366,7 +60366,7 @@
         "description": "Research and readings in preparation of dissertation topic and/or qualifying examinations for doctoral students before admission to candidacy but after completion of all required course work.",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60378,7 +60378,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "MSEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60390,7 +60390,7 @@
         "description": "Introduces computer-aided mechanical engineering design by developing student\u2019s ability to 1) think visually, 2) communicate spatial information to an engineering audience through parametric solid modeling drafting standards and 3) begin to recognize connection between a virtual design and an actual component.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60402,7 +60402,7 @@
         "description": "Maker Series is a 1 credit pass/fail class you get credit for by participating in some of the many workshops scheduled during the semester. These workshops range from welding to sewing to basic electronics and are taught by instructors both internal and external to the university. After an initial orientation meeting during the first scheduled class, the group does not meet regularly. Instead, check the calendar at http://www.me.udel.edu/makerseries/ and sign up for workshops individually by following the directions in the description.",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60414,7 +60414,7 @@
         "description": "Accurate analysis of data and effective communication of results are prerequisites for engineering success. Engineers who cannot analyze data effectively cannot solve emergent challenges, and the best technical engineers are of little use if they cannot convey their ideas to the non-technical decision makers. Examines the basic tools of analysis and best practices of technical communication. Topics include basic statistics, producing quality figures and technical reports.",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60426,7 +60426,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60438,7 +60438,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60450,7 +60450,7 @@
         "description": "To recognize, idealize and solve problems involving rigid bodies in static equilibrium using scalar and vector techniques. Introduces free body diagrams, friction, center of gravity, moment of inertia. Emphasizes the role of statics in the design process.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60462,7 +60462,7 @@
         "description": "Intermediate-level development of the kinematics and dynamics of particle systems and rigid bodies. Solution of engineering problems by force, momentum and energy methods with applications to mechanisms, machines, and vehicles. Computer problems.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60474,7 +60474,7 @@
         "description": "Analytical study of stresses and deformations and their application to the design of machine and structural elements under axial, torsional, bending and lateral loads. Buckling and energy methods are discussed.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60486,7 +60486,7 @@
         "description": "Mechanics of Solids Laboratory serves to reinforce the theory discussed in Mechanics of Solids lecture through experimental means. The topics studied include: 1) modern measurements and instrument calibration; 2) failure in uniaxial tension; 3) tensile deformation; 4) deformation of composite materials; 5) cantilevered and 3-point beam bending; 6) torsion. The students will learn and reinforce professional skills related to the analysis and communication of technical information.",
         "credits": 1,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60498,7 +60498,7 @@
         "description": "Basic concepts of thermodynamics including properties of substances and gas mixtures, energy, entropy, and exergy. First and second law analysis of systems and control volumes. Applications to steady-flow devices and systems in power production, propulsion, and air conditioning.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60510,7 +60510,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60522,7 +60522,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60534,7 +60534,7 @@
         "description": "Kinematic analysis of mechanisms and machines, kinematic synthesis, cam design, gear train analysis and machine dynamics.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60546,7 +60546,7 @@
         "description": "Aspects of machine design: statistical nature, theories of failure and designfor strength and design of machine elements.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60558,7 +60558,7 @@
         "description": "Modeling and simulation of single and multi-degree-of-freedom systems,nonlinear models, linearization, transient and steady state response.Controller designs: root locus, bode plots, PID, digital implementation.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60570,7 +60570,7 @@
         "description": "Vibration and control lab serves to reinforce the theory discussed in vibration and control lecture through experimental means. The topics studied include: 1) system and parameter identification, (ii) time response of dynamical systems to forcing inputs, (iii) development and testing of controllers, (iv) Frequency response of linear dynamical systems, (v) controller designs. The students will learn and reinforce professional skills related to the analysis and communication of technical information.",
         "credits": 1,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60582,7 +60582,7 @@
         "description": "Mechanical properties and materials behavior under static and dynamic loading;fatigue, creep, wear and corrosion; properties and applications of metals,ceramics, polymers and composites; forming and joining of materials; practicalexamples of materials selection in design and use of materials data bases.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60594,7 +60594,7 @@
         "description": "Incompressible fluid mechanics: fluid statics, control volume analysis for mass, momentum and energy; differential analysis of viscous and inviscid flow; dimensional analysis.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60606,7 +60606,7 @@
         "description": "Compressible flows, isentropic flow, shock waves; lift and drag; inviscid flows, potential and stream functions, elementary wing theory; boundary layers; computational fluid dynamics. Labs to support the topics of Compressible flows, isentropic flow, shock waves; lift and drag; inviscid flows, potential and stream functions, elementary wing theory; boundary layers.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60618,7 +60618,7 @@
         "description": "Introduction to experimental and measurement techniques in fluid mechanics.",
         "credits": 1,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60630,7 +60630,7 @@
         "description": "Conductive, convective and radiative heat transfer. Finite difference methods for solving transient, multi-dimensional problems numerically. Analysis of fins and heat exchanges.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60642,7 +60642,7 @@
         "description": "Introduction to experimental and measurement techniques related to thermodynamics and heat transfer.",
         "credits": 1,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60654,7 +60654,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Spring and Summer"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60666,7 +60666,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60678,7 +60678,7 @@
         "description": "Open-ended, team-based, capstone engineering design projects. Systems approach process involving defining requirements, benchmarking, concept generation and selection, prototype fabrication, and testing. Includes safety, ethics, economic analysis, regulatory and industry standards, and intellectual property.",
         "credits": 6,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60690,7 +60690,7 @@
         "description": "Capstone engineering practice where teams develop real engineering system designs; discover customer requirements; benchmark best practices; develop engineering specifications; generate concepts; and justify aspecific concept. Design, fabricate, assemble, test and improve an actual prototype. Focus is upon successful competition at the annual spring FSAE competition.",
         "credits": 6,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60702,7 +60702,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60714,7 +60714,7 @@
         "description": "Advanced topics in nanoscience and nanotechnology including nanostructures, nanomaterial synthesis, properties, characterizations, and applications. The emphasis will be to introduce students to the science of the building blocks of nanostructured materials, material behavior when they are assembled, technology for building nanoscale structures and features, nanomaterials for energy conversion and storage, and the technological implications of these nanomaterials and nanotechnologies.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60726,7 +60726,7 @@
         "description": "Deals with analysis and design of flight structures and other light-weight structures. Loads, supports and reactions, constitute equations, and stress and deformation of components for flight vehicles are investigated. Overview of fatigue, vibration (flutter) and instability of structures are given.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60738,7 +60738,7 @@
         "description": "Fiber and matrix materials, fiber-matrix interface, polymer, metal, ceramic and carbon matrix composites, geometric aspects, elastic properties, lamination theory, strength of unidirectional composites, strength of laminates, durability, hybrid composites, flexible composites and textile structural composites.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60750,7 +60750,7 @@
         "description": "State-space analysis of linear dynamical systems. Solution of state-space equations, and analysis of structural system properties based on eigenvalues and eigenvectors. Similarity transformations and decompositions. Lyapunov stability. Observability and controllability. State feedback control design.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60762,7 +60762,7 @@
         "description": "Theory of the dynamics of ground vehicles. Topics include tire adhesion, slip angle, suspension analysis and design, chassis design and aerodynamics with downforce generation.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60774,7 +60774,7 @@
         "description": "Analysis and design of automotive powertrain design with emphasis on competition and efficiency optimization.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60786,7 +60786,7 @@
         "description": "Develop a practical appreciation for the components of a robotic system while learning to apply control theory to analyze and control real world robotic systems. Expand knowledge of different operating systems and programming environments used in robotics and controls work. This is a hands-on course with some lecture and a lot of studio time for independent and group project work.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60798,7 +60798,7 @@
         "description": "Study of the micromechanical and thermomechanical response of compositematerials. Execution and assessment of experiments conducted to investigatestrength and stiffness characteristics of composite materials.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60810,7 +60810,7 @@
         "description": "Theoretical and computational aerodynamics. Review of fluid mechanics. Airfoils and finite wings in incompressible flow. Panel and vortex-lattice methods. Complex variable techniques. Boundary-layer theory.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60822,7 +60822,7 @@
         "description": "Includes an historical overview, the energetics of wind power, wind turbine aerodynamics, and the basics of related dynamical, structural and electrical aspects of wind power. There is also a class visit to a nearby wind farm.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60834,7 +60834,7 @@
         "description": "Basic principles of fuel cells, fuel cell types and their applications, fuel processing and hydrogen storage.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60846,7 +60846,7 @@
         "description": "Advanced topics in energy storage science and technology including electrochemical energy storage systems, hydrogen storage, thermal energy storage, mechanical energy storage, and electromagnetic energy storage. The emphasis will be to introduce students to the electrochemistry of the electrochemical energy storage systems, working principles of advanced battery systems, newly emerging electrode and electrolyte materials, energy storage technology for from nanoscale to marcoscale applications.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60858,7 +60858,7 @@
         "description": "Investigation of an experimental nature to be carried out and reported upon by each student.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60870,7 +60870,7 @@
         "description": "This course examines the mechanical, thermal, optical, fluidic, chemical, and biological devices that can be derived using modern microfabrication methods. Topics include typical fabrication steps, device physics and mechanics, and a survey of existing and emerging device areas.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60882,7 +60882,7 @@
         "description": "Explains key concepts and elements of basic processes (metal cutting, forming, plastic molding), technologies (robotics, ergonomics, material handling, quality management, machine vision), industries/systems (pharmaceutical, automotive, packaging, food, and current advances (lean mfg., just-in-time).",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60894,7 +60894,7 @@
         "description": "Fundamental principles and an application involving composites manufacturing are introduced. Modeling of such processes is emphasized and a specific projected is required. Assignments include open-ended problems. Areas of manufacturing include: injection molding, compression molding, filament winding, pultrusion and resin transfer molding.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60906,7 +60906,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Fall, Winter and Spring"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60918,7 +60918,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60930,7 +60930,7 @@
         "description": "This course considers problems in perception, planning, and control, and their systems-level integration in the context of self-driving vehicles through an open-source curriculum for autonomy education that emphasizes hands-on experience. Integral to the course, students will collaborate to implement concepts covered in lecture on a low-cost autonomous vehicle with the goal of navigating a model town complete with roads, signage, traffic lights, obstacles, and citizens.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60942,7 +60942,7 @@
         "description": "Cell, the universal unit of life, behaves as a \u201cmechanical living\u201d entity. Besides sensing \u201csmell or taste\u201d mediated by chemical reactions, cells also display a strong sense of \u201ctouch\u201d mediated by mechanical interactions. Mechanics is involved in many fundamental processes such as cell shape, mobility, and differentiation. In this course, the students will be exposed to the principles of cytomechancis and the fascinating cellular responses and adaptation to the mechanical environment.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60954,7 +60954,7 @@
         "description": "The biomechanics and patho-mechanics of various human musculoskeletal joint systems. Normal joint anatomy and biomechanics; the mechanical effects of pathology and the goals of surgical repairs to counteract them will be explored through in vitro, in vivo and mathematical modeling studies of joint system mechanics.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60966,7 +60966,7 @@
         "description": "Anatomy and physiology including microanatomy and mechanics of bone, cartilage, tendon and muscle. Mechanical modeling of body including joint loads, motion analysis, muscle forces and interaction with orthopaedic devices.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60978,7 +60978,7 @@
         "description": "Biomaterials for mechanical replacement of Orthopaedic tissues: bone, cartilage, ligament, tendon and whole joint systems. Topics include normal tissue mechanics and biocompatibility, mechanical behavior, degradation and host response to biomaterials. Experimental methods to assess biomaterials along with design and manufacturing considerations for joint and tissue replacements.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -60990,7 +60990,7 @@
         "description": "Analysis of water, solute, gas, and heat exchange in microcirculation and relationship between structure and function. Transport in biological porous media examined and applied to arterial wall, bone, and cartilage. Active transport across membranes considered and applied to kidney and secretary organs. Introduction to transport across cell membrane and role of receptors in transport, cell adhesion, and intracellular signaling presented.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61002,7 +61002,7 @@
         "description": "",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61014,7 +61014,7 @@
         "description": "Provides an introduction to the theory and practice of industrial design - an interdisciplinary field involving the engineering, manufacturing, and business aspects of new product development. Students will apply modeling, prototyping, and testing concepts towards creating a commercially viable product.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61026,7 +61026,7 @@
         "description": "Provides a foundation on various state-of-the-art computational methods and approaches that are widely used in the area of computational solid mechanics. Students will learn how to: (i) solve advanced problems of 3D elasticity under combined loading using computational approach, (ii) derive weak formulations of a set of key governing equations used at the quantum and continuum scales for describing the mechanistic behavior of solids, and (iii) apply various numerical techniques and write computer codes to solve applied problems of solid mechanics.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61038,7 +61038,7 @@
         "description": "Indicial notation, tensors; displacement, strain, compatibility; traction and stress, equations of motion; constitutive description of an elastic material; solutions to boundary value problems including torsion, bending, plane problems in elasticity (Airy stress function) and elements of linear elastic fracture mechanics.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61050,7 +61050,7 @@
         "description": "Advanced topics in nanoscience and nanotechnology including nanostructures, nanomaterial synthesis, properties, characterizations, and applications. The emphasis will be to introduce students to the science of the building blocks of nanostructured materials, material behavior when they are assembled, technology for building nanoscale structures and features, nanomaterials for energy conversion and storage, and the technological implications of these nanomaterials and nanotechnologies.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61062,7 +61062,7 @@
         "description": "Deals with analysis and design of flight structures and other light-weight structures. Loads, supports and reactions, constitute equations, and stress and deformation of components for flight vehicles are investigated. Overview of fatigue, vibration (flutter) and instability of structures are given.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61074,7 +61074,7 @@
         "description": "Introduction to composite materials; anisotropic elasticity and laminate theory; plates and panels of composite materials; beams, columns and rods; composite material shell structures; energy methods; strength and failure theories; adhesive bonding and mechanical fastening; hygrothermal effects; stress analysis, buckling, vibrations and impact.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61086,7 +61086,7 @@
         "description": "Fiber and matrix materials, fiber-matrix interface, polymer, metal, ceramic and carbon matrix composites, geometric aspects, elastic properties, lamination theory, strength of unidirectional composites, strength of laminates, durability, hybrid composites, flexible composites and textile structural composites.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61098,7 +61098,7 @@
         "description": "Reference frames, angular velocity, linear velocity, angular acceleration, linear acceleration, multibody systems, inertia properties, kinetic energy, equations of motion, generalized d\u2019Alembert\u2019s principles, numerical integration, computer simulation.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61110,7 +61110,7 @@
         "description": "State-space analysis of linear dynamical systems. Solution of state-space equations, and analysis of structural system properties based on eigenvalues and eigenvectors. Similarity transformations and decompositions. Lyapunov stability. Observability and controllability. State feedback control design.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61122,7 +61122,7 @@
         "description": "Introduces the students to multiscale modeling and material design tools that integrate ideas from quantum and classical mechanics in connecting length scales. The underlying concepts intersect different disciplines and enable solving materials related problems that are intractable by single-scale methods.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61134,7 +61134,7 @@
         "description": "Study of the micromechanical and thermomechanical response of compositematerials. Execution and assessment of experiments conducted to investigatestrength and stiffness characteristics of composite materials.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61146,7 +61146,7 @@
         "description": "Algebra and analysis of Cartesian Tensors. Descriptions of motion, kinematics. Conservation equations. Constitutive theory, Newton-Stokes fluids. Irrotational flow of an inviscid fluid. Dimensional analysis. Some exact solutions of the Navier-Stokes equations. Asymptotic flows: creeping flow, flow in the boundary layer. Introduction to turbulent flow. One dimensional compressible flow.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61158,7 +61158,7 @@
         "description": "Theoretical, experimental, and computational aerodynamics.  Review of fluid mechanics as it applies to aerodynamics.  Airfoils and finite wings in incompressible flow.  Compressible flows, supersonic and hypersonic flow.  Applications in aerodynamics (ballistics, ground vehicles, birds and fish).",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61170,7 +61170,7 @@
         "description": "Lecture course on engineering aspects of modern large wind turbines.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61182,7 +61182,7 @@
         "description": "Theory and equations of heat conduction, boundary conditions, steady and transient heat conduction, theory of convection, forced convection in laminar flows, derivation of conservation equations, numerical methods.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61194,7 +61194,7 @@
         "description": "Basic principles of fuel cells, fuel cell types and their applications, fuel processing and hydrogen storage.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61206,7 +61206,7 @@
         "description": "Advanced topics in energy storage science and technology including electrochemical energy storage systems, hydrogen storage, thermal energy storage, mechanical energy storage, and electromagnetic energy storage. The emphasis will be to introduce students to the electrochemistry of the electrochemical energy storage systems, working principles of advanced battery systems, newly emerging electrode and electrolyte materials, energy storage technology for from nanoscale to macroscale applications.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61218,7 +61218,7 @@
         "description": "This course examines the mechanical, thermal, optical, fluidic, chemical, and biological devices that can be derived using modern microfabrication methods. Topics include typical fabrication steps, device physics and mechanics, and a survey of existing and emerging device areas.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61230,7 +61230,7 @@
         "description": "Explains key concepts and elements of basic processes (metal cutting, forming, plastic molding), technologies (robotics, ergonomics, material handling, quality management, machine vision), industries/systems (pharmaceutical, automotive, packaging, food, and current advances (lean mfg., just-in-time).",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61242,7 +61242,7 @@
         "description": "Fundamental principles involved in composites manufacturing are introduced. Modeling of such processes emphasized with applications of injection molding, compression molding, filament winding, pultrusion and resin transfer molding.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61254,7 +61254,7 @@
         "description": "Explains key concepts and elements of composites manufacturing processes, technologies and systems. An online-only course where lectures are coupled with detailed videos of manufacturing processes and exercises with simulation software to connect theory to practice.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61266,7 +61266,7 @@
         "description": "Explains theory and practice for composite materials characterization techniques (mechanical, thermal, microscopic and spectroscopic) with an emphasis on understanding the processing-structure-property relations and understanding the influence of processing on composite quality.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61278,7 +61278,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61290,7 +61290,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61302,7 +61302,7 @@
         "description": "Topics include: rigid motions and transformations, forward kinematics, Denavit-Hartenberg representations, inverse kinematics, velocity kinematics, dynamics, independent joint control, multivariable control, force control.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61314,7 +61314,7 @@
         "description": "Covers the mathematical fundamenals of estimating the state of a dynamic system. Reviews basic concepts in linear systems, Bayesian estimation, and minimum mean-square estimation followed by the introduction of the standard Kalman filter in both discrete-time and continuous-time formats. Examines extensions of the Kalman filter that include the extended and unscented Kalman filter as well as the H-infinity filter.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61326,7 +61326,7 @@
         "description": "Considers problems in perception, planning, and control, and their systems-level integration in the context of self-driving vehicles through an open-source curriculum for autonomy education that emphasizes hands-on experience. Integral to the course, students will collaborate to implement concepts covered in lecture on a low-cost autonomous vehicle with the goal of navigating a model town complete with roads, signage, traffic lights, obstacles, and citizens.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61338,7 +61338,7 @@
         "description": "Cell, the universal unit of life, behaves as a \u201cmechanical living\u201d entity. Besides sensing, \u201csmell or taste\u201d mediated by chemical reactions, cells also display a strong sense of \u201ctouch\u201d mediated by mechanical interactions. Mechanics is involved in many fundamental processes such as cell shape, mobility, and differentiation. In this course, the students will be exposed to the principles of cytomechanics and the fascinating cellular responses and adaptation to the mechanical environment.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61350,7 +61350,7 @@
         "description": "The biomechanics and patho-mechanics of various human musculoskeletal joint systems. Normal joint anatomy and biomechanics; the mechanical effects of pathology and the goals of surgical repairs to counteract them are explored through in vitro, in vivo and mathematical modeling studies of joint system mechanics.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61362,7 +61362,7 @@
         "description": "Anatomy and physiology including microanatomy and mechanics of bone, cartilage, tendon and muscle. Mechanical modeling of body including joint loads, motion analysis, muscle forces and interaction with orthopedic devices.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61374,7 +61374,7 @@
         "description": "Biomaterials for mechanical replacement of Orthopedic tissues: bone, cartilage, ligament, tendon and whole joint systems. Topics include normal tissue mechanics and biocompatibility, mechanical behavior, degradation and host response to biomaterials. Experimental methods to assess biomaterials along with design and manufacturing considerations for joint and tissue replacements.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61386,7 +61386,7 @@
         "description": "Linear algebra: generalized vector space, eigenvalue problem, diagonalization, quadratic forms. Field theory: divergence theorem, Stokes\u2019 theorem, irrotational fields. Sturm-Liouville theory, Bessel functions, Legendre polynomials. Partial differential equations: diffusion and Laplace equations by separation of variables and Sturm-Liouville theory, wave equation. Engineering applications.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61398,7 +61398,7 @@
         "description": "Covers the basic models and solution approaches for sequential decision making problems under uncertainty (stochastic control). Provides a unified treatment of the subject, suitable for a broad engineering audience.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61410,7 +61410,7 @@
         "description": "Composite and isotropic sandwich structures are studied for stresses, deformations, buckling loads, natural frequencies and dynamic response under mechanical and environmental loads, involving honeycomb, solid, foam, web and truss core sandwich comprising beam, plate, ring and shell structures. Design and minimum weight optimization are treated.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61422,7 +61422,7 @@
         "description": "Historical development of the field of fracture mechanics, including; linear elastic and elasto-plastic formulations and fatigue. Additional topics in fracture of complex material systems to be researched and presented by the students.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61434,7 +61434,7 @@
         "description": "A rigorous study of kinematics of finite deformation and the field equations of mechanics and thermodynamics of continua. Tensor analysis employed throughout.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61446,7 +61446,7 @@
         "description": "Introduction, thermoelastic behavior of laminated composites, statistical strength theories of continuous-fiber composites, short-fiber composites, hybrid composites, two-dimensional textile structural composites, three-dimensional textile structural composites, flexible composites, and nonlinear elastic finite deformation of flexible composites.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61458,7 +61458,7 @@
         "description": "Theory of plates from three-dimensional equations of elasticity. Small deflection analysis of rectangular and circular plates. Thermoelastic effects. Analysis of orthotropic plates, multilayered plates and sandwich panels. Green\u2019s functions. Energy methods. Reissner variational theorem for plates of moderate thickness. Large deflections of plates.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61470,7 +61470,7 @@
         "description": "General theory of thin shells from three-dimensional equations of elasticity; shells of revolution under axially symmetric loads; asymmetric loads; thermoelastic effects; general bending theory, membrane theory, inextensional theory; Donnell equations; edge load solutions; orthotropic shells; laminated shells.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61482,7 +61482,7 @@
         "description": "General principles of spatial dynamics. Lagrangian and Hamiltonian methods. Application to engineering problems.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61494,7 +61494,7 @@
         "description": "Review of analysis of nonlinear dynamic systems. Qualitative behavior, differences compared to linear systems. Existence and uniqueness of solutions. Lyapunov stability theory and advanced stability analysis. Selected topics on control design for nonlinear systems.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61506,7 +61506,7 @@
         "description": "Principles of fluid dynamic stability analysis, fundamental results, computational techniques and physical insight into the mechanisms responsible for the transition to turbulence. Emphasis will be placed on viscous shear instability, though topics including stratified and environmental flows may be discussed.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61518,7 +61518,7 @@
         "description": "Introduction to lattice Boltzmann equation and its applications as a numerical approach to single and multiple-phase flows. Relationships between mesoscopic operation rules and macroscopic Navier-Stokes equations. Treatment of complex boundary conditions and multiscale fluid-fluid and fluid-particle interfaces. Examples of lattice-Boltzmann computer simulations.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61530,7 +61530,7 @@
         "description": "Principles of multiphase flows with particles, droplets, and bubbles. Local and averaging formulations of interfacial mass, momentum, energy transfers and related transport processes. Applications to industrial and environmental processes.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61542,7 +61542,7 @@
         "description": "The overall goal of the course is to (1) understand how mass, momentum, energy, and charge are stored and transported at the microscopic level for gases, liquids, and solids, (2) learn how to calculate the common thermodynamic and transport properties (e.g. diffusivity,viscosity, heat capacity, thermal conductivity) from microscopic principles, (3) understand how transport properties are modied in nanoscale systems, and (4) understand the operational principles of common energy conversion devices.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61554,7 +61554,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61566,7 +61566,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61578,7 +61578,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61590,7 +61590,7 @@
         "description": "Experimental investigation conducted for the purpose of contributing new useful data and theory in some field of mechanical engineering. Although supervised, investigation is independent in character to encourage development of initiative.",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61602,7 +61602,7 @@
         "description": "Consists of two main parts: (i) advanced nonlinear state estimatmion such as extended Kalman filtering, particle filtering, and (ii) sensor modeling and fusion. This course emphasizes the application of estimation theory to mobile robot motion estimation (odometry, inertial,laser scan matching, vision-based) and path planning, map representations, map-based localization, simultaneous localization/mapping (SLAM), and multi-robot cooperative navigation.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61614,7 +61614,7 @@
         "description": "Introduce the fundamentals of nonlinear optimization theory and methods. Provide a unified analytical and computational approach to nonlinear optimization problems covering a range of topics. Provide a comprehensive treatment of optimality conditions, Lagrange multiplier theory, and duality theory. Applications will be focusing on control, communications, power systems, and resource allocation problems.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61626,7 +61626,7 @@
         "description": "Integral transform and Green\u2019s Function Solution of Partial Differential Equations, complex variables, variational calculus and introduction to perturbation methods.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61638,7 +61638,7 @@
         "description": "Integrates classical and modern approaches to feedback control into a powerful and insightful design and analysis methodology. The primary emphasis will be on the implications that the mathematical equations have for design, rather than on their derivation. A major focus of the course will be on multiple input, multiple output (MIMO) systems; nevertheless many new and useful results for single input, single output (SISO) systems are also reviewed.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61650,7 +61650,7 @@
         "description": "Covers the basic models and solution approaches in problems that involve interactions among strategic agents distilling the key results in game theory and mechanism design. While game theory is concerned with analysis of games, mechanism design involves designing games with desirable outcomes.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61662,7 +61662,7 @@
         "description": "Research and readings in preparation of dissertation topic and/or qualifying examinations for doctoral students before admission to candidacy but after completion of all required course work.",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61674,7 +61674,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "MEEG",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61686,7 +61686,7 @@
         "description": "Orientation to the profession of medical laboratory science with overview of clinicallaboratory science areas.  Discussion of the laboratory\u2019s critical role inhealthcare delivery and the diversity of employment and career opportunities.",
         "credits": 1,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61698,7 +61698,7 @@
         "description": "This course will educate students about microorganisms affecting our lives. Lecture will concentrate on good and bad organisms, especially those problematic for college students. Students will learn from case studies for organism-infection association and will discuss society\u2019s treatment, control and prevention of infection.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61710,7 +61710,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61722,7 +61722,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61734,7 +61734,7 @@
         "description": "Comprehensive foundation of medical terminology for use in health care careers. Emphasis on body structures, anatomical systems, pathologies, medical procedures, medical specialties, and common terms and abbreviations used in health care.",
         "credits": 3,
         "semester": ["Fall, Winter and Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61746,7 +61746,7 @@
         "description": "",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61758,7 +61758,7 @@
         "description": "Introduction to the field of forensic science, discussing laboratory techniques and assays used in determining evidential value of crime scene and related evidence. Emphasis on blood and DNA analysis, forensic toxicology, and forensic microbiology.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61770,7 +61770,7 @@
         "description": "Overview of the field of forensic pathology including the history, related specialties, and determining the cause of death. Medical examiners/coroners system, hospital pathology and legal/ethical issues in forensic science are also discussed.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61782,7 +61782,7 @@
         "description": "Crime scene investigation techniques are covered with an emphasis upon securing and recording the crime scene, identifying and preserving physical evidence, collecting, transporting and storing evidence and the examination of evidence. Techniques available to the crime scene investigator also will be discussed.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61794,7 +61794,7 @@
         "description": "Focuses on tools to achieve effective interpersonal and interdisciplinary communication. Includes the use of educational methodology to instruct laboratory personnel, as well as other practitioners and consumers who utilize laboratory services. Discussion of ethics and professionalism in relationship to health-related topics.",
         "credits": 1,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61806,7 +61806,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Winter and Summer"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61818,7 +61818,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61830,7 +61830,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61842,7 +61842,7 @@
         "description": "Introduction to principles of human medical microbiology. Bacterial pathogenic mechanisms, clinical manifestations, and diagnostic methods are emphasized. Explores important human viral and parasitic diseases, antimicrobial agents, immunology and immune disorders.",
         "credits": 4,
         "semester": ["Fall, Winter and Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61854,7 +61854,7 @@
         "description": "Provides a systematic introduction to essential skills and applied theories pertinent of the training needs of biotechnologists. Topics include: Safety, Quality Control, GMPs/SOPs, Documentation, Regulatory Requirements in the Biotechnology Laboratory, and Applications of Biotechnology in the workplace.",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61866,7 +61866,7 @@
         "description": "Introductory immunology concepts and use of immunological assays, such as enzyme immunoassays and fluorescent antibody assays, for diagnosis of infectious diseases and immunological disorders. Study of viruses, diseases they cause, and methods used to diagnose viral infections.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61878,7 +61878,7 @@
         "description": "Laboratory concepts and immunological assays, such as enzyme immunoassays and fluorescent antibody assays, for diagnosis of infectious diseases and immunological disorders.",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61890,7 +61890,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61902,7 +61902,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61914,7 +61914,7 @@
         "description": "Introduction to the theory and performance of phlebotomy. Supervised clinical experience in the application of laboratory theory and techniques in phlebotomy.",
         "credits": 1,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61926,7 +61926,7 @@
         "description": "Introductory statistics, principles of research design and data interpretation for MLS and AMBB majors.",
         "credits": 2,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61938,7 +61938,7 @@
         "description": "Overview of protocols, technical and clinical correlations involved in body fluid analysis of non-blood body fluids, including urine, synovial, cerebrospinal, seminal, serous, amniotic and gastric fluids.",
         "credits": 1,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61950,7 +61950,7 @@
         "description": "Application and theory of manual and automated techniques used in diagnostic and therapeutic medicine. Emphasis on clinical procedures for carbohydrates, proteins, lipids, nonprotein nitrogenous compounds, blood gases and pH, and electrolytes.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61962,7 +61962,7 @@
         "description": "This laboratory and lecture-based course provides a systematic introduction to essential skills and applied theories pertinent of the training needs of biotechnologists. Topics to be covered include: Safety, Quality Control, GMPs/SOPs, Documentation, Regulatory Requirements in the Biotechnology Laboratory, Measurements, Math in the Laboratory, Data Analysis, Basic Microbiological Techniques, Preparation of Specialized Solutions and Media, Preparation of Agarose and Polyacrylamide Gels.",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61974,7 +61974,7 @@
         "description": "Study of antigen and antibody systems of human red cells and compatibilitytesting of blood for transfusion.",
         "credits": 2,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61986,7 +61986,7 @@
         "description": "Practical internships in a variety of genetic counseling settings. Participate in all phases of genetic counseling functions.",
         "credits": 3,
         "semester": ["Fall, Winter and Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -61998,7 +61998,7 @@
         "description": "Performance of diagnostic laboratory testing of body fluids, including quality assurance and troubleshooting techniques.",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62010,7 +62010,7 @@
         "description": "Laboratory exercises that complement the topics covered in MMSC 407.",
         "credits": 1,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62022,7 +62022,7 @@
         "description": "Readings, case studies, career planning and orientation for clinical education.",
         "credits": 0,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62034,7 +62034,7 @@
         "description": "Laboratory procedures consistent with MMSC 409.",
         "credits": 1,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62046,7 +62046,7 @@
         "description": "Study of blood and component transfusions, their risks, complications andquality assurance. Also blood component therapy and testing of the neonateand adult.",
         "credits": 2,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62058,7 +62058,7 @@
         "description": "Laboratory procedures consistent with MMSC 420.",
         "credits": 1,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62070,7 +62070,7 @@
         "description": "Quantitative and qualitative study of the formed elements of blood with emphasis on the normal state, as well as the study of normal and abnormal coagulation and hemostasis.",
         "credits": 2,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62082,7 +62082,7 @@
         "description": "Study and implementation of laboratory procedures that correlate with the material taught in MMSC 423.",
         "credits": 1,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62094,7 +62094,7 @@
         "description": "Introduction to basic molecular and biochemical techniques.  Laboratory sessions include discussion, demonstration and hands on practice of basic molecular techniques including: basic microbial technique, transformation, purification and quantitation of DNA, restriction endonuclease digestion, use of spectrophotometer and proteins assays, electrophoresis of DNA and protein, southern transfer, western blot, protein assays, PCR amplification, RT-PCR, DNA sequencing and use of electronic databases.",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62106,7 +62106,7 @@
         "description": "Explores current methods and theories pertaining to fractionation and purification of proteins from cellular and recombinant sources; including ion exchange, affinity, and size-exclusion based methods. Methods of protein analysis are also discussed including various spectroscopic methods: NMR, fluorescence, mass-spectroscopy, and circular dichroism. Current topics in proteomics are discussed including methods for understanding protein-protein and protein-ligand interactions are covered.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62118,7 +62118,7 @@
         "description": "Introduction to the principles of flow cytometry, cell sorting, and in and their applications in research and diagnostics.  Course will utilize lectures, demonstrations and practice in the principles of flow cytometry.  Flow Cytometry I will place an emphasis on immuno-phenotyping and disease panel applications of flow cytometry.  Lecture/Seminar/Hands on Computer and Wet Bench Based Laboratory.",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62130,7 +62130,7 @@
         "description": "Study of the occurrence and pathogenesis of human infections and microorganisms associated with humans in health and disease.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62142,7 +62142,7 @@
         "description": "Laboratory study of microorganisms important in the normal flora and infectious diseases of humans.",
         "credits": 2,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62154,7 +62154,7 @@
         "description": "Study of the pathophysiology of erythrocytic and leukocytic disorders and thelaboratory findings of these disorders.",
         "credits": 2,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62166,7 +62166,7 @@
         "description": "Study and implementation of laboratory procedures in hematology consistent with the material taught in MMSC 433.",
         "credits": 2,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62178,7 +62178,7 @@
         "description": "Introduction to the concepts of computer based molecular modeling, genomics, proteomics and bioinformatics and their applications in research and diagnostics. Course will utilize lectures, demonstrations and practice in the principles of computer based molecular modeling and genetic analysis. Lecture/Seminar/Hands on Computer Based Laboratory.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62190,7 +62190,7 @@
         "description": "Application and theory of methodologies in enzymology, endocrinology andtoxicology. Relationship of normal and abnormal laboratory findings in organfunctional tests.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62202,7 +62202,7 @@
         "description": "Introduce the laboratory instrumentation and troubleshooting techniques found in clinical laboratories. Explore automated instrumentation used in clinical disciplines such as: clinical chemistry, hematology, homeostasis, body fluid analysis, immunohematology, and immunology/serology.",
         "credits": 2,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62214,7 +62214,7 @@
         "description": "Diagnostic bacteriology, emphasizing the correlation of in vitro and in vivofindings in the diagnosis and treatment of infectious disease, including humanmycoses. Identification of pathogenic and nonpathogenic bacteria and fungi inclinical specimens.",
         "credits": 2,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62226,7 +62226,7 @@
         "description": "Study and implementation of laboratory procedures that correlate with the material taught in MMSC 438.",
         "credits": 2,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62238,7 +62238,7 @@
         "description": "Practical internships in a variety of biotechnology laboratory settings. Students participate in all phases of laboratory functions.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62250,7 +62250,7 @@
         "description": "Practical internships in a variety of biotechnology laboratory settings. Students participate in all phases of laboratory functions.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62262,7 +62262,7 @@
         "description": "Practical internships in a variety of biotechnology laboratory settings. Students participate in all phases of laboratory functions.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62274,7 +62274,7 @@
         "description": "Practical internships in a variety of biotechnology laboratory settings. Students participate in all phases of laboratory functions.",
         "credits": 3,
         "semester": ["Fall, Summer and Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62286,7 +62286,7 @@
         "description": "Focus on the application of the principles of Biochemistry and Molecular Biology in the understanding of human health and disease. Designed to give the students a solid foundation in the subject areas. Be useful for those preparing for health-related careers who wish to apply the knowledge of biochemistry of normal cellular function to the understanding of molecular dysfunction in human diseases.",
         "credits": 4,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62298,7 +62298,7 @@
         "description": "This course offers basic technique training to handle in vitro cell culture as well as cellular and molecular biological techniques. You will be introduced to the procedures and the underlying scientific principles of cell culture and recombinant protein expression in a variety of cell systems including yeast, insect, and mammalian cell lines. In addition, you will learn techniques to analyze cell phenotype and function unohistochemistry, immunofluorescence, and flow cytometry.",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62310,7 +62310,7 @@
         "description": "Working with practicing criminalists, students gain hands-on, real-life experiences in the exciting field of forensic science. Students will be given the opportunity to develop an appreciation for the collection and handling of crime scene evidence and the analyses performed in a forensic science laboratory.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62322,7 +62322,7 @@
         "description": "Introduction to clinical laboratory practice and leadership with emphasis on management styles, motivational techniques, communication skills, organizational leadership and administration of personnel.",
         "credits": 1,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62334,7 +62334,7 @@
         "description": "Final reflective component of the volunteer experiences accumulated throughout the student\u2019s undergraduate years in preparation for a graduate program in a healthcare field. Evidence of critical thinking and knowledge of healthcare concepts will be demonstrated through various assignments.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62346,7 +62346,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62358,7 +62358,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62370,7 +62370,7 @@
         "description": "Discussion of clinical laboratory practice and leadership. Emphasis on responsibilities relating to daily operation of the laboratory, including human resource management, financial planning, cost analysis, laboratory design, laboratory information systems, marketing, government regulations and accreditation.",
         "credits": 1,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62382,7 +62382,7 @@
         "description": "Clinical experience in the application of laboratory theory and techniques inurinalysis.",
         "credits": 1,
         "semester": ["Winter"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62394,7 +62394,7 @@
         "description": "Supervised experience in the application of laboratory theory and techniquesin clinical chemistry.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62406,7 +62406,7 @@
         "description": "Supervised experience in the application of laboratory theory and techniques in clinical chemistry.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62418,7 +62418,7 @@
         "description": "Supervised experience in the application of laboratory procedures inhematology.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62430,7 +62430,7 @@
         "description": "Supervised experience in the application of laboratory procedures in hematology.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62442,7 +62442,7 @@
         "description": "Supervised experience in the application of laboratory procedures in diagnostic microbiology.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62454,7 +62454,7 @@
         "description": "Supervised experience in the application of laboratory procedures in diagnostic microbiology.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62466,7 +62466,7 @@
         "description": "Supervised experience in the application of laboratory procedures inimmunohematology.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62478,7 +62478,7 @@
         "description": "Enhances problem-solving skills by integrating multiple clinical laboratory disciplines utilizing literature reviews to assess case studies. Focuses on integration and synthesis of knowledge acquired in previous courses while enhancing written and oral communication and presentation skills. Includes written assessment of all clinical laboratory disciplines.",
         "credits": 1,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62490,7 +62490,7 @@
         "description": "Supervised experience in the application of laboratory procedures in immunohematology.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62502,7 +62502,7 @@
         "description": "Molecular diagnostics topics emphasize DNA, RNA and protein structure and function, including detailed review of the central dogma. Genetic topics emphasize cell development, chromosome structure and function, and disease inheritance patterns.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62514,7 +62514,7 @@
         "description": "Molecular processes required to diagnose inherited disorders, cancer, hematological disorders, and infectious agents. Additionally, the employment of DNA identity-based testing in transplantation, paternity testing and forensics will be discussed.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62526,7 +62526,7 @@
         "description": "Molecular techniques commonly employed in the clinical molecular diagnostics laboratory are presented.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62538,7 +62538,7 @@
         "description": "This laboratory course introduces students to the clinical/diagnostic applications of molecular techniques. The course will provide hands-on experience in using biochemical and imaging-based assays for molecular diagnostics. Laboratory sessions include discussion, demonstration and hands-on practice of: isolation of nucleic acids from biological samples, use of hybridization-based assays in diagnostic procedures, preparation of probes, the clinical application of PCR, RT-PCR and Flow cytometry in diagnosis/prognoses of diseases. Students will be introduced to DNA and RNA sequencing platforms and liquid biopsy for analysis of genetic polymorphisms and genetic screening will be provided.",
         "credits": 2,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62550,7 +62550,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62562,7 +62562,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62574,7 +62574,7 @@
         "description": "Overview of protocols, technical and clinical correlations involved in body fluid analysis of non-blood body fluids, including urine, synovial, cerebrospinal, seminal, serous, amniotic and gastric fluids.",
         "credits": 1,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62586,7 +62586,7 @@
         "description": "Methods and techniques for extending the scientific base of knowledge for bioscience laboratory practice. Students analyze contemporary research studies, designs and related statistical processes to assess their appropriateness for answering experimental hypotheses and laboratory practice issues.  Research funding, regulation and dissemination are discussed.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62598,7 +62598,7 @@
         "description": "Theory and practice of teaching, learning and evaluation in traditional classroom settings, clinical settings and through on-line platforms, with emphasis on issues unique to bioscience learning environments.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62610,7 +62610,7 @@
         "description": "Study of the management and application of regulatory and fiscal requirements for laboratory operations. Federal, State, local and professional requirements governing clinical and research laboratories; GLP/GMP and compliance issues; billing and reporting requirements for laboratories  using private, managed care and other third party payors (including federal government programs).  Current procedural terminology used to assign and bill for laboratory procedures. Budgeting for laboratory operations.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62622,7 +62622,7 @@
         "description": "Application and theory of manual and automated techniques used in diagnostic and therapeutic medicine. Emphasis on clinical procedures for carbohydrates, proteins, lipids, nonprotein nitrogenous compounds, blood gases and pH, and electrolytes.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62634,7 +62634,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62646,7 +62646,7 @@
         "description": "Study of antigen and antibody systems of human red cells and compatibility testing of blood for transfusion.",
         "credits": 2,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62658,7 +62658,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62670,7 +62670,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62682,7 +62682,7 @@
         "description": "Performance of diagnostic laboratory testing of body fluids, including quality assurance and troubleshooting techniques.",
         "credits": 1,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62694,7 +62694,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62706,7 +62706,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62718,7 +62718,7 @@
         "description": "Laboratory exercises that complement the topics covered in MMSC 607.",
         "credits": 1,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62730,7 +62730,7 @@
         "description": "Laboratory procedures consistent with MEDT609.",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62742,7 +62742,7 @@
         "description": "Study of blood and component transfusions, their risks, complications and quality assurance. Also blood component therapy and testing of the neonate and adult.",
         "credits": 2,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62754,7 +62754,7 @@
         "description": "<strong> </strong>Laboratory procedures consistent with MMSC 620.",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62766,7 +62766,7 @@
         "description": "Quantitative and qualitative study of the formed elements of blood with emphasis on the normal state, as well as the study of normal and abnormal coagulation and hemostasis.",
         "credits": 2,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62778,7 +62778,7 @@
         "description": "Study and implementation of laboratory procedures that correlate with the material taught in MMSC 623.",
         "credits": 1,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62790,7 +62790,7 @@
         "description": "Introduction to basic molecular and biochemical techniques.  Laboratory sessions include discussion, demonstration and hands on practice of basic molecular techniques including: basic microbial technique, transformation, purification and quantitation of DNA, restriction endonuclease digestion, use of spectrophotometer and proteins assays, electrophoresis of DNA and protein, southern transfer, western blot, protein assays, PCR amplification, RT-PCR, DNA sequencing and use of electronic databases.",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62802,7 +62802,7 @@
         "description": "Explores current methods and theories pertaining to fractionation and purification of proteins from cellular and recombinant sources; including ion exchange, affinity, and size-exclusion based methods. Methods of protein analysis are also discussed including various spectroscopic methods: NMR, fluorescence, mass-spectroscopy, and circular dichroism. Current topics in proteomics are discussed including methods for understanding protein-protein and protein-ligand interactions are covered.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62814,7 +62814,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62826,7 +62826,7 @@
         "description": "Study of the occurrence and pathogenesis of human infections and microorganisms associated with humans in health and disease.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62838,7 +62838,7 @@
         "description": "Laboratory study of microorganisms important in the normal flora and infectious diseases of humans.",
         "credits": 2,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62850,7 +62850,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62862,7 +62862,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62874,7 +62874,7 @@
         "description": "Study of the pathophysiology of erythrocytic and leukocytic disorders and the laboratory findings of these disorders.",
         "credits": 2,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62886,7 +62886,7 @@
         "description": "Study and implementation of laboratory procedures in hematology consistent with the material taught in MMSC 633.",
         "credits": 2,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62898,7 +62898,7 @@
         "description": "Introduction to the concepts computer based molecular modeling, genomics, proteomics and bioinformatics and their applications in research and diagnostics.  Course will utilize lectures, demonstrations and practice in the principles of computer based molecular modeling and genetic analysis.  Lecture/Seminar/Hands on Computer Based Laboratory.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62910,7 +62910,7 @@
         "description": "Application and theory of methodologies in enzymology, endocrinology, and toxicology. Relationship of normal and abnormal laboratory findings in organ functional tests.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62922,7 +62922,7 @@
         "description": "Introduce the laboratory instrumentation and troubleshooting techniques found in clinical laboratories. Explore automated instrumentation used in clinical disciplines such as: clinical chemistry, hematology, homeostasis, body fluid analysis, immunohematology, and immunology/serology.",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62934,7 +62934,7 @@
         "description": "Diagnostic bacteriology, emphasizing the correlation of in vitro and in vivo findings in the diagnosis and treatment of infectious disease, including human mycoses. Identification of pathogenic and nonpathogenic bacteria and fungi in clinical specimens.",
         "credits": 2,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62946,7 +62946,7 @@
         "description": "Study and implementation of laboratory procedures that correlate with the material taught in MMSC 638.",
         "credits": 2,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62958,7 +62958,7 @@
         "description": "Practical internships in a variety of biotechnology laboratory settings. Students participate in all phases of laboratory functions.",
         "credits": 3,
         "semester": ["Summer"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62970,7 +62970,7 @@
         "description": "Practical internships in a variety of biotechnology laboratory settings. Students participate in all phases of laboratory functions.",
         "credits": 3,
         "semester": ["Summer"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62982,7 +62982,7 @@
         "description": "Practical internships in a variety of biotechnology laboratory settings. Students participate in all phases of laboratory functions.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -62994,7 +62994,7 @@
         "description": "Practical internships in a variety of biotechnology laboratory settings. Students participate in all phases of laboratory functions.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -63006,7 +63006,7 @@
         "description": "Focus on the application of the principles of Biochemistry and Molecular Biology in the understanding of human health and disease. Designed to give the students a solid foundation in the subject areas. Be useful for those preparing for health-related careers who wish to apply the knowledge of biochemistry of normal cellular function to the understanding of molecular dysfunction in human diseases.",
         "credits": 4,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -63018,7 +63018,7 @@
         "description": "Explores basic technique training to handle in vitro cell culture as well as cellular and molecular biological techniques. You will be introduced to the procedures and the underlying scientific principles of cell culture and recombinant protein expression in a variety of cell systems including yeast, insect, and mammalian cell lines. In addition, you will learn techniques to analyze cell phenotype and function unohistochemistry, immunofluorescence, and flow cytometry.",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -63030,7 +63030,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -63042,7 +63042,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -63054,7 +63054,7 @@
         "description": "Supervised experience in the application of laboratory theory and techniques in clinical chemistry and body fluid analysis, with discussion and synthesis of advanced topics.",
         "credits": 3,
         "semester": ["Summer"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -63066,7 +63066,7 @@
         "description": "Supervised experience in the application of laboratory procedures in hematology, with discussion and synthesis of advanced topics.",
         "credits": 3,
         "semester": ["Summer"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -63078,7 +63078,7 @@
         "description": "Advanced Clinical Microbiology and Immunology Practicum: Supervised experience in the application of laboratory procedures in diagnostic microbiology and immunology. With discussion and synthesis of advanced topics.",
         "credits": 3,
         "semester": ["Summer"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -63090,7 +63090,7 @@
         "description": "Advanced Clinical Immunohematology Practicum: Supervised experience in the application of laboratory procedures in immunohematology, with discussion and synthesis of advanced topics.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -63102,7 +63102,7 @@
         "description": "Molecular diagnostics topics emphasize DNA, RNA and protein structure and function, including detailed review of the central dogma. Genetic topics emphasize cell development, chromosome structure and function, and disease inheritance patterns.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -63114,7 +63114,7 @@
         "description": "Molecular processes required to diagnose inherited disorders, cancer, hematological disorders, and infectious agents. Additionally, the employment of DNA identity based testing in transplantation, paternity testing and forensics will be discussed.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -63126,7 +63126,7 @@
         "description": "Molecular techniques commonly employed in the clinical molecular diagnostics laboratory are presented.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -63138,7 +63138,7 @@
         "description": "This laboratory course introduces students to the clinical/diagnostic applications of molecular techniques. The course will provide hands-on experience in using biochemical and imaging-based assays for molecular diagnostics. Laboratory sessions include discussion, demonstration and hands-on practice of isolation of nucleic acids from biological samples, use of hybridization-based assays in diagnostic procedures, preparation of probes, the clinical application of PCR, RT-PCR and Flow cytometry in diagnosis/prognoses of diseases. Students will be introduced to DNA and RNA sequencing platforms and liquid biopsy for analysis of genetic polymorphisms and genetic screening will be provided. An emphasis will be placed on learning existing techniques in literature as well as the most recent technological advancements. Lecture content will introduce students to the theory and practice of the molecular diagnostic laboratories as it pertains to the QC/QA and regulatory practices encountered in this sector.",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -63150,7 +63150,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -63162,7 +63162,7 @@
         "description": "",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -63174,7 +63174,7 @@
         "description": "Seminar taken after achieving candidacy, allowing graduate students to report on the progress of their research and discuss the current literature on their research focus.",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -63186,7 +63186,7 @@
         "description": "Research using the various techniques and resources available to conduct experimental research and/or to measure performance improvement, test utilization, best practices and clinical outcomes.  A written research project proposal and oral defense of the proposal are required. A manuscript ready for journal submission and oral presentation are required at the conclusion of the project.",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -63198,7 +63198,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -63210,7 +63210,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -63222,7 +63222,7 @@
         "description": "Active involvement in graduate research before completion of required coursework.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -63234,7 +63234,7 @@
         "description": "Independent dissertation research after completion of the Candidacy Examination.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
