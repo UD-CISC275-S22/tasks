@@ -9,7 +9,6 @@ import "./App.css";
 //import { ClearCourseModal } from "./ClearCourseModal";
 //import { AddCourseModal } from "./AddCourseModal";
 import {
-    UpdateCoureplanYear,
     clearallsemester,
     DeleteCourseFromSemester,
     UpdateCoureplanYear,
@@ -103,18 +102,6 @@ function Semester({
                             ): number => creditsCount + rendCourse.credits,
                             0
                         )}
-                    </td>
-                </tr>
-            </tfoot>
-            <tfoot>
-                <tr>
-                    <td colSpan={3}>
-                        <button
-                            onClick={deleteAllCoursesFromSemester}
-                            style={{ backgroundColor: "red" }}
-                        >
-                            Delete All Courses
-                        </button>
                     </td>
                 </tr>
             </tfoot>

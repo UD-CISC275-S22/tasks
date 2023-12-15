@@ -26,6 +26,8 @@ import {
     oneYearUpdate,
     updateCourse
 } from "./DBmanage";
+import { ExportToCSV, convertCoursePlans } from "./CSV";
+import CSVReader from "react-csv-reader";
 //import { degreeRequirementCheck } from "./DegreeRequirementCheck";
 
 function createUUID(db: CoursePlan[]) {
@@ -114,7 +116,12 @@ function App(): JSX.Element {
             });
         }
     }
-
+    const [courseplans, setCorseplans] = useState<CoursePlan[]>(
+        data.Courseplans
+    );
+    function updateCoursePlan(newCourseplan: CoursePlan) {
+        setCorseplans([...courseplans, newCourseplan]);
+    }
     //degreeRequirementCheck(degreeData[0], coursePlanData[0]);
 
     return (
@@ -137,7 +144,12 @@ function App(): JSX.Element {
                 {EditCorseplan && (
                     <button
                         className="buttonSpacing"
-                        onClick={() => setEditCorseplan(false)}
+                        onClick={() => {
+                            setEditCoursePlan(
+                                createFourYearCoursePlan("Click To Edit Name")
+                            );
+                            setEditCorseplan(false);
+                        }}
                     >
                         New Course Plans
                     </button>
@@ -150,13 +162,19 @@ function App(): JSX.Element {
                         View Course Plans
                     </button>
                 )}
+                <ExportToCSV coursePlans={courseplans} />
                 <button onClick={handleImportCSV}>Import CSV</button>
+                <CSVReader
+                    onFileLoaded={(data, fileInfo, originalFile) =>
+                        setCorseplans(convertCoursePlans(data))
+                    }
+                />
             </div>
 
             <div className="container-fluid">
                 {EditCorseplan ? (
                     <MulitCourseplan
-                        Courseplans={data.Courseplans}
+                        Courseplans={courseplans}
                         setCurrentCourseEdit={setCurrentCourseEdit}
                         setCurrentCourseplanEdit={(courseplan: CoursePlan) => {
                             setEditCoursePlan(courseplan);
@@ -170,9 +188,7 @@ function App(): JSX.Element {
                         setCourseEdit={setCurrentCourseEdit}
                         curCoursePlan={currentEditCoureplan}
                         setEditCoursePlan={setEditCoursePlan}
-                        updateCoursePlan={function (): void {
-                            throw new Error("Function not implemented.");
-                        }}
+                        updateCoursePlan={updateCoursePlan}
                         deletecourse={deleteCourseFromCoursePlan}
                     />
                 )}

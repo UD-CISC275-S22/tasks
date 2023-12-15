@@ -8,6 +8,8 @@ import { v4 as uuidv4 } from "uuid";
 import { AddCourseToSemester, DeleteCourseFromSemester } from "./DBmanage";
 import { CourseplanClick } from "./EditCoursePlan";
 import "./App.css";
+import { DegreeRequirementCheck } from "./DegreeRequirementCheck";
+import CurrentDegree from "./data/degrees.json";
 
 interface CatalogCourse {
     code: string;
@@ -83,6 +85,9 @@ export function CoureseplansBoot({
     function removeQueue(removecourse: Course) {
         setqueue(queue.filter((course: Course) => removecourse !== course));
     }
+    function nameInput(event: React.ChangeEvent<HTMLInputElement>) {
+        curCoursePlan.name = event.target.value;
+    }
     function EditModal(course: Course) {
         console.log(EditModal);
     }
@@ -140,10 +145,13 @@ export function CoureseplansBoot({
                     />
                 </Col>
             </Form.Group>
-            <Button className={"float-end button"} onClick={Save}>
-            <Button onClick={Save} className="save-button">
+            <Button onClick={Save} className="save-button float-end">
                 Save
             </Button>
+            <DegreeRequirementCheck
+                currentPlan={curCoursePlan}
+                currentDegree={CurrentDegree[0]}
+            />
             <Row>
                 <Col sm={8}>
                     <div style={{ marginBottom: ".5rem" }}>
