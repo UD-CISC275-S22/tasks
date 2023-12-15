@@ -18,23 +18,23 @@ export function AI(): Plan {
     let spring2AI = spring2();
     spring2AI = [...spring2AI, blankCourse, blankCourse, blankCourse];
     let fall3AI = courseList.filter(
-        //id 8 is CISC320 and id 35 is CISC304
-        (course) => course.id == 8 || course.id == 35
+        //id 2017 is CISC320 and id 2016 is CISC304
+        (course) => course.id == 2017 || course.id == 2016
     );
     fall3AI = [...fall3AI, blankCourse, blankCourse, blankCourse];
     let spring3AI = courseList.filter(
-        //id 7 is CISC303 and id 40 is CISC481
-        (course) => course.id == 7 || course.id == 40
+        //id 2015 is CISC303 and id 2052 is CISC481
+        (course) => course.id == 2015 || course.id == 2052
     );
     spring3AI = [...spring3AI, blankCourse, blankCourse, blankCourse];
     let fall4AI = courseList.filter(
-        //id 41 is CISC483 and id 16 is CISC498 and id 39 is CISC442
-        (course) => course.id == 41 || course.id == 16 || course.id == 92
+        //id 2054 is CISC483 and id 16 is CISC498 and id 2036 is CISC442
+        (course) => course.id == 2054 || course.id == 2058 || course.id == 2036
     );
     fall4AI = [...fall4AI, blankCourse, blankCourse];
     let spring4AI = courseList.filter(
-        //id 42 is CISC484 and id 17 is CISC499
-        (course) => course.id == 42 || course.id == 17
+        //id 2055 is CISC484 and id 2059 is CISC499
+        (course) => course.id == 2055 || course.id == 2059
     );
     spring4AI = [...spring4AI, blankCourse, blankCourse, blankCourse];
 
@@ -186,21 +186,3 @@ export function AI(): Plan {
         credits: 124
     };
 }
-/*
- * QUESTIONS
- * what do you mean by fall1/fall2/fall3...ect, are those seperated by year or
- * does that mean something else?
- * Are the general courses meant to be edited?
- */
-
-/*
- * IDEAS FOR HOW TO CLEAR PLAN
- * repeat drop down idea to remove desired semester
- * create a button to remove the desired semester
- */
-
-/*
- * DUMMY CODE
- * function dropPlanSemester () {
- * }
- */
