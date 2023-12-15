@@ -52746,7 +52746,7 @@
         "description": "Build confidence in landscape drawing through this introduction to sketching and landscape graphics. Emphasis on observation, interpretation, tools and critique.  Course has a studio fee.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "LARC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -52758,7 +52758,7 @@
         "description": "Introduction to the application of computer-assisted drafting (CAD) and graphics programs useful for landscape and site design.This course has a studio fee.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "LARC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -52770,7 +52770,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "LARC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -52782,7 +52782,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "LARC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -52794,7 +52794,7 @@
         "description": "Introduction to the landscape architecture profession with an emphasis on concepts and expectations specifically related to the Landscape Architecture program and ultimately professional practice.",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "LARC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -52806,7 +52806,7 @@
         "description": "History of landscape design from prehistory to early 20th century. This course tracks the relationship between human cultural development and its expression in landscape.  Course has an activity fee.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "LARC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -52818,7 +52818,7 @@
         "description": "Emphasizes concepts and methods of plane surveying for construction applications. Provides field experience with modern surveying instruments. Topics include: distance measurement, leveling, angle measurement, error analysis, coordinate systems, mapping, traversing, and calculation of land areas and earth volumes.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "LARC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -52830,7 +52830,7 @@
         "description": "Introduction to foundational concepts in the practice of landscape architecture construction.  Basic instruction in landform features, site manipulation and documentation. Landscape materials and construction methods typical in the practice of landscape architecture are included. Concepts support subsequent design and advanced construction studios.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "LARC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -52842,7 +52842,7 @@
         "description": "History of landscape architecture from early American landscapes to present-day landscapes around the world, including recent landscape architectural theory. Includes focus on American vernacular landscapes that came to be as a result of a variety of conditions, including environmental injustice, colonialism, chattel slavery, and green gentrification. Course requires a Saturday field trip.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "LARC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -52854,7 +52854,7 @@
         "description": "Understand space as a landscape architectural construct through the emphasis on design as a transformative and iterative process.  Explores the principles, concepts, and methods involved in defining space. This course has a studio fee.",
         "credits": 4,
         "semester": ["Fall"],
-        "department": "",
+        "department": "LARC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -52866,7 +52866,7 @@
         "description": "Understand the foundations of the design process and the role of \u2018site\u2019 in the design of landscape architectural spaces. Explore conventional and experimental methods for engaging with a large-scale landscape site. Develop an ability to see and analyze a site that leads to an informed design. Course has a studio fee.",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "LARC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -52878,7 +52878,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "LARC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -52890,7 +52890,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "LARC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -52902,7 +52902,7 @@
         "description": "Cultural, especially cross-cultural, study with primary emphasis on the historical development of the announced area, e.g., Nature in the Ancient World, Speculative Fiction, Transformation of a Myth. See Courses Search for topics.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LARC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -52914,7 +52914,7 @@
         "description": "Introduction to the application of Geographic Information Systems to landscape architectural projects.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LARC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -52926,7 +52926,7 @@
         "description": "Introduction to principles involved in the design and installation of landscape elements: stone, brick, concrete, wood and metal.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "LARC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -52938,7 +52938,7 @@
         "description": "Landscape Architecture students are required to coordinate a symposium by inviting key speakers to address the major challenges and current debates in the field of landscape architecture. Students are required to present their work during the symposium. Some years this symposium is held in conjunction with other local universities. This collaborative effort gives students an opportunity to identify key speakers, coordinate logistics and budget, and speak in a public forum.",
         "credits": 1,
         "semester": ["Spring"],
-        "department": "",
+        "department": "LARC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -52950,7 +52950,7 @@
         "description": "Continuation of LARC 332 LARC 332 - Landscape Architecture Symposium I. Students are required to coordinate a symposium by inviting key speakers to address the major challenges and current debates in the field of landscape architecture. Students are required to present their work during the symposium. Some years this symposium is held in conjunction with other local universities. This collaborative effort gives students an opportunity to identify key speakers, coordinate logistics and budget, and speak in a public forum.",
         "credits": 1,
         "semester": ["Fall"],
-        "department": "",
+        "department": "LARC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -52962,7 +52962,7 @@
         "description": "Introduction to land grading, site layout, drainage, earthwork volumes and erosion and sediment control for landscape and construction sites.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "LARC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -52974,7 +52974,7 @@
         "description": "Advanced design studio projects including small and large-scale landscapes, investigating issues pertinent to both residential and non-residential settings.  Course has a studio fee.",
         "credits": 5,
         "semester": ["Spring"],
-        "department": "",
+        "department": "LARC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -52986,7 +52986,7 @@
         "description": "Advanced design studio projects including small and large-scale landscapes, investigating issues pertinent to residential and non-residential rural settings.  Course has a studio fee.",
         "credits": 5,
         "semester": ["Fall"],
-        "department": "",
+        "department": "LARC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -52998,7 +52998,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "LARC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53010,7 +53010,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "LARC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53022,7 +53022,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "LARC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53034,7 +53034,7 @@
         "description": "Practical teaching experience assisting in instruction of an undergraduate course.",
         "credits": 2,
         "semester": ["Verify Offering with Depart"],
-        "department": "",
+        "department": "LARC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53046,7 +53046,7 @@
         "description": "Hydraulics and hydrology for urban/suburban watersheds. Design of culverts, street drainage, storm drain inlets and storm drains.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LARC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53058,7 +53058,7 @@
         "description": "This design studio course focuses on contemporary topics and allows students to work individually and on teams to complete design projects at a large scale and/or at a level of complexity that would be found in a professional office.. Projects might include community, corporate, or international projects where students use all manner of representation including GIS.  This course has a studio fee.",
         "credits": 5,
         "semester": ["Fall"],
-        "department": "",
+        "department": "LARC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53070,7 +53070,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LARC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53082,7 +53082,7 @@
         "description": "Stormwater quality and regulatory considerations. Design of distributed stormwater control measures for sustainable / low-impact development in urban and suburban settings.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "LARC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53094,7 +53094,7 @@
         "description": "Use foundational knowledge from other courses including design process, plant ID, soils, plant ecology and CAD to develop planting plans for various sites and scenarios.  Explores a range of topics including basics of planting design, design process, applied plant ecology, and technical drawing through lectures, demonstrations, studio critiques, site visits, and discussions. Course has a studio fee.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "LARC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53106,7 +53106,7 @@
         "description": "Introduction to foundational evidence-based design theories and concepts of using research in the practice of landscape architecture.  The course focuses on identifying evidence-bases, adapting these to the context of a design problem and communicating proposed solutions to clients or decision makers.  This course also serves as a preparation for students entering their capstone project to help them approach their selected project from an evidence-based design perspective.",
         "credits": 1,
         "semester": ["Fall"],
-        "department": "",
+        "department": "LARC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53118,7 +53118,7 @@
         "description": "Prepares students for an entry-level landscape architect position or for graduate school.  Students initiate a project, define the program, conduct site and user analysis, generate schematic designs, and produce grading, layout and planting plans. Projects are tailored to individual interest areas.  Industry partners are consulted for project ideas and critiques. Course has a studio fee.",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "LARC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53130,7 +53130,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "LARC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53142,7 +53142,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "LARC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53154,7 +53154,7 @@
         "description": "Basic, practical vocabulary and idiomatic expressions for beginners in the Foreign Language (e.g. French, Spanish, Chinese, Bulgarian, Hungarian) during Winter or Summer Session abroad.",
         "credits": 1,
         "semester": ["Winter"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53166,7 +53166,7 @@
         "description": "Basic, practical vocabulary and idiomatic expressions for beginners in the foreign language (e.g. French, Spanish, Chinese), and introduction to the foreign culture.",
         "credits": 2,
         "semester": ["Winter"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53178,7 +53178,7 @@
         "description": "Various modern languages outside normal departmental offerings, e.g., Korean, Modern Greek. An introduction to the language and a development of speaking, listening, reading and writing skills through the use of basic texts.",
         "credits": 4,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53190,7 +53190,7 @@
         "description": "Completion of the basic modern language. Increasing mastery of the basic skills (speaking, listening, reading and writing).",
         "credits": 4,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53202,7 +53202,7 @@
         "description": "Review of grammar, continued practice in speaking and writing, and reading texts of average difficulty.",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53214,7 +53214,7 @@
         "description": "Introduction to the study of language, literature, and the cultures that produce them. Specific subject matter varies.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53226,7 +53226,7 @@
         "description": "This course will encompass first-year seminar objectives, along with basic fundamentals of language learning.  Students will explore what it means to learn language collaboratively, and across a variety of contexts and will focus on students\u2019 own language learning and its relationship to instruction.  Students will also participate in a field experience, visiting a local dual language immersion school. An alternate assignment will be given to those student for whom this observation proves a hardship.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53238,7 +53238,7 @@
         "description": "",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53250,7 +53250,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53262,7 +53262,7 @@
         "description": "Examine the major genres of videogames produced around the world, and major critical approaches taken by academics to the study of those games. Issues for discussion may include the dominance of console platforms in some markets and PC gaming in others; ethics and violence in games; representations of gender and race; processes of immersion and identification in different game types; and the effect of increasingly realistic environments and cinematics.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53274,7 +53274,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53286,7 +53286,7 @@
         "description": "Survey of the world\u2019s languages, examining a number of important phenomena from a wide range of languages. Phenomena are both structural (e.g., word order and agreement) and societal or psychological (how multicultural societies choose a common language, the relation between language and thought).",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53298,7 +53298,7 @@
         "description": "Taught abroad in English, this course introduces students to their host culture and its history. Includes excursions to important cultural and natural sites, readings and discussion, and research on the host culture.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53310,7 +53310,7 @@
         "description": "Taught abroad in English, this course introduces students to their host culture and its history. Includes excursions to important cultural and natural sites, readings and discussion, and research on the host culture.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53322,7 +53322,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53334,7 +53334,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53346,7 +53346,7 @@
         "description": "Introduction to the political and civic cultures underpinning and supporting different political systems. Topics may vary depending on host country.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53358,7 +53358,7 @@
         "description": "Cosmological myths and heroic sagas in the literature and art of Greece and Rome. The influence of the mythology in later art and literature.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53370,7 +53370,7 @@
         "description": "Study of the works of one or more outstanding authors or of a special theme. Taught in English. Topics vary and are announced prior to the registration period.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53382,7 +53382,7 @@
         "description": "Cultural, especially cross-cultural and/or interdisciplinary studies with primary emphasis on the aesthetic context of the announced topic, e.g., Nordic Saga and Myth; Courtly Love; and the European Postwar Novel.",
         "credits": 3,
         "semester": ["Winter"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53394,7 +53394,7 @@
         "description": "Study of the works of one or more outstanding authors or of a special theme. Taught in English. See http://primus.nss.udel.edu/CoursesSearch/ for topics.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53406,7 +53406,7 @@
         "description": "Special topics in Greek and Roman culture and civilization. Particular areas and writers to be announced, e.g., ancient epic, ancient drama, Greek literature in translation.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53418,7 +53418,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53430,7 +53430,7 @@
         "description": "Study of the works of one or more outstanding authors or of a special theme. Taught in English. See http://primus.nss.udel.edu/CoursesSearch/ for topics.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53442,7 +53442,7 @@
         "description": "Study of the works of one or more outstanding authors or of a special theme. Taught in English. See http://primus.nss.udel.edu/CoursesSearch/ for topics.",
         "credits": 4,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53454,7 +53454,7 @@
         "description": "Study of the works of one or more outstanding authors or of a special theme. Taught in English. See http://primus.nss.udel.edu/CoursesSearch/ for topics.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53466,7 +53466,7 @@
         "description": "Study of the works of one or more outstanding authors or of a special theme. Taught in English. See http://primus.nss.udel.edu/CoursesSearch/ for topics.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53478,7 +53478,7 @@
         "description": "Study of the works of one or more outstanding authors or of a special theme. Taught in English.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53490,7 +53490,7 @@
         "description": "Cultural, especially cross-cultural, study with primary emphasis on the historical development of the announced area, e.g., Nature in the Ancient World, Speculative Fiction, Transformation of a Myth. See Courses Search for topics.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53502,7 +53502,7 @@
         "description": "Inquiry into Chinese films from the prewar period to the present. Bothaesthetic and technical elements of film production and reception featured.Discussion intensive.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53514,7 +53514,7 @@
         "description": "Explores special topics in Arabic literature, particular themes and writers to be announced,e.g., The Thousand and One Nights, Arab women writers, Iraqi women\u2019s fiction, war novels.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53526,7 +53526,7 @@
         "description": "To die or not to die (for your country)? This course studies fascinating topics in Israeli film, such as the construction and deconstruction of the heroes Israeli Sabra, ethic groups in Israel, and decades of dynamic change and development in Israeli society. Discussion intensive.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53538,7 +53538,7 @@
         "description": "In this course, we consider questions such as: did the Israeli kibbutz (communal living) survive the test of time? How do Arab citizens of a Jewish state perceive themselves vis a vis their Jewish counterparts? And what were the customs of Jews living in Arab countries a century ago? What changes did they undergo upon moving to Israel? Through analysis of leading Israeli authors\u2019 literary works, we explore these major themes, as they pertain to Israeli society\u2019s complex structure, from the foundation of the state until today. Taught in English.",
         "credits": 3,
         "semester": ["Fall, Winter and Spring"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53550,7 +53550,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53562,7 +53562,7 @@
         "description": "Examines Brazilian culture and history through film, film techniques and movements. Other disciplines will help provide an understanding of Brazilian film, including history, literature, gender studies, sociology, cultural studies, politics, and ethnic studies. Topics include religion, gender issues, ethnicity, migration, identity, music, and popular culture. Taught in English. Portuguese films have English subtitles.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53574,7 +53574,7 @@
         "description": "Inquiry into Japanese films from the immediate postwar period to present.Both aesthetic and technical elements of film production and receptionfeatured. Discussion intensive.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53586,7 +53586,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53598,7 +53598,7 @@
         "description": "Many factors contribute to a diverse and intriguing Israeli society. Topics include the roots of Zionism, the concept of the Israeli Sabra, the effects of the Holocaust, ethnic groups and the Arab-Israeli conflict, through history, film, literature and music.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53610,7 +53610,7 @@
         "description": "Examines Japanese videogames from both a ludological and narratological perspective. Genres studies include the JRPG, stealth action, simulation and fighting games.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53622,7 +53622,7 @@
         "description": "Explores the relationship between videogames and culture by analyzing both in-game cultural representation and the real-life economic, political and societal effects of games across Latin America.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53634,7 +53634,7 @@
         "description": "Papers and discussion by faculty members and students participating in Humanities Semester offerings. Interdisciplinary approach.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53646,7 +53646,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53658,7 +53658,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53670,7 +53670,7 @@
         "description": "Special topics in Russian and Soviet culture. Taught in English. See http://primus.nss.udel.edu/CoursesSearch/ for topics.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53682,7 +53682,7 @@
         "description": "Special topics in Japanese culture. Taught in English. See http://primus.nss.udel.edu/CoursesSearch/ for topics.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53694,7 +53694,7 @@
         "description": "Special topics in Chinese culture. Taught in English. See http://primus.nss.udel.edu/CoursesSearch/ for topics.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53706,7 +53706,7 @@
         "description": "First year interdisciplinary Honors seminar. May be team taught. Specific topics vary.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53718,7 +53718,7 @@
         "description": "Examines how languages evolve over time and how present and past languages are related to each other. Students learn techniques of historical analysis, such as the comparative method, and what is known about the historical development of major linguistic families like the Indo-European family of languages.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53730,7 +53730,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53742,7 +53742,7 @@
         "description": "This practicum course complements LLCU 422 - Language Syllabus Design. The goals of this practicum are to prepare K-12 teacher candidates with the competencies necessary for a positive teaching career, provide hands-on experience with lesson planning and instructional practices, and to prepare students for completion of the edTPA Performance Assessment. This course includes 25 hours of observations at an assigned field placement, three detailed lesson plans, a statement of teaching philosophy, a letter of introduction to be distributed to the candidate\u2019s classes during their student teaching, and two recorded microteaching demonstrations.",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53754,7 +53754,7 @@
         "description": "Examine diverse Italian authors and literary movements. Hone critical thinking skills while developing the tools necessary for perceptive literary and cultural analysis.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53766,7 +53766,7 @@
         "description": "Description, discussion and analysis of techniques pertinent to the teaching and learning of foreign languages. Emphasis on contributions of contemporary linguistic science. Includes demonstrations and practical exercises.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53778,7 +53778,7 @@
         "description": "Study of approaches to language syllabus design and materials development, including grammatically sequenced, situational, notional-functional and task-based approaches. Topics: materials development, textbook evaluation and adaptation, design and implementation of learning units for second-language special purpose and bilingual learners. Includes faculty supervised 25 hours of observation in high school classrooms.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53790,7 +53790,7 @@
         "description": "Study of the principles and techniques of second-language testing, including measurement of the four skills and of communicative competence. Bilingual measures. Practice in item construction and analysis.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53802,7 +53802,7 @@
         "description": "Study of the practical and theoretical aspects of using technology in second language learning. It is open to teachers of all foreign languages and will be taught in English.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53814,7 +53814,7 @@
         "description": "Familiarizes students with appropriate teaching methods and techniques for the elementary foreign language classroom. Includes demonstrations by experienced FLES teachers, peer-analysis of video-taped model lessons prepared by participants, and an introduction to testing, materials and course design.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53826,7 +53826,7 @@
         "description": "Study diverse elements of Italian culture and civilization, while enhancing writing skills and cultural awareness.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53838,7 +53838,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53850,7 +53850,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53862,7 +53862,7 @@
         "description": "Overview of literary criticism with special emphasis on criticism important to French, Spanish, Italian, Russian, and German literatures. May be organized as an historical survey or as a survey of a particular period, including the contemporary period.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53874,7 +53874,7 @@
         "description": "A seminar entailing an intense multi-cultural/global-culture immersion via the medium of film. Comprises a synthetic, reflective analysis of international films and various ethical, social, and political issues they address.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53886,7 +53886,7 @@
         "description": "This course, which accompanies the student teaching placement, constitutes a forum in which student teachers reflect on their experiences, interact with peers and supervisors, and complete teaching portfolios in which they demonstrate their ability to effect and assess student learning and to cultivate professional partnerships.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53898,7 +53898,7 @@
         "description": "A capstone seminar entailing an intense multi-cultural/global-culture immersion via the medium of literature. Comprises a synthetic, reflective analysis of international works of literature and the various ethical, social, and political issues they address.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53910,7 +53910,7 @@
         "description": "Provides the tools to assess the expertise developed in a chosen major, quantify and describe the skills developed and present to a dynamic, changing professional environment. Use digital media to a create well-designed, value-oriented self-presentation (portfolio, resume, writing sample); explore relevant professional options; prepare for graduate/professional study; classify proficiency in chosen language(s) through approved testing methods.",
         "credits": 1,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53922,7 +53922,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53934,7 +53934,7 @@
         "description": "Examines how languages evolve over time and how present and past languages are related to each other. Students learn techniques of historical analysis, such as the comparative method, and what is known about the historical development of major linguistic families like the Indo-European family of languages.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53946,7 +53946,7 @@
         "description": "Focuses on pedagogical issues specific to teaching Chinese. Issues include, but not limited to: Chinese literacy development, Chinese tone acquisition among second language learners; methods of teaching Chinese as a foreign language; Chinese pedagogical grammar; teaching culture in CFL classroom, Early Learners of Chinese, etc.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53958,7 +53958,7 @@
         "description": "Dante\u2019s masterpiece, The Divine Comedy, offers an encyclopedic window onto the medieval world. Read selections from Inferno, Purgatory, and Paradise that bring into focus the history and culture of Dante\u2019s age. Readings and discussion touch on areas including historical and politcal context, influence of non-Christian civilizations on Dante\u2019s thought, medieval views on politics and family, and the role and depiction of women. In addition to our close readings of the poem, we examine other textual and visual representations and interpretations, ranging from illuminated manuscripts to recent novels and films, in order to consider the \u201cafterlife\u201d of Dante\u2019s work and its resonances today.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53970,7 +53970,7 @@
         "description": "This practicum course complements LING 622 - Language Syllabus Design. The goals of this practicum are to prepare K-12 teacher candidates with the competencies necessary for a positive teaching career, provide hands-on experience with lesson planning and instructional practices, and to prepare students for completion of the edTPA Performance Assessment. This course includes 25 hours of observations at an assigned field placement, three detailed lesson plans, a statement of teaching philosophy, a letter of introduction to be distributed to the candidate\u2019s classes during their student teaching, two recorded microteaching demonstrations, and a presentation and research paper.",
         "credits": 1,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53982,7 +53982,7 @@
         "description": "Examine diverse Italian authors and literary movements. Hone critical thinking skills while developing the tools necessary for perceptive literary and cultural analysis.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -53994,7 +53994,7 @@
         "description": "Description, discussion and analysis of techniques pertinent to the teaching and learning of foreign languages. Emphasis on contributions of contemporary linguistic science. Includes demonstrations and practical exercises.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54006,7 +54006,7 @@
         "description": "Study of approaches to language syllabus design and materials development, including grammatically sequenced, situational, notional-functional, and taskbased approaches. Topics: materials development, textbook evaluation and adaptation, design and implementation of learning units for second-language special purpose and bilingual learners.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54018,7 +54018,7 @@
         "description": "Current perspectives on foreign language instruction and extensive hands-one experience with the implementation of effective language teaching strategies. Emphasis given to the enhancement of students\u2019 proficiency in class planning, syllabus design and materials preparation.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54030,7 +54030,7 @@
         "description": "Study of the principles and techniques of second-language testing, including measurement of the four skills and of communicative competence. Bilingual measures. Practice in item construction and analysis.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54042,7 +54042,7 @@
         "description": "Study of the practical and theoretical aspects of using technology in second language learning. It is open to teachers of all foreign languages and will be taught in English.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54054,7 +54054,7 @@
         "description": "This course is an in-depth exploration of topics pertaining to the acquisition of a second or additional language. Class readings and assignments will provide students with an introduction to quantitative and qualitative research methods in Applied Linguistics. Emphasis is given to the development of independent study, problem-solving, research, reading, writing and oral presentation skills.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54066,7 +54066,7 @@
         "description": "Appropriate teaching methods and techniques for the elementary foreign language classroom. Includes demonstrations by experienced FLES teachers, peer-analysis of video-taped model lessons prepared by participants, and an introduction to testing, materials and course design.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54078,7 +54078,7 @@
         "description": "Study diverse elements of Italian cultural and civilization, while enhancing writing skills and cultural awareness.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54090,7 +54090,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54102,7 +54102,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54114,7 +54114,7 @@
         "description": "Critical reading is an essential life skill that illuminates the underlying structures, assumptions, and biases within a text. It can be applied not only to literary texts, but also to film, popular media, journalism, scientific discourse, the visual arts, and many other areas of human endeavor. This course helps students develop robust critical reading skills through the application of key critical approaches in textual analysis. Readings will be in English translation from the many languages and cultures represented by LLCU.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54126,7 +54126,7 @@
         "description": "Explores the history, philosophy, theory, institution, and practice of translation both as a trans-linguistic art and as a craft. It provides a historical overview of the genre of translation theory, discussing a diverse range of ideas, philosophies, and critical issues in translation theory, translation studies, and translation practice.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54138,7 +54138,7 @@
         "description": "Develop technical writing skills that draw on a variety of styles, and for a number of purposes. Students will develop several techniques for evaluating and presenting data, as well as effective letters and technical proposals.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54150,7 +54150,7 @@
         "description": "A systematic comparison of the Chinese and English languages both from a macro and micro perspective. The course objective is to provide a better understanding of the syntactic and semantic structures of the two languages to enable students to handle more competently problems often encountered in the translation process.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54162,7 +54162,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54174,7 +54174,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "LLCU",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54186,7 +54186,7 @@
         "description": "Prepares students to read ancient Roman literary works in the original language. Emphasizes building a basic vocabulary and acquiring essential grammar. Discussion of Roman culture and civilization.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "LATN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54198,7 +54198,7 @@
         "description": "Completion of elementary Latin.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "LATN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54210,7 +54210,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LATN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54222,7 +54222,7 @@
         "description": "Introduction to reading Latin literature in the original language, focusing on the philosophical and forensic works of Cicero, the historical writings of Livy, and the letters of Pliny.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "LATN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54234,7 +54234,7 @@
         "description": "Readings, in the original language, will be drawn from Vergil\u2019s Aeneid as well as from the works of Ovid and Catullus. Attention will be given not only to review of grammar but also to the socio-political circumstances under which these works were composed.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "LATN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54246,7 +54246,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "LATN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54258,7 +54258,7 @@
         "description": "Focuses on the works (in the original language) of one or more prose authors with particular attention to interpretative issues such as themes and contemporary intellectual and cultural milieu. Readings drawn from the philosophical, historical, and oratorical works of authors such as Tacitus, Pliny the Elder, Pliny the Younger, Caesar, Cicero, Sallust, and Seneca in rotation or in combination.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "LATN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54270,7 +54270,7 @@
         "description": "Focus on the works (in the original Latin) of one or more poets with particular attention to interpretive issues such as themes and contemporary intellectual and cultural milieu. Readings will be drawn from authors such as Lucretius, Tibullus, Propertius, Ovid, Virgil, Ennius, Catullus, Plautus, Terence, and Seneca in rotation and/or in combination.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "LATN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54282,7 +54282,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "LATN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54294,7 +54294,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "LATN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54306,7 +54306,7 @@
         "description": "Focuses on the works (in the original language) of one or more prose authors with particular attention to interpretative issues such as themes and contemporary intellectual and cultural milieu. Readings drawn from the philosophical, historical, and oratorical works of authors such as Tacitus, Pliny the Elder, Pliny the Younger, Caesar, Cicero, Sallust, and Seneca in rotation or in combination.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "LATN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54318,7 +54318,7 @@
         "description": "Focus on the works (in the original Latin) of one or more poets with particular attention to interpretive issues such as themes and contemporary intellectual and cultural milieu. Readings will be drawn from work of poets such as Lucretius, Virgil, Terence, Plautus, Catullus, Ennius, Propertius, Seneca, and Tibullus in rotation and/or combination.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "LATN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54330,7 +54330,7 @@
         "description": "Readings in the lyric poetry of Catullus and Horace.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LATN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54342,7 +54342,7 @@
         "description": "",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "LATN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54354,7 +54354,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "LATN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54366,7 +54366,7 @@
         "description": "Focuses on the works (in the original language) of one or more prose authors with particular attention to interpretative issues such as themes and contemporary intellectual and cultural milieu. Readings drawn from the philosophical, historical, and oratorical works of authors such as Tacitus, Pliny the Elder, Pliny the Younger, Caesar, Cicero, Sallust, and Seneca in rotation or in combination.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LATN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54378,7 +54378,7 @@
         "description": "Focuses on the works (in the original language) of one or more Latin poets with particular attention to interpretative issues such as themes and contemporary intellectual and cultural milieu. Readings drawn from the works of authors such as Ennius, Catullus, Vergil, Horace, Ovid, and Propertius in rotation or in combination.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LATN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54390,7 +54390,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "LATN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54402,7 +54402,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "LAMS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54414,7 +54414,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "LAMS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54426,7 +54426,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "LAMS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54438,7 +54438,7 @@
         "description": "On-the-job experience and explore potential occupational areas at associations, non-governmental organizations, foundations, or other venues connected to Latin American history, culture, politics, and society, under joint supervision of Latin American and Iberian Studies Program and sponsoring organization. Completion of journal of activities and/or final academic project or paper.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LAMS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54450,7 +54450,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "LAMS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54462,7 +54462,7 @@
         "description": "Through intensive research and study of texts and artifacts on a theme, students will integrate and focus their knowledge of Spanish and Latin American literatures and/or cultures across several disciplines and periods. Taught in Spanish.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "LAMS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54474,7 +54474,7 @@
         "description": "Introduces students to the challenges of leadership. An experiential practice-based change project will give students hands-on experience in applying the skills and practices of effective leadership to create positive change.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "LEAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54486,7 +54486,7 @@
         "description": "Understanding a variety of issues and problems that impact quality of life of individuals and groups and demand effective leadership in global contexts.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "LEAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54498,7 +54498,7 @@
         "description": "Overview of leadership as an academic discipline and a field of practice. Topics include exploration of career paths, resources for academic success, and opportunities for leadership development. Emphasis on individual and team skills for problem solving.",
         "credits": 1,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "LEAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54510,7 +54510,7 @@
         "description": "An overview of the concepts and skills in personal financial management, including an understanding of how leaders impact the financial environment of individuals, families and communities. Topics include developing financial goals, budgeting, debt, savings, retirement planning and investing in insurance, stocks, bonds, and mutual funds.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "LEAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54522,7 +54522,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LEAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54534,7 +54534,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "LEAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54546,7 +54546,7 @@
         "description": "Introduces students to the challenge of leadership in an increasingly complex, global, and fast-paced world. Provides theoretical bases of leadership while encouraging students to develop their own leadership potential.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "LEAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54558,7 +54558,7 @@
         "description": "Methods for delivering leadership messages and for developing strategic presentations, with an emphasis on purpose, vision, audience and formats.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "LEAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54570,7 +54570,7 @@
         "description": "You can\u2019t lead others until you begin the lifetime, rhythmic process of leading yourself. While this seems intuitive and easy, experience teaches that it is a difficult, ever-lasting challenge. Focuses on developing the mindset, habits, character ethic and capabilities needed to continuously improve your life and the lives of those you care most about. Great questions, great thinking and thoughtful reflection are emphasized.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "LEAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54582,7 +54582,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LEAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54594,7 +54594,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "LEAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54606,7 +54606,7 @@
         "description": "Undergraduate research conducted on or off campus, out of class, and under the supervision of a LEAD faculty member. Students must keep a log of activities, meet regularly with their faculty sponsor, and submit a final report. One credit requires a minimum of 40 hours of research.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LEAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54618,7 +54618,7 @@
         "description": "Provides students with the theoretical bases of leadership, creativity, and innovation that inform the effective practice of leadership.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "LEAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54630,7 +54630,7 @@
         "description": "This lecture series focuses on various thematic issues in political communication and campaign politics.",
         "credits": 1,
         "semester": ["Fall"],
-        "department": "",
+        "department": "LEAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54642,7 +54642,7 @@
         "description": "An off-campus supervised and coordinated field study in selected agencies and organizations.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "LEAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54654,7 +54654,7 @@
         "description": "The application of different decision-making tools and models for making effective decisions in a leadership context.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "LEAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54666,7 +54666,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "LEAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54678,7 +54678,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "LEAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54690,7 +54690,7 @@
         "description": "Practical teaching experience. Students participate and assist in instruction of an undergraduate LEAD course. Students must work 28 hours for each credit hour.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LEAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54702,7 +54702,7 @@
         "description": "The class is a one credit course designed to address leadership issues and organizational development as well as their practical applications to fraternity and sorority presidents.  Particular focus will be given to understanding leadership as a process rather than a product.  The course is created to enhance the leadership skills of chapter presidents and to help presidents better understand the unique nature of their leadership position.  A high degree of critical thinking and class participation are foundations for this course.",
         "credits": 1,
         "semester": ["Spring"],
-        "department": "",
+        "department": "LEAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54714,7 +54714,7 @@
         "description": "Direct action organizing, coalition building, consensus organizing as strategies for mobilizing people to create positive change. Emphasis on social responsibility, sustainability, collaborations, and multisector interactions.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "LEAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54726,7 +54726,7 @@
         "description": "Building the capability of organizations to develop and operationalize leadership capacity at all levels of an organization. Concepts and theories of organizational effectiveness studied relate to impacts of structure, culture, and other characteristics upon an organization\u2019s ability to unleash leadership potential.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "LEAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54738,7 +54738,7 @@
         "description": "Topics relating to aspects of leadership. Themes in leadership dynamics will be explored.",
         "credits": 2,
         "semester": ["Spring"],
-        "department": "",
+        "department": "LEAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54750,7 +54750,7 @@
         "description": "Offers an additional and advanced opportunity to delve into nonprofit management and leadership in the context of the current sociopolitical and economic environment. Expands knowledge and understanding of the issues confronting the sector as a whole and builds analytic and problem-solving skills.",
         "credits": 3,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "LEAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54762,7 +54762,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "LEAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54774,7 +54774,7 @@
         "description": "",
         "credits": 2,
         "semester": ["Verify offering with Dept"],
-        "department": "",
+        "department": "LEAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54786,7 +54786,7 @@
         "description": "Undergraduate research conducted on or off campus, out of class, and under the supervision of a LEAD faculty member. Students must keep a log of activities, meet regularly with their faculty sponsor, and submit a final report. One credit requires a minimum of 40 hours of research.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "LEAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -54798,7 +54798,7 @@
         "description": "Engage in a project addressing \u201creal world\u201d leadership challenges. Successful project completion requires integration, synthesis and reflection upon knowledge and skills acquired in previous courses. Specific projects vary by semester.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "LEAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
