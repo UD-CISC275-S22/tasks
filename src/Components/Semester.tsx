@@ -65,7 +65,8 @@ let High_Plan = High();
 let Bio_Plan = Bio();
 
 //csv import libraries - Malika
-//run npm i papaparse and npm install --save-dev @types/papaparse
+//run npm i papaparse
+//npm install --save-dev @types/papaparse
 import Papa from "papaparse";
 /* ----------------------------------------------------------------------------------------------------- */
 /*EVERYONE PLS READ THIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
