@@ -1579,7 +1579,7 @@
         "credits": 3,
         "semester": ["Fall"],
         "department": "AFRA",
-        "prereq": [""],
+        "prereq": ["ENGL110"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -1867,7 +1867,7 @@
         "credits": 3,
         "semester": [""],
         "department": "AFRA",
-        "prereq": [""],
+        "prereq": ["HIST105"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -1891,7 +1891,7 @@
         "credits": 3,
         "semester": [""],
         "department": "AFRA",
-        "prereq": [""],
+        "prereq": ["ENGL110"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -2131,7 +2131,7 @@
         "credits": 3,
         "semester": [""],
         "department": "AFRA",
-        "prereq": [""],
+        "prereq": ["ENGL110"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -2203,7 +2203,7 @@
         "credits": 3,
         "semester": [""],
         "department": "AFRA",
-        "prereq": [""],
+        "prereq": ["ENGL110"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -2215,7 +2215,7 @@
         "credits": 3,
         "semester": [""],
         "department": "AFRA",
-        "prereq": [""],
+        "prereq": ["SOCI201"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -2467,7 +2467,7 @@
         "credits": 3,
         "semester": [""],
         "department": "AFRA",
-        "prereq": [""],
+        "prereq": ["Grades of C- or better in PSYC207, PSYC209"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -2479,7 +2479,7 @@
         "credits": 3,
         "semester": ["Fall"],
         "department": "AFRA",
-        "prereq": [""],
+        "prereq": ["SOCI201"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -2491,7 +2491,7 @@
         "credits": 3,
         "semester": [""],
         "department": "AFRA",
-        "prereq": [""],
+        "prereq": ["SOCI201"],
         "coreq": [""],
         "requirements": [""]
     },
