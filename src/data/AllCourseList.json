@@ -43,7 +43,7 @@
         "credits": 3,
         "semester": ["Fall, Winter, Spring, Summer"],
         "department": "",
-        "prereq": [""],
+        "prereq": ["ACCT207"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -79,7 +79,7 @@
         "credits": 3,
         "semester": ["Fall and Spring"],
         "department": "",
-        "prereq": [""],
+        "prereq": ["ACCT208, MISY160 or CISC101"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -91,7 +91,7 @@
         "credits": 3,
         "semester": [""],
         "department": "",
-        "prereq": [""],
+        "prereq": ["MISY160, MISY250"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -103,7 +103,7 @@
         "credits": 3,
         "semester": [""],
         "department": "",
-        "prereq": [""],
+        "prereq": ["ACCT200 or ACCT207"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -115,7 +115,7 @@
         "credits": 3,
         "semester": ["Fall, Winter and Spring"],
         "department": "",
-        "prereq": [""],
+        "prereq": ["ACCT207, ACCT208"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -127,7 +127,7 @@
         "credits": 3,
         "semester": ["Fall and Spring"],
         "department": "",
-        "prereq": [""],
+        "prereq": ["ACCT315"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -139,7 +139,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "",
-        "prereq": [""],
+        "prereq": ["ACCT315"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -151,7 +151,7 @@
         "credits": 3,
         "semester": ["Fall and Spring"],
         "department": "",
-        "prereq": [""],
+        "prereq": ["ACCT208"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -175,7 +175,7 @@
         "credits": 3,
         "semester": ["Fall and Spring"],
         "department": "",
-        "prereq": [""],
+        "prereq": ["ACCT350"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -211,7 +211,7 @@
         "credits": 3,
         "semester": ["Fall and Spring"],
         "department": "",
-        "prereq": [""],
+        "prereq": ["ACCT315, ACCT327"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -247,7 +247,7 @@
         "credits": 3,
         "semester": ["Verify offering with Dept"],
         "department": "",
-        "prereq": [""],
+        "prereq": ["ACCT207"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -259,7 +259,7 @@
         "credits": 3,
         "semester": ["Fall and Spring"],
         "department": "",
-        "prereq": [""],
+        "prereq": ["ACCT302 or MISY330"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -283,7 +283,7 @@
         "credits": 3,
         "semester": ["Fall and Spring"],
         "department": "",
-        "prereq": [""],
+        "prereq": ["ACCT316"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -295,7 +295,7 @@
         "credits": 3,
         "semester": ["Fall and Spring"],
         "department": "",
-        "prereq": [""],
+        "prereq": ["ACCT315"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -307,7 +307,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "",
-        "prereq": [""],
+        "prereq": ["ACCT413"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -319,7 +319,7 @@
         "credits": 3,
         "semester": ["Fall and Spring"],
         "department": "",
-        "prereq": [""],
+        "prereq": ["ACCT316"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -331,7 +331,7 @@
         "credits": 3,
         "semester": [""],
         "department": "",
-        "prereq": [""],
+        "prereq": ["ACCT313 or ACCT413, ACCT352 or ACCT350/ACCT450 "],
         "coreq": [""],
         "requirements": [""]
     },
@@ -343,7 +343,7 @@
         "credits": 3,
         "semester": ["Fall and Spring"],
         "department": "",
-        "prereq": [""],
+        "prereq": ["ACCT316"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -355,7 +355,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "",
-        "prereq": [""],
+        "prereq": ["ACCT350 or ACCT352"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -379,7 +379,7 @@
         "credits": 3,
         "semester": ["Fall and Spring"],
         "department": "",
-        "prereq": [""],
+        "prereq": ["ACCT302, ACCT316"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -403,7 +403,7 @@
         "credits": 3,
         "semester": ["Fall"],
         "department": "",
-        "prereq": [""],
+        "prereq": ["ACCT352 or ACCT350"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -451,7 +451,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "",
-        "prereq": [""],
+        "prereq": ["ACCT207, ACCT315"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -499,7 +499,7 @@
         "credits": 3,
         "semester": ["Fall and Spring"],
         "department": "",
-        "prereq": [""],
+        "prereq": ["ACCT620, FINC650"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -547,7 +547,7 @@
         "credits": 3,
         "semester": [""],
         "department": "",
-        "prereq": [""],
+        "prereq": ["ACCT604"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -559,7 +559,7 @@
         "credits": 2,
         "semester": [""],
         "department": "",
-        "prereq": [""],
+        "prereq": ["ACCT207"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -571,7 +571,7 @@
         "credits": 2,
         "semester": [""],
         "department": "",
-        "prereq": [""],
+        "prereq": ["ACCT610"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -583,7 +583,7 @@
         "credits": 2,
         "semester": [""],
         "department": "",
-        "prereq": [""],
+        "prereq": ["ACCT610"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -608,7 +608,7 @@
         "semester": ["Spring"],
         "department": "",
         "prereq": [""],
-        "coreq": [""],
+        "coreq": ["ACCT413"],
         "requirements": [""]
     },
     {
@@ -619,7 +619,7 @@
         "credits": 3,
         "semester": [""],
         "department": "",
-        "prereq": [""],
+        "prereq": ["ACCT612"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -631,7 +631,7 @@
         "credits": 3,
         "semester": [""],
         "department": "",
-        "prereq": [""],
+        "prereq": ["ACCT612"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -643,7 +643,7 @@
         "credits": 3,
         "semester": [""],
         "department": "",
-        "prereq": [""],
+        "prereq": ["ACCT350 or ACCT352"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -655,7 +655,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "",
-        "prereq": [""],
+        "prereq": ["ACCT316"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -667,7 +667,7 @@
         "credits": 3,
         "semester": ["Fall and Spring"],
         "department": "",
-        "prereq": [""],
+        "prereq": ["ACCT600 or ACCT316"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -703,7 +703,7 @@
         "credits": 3,
         "semester": [""],
         "department": "",
-        "prereq": [""],
+        "prereq": ["ACCT207"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -751,7 +751,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "",
-        "prereq": [""],
+        "prereq": ["ACCT620 or ACCT316"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -763,7 +763,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "",
-        "prereq": [""],
+        "prereq": ["ACCT604"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -775,7 +775,7 @@
         "credits": 3,
         "semester": ["Fall and Spring"],
         "department": "",
-        "prereq": [""],
+        "prereq": ["ACCT316"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -787,7 +787,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "",
-        "prereq": [""],
+        "prereq": ["ACCT417"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -799,7 +799,7 @@
         "credits": 3,
         "semester": [""],
         "department": "",
-        "prereq": [""],
+        "prereq": ["ACCT316, ACCT327"],
         "coreq": [""],
         "requirements": [""]
     },
