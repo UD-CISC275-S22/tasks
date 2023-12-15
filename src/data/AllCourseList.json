@@ -87390,7 +87390,7 @@
         "description": "Fundamentals of musculoskeletal ultrasound imaging of the trunk and major peripheral joints are covered through lectures, live demonstrations, and hands-on practice with instructor feedback. Applications of ultrasound imaging in healthcare practice and research are discussed and demonstrated. This course will formally meet at least 3 hours/week in the evening and require independent imaging practice and project-work outside of class.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "BMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87402,7 +87402,7 @@
         "description": "This course provides the student with the opportunity to actively practice and develop the essential skills necessary for effectively summarizing and critiquing original research articles in the broad field of movement science. The course takes the format of a \u201cjournal club\u201d, where students present and discuss assigned readings, with the objective to facilitate the development of new skills in review, critical appraisal, interpretation, and assessment of the scientific literature through active participation in group discussions in class. Weekly written assignments reinforce development of these skills. Importantly, the purpose of the course is not to deliver content related to any specialized field of movement science, but rather, to examine a wide array of scientific literature to promote and encourage the development of critical appraisal skills necessary for any scientist.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "BMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87414,7 +87414,7 @@
         "description": "The goal is for students to acquire a hands-on knowledge of signal processing techniques relevant to their day work in the research lab. We will first revisit some of the underlying mathematical tools with a focus on refreshing how to use them and forming an intuitive understanding of what they do and mean. Then we will introduce the main concepts and techniques of processing measured signals, including dealing with noise, estimating power spectra, extracting linear relationships and quantifying the relationship of two signals to each other. We will finish with a Semesterterproject, where students apply the acquired skills to a problem from their own research. The course makes heavy use of MATLAB to process data and it is expected that students have decent knowledge of the basics of MATLAB or a similar language, such as acquired in the class \u201cIntroduction to Programming in MATLAB\u201d.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "BMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87426,7 +87426,7 @@
         "description": "This course aims to introduce students to Visual3D - a computation tools commonly used in biomechanics research. Using motion capture data as a framework, key concepts covered by this course include model building, event identification and metric quantification, kinematic and kinetic data extraction, scripting and automation, and data aggregation and file management. A key focus of this class will be teaching the underlying mathematical concepts and generalized approaches employed by Visual 3D, with a goal of preparing students to collect, process, and troubleshoot traditional biomechanics laboratory data.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "BMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87438,7 +87438,7 @@
         "description": "Students will learn how to automate part of their data processing and analysis by writing programs in Matlab. We will study techniques for handling, organizing, manipulating and visualizing data.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "BMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87450,7 +87450,7 @@
         "description": "Examines theoretical, methodological and empirical issues required for understanding of control and coordination of human movement. Readings and group discussion of implication of issues raised in the literature. Development of proposal to study aspect of motor behavior.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87462,7 +87462,7 @@
         "description": "Students present and lead discussion of influential articles in the field of motor systems neuroscience, with an emphasis on supraspinal control of movement.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87474,7 +87474,7 @@
         "description": "This course will introduce students to the basic principles of neuroimaging methods as applied to human subjects research. A special focus will be placed on fundamentals of magnetic resonance imaging (MRI) physics including origins of the MRI signal and image formation, experimental design and data analysis, as well as on the applications of functional and structural MRI techniques in human motor controls studies and in the study of movement disorders. The course is a mixture of lectures, discussion of assigned readings and contemporary issues in MRI research, and hands-on lab sessions. During the labs, students will learn how to use AFNI and other imaging software in order to analyze functional and structural MRI data.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "BMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87486,7 +87486,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "BMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87498,7 +87498,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "BMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87510,7 +87510,7 @@
         "description": "Mathematical techniques for research in biomechanics and related fields, with emphasis on methods useful for biomedical signal processing. Topics include Fourier analysis, matrix algebra, and signal processing.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "BMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87522,7 +87522,7 @@
         "description": "The capstone project gives the candidate the opportunity to synthesize and apply the skills developed in the MA program, and to demonstrate mastery and knowledge and skills expected of BIOMS MA graduate.",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "BMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87534,7 +87534,7 @@
         "description": "",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "BMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87546,7 +87546,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "BMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87558,7 +87558,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "BMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87570,7 +87570,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "BMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87582,7 +87582,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "BMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87594,7 +87594,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "BMSC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87606,7 +87606,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "BMBA",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87618,7 +87618,7 @@
         "description": "Development of decorative arts, painting and architecture in America. Principles of connoisseurship and studies of American and imported objects of art. Collections of the Winterthur Museum.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "EAMC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87630,7 +87630,7 @@
         "description": "American domestic environments and decorative arts within social and economic contexts of 17th and 18th centuries. Critically assesses how objects contribute to the study of everyday life in colonial America.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "EAMC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87642,7 +87642,7 @@
         "description": "Landmark works and recent theoretical approaches to the understanding and interpretation of the man-made environment. Readings draw from a variety of disciplinary frameworks including art history, anthropology, historical archeology, cultural geography, sociology and history.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "EAMC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87654,7 +87654,7 @@
         "description": "Studies major themes in American material culture of the 17th, 18th or 19thcenturies. Topics vary.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "EAMC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87666,7 +87666,7 @@
         "description": "Examines influence of British Design History on global culture, beginning with destruction of the monasteries and continuing to the beginning of the Great Depression. During this era, Britain became a world power. It made lasting contributions to architecture, art, landscape design, decorative arts, industrialization, and world navigation that were disseminated through exports, emigrating craftsmen, and design books. Course begins at Winterthur Museum and includes two weeks of field-based learning in Great Britain.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "EAMC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87678,7 +87678,7 @@
         "description": "The course examines how the world of artisans and craftspeople evolved from the era of colonial British America to the 20th century. The course merges elements of art, business, labor, social and technological history and a close study of materials. Students will be working in the collections of the Winterthur Museum throughout the course, wherever possible with original objects and documents. Students will also be learning by doing in order to better understand the embodied dimensions of skill.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "EAMC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87690,7 +87690,7 @@
         "description": "Introduces graduate students to the theories and practices of material culture studies. Explores the principles and theories that inform our investigation; they include (but are not limited to) material concepts; social life of things; modes of object analysis; methodologies and their application; objects as word and image; gendered objects; technology and manufactured things; lived and built environments.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "EAMC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87702,7 +87702,7 @@
         "description": "Practicum at Winterthur in exhibiting &amp; interpreting American material culture in a global context, centering on objects selected from Winterthur collections. Topics include: exhibition preparation, installation, programming, fundraising, marketing.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "EAMC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87714,7 +87714,7 @@
         "description": "Intensive field-based study of American material culture in selected regional and/or urban locations. One week of travel and on-site field study at historic institutions, museums, collections, vernacular landscapes, and urban environments. Expectations include short readings and writing.",
         "credits": 0,
         "semester": ["Winter and Summer"],
-        "department": "",
+        "department": "EAMC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87726,7 +87726,7 @@
         "description": "Introduction to material culture and decorative arts study at Winterthur Museum, Garden, &amp; Library and University of Delaware. Principles of connoisseurship, public engagement, and digital scholarship.",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "EAMC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87738,7 +87738,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "EAMC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87750,7 +87750,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "EAMC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87762,7 +87762,7 @@
         "description": "Furniture with one additional subject within the decorative arts to be presented by a specialist on the Winterthur Museum staff. Emphasis on close analytical examination of objects stressing identification and evaluation.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "EAMC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87774,7 +87774,7 @@
         "description": "Three subject areas within the decorative arts, each presented by a specialist on the Winterthur Museum staff. Emphasis on close analytical examination of objects stressing identification and evaluation.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "EAMC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87786,7 +87786,7 @@
         "description": "One or two subject areas within the decorative arts in which students work closely with a specialist on the Winterthur faculty. Emphasis on close analytical examination of objects stressing identification and evaluation.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "EAMC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87798,7 +87798,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "EAMC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87810,7 +87810,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "EAMC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87822,7 +87822,7 @@
         "description": "",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "EAMC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87834,7 +87834,7 @@
         "description": "Students explore 18th- through 20th-century American interior architecture and design through close analysis of the museum and library collections at Winterthur Museum, review of pertinent historical scholarship, and field studies.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "EAMC",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87846,7 +87846,7 @@
         "description": "In this first required course of the MA in STEM Education, teacher candidates will consider issues related to the equitable teaching of STEM at the middle and high school (secondary) levels in diverse settings. They will study the academic standards and practices of science and math teaching and how they intersect and overlap. They will begin to develop a philosophy of education for the teaching of STEM and plan for their personal development as secondary teachers.",
         "credits": 3,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "SMED",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87858,7 +87858,7 @@
         "description": "In this course, teacher candidates will learn about theories of adolescent development within various cultural contexts. They will learn that classroom management involves more than simply controlling behavior. Effective teachers plan age appropriate, relevant and respectful learning experiences that inspire engagement and attention to the tasks of learning. They see their students as capable human beings who bring reservoirs of knowledge and talent. They build caring communities in which students are motivated to work together and master complex STEM curriculum.",
         "credits": 3,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "SMED",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87870,7 +87870,7 @@
         "description": "In this course, teacher candidates will learn to develop and use a range of inclusive assessments that align with STEM discipline content standards. They will learn to identify the characteristics of assessments that are fair, unbiased, and allow for reliable outcomes and valid interpretations of those outcomes. They will develop the skills to provide students with formative feedback and how to guide students in self-evaluation and goal setting. In addition, teacher candidates will learn how to make instructional decisions\u2013independently and in collaboration with their colleagues\u2013informed by the data revealed from annual state, periodic district benchmark and their own ongoing classroom-level testing.",
         "credits": 4,
         "semester": ["Summer"],
-        "department": "",
+        "department": "SMED",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87882,7 +87882,7 @@
         "description": "In this require course for the MA in STEM Education, teacher candidates will study the essentials of planning instruction that will meet the needs of all the students in their inclusive classrooms using the principles of backward design and universal design for learning. They will practice unpacking math and science standards and creating measurable objectives that are aligned with assessments. As a final project, they will conceive and develop a unit of instruction and teach one lesson from it to the students in the class. They will receive detailed peer and teacher feedback on the demonstration.",
         "credits": 4,
         "semester": ["Summer"],
-        "department": "",
+        "department": "SMED",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87894,7 +87894,7 @@
         "description": "In this course, teacher candidates will be placed in a public school internshio and assigned to a secondary teacher for the fall Semesterterfor mentorship. Schedules will follow the school\u2019s both in hours and days.",
         "credits": 4,
         "semester": ["Fall"],
-        "department": "",
+        "department": "SMED",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87906,7 +87906,7 @@
         "description": "In this course, teacher candidates will continue in their fall internship placements in a public school assigned to a secondary teacher for the fall Semesterterfor mentorship. Schedules will follow the school\u2019s both in hours and days.",
         "credits": 4,
         "semester": ["Spring"],
-        "department": "",
+        "department": "SMED",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87918,7 +87918,7 @@
         "description": "The focus of this required course for the MA STEM in Education will be on learning to teach through experimentation and application of theory to practice. The fall field internship placement will serve as the laboratory setting and students will complete some assignments that require practical application during the field placement. It is the STEM teacher candidate\u2019s space for reflection on their teaching practice and as such is a necessary companion to the field placement.",
         "credits": 4,
         "semester": ["Fall"],
-        "department": "",
+        "department": "SMED",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87930,7 +87930,7 @@
         "description": "The course, required for the proposed MA in STEM Education,will support the spring internship experience and the completion of teacher certification requirements. Course participants will engage in reflection of their teaching and discussions of practice using video clips and student work samples, teaching, co-teaching, lesson planning, instruction, and assessment. The focus is on practice teaching and preparation to become certified to teach.",
         "credits": 4,
         "semester": ["Spring"],
-        "department": "",
+        "department": "SMED",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87942,7 +87942,7 @@
         "description": "This is a required course of the MA in STEM Education non-certification program. The purpose of the independent study is to provide an opportunity for the graduate student to explore an idea, contribute to research, or develop a project under the guidance of a faculty member.",
         "credits": 5,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "SMED",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87954,7 +87954,7 @@
         "description": "Explores and evaluates the role of information in our society and the range of reference materials supporting the school library media program. Includes the use of print and electronic systems, reference procedures, and instructional role of information in the school curriculum.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "EDLM",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87966,7 +87966,7 @@
         "description": "Explores and evaluates standardized cataloging and classification systems with special emphasis on the organization of the school library media center. Topics include: Anglo-American Cataloging Rules; Library of Congress Subject Headings; and Dewey Decimal Classification.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "EDLM",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87978,7 +87978,7 @@
         "description": "Explores and evaluates administration and management of school library media center. Topics include: planning and evaluation; policy making; personnel; budget; facilities; standards; research trends in area.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "EDLM",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -87990,7 +87990,7 @@
         "description": "Explores the role of the school library media program in meeting information literacy and other education standards. Topics include information literacy, state education standards, advocacy, instructional technology and collaboration.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "EDLM",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88002,7 +88002,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "EDLM",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
