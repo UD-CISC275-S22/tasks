@@ -17,23 +17,23 @@ export function SysNet(): Plan {
     let spring2SysNet = spring2();
     spring2SysNet = [...spring2SysNet, blankCourse, blankCourse, blankCourse];
     let fall3SysNet = courseList.filter(
-        //id 8 is CISC320, id 9 is CISC361, and id 7 is CISC303
-        (course) => course.id == 8 || course.id == 9 || course.id == 7
+        //id 2017 is CISC320, id 2022 is CISC361, and id 2015 is CISC303
+        (course) => course.id == 2017 || course.id == 2022 || course.id == 2015
     );
     fall3SysNet = [...fall3SysNet, blankCourse, blankCourse];
     let spring3SysNet = courseList.filter(
-        //id 60 is CISC360 and id 10 is CISC372
-        (course) => course.id == 60 || course.id == 10
+        //id 2021 is CISC360 and id 10 is CISC372
+        (course) => course.id == 2021 || course.id == 2025
     );
     spring3SysNet = [...spring3SysNet, blankCourse, blankCourse, blankCourse];
     let fall4SysNet = courseList.filter(
-        //id 18 is UNVI401, id 16 is CISC498, and id 47 is CISC450
-        (course) => course.id == 18 || course.id == 16 || course.id == 47
+        //id 6889 is UNVI401, id 2058 is CISC498, and id 2038 is CISC450
+        (course) => course.id == 6889 || course.id == 2058 || course.id == 2038
     );
     fall4SysNet = [...fall4SysNet, blankCourse, blankCourse, blankCourse];
     let spring4SysNet = courseList.filter(
-        //id 17 is CISC499 and id 19 is UNVI402 and id 61 is CISC471
-        (course) => course.id == 17 || course.id == 19 || course.id == 61
+        //id 2059 is CISC499 and id 6890 is UNVI402 and id 2045 is CISC471
+        (course) => course.id == 2059 || course.id == 6890 || course.id == 2045
     );
     spring4SysNet = [...spring4SysNet, blankCourse, blankCourse, blankCourse];
 

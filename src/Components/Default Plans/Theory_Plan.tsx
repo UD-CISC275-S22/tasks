@@ -15,35 +15,35 @@ export function Theory(): Plan {
     let spring1Theory = spring1();
     spring1Theory.pop(); //removes the extra blank course
     let temp = courseList.filter(
-        //id 13 is MATH242
-        (course) => course.id == 13
+        //id 4882 is MATH242
+        (course) => course.id == 4882
     );
     spring1Theory = [...spring1Theory, ...temp];
     let fall2Theory = fall2();
     fall2Theory = [...fall2Theory, blankCourse, blankCourse];
     let spring2Theory = spring2();
     temp = courseList.filter(
-        //id 14 is MATH205
-        (course) => course.id == 14
+        //id 4871 is MATH205
+        (course) => course.id == 4871
     );
 
     spring2Theory = [...spring2Theory, ...temp, blankCourse, blankCourse];
 
     let fall3Theory = courseList.filter(
-        //id 8 is CISC320, id 35 is CISC304 and id 36 is MATH349
-        (course) => course.id == 8 || course.id == 35 || course.id == 36
+        //id 2017 is CISC320, id 2016 is CISC304 and id 4898 is MATH349
+        (course) => course.id == 2017 || course.id == 2016 || course.id == 4898
     );
     fall3Theory = [...fall3Theory, ...temp, blankCourse, blankCourse];
 
     let spring3Theory = courseList.filter(
-        //id 7 is CISC303,
-        (course) => course.id == 7
+        //id 2015 is CISC303,
+        (course) => course.id == 2015
     );
 
     spring3Theory = [...spring3Theory, blankCourse, blankCourse, blankCourse];
     let fall4Theory = courseList.filter(
-        //id 16 is CISC498
-        (course) => course.id == 16
+        //id 2058 is CISC498
+        (course) => course.id == 2058
     );
 
     fall4Theory = [
@@ -55,8 +55,8 @@ export function Theory(): Plan {
     ];
 
     let spring4Theory = courseList.filter(
-        //id 17 is CISC499 and id 72 is CISC401
-        (course) => course.id == 17 || course.id == 72
+        //id 2059 is CISC499 and id 2028 is CISC401
+        (course) => course.id == 2059 || course.id == 2028
     );
     spring4Theory = [...spring4Theory, blankCourse, blankCourse, blankCourse];
 
