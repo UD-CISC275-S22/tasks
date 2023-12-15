@@ -41,6 +41,7 @@ import { PickAPlan } from "./Buttons/PickAPlan";
 import { ImportCSV } from "./Buttons/ImportCSV";
 import { RequiredClasses } from "./Buttons/requiredClasses";
 import CourseEdit from "./CourseEdit";
+//import { ExportCSV } from "./Buttons/ExportCSV";
 import {
     ArtificialIntelligence,
     Bioinformatics,
@@ -575,6 +576,21 @@ export function ViewSemester(): JSX.Element {
         }
     }
 
+    const allPlans = [plan1, plan2, plan3, plan4];
+
+    let totalClasses = semesters.map((sem: Semester) =>
+        sem.courseList.map((course: Course) => course)
+    );
+    totalClasses = totalClasses.flat();
+    const totalTitleCourses = totalClasses.map(
+        (course: Course): string => course.title
+    );
+    const totalPlanCredits = totalClasses.reduce(
+        (total: number, course: Course): number => total + course.credits,
+        0
+    );
+
+
     //actual return for the tsx file to App.tsx
     return (
         <div style={{ backgroundColor: "#0f234c" }}>
@@ -582,7 +598,8 @@ export function ViewSemester(): JSX.Element {
                 <StartNewPlan startNewSession={startNewSession}></StartNewPlan>
                 <RequiredClasses
                     degreeReq={coreClasses}
-                    Course_List={courseList}
+                    Course_List={COURSES_LIST} //changed from courseList to COURSES_LIST
+                    totalClasses={totalTitleCourses}
                 ></RequiredClasses>
                 <ClearSemester clearSemester={clearSemester}></ClearSemester>
                 <ClearAllSemesters
@@ -600,6 +617,8 @@ export function ViewSemester(): JSX.Element {
                     handleClose={closeImportModal}
                     importPlans={importPlans}
                 ></ImportCSV>
+
+                {/*<ExportCSV plans={allPlans}></ExportCSV>*/}
             </div>
             <hr style={{ backgroundColor: "#0f234c" }}></hr>
             {
@@ -607,6 +626,9 @@ export function ViewSemester(): JSX.Element {
                 seePlan && (
                     <div>
                         <h5 style={{ color: "white" }}>{plan.concentration}</h5>
+                        <h5 style={{ color: "white" }}>
+                            Total Plan Credit: {totalPlanCredits}
+                        </h5>
                         <DisplayPlan
                             indivPlanSem={indivPlanSem}
                             fifthYear={fifthYear}
