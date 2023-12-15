@@ -18174,7 +18174,7 @@
         "description": "Introduction to the contemporary Mandarin Chinese language through developing listening comprehension, speaking, reading, and writing skills, including mastery of the pinyin pronunciation system and introduction to Chinese characters.",
         "credits": 3,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "CHIN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88014,7 +88014,7 @@
         "description": "Introduction to epidemiological concepts and methods including descriptive data, measures of association, and study design.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "EPID",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88026,7 +88026,7 @@
         "description": "Continued introduction to epidemiological concepts and methods. Emphasis on calculation and interpretation of crude and adjusted data, measures of association, and study design.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "EPID",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88038,7 +88038,7 @@
         "description": "Expands on concepts and methods from EPID 610 and begins to explore more in-depth methods and analytic techniques of higher-level epidemiology, often used in advanced study designs among lead epidemiologists in the field or doctoral-level researchers.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "EPID",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88050,7 +88050,7 @@
         "description": "Introduction to infectious disease epidemiology, including patterns of disease transmission and emerging and reemerging infectious diseases.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "EPID",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88062,7 +88062,7 @@
         "description": "An introduction to methods used by field epidemiologists.  Emphasis on conducting outbreak investigations from start to finish, study design, questionnaire development, interviewing techniques, data analysis, and communications of findings appropriate to various audiences.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "EPID",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88074,7 +88074,7 @@
         "description": "Basic principles, terms, and epidemiological tools for use in disasters.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "EPID",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88086,7 +88086,7 @@
         "description": "Introduction to public health surveillance, a tool used by epidemiologists to quantify cases and calculate rates of communicable diseases and other conditions.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "EPID",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88098,7 +88098,7 @@
         "description": "Overview of cancer epidemiology and topics relevant to cancer prevention and control. Cancer statistics (incidence, mortality, and survival), cancer trends over time, cancer disparities, risk factors for cancer, major cancer types, cancer screening, the cancer continuum, and survivorship.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "EPID",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88110,7 +88110,7 @@
         "description": "The course covers traditional approaches to environmental epidemiology such as occupational cohorts, disease cluster investigation, and ecologic studies as well as newer molecular epidemiologic approaches to exposure assessment and analyses of neighborhood level effects on health.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "EPID",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88122,7 +88122,7 @@
         "description": "This course introduces students to major topics that affect the health of women and their infants during pregnancy and the perinatal period including pregnancy loss and pregnancy outcomes, as well as how specific infectious and chronic diseases affect the health of women and infants during the perinatal period. The course also enhances student understanding of key epidemiologic methodological issues when studying health outcomes during pregnancy and the perinatal period.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "EPID",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88134,7 +88134,7 @@
         "description": "Introduces students to the epidemiologic methods used to design and conduct studies of social factors that effect health, including disease specific risk factors.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "EPID",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88146,7 +88146,7 @@
         "description": "Introduces the epidemiology of aging and age-related disorders, including overviews of the public health impact of an aging society and the demographics and biology of aging. Descriptive and analytic epidemiology of prevalent chronic conditions in the aged, methodologic challenges essential to consider in research on older adults, and strategies for prevention of age-related disorders.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "EPID",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88158,7 +88158,7 @@
         "description": "Introduces the epidemiology of aging and age-related disorders, including overviews of the public health impact of an aging society, descriptive and analytic epidemiology of prevalent chronic conditions in the aged, methodologic challenges essential to consider in research on older adults, and strategies for prevention of age-related disorders.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "EPID",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88170,7 +88170,7 @@
         "description": "Overview of epidemiologic research methods applied to current topics in cardiovascular and cardiometabolic health and disease in human populations. Covers pathophysiology; molecular, clinical, behavioral, and social risk factors; burden and disparities across and within populations nationally and globally; and public health interventions.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "EPID",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88182,7 +88182,7 @@
         "description": "Analyze epidemiologic data using R, software, organize, data, make plots ranging from the basic (boxplots, histograms, scatterplots), to the more advanced (beanplots, volcano, and Manhattan plots), and present results from your data in a compelling way.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "EPID",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88194,7 +88194,7 @@
         "description": "Key concepts and methods in Nutrition Epidemiology to equip students with the tools needed to design, analyze, and critically evaluate population-based nutrition research.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "EPID",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88206,7 +88206,7 @@
         "description": "This course will cover the design of epidemiological studies and the analysis and interpretation of epidemiological data in order to answer clinical questions. A variety of study designs methods including cohort, case-control, and cross-sectional study designs will be used. In addition to disease and exposure, the course will cover concepts related to prognosis, diagnosis, therapy, and prevention.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "EPID",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88218,7 +88218,7 @@
         "description": "This course covers the study of the use and effects of drugs in large groups of people, from an epidemiologic perspective.  Case-control and cohort study designs, use of registry data and surveillance, and other observational methods, as well as controlled clinical trials are considered from the perspective of evaluating drug safety and effectiveness.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "EPID",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88230,7 +88230,7 @@
         "description": "Facilitate in depth applied epidemiology-based reading and discussion, invited speakers, and professional development sessions. Intended to help facilitate the development of students\u2019 research ideas, comprehension of research ethics, and to contribute to the student\u2019s professional development.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "EPID",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88242,7 +88242,7 @@
         "description": "As the professional degree for Public Health, the MPH is grounded in providing students with experience in applied practice by gaining hands-on experience in the field.  Applied Practice Experiences (Practicums) reinforce what students are taught in the classroom and prepare them for entry into careers in the public health workforce.The practicum is a self-selected field placement of approximately 200 hours in which students work closely with a departmental faculty member and (an) appropriate field professional(s).",
         "credits": 3,
         "semester": ["Spring and Summer"],
-        "department": "",
+        "department": "EPID",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88254,7 +88254,7 @@
         "description": "Independent study for graduate students conducting directed research in epidemiology.",
         "credits": 3,
         "semester": ["Fall, Winter, Spring, Summer"],
-        "department": "",
+        "department": "EPID",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88266,7 +88266,7 @@
         "description": "Provides an integrative experience that will allow students to demonstrate their professional disposition, communication skills, as well as skills obtained as part of their training in Public Health.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "EPID",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88278,7 +88278,7 @@
         "description": "Independent study in close consultation with the primary advisor provides the student with an opportunity to participate in the creation of academic learning experiences geared to individual needs, interests, aptitudes, and desired outcomes. In-depth research based on advisor guidance and resulting in publishable outcomes.",
         "credits": 3,
         "semester": ["Winter and Summer"],
-        "department": "",
+        "department": "EPID",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88290,7 +88290,7 @@
         "description": "A hands-on approach to grant writing including development of skills in locating potential funding sources and the use of appropriate grant-writing style and technique. Students are guided through the development of a proposal for a U.S. governmental funding agency such as the NIH.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "EPID",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88302,7 +88302,7 @@
         "description": "",
         "credits": 6,
         "semester": ["Fall and Spring"],
-        "department": "",
+        "department": "EPID",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88314,7 +88314,7 @@
         "description": "Using a case-based approach, the course covers major evaluation models and approaches and their implications for evaluation planning, design, and use. Provides a foundation for thoughtful, credible, and ethical evaluation practice.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "EVAL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88326,7 +88326,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "EVAL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88338,7 +88338,7 @@
         "description": "",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "EVAL",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88350,7 +88350,7 @@
         "description": "Introduction to the mathematics of data analysis. Bayes estimation, linear regression and classification methods. The singular value decomposition and the pseudo-inverse. Statistical models for inference and prediction in finance, marketing, and engineering applications. Regularization methods and principles of sparsity priors are applied. Streaming solutions. High dimensional problems. Concepts reinforced in R programming experiments.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FSAN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88362,7 +88362,7 @@
         "description": "Introduction to the analysis and processing of massive high-dimensional data. Massive data sets generally involve growth not only in the number of individuals represented but also in the number of descriptive parameters of the individuals, leading to exponential growth in the number of hypothesis considered. New approaches to address these problems exploit sparsity prior concepts from optimization theory, signal processing, statistics, and machine learning.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FSAN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88374,7 +88374,7 @@
         "description": "Concept of optimization, convex set, convex function, unconstrained optimization, convex optimization problems, including least-squares, linear, and quadratic optimization, duality theory, sensitivity analysis. Modeling of more advanced optimization techniques including integer programming, geometric and semidefinite programming, and convex relaxations.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FSAN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88386,7 +88386,7 @@
         "description": "Employ a data-driven approach to designing, managing, and improving the business processes that execute a firm\u2019s strategy. Exploring the linkage between strategy and business process design and quickly moves into identifying key process metrics which have greatest leverage on improving performance at both the process and firm-wide levels. Planning and controlling for variability in business processes is discussed with applications drawn from diverse settings. Become proficient in improving processes based on leveraging data and learning to deploy resources and information to achieve consistently good outcomes.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FSAN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88398,7 +88398,7 @@
         "description": "Focus on the various technologies and implementation issues of enterprise information system (EIS). Students will learn the cirtical role of EIS in business organizations, the interplay between business processes and EIS, how to use and configure an EIS, and the best practices in managing an EIS. (Primary designation MISY; secondary designation FSAN.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FSAN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88410,7 +88410,7 @@
         "description": "Focuses on the economic roles and interactions of the units in each sector of the financial services industry. Overview of the current and changing layout of institutions, products, and practices.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FSAN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88422,7 +88422,7 @@
         "description": "Develops the theoretical and practical foundations of resource allocation across time and risky assets, and of credit risk and systemic considerations. Topics include allocation of resources across time; allocation of resources across risks and credit risk and systemic considerations.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FSAN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88434,7 +88434,7 @@
         "description": "Concentrated study on selected areas in Financial Services Analytics.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FSAN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88446,7 +88446,7 @@
         "description": "Upper-level graduate research oriented toward the student\u2019s potential Doctoral Dissertation.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "FSAN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88458,7 +88458,7 @@
         "description": "Research and readings in preparation of dissertation topic and/or qualifyingexaminations for doctoral students before admission to candidacy but aftercompletion of all required course work.",
         "credits": 4,
         "semester": [""],
-        "department": "",
+        "department": "FSAN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88470,7 +88470,7 @@
         "description": "Independent dissertation research after completion of applicable coursework and examinations.",
         "credits": 9,
         "semester": [""],
-        "department": "",
+        "department": "FSAN",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88482,7 +88482,7 @@
         "description": "Investigation of a problem in clinical settings related to finance, administration, personnel management, public policy or education, resulting in completion of a scholarly project.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "HSAD",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88494,7 +88494,7 @@
         "description": "Addresses the development, status, and understanding of humanity within a larger context: e.g., how writers in various disciplines have defined humanity, nature, and the relationship between the two; or the interaction between humans and our environment.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MALS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88506,7 +88506,7 @@
         "description": "A gateway experience for incoming MALS students. Students learn the conventions and expectations of graduate-level reading, writing, research, and critical analysis and explore the concept of interdisciplinarity. Topics include documentation of sources, formulation and development of independent research projects, research methods, use of online databases. The content will be interdisciplinary and/or intercultural, and the course methodology will include lecture, discussion, independent research, and varied forms of academic writing.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MALS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88518,7 +88518,7 @@
         "description": "From antiquity to the present, the use of force and the resolution of conflict have been among humanity\u2019s enduring preoccupations. Examines ideas about these issues, and associated questions such as the meaning of \u201cheroism\u201d and \u201cjust war.\u201d",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MALS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88530,7 +88530,7 @@
         "description": "Explores the ways in which the arts \u2013 e.g., music, dance, art, architecture, performance, and/or decorative arts \u2013 both reflect and help to shape their social and historical backgrounds.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MALS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88542,7 +88542,7 @@
         "description": "Science and technology permeate almost every aspect of our modern lives. They are entwined with our culture, our intellectual lives, our physical beings, our philosophy, and our economic and political systems. This course explores selected aspects of the intersection of science and our society and the reciprocal nature of the relationship. May be repeated for credit as topics vary.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MALS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88554,7 +88554,7 @@
         "description": "Applies a variety of interdisciplinary perspectives, e.g., archaeology, anthropology, history, literature, philosophy, and religion to explain how and what we learn about the past.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MALS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88566,7 +88566,7 @@
         "description": "Provides instruction and practice in the various kinds of writing students may wish to do in the course of the MALS program and beyond. Focuses on one or more specific genres, such as the writing of poetry, fiction, memoirs, or research papers.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MALS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88578,7 +88578,7 @@
         "description": "Addresses contemporary problems and movements from a multidisciplinary perspective. Examples include artistic, literary, or sociological movements; religious or ethical questions; and political or global issues.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MALS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88590,7 +88590,7 @@
         "description": "Examines the use and development of artifacts and their impact on culture and society. Examples include the history and importance of such objects as cuisine and textiles; and the use of artifacts to understand the past, the belief systems of different cultures, and social evolution.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MALS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88602,7 +88602,7 @@
         "description": "How do people <em>really</em> make important decisions, like how to vote in an election? Why are lies so often effective, even when they\u2019re transparent? How is it possible for two apparently rational individuals to draw the opposite conclusions from the same evidence? <strong>How to Read an Election </strong>moves beyond partisan politics to delve into psychology, literature, and film for insights into these and other questions that inevitably arise during an election season.",
         "credits": 3,
         "semester": ["Fall"],
-        "department": "",
+        "department": "MALS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88614,7 +88614,7 @@
         "description": "Explores such topics as intellectual freedom, free speech, freedom of religion, criminal justice, political systems, and philosophical or religious interpretations of inherent human rights.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MALS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88626,7 +88626,7 @@
         "description": "This course will consider a number of responses to the \u201cproblem\u201d of death and dying. Our premise is that there is such a thing as a good death, that many traditions consider the good life as the one that ends in a good death, and thus the highest practice in life prepares one for a good death. We will not address the question of an afterlife per se, but rather we will focus on the meaning of death and the meaning of a life that ends in death. We will look at representatives of Tibetan Buddhist tradition, Western philosophical and psychological traditions, and religious viewpoints. Students are invited to form their own conclusions and seek their own coherence.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MALS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88638,7 +88638,7 @@
         "description": "Explore some basic materials native to several religions, and watch one or two films which approach those religions from a variety of standpoints. Discuss Hinduism, Daoism, Native American Religion, Buddhism, Judaism, and Christianity. Films we will watch will include The Legend of Bagger Vance, Gandhi, Being There, Avatar, Kundun, Little Buddha, The Emerald Forest, Trading Places, Last Temptation of Christ, and Life of Brian, among others.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MALS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88650,7 +88650,7 @@
         "description": "The complex and performative nature of museums vis-a-vis race, remembrance and reconciliation with a focus on Black American and African Diasporic history and culture. What role[s] do objects, history, and culture perform under such curatorial and museum mandates and visions? How do changing socio-political and cultural landscapes and challenges to representational politics shape museum practices? Considered here are black cultural institutions, their formation and foundation as well as exhibition histories of black visual art and culture.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MALS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88662,7 +88662,7 @@
         "description": "Ethical problems associated with environmental protection, local, national, and international. Relations to social and political movements. Seminar format.",
         "credits": 3,
         "semester": [""],
-        "department": "",
+        "department": "MALS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88674,7 +88674,7 @@
         "description": "Examines the biological and cultural evolution of humans, focusing on similarities and differences between humans and our closest primate relatives.",
         "credits": 3,
         "semester": ["Spring"],
-        "department": "",
+        "department": "MALS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88686,7 +88686,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "MALS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88698,7 +88698,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "MALS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88710,7 +88710,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "MALS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88722,7 +88722,7 @@
         "description": "",
         "credits": 2,
         "semester": [""],
-        "department": "",
+        "department": "MALS",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88734,7 +88734,7 @@
         "description": "",
         "credits": 0,
         "semester": [""],
-        "department": "",
+        "department": "PRES",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88746,7 +88746,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "PRES",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88758,7 +88758,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "PRES",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88770,7 +88770,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "PRES",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
@@ -88782,7 +88782,7 @@
         "description": "",
         "credits": 6,
         "semester": [""],
-        "department": "",
+        "department": "PRES",
         "prereq": [""],
         "coreq": [""],
         "requirements": [""]
