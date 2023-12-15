@@ -75,11 +75,6 @@ export function DisplaySummer({
                 // eslint-disable-next-line no-extra-parens
                 (course: Course, index: number): JSX.Element => (
                     <div className="Course" key={index}>
-                        {/* <span key={course.id}>
-                            {course.title}
-                            {" - "}
-                            {course.name}
-                        </span> */}
                         <OverlayTrigger
                             key={course.id}
                             placement="right"

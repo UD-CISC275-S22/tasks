@@ -439,17 +439,6 @@ export function ViewSemester(): JSX.Element {
         const newCourses = updateCourseList(COURSES_LIST, editedCourse);
         setCOURSES_LIST([...newCourses]);
 
-        //map through courseList of the current semester and if the id's are equal, make course = editedCourse
-        /*
-        const newCourseList = newSemester[idx].courseList.map(
-            (course: Course): Course =>
-                course.id === editedCourse.id ? editedCourse : course
-        ); */
-
-        //make the semester's courseList equal to the newCourseList with the editedCourse
-        //newSemester[idx].courseList = [...newCourseList];
-        setSemesters(newSemester);
-
         setEditedCourse(null);
         setCurrCourse(editedCourse.id);
 
