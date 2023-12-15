@@ -69,7 +69,7 @@ export function fall1(): Course[] {
     let fall1Courses = courseList.filter(
         (course) =>
             course.id == 2805 ||
-            course.id == 101 ||
+            course.id == 2002 ||
             course.id == 2824 ||
             course.id == 4881
     );
