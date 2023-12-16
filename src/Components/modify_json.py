@@ -1,8 +1,22 @@
+""" I developed a program to enhance our workflow by adding an 'id' field and formatting the data 
+in a way that simplifies the creation of course objects. This program saves significant time and 
+effort for our group, removing the need for manual insertion of an 'id' field and data formatting, 
+which would've been a really tedious and inefficient process. """
 
-import json 
+import json
 
-#takes in an id of a course and data from a json file and formats it 
 def convert_course(id_number, course_info):
+    """
+    Converts course information from JSON format to a formatted dictionary.
+
+    Parameters:
+    - id_number (int): The ID of the course.
+    - course_info (dict): Information about the course from the JSON file.
+
+    Returns:
+    - dict: Formatted course information with specific fields.
+    """
+
     # Convert credits to integer or set to 0 if not a valid integer
     credits = int(course_info.get("credits",0))
 
@@ -26,13 +40,26 @@ def convert_course(id_number, course_info):
     return converted_course
 
 def convert_json(input_data):
+     """
+    Converts JSON data containing course information into a list of formatted course dictionaries.
+
+    Parameters:
+    - input_data (dict): JSON data containing course information.
+
+    Returns:
+    - list: List of formatted course dictionaries.
+    """
+
     output_json = []
     id_number = 0
 
     for department, courses in input_data.items():
         for id_number, course_info in courses.items():
+            # Convert each course using the convert_course function
             converted_course = convert_course(id_number, course_info)
+            # Append the converted course to the output list
             output_json.append(converted_course)
+            # Increment id_number for the next course
             id_number += 1
 
     return output_json
@@ -74637,14 +74664,6 @@ json_data = {
 
 # Convert JSON data
 converted_data = convert_json(json_data)
-
-'''
-# Accessing the converted course information
-for course in converted_data:
-    print("Course ID:", course.get("id"))
-    print("Course Title:", course.get("title"))
-    # Add more fields as needed
-'''
 
 # Save the converted data to a new JSON file
 output_file_path = 'INSERT FILE PATH THAT YOU WANT TO EXPORT JSON DATA TO'
