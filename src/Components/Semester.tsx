@@ -41,7 +41,9 @@ import { PickAPlan } from "./Buttons/PickAPlan";
 import { ImportCSV } from "./Buttons/ImportCSV";
 import { RequiredClasses } from "./Buttons/requiredClasses";
 import CourseEdit from "./CourseEdit";
+import ExportCSV from "./Buttons/ExportCSV";
 //import { ExportCSV } from "./Buttons/ExportCSV";
+
 import {
     ArtificialIntelligence,
     Bioinformatics,
@@ -68,6 +70,7 @@ let Bio_Plan = Bio();
 //run npm i papaparse
 //npm install --save-dev @types/papaparse
 import Papa from "papaparse";
+import { Plan } from "../Interfaces/plan";
 /* ----------------------------------------------------------------------------------------------------- */
 /*EVERYONE PLS READ THIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 These are the changes I made to make the degree requirements:
@@ -627,8 +630,7 @@ export function ViewSemester(): JSX.Element {
                     handleClose={closeImportModal}
                     importPlans={importPlans}
                 ></ImportCSV>
-
-                {/*<ExportCSV plans={allPlans}></ExportCSV>*/}
+                <ExportCSV plans={allPlans}></ExportCSV>
             </div>
             <hr style={{ backgroundColor: "#0f234c" }}></hr>
             {

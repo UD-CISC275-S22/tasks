@@ -1,36 +1,47 @@
-export /*import React from "react";
+import React from "react";
 import { Button } from "react-bootstrap";
+import FileSaver from "file-saver";
+import { Semester } from "../../Interfaces/semester";
+import { Course } from "../../Interfaces/course";
 import { Plan } from "../../Interfaces/plan";
-import { CSVDownload, CSVLink } from "react-csv";
-import { useTable } from "react-table";
 
-export const ExportCSV = ({ plans }: { plans: Plan[] }) => {
-    const headers = [
-        { label: "ID", key: "id" },
-        { label: "Title", key: "title" },
-        { label: "Concentration", key: "concentration" },
-        { label: "Total Credits", key: "credits" },
-        { label: "Semesters", key: "semesters" }
-    ];
-    const str = [];
-    const csvData = plans.toString();
+interface ValueProps {
+    plans: Plan[];
+}
+const ExportCSV = (props: ValueProps): JSX.Element => {
+    //filters through plans that actually have stuff or if it's an empty plan
+    const nonEmptyPlans = props.plans.filter(
+        (plan: Plan) =>
+            plan.semesters.length !== 1 &&
+            typeof plan.semesters[0].year !== "object"
+    );
+    //helper function to handle exporting the schedule as a CSV file
+    const exportCSV = () => {
+        //initialize headers of the CSV
+        let csv =
+            "Concentration,Semester-Year,Course-Title,Course-Name,Course-Credits\n";
+        nonEmptyPlans.map((plan) => {
+            plan.semesters.map((sem: Semester) => {
+                sem.courseList.forEach((course: Course) => {
+                    csv += `${plan.concentration},${
+                        sem.year
+                    },${course.title.replace(/,/g, "")},${course.name},${
+                        course.credits
+                    }\n`;
+                });
+            });
+        });
+        // Create a blob of the CSV
+        const csvFile = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+
+        // Download the file
+        FileSaver.saveAs(csvFile, "Plans.csv");
+    };
     return (
-        <CSVLink data={csvData} headers={headers} filename={"my-plans.csv"}>
-            {console.log(csvData)}
-            <Button
-                style={{
-                    backgroundColor: "#EF5B5B",
-                    borderColor: "#922424",
-                    marginLeft: "5px",
-                    marginRight: "5px",
-                    marginTop: "5px",
-                    marginBottom: "5px",
-                    color: "black"
-                }}
-            >
-                Export to CSV
-            </Button>
-        </CSVLink>
+        <Button as="a" href="#" onClick={exportCSV} className="export-button">
+            Export CSV
+        </Button>
     );
 };
-*/ {};
+
+export default ExportCSV;
