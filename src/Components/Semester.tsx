@@ -70,6 +70,7 @@ let Bio_Plan = Bio();
 //run npm i papaparse
 //npm install --save-dev @types/papaparse
 import Papa from "papaparse";
+import { Plan } from "../Interfaces/plan";
 /* ----------------------------------------------------------------------------------------------------- */
 /*EVERYONE PLS READ THIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 These are the changes I made to make the degree requirements:
