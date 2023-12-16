@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Button, Modal, Form } from "react-bootstrap";
 import { Course } from "./interfaces/course";
 import { updateCourse, DeleteCourseFromSemester } from "./DBmanage";
@@ -20,18 +20,38 @@ export const EditCourseModal = ({
     dbManager: dbMangement;
 }) => {
     const [showDeleteModal, setShowDeleteModal] = useState(false);
+    const initialCourseRef = useRef<Course | null>(null);
 
     const [ticker, setTicker] = useState<string>(currentCourse.ticker);
     const [name, setName] = useState<string>(currentCourse.name);
     const [credits, setCredits] = useState<number>(currentCourse.credits);
     const [prereq, setPrereq] = useState<string>(currentCourse.prereq);
     useEffect(() => {
-        setTicker(currentCourse.ticker);
-        setName(currentCourse.name);
-        setCredits(currentCourse.credits);
-        setPrereq(currentCourse.prereq);
-    }, [currentCourse]);
+        if (show) {
+            // Check if the current course is different from the initial course
+            if (
+                !initialCourseRef.current ||
+                initialCourseRef.current.UUID !== currentCourse.UUID
+            ) {
+                initialCourseRef.current = { ...currentCourse };
+            }
 
+            setTicker(currentCourse.ticker);
+            setName(currentCourse.name);
+            setCredits(currentCourse.credits);
+            setPrereq(currentCourse.prereq);
+        }
+    }, [show, currentCourse]);
+
+    const revertChanges = () => {
+        if (initialCourseRef.current) {
+            const initialCourse = initialCourseRef.current;
+            setTicker(initialCourse.ticker);
+            setName(initialCourse.name);
+            setCredits(initialCourse.credits);
+            setPrereq(initialCourse.prereq);
+        }
+    };
     const saveChanges = () => {
         // updateCourse(
         //     cRUD,
@@ -94,7 +114,9 @@ export const EditCourseModal = ({
                     <Button variant="secondary" onClick={handleClose}>
                         Close
                     </Button>
-
+                    <Button variant="warning" onClick={revertChanges}>
+                        Revert
+                    </Button>
                     <Button variant="primary" onClick={saveChanges}>
                         Save Changes
                     </Button>
