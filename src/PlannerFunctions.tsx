@@ -226,13 +226,14 @@ export const usePlannerFunctions = (initialPlans: Plan) => {
             lastSemester
         ]);
         setCoursesVisibility(prevVisibility => [...prevVisibility, true, true]);
+        alert("New Semester Successfully added");
     };
 
     const getNextSemesterName = (lastSemester: Semester | undefined) => {
         if (!lastSemester) return "Fall 2023";
 
         return lastSemester.season === "Fall"
-            ? `${parseInt(lastSemester.year, 10) + 1}`
+            ? `Spring ${parseInt(lastSemester.year, 10) + 1}`
             : `Fall ${lastSemester.year}`;
     };
 
