@@ -83,6 +83,12 @@ export const ArtificialIntelligence = [
 ];
 
 export const Bioinformatics = [
+    "CISC108",
+    "CISC181",
+    "CISC210",
+    "CISC220",
+    "CISC260",
+    "CISC275",
     "BISC207",
     "BISC208",
     "BISC401",
@@ -100,6 +106,12 @@ export const Bioinformatics = [
 ];
 
 export const Cybersecurity = [
+    "CISC108",
+    "CISC181",
+    "CISC210",
+    "CISC220",
+    "CISC260",
+    "CISC275",
     "CISC361",
     "CISC372",
     "CISC450",
