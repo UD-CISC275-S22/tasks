@@ -1,13 +1,13 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
 import { Course } from "../../Interfaces/course";
-import { ClearSemester } from "../Buttons/clearingSemester";
 import { DropAdd } from "../Buttons/dropAdd";
 import { Semester } from "../../Interfaces/semester";
 import { Button, Form, Modal, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { SkipSemester } from "../Buttons/SkipSemester";
 import CourseEdit from "../CourseEdit";
 
+//displays the fall semesters
 export interface valueProps {
     semesters: Semester[];
     courseList: Course[];

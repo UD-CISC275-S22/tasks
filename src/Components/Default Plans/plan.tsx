@@ -3,16 +3,7 @@ import { Plan } from "../../Interfaces/plan";
 import { Semester } from "../../Interfaces/semester";
 import { courseList } from "../course";
 
-//later: make a state that from user input finds the course that they selected and input
-//that into the courses that don't have a definitive course (Ex. if you need math205 or math350)
-//the user would select math205 for example and that state variable would then be math205 and you
-//change that math course in the semester to that specific course
-
-//this is a general breadth constant course that you can keep for any semester or plan
-//just make sure you change it so that the student can pick which breadth course they want to take
-
 //default winter and summer course for making an empty array of one blank course
-//maybe this can be used for the requirements?
 export const blankCourse: Course = {
     id: {} as number,
     title: "",

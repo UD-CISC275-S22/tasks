@@ -3,6 +3,7 @@ import { Plan } from "../../Interfaces/plan";
 import { courseList } from "../course";
 import { blankCourse, fall1, spring1, fall2, spring2 } from "./plan";
 
+//this is the plan for the SysNet concentration
 export function SysNet(): Plan {
     //plan fields
     const title = "BS Computer Science";

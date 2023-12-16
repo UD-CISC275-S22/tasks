@@ -1,6 +1,7 @@
 import React from "react";
 import { Dropdown } from "react-bootstrap";
 
+//this file is for picking a plan for the concentration
 export const PickAPlan = ({
     handlePlans
 }: {

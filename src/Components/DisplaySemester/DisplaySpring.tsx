@@ -9,6 +9,7 @@ import { courseList } from "../course";
 import { SkipSemester } from "../Buttons/SkipSemester";
 import CourseEdit from "../CourseEdit";
 
+//displays the spring semesters
 export interface valueProps {
     semesters: Semester[];
     courseList: Course[];

@@ -1,19 +1,10 @@
-//all prep stuff for courses will go in here and things like finding the course based off of an id
-// import React, { useState } from "react";
-//import { Button, Modal} from "react-bootstrap";
-// import { useState } from "react";
-// import { OverlayTrigger, Tooltip } from "react-bootstrap";
 import "../App.css";
-//import { Semester } from "../Interfaces/semester";
 import courseListAll from "../data/AllCourseList.json";
 import { Course, Department } from "../Interfaces/course";
 
 /*
 making a Course[] constant of the AllCourses json file
-DON'T remake this courseList in another file. Just import this constant and you can copy it into a const if you want
-then work on that list in that file (this acts more like an interface)
 */
-
 export const courseList: Course[] = courseListAll.map(
     //remember you only need to deep copy data structures over
     (course): Course => ({

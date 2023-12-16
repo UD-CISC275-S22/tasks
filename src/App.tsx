@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { ViewSemester } from "./Components/Semester";
-
+//function for building the site itself
 function App(): JSX.Element {
     return (
         <div className="App">
