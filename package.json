@@ -13,11 +13,8 @@
         "@types/react-dom": "^17.0.11",
         "boostrap": "^2.0.0",
         "bootstrap": "^5.3.2",
-<<<<<<< HEAD
         "file-saver": "^2.0.5",
-=======
         "csv-parse": "^5.5.3",
->>>>>>> main
         "jquery": "^3.7.1",
         "papaparse": "^5.4.1",
         "popper.js": "^1.16.1",
@@ -61,11 +58,8 @@
         ]
     },
     "devDependencies": {
-<<<<<<< HEAD
         "@types/file-saver": "^2.0.7",
-=======
         "@types/papaparse": "^5.3.14",
->>>>>>> main
         "@types/react-csv": "^1.1.9",
         "@types/react-table": "^7.7.18",
         "@typescript-eslint/eslint-plugin": "^5.10.1",
