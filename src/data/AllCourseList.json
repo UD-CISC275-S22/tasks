@@ -2611,7 +2611,7 @@
         "credits": 3,
         "semester": ["Fall and Spring"],
         "department": "AFRA",
-        "prereq": [""],
+        "prereq": ["At least one 100- or 200-level AFRA course"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -2635,7 +2635,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "AFRA",
-        "prereq": [""],
+        "prereq": ["At least one of 200- or higher level courses in ARTH or AFRA"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -2659,7 +2659,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "AFRA",
-        "prereq": [""],
+        "prereq": ["AFRA304 or HIST268"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -2695,7 +2695,7 @@
         "credits": 3,
         "semester": ["Fall, Summer and Spring"],
         "department": "AFRA",
-        "prereq": [""],
+        "prereq": ["AFRA110"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -2743,7 +2743,7 @@
         "credits": 3,
         "semester": [""],
         "department": "AFRA",
-        "prereq": [""],
+        "prereq": ["Vary by Instructor and topic"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -2779,7 +2779,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "AFRA",
-        "prereq": [""],
+        "prereq": ["AFRA391"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -2827,7 +2827,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "AFRA",
-        "prereq": [""],
+        "prereq": ["AFRA600"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -3283,7 +3283,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "ANFS",
-        "prereq": [""],
+        "prereq": ["ANFS101"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -3355,7 +3355,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "ANFS",
-        "prereq": [""],
+        "prereq": ["PLSC101 or BISC205 or BISC207 or BISC208"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -3403,7 +3403,7 @@
         "credits": 3,
         "semester": ["Fall"],
         "department": "ANFS",
-        "prereq": [""],
+        "prereq": ["ANFS240"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -3415,7 +3415,7 @@
         "credits": 3,
         "semester": [""],
         "department": "ANFS",
-        "prereq": [""],
+        "prereq": ["MATH 114 or higher"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -3427,7 +3427,7 @@
         "credits": 3,
         "semester": [""],
         "department": "ANFS",
-        "prereq": [""],
+        "prereq": ["ANFS240, BISC205  or BISC208"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -3439,7 +3439,7 @@
         "credits": 3,
         "semester": ["Fall"],
         "department": "ANFS",
-        "prereq": [""],
+        "prereq": ["ANFS101 or BISC205 or BISC208"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -3511,7 +3511,7 @@
         "credits": 4,
         "semester": ["Spring"],
         "department": "ANFS",
-        "prereq": [""],
+        "prereq": ["ANFS101"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -3547,7 +3547,7 @@
         "credits": 3,
         "semester": [""],
         "department": "ANFS",
-        "prereq": [""],
+        "prereq": ["BISC207, BISC208"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -3559,7 +3559,7 @@
         "credits": 4,
         "semester": ["Spring"],
         "department": "ANFS",
-        "prereq": [""],
+        "prereq": ["ANFS101, ANFS251"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -3571,7 +3571,7 @@
         "credits": 4,
         "semester": ["Fall"],
         "department": "ANFS",
-        "prereq": [""],
+        "prereq": ["ANFS101, ANFS251"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -3583,7 +3583,7 @@
         "credits": 3,
         "semester": ["Verify offering with Dept"],
         "department": "ANFS",
-        "prereq": [""],
+        "prereq": ["ANFS101"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -3607,7 +3607,7 @@
         "credits": 3,
         "semester": ["Fall"],
         "department": "ANFS",
-        "prereq": [""],
+        "prereq": ["ANFS101  or permission of instructor"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -3619,7 +3619,7 @@
         "credits": 1,
         "semester": ["Fall"],
         "department": "ANFS",
-        "prereq": [""],
+        "prereq": ["ANFS101  or permission of instructor"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -3631,7 +3631,7 @@
         "credits": 3,
         "semester": ["Fall"],
         "department": "ANFS",
-        "prereq": [""],
+        "prereq": ["ANFS251"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -3639,11 +3639,11 @@
         "id": 303,
         "title": "ANFS426",
         "name": "Equine Management",
-        "description": "Application of scientific principles of nutrition, health care, behavior, reproduction, and farm management to the discipline of horse management. Laboratory provides hands-on experience. Intended for students interested in the horse industry. ANFS 220 or previous equine experience is recommended. Laboratory may require some out-of-class time for hands-on experience.",
+        "description": "Application of scientific principles of nutrition, health care, behavior, reproduction, and farm management to the discipline of horse management. Laboratory provides hands-on experience. Intended for students interested in the horse industry. ANFS220 or previous equine experience is recommended. Laboratory may require some out-of-class time for hands-on experience.",
         "credits": 4,
         "semester": ["Spring"],
         "department": "ANFS",
-        "prereq": [""],
+        "prereq": ["ANFS101 or ANFS220, ANFS 251 or ANFS241, or permission of instructor"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -3679,7 +3679,7 @@
         "credits": 3,
         "semester": ["Fall"],
         "department": "ANFS",
-        "prereq": [""],
+        "prereq": ["BISC300"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -3691,7 +3691,7 @@
         "credits": 3,
         "semester": ["Fall"],
         "department": "ANFS",
-        "prereq": [""],
+        "prereq": ["ANFS 332, BISC205, BISC207"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -3703,7 +3703,7 @@
         "credits": 4,
         "semester": ["Fall"],
         "department": "ANFS",
-        "prereq": [""],
+        "prereq": ["BISC300"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -3715,7 +3715,7 @@
         "credits": 4,
         "semester": ["Fall"],
         "department": "ANFS",
-        "prereq": [""],
+        "prereq": ["BISC205 or BISC208 or permission of instructor"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -3727,7 +3727,7 @@
         "credits": 3,
         "semester": ["Fall"],
         "department": "ANFS",
-        "prereq": [""],
+        "prereq": ["ANFS240, BISC306 strongly recommended"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -3739,7 +3739,7 @@
         "credits": 3,
         "semester": ["Fall"],
         "department": "ANFS",
-        "prereq": [""],
+        "prereq": ["ANFS240"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -3751,7 +3751,7 @@
         "credits": 4,
         "semester": ["Spring"],
         "department": "ANFS",
-        "prereq": [""],
+        "prereq": ["PHYS201, PHYS221"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -3775,7 +3775,7 @@
         "credits": 3,
         "semester": [""],
         "department": "ANFS",
-        "prereq": [""],
+        "prereq": ["ENGL110"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -3787,7 +3787,7 @@
         "credits": 3,
         "semester": ["Fall"],
         "department": "ANFS",
-        "prereq": [""],
+        "prereq": ["ANFS251, CHEM214 or CHEM527 or CHEM641"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -3799,7 +3799,7 @@
         "credits": 4,
         "semester": [""],
         "department": "ANFS",
-        "prereq": [""],
+        "prereq": ["BISC300 or permission of instructor"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -3859,7 +3859,7 @@
         "credits": 3,
         "semester": ["Fall"],
         "department": "ANFS",
-        "prereq": [""],
+        "prereq": ["ANFS300 or permission of instructor"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -3871,7 +3871,7 @@
         "credits": 3,
         "semester": [""],
         "department": "ANFS",
-        "prereq": [""],
+        "prereq": ["CHEM101, CHEM131 or CHEM103/CHEM133"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -3943,7 +3943,7 @@
         "credits": 3,
         "semester": [""],
         "department": "ANFS",
-        "prereq": [""],
+        "prereq": ["BISC401, BISC403"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -3991,7 +3991,7 @@
         "credits": 3,
         "semester": [""],
         "department": "ANFS",
-        "prereq": [""],
+        "prereq": ["BISC300"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -4003,7 +4003,7 @@
         "credits": 3,
         "semester": [""],
         "department": "ANFS",
-        "prereq": [""],
+        "prereq": ["ANFS332, BISC207"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -4015,7 +4015,7 @@
         "credits": 4,
         "semester": [""],
         "department": "ANFS",
-        "prereq": [""],
+        "prereq": ["BISC300"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -4027,7 +4027,7 @@
         "credits": 4,
         "semester": [""],
         "department": "ANFS",
-        "prereq": [""],
+        "prereq": ["BISC208 or permission of instructor"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -4039,7 +4039,7 @@
         "credits": 3,
         "semester": [""],
         "department": "ANFS",
-        "prereq": [""],
+        "prereq": ["ANFS140 or permission of instructor"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -4051,7 +4051,7 @@
         "credits": 4,
         "semester": [""],
         "department": "ANFS",
-        "prereq": [""],
+        "prereq": ["MATH222, PHYS201, PHYS221"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -4087,7 +4087,7 @@
         "credits": 3,
         "semester": [""],
         "department": "ANFS",
-        "prereq": [""],
+        "prereq": ["ENGL110"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -4111,7 +4111,7 @@
         "credits": 3,
         "semester": [""],
         "department": "ANFS",
-        "prereq": [""],
+        "prereq": ["Undergraduate or graduate courses in nutrition"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -4123,7 +4123,7 @@
         "credits": 4,
         "semester": [""],
         "department": "ANFS",
-        "prereq": [""],
+        "prereq": ["BISC300 or permission of instructor"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -4183,7 +4183,7 @@
         "credits": 3,
         "semester": [""],
         "department": "ANFS",
-        "prereq": [""],
+        "prereq": ["ANFS300 or permission of instructor"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -4207,7 +4207,7 @@
         "credits": 3,
         "semester": [""],
         "department": "ANFS",
-        "prereq": [""],
+        "prereq": ["CHEM213 or CHEM321, BISC205 or BISC207"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -5551,7 +5551,7 @@
         "credits": 3,
         "semester": ["Fall, Winter and Spring"],
         "department": "ANTH",
-        "prereq": [""],
+        "prereq": ["15 hours of ANTH"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -5935,7 +5935,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "APEC",
-        "prereq": [""],
+        "prereq": ["APEC150 or ECON101"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -5947,7 +5947,7 @@
         "credits": 3,
         "semester": ["Verify offering with Dept"],
         "department": "APEC",
-        "prereq": [""],
+        "prereq": ["APEC135"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -5959,7 +5959,7 @@
         "credits": 3,
         "semester": ["Fall and Spring"],
         "department": "APEC",
-        "prereq": [""],
+        "prereq": ["Minimum grade of C- in either ECON 101 or APEC 150"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -5983,7 +5983,7 @@
         "credits": 3,
         "semester": [""],
         "department": "APEC",
-        "prereq": [""],
+        "prereq": ["APEC150, ACCT207"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -6043,7 +6043,7 @@
         "credits": 3,
         "semester": ["Verify offering with Dept"],
         "department": "APEC",
-        "prereq": [""],
+        "prereq": ["APEC150 or ECON101"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -6067,7 +6067,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "APEC",
-        "prereq": [""],
+        "prereq": ["STAT200 or equivalent"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -6079,7 +6079,7 @@
         "credits": 3,
         "semester": ["Fall"],
         "department": "APEC",
-        "prereq": [""],
+        "prereq": ["APEC150 or ECON101"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -6103,7 +6103,7 @@
         "credits": 3,
         "semester": [""],
         "department": "APEC",
-        "prereq": [""],
+        "prereq": ["APEC150 or ECON101"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -6115,7 +6115,7 @@
         "credits": 3,
         "semester": ["Verify offering with Dept"],
         "department": "APEC",
-        "prereq": [""],
+        "prereq": ["APEC150 or ECON101"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -6139,7 +6139,7 @@
         "credits": 3,
         "semester": ["Verify offering with Dept"],
         "department": "APEC",
-        "prereq": [""],
+        "prereq": ["ECON251 or ECON300 or ECON301"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -6319,7 +6319,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "APEC",
-        "prereq": [""],
+        "prereq": ["APEC801"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -6367,7 +6367,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "APEC",
-        "prereq": [""],
+        "prereq": ["APEC801, ECON622"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -6487,7 +6487,7 @@
         "credits": 3,
         "semester": ["Fall and Spring"],
         "department": "ARAB",
-        "prereq": [""],
+        "prereq": ["ARAB105"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -6499,7 +6499,7 @@
         "credits": 3,
         "semester": ["Fall and Spring"],
         "department": "ARAB",
-        "prereq": [""],
+        "prereq": ["ARAB106"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -6523,7 +6523,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "ARAB",
-        "prereq": [""],
+        "prereq": ["ARAB107"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -6535,7 +6535,7 @@
         "credits": 3,
         "semester": [""],
         "department": "ARAB",
-        "prereq": [""],
+        "prereq": ["ARAB200"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -6547,7 +6547,7 @@
         "credits": 3,
         "semester": [""],
         "department": "ARAB",
-        "prereq": [""],
+        "prereq": ["ARAB107 or eqivalent"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -6559,7 +6559,7 @@
         "credits": 3,
         "semester": [""],
         "department": "ARAB",
-        "prereq": [""],
+        "prereq": ["ARAB107 or eqivalent"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -6607,7 +6607,7 @@
         "credits": 3,
         "semester": [""],
         "department": "ARAB",
-        "prereq": [""],
+        "prereq": ["ARAB205"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -6619,7 +6619,7 @@
         "credits": 3,
         "semester": [""],
         "department": "ARAB",
-        "prereq": [""],
+        "prereq": ["ARAB305"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -6655,7 +6655,7 @@
         "credits": 3,
         "semester": [""],
         "department": "ARAB",
-        "prereq": [""],
+        "prereq": ["ARAB305"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -6667,7 +6667,7 @@
         "credits": 3,
         "semester": [""],
         "department": "ARAB",
-        "prereq": [""],
+        "prereq": ["ARAB305"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -6835,7 +6835,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "ART",
-        "prereq": [""],
+        "prereq": ["C- or better in ART202 and ART206"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -6883,7 +6883,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "ART",
-        "prereq": [""],
+        "prereq": ["C- or better in ART202 and ART206"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -6895,7 +6895,7 @@
         "credits": 3,
         "semester": [""],
         "department": "ART",
-        "prereq": [""],
+        "prereq": ["ART209"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -6991,7 +6991,7 @@
         "credits": 3,
         "semester": [""],
         "department": "ART",
-        "prereq": [""],
+        "prereq": ["ART243"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -7015,7 +7015,7 @@
         "credits": 3,
         "semester": [""],
         "department": "ART",
-        "prereq": [""],
+        "prereq": ["ART235"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -7051,7 +7051,7 @@
         "credits": 3,
         "semester": [""],
         "department": "ART",
-        "prereq": [""],
+        "prereq": ["ART295"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -7135,7 +7135,7 @@
         "credits": 3,
         "semester": [""],
         "department": "ART",
-        "prereq": [""],
+        "prereq": ["ART284"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -7183,7 +7183,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "ART",
-        "prereq": [""],
+        "prereq": ["C- or better in ART302 and ART303 or ART308"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -7219,7 +7219,7 @@
         "credits": 3,
         "semester": [""],
         "department": "ART",
-        "prereq": [""],
+        "prereq": ["ART205"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -7231,7 +7231,7 @@
         "credits": 3,
         "semester": ["Fall"],
         "department": "ART",
-        "prereq": [""],
+        "prereq": ["C- or better in ART202, ART203, ART206, ART207"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -7291,7 +7291,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "ART",
-        "prereq": [""],
+        "prereq": ["ART243 or ART245"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -7351,7 +7351,7 @@
         "credits": 3,
         "semester": ["Verify offering with Dept"],
         "department": "ART",
-        "prereq": [""],
+        "prereq": ["ART280 or ART284 or ART285 or ART289 or ART385"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -7363,7 +7363,7 @@
         "credits": 3,
         "semester": ["Fall"],
         "department": "ART",
-        "prereq": [""],
+        "prereq": ["ART243 or ART245"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -7375,7 +7375,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "ART",
-        "prereq": [""],
+        "prereq": ["ART231 or ART236"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -7387,7 +7387,7 @@
         "credits": 3,
         "semester": ["Verify offering with Dept"],
         "department": "ART",
-        "prereq": [""],
+        "prereq": ["ART230, ART231 or ART236"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -7399,7 +7399,7 @@
         "credits": 3,
         "semester": [""],
         "department": "ART",
-        "prereq": [""],
+        "prereq": ["ART112 or ART129 or ART235"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -7411,7 +7411,7 @@
         "credits": 3,
         "semester": ["Verify offering with Dept"],
         "department": "ART",
-        "prereq": [""],
+        "prereq": ["ART243 or ART245"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -7423,7 +7423,7 @@
         "credits": 3,
         "semester": [""],
         "department": "ART",
-        "prereq": [""],
+        "prereq": ["ART243 or ART245"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -7435,7 +7435,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "ART",
-        "prereq": [""],
+        "prereq": ["ART250, ART255"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -7519,7 +7519,7 @@
         "credits": 3,
         "semester": ["Verify offering with Dept"],
         "department": "ART",
-        "prereq": [""],
+        "prereq": ["ART280 or ART281 or ART284 or ART285 or ART289 or ART344"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -7531,7 +7531,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "ART",
-        "prereq": [""],
+        "prereq": ["ART280 or ART281 or ART284 or ART285 or ART289"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -7543,7 +7543,7 @@
         "credits": 3,
         "semester": ["Verify offering with Dept"],
         "department": "ART",
-        "prereq": [""],
+        "prereq": ["ART280 or ART281 or ART284 or ART285 or ART289"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -7555,7 +7555,7 @@
         "credits": 3,
         "semester": ["Verify offering with Dept"],
         "department": "ART",
-        "prereq": [""],
+        "prereq": ["ART207 or ART280 or ART281 or ART284 or ART285 or ART289"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -7567,7 +7567,7 @@
         "credits": 3,
         "semester": ["Verify offering with Dept"],
         "department": "ART",
-        "prereq": [""],
+        "prereq": ["ART290 or ART295"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -7579,7 +7579,7 @@
         "credits": 3,
         "semester": [""],
         "department": "ART",
-        "prereq": [""],
+        "prereq": ["ART290 or ART295, or permission of instructor"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -7591,7 +7591,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "ART",
-        "prereq": [""],
+        "prereq": ["C- or better in ART301 and ART308"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -7603,7 +7603,7 @@
         "credits": 3,
         "semester": [""],
         "department": "ART",
-        "prereq": [""],
+        "prereq": ["C- or better in ART402, ART409 or ART400"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -7615,7 +7615,7 @@
         "credits": 3,
         "semester": [""],
         "department": "ART",
-        "prereq": [""],
+        "prereq": ["C- or better in ART301"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -7627,7 +7627,7 @@
         "credits": 3,
         "semester": [""],
         "department": "ART",
-        "prereq": [""],
+        "prereq": ["C- or better in ART402, ART409"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -7675,7 +7675,7 @@
         "credits": 3,
         "semester": ["Verify offering with Dept"],
         "department": "ART",
-        "prereq": [""],
+        "prereq": ["C- or better in ART301"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -7711,7 +7711,7 @@
         "credits": 3,
         "semester": ["Verify offering with Dept"],
         "department": "ART",
-        "prereq": [""],
+        "prereq": ["ART416"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -7723,7 +7723,7 @@
         "credits": 3,
         "semester": ["Verify offering with Dept"],
         "department": "ART",
-        "prereq": [""],
+        "prereq": ["ART331 or ART334"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -7735,7 +7735,7 @@
         "credits": 3,
         "semester": ["Verify offering with Dept"],
         "department": "ART",
-        "prereq": [""],
+        "prereq": ["ART243 or ART245 or ART246"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -7747,7 +7747,7 @@
         "credits": 3,
         "semester": ["Fall"],
         "department": "ART",
-        "prereq": [""],
+        "prereq": ["ART350"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -7783,7 +7783,7 @@
         "credits": 3,
         "semester": ["Verify offering with Dept"],
         "department": "ART",
-        "prereq": [""],
+        "prereq": ["ART290 or ART295, ART390 or ART393"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -7843,7 +7843,7 @@
         "credits": 3,
         "semester": [""],
         "department": "ART",
-        "prereq": [""],
+        "prereq": ["ENTR601 or permission of instructor"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -7879,7 +7879,7 @@
         "credits": 6,
         "semester": [""],
         "department": "ART",
-        "prereq": [""],
+        "prereq": ["ART612"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -8095,7 +8095,7 @@
         "credits": 4,
         "semester": ["Verify offering with Dept"],
         "department": "ARTC",
-        "prereq": [""],
+        "prereq": ["High school chemistry and algebra"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -8263,7 +8263,7 @@
         "credits": 3,
         "semester": [""],
         "department": "ARTC",
-        "prereq": [""],
+        "prereq": ["ARTC615"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -8395,7 +8395,7 @@
         "credits": 3,
         "semester": [""],
         "department": "ARTC",
-        "prereq": [""],
+        "prereq": ["ARTC670"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -8407,7 +8407,7 @@
         "credits": 3,
         "semester": [""],
         "department": "ARTC",
-        "prereq": [""],
+        "prereq": ["ARTC670, ARTC671"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -8419,7 +8419,7 @@
         "credits": 3,
         "semester": [""],
         "department": "ARTC",
-        "prereq": [""],
+        "prereq": ["ARTC670, ARTC671, ARTC672"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -11679,7 +11679,7 @@
         "id": 973,
         "title": "BISC100",
         "name": "Freshman Seminar",
-        "description": "Provides a forum for the discussion of topics in biology that relate to material being covered in BISC 207. Papers from the scientific literature and/or world wide web may be discussed.",
+        "description": "Provides a forum for the discussion of topics in biology that relate to material being covered in BISC207. Papers from the scientific literature and/or world wide web may be discussed.",
         "credits": 1,
         "semester": ["Fall"],
         "department": "BISC",
@@ -11787,7 +11787,7 @@
         "id": 982,
         "title": "BISC116",
         "name": "Elementary Human Physiology Laboratory",
-        "description": "Selected experiments in physiology that demonstrate some of the concepts developed in BISC 106, and a study of human anatomy.",
+        "description": "Selected experiments in physiology that demonstrate some of the concepts developed in BISC106, and a study of human anatomy.",
         "credits": 1,
         "semester": ["Verify offering with Dept"],
         "department": "BISC",
@@ -11799,7 +11799,7 @@
         "id": 983,
         "title": "BISC117",
         "name": "Elementary Evolutionary Ecology Laboratory",
-        "description": "Laboratory exercises to compliment the subject matter of BISC 107.",
+        "description": "Laboratory exercises to compliment the subject matter of BISC107.",
         "credits": 1,
         "semester": ["Fall"],
         "department": "BISC",
@@ -12279,7 +12279,7 @@
         "id": 1023,
         "title": "BISC452",
         "name": "Undergraduate Thesis II",
-        "description": "Continuation of BISC 451.",
+        "description": "Continuation of BISC451.",
         "credits": 3,
         "semester": ["Spring"],
         "department": "BISC",
@@ -12471,7 +12471,7 @@
         "id": 1039,
         "title": "BISC606",
         "name": "Advanced Mammalian Physiology II",
-        "description": "Continuation of BISC 605. Systemic mammalian physiology: respiratory, renal, gastrointestinal, and reproductive systems and metabolism.",
+        "description": "Continuation of BISC605. Systemic mammalian physiology: respiratory, renal, gastrointestinal, and reproductive systems and metabolism.",
         "credits": 4,
         "semester": [""],
         "department": "BISC",
@@ -22481,7 +22481,7 @@
         "name": "Global Agenda",
         "description": "Seminar survey of current geopolitical problems facing the US government and global news media.  Guest lecturers and practitioners in diplomacy and the international media explore the problems, US foreign policy and media influence upon both.",
         "credits": 3,
-        "semester": ["Verify offering with Dept."],
+        "semester": ["Verify offering with Dept"],
         "department": "COMM",
         "prereq": [""],
         "coreq": [""],
@@ -24067,7 +24067,7 @@
         "credits": 3,
         "semester": ["Fall, Summer and Spring"],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["C- or better in CISC108 or CISC106"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24091,7 +24091,7 @@
         "credits": 3,
         "semester": ["Fall and Spring"],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["C- or better in CISC108 or CISC106"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24103,7 +24103,7 @@
         "credits": 3,
         "semester": ["Fall, Summer and Spring"],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["C- or better in CISC210"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24115,7 +24115,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC181 or MISY160"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24127,7 +24127,7 @@
         "credits": 3,
         "semester": ["Fall and Spring"],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["C- or better in CISC210"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24163,7 +24163,7 @@
         "credits": 3,
         "semester": ["Fall and Spring"],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["C- or better in CISC181, CISC220"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24187,7 +24187,7 @@
         "credits": 3,
         "semester": ["Fall and Spring"],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["C- or better in MATH210, CISC220"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24199,7 +24199,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["C- or better in MATH210, CISC220"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24247,7 +24247,7 @@
         "credits": 3,
         "semester": ["Fall and Spring"],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC101 or CISC103 or CISC106 or CISC108"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24259,7 +24259,7 @@
         "credits": 3,
         "semester": ["Fall and Spring"],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["C- or better in CISC220, CISC260"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24271,7 +24271,7 @@
         "credits": 3,
         "semester": ["Fall and Spring"],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["C- or better in CISC220, CISC260"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24307,7 +24307,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["C- or better in CISC220, CISC260"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24319,7 +24319,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC220"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24343,7 +24343,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC303"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24355,7 +24355,7 @@
         "credits": 3,
         "semester": ["Fall"],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC304"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24367,7 +24367,7 @@
         "credits": 3,
         "semester": ["Fall"],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["MATH305 or MATH351 or MATH349"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24379,7 +24379,7 @@
         "credits": 3,
         "semester": [""],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["MATH426 or CISC410 or MATH353"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24391,7 +24391,7 @@
         "credits": 3,
         "semester": ["Fall"],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC304 or equivalent or permission of instructor"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24415,7 +24415,7 @@
         "credits": 3,
         "semester": ["Fall and Spring"],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC220 or permission of instructor"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24427,7 +24427,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC220, MATH241"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24439,7 +24439,7 @@
         "credits": 3,
         "semester": ["Verify offering with Dept"],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC220"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24463,7 +24463,7 @@
         "credits": 3,
         "semester": ["Fall and Spring"],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC260 or CPEG222"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24475,7 +24475,7 @@
         "credits": 3,
         "semester": ["Verify offering with Dept"],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC450 or equivalent"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24487,7 +24487,7 @@
         "credits": 3,
         "semester": [""],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC450"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24499,7 +24499,7 @@
         "credits": 3,
         "semester": ["Verify offering with Dept"],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC450 or equivalent"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24547,7 +24547,7 @@
         "credits": 3,
         "semester": ["Fall"],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC260, CISC303"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24583,7 +24583,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC275"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24595,7 +24595,7 @@
         "credits": 3,
         "semester": ["Fall and Spring"],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC275, CISC361 is recommended"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24619,7 +24619,7 @@
         "credits": 3,
         "semester": ["Verify offering with Dept"],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC361"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24631,7 +24631,7 @@
         "credits": 3,
         "semester": ["Fall and Spring"],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC220, CISC304"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24643,7 +24643,7 @@
         "credits": 3,
         "semester": [""],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC275"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24655,7 +24655,7 @@
         "credits": 3,
         "semester": ["Fall"],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC220, MATH205 or MATH350"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24667,7 +24667,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC220, MATH205 or MATH350"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24703,7 +24703,7 @@
         "credits": 3,
         "semester": ["Fall"],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC275, CISC320"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24715,7 +24715,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC498"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24739,7 +24739,7 @@
         "credits": 3,
         "semester": [""],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["A course in which the student was required to prove theorems"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24751,7 +24751,7 @@
         "credits": 3,
         "semester": [""],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC304"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24847,7 +24847,7 @@
         "credits": 3,
         "semester": [""],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["Undergraduate algorithms and discrete math courses"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24859,7 +24859,7 @@
         "credits": 3,
         "semester": [""],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC220 or permission of instructor"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24871,7 +24871,7 @@
         "credits": 3,
         "semester": ["Fall"],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC220 or equivalent"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24883,7 +24883,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC220 or equivalent"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24895,7 +24895,7 @@
         "credits": 3,
         "semester": [""],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC220 or equivalent"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24919,7 +24919,7 @@
         "credits": 3,
         "semester": ["Fall and Spring"],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["An undergraduate level course in computer architecture and operating systems"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24931,7 +24931,7 @@
         "credits": 3,
         "semester": [""],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC450 or CISC650"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24943,7 +24943,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["One semester of computer science research experience with an advisor and a current research project"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24955,7 +24955,7 @@
         "credits": 3,
         "semester": [""],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC650"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24967,7 +24967,7 @@
         "credits": 3,
         "semester": ["Fall"],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC360 or equivalent"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24979,7 +24979,7 @@
         "credits": 3,
         "semester": [""],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC260 or equivalent"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -24991,7 +24991,7 @@
         "credits": 3,
         "semester": [""],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC450 or CISC650"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -25039,7 +25039,7 @@
         "credits": 3,
         "semester": [""],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC303 or equivalent"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -25051,7 +25051,7 @@
         "credits": 3,
         "semester": [""],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC320 or equivalent, CISC601 recommended"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -25063,7 +25063,7 @@
         "credits": 3,
         "semester": [""],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["Permission of Instructor"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -25075,7 +25075,7 @@
         "credits": 3,
         "semester": [""],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC220"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -25087,7 +25087,7 @@
         "credits": 3,
         "semester": [""],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["Software Engineering Experience"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -25099,7 +25099,7 @@
         "credits": 3,
         "semester": ["Fall and Spring"],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC220"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -28577,7 +28577,7 @@
         "name": "Industrial Organization and Regulation",
         "description": "Uses microeconomic theory and game theory to analyze the strategic interaction among firms. Topics include vertical and horizontal integration, vertical restrictions, cartels and collusion, pricing practices, entry deterrence, diffusion of technology, product differentiation, and government regulation of industry.",
         "credits": 3,
-        "semester": ["Verify Offering with Department."],
+        "semester": ["Verify Offering with Department"],
         "department": "ECON",
         "prereq": [""],
         "coreq": [""],
@@ -50981,7 +50981,7 @@
         "name": "Jews and Food",
         "description": "This class surveys how food, kosher law, and cuisines from around the world have sustained the Jewish people for more than 3,000 years. It does so by exploring the many foods associated with Jews, as well as how kosher rules influenced the foods used in religious rituals and in daily home consumption. It will range widely over time and space, following the movement of Jews and changes in their foods from the ancient Middle East to modern America.",
         "credits": 3,
-        "semester": ["Verify Offering with Dept."],
+        "semester": ["Verify Offering with Dept"],
         "department": "JWST",
         "prereq": [""],
         "coreq": [""],
@@ -55061,7 +55061,7 @@
         "name": "Languages of the World",
         "description": "Survey of the world\u2019s languages, examining a number of important phenomena from a wide range of languages. Phenomena are both structural (e.g., word order and agreement) and societal or psychological (how multicultural societies choose a common language, the relation between language and thought).",
         "credits": 3,
-        "semester": ["Verify offering with Dept."],
+        "semester": ["Verify offering with Dept"],
         "department": "LING",
         "prereq": [""],
         "coreq": [""],
@@ -75065,7 +75065,7 @@
         "name": "Global Agenda",
         "description": "Seminar survey of current geopolitical problems facing the US government and global news media.  Guest lecturers and practitioners in diplomacy and the international media explore the problems, US foreign policy and media influence upon both.",
         "credits": 3,
-        "semester": ["Verify offering with Dept."],
+        "semester": ["Verify offering with Dept"],
         "department": "POSC",
         "prereq": [""],
         "coreq": [""],
