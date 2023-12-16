@@ -65,17 +65,21 @@ export const ArtificialIntelligence = [
     "CISC220",
     "CISC260",
     "CISC275",
-    "CISC303",
-    "CISC320",
-    "CISC355",
     "CISC304",
-    "CISC442",
+    "CISC355",
+    "CISC372",
+    "CISC437",
     "CISC481",
     "CISC483",
-    "CISC484",
-    "ENGL110",
+    "EGGG101",
+    "ENGL11O",
+    "MATH205",
     "MATH210",
-    "MATH241"
+    "MATH241",
+    "MATH242",
+    "MATH243",
+    "MATH349",
+    "MATH350"
 ];
 
 export const Bioinformatics = [
@@ -105,15 +109,26 @@ export const Cybersecurity = [
 ];
 
 export const DataScience = [
+    "CISC108",
+    "CISC181",
+    "CISC210",
+    "CISC220",
+    "CISC260",
+    "CISC275",
     "CISC304",
+    "CISC355",
     "CISC372",
     "CISC437",
     "CISC481",
+    "CISC483",
+    "EGGG101",
+    "ENGL11O",
     "MATH205",
+    "MATH210",
+    "MATH241",
     "MATH242",
     "MATH243",
     "MATH349",
-    "CISC483",
     "MATH350"
 ];
 

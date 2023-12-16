@@ -38,9 +38,12 @@ import { ClearAllSemesters } from "./Buttons/ClearAllSemesters";
 import { SavePlanInto } from "./Buttons/SavePlanInto";
 import { LoadPlan } from "./Buttons/LoadPlan";
 import { PickAPlan } from "./Buttons/PickAPlan";
+import { ImportCSV } from "./Buttons/ImportCSV";
 import { RequiredClasses } from "./Buttons/requiredClasses";
 import CourseEdit from "./CourseEdit";
 import ExportCSV from "./Buttons/ExportCSV";
+//import { ExportCSV } from "./Buttons/ExportCSV";
+
 import {
     ArtificialIntelligence,
     Bioinformatics,
@@ -63,6 +66,10 @@ let Theory_Plan = Theory();
 let High_Plan = High();
 let Bio_Plan = Bio();
 
+//csv import libraries - Malika
+//run npm i papaparse
+//npm install --save-dev @types/papaparse
+import Papa from "papaparse";
 /* ----------------------------------------------------------------------------------------------------- */
 /*EVERYONE PLS READ THIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 These are the changes I made to make the degree requirements:
@@ -137,6 +144,12 @@ export function ViewSemester(): JSX.Element {
         "courses",
         courseList
     );
+
+    //states for importing plans
+    const [showImportModal, setShowImportModal] = useState(false);
+    const showImportfileModal = () => setShowImportModal(true);
+    const closeImportModal = () => setShowImportModal(false);
+
     //let COURSES_LIST = courses as Course[];
     //NOTE FOR MICHAEL: Here is where you can add your add courses and remove courses functions
     //Here is where you can add your add courses and remove courses functions
@@ -440,17 +453,6 @@ export function ViewSemester(): JSX.Element {
         const newCourses = updateCourseList(COURSES_LIST, editedCourse);
         setCOURSES_LIST([...newCourses]);
 
-        //map through courseList of the current semester and if the id's are equal, make course = editedCourse
-        /*
-        const newCourseList = newSemester[idx].courseList.map(
-            (course: Course): Course =>
-                course.id === editedCourse.id ? editedCourse : course
-        ); */
-
-        //make the semester's courseList equal to the newCourseList with the editedCourse
-        //newSemester[idx].courseList = [...newCourseList];
-        setSemesters(newSemester);
-
         setEditedCourse(null);
         setCurrCourse(editedCourse.id);
 
@@ -462,7 +464,6 @@ export function ViewSemester(): JSX.Element {
     const handleResetToDefault = (editedCourse: Course) => {
         console.log("Edited course exists");
         const defaultCourse = findCourse(DEFAULT_COURSE_LIST, editedCourse.id);
-        //const beforeCourse = editedCourse;
         if (defaultCourse) {
             setEditedCourse(defaultCourse);
             const newCourseList = updateCourseList(COURSES_LIST, defaultCourse);
@@ -571,6 +572,23 @@ export function ViewSemester(): JSX.Element {
         }
     }
 
+    function importPlans(data: string) {
+        // try {
+        //     const parsedData = JSON.parse(text);
+        //     setPlan(parsedData);
+        // } catch (error) {
+        //     console.error("Error parsing JSON:", error);
+        // }
+        Papa.parse(data, {
+            header: true,
+            dynamicTyping: true,
+            complete: function (results) {
+                setPlan(results.data);
+                // console.log(results.data);
+            }
+        });
+    }
+
     const allPlans = [plan1, plan2, plan3, plan4];
 
     let totalClasses = semesters.map((sem: Semester) =>
@@ -579,6 +597,10 @@ export function ViewSemester(): JSX.Element {
     totalClasses = totalClasses.flat();
     const totalTitleCourses = totalClasses.map(
         (course: Course): string => course.title
+    );
+    const totalPlanCredits = totalClasses.reduce(
+        (total: number, course: Course): number => total + course.credits,
+        0
     );
 
     //actual return for the tsx file to App.tsx
@@ -601,7 +623,14 @@ export function ViewSemester(): JSX.Element {
                 <SavePlanInto savePlan={savePlan}></SavePlanInto>
                 <LoadPlan loadPlan={loadPlan}></LoadPlan>
                 <PickAPlan handlePlans={handlePlans}></PickAPlan>
-                <ExportCSV plans={allPlans}></ExportCSV>
+                <ImportCSV
+                    show={showImportModal}
+                    showImportfileModal={showImportfileModal}
+                    handleClose={closeImportModal}
+                    importPlans={importPlans}
+                ></ImportCSV>
+
+                {/*<ExportCSV plans={allPlans}></ExportCSV>*/}
             </div>
             <hr style={{ backgroundColor: "#0f234c" }}></hr>
             {
@@ -609,6 +638,9 @@ export function ViewSemester(): JSX.Element {
                 seePlan && (
                     <div>
                         <h5 style={{ color: "white" }}>{plan.concentration}</h5>
+                        <h5 style={{ color: "white" }}>
+                            Total Plan Credit: {totalPlanCredits}
+                        </h5>
                         <DisplayPlan
                             indivPlanSem={indivPlanSem}
                             fifthYear={fifthYear}

@@ -67,6 +67,11 @@ export function DisplaySummer({
     //targetSem is also NOT the state and it's already passed in from the Semester.tsx file. So both variables are already declared in the indivPlanSem function
     const idx = index(targetYear, targetSem);
     const summerCourses = semesters[idx].courseList;
+    const creditsArray = summerCourses.map((course: Course) => course.credits);
+    const totalCredits = creditsArray.reduce(
+        (total: number, credVal: number) => total + credVal,
+        0
+    );
 
     return (
         <div className="Summer">
@@ -75,11 +80,6 @@ export function DisplaySummer({
                 // eslint-disable-next-line no-extra-parens
                 (course: Course, index: number): JSX.Element => (
                     <div className="Course" key={index}>
-                        {/* <span key={course.id}>
-                            {course.title}
-                            {" - "}
-                            {course.name}
-                        </span> */}
                         <OverlayTrigger
                             key={course.id}
                             placement="right"
@@ -107,6 +107,7 @@ export function DisplaySummer({
                 )
             )}
             <div>
+                <div>Total Credits: {totalCredits}</div>
                 <DropAdd
                     dropClass={dropClass}
                     addClass={addClass}
