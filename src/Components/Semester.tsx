@@ -639,7 +639,7 @@ export function ViewSemester(): JSX.Element {
                     <div>
                         <h5 style={{ color: "white" }}>{plan.concentration}</h5>
                         <h5 style={{ color: "white" }}>
-                            Total Plan Credit: {totalPlanCredits}
+                            Total Plan Credit: {totalPlanCredits} / 124
                         </h5>
                         <DisplayPlan
                             indivPlanSem={indivPlanSem}

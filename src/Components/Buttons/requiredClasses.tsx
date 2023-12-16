@@ -8,13 +8,13 @@ import { Course } from "../../Interfaces/course";
 /*this function takes in the degree course requirements and the list of courses 
 in order to find the required classes for each degree plan*/
 export const RequiredClasses = ({
-    degreeReq,
-    Course_List,
-    totalClasses
+    degreeReq, //the required courses for a specific plan
+    Course_List, //list of courses from json file
+    totalClasses //all the classes in the plan
 }: {
     degreeReq: string[]; //the array of core courses for the selected plan
     Course_List: Course[]; //the list of courses
-    totalClasses: string[];
+    totalClasses: string[]; //the list of all of the classes in a single plan
 }) => {
     const filteredClasses = Course_List.filter((aCourse: Course) =>
         //filters the course list based on the courses in the degree requirement array
