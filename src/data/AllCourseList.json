@@ -25111,7 +25111,7 @@
         "credits": 3,
         "semester": [""],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["Basic background in probability and statistics"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -25123,7 +25123,7 @@
         "credits": 3,
         "semester": ["Fall and Spring"],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC636"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -25135,7 +25135,7 @@
         "credits": 4,
         "semester": [""],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC681"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -25219,7 +25219,7 @@
         "credits": 3,
         "semester": [""],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC650 or equivalent"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -25231,7 +25231,7 @@
         "credits": 3,
         "semester": [""],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC650"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -25291,7 +25291,7 @@
         "credits": 4,
         "semester": [""],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC662 or CISC663"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -25303,7 +25303,7 @@
         "credits": 3,
         "semester": [""],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC681"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -25315,7 +25315,7 @@
         "credits": 3,
         "semester": [""],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC681 or equivalent"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -25327,7 +25327,7 @@
         "credits": 3,
         "semester": [""],
         "department": "CISC",
-        "prereq": [""],
+        "prereq": ["CISC681"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -58459,7 +58459,7 @@
         "credits": 4,
         "semester": ["Fall and Spring"],
         "department": "MATH",
-        "prereq": [""],
+        "prereq": ["MATH210 or MATH230"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -58507,7 +58507,7 @@
         "credits": 3,
         "semester": ["Fall, Winter, Spring, Summer"],
         "department": "MATH",
-        "prereq": [""],
+        "prereq": ["MATH115, or MATH117 or an acceptable score (determined by the Department of Mathematical Sciences) on the Math Placement Exam. More information on the Math Placement Exam is available at https://www.mathsci.udel.edu/courses-placement/ud-math-placement"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -58519,7 +58519,7 @@
         "credits": 3,
         "semester": ["Fall, Winter and Spring"],
         "department": "MATH",
-        "prereq": [""],
+        "prereq": ["MATH221 or MATH241"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -58531,7 +58531,7 @@
         "credits": 3,
         "semester": ["Fall, Winter, Spring, Summer"],
         "department": "MATH",
-        "prereq": [""],
+        "prereq": ["MATH221"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -58543,7 +58543,7 @@
         "credits": 4,
         "semester": ["Fall and Spring"],
         "department": "MATH",
-        "prereq": [""],
+        "prereq": ["Requires a grade of C- or better in MATH 010 or students must achieve an acceptable score on the Math Placement Exam in accordance with current standards determined by the Department of Mathematical Sciences.  See https://www.mathsci.udel.edu/courses-placement/ud-math-placement for more information"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -58555,7 +58555,7 @@
         "credits": 3,
         "semester": ["Fall and Spring"],
         "department": "MATH",
-        "prereq": [""],
+        "prereq": ["Successful completion (D- or better) in MATH231"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -58567,7 +58567,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "MATH",
-        "prereq": [""],
+        "prereq": ["C- or higher in MATH 253"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -58579,7 +58579,7 @@
         "credits": 4,
         "semester": ["Fall, Winter, Spring, Summer"],
         "department": "MATH",
-        "prereq": [""],
+        "prereq": ["MATH 117 or acceptable score on the Math Placement Exam in accordance with current standards determined by the Department of Mathematical Sciences. See https://www.mathsci.udel.edu/courses-placement/ud-math-placement for more information."],
         "coreq": [""],
         "requirements": [""]
     },
@@ -58591,7 +58591,7 @@
         "credits": 4,
         "semester": ["Fall, Winter, Spring, Summer"],
         "department": "MATH",
-        "prereq": [""],
+        "prereq": ["MATH241 or MATH232"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -58603,7 +58603,7 @@
         "credits": 4,
         "semester": ["Fall, Winter, Spring, Summer"],
         "department": "MATH",
-        "prereq": [""],
+        "prereq": ["MATH242"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -58615,7 +58615,7 @@
         "credits": 3,
         "semester": ["Fall and Spring"],
         "department": "MATH",
-        "prereq": [""],
+        "prereq": ["MATH210, MATH242"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -58639,7 +58639,7 @@
         "credits": 3,
         "semester": ["Fall and Spring"],
         "department": "MATH",
-        "prereq": [""],
+        "prereq": ["MATH251"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -58651,7 +58651,7 @@
         "credits": 3,
         "semester": [""],
         "department": "MATH",
-        "prereq": [""],
+        "prereq": ["MATH252"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -58723,7 +58723,7 @@
         "credits": 3,
         "semester": ["Fall and Spring"],
         "department": "MATH",
-        "prereq": [""],
+        "prereq": ["MATH 242 and MATH 349 (or equivalent knowledge of eigenvalues and eigenvectors). Students who do not meet the MATH 349 prerequisite are advised to take MATH 351 instead of MATH 302."],
         "coreq": [""],
         "requirements": [""]
     },
@@ -58735,7 +58735,7 @@
         "credits": 3,
         "semester": ["Verify offering with Dept"],
         "department": "MATH",
-        "prereq": [""],
+        "prereq": ["C- or better in MATH242, CISC106"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -58747,7 +58747,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "MATH",
-        "prereq": [""],
+        "prereq": ["MATH241"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -58759,7 +58759,7 @@
         "credits": 3,
         "semester": ["Spring"],
         "department": "MATH",
-        "prereq": [""],
+        "prereq": ["MATH210"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -58771,7 +58771,7 @@
         "credits": 3,
         "semester": ["Fall and Spring"],
         "department": "MATH",
-        "prereq": [""],
+        "prereq": ["MATH351"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -58783,7 +58783,7 @@
         "credits": 3,
         "semester": ["Fall and Spring"],
         "department": "MATH",
-        "prereq": [""],
+        "prereq": ["MATH230 or MATH242"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -58819,7 +58819,7 @@
         "credits": 3,
         "semester": ["Fall, Winter and Spring"],
         "department": "MATH",
-        "prereq": [""],
+        "prereq": ["MATH351"],
         "coreq": [""],
         "requirements": [""]
     },
@@ -58831,7 +58831,7 @@
         "credits": 3,
         "semester": ["Fall and Spring"],
         "department": "MATH",
-        "prereq": [""],
+        "prereq": ["MATH351, CISC106"],
         "coreq": [""],
         "requirements": [""]
     },
