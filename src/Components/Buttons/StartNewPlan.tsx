@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 
+//file that will restart the site to let the user start from scratch
 export const StartNewPlan = ({
     startNewSession
 }: {

@@ -3,10 +3,10 @@ import "../App.css";
 // import courseListAll from "../data/AllCourseList.json";
 import { Course } from "../Interfaces/course";
 import Modal from "react-bootstrap/Modal";
-
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
+//this file for editing a coure's information
 interface CourseEditProps {
     editedCourse: Course;
     onSaveChanges: (

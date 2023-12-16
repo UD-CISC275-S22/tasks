@@ -40,9 +40,7 @@ import { LoadPlan } from "./Buttons/LoadPlan";
 import { PickAPlan } from "./Buttons/PickAPlan";
 import { ImportCSV } from "./Buttons/ImportCSV";
 import { RequiredClasses } from "./Buttons/requiredClasses";
-import CourseEdit from "./CourseEdit";
 import ExportCSV from "./Buttons/ExportCSV";
-//import { ExportCSV } from "./Buttons/ExportCSV";
 
 import {
     ArtificialIntelligence,
@@ -66,19 +64,7 @@ let Theory_Plan = Theory();
 let High_Plan = High();
 let Bio_Plan = Bio();
 
-//csv import libraries - Malika
-//run npm i papaparse
-//npm install --save-dev @types/papaparse
 import Papa from "papaparse";
-import { Plan } from "../Interfaces/plan";
-/* ----------------------------------------------------------------------------------------------------- */
-/*EVERYONE PLS READ THIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-These are the changes I made to make the degree requirements:
-    lines 44-51: I imported the degree requirements from requirements.ts
-    line 74 I: create a variable to change the state of the required courses based on the selected plan
-    lines 474-510: I called setcoreClasses in the handlePlans function to update the state based on the selected plan
-VIEW THE REQUIREDCLASSES.TSX FILE TO SEE OTHER CHANGES!!!
-/* ----------------------------------------------------------------------------------------------------- */
 
 export function ViewSemester(): JSX.Element {
     //states for the degree requirements based on the selected plan

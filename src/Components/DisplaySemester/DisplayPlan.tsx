@@ -9,6 +9,7 @@ export interface valueProps {
     fifthYear: boolean;
 }
 
+//displays the semester plans
 export function DisplayPlan({
     indivPlanSem,
     fifthYear

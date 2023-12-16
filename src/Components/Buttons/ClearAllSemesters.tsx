@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Modal } from "react-bootstrap";
-
+/*this file is for clearing all of the courses in a semester*/
 export const ClearAllSemesters = ({
     clearAll,
     handleShow,

@@ -1,6 +1,7 @@
 import React, { useState, ChangeEvent } from "react";
 import { Button, Modal } from "react-bootstrap";
 
+//this is the file for importing plans that the user has and want to work of off
 interface ImportProps {
     show: boolean;
     showImportfileModal: () => void;

@@ -9,13 +9,17 @@ function getSessionStorageOrDefault(key: string, defaultValue: unknown) {
 }
 
 export function useSessionStorage(key: string, defaultValue: unknown) {
+    // Use the getSessionStorageOrDefault function to get the initial value from sessionStorage
+
     const [value, setValue] = useState(
         getSessionStorageOrDefault(key, defaultValue)
     );
 
+    // Use useEffect to update sessionStorage whenever the value changes
     useEffect(() => {
         sessionStorage.setItem(key, JSON.stringify(value) || "");
     }, [key, value]);
 
+    // Return the current value and a function to update it
     return [value, setValue];
 }

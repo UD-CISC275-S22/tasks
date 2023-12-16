@@ -4,7 +4,7 @@ import FileSaver from "file-saver";
 import { Semester } from "../../Interfaces/semester";
 import { Course } from "../../Interfaces/course";
 import { Plan } from "../../Interfaces/plan";
-
+//this is the file for exporting plans for the user to keep
 interface ValueProps {
     plans: Plan[];
 }
