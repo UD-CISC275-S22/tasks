@@ -15,40 +15,40 @@ export function High(): Plan {
     let spring1High = spring1();
     spring1High.pop(); //removes the extra blank course
     let temp = courseList.filter(
-        //id 13 is MATH242
-        (course) => course.id == 13
+        //id 4882 is MATH242
+        (course) => course.id == 4882
     );
     spring1High = [...spring1High, ...temp];
 
     let fall2High = fall2();
     temp = courseList.filter(
-        //id 57 is MATH243
-        (course) => course.id == 57
+        //id 4883 is MATH243
+        (course) => course.id == 4883
     );
     fall2High = [...fall2High, ...temp, blankCourse];
 
     let spring2High = spring2();
     temp = courseList.filter(
-        //id 14 is MATH205
-        (course) => course.id == 14
+        //id 4871 is MATH205
+        (course) => course.id == 4871
     );
     spring2High = [...spring2High, ...temp, blankCourse, blankCourse];
 
     let fall3High = courseList.filter(
-        //id 8 is CISC320, id 7 is CISC303 and id 9 is CISC361
-        (course) => course.id == 8 || course.id == 7 || course.id == 9
+        //id 2017 is CISC320, id 2022 is CISC361, and id 2015 is CISC303
+        (course) => course.id == 2017 || course.id == 2022 || course.id == 2015
     );
     fall3High = [...fall3High, blankCourse, blankCourse];
 
     let spring3High = courseList.filter(
-        //id 60 is CISC360 and id 10 is CISC372
-        (course) => course.id == 60 || course.id == 10
+        //id 2021 is CISC360 and id 2025 is CISC372
+        (course) => course.id == 2021 || course.id == 2025
     );
     spring3High = [...spring3High, blankCourse, blankCourse, blankCourse];
 
     let fall4High = courseList.filter(
-        //id 16 is CISC498
-        (course) => course.id == 16
+        //id 25583 is CISC498
+        (course) => course.id == 2558
     );
 
     fall4High = [
@@ -60,8 +60,8 @@ export function High(): Plan {
     ];
 
     let spring4High = courseList.filter(
-        //id 17 is CISC499 and id 47 is CISC450 and id 61 is CISC471
-        (course) => course.id == 17 || course.id == 47 || course.id == 61
+        //id 2059 is CISC499 and id 2338 is CISC450 and id 2045 is CISC471
+        (course) => course.id == 2059 || course.id == 2338 || course.id == 2045
     );
     spring4High = [...spring4High, blankCourse, blankCourse];
 

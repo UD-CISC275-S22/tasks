@@ -22,7 +22,7 @@ export function SysNet(): Plan {
     );
     fall3SysNet = [...fall3SysNet, blankCourse, blankCourse];
     let spring3SysNet = courseList.filter(
-        //id 2021 is CISC360 and id 10 is CISC372
+        //id 2021 is CISC360 and id 2025 is CISC372
         (course) => course.id == 2021 || course.id == 2025
     );
     spring3SysNet = [...spring3SysNet, blankCourse, blankCourse, blankCourse];
