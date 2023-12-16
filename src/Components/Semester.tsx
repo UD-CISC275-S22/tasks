@@ -629,8 +629,7 @@ export function ViewSemester(): JSX.Element {
                     handleClose={closeImportModal}
                     importPlans={importPlans}
                 ></ImportCSV>
-
-                {/*<ExportCSV plans={allPlans}></ExportCSV>*/}
+                <ExportCSV plans={allPlans}></ExportCSV>
             </div>
             <hr style={{ backgroundColor: "#0f234c" }}></hr>
             {

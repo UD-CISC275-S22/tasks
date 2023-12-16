@@ -9,19 +9,19 @@ interface ValueProps {
     plans: Plan[];
 }
 const ExportCSV = (props: ValueProps): JSX.Element => {
+    //filters through plans that actually have stuff or if it's an empty plan
+    const nonEmptyPlans = props.plans.filter(
+        (plan: Plan) =>
+            plan.semesters.length !== 1 &&
+            typeof plan.semesters[0].year !== "object"
+    );
     //helper function to handle exporting the schedule as a CSV file
     const exportCSV = () => {
         //initialize headers of the CSV
         let csv =
             "Concentration,Semester-Year,Course-Title,Course-Name,Course-Credits\n";
-        props.plans.map((plan) => {
+        nonEmptyPlans.map((plan) => {
             plan.semesters.map((sem: Semester) => {
-                /*
-                const courses = props.courses.courseList.filter(
-                    (course: Course) => {
-                        return course.semester === semester.uuid;
-                    }
-                ); */
                 sem.courseList.forEach((course: Course) => {
                     csv += `${plan.concentration},${
                         sem.year
@@ -35,7 +35,7 @@ const ExportCSV = (props: ValueProps): JSX.Element => {
         const csvFile = new Blob([csv], { type: "text/csv;charset=utf-8;" });
 
         // Download the file
-        FileSaver.saveAs(csvFile, "schedule.csv");
+        FileSaver.saveAs(csvFile, "Plans.csv");
     };
     return (
         <Button as="a" href="#" onClick={exportCSV} className="export-button">
