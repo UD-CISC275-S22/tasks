@@ -1,7 +1,8 @@
 """ I developed a program to enhance our workflow by adding an 'id' field and formatting the data 
 in a way that simplifies the creation of course objects. This program saves significant time and 
 effort for our group, removing the need for manual insertion of an 'id' field and data formatting, 
-which would've been a really tedious and inefficient process. """
+which would've been a really tedious and inefficient process. I wrote it in python because it is the 
+language I am most familar with (Bryant Ferguson)"""
 
 import json
 
