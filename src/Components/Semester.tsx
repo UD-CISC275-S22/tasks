@@ -120,6 +120,7 @@ export function ViewSemester(): JSX.Element {
         AI_Plan.semesters
     ); //the default semesters (should always match with what the plan is)
     const [currCourse, setCurrCourse] = useState<number>(0);
+    const [conatinsPrereq, setContainsPrereq] = useState<boolean>(false);
 
     //state for handling if the yes or no button for skip semester warning was clicked
     const [clicked, setClicked] = useState<boolean>(false);
@@ -282,6 +283,14 @@ export function ViewSemester(): JSX.Element {
         const newClasses = newSemesters[idx].courseList.filter(
             (course: Course) => currCourse !== course.id
         );
+        if (choice.prereq === "") {
+            console.log("This course has no prereqs");
+            setContainsPrereq(true);
+        } else if (totalTitleCourses.contains(choice)) {
+            setContainsPrereq(true);
+        } else {
+            setContainsPrereq(false);
+        }
         // looks through the course list in the current semester and filters out the
         // course with the same "Title" as the state "currCourse"
         // **refer to "currCourse" documentation for more info **
@@ -301,6 +310,7 @@ export function ViewSemester(): JSX.Element {
                     currCourse={currCourse}
                     clicked={clicked}
                     fifthYearClicked={fifthYearClicked}
+                    containsPrereq={conatinsPrereq}
                     targetYear={year}
                     dropClass={dropClass}
                     addClass={addClass}
@@ -329,6 +339,7 @@ export function ViewSemester(): JSX.Element {
                     currCourse={currCourse}
                     clicked={clicked}
                     fifthYearClicked={fifthYearClicked}
+                    containsPrereq={conatinsPrereq}
                     targetYear={year}
                     dropClass={dropClass}
                     addClass={addClass}
@@ -357,6 +368,7 @@ export function ViewSemester(): JSX.Element {
                     currCourse={currCourse}
                     clicked={clicked}
                     fifthYearClicked={fifthYearClicked}
+                    containsPrereq={conatinsPrereq}
                     targetYear={year}
                     dropClass={dropClass}
                     addClass={addClass}
@@ -385,6 +397,7 @@ export function ViewSemester(): JSX.Element {
                     currCourse={currCourse}
                     clicked={clicked}
                     fifthYearClicked={fifthYearClicked}
+                    containsPrereq={conatinsPrereq}
                     targetYear={year}
                     dropClass={dropClass}
                     addClass={addClass}

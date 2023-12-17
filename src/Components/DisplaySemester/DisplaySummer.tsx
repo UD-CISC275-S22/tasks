@@ -18,6 +18,7 @@ export interface valueProps {
     clicked: boolean;
     targetYear: number;
     fifthYearClicked: boolean;
+    containsPrereq: boolean;
     dropClass(targetYear: number, targetSem: string): void;
     addClass(targetYear: number, targetSem: string): void;
     updateCurrCourse(event: React.ChangeEvent<HTMLSelectElement>): void;
@@ -48,6 +49,7 @@ export function DisplaySummer({
     clicked,
     targetYear,
     fifthYearClicked,
+    containsPrereq,
     dropClass,
     addClass,
     updateCurrCourse,
@@ -114,6 +116,7 @@ export function DisplaySummer({
                     addClass={addClass}
                     targetYear={targetYear}
                     targetSem={targetSem}
+                    containsPrereq={containsPrereq}
                     updateCurrCourse={updateCurrCourse}
                     handleEditShow={handleEditShow}
                     currCourse={currCourse}

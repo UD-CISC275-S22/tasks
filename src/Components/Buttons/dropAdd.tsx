@@ -14,7 +14,8 @@ export const DropAdd = ({
     currCourse,
     Course_List,
     targetYear,
-    targetSem
+    targetSem,
+    containsPrereq
 }: {
     dropClass: (targetYear: number, targetSem: string) => void;
     addClass: (targetYear: number, targetSem: string) => void;
@@ -24,6 +25,7 @@ export const DropAdd = ({
     Course_List: Course[];
     targetYear: number;
     targetSem: string;
+    containsPrereq: boolean;
 }) => {
     //If the prereq is not fulfilled create a pop-up that warns the user that the prereq is not in their course list.
     return (
@@ -45,7 +47,15 @@ export const DropAdd = ({
             <Button onClick={() => dropClass(targetYear, targetSem)}>
                 Remove Class
             </Button>
-            <Button onClick={() => addClass(targetYear, targetSem)}>
+            <Button
+                onClick={() => {
+                    containsPrereq
+                        ? addClass(targetYear, targetSem)
+                        : confirm(
+                              "You do not meet the prerequisite for this course!"
+                          ) && addClass(targetYear, targetSem);
+                }}
+            >
                 Add Class
             </Button>
             <Button

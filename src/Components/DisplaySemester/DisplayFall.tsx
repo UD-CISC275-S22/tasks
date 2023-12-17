@@ -16,6 +16,7 @@ export interface valueProps {
     clicked: boolean;
     targetYear: number;
     fifthYearClicked: boolean;
+    containsPrereq: boolean;
     dropClass: (targetYear: number, targetSem: string) => void;
     addClass: (targetYear: number, targetSem: string) => void;
     updateCurrCourse(event: React.ChangeEvent<HTMLSelectElement>): void;
@@ -45,6 +46,7 @@ export function DisplayFall({
     clicked,
     targetYear,
     fifthYearClicked,
+    containsPrereq,
     dropClass,
     addClass,
     updateCurrCourse,
@@ -118,6 +120,7 @@ export function DisplayFall({
                     dropClass={dropClass}
                     addClass={addClass}
                     targetYear={targetYear}
+                    containsPrereq={containsPrereq}
                     handleEditShow={handleEditShow}
                     targetSem={targetSem}
                     updateCurrCourse={updateCurrCourse}
