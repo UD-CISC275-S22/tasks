@@ -3,7 +3,7 @@ import { render, fireEvent } from "@testing-library/react";
 import { SeeAuditPage } from "./SeeAuditPage";
 import { semester } from "../Interface/semester";
 import { classes } from "../Interface/classes";
-
+//Used Chat GPT to generate basic tests for component
 const classExamples: classes[] = [
     {
         code: "CISC181",
@@ -67,6 +67,4 @@ describe("SeeAuditPage component", () => {
         // Check if the "hide" button is present
         expect(getByText("hide")).toBeInTheDocument();
     });
-
-    // You can add more test cases for various interactions and edge cases
 });
