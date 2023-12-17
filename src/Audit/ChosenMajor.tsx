@@ -1,5 +1,5 @@
-/* eslint-disable indent */
 /* eslint-disable no-extra-parens */
+/* eslint-disable indent */
 import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 
@@ -163,6 +163,7 @@ export function ChosenMajor({
         //check which major you chose and generates the list of total classes and credits to send back to main
         let credits: number[] = [...generalCredits];
         switch (selectedMajor) {
+            //correct spacing causes loop to not run, eslint doesn't accept switch as a function to tab into
             case "Artificial Intelligence and Robotics Concentration":
                 credits = [...generalCredits, ...AIREQnum];
                 reqList([...generalClasses, ...AIREQ]);
@@ -225,6 +226,7 @@ export function ChosenMajor({
                             style={{ textAlign: "center" }}
                         >
                             {majors.map(
+                                //linter error due to paren before html element
                                 (option: string): JSX.Element => (
                                     <option key={option} value={option}>
                                         {option}
