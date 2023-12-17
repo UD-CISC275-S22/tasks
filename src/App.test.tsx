@@ -29,25 +29,26 @@ test("renders export to csv", () => {
     expect(linkElement).toBeInTheDocument();
 });
 
-test("renders view course plans", () => {
+test("renders new course plans", () => {
     render(<App />);
-    const linkElement = screen.getByText(/View Course Plans/i);
+    const linkElement = screen.getByText(/New Course Plans/i);
     expect(linkElement).toBeInTheDocument();
 });
 
 test("Switch to/from course plan button", () => {
     render(<App />);
-    const button = screen.getByText(/View Course Plans/i);
+    const button = screen.getByText(/New Course Plans/i);
     button.click();
-    //expect(screen.queryByLabelText("New Course Plans")).toBeInTheDocument();
-    const SwitchButton = screen.getByText(/New Course Plans/i);
+    const SwitchButton = screen.getByText(/View Course Plans/i);
     SwitchButton.click();
-    const linkElement = screen.getByText(/View Course Plans/i);
+    const linkElement = screen.getByText(/New Course Plans/i);
     expect(linkElement).toBeInTheDocument();
 });
 
 test("Testing add course to queue 1", () => {
     render(<App />);
+    const button = screen.getByText(/New Course Plans/i);
+    button.click();
     const buttons = screen.getAllByText("ADD");
     const specificButton = buttons[0];
     specificButton.click();
@@ -57,6 +58,8 @@ test("Testing add course to queue 1", () => {
 
 test("Testing add course to queue 2", () => {
     render(<App />);
+    const button = screen.getByText(/New Course Plans/i);
+    button.click();
     const buttons = screen.getAllByText("ADD");
     const specificButton = buttons[4];
     specificButton.click();
@@ -66,6 +69,8 @@ test("Testing add course to queue 2", () => {
 
 test("Testing search bar", () => {
     render(<App />);
+    const button = screen.getByText(/New Course Plans/i);
+    button.click();
     const textBox = screen.getByPlaceholderText("Search");
     userEvent.type(textBox, "CISC 106");
     const buttons = screen.getAllByText("ADD");
@@ -77,6 +82,8 @@ test("Testing search bar", () => {
 
 test("Testing semester remove button (fall)", () => {
     render(<App />);
+    const button = screen.getByText(/New Course Plans/i);
+    button.click();
     const buttons = screen.getAllByText("remove");
     const specificButton = buttons[0];
     specificButton.click();
@@ -86,6 +93,8 @@ test("Testing semester remove button (fall)", () => {
 
 test("Testing semester remove button (winter)", () => {
     render(<App />);
+    const button = screen.getByText(/New Course Plans/i);
+    button.click();
     const buttons = screen.getAllByText("remove");
     const specificButton = buttons[1];
     specificButton.click();
@@ -95,6 +104,8 @@ test("Testing semester remove button (winter)", () => {
 
 test("Testing degree plan drop down", () => {
     render(<App />);
+    const button2 = screen.getByText(/New Course Plans/i);
+    button2.click();
     const button = screen.getByText(/View Course Plans/i);
     button.click();
     const buttons = screen.getAllByText("Bachelor of Computer Science");
@@ -106,6 +117,8 @@ test("Testing degree plan drop down", () => {
 
 test("Testing save degree plan and delete degree plan", () => {
     render(<App />);
+    const button2 = screen.getByText(/New Course Plans/i);
+    button2.click();
     const buttons = screen.getAllByText("ADD");
     const specificButton = buttons[0];
     specificButton.click();
@@ -128,6 +141,8 @@ test("Testing save degree plan and delete degree plan", () => {
 
 test("Testing requirements feature", () => {
     render(<App />);
+    const button = screen.getByText(/New Course Plans/i);
+    button.click();
     const textBox = screen.getByPlaceholderText("Search");
     userEvent.type(textBox, "CISC 108");
     const buttons = screen.getAllByText("ADD");
@@ -142,6 +157,8 @@ test("Testing requirements feature", () => {
 
 test("Testing clear semester", () => {
     render(<App />);
+    const button = screen.getByText(/New Course Plans/i);
+    button.click();
     const buttons = screen.getAllByText("ADD");
     const specificButton = buttons[0];
     specificButton.click();
@@ -157,6 +174,8 @@ test("Testing clear semester", () => {
 
 test("Testing remove from queue", () => {
     render(<App />);
+    const button = screen.getByText(/New Course Plans/i);
+    button.click();
     const buttons = screen.getAllByText("ADD");
     const specificButton = buttons[0];
     specificButton.click();
@@ -178,6 +197,8 @@ test("Testing remove from queue", () => {
 
 test("Testing clear all semesters button", () => {
     render(<App />);
+    const button = screen.getByText(/New Course Plans/i);
+    button.click();
     const buttons = screen.getAllByText("ADD");
     const specificButton = buttons[0];
     specificButton.click();
@@ -203,8 +224,6 @@ test("Testing clear all semesters button", () => {
 
 test("Testing edit degree plan", () => {
     render(<App />);
-    const button = screen.getByText(/View Course Plans/i);
-    button.click();
     const buttons = screen.getAllByText("Edit");
     const specificButton = buttons[0];
     specificButton.click();
@@ -217,8 +236,6 @@ test("Testing edit degree plan", () => {
 
 test("Testing save degree plan", () => {
     render(<App />);
-    const button = screen.getByText(/View Course Plans/i);
-    button.click();
     const buttons = screen.getAllByText("Edit");
     const specificButton = buttons[0];
     specificButton.click();
@@ -233,6 +250,8 @@ test("Testing save degree plan", () => {
 
 test("Testing save plan as a given name", () => {
     render(<App />);
+    const button = screen.getByText(/New Course Plans/i);
+    button.click();
     const textBox = screen.getByPlaceholderText("Untittled");
     userEvent.type(textBox, "Plan 1");
     const buttons = screen.getAllByText("Save");
