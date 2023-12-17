@@ -5,14 +5,18 @@ import { Button } from "react-bootstrap";
 
 function EditCourse({
     course,
-    onEditFormSubmit
+    onEditFormSubmit,
+    changeSemester
 }: {
     course: Class;
     onEditFormSubmit: (OGcourseCode: string, updatedCourse: Class) => void;
+    changeSemester: (updatedCourse: Class) => void;
 }) {
     const [editedCourse, setEditedCourse] = useState<Class>(course);
     const [isVisible, setIsVisible] = useState<boolean>(false);
     const [breadth, setBreadth] = useState<string>(course.breadth);
+    //const [changeSem, setChangeSem] = useState<string>(course.semester);
+
     const handleInputChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
     ) => {
@@ -22,6 +26,8 @@ function EditCourse({
             ...prevCourse,
             [name]: name === "credits" ? parseFloat(value) : value,
             breadth: breadth
+            //semester: "Test"
+            //semester: changeSem
         }));
     };
 
@@ -31,6 +37,9 @@ function EditCourse({
         setIsVisible(false);
         setBreadth(breadth);
         onEditFormSubmit(course.courseCode, editedCourse);
+        changeSemester(editedCourse);
+        console.log(course);
+        console.log(editedCourse);
     };
 
     return (
@@ -65,6 +74,15 @@ function EditCourse({
                         type="number"
                         name="credits"
                         value={editedCourse.credits.toString()}
+                        onChange={handleInputChange}
+                    />
+                </label>
+                <label>
+                    Change Semester:
+                    <input
+                        type="text"
+                        name="semester"
+                        value={editedCourse.semester}
                         onChange={handleInputChange}
                     />
                 </label>
