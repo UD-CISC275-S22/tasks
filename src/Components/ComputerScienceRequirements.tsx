@@ -49,7 +49,8 @@ const InformationSystemsRequirements: React.FC<
 > = ({ currentDegreePlan }) => {
     console.log(currentDegreePlan);
     const [labTrack, setLabTrack] = useState<string>("Chose Your Lab Track");
-    const [majorFreeElectives, setMajorFreeElectives] = useState<number>(0);
+    //const [majorFreeElectives, setMajorFreeElectives] = useState<number>(0);
+    const [DLE, setDLE] = useState<boolean>(false);
     const [breadthCredits, setBreadthCredits] = useState<
         Record<string, number>
     >({
@@ -118,10 +119,9 @@ const InformationSystemsRequirements: React.FC<
             });
         }); //runs through the given semester[] and pushes courseCode to newDegreePlanCourses array
         setDegreePlanCourses(newDegreePlanCourses);
-        const { breadthCredits, majorFreeElectives } =
-            calculateBreadthCredits(currentDegreePlan);
+        const { breadthCredits } = calculateBreadthCredits(currentDegreePlan);
         setBreadthCredits(breadthCredits); //set both the breadthRequirements and degreePlanCourses
-        setMajorFreeElectives(majorFreeElectives); //sets the major free electives
+        //setMajorFreeElectives(majorFreeElectives); //sets the major free electives
     }, [currentDegreePlan]);
 
     const contains = (strArr: string[], str: string): boolean => {
@@ -130,6 +130,8 @@ const InformationSystemsRequirements: React.FC<
     const isClassInDegreePlan = (courseCode: string): boolean => {
         return contains(degreePlanCourses, courseCode);
     };
+    //Theory was you'd be able to add classes and the degreePlan would update for the
+    //"this class or that class" requirements. I don't think it's possible to do that :(
 
     const render = (requirement: string[]) => {
         //creates a dropdown of the given requirement
@@ -153,6 +155,9 @@ const InformationSystemsRequirements: React.FC<
 
     const handleLabChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         setLabTrack(e.target.value);
+    };
+    const handleDLEChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setDLE(e.target.checked);
     };
 
     return (
@@ -205,7 +210,7 @@ const InformationSystemsRequirements: React.FC<
                 )}
             </div>
             <div>
-                <h4>Breadth Requirements (Need 6 each):</h4>
+                <h4>Breadth Requirements:</h4>
                 {Object.entries(breadthCredits).map(([breadth, credits]) => (
                     <div key={breadth}>
                         {breadth}: {credits} Credits
@@ -241,9 +246,27 @@ const InformationSystemsRequirements: React.FC<
                     </div>
                 ))}
                 <div>
-                    <h4>Major Free Electives:</h4>
-                    {majorFreeElectives} Credits
+                    <p>
+                        Note: The University requires 6 credits for each
+                        breadth. After that, the remaining 9 credits MUST be
+                        something other than TECH.
+                    </p>
                 </div>
+            </div>
+            <div>
+                <p>
+                    <input
+                        type="checkbox"
+                        id="DLE"
+                        checked={DLE}
+                        onChange={handleDLEChange}
+                    />
+                    <label>Discovery Learning Experience (DLE)</label>
+                </p>
+                <p>
+                    If you are unsure about DLE classes, please check the UD
+                    Course Search.
+                </p>
             </div>
         </div>
     );
