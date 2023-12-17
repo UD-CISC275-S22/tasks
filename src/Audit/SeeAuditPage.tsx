@@ -40,7 +40,7 @@ export function SeeAuditPage({
     //updates newCredit and majorName if anything changes
     useEffect(() => {
         setNewCredit(creditList);
-    });
+    }, creditList);
 
     useEffect(() => {
         setMajorName(major);
@@ -85,6 +85,7 @@ export function SeeAuditPage({
     function setCredits(IDX: number) {
         //Goes through the list of classes in used classes at a certain index to determine how many credits taken.
         //Subtract credits from required credit list until 0 to symbolize the requirement has been met
+
         const holder = [...newCredit];
         holder[IDX] =
             holder[IDX] -
@@ -165,6 +166,7 @@ export function SeeAuditPage({
                     </Modal.Header>
                     <Modal.Body>
                         {plan.map((sem: semester) =>
+                            //Linter error here. Calls to remove paren but if that occurs there is no paren around form
                             sem.classList.map((list: classes) => (
                                 <Form.Check
                                     key={list.code}
