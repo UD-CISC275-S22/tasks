@@ -12,36 +12,24 @@ interface InformationSystemsRequirementsProps {
 //man, why did the breadthCredits have to be the most complicated part?
 const calculateBreadthCredits = (
     degreePlan: semester[]
-): { breadthCredits: Record<string, number>; majorFreeElectives: number } => {
+): { breadthCredits: Record<string, number> } => {
     const breadthCredits: Record<string, number> = {
         TECH: 0,
         ARTS: 0,
         SOCI: 0,
         HIST: 0
     };
-    let majorFreeElectives = 0;
 
     degreePlan.forEach((semester) => {
         semester.classes.forEach((course) => {
             const { breadth, credits } = course;
 
-            if (breadth === "TECH") {
-                // Cap TECH credits at 6
-                breadthCredits[breadth] = Math.min(
-                    breadthCredits[breadth] + credits,
-                    6
-                );
-            } else {
-                // Accumulate credits for other breadths
-                breadthCredits[breadth] += credits;
-
-                // Cap at 6 and update major free electives for extra credits
-                majorFreeElectives += Math.max(0, credits - 6);
-            }
+            // Accumulate credits for other breadths
+            breadthCredits[breadth] += credits;
         });
     });
 
-    return { breadthCredits, majorFreeElectives };
+    return { breadthCredits };
 };
 
 const InformationSystemsRequirements: React.FC<
@@ -49,7 +37,7 @@ const InformationSystemsRequirements: React.FC<
 > = ({ currentDegreePlan }) => {
     console.log(currentDegreePlan);
     const [labTrack, setLabTrack] = useState<string>("Chose Your Lab Track");
-    const [majorFreeElectives, setMajorFreeElectives] = useState<number>(0);
+    //const [majorFreeElectives, setMajorFreeElectives] = useState<number>(0);
     const [breadthCredits, setBreadthCredits] = useState<
         Record<string, number>
     >({
@@ -59,7 +47,7 @@ const InformationSystemsRequirements: React.FC<
         HIST: 0
     });
     const [degreePlanCourses, setDegreePlanCourses] = useState<string[]>([]);
-
+    const [DLE, setDLE] = useState<boolean>(false);
     const majorCoreRequirements = [
         "CISC108",
         "CISC181",
@@ -118,10 +106,9 @@ const InformationSystemsRequirements: React.FC<
             });
         }); //runs through the given semester[] and pushes courseCode to newDegreePlanCourses array
         setDegreePlanCourses(newDegreePlanCourses);
-        const { breadthCredits, majorFreeElectives } =
-            calculateBreadthCredits(currentDegreePlan);
+        const { breadthCredits } = calculateBreadthCredits(currentDegreePlan);
         setBreadthCredits(breadthCredits); //set both the breadthRequirements and degreePlanCourses
-        setMajorFreeElectives(majorFreeElectives); //sets the major free electives
+        //setMajorFreeElectives(majorFreeElectives); //sets the major free electives
     }, [currentDegreePlan]);
 
     const contains = (strArr: string[], str: string): boolean => {
@@ -153,6 +140,9 @@ const InformationSystemsRequirements: React.FC<
 
     const handleLabChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         setLabTrack(e.target.value);
+    };
+    const handleDLEChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setDLE(e.target.checked);
     };
 
     return (
@@ -205,7 +195,7 @@ const InformationSystemsRequirements: React.FC<
                 )}
             </div>
             <div>
-                <h4>Breadth Requirements (Need 6 each):</h4>
+                <h4>Breadth Requirements:</h4>
                 {Object.entries(breadthCredits).map(([breadth, credits]) => (
                     <div key={breadth}>
                         {breadth}: {credits} Credits
@@ -241,9 +231,27 @@ const InformationSystemsRequirements: React.FC<
                     </div>
                 ))}
                 <div>
-                    <h4>Major Free Electives:</h4>
-                    {majorFreeElectives} Credits
+                    <p>
+                        Note: The University requires 6 credits for each
+                        breadth. After that, the remaining 9 credits MUST be
+                        something other than TECH.
+                    </p>
                 </div>
+            </div>
+            <div>
+                <p>
+                    <input
+                        type="checkbox"
+                        id="DLE"
+                        checked={DLE}
+                        onChange={handleDLEChange}
+                    />
+                    <label>Discovery Learning Experience (DLE)</label>
+                </p>
+                <p>
+                    If you are unsure about DLE classes, please check the UD
+                    Course Search.
+                </p>
             </div>
         </div>
     );
