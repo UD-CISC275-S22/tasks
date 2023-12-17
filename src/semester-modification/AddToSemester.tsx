@@ -179,3 +179,43 @@ export function AddToSemester({
         </div>
     );
 }
+import React from 'react';
+import { render, fireEvent } from '@testing-library/react';
+import { AddToSemester } from './AddToSemester';
+
+describe('AddToSemester', () => {
+  const handleClose = jest.fn();
+  const onAddClass = jest.fn();
+
+  const semesters = [
+    { season: 'Spring', year: 2023 },
+    { season: 'Summer', year: 2023 },
+    { season: 'Fall', year: 2023 },
+  ];
+
+  test('renders without errors', () => {
+    render(
+      <AddToSemester
+        handleClose={handleClose}
+        show={true}
+        semesters={semesters}
+        onAddClass={onAddClass}
+        currentPlan="Computer Science"
+      />
+    );
+  });
+
+  test('calls handleClose when Close button is clicked', () => {
+    const { getByText } = render(
+      <AddToSemester
+        handleClose={handleClose}
+        show={true}
+        semesters={semesters}
+        onAddClass={onAddClass}
+        currentPlan="Computer Science"
+      />
+    );
+
+    fireEvent.click(getByText('Close'));
+    expect(handleClose).toHaveBeenCalled();
+  });
