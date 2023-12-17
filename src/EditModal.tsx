@@ -28,11 +28,12 @@ export const EditCourseModal = ({
     const [prereq, setPrereq] = useState<string>(currentCourse.prereq);
     useEffect(() => {
         if (show) {
+            //Check if initial course ref isnt set or if its different from current course
             if (
                 !initialCourseRef.current ||
                 initialCourseRef.current.UUID !== currentCourse.UUID
             ) {
-                initialCourseRef.current = { ...currentCourse };
+                initialCourseRef.current = { ...currentCourse }; //Updates inital course ref to current course
             }
 
             setTicker(currentCourse.ticker);
@@ -41,10 +42,11 @@ export const EditCourseModal = ({
             setPrereq(currentCourse.prereq);
         }
     }, [show, currentCourse]);
-
+    //Reverts changes made to a course
     const revertChanges = () => {
         if (initialCourseRef.current) {
-            const initialCourse = initialCourseRef.current;
+            //Checks if there is an initial course ref
+            const initialCourse = initialCourseRef.current; //Gets the inital course
             setTicker(initialCourse.ticker);
             setName(initialCourse.name);
             setCredits(initialCourse.credits);

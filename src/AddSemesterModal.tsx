@@ -16,7 +16,7 @@ export function AddSemesterModal({
     year
 }: AddSemesterModalProps) {
     const [season, setSeason] = useState<seasonT>("winter");
-
+    //Handles adding new semester
     const handleAddSemester = () => {
         const newSemester: SemesterI = {
             season: season,
@@ -24,7 +24,7 @@ export function AddSemesterModal({
             year: year.name,
             courses: []
         };
-        addSemester(newSemester);
+        addSemester(newSemester); //Calls add semester function with new semester
         handleClose();
     };
 

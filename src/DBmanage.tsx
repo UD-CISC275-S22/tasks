@@ -16,25 +16,27 @@ import { Year } from "./viewCourseComponents";
 // export function CreatCoursePlan(uuid: string, DB: TotalDB) {}
 // export function deleteCoursePlan() {}
 // export function addToCoursePlan() {}
-export function deleteMultipleCoursesFromSemester(
-    courseUUIDs: string[],
+export function deleteMultipleCoursesFromSemester( //function removes multiple courses from a specific semester
+    courseUUIDs: string[], //Course uuids that will be deleted
     selectedSemester: SemesterI,
     courseplan: CoursePlan
 ): CoursePlan {
     return {
         ...courseplan,
         years: courseplan.years.map((year: yearI): yearI => {
+            //Iterates over each year
             const updatedSeasons: { [key in seasonT]?: SemesterI | null } = {};
 
             (Object.keys(year) as seasonT[]).forEach((season) => {
                 const currentSeason = year[season];
                 if (currentSeason && currentSeason.courses) {
+                    //Checks if current season has courses
                     updatedSeasons[season] = {
-                        ...currentSeason,
+                        ...currentSeason, //Clones current season
                         courses: currentSeason.courses.filter(
                             (course) =>
                                 course.UUID &&
-                                !courseUUIDs.includes(course.UUID)
+                                !courseUUIDs.includes(course.UUID) //Filters courses with UUIDS in the courseUUID array
                         )
                     };
                 } else {
@@ -44,12 +46,12 @@ export function deleteMultipleCoursesFromSemester(
 
             return {
                 ...year,
-                ...updatedSeasons
+                ...updatedSeasons //Clones original year and merges the updated seasons into the year
             };
         })
     };
 }
-
+//Removes a single course from a specific semester, very similar to above function.
 export function DeleteCourseFromSemester(
     selectedSemester: SemesterI,
     courseUUID: string,
