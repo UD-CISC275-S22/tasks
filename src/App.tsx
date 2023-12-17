@@ -59,7 +59,7 @@ function createUUID(db: CoursePlan[]) {
 const processedPlans = createUUID(coursePlanData as CoursePlan[]);
 
 function App(): JSX.Element {
-    const [EditCorseplan, setEditCorseplan] = useState<boolean>(false);
+    const [EditCorseplan, setEditCorseplan] = useState<boolean>(true);
     const [data, setdata] = useState<TotalDB>({
         Courseplans: processedPlans
     });
