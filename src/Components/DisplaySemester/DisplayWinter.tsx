@@ -10,6 +10,7 @@ import { Button, Modal, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { isDeleteExpression } from "typescript";
 import CourseEdit from "../CourseEdit";
 
+//displays the winter semesters
 export interface valueProps {
     semesters: Semester[];
     courseList: Course[];

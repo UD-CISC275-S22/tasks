@@ -1,6 +1,6 @@
 import React from "react";
 import { Dropdown } from "react-bootstrap";
-
+//clears an individual semester in a plan
 export const ClearSemester = ({
     clearSemester
 }: {

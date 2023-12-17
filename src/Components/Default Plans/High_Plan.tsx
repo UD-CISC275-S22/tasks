@@ -35,8 +35,8 @@ export function High(): Plan {
     spring2High = [...spring2High, ...temp, blankCourse, blankCourse];
 
     let fall3High = courseList.filter(
-        //id 2017 is CISC320, id 2015 is CISC303 and id 2022 is CISC361
-        (course) => course.id == 2017 || course.id == 2015 || course.id == 2022
+        //id 2017 is CISC320, id 2022 is CISC361, and id 2015 is CISC303
+        (course) => course.id == 2017 || course.id == 2022 || course.id == 2015
     );
     fall3High = [...fall3High, blankCourse, blankCourse];
 
@@ -47,8 +47,8 @@ export function High(): Plan {
     spring3High = [...spring3High, blankCourse, blankCourse, blankCourse];
 
     let fall4High = courseList.filter(
-        //id 2058 is CISC498
-        (course) => course.id == 2058
+        //id 25583 is CISC498
+        (course) => course.id == 2558
     );
 
     fall4High = [
@@ -60,8 +60,8 @@ export function High(): Plan {
     ];
 
     let spring4High = courseList.filter(
-        //id 2059 is CISC499 and id 2038 is CISC450 and id 61 is CISC471
-        (course) => course.id == 2059 || course.id == 2038 || course.id == 2045
+        //id 2059 is CISC499 and id 2338 is CISC450 and id 2045 is CISC471
+        (course) => course.id == 2059 || course.id == 2338 || course.id == 2045
     );
     spring4High = [...spring4High, blankCourse, blankCourse];
 

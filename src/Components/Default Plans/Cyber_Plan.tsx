@@ -18,23 +18,23 @@ export function Cyber(): Plan {
     let spring2Cyber = spring2();
     spring2Cyber = [...spring2Cyber, blankCourse, blankCourse, blankCourse];
     let fall3Cyber = courseList.filter(
-        //id 8 is CISC320 and id 9 is CISC361 and id 47 is CISC450
-        (course) => course.id == 8 || course.id == 9 || course.id == 47
+        //id 2017 is CISC320 and id 2022 is CISC361 and id 2038 is CISC450
+        (course) => course.id == 2017 || course.id == 2022 || course.id == 2038
     );
     fall3Cyber = [...fall3Cyber, blankCourse, blankCourse];
     let spring3Cyber = courseList.filter(
-        //id 7 is CISC303 and id 10 is CISC372
-        (course) => course.id == 7 || course.id == 10
+        //id 2015 is CISC303 and id 2025 is CISC372
+        (course) => course.id == 2015 || course.id == 2025
     );
     spring3Cyber = [...spring3Cyber, blankCourse, blankCourse, blankCourse];
     let fall4Cyber = courseList.filter(
-        //id 48 is CISC464 and id 16 is CISC498 and id 39 is CISC442
-        (course) => course.id == 48 || course.id == 16
+        //id 2041 is CISC464 and id 2058 is CISC498 and id 2036 is CISC442
+        (course) => course.id == 2041 || course.id == 2058
     );
     fall4Cyber = [...fall4Cyber, blankCourse, blankCourse, blankCourse];
     let spring4Cyber = courseList.filter(
-        //id 42 is CISC484 and id 49 is CPEG465 and id 50 is CISC494
-        (course) => course.id == 42 || course.id == 49 || course.id == 50
+        //id 2059 is CISC499 and id 2042 is CISC465 and id 2142 is CPEG494
+        (course) => course.id == 2059 || course.id == 2042 || course.id == 2142
     );
     spring4Cyber = [...spring4Cyber, blankCourse, blankCourse];
 
@@ -186,21 +186,3 @@ export function Cyber(): Plan {
         credits: 124
     };
 }
-/*
- * QUESTIONS
- * what do you mean by fall1/fall2/fall3...ect, are those seperated by year or
- * does that mean something else?
- * Are the general courses meant to be edited?
- */
-
-/*
- * IDEAS FOR HOW TO CLEAR PLAN
- * repeat drop down idea to remove desired semester
- * create a button to remove the desired semester
- */
-
-/*
- * DUMMY CODE
- * function dropPlanSemester () {
- * }
- */

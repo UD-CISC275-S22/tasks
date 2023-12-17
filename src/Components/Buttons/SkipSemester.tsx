@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Modal } from "react-bootstrap";
-
+//file that allows user to skip a semester
 export const SkipSemester = ({
     skipSemester,
     handleFifthClose,

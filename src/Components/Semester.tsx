@@ -40,8 +40,8 @@ import { LoadPlan } from "./Buttons/LoadPlan";
 import { PickAPlan } from "./Buttons/PickAPlan";
 import { ImportCSV } from "./Buttons/ImportCSV";
 import { RequiredClasses } from "./Buttons/requiredClasses";
-import CourseEdit from "./CourseEdit";
-//import { ExportCSV } from "./Buttons/ExportCSV";
+import ExportCSV from "./Buttons/ExportCSV";
+
 import {
     ArtificialIntelligence,
     Bioinformatics,
@@ -64,17 +64,7 @@ let Theory_Plan = Theory();
 let High_Plan = High();
 let Bio_Plan = Bio();
 
-//csv import libraries - Malika
-//run npm i papaparse and npm install --save-dev @types/papaparse
 import Papa from "papaparse";
-/* ----------------------------------------------------------------------------------------------------- */
-/*EVERYONE PLS READ THIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-These are the changes I made to make the degree requirements:
-    lines 44-51: I imported the degree requirements from requirements.ts
-    line 74 I: create a variable to change the state of the required courses based on the selected plan
-    lines 474-510: I called setcoreClasses in the handlePlans function to update the state based on the selected plan
-VIEW THE REQUIREDCLASSES.TSX FILE TO SEE OTHER CHANGES!!!
-/* ----------------------------------------------------------------------------------------------------- */
 
 export function ViewSemester(): JSX.Element {
     //states for the degree requirements based on the selected plan
@@ -461,7 +451,6 @@ export function ViewSemester(): JSX.Element {
     const handleResetToDefault = (editedCourse: Course) => {
         console.log("Edited course exists");
         const defaultCourse = findCourse(DEFAULT_COURSE_LIST, editedCourse.id);
-        //const beforeCourse = editedCourse;
         if (defaultCourse) {
             setEditedCourse(defaultCourse);
             const newCourseList = updateCourseList(COURSES_LIST, defaultCourse);
@@ -627,8 +616,7 @@ export function ViewSemester(): JSX.Element {
                     handleClose={closeImportModal}
                     importPlans={importPlans}
                 ></ImportCSV>
-
-                {/*<ExportCSV plans={allPlans}></ExportCSV>*/}
+                <ExportCSV plans={allPlans}></ExportCSV>
             </div>
             <hr style={{ backgroundColor: "#0f234c" }}></hr>
             {
@@ -637,7 +625,7 @@ export function ViewSemester(): JSX.Element {
                     <div>
                         <h5 style={{ color: "white" }}>{plan.concentration}</h5>
                         <h5 style={{ color: "white" }}>
-                            Total Plan Credit: {totalPlanCredits}
+                            Total Plan Credit: {totalPlanCredits} / 124
                         </h5>
                         <DisplayPlan
                             indivPlanSem={indivPlanSem}

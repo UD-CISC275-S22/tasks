@@ -1,6 +1,7 @@
 import React from "react";
 import { Dropdown } from "react-bootstrap";
 
+//this is the file for loading the saved plans that the user has for future use
 export const LoadPlan = ({ loadPlan }: { loadPlan: (op: string) => void }) => {
     const planSaveOptions = ["Plan 1", "Plan 2", "Plan 3", "Plan 4"];
 

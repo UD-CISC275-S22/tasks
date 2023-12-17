@@ -2,10 +2,10 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-extra-parens */
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import React, { useState } from "react";
+import React from "react";
 import { Button, Form } from "react-bootstrap";
 import { Course } from "../../Interfaces/course";
-
+//this file is for dropping and adding and deleting courses
 export const DropAdd = ({
     dropClass,
     addClass,

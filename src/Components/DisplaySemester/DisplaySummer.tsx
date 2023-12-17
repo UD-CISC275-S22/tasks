@@ -9,6 +9,7 @@ import { SkipSemester } from "../Buttons/SkipSemester";
 import { Button, Modal, OverlayTrigger, Tooltip } from "react-bootstrap";
 import CourseEdit from "../CourseEdit";
 
+//displays the summer semesters
 export interface valueProps {
     semesters: Semester[];
     courseList: Course[];

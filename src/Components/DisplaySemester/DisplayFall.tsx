@@ -1,13 +1,13 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
 import { Course } from "../../Interfaces/course";
-import { ClearSemester } from "../Buttons/clearingSemester";
 import { DropAdd } from "../Buttons/dropAdd";
 import { Semester } from "../../Interfaces/semester";
 import { Button, Form, Modal, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { SkipSemester } from "../Buttons/SkipSemester";
 import CourseEdit from "../CourseEdit";
 
+//displays the fall semesters
 export interface valueProps {
     semesters: Semester[];
     courseList: Course[];
@@ -19,7 +19,6 @@ export interface valueProps {
     dropClass: (targetYear: number, targetSem: string) => void;
     addClass: (targetYear: number, targetSem: string) => void;
     updateCurrCourse(event: React.ChangeEvent<HTMLSelectElement>): void;
-    //clearSemesterCourses(idx: number): void;
     skipSemester(targetYear: number, targetSem: string): void;
     handleClose(): void;
     handleShow(): void;
@@ -49,7 +48,6 @@ export function DisplayFall({
     dropClass,
     addClass,
     updateCurrCourse,
-    //clearSemesterCourses,
     skipSemester,
     handleClose,
     handleShow,
@@ -62,8 +60,6 @@ export function DisplayFall({
     handleEditClose,
     handleEditShow
 }: valueProps): JSX.Element {
-    //index now takes in two parameters (targetYear - this is NOT the state and it's already passed in from the Semester.tsx file)
-    //targetSem is also NOT the state and it's already passed in from the Semester.tsx file. So both variables are already declared in the indivPlanSem function
     const idx = index(targetYear, targetSem);
     const fallCourses = semesters[idx].courseList;
     console.log("fall courses: ", fallCourses);
@@ -76,12 +72,13 @@ export function DisplayFall({
     const [displayCourseCategory, setDisplayCourseCategory] =
         useState<string>("AllCourses");
 
-    //update the state of the dsiplay course categoery
+    //update the state of the display course category
     function updateDisplayCourseCat(
         event: React.ChangeEvent<HTMLInputElement>
     ) {
         setDisplayCourseCategory(event.target.value);
     }
+
     return (
         <div className="Fall">
             <h1>Fall Year {targetYear}</h1>

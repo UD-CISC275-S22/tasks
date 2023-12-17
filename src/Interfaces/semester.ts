@@ -1,3 +1,4 @@
+//interface for creating a semester
 import { Course } from "./course";
 
 export interface Semester {
