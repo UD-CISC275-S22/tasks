@@ -292,7 +292,7 @@ export function CoureseplansBoot({
                     setCurrentCourseEdit={setCourseEdit}
                     selectedSemester={clickToAddToSemeser}
                     UpdateCourseplan={setCourseplanDebug}
-                    deletecourse={clickToDeleteFromSemester}
+                    backToQueue={addtempCourse}
                 ></CourseplanClick>
             </Row>
         </div>

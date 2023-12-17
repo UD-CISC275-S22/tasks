@@ -25,7 +25,8 @@ function Semester({
     edit,
     clickToDeleteFromSemester,
     updateCoursePlan,
-    coursePlan
+    coursePlan,
+    backToQueue
 }: {
     rendSemester: SemesterI;
     updateCoursePlan: (newCoursePlan: CoursePlan) => void;
@@ -35,6 +36,7 @@ function Semester({
         courseUUID: string,
         currentSemester: SemesterI
     ) => void;
+    backToQueue: (sendcourse: Course, seemester: SemesterI) => void;
 }): JSX.Element {
     const deleteAllCoursesFromSemester = () => {
         const courseUUIDs = rendSemester.courses
@@ -72,22 +74,33 @@ function Semester({
                             <td>{rendCourse.ticker}</td>
                             <td>{rendCourse.name}</td>
                             <td>{rendCourse.credits}</td>
-                            <button
-                                onClick={(e) => {
-                                    e.stopPropagation();
-                                    if (rendCourse.UUID) {
-                                        clickToDeleteFromSemester(
-                                            rendCourse.UUID,
-                                            rendSemester
-                                        );
-                                    }
-                                }}
-                                style={{
-                                    backgroundColor: "red"
-                                }}
-                            >
-                                Delete
-                            </button>
+                            <td>
+                                <button
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        if (rendCourse.UUID) {
+                                            clickToDeleteFromSemester(
+                                                rendCourse.UUID,
+                                                rendSemester
+                                            );
+                                        }
+                                    }}
+                                    style={{
+                                        backgroundColor: "red"
+                                    }}
+                                >
+                                    Delete
+                                </button>
+                                <Button
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        backToQueue(rendCourse, rendSemester);
+                                    }}
+                                    variant="info"
+                                >
+                                    Queue
+                                </Button>
+                            </td>
                         </tr>
                     );
                 })}
@@ -118,7 +131,8 @@ function Year({
     addSemesterToYear,
     clickToDeleteFromSemester,
     coursePlan,
-    updateCoursePlan
+    updateCoursePlan,
+    backToQueue
 }: {
     year: yearI;
     editCourse: (course: Course) => void;
@@ -131,6 +145,7 @@ function Year({
         courseUUID: string,
         currentSemester: SemesterI
     ) => void;
+    backToQueue: (sendcourse: Course, seemester: SemesterI) => void;
 }): JSX.Element {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     function DisplaySemester(year: yearI, index: number): SemesterI | null {
@@ -168,7 +183,16 @@ function Year({
             <Table style={{ tableLayout: "fixed" }} bordered size="sm">
                 <thead>
                     <tr>
-                        <th colSpan={columncount}>{year.name}</th>
+                        <th colSpan={columncount}>
+                            {year.name}{" "}
+                            <Button
+                                variant="primary"
+                                onClick={addSemesterToYear}
+                                className="float-end"
+                            >
+                                Add Semester
+                            </Button>
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -332,7 +356,9 @@ function Year({
                                             })
                                         }
                                         className="float-end"
-                                    ></Button>
+                                    >
+                                        Clear Semester
+                                    </Button>
                                     <Button
                                         variant="danger"
                                         className="float-end"
@@ -369,6 +395,7 @@ function Year({
                                             }
                                             coursePlan={coursePlan}
                                             updateCoursePlan={updateCoursePlan}
+                                            backToQueue={backToQueue}
                                         />
                                     </td>
                                 ) : null;
@@ -377,9 +404,6 @@ function Year({
                     </tr>
                 </tbody>
             </Table>
-            <Button variant="primary" onClick={addSemesterToYear}>
-                Add Semester
-            </Button>
         </div>
     );
 }
@@ -387,13 +411,14 @@ export function CourseplanClick({
     Courseplan,
     setCurrentCourseEdit,
     selectedSemester,
-    UpdateCourseplan
+    UpdateCourseplan,
+    backToQueue
 }: {
     Courseplan: CoursePlan;
     setCurrentCourseEdit: (course: Course) => void;
     selectedSemester: (semester: SemesterI) => void;
     UpdateCourseplan: (courseplan: CoursePlan) => void;
-    deletecourse: (courseUUID: string, currentSemester: SemesterI) => void;
+    backToQueue: (sendcourse: Course) => void;
 }) {
     const [showAddSemesterModal, setShowAddSemesterModal] = useState(false);
     const [currentYear, setCurrentYear] = useState<yearI | null>(null);
@@ -406,7 +431,6 @@ export function CourseplanClick({
         courseUUID: string,
         currentSemester: SemesterI
     ) => {
-        console.log("click registeredqwe");
         const updatedCoursePlan = DeleteCourseFromSemester(
             currentSemester,
             courseUUID,
@@ -414,6 +438,10 @@ export function CourseplanClick({
         );
         UpdateCourseplan(updatedCoursePlan);
     };
+    function backToQueueClick(sendcourse: Course, seemester: SemesterI) {
+        backToQueue(sendcourse);
+        handleDeleteCourse(sendcourse.UUID!, seemester);
+    }
     const addSemesterToCoursePlan = (
         newSemester: SemesterI,
         yearName: string
@@ -461,6 +489,7 @@ export function CourseplanClick({
                         )
                     }
                     clickToDeleteFromSemester={handleDeleteCourse}
+                    backToQueue={backToQueueClick}
                     addSemesterToYear={() =>
                         handleOpenAddSemesterModal(curyear)
                     }
