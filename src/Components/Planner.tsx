@@ -88,7 +88,7 @@ export function Planner({
         //         : course
         // );
         //const deepCopy = semArr.map((sem: semester): semester => ({ ...sem }));
-        console.log(updatedCourse, OGcourseCode);
+        //console.log(updatedCourse, OGcourseCode);
         const updatedCourses = semArr.map((sem: semester): semester => {
             return {
                 name: sem.name,
@@ -103,14 +103,22 @@ export function Planner({
             };
         });
         // Update your state with the new array of courses
-        console.log(OGcourseCode);
+        //console.log(OGcourseCode);
         setSemArr(updatedCourses);
-        console.log(semArr);
+        //console.log(semArr);
         setIsPlanChanged(true);
 
         // Clear the editing state
         // setEditingCourse(null);
     };
+
+    function changeSemester(updatedCourse: Class) {
+        if (updatedCourse.semester) {
+            removeClass(updatedCourse, semArr);
+            addToCorrectSem(updatedCourse, semArr);
+            setSemArr(semArr);
+        }
+    }
 
     const [semArrClicked, setSemArrClicked] = useState<semester[]>(semArr);
     const [clicked, setClicked] = useState<boolean>(false);
@@ -232,11 +240,7 @@ export function Planner({
                     </Col>
                     <Col>{course.credits}</Col>
                     <Col>
-                        <Button
-                            onClick={() =>
-                                removeClass(course.courseCode, semArr)
-                            }
-                        >
+                        <Button onClick={() => removeClass(course, semArr)}>
                             Remove
                         </Button>
                     </Col>
@@ -244,6 +248,7 @@ export function Planner({
                         <EditCourse
                             course={course}
                             onEditFormSubmit={handleEditFormSubmit}
+                            changeSemester={changeSemester}
                         />
                         <Button onClick={() => revertCourse(course)}>
                             Revert
@@ -274,7 +279,7 @@ export function Planner({
                             <Col>Course</Col>
                             <Col>Number of Credits</Col>
                             <Col>Remove Course</Col>
-                            <Col>Edit Course</Col>
+                            <Col>Edit Course Information</Col>
                         </Row>
                         {addClasstoTable([semester])}
                         <Button
@@ -295,14 +300,15 @@ export function Planner({
             </div>
         );
     }
-    function removeClass(courseCode: string, semsArr: semester[]) {
+    function removeClass(removeThisCourse: Class, semsArr: semester[]) {
         const removedClassArr = semsArr.map((sem: semester): semester => {
             return {
                 name: sem.name,
                 classes: [
                     ...sem.classes.filter(
                         (course: Class): boolean =>
-                            course.courseCode !== courseCode
+                            course.courseCode !== removeThisCourse.courseCode ||
+                            course.semester !== removeThisCourse.semester
                     )
                 ]
             };
@@ -323,10 +329,8 @@ export function Planner({
         });
         setSemArr(updatedSem);
         setIsPlanChanged(true);
-        // console.log(semArr);
     }
     function addCourse(): JSX.Element {
-        //console.log(semesterClasses);
         return (
             <div>
                 <h3 style={{ color: "#1348e7" }}>
@@ -361,17 +365,6 @@ export function Planner({
                             }}
                         />
                     </div>
-                    {/* <div style={{ marginLeft: "5px" }}>
-                        <SlowAdd
-                            onCourseInfo={function (courseInfo: Class): void {
-                                // setSemester1(courseInfo.semester);
-                                // setYear1(courseInfo.year);
-                                // addSemLabel(semester1, year1);
-                                addToCorrectSem(courseInfo, semArr);
-                                console.log(semArr);
-                            }}
-                        />
-                    </div> */}
                 </div>
             </div>
         );
@@ -389,9 +382,7 @@ export function Planner({
             (semester: semester): semester =>
                 semester.name === sem.name ? clearClasses(semester) : semester
         );
-        //sem.classes = [];
         setSemArr(emptySemArr);
-        //return sem;
     }
 
     function addForClickedSem(clickedArr: semester[]) {
@@ -450,26 +441,6 @@ export function Planner({
                     style={{ display: "none" }}
                     onChange={handleImportSemesters}
                 />
-            </div>
-            <div>
-                {/* Display your courses */}
-                {/* {courses.map((course) => (
-                    <div key={course.courseCode}>
-                        <p>{course.courseTitle}</p>
-                        <p>{course.courseCode}</p>
-                        <p>{course.credits}</p>
-                        <Button onClick={() => handleEditClick(course)}>
-                            Edit
-                        </Button>
-                    </div>
-                ))} */}
-                {/* Render the EditCourse component when editing */}
-                {/* {editingCourse && (
-                    <EditCourse
-                        course={editingCourse}
-                        onEditFormSubmit={handleEditFormSubmit}
-                    />
-                )} */}
             </div>
             {addCourse()}
             {/* add Clear Semesters and goBack button */}
