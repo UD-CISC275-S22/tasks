@@ -2,9 +2,7 @@ import React from "react";
 import { CSVLink } from "react-csv";
 import { CoursePlan, seasonT } from "./interfaces/semester";
 import { Course } from "./interfaces/course";
-import { JsxElement } from "typescript";
 import { Button } from "react-bootstrap";
-import CSVReader from "react-csv-reader";
 interface CSVRow {
     planName: string;
     year: string;
