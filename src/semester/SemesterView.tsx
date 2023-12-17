@@ -15,7 +15,8 @@ export function SemesterView({
     handleOnDrop,
     handleOnDragOver,
     clearCourses,
-    updateSemester
+    updateSemester,
+    dragCourse
 }: {
     semester: semester;
     clearSemester: (id: number) => void;
@@ -24,6 +25,7 @@ export function SemesterView({
     handleOnDragOver: (event: React.DragEvent<HTMLDivElement>) => void;
     clearCourses: (sems: semester) => void;
     updateSemester: (semester: semester) => void;
+    dragCourse: classes | undefined;
 }): JSX.Element {
     //This grabs the info of the course being dragged.
     //TODO: Doesn't properly render on its own.
@@ -37,10 +39,43 @@ export function SemesterView({
         console.log(course);
         setDragCourse(course);
     };
+    const handleOnDragLeaves = (
+        event: React.DragEvent<HTMLDivElement>,
+        id: number
+    ) => {
+        const semesterToUpdate = { ...semester };
+        if (id === semester.id) {
+            if (dragCourse !== undefined) {
+                // Create a new array of classes for the updated semester
+                const updatedClasses = [
+                    ...semesterToUpdate.classList.filter(
+                        (allClasses: classes): boolean =>
+                            allClasses.title != dragCourse.title
+                    )
+                ];
+
+                // Get new credit total
+                const totalCredits = updatedClasses.reduce(
+                    (total: number, currentClass: classes) =>
+                        total + currentClass.credits,
+                    0
+                );
+
+                // Update the classList of the semester with the new array of classes
+                semesterToUpdate.classList = updatedClasses;
+                semesterToUpdate.totalCredits = totalCredits;
+
+                // Update the schedule with the modified semester
+                updateSemester(semesterToUpdate);
+            }
+        }
+    };
     return (
         <div
             onDrop={(e) => handleOnDrop(e, semester.id)}
             onDragOver={(e) => handleOnDragOver(e)}
+            onDragLeave={(e) => handleOnDragLeaves(e, semester.id)}
+            //onDragLeaves={(e) => handleOnDragLeaves(e, semester.id)}
         >
             <div>
                 <h3>{`Semester Name: ${semester.season}`}</h3>
@@ -68,6 +103,13 @@ export function SemesterView({
                                 onDragStart={(e) =>
                                     handleDragStart(e, classItem)
                                 }
+                                // onDragLeave={(e) =>
+                                //     handleOnDragLeaves(
+                                //         e,
+                                //         classItem,
+                                //         semester.id
+                                //     )
+                                // }
                                 key={classItem.code}
                             >
                                 <td>{classItem.code}</td>

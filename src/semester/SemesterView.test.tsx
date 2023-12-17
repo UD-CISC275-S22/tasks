@@ -1,8 +1,6 @@
-import React from "react";
 import { classes } from "../Interface/classes";
 import { semester } from "../Interface/semester";
-import { SemesterView } from "./SemesterView";
-import { fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, screen } from "@testing-library/react";
 
 const classExamples: classes[] = [
     {
@@ -28,28 +26,25 @@ const semesterExample: semester = {
 };
 
 describe("SemesterView", () => {
-    const DragOverHandler = jest.fn();
-    const DropHandler = jest.fn();
     const clearSemesterHandler = jest.fn();
     clearSemesterHandler.mockImplementation(() => {
         semesterExample.classList = [];
     });
-    const setDragCourseHandler = jest.fn();
 
-    beforeEach(() => {
-        render(
-            <SemesterView
-                key={semesterExample.id}
-                semester={semesterExample}
-                handleOnDragOver={DragOverHandler}
-                handleOnDrop={DropHandler}
-                clearSemester={clearSemesterHandler}
-                setDragCourse={setDragCourseHandler}
-                clearCourses={jest.fn()}
-                updateSemester={jest.fn()}
-            />
-        );
-    });
+    // beforeEach(() => {
+    //     render(
+    //         <SemesterView
+    //             key={semesterExample.id}
+    //             semester={semesterExample}
+    //             handleOnDragOver={DragOverHandler}
+    //             handleOnDrop={DropHandler}
+    //             clearSemester={clearSemesterHandler}
+    //             setDragCourse={setDragCourseHandler}
+    //             clearCourses={jest.fn()}
+    //             updateSemester={jest.fn()}
+    //         />
+    //     );
+    // });
     test("SemesterView renders a heading with the season of the semester.", () => {
         screen.getByRole("heading", { name: semesterExample.season });
     });
