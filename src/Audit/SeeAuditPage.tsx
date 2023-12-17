@@ -1,6 +1,6 @@
 /* eslint-disable no-extra-parens */
 /* eslint-disable indent */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import { semester } from "../Interface/semester";
 import { classes } from "../Interface/classes";
@@ -10,26 +10,26 @@ export function SeeAuditPage({
     reqList,
     plan,
     prevUsedClasses,
-    major,
     creditList,
-    pushCurrList,
+    major,
+    resetCurrList,
     stopView
 }: {
     canView: boolean;
     reqList: string[];
     plan: semester[];
     prevUsedClasses: classes[][];
-    major: string;
     creditList: number[];
-    pushCurrList: (usedClasses: classes[][]) => void;
+    major: string;
+    resetCurrList: () => void;
     stopView: () => void;
 }): JSX.Element {
     const [usedClasses, setUsedClasses] =
         useState<classes[][]>(prevUsedClasses);
     const [showModal, setShowModal] = useState(false);
-    const [newCredit, setNewCredit] = useState<number[]>(creditList);
+    const [majorName, setMajorName] = useState<string>("");
+    const [newCredit, setNewCredit] = useState<number[]>([0]);
     const [selectedClass, setSelectedClass] = useState<number>(0);
-    //Base case only occurs if no option is available
     const [classToAdd, setClassToAdd] = useState<classes>({
         code: "",
         title: "",
@@ -37,9 +37,19 @@ export function SeeAuditPage({
         preReq: [""]
     });
 
+    //updates newCredit and majorName if anything changes
+    useEffect(() => {
+        setNewCredit(creditList);
+    }, creditList);
+
+    useEffect(() => {
+        setMajorName(major);
+    });
+
     function endView() {
         //ending functions
-        pushCurrList(usedClasses);
+        resetCurrList();
+        setUsedClasses([]);
         stopView();
     }
 
@@ -48,6 +58,7 @@ export function SeeAuditPage({
     }
 
     const changeAddClass = (event: React.ChangeEvent<HTMLInputElement>) => {
+        //option hovered in modal is saved and then checked against the given plan to see if the class exists
         const wantedClass = event.target.value;
 
         plan.map((sem) =>
@@ -58,6 +69,7 @@ export function SeeAuditPage({
     };
 
     function changeArr() {
+        //checks to ensure all information about wantClass and selectedClass are valid, if so add the class to the list of used classes at the index given by IDX in return plan
         if (classToAdd !== null && typeof selectedClass === "number") {
             const holder = [...usedClasses];
 
@@ -71,6 +83,9 @@ export function SeeAuditPage({
     }
 
     function setCredits(IDX: number) {
+        //Goes through the list of classes in used classes at a certain index to determine how many credits taken.
+        //Subtract credits from required credit list until 0 to symbolize the requirement has been met
+
         const holder = [...newCredit];
         holder[IDX] =
             holder[IDX] -
@@ -86,7 +101,7 @@ export function SeeAuditPage({
     if (canView) {
         return (
             <div>
-                <h3>{major}</h3>
+                <h3>{majorName}</h3>
                 <table className="table table-hover table-dark">
                     <thead>
                         <tr>
@@ -126,7 +141,7 @@ export function SeeAuditPage({
                                                 usedClasses[IDX] = [];
                                                 newCredit[IDX] =
                                                     creditList[IDX];
-                                                pushCurrList(usedClasses);
+                                                resetCurrList();
                                             }}
                                         >
                                             Reset
@@ -151,6 +166,7 @@ export function SeeAuditPage({
                     </Modal.Header>
                     <Modal.Body>
                         {plan.map((sem: semester) =>
+                            //Linter error here. Calls to remove paren but if that occurs there is no paren around form
                             sem.classList.map((list: classes) => (
                                 <Form.Check
                                     key={list.code}
