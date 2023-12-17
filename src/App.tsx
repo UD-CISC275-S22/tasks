@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable no-extra-parens */
 import React from "react"; //, {useEffect}
 import { useState } from "react";
@@ -26,6 +27,9 @@ import {
     oneYearUpdate,
     updateCourse
 } from "./DBmanage";
+import { ExportToCSV, convertCoursePlans } from "./CSV";
+import CSVReader from "react-csv-reader";
+import HelpModal from "./HelpModal";
 //import { degreeRequirementCheck } from "./DegreeRequirementCheck";
 
 function createUUID(db: CoursePlan[]) {
@@ -59,6 +63,9 @@ function App(): JSX.Element {
     const [data, setdata] = useState<TotalDB>({
         Courseplans: processedPlans
     });
+    const [modalShow, setModalShow] = useState(false);
+    const openModal = () => setModalShow(true);
+    const closeModal = () => setModalShow(false);
 
     //console.log();
     const DbManager: dbMangement = {
@@ -96,9 +103,6 @@ function App(): JSX.Element {
             Courseplans: updatedCoursePlans
         });
     }
-    const handleImportCSV = () => {
-        console.log("Import csv button clicked");
-    };
 
     function setNewCourse(curCourse: Course) {
         if (EditCorseplan) {
@@ -114,14 +118,17 @@ function App(): JSX.Element {
             });
         }
     }
-
-    //degreeRequirementCheck(degreeData[0], coursePlanData[0]);
+    const [courseplans, setCorseplans] = useState<CoursePlan[]>(
+        data.Courseplans
+    );
+    function updateCoursePlan(newCourseplan: CoursePlan) {
+        setCorseplans([...courseplans, newCourseplan]);
+    }
 
     return (
         <div className="App">
             <div className="logo">
                 <h1 className="App-title">
-                    <Container>Test</Container>
                     <img
                         src={require("./ud_logo.jpg")}
                         width="150"
@@ -137,7 +144,12 @@ function App(): JSX.Element {
                 {EditCorseplan && (
                     <button
                         className="buttonSpacing"
-                        onClick={() => setEditCorseplan(false)}
+                        onClick={() => {
+                            setEditCoursePlan(
+                                createFourYearCoursePlan("Click To Edit Name")
+                            );
+                            setEditCorseplan(false);
+                        }}
                     >
                         New Course Plans
                     </button>
@@ -150,14 +162,26 @@ function App(): JSX.Element {
                         View Course Plans
                     </button>
                 )}
-                <button onClick={handleImportCSV}>Import CSV</button>
+                <ExportToCSV coursePlans={courseplans} />
+                <button onClick={openModal}>Need Help?</button>
+                <HelpModal show={modalShow} onClose={closeModal}></HelpModal>
+                <CSVReader
+                    onFileLoaded={(data, fileInfo, originalFile) =>
+                        setCorseplans(convertCoursePlans(data))
+                    }
+                />
             </div>
 
             <div className="container-fluid">
                 {EditCorseplan ? (
                     <MulitCourseplan
-                        Courseplans={data.Courseplans}
+                        Courseplans={courseplans}
                         setCurrentCourseEdit={setCurrentCourseEdit}
+                        setCurrentCourseplanEdit={(courseplan: CoursePlan) => {
+                            setEditCoursePlan(courseplan);
+                            setEditCorseplan(false);
+                        }}
+                        setCoursePlan={setCorseplans}
                     />
                 ) : (
                     <CoureseplansBoot
@@ -165,9 +189,7 @@ function App(): JSX.Element {
                         setCourseEdit={setCurrentCourseEdit}
                         curCoursePlan={currentEditCoureplan}
                         setEditCoursePlan={setEditCoursePlan}
-                        updateCoursePlan={function (): void {
-                            throw new Error("Function not implemented.");
-                        }}
+                        updateCoursePlan={updateCoursePlan}
                         deletecourse={deleteCourseFromCoursePlan}
                     />
                 )}

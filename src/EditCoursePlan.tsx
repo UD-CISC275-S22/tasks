@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable no-extra-parens */
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import React, { useState } from "react";
@@ -9,6 +10,7 @@ import "./App.css";
 //import { ClearCourseModal } from "./ClearCourseModal";
 //import { AddCourseModal } from "./AddCourseModal";
 import {
+    clearallsemester,
     DeleteCourseFromSemester,
     UpdateCoureplanYear,
     deleteMultipleCoursesFromSemester,
@@ -23,7 +25,8 @@ function Semester({
     edit,
     clickToDeleteFromSemester,
     updateCoursePlan,
-    coursePlan
+    coursePlan,
+    backToQueue
 }: {
     rendSemester: SemesterI;
     updateCoursePlan: (newCoursePlan: CoursePlan) => void;
@@ -33,6 +36,7 @@ function Semester({
         courseUUID: string,
         currentSemester: SemesterI
     ) => void;
+    backToQueue: (sendcourse: Course, seemester: SemesterI) => void;
 }): JSX.Element {
     const deleteAllCoursesFromSemester = () => {
         const courseUUIDs = rendSemester.courses
@@ -70,22 +74,33 @@ function Semester({
                             <td>{rendCourse.ticker}</td>
                             <td>{rendCourse.name}</td>
                             <td>{rendCourse.credits}</td>
-                            <button
-                                onClick={(e) => {
-                                    e.stopPropagation();
-                                    if (rendCourse.UUID) {
-                                        clickToDeleteFromSemester(
-                                            rendCourse.UUID,
-                                            rendSemester
-                                        );
-                                    }
-                                }}
-                                style={{
-                                    backgroundColor: "red"
-                                }}
-                            >
-                                Delete
-                            </button>
+                            <td>
+                                <button
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        if (rendCourse.UUID) {
+                                            clickToDeleteFromSemester(
+                                                rendCourse.UUID,
+                                                rendSemester
+                                            );
+                                        }
+                                    }}
+                                    style={{
+                                        backgroundColor: "red"
+                                    }}
+                                >
+                                    Delete
+                                </button>
+                                <Button
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        backToQueue(rendCourse, rendSemester);
+                                    }}
+                                    variant="info"
+                                >
+                                    Queue
+                                </Button>
+                            </td>
                         </tr>
                     );
                 })}
@@ -104,18 +119,6 @@ function Semester({
                     </td>
                 </tr>
             </tfoot>
-            <tfoot>
-                <tr>
-                    <td colSpan={3}>
-                        <button
-                            onClick={deleteAllCoursesFromSemester}
-                            style={{ backgroundColor: "red" }}
-                        >
-                            Delete All Courses
-                        </button>
-                    </td>
-                </tr>
-            </tfoot>
         </Table>
     );
 }
@@ -128,7 +131,8 @@ function Year({
     addSemesterToYear,
     clickToDeleteFromSemester,
     coursePlan,
-    updateCoursePlan
+    updateCoursePlan,
+    backToQueue
 }: {
     year: yearI;
     editCourse: (course: Course) => void;
@@ -141,6 +145,7 @@ function Year({
         courseUUID: string,
         currentSemester: SemesterI
     ) => void;
+    backToQueue: (sendcourse: Course, seemester: SemesterI) => void;
 }): JSX.Element {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     function DisplaySemester(year: yearI, index: number): SemesterI | null {
@@ -178,22 +183,46 @@ function Year({
             <Table style={{ tableLayout: "fixed" }} bordered size="sm">
                 <thead>
                     <tr>
-                        <th colSpan={columncount}>{year.name}</th>
+                        <th colSpan={columncount}>
+                            {year.name}{" "}
+                            <Button
+                                variant="primary"
+                                onClick={addSemesterToYear}
+                                className="float-end"
+                            >
+                                Add Semester
+                            </Button>
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         {year.fall && (
-                            <th onClick={() => selectedSemester(year.fall!)}>
+                            <th>
                                 Fall
                                 <ButtonGroup style={{ display: "flex" }}>
                                     <Button
+                                        variant="success"
                                         onClick={() =>
                                             selectedSemester(year.fall!)
                                         }
                                         className="float-end"
                                     >
                                         AddQueue
+                                    </Button>
+                                    <Button
+                                        onClick={() =>
+                                            updateYear({
+                                                ...year,
+                                                fall: {
+                                                    ...year.fall,
+                                                    courses: []
+                                                } as SemesterI
+                                            })
+                                        }
+                                        className="float-end"
+                                    >
+                                        Clear semester
                                     </Button>
                                     <Button
                                         variant="danger"
@@ -214,16 +243,31 @@ function Year({
                             </th>
                         )}
                         {year.winter && (
-                            <th onClick={() => selectedSemester(year.winter!)}>
+                            <th>
                                 winter
                                 <ButtonGroup style={{ display: "flex" }}>
                                     <Button
+                                        variant="success"
                                         onClick={() =>
                                             selectedSemester(year.winter!)
                                         }
                                         className="float-end"
                                     >
                                         AddQueue
+                                    </Button>
+                                    <Button
+                                        onClick={() =>
+                                            updateYear({
+                                                ...year,
+                                                winter: {
+                                                    ...year.winter,
+                                                    courses: []
+                                                } as SemesterI
+                                            })
+                                        }
+                                        className="float-end"
+                                    >
+                                        Clear semester
                                     </Button>
                                     <Button
                                         variant="danger"
@@ -244,16 +288,31 @@ function Year({
                             </th>
                         )}
                         {year.spring && (
-                            <th onClick={() => selectedSemester(year.spring!)}>
+                            <th>
                                 Spring
                                 <ButtonGroup style={{ display: "flex" }}>
                                     <Button
+                                        variant="success"
                                         onClick={() =>
                                             selectedSemester(year.spring!)
                                         }
                                         className="float-end"
                                     >
                                         AddQueue
+                                    </Button>
+                                    <Button
+                                        onClick={() =>
+                                            updateYear({
+                                                ...year,
+                                                spring: {
+                                                    ...year.spring,
+                                                    courses: []
+                                                } as SemesterI
+                                            })
+                                        }
+                                        className="float-end"
+                                    >
+                                        Clear semester
                                     </Button>
                                     <Button
                                         variant="danger"
@@ -278,12 +337,27 @@ function Year({
                                 Summer
                                 <ButtonGroup style={{ display: "flex" }}>
                                     <Button
+                                        variant="success"
                                         onClick={() =>
                                             selectedSemester(year.summer!)
                                         }
                                         className="float-end"
                                     >
                                         AddQueue
+                                    </Button>
+                                    <Button
+                                        onClick={() =>
+                                            updateYear({
+                                                ...year,
+                                                summer: {
+                                                    ...year.summer,
+                                                    courses: []
+                                                } as SemesterI
+                                            })
+                                        }
+                                        className="float-end"
+                                    >
+                                        Clear Semester
                                     </Button>
                                     <Button
                                         variant="danger"
@@ -321,6 +395,7 @@ function Year({
                                             }
                                             coursePlan={coursePlan}
                                             updateCoursePlan={updateCoursePlan}
+                                            backToQueue={backToQueue}
                                         />
                                     </td>
                                 ) : null;
@@ -329,9 +404,6 @@ function Year({
                     </tr>
                 </tbody>
             </Table>
-            <Button variant="primary" onClick={addSemesterToYear}>
-                Add Semester
-            </Button>
         </div>
     );
 }
@@ -339,13 +411,14 @@ export function CourseplanClick({
     Courseplan,
     setCurrentCourseEdit,
     selectedSemester,
-    UpdateCourseplan
+    UpdateCourseplan,
+    backToQueue
 }: {
     Courseplan: CoursePlan;
     setCurrentCourseEdit: (course: Course) => void;
     selectedSemester: (semester: SemesterI) => void;
     UpdateCourseplan: (courseplan: CoursePlan) => void;
-    deletecourse: (courseUUID: string, currentSemester: SemesterI) => void;
+    backToQueue: (sendcourse: Course) => void;
 }) {
     const [showAddSemesterModal, setShowAddSemesterModal] = useState(false);
     const [currentYear, setCurrentYear] = useState<yearI | null>(null);
@@ -358,7 +431,6 @@ export function CourseplanClick({
         courseUUID: string,
         currentSemester: SemesterI
     ) => {
-        console.log("click registeredqwe");
         const updatedCoursePlan = DeleteCourseFromSemester(
             currentSemester,
             courseUUID,
@@ -366,6 +438,10 @@ export function CourseplanClick({
         );
         UpdateCourseplan(updatedCoursePlan);
     };
+    function backToQueueClick(sendcourse: Course, seemester: SemesterI) {
+        backToQueue(sendcourse);
+        handleDeleteCourse(sendcourse.UUID!, seemester);
+    }
     const addSemesterToCoursePlan = (
         newSemester: SemesterI,
         yearName: string
@@ -387,6 +463,14 @@ export function CourseplanClick({
 
     return (
         <div>
+            <h2>In progress Course Plan</h2>
+            <Button
+                variant="danger"
+                onClick={() => UpdateCourseplan(clearallsemester(Courseplan))}
+                className="float-end"
+            >
+                Clear all Semester
+            </Button>
             {Courseplan.years.map((curyear) => (
                 <Year
                     year={curyear}
@@ -405,6 +489,7 @@ export function CourseplanClick({
                         )
                     }
                     clickToDeleteFromSemester={handleDeleteCourse}
+                    backToQueue={backToQueueClick}
                     addSemesterToYear={() =>
                         handleOpenAddSemesterModal(curyear)
                     }

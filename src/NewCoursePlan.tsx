@@ -8,6 +8,8 @@ import { v4 as uuidv4 } from "uuid";
 import { AddCourseToSemester, DeleteCourseFromSemester } from "./DBmanage";
 import { CourseplanClick } from "./EditCoursePlan";
 import "./App.css";
+import { DegreeRequirementCheck } from "./DegreeRequirementCheck";
+import CurrentDegree from "./data/degrees.json";
 
 interface CatalogCourse {
     code: string;
@@ -83,6 +85,9 @@ export function CoureseplansBoot({
     function removeQueue(removecourse: Course) {
         setqueue(queue.filter((course: Course) => removecourse !== course));
     }
+    function nameInput(event: React.ChangeEvent<HTMLInputElement>) {
+        curCoursePlan.name = event.target.value;
+    }
     function EditModal(course: Course) {
         console.log(EditModal);
     }
@@ -129,9 +134,24 @@ export function CoureseplansBoot({
 
     return (
         <div>
-            <Button onClick={Save} className="save-button">
+            <Form.Group controlId="search" as={Row}>
+                <Col>
+                    <Form.Label> Name:</Form.Label>
+                    <FormControl
+                        className="float-end"
+                        type="text"
+                        placeholder="Untittled"
+                        onChange={nameInput}
+                    />
+                </Col>
+            </Form.Group>
+            <Button onClick={Save} className="save-button float-end">
                 Save
             </Button>
+            <DegreeRequirementCheck
+                currentPlan={curCoursePlan}
+                currentDegree={CurrentDegree[0]}
+            />
             <Row>
                 <Col sm={8}>
                     <div style={{ marginBottom: ".5rem" }}>
@@ -164,6 +184,7 @@ export function CoureseplansBoot({
                                     <th>Course Code</th>
                                     <th>Name</th>
                                     <th>Description</th>
+                                    <th>Pre-Reqs</th>
                                     <th>Credits</th>
                                     <th>Action</th>
                                 </tr>
@@ -179,6 +200,7 @@ export function CoureseplansBoot({
                                                     <td>{course.code}</td>
                                                     <td>{course.name}</td>
                                                     <td>{course.descr}</td>
+                                                    <td>{course.preReq}</td>
                                                     <td>{course.credits}</td>
                                                     <td>
                                                         <Button
@@ -270,7 +292,7 @@ export function CoureseplansBoot({
                     setCurrentCourseEdit={setCourseEdit}
                     selectedSemester={clickToAddToSemeser}
                     UpdateCourseplan={setCourseplanDebug}
-                    deletecourse={clickToDeleteFromSemester}
+                    backToQueue={addtempCourse}
                 ></CourseplanClick>
             </Row>
         </div>
