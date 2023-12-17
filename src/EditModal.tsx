@@ -28,7 +28,6 @@ export const EditCourseModal = ({
     const [prereq, setPrereq] = useState<string>(currentCourse.prereq);
     useEffect(() => {
         if (show) {
-            // Check if the current course is different from the initial course
             if (
                 !initialCourseRef.current ||
                 initialCourseRef.current.UUID !== currentCourse.UUID
