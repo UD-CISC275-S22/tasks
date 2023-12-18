@@ -14,7 +14,11 @@ import { classes } from "./Interface/classes";
 import { Plan } from "./Interface/Plan";
 //import sample from "./data/Dummy.json";
 import { AddToSemester } from "./semester-modification/AddToSemester";
-import { ChosenMajor, generalClasses } from "./Audit/ChosenMajor";
+import {
+    ChosenMajor,
+    generalClasses,
+    generalCredits
+} from "./Audit/ChosenMajor";
 import { PlanView } from "./PlanView/PlanView";
 import { DownloadPlan } from "./PlanView/DownloadPlan";
 import { SeeAuditPage } from "./Audit/SeeAuditPage";
@@ -61,6 +65,10 @@ function App(): JSX.Element {
         setDownloadPlan(!downloadPlan);
     };
 
+    const flipMajorPageViewOn = () => {
+        setMajorPageView(true);
+    };
+
     const flipMajorPageView = () => {
         setMajorPageView(!majorPageView);
     };
@@ -73,18 +81,24 @@ function App(): JSX.Element {
     //Classes for each major
     const [degreeRequirements, setDegreeRequirements] =
         useState<string[]>(generalClasses);
-    //const [completedReq, setCompletedReq] = useState<string[]>([]);
-    const [usedClasses, setUsedClasses] = useState<classes[][]>([[]]);
+    const [Credits, setCredits] = useState<number[]>(generalCredits);
+    const [usedClasses, setUsedClasses] = useState<classes[][]>([]);
+    const [major, setMajor] = useState<string>("");
 
     function reqList(finalList: string[]) {
-        if (!degreeRequirements.every((req, IDX) => req === finalList[IDX])) {
-            setUsedClasses([[]]);
-        }
         setDegreeRequirements(finalList);
     }
 
-    function pushCurrList(classesUsed: classes[][]) {
-        setUsedClasses(classesUsed);
+    function creditList(allCredit: number[]) {
+        setCredits(allCredit);
+    }
+
+    function setNewMajor(newMajor: string) {
+        setMajor(newMajor);
+    }
+
+    function resetCurrList() {
+        setUsedClasses([]);
     }
     const handleLogout = () => {
         // console.log(page);
@@ -202,8 +216,10 @@ function App(): JSX.Element {
                                 <ChosenMajor
                                     handleClose={flipAudit}
                                     show={seeAudit}
-                                    majorPageView={flipMajorPageView}
+                                    majorPageView={flipMajorPageViewOn}
                                     reqList={reqList}
+                                    newMajor={setNewMajor}
+                                    creditList={creditList}
                                 />
                             )}
                             {displayPlan && (
@@ -249,16 +265,16 @@ function App(): JSX.Element {
                                 setSemesters={setSemesters}
                                 currentPlan={currentPlan}
                             ></SwitchComponents>
-                            {majorPageView && (
-                                <SeeAuditPage
-                                    canView={majorPageView}
-                                    reqList={degreeRequirements}
-                                    plan={semesters}
-                                    prevUsedClasses={usedClasses}
-                                    pushCurrList={pushCurrList}
-                                    stopView={flipMajorPageView}
-                                ></SeeAuditPage>
-                            )}
+                            <SeeAuditPage
+                                canView={majorPageView}
+                                reqList={degreeRequirements}
+                                plan={semesters}
+                                prevUsedClasses={usedClasses}
+                                creditList={Credits}
+                                major={major}
+                                resetCurrList={resetCurrList}
+                                stopView={flipMajorPageView}
+                            ></SeeAuditPage>
                         </Col>
                     </Row>
                 </div>

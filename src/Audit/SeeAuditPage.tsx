@@ -1,6 +1,6 @@
 /* eslint-disable no-extra-parens */
 /* eslint-disable indent */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import { semester } from "../Interface/semester";
 import { classes } from "../Interface/classes";
@@ -10,30 +10,46 @@ export function SeeAuditPage({
     reqList,
     plan,
     prevUsedClasses,
-    pushCurrList,
+    creditList,
+    major,
+    resetCurrList,
     stopView
 }: {
     canView: boolean;
     reqList: string[];
     plan: semester[];
     prevUsedClasses: classes[][];
-    pushCurrList: (usedClasses: classes[][]) => void;
+    creditList: number[];
+    major: string;
+    resetCurrList: () => void;
     stopView: () => void;
 }): JSX.Element {
     const [usedClasses, setUsedClasses] =
         useState<classes[][]>(prevUsedClasses);
     const [showModal, setShowModal] = useState(false);
+    const [majorName, setMajorName] = useState<string>("");
+    const [newCredit, setNewCredit] = useState<number[]>([0]);
     const [selectedClass, setSelectedClass] = useState<number>(0);
     const [classToAdd, setClassToAdd] = useState<classes>({
-        code: "MATH166",
-        title: "SPECIAL PROBLEM",
-        credits: 3,
-        preReq: ["No prerequisites."]
+        code: "",
+        title: "",
+        credits: 0,
+        preReq: [""]
+    });
+
+    //updates newCredit and majorName if anything changes
+    useEffect(() => {
+        setNewCredit(creditList);
+    }, creditList);
+
+    useEffect(() => {
+        setMajorName(major);
     });
 
     function endView() {
         //ending functions
-        pushCurrList(usedClasses);
+        resetCurrList();
+        setUsedClasses([]);
         stopView();
     }
 
@@ -42,6 +58,7 @@ export function SeeAuditPage({
     }
 
     const changeAddClass = (event: React.ChangeEvent<HTMLInputElement>) => {
+        //option hovered in modal is saved and then checked against the given plan to see if the class exists
         const wantedClass = event.target.value;
 
         plan.map((sem) =>
@@ -52,26 +69,48 @@ export function SeeAuditPage({
     };
 
     function changeArr() {
+        //checks to ensure all information about wantClass and selectedClass are valid, if so add the class to the list of used classes at the index given by IDX in return plan
         if (classToAdd !== null && typeof selectedClass === "number") {
             const holder = [...usedClasses];
 
             if (selectedClass >= 0 && selectedClass < holder.length) {
-                holder[selectedClass] = [classToAdd];
+                holder[selectedClass].push(classToAdd);
                 setUsedClasses(holder);
             }
         }
+        setCredits(selectedClass);
         handleClose();
+    }
+
+    function setCredits(IDX: number) {
+        //Goes through the list of classes in used classes at a certain index to determine how many credits taken.
+        //Subtract credits from required credit list until 0 to symbolize the requirement has been met
+
+        const holder = [...newCredit];
+        holder[IDX] =
+            holder[IDX] -
+            usedClasses[IDX].reduce(
+                (total: number, classList: classes) =>
+                    total + classList.credits,
+                0
+            );
+        holder[IDX] = holder[IDX] < 0 ? 0 : holder[IDX];
+        setNewCredit(holder);
     }
 
     if (canView) {
         return (
             <div>
-                <table>
+                <h3>{majorName}</h3>
+                <table className="table table-hover table-dark">
                     <thead>
                         <tr>
-                            <th>Requirement</th>
-                            <th>Filled Classes</th>
-                            <th>Add Class To Fill</th>
+                            <th scope="col">Requirement</th>
+                            <th scope="col">Filled Classes</th>
+                            <th scope="col">Add Class To Fill</th>
+                            <th scope="col">Reset List</th>
+                            <th scope="col">Credits</th>
+                            <th scope="col">Complete</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -83,8 +122,8 @@ export function SeeAuditPage({
                                         {usedClasses[IDX] == null
                                             ? (usedClasses[IDX] = [])
                                             : usedClasses[IDX].map(
-                                                  (usedClass) => usedClass.code
-                                              )}
+                                                  (classes) => classes.code
+                                              ).join(", ")}
                                     </td>
                                     <td>
                                         <Button
@@ -93,8 +132,26 @@ export function SeeAuditPage({
                                                 handleClose();
                                             }}
                                         >
-                                            Fill Requirement
+                                            Add Class
                                         </Button>
+                                    </td>
+                                    <td>
+                                        <Button
+                                            onClick={() => {
+                                                usedClasses[IDX] = [];
+                                                newCredit[IDX] =
+                                                    creditList[IDX];
+                                                resetCurrList();
+                                            }}
+                                        >
+                                            Reset
+                                        </Button>
+                                    </td>
+                                    <td>{newCredit[IDX]}</td>
+                                    <td>
+                                        {newCredit[IDX] == 0
+                                            ? "Complete"
+                                            : "Incomplete"}
                                     </td>
                                 </tr>
                             );
@@ -109,6 +166,7 @@ export function SeeAuditPage({
                     </Modal.Header>
                     <Modal.Body>
                         {plan.map((sem: semester) =>
+                            //Linter error here. Calls to remove paren but if that occurs there is no paren around form
                             sem.classList.map((list: classes) => (
                                 <Form.Check
                                     key={list.code}
