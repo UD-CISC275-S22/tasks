@@ -1,3 +1,12 @@
+/*Documentation(used chatGPT to help write):
+The SignIn component is a React functional component responsible for rendering and managing a user login form. 
+It leverages Firebase authentication by importing the signInWithEmailAndPassword method. 
+The component maintains local state variables, email and password, to store user input for the email and password fields. 
+The signIn function is triggered upon form submission, preventing the default form behavior. 
+It utilizes Firebase's authentication method to sign in the user with the provided email and password, logging the user credential upon successful authentication and handling any errors that may occur. 
+The component renders a form with input fields for email and password, allowing users to log in by submitting their credentials through the form.
+*/
+
 import React, { useState } from "react";
 import { auth } from "./firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";

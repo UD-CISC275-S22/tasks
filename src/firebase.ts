@@ -1,3 +1,12 @@
+/*Documentation(used chatGPT to help write):
+The Firebase configuration file establishes the connection between a web application and the Firebase services. 
+It utilizes the Firebase SDK to initialize the app, authentication, and real-time database services. 
+The firebaseConfig object contains essential parameters such as API key, authentication domain, project ID, and database URL, necessary for secure and authenticated interactions with the Firebase backend. 
+The initializeApp function initializes the Firebase app with the provided configuration, while getAuth and getDatabase retrieve instances of the Authentication and Realtime Database services, respectively. 
+Developers can seamlessly integrate these initialized services into their React components or modules to enable authentication and real-time data storage and retrieval within the application. 
+Ensure to replace the placeholder values in the firebaseConfig object with the corresponding values from your Firebase project.
+*/
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
