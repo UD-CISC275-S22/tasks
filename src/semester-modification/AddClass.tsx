@@ -23,7 +23,49 @@ export function AddClass({
             (sem: semester) => sem.id === semester.id
         );
 
+        const semIdsLower = schedule.filter(
+            (searchSemester: semester): boolean =>
+                searchSemester.id < semester.id
+        );
+        //const preReqFulfilled = semIdsLower.every
+
+        function checkPreReqs(
+            prequesite: string[],
+            filteredSemesters: semester[]
+        ): boolean {
+            //const initArray: string[] = [];
+            const previousClassList = filteredSemesters
+                .map((semester: semester): string[] =>
+                    semester.classList.map(
+                        (course: classes): string => course.code
+                    )
+                )
+                .reduce((accumulator, value) => accumulator.concat(value), []);
+
+            // const previousClassCodes = previousClassList.map(
+            //     (course: classes): string[] => [
+            //         ...previousClassCodes,
+            //         ...course.code
+            //     ]
+            // );
+            const stringPreReq = prequesite.map((preR: string): string =>
+                preR.split(" ").join("")
+            );
+            const isFulfilled = stringPreReq.every((prereq: string): boolean =>
+                previousClassList.includes(prereq)
+            );
+            console.log(isFulfilled);
+            return isFulfilled;
+        }
+
         // Create a new array of classes for the updated semester
+        const preReqBoolean: boolean = checkPreReqs(
+            newClass.preReq,
+            semIdsLower
+        );
+        console.log(
+            "Does this " + newClass + " have all prereqs met" + preReqBoolean
+        );
         const updatedClasses: classes[] = [
             ...updatedSchedule[semesterIndex].classList,
             newClass

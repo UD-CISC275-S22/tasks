@@ -57,6 +57,7 @@
     height: auto;
     width: 100%;
     background-color: rgb(255, 217, 2);
+    display: flex;
 }
 
 .SideNavList2 {
@@ -82,13 +83,9 @@
     font-size: large;
     font-weight: bold;
 }
-
 .SideNavList2 .row:hover {
     cursor: pointer;
     background-color: #005aad;
-}
-.SideNavList #active {
-    background-color: rgb(161, 161, 3);
 }
 .row #picture {
     flex: 30%;
@@ -97,6 +94,67 @@
 }
 .row #name {
     flex: 70%;
+}
+.SideNavList2 .rowDownload {
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    color: white;
+    list-style-type: none;
+    margin: 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    font-size: large;
+    font-weight: bold;
+}
+.SideNavList2 .rowDownload:hover {
+    cursor: pointer;
+    background-color: green;
+}
+.rowDownload #name {
+    flex: 70%;
+}
+.rowDownload #picture {
+    flex: 30%;
+    display: grid;
+    place-items: center;
+}
+.SideNavList2 .rowLogout {
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    color: white;
+    list-style-type: none;
+    margin: 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    font-size: large;
+    font-weight: bold;
+}
+.SideNavList2 .rowLogout:hover {
+    cursor: pointer;
+    background-color: red;
+}
+.rowLogout #name {
+    flex: 70%;
+}
+.rowLogout #picture {
+    flex: 30%;
+    display: grid;
+    place-items: center;
+}
+.SideNavList #active {
+    background-color: rgb(161, 161, 3);
 }
 .searchResult:hover {
     background-color: #005aad;

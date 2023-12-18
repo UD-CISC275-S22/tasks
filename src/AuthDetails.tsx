@@ -56,7 +56,7 @@ const AuthDetails: React.FC<AuthDetailsProps> = ({
                     <button onClick={handleUserSignOut}>Sign Out</button>
                 </>
             ) : (
-                <p>Signed Out</p>
+                <p></p>
             )}
         </div>
     );

@@ -159,7 +159,7 @@ function App(): JSX.Element {
                 <div
                     style={{
                         backgroundImage:
-                            "linear-gradient(#fcf0a7 10%, #ffd902 85%)"
+                            "linear-gradient(#fcf0b6 10%, #ffd902 85%)"
                     }}
                 >
                     {
@@ -215,7 +215,7 @@ function App(): JSX.Element {
                                     setCurrentPlan={setCurrentPlan}
                                 />
                             )}
-                            {currentPlan === "" && (
+                            {currentPlan === "" && majorPageView !== true && (
                                 <img
                                     src={Image3}
                                     alt=""
@@ -249,14 +249,16 @@ function App(): JSX.Element {
                                 setSemesters={setSemesters}
                                 currentPlan={currentPlan}
                             ></SwitchComponents>
-                            <SeeAuditPage
-                                canView={majorPageView}
-                                reqList={degreeRequirements}
-                                plan={semesters}
-                                prevUsedClasses={usedClasses}
-                                pushCurrList={pushCurrList}
-                                stopView={flipMajorPageView}
-                            ></SeeAuditPage>
+                            {majorPageView && (
+                                <SeeAuditPage
+                                    canView={majorPageView}
+                                    reqList={degreeRequirements}
+                                    plan={semesters}
+                                    prevUsedClasses={usedClasses}
+                                    pushCurrList={pushCurrList}
+                                    stopView={flipMajorPageView}
+                                ></SeeAuditPage>
+                            )}
                         </Col>
                     </Row>
                 </div>

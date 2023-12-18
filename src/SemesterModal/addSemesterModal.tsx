@@ -1,5 +1,19 @@
 /* eslint-disable no-extra-parens */
 
+/* 
+
+This component is used to create pop which allows users to add a semester to thier 
+degree plan. The component allows the user to write the name of the semester and also search 
+through the courses with the help of filtering search. From there, the information about
+the course is extracted and the displayed on the plan, alongside the name of the semester.
+
+Esstentially the course information will be extracted from the file that holds all the classes.
+After that, the semester will be added with help of addSemester to the usestate that holds the 
+array of semesters which is being used to help view the semesters with the help of 
+Semestertable and Semesterview.
+
+*/
+
 import React from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import realData from "../data/corrected_data.json";
@@ -194,16 +208,3 @@ export function AddSemesterModal({
         </div>
     );
 }
-
-/* 
-
-This component is used to create pop which allows users to 
-add a semester to thier degree plan. (Currently demo data is being 
-used to display the table, and show that you can add a semester to the plan.) 
-The component allows the user to write the name of the semester and also search 
-through the courses with the help of filtering search. From there, the information about
-the course is extracted and the displayed on the plan, alongside the name of the semester
-
-I have a linter issue currently due to parans issue but it should be fixed before final submission
-
-*/
