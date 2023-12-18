@@ -1,3 +1,7 @@
+* {
+    border: black;
+}
+
 .App {
     text-align: center;
 }
@@ -15,20 +19,31 @@
 
 .App-header {
     width: 100%;
-    background-color: #282c34;
-    min-height: 40vh;
+    background-color: #005aad;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
+    justify-content: space-evenly;
     color: white;
+    padding: 30px 30px 30px 30px;
 }
 
 .App-link {
     color: #61dafb;
 }
 
+.logo {
+    height: 120px;
+}
+
+.Title {
+    font-size: 65px;
+    font-family: "greycliff";
+}
+
+.Line {
+    color: yellow;
+}
 @keyframes App-logo-spin {
     from {
         transform: rotate(0deg);
@@ -36,4 +51,113 @@
     to {
         transform: rotate(360deg);
     }
+}
+
+.SideNav2 {
+    height: auto;
+    width: 100%;
+    background-color: rgb(255, 217, 2);
+    display: flex;
+}
+
+.SideNavList2 {
+    height: 100dvh;
+    padding: 0;
+    width: 100%;
+}
+
+.SideNavList2 .row {
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    color: white;
+    list-style-type: none;
+    margin: 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    font-size: large;
+    font-weight: bold;
+}
+.SideNavList2 .row:hover {
+    cursor: pointer;
+    background-color: #005aad;
+}
+.row #picture {
+    flex: 30%;
+    display: grid;
+    place-items: center;
+}
+.row #name {
+    flex: 70%;
+}
+.SideNavList2 .rowDownload {
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    color: white;
+    list-style-type: none;
+    margin: 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    font-size: large;
+    font-weight: bold;
+}
+.SideNavList2 .rowDownload:hover {
+    cursor: pointer;
+    background-color: green;
+}
+.rowDownload #name {
+    flex: 70%;
+}
+.rowDownload #picture {
+    flex: 30%;
+    display: grid;
+    place-items: center;
+}
+.SideNavList2 .rowLogout {
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    color: white;
+    list-style-type: none;
+    margin: 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    font-size: large;
+    font-weight: bold;
+}
+.SideNavList2 .rowLogout:hover {
+    cursor: pointer;
+    background-color: red;
+}
+.rowLogout #name {
+    flex: 70%;
+}
+.rowLogout #picture {
+    flex: 30%;
+    display: grid;
+    place-items: center;
+}
+.SideNavList #active {
+    background-color: rgb(161, 161, 3);
+}
+.searchResult:hover {
+    background-color: #005aad;
+    color: white;
+    font-weight: bold;
 }

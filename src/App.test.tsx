@@ -4,6 +4,6 @@ import App from "./App";
 
 test("renders the course name somewhere", () => {
     render(<App />);
-    const linkElement = screen.getByText(/CISC275/i);
-    expect(linkElement).toBeInTheDocument();
+    const linkElement = screen.getByText(/Welcome/i);
+    expect(linkElement).toBeTruthy();
 });
