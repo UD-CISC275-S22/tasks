@@ -57,6 +57,7 @@
     height: auto;
     width: 100%;
     background-color: rgb(255, 217, 2);
+    display: flex;
 }
 
 .SideNavList2 {
