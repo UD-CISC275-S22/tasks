@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
+// eslint-disable needed in order for code to work porperly
 import { useEffect, useRef } from "react";
 
 function drag(id: string): void {

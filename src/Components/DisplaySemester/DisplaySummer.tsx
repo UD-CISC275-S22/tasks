@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
+// eslint-disable needed in order for code to work porperly
 import React, { useState } from "react";
 import { Course } from "../../Interfaces/course";
 import { ClearSemester } from "../Buttons/clearingSemester";

@@ -1,6 +1,5 @@
-/* eslint-disable indent */
 /* eslint-disable @typescript-eslint/no-unused-vars */
-//react and bootstrap
+// eslint-disable needed in order for code to work porperly
 import React, { useState } from "react";
 //css files
 import "../App.css";
@@ -236,12 +235,12 @@ export function ViewSemester(): JSX.Element {
         setFifthYearClicked(true);
     }
 
-    function setContainsPrereqFalse() {
-        setContainsPrereq(false);
-    }
-    function setContainsPrereqTrue() {
-        setContainsPrereq(true);
-    }
+    // function setContainsPrereqFalse() {
+    //     setContainsPrereq(false);
+    // }
+    // function setContainsPrereqTrue() {
+    //     setContainsPrereq(true);
+    // }
 
     //functions for handling which semesters to see
 
@@ -296,21 +295,21 @@ export function ViewSemester(): JSX.Element {
         // **refer to "currCourse" documentation for more info **
         newSemesters[idx].courseList = [...newClasses, choice];
         setSemesters(newSemesters);
-        const idea = totalTitleCourses.filter(
-            (string: string) => string === choice.prereq[0]
-        );
-        if (choice.prereq.length === 1 && choice.prereq[0] === "") {
-            console.log("This course has no prereqs");
-            setContainsPrereqTrue();
-            console.log(containsPrereq);
-        } else if (idea.length > 0 && choice.prereq !== "") {
-            console.log("This class has a fulfilled preReq");
-            setContainsPrereqTrue();
-        } else {
-            console.log("This course does not apply!");
-            setContainsPrereqFalse();
-            console.log(containsPrereq);
-        }
+        // const idea = totalTitleCourses.filter(
+        //     (string: string) => string === choice.prereq[0]
+        // );
+        // if (choice.prereq.length === 1 && choice.prereq[0] === "") {
+        //     console.log("This course has no prereqs");
+        //     setContainsPrereqTrue();
+        //     console.log(containsPrereq);
+        // } else if (idea.length > 0 && choice.prereq !== "") {
+        //     console.log("This class has a fulfilled preReq");
+        //     setContainsPrereqTrue();
+        // } else {
+        //     console.log("This course does not apply!");
+        //     setContainsPrereqFalse();
+        //     console.log(containsPrereq);
+        // }
     }
 
     function indivPlanSem(year: number, sem: string, id: number): JSX.Element {
