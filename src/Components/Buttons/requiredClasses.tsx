@@ -1,4 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Dropdown } from "react-bootstrap";
 import React from "react";
 import { Course } from "../../Interfaces/course";
@@ -49,7 +48,6 @@ export const RequiredClasses = ({
                         {!totalClasses.includes(aCourse.title)
                             ? aCourse.title + "❌"
                             : aCourse.title + "✅"}
-                        {console.log(totalClasses)}
                     </Dropdown.Item>
                 ))}
             </Dropdown.Menu>

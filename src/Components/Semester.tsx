@@ -65,6 +65,7 @@ let High_Plan = High();
 let Bio_Plan = Bio();
 
 import Papa from "papaparse";
+import { string } from "yargs";
 
 export function ViewSemester(): JSX.Element {
     //states for the degree requirements based on the selected plan
@@ -120,7 +121,7 @@ export function ViewSemester(): JSX.Element {
         AI_Plan.semesters
     ); //the default semesters (should always match with what the plan is)
     const [currCourse, setCurrCourse] = useState<number>(0);
-    const [conatinsPrereq, setContainsPrereq] = useState<boolean>(false);
+    const [containsPrereq, setContainsPrereq] = useState<boolean>(true);
 
     //state for handling if the yes or no button for skip semester warning was clicked
     const [clicked, setClicked] = useState<boolean>(false);
@@ -235,6 +236,13 @@ export function ViewSemester(): JSX.Element {
         setFifthYearClicked(true);
     }
 
+    function setContainsPrereqFalse() {
+        setContainsPrereq(false);
+    }
+    function setContainsPrereqTrue() {
+        setContainsPrereq(true);
+    }
+
     //functions for handling which semesters to see
 
     function dropClass(targetYear: number, targetSem: string) {
@@ -283,19 +291,26 @@ export function ViewSemester(): JSX.Element {
         const newClasses = newSemesters[idx].courseList.filter(
             (course: Course) => currCourse !== course.id
         );
-        if (choice.prereq === "") {
-            console.log("This course has no prereqs");
-            setContainsPrereq(true);
-        } else if (totalTitleCourses.contains(choice)) {
-            setContainsPrereq(true);
-        } else {
-            setContainsPrereq(false);
-        }
         // looks through the course list in the current semester and filters out the
         // course with the same "Title" as the state "currCourse"
         // **refer to "currCourse" documentation for more info **
         newSemesters[idx].courseList = [...newClasses, choice];
         setSemesters(newSemesters);
+        const idea = totalTitleCourses.filter(
+            (string: string) => string === choice.prereq[0]
+        );
+        if (choice.prereq.length === 1 && choice.prereq[0] === "") {
+            console.log("This course has no prereqs");
+            setContainsPrereqTrue();
+            console.log(containsPrereq);
+        } else if (idea.length > 0 && choice.prereq !== "") {
+            console.log("This class has a fulfilled preReq");
+            setContainsPrereqTrue();
+        } else {
+            console.log("This course does not apply!");
+            setContainsPrereqFalse();
+            console.log(containsPrereq);
+        }
     }
 
     function indivPlanSem(year: number, sem: string, id: number): JSX.Element {
@@ -310,7 +325,7 @@ export function ViewSemester(): JSX.Element {
                     currCourse={currCourse}
                     clicked={clicked}
                     fifthYearClicked={fifthYearClicked}
-                    containsPrereq={conatinsPrereq}
+                    containsPrereq={containsPrereq}
                     targetYear={year}
                     dropClass={dropClass}
                     addClass={addClass}
@@ -339,7 +354,7 @@ export function ViewSemester(): JSX.Element {
                     currCourse={currCourse}
                     clicked={clicked}
                     fifthYearClicked={fifthYearClicked}
-                    containsPrereq={conatinsPrereq}
+                    containsPrereq={containsPrereq}
                     targetYear={year}
                     dropClass={dropClass}
                     addClass={addClass}
@@ -368,7 +383,7 @@ export function ViewSemester(): JSX.Element {
                     currCourse={currCourse}
                     clicked={clicked}
                     fifthYearClicked={fifthYearClicked}
-                    containsPrereq={conatinsPrereq}
+                    containsPrereq={containsPrereq}
                     targetYear={year}
                     dropClass={dropClass}
                     addClass={addClass}
@@ -397,7 +412,7 @@ export function ViewSemester(): JSX.Element {
                     currCourse={currCourse}
                     clicked={clicked}
                     fifthYearClicked={fifthYearClicked}
-                    containsPrereq={conatinsPrereq}
+                    containsPrereq={containsPrereq}
                     targetYear={year}
                     dropClass={dropClass}
                     addClass={addClass}
@@ -602,6 +617,10 @@ export function ViewSemester(): JSX.Element {
         (total: number, course: Course): number => total + course.credits,
         0
     );
+    let totalPrereqCourses: string[] = totalClasses.map((course: Course) =>
+        course.prereq.map((prereq: string) => prereq)
+    );
+    totalPrereqCourses = totalPrereqCourses.flat();
 
     //actual return for the tsx file to App.tsx
     return (

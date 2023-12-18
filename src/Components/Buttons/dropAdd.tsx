@@ -1,7 +1,3 @@
-/* eslint-disable indent */
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable no-extra-parens */
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import React from "react";
 import { Button, Form } from "react-bootstrap";
 import { Course } from "../../Interfaces/course";
@@ -14,8 +10,7 @@ export const DropAdd = ({
     currCourse,
     Course_List,
     targetYear,
-    targetSem,
-    containsPrereq
+    targetSem //containsPrereq
 }: {
     dropClass: (targetYear: number, targetSem: string) => void;
     addClass: (targetYear: number, targetSem: string) => void;
@@ -47,15 +42,7 @@ export const DropAdd = ({
             <Button onClick={() => dropClass(targetYear, targetSem)}>
                 Remove Class
             </Button>
-            <Button
-                onClick={() => {
-                    containsPrereq
-                        ? addClass(targetYear, targetSem)
-                        : confirm(
-                              "You do not meet the prerequisite for this course!"
-                          ) && addClass(targetYear, targetSem);
-                }}
-            >
+            <Button onClick={() => addClass(targetYear, targetSem)}>
                 Add Class
             </Button>
             <Button
