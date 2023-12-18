@@ -5,47 +5,35 @@ import React, { useState, useEffect } from "react";
 //import { degreePlan } from "../interfaces/degreePlan";
 import { semester } from "../interfaces/semster";
 
-interface InformationSystemsRequirementsProps {
+interface ComputerScienceRequirementsProps {
     currentDegreePlan: semester[];
 }
 
 //man, why did the breadthCredits have to be the most complicated part?
 const calculateBreadthCredits = (
     degreePlan: semester[]
-): { breadthCredits: Record<string, number>; majorFreeElectives: number } => {
+): { breadthCredits: Record<string, number> } => {
     const breadthCredits: Record<string, number> = {
         TECH: 0,
         ARTS: 0,
         SOCI: 0,
         HIST: 0
     };
-    let majorFreeElectives = 0;
 
     degreePlan.forEach((semester) => {
         semester.classes.forEach((course) => {
             const { breadth, credits } = course;
 
-            if (breadth === "TECH") {
-                // Cap TECH credits at 6
-                breadthCredits[breadth] = Math.min(
-                    breadthCredits[breadth] + credits,
-                    6
-                );
-            } else {
-                // Accumulate credits for other breadths
-                breadthCredits[breadth] += credits;
-
-                // Cap at 6 and update major free electives for extra credits
-                majorFreeElectives += Math.max(0, credits - 6);
-            }
+            // Accumulate credits for other breadths
+            breadthCredits[breadth] += credits;
         });
     });
 
-    return { breadthCredits, majorFreeElectives };
+    return { breadthCredits };
 };
 
-const InformationSystemsRequirements: React.FC<
-    InformationSystemsRequirementsProps
+const ComputerScienceRequirements: React.FC<
+    ComputerScienceRequirementsProps
 > = ({ currentDegreePlan }) => {
     console.log(currentDegreePlan);
     const [labTrack, setLabTrack] = useState<string>("Chose Your Lab Track");
@@ -307,6 +295,11 @@ const InformationSystemsRequirements: React.FC<
 
     useEffect(() => {
         //useEffect is a hook that runs after component is rendered
+        {
+            /*I used ChatGPT for help with this section.
+            I did not know how to continiously update the screen,
+            so i asked ChatGPT for options, and it explained how to use the useEffect hook*/
+        }
         const newDegreePlanCourses: string[] = [];
         currentDegreePlan.forEach((semester) => {
             semester.classes.forEach((course) => {
@@ -523,4 +516,4 @@ const InformationSystemsRequirements: React.FC<
 //each student must take 9 random credits that are not related to their field.
 //For our purposes, students must take 9 credits, of something other than TECH.
 
-export default InformationSystemsRequirements;
+export default ComputerScienceRequirements;

@@ -111,6 +111,11 @@ const InformationSystemsRequirements: React.FC<
 
     useEffect(() => {
         //useEffect is a hook that runs after component is rendered
+        {
+            /*I used ChatGPT for help with this section.
+            I did not know how to continiously update the screen,
+            so i asked ChatGPT for options, and it explained how to use the useEffect hook*/
+        }
         const newDegreePlanCourses: string[] = [];
         currentDegreePlan.forEach((semester) => {
             semester.classes.forEach((course) => {
