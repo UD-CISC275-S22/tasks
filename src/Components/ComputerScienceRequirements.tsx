@@ -49,6 +49,9 @@ const InformationSystemsRequirements: React.FC<
 > = ({ currentDegreePlan }) => {
     console.log(currentDegreePlan);
     const [labTrack, setLabTrack] = useState<string>("Chose Your Lab Track");
+    const [concnetration, setConcentration] = useState<string>(
+        "Chose Your Concentration"
+    );
     //const [majorFreeElectives, setMajorFreeElectives] = useState<number>(0);
     const [DLE, setDLE] = useState<boolean>(false);
     const [breadthCredits, setBreadthCredits] = useState<
@@ -66,30 +69,211 @@ const InformationSystemsRequirements: React.FC<
         "CISC181",
         "CISC210",
         "CISC220",
-        "CISC250",
+        "CISC260",
         "CISC275",
+        "CISC303",
+        "CISC320",
+        "MATH210",
+        "MATH241"
+    ];
+
+    const CustomConsentrationRequirements = [
+        "CISC361",
+        "CISC372",
+        "(",
+        "MATH205",
+        "or",
+        "MATH350",
+        ")",
+        "MATH242",
+        "[Six additional credits technical electives CISC301 or above (with exceptions)]",
+        "[12 credits in approved focus area]"
+    ];
+
+    const AIRequirements = [
+        "CISC304",
+        "CISC442",
+        "CISC481",
+        "CISC483",
+        "CISC484",
+        "[",
+        "MATH205",
+        "or",
+        "MATH350",
+        "]",
+        "[",
+        "CISC361",
+        "or",
+        "CISC372",
+        "]",
+        "[12 creidts from Restricted Electives List]",
+        "[300+ level CISC elective]"
+    ];
+    const BioinformaticsRequirements = [
+        "BISC207",
+        "BISC208",
+        "BISC401",
+        "CHEM103",
+        "CHEM133",
+        "CHEM104",
+        "CHEM134",
+        "CISC372",
+        "CISC436",
+        "MATH242",
+        "MATH349",
+        "[",
+        "(",
+        "CHEM213",
+        "&",
+        "CHEM215",
+        ")",
+        "or",
+        "(",
+        "CHEM321",
+        "&",
+        "CHEM325",
+        ")",
+        "]",
+        "[",
+        "MATH205",
+        "or",
+        "MATH350",
+        "]",
+        "[",
+        "CISC483",
+        "or",
+        "CISC484",
+        "]",
+        "[6 creidts from Restricted Electives List]"
+    ];
+    const CybersecurityRequirements = [
+        "CISC361",
+        "CISC372",
+        "CISC450",
+        "CISC464",
+        "CPEG465",
+        "CISC493",
+        "[",
+        "MATH205",
+        "or",
+        "MATH350",
+        "]",
+        "Two of the Following:",
+        "[",
+        "CPEG472",
+        "CPEG473",
+        "CPEG475",
+        "CPEG476",
+        "CPEG495",
+        "]",
+        "[6 creidts from Restricted Electives List]",
+        "[300+ level CISC elective]"
+    ];
+    const Data_ScienceRequirements = [
+        "CISC304",
+        "CISC372",
         "CISC437",
-        "CISC498",
-        "MISY430",
-        "MISY431",
-        "MISY432"
+        "CISC481",
+        "MATH205",
+        "MATH242",
+        "MATH243",
+        "MATH349",
+        "[",
+        "CISC483",
+        "or",
+        "CISC484",
+        "]",
+        "[",
+        "MATH302",
+        "or",
+        "MATH350",
+        "or",
+        "MATH426",
+        "]",
+        "[3 creidts from Restricted Electives List]",
+        "[300+ level CISC elective]"
+    ];
+    const High_Performance_ComputingRequirements = [
+        "CISC360",
+        "CISC361",
+        "CISC372",
+        "CISC450",
+        "CISC471",
+        "MATH242",
+        "MATH243",
+        "Applied Math Track",
+        "or",
+        "Data Track"
+    ];
+    const Systems_and_NetworksRequirements = [
+        "CISC360",
+        "CISC361",
+        "CISC372",
+        "CISC450",
+        "CISC471",
+        "[",
+        "MATH205",
+        "or",
+        "MATH350",
+        "]",
+        "One of the following:",
+        "[",
+        "CISC464",
+        "CPEG465",
+        "CPEG470",
+        "CPEG476",
+        "CPEG473",
+        "CPEG475",
+        "CPEG497",
+        "]",
+        "Two of the following:",
+        "[",
+        "CISC437",
+        "CISC453",
+        "CISC459",
+        "CISC464",
+        "CISC474",
+        "CISC475",
+        "CISC479",
+        "CPEG473",
+        "CPEG497",
+        "]",
+        "[6 creidts from Restricted Electives List]",
+        "[300+ level CISC elective]"
+    ];
+    const Theory_and_ComputationsLabRequirements = [
+        "CISC304",
+        "CISC401",
+        "MATH242",
+        "MATH349",
+        "[",
+        "MATH205",
+        "or",
+        "MATH350",
+        "]",
+        "[",
+        "Discrete Track",
+        "or",
+        "Continuous Track",
+        "]",
+        "[6 creidts from Restricted Electives List]",
+        "[300+ level CISC elective]"
     ];
 
-    const buadCoreRequirements = [
-        "ACCT207",
-        "ACCT208",
-        "BUAD301 or FINC311",
-        "BUAD306",
-        "BUAD309"
+    const capstoneRequirements1 = ["CISC498", "&", "CISC499"];
+    const capstoneRequirements2 = ["UNIV401", "&", "UNIV402"];
+
+    const universityRequirements = ["ENGL110", "EGGG101", "CISC355"];
+    const nonMajorRequirements = [
+        "[",
+        "ENGL312",
+        "or",
+        "ENGL410",
+        "]",
+        "COMM212",
+        "CISC355"
     ];
-    const mathCoreRequirements = ["MATH241", "MATH210", "MATH205"];
-
-    const capstoneRequirements1 = ["CISC498", "CISC499"];
-    const capstoneRequirements2 = ["UNIV401", "UNIV402"];
-
-    const universityRequirements = ["ENGL110", "EGG101", "CISC355"];
-    const nonMajorRequirements = ["ENGL312 or ENGL410", "COMM212", "CISC355"];
-    const writingOptionRequirements = ["ENGL312 or ENGL410"];
+    const writingOptionRequirements = ["ENGL312", "ENGL410"];
 
     const biologyLabRequirements = ["BISC207", "BISC208"];
     const chemistryLabRequirements = [
@@ -108,6 +292,17 @@ const InformationSystemsRequirements: React.FC<
         Geology1: geology1LabRequirements,
         Geology2: geology2LabRequirements,
         Physics: physicsLabRequirements
+    };
+
+    const concentrationRequirements: Record<string, string[]> = {
+        Custom_Concentration: CustomConsentrationRequirements,
+        Artificial_Intelligence_and_Robotics: AIRequirements,
+        Bioinformatics: BioinformaticsRequirements,
+        Cybersecurity: CybersecurityRequirements,
+        Data_Science: Data_ScienceRequirements,
+        High_Performance_Computing: High_Performance_ComputingRequirements,
+        Systems_and_Networks: Systems_and_NetworksRequirements,
+        Theory_and_Computation: Theory_and_ComputationsLabRequirements
     };
 
     useEffect(() => {
@@ -156,44 +351,95 @@ const InformationSystemsRequirements: React.FC<
     const handleLabChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         setLabTrack(e.target.value);
     };
+    const handleConcentrationChange = (
+        e: React.ChangeEvent<HTMLSelectElement>
+    ) => {
+        setConcentration(e.target.value);
+    };
     const handleDLEChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setDLE(e.target.checked);
     };
 
     return (
         <div>
-            <h2>Information Systems Degree Requirements</h2>
+            <br></br>
+            <h2>Computer Science BS Degree Requirements</h2>
             <div>
                 <h4>CIS Core Requirements:</h4>
                 {render(majorCoreRequirements)}
             </div>
-            <div>
+            <br></br>
+            {/* <div>
                 <h4>BUAD Core Requirements:</h4>
                 {render(buadCoreRequirements)}
-            </div>
-            <div>
+            </div> */}
+            {/* <div>
                 <h4>Math Core Requirements:</h4>
                 {render(mathCoreRequirements)}
+            </div> */}
+            <div>
+                <h4>Concentration Requirements</h4>
+                <div>Please choose your concnetration.</div>
+                <select
+                    onChange={handleConcentrationChange}
+                    value={concnetration}
+                >
+                    <option value="Custom_Concentration">
+                        Custom Concentration
+                    </option>
+                    <option value="Artificial_Intelligence_and_Robotics">
+                        Artificial Intelligence and Robotics
+                    </option>
+                    <option value="Bioinformatics">Bioinformatics</option>
+                    <option value="Cybersecurity">Cybersecurity</option>
+                    <option value="Data_Science">Data Science</option>
+                    <option value="High_Performance_Computing">
+                        High Performance Computing
+                    </option>
+                    <option value="Systems_and_Networks">
+                        Systems and Networks
+                    </option>
+                    <option value="Theory_and_Computation">
+                        Theory and Computation
+                    </option>
+                </select>
+                {concnetration && concentrationRequirements[concnetration] && (
+                    <div>
+                        {/* <h6>Concentration Requirements for {concnetration}:</h6> */}
+                        {render(concentrationRequirements[concnetration])}
+                        <br></br>
+                        <a href="https://www.cis.udel.edu/academics/undergraduate-programs/bscs/">
+                            Click here for more information
+                        </a>
+                    </div>
+                )}
             </div>
+            <br></br>
             <div>
                 <h4>Non Major Requirements:</h4>
                 {render(nonMajorRequirements)}
             </div>
+            <br></br>
             <div>
-                <h4>Capstone Requirements: Pick one of the two.</h4>
+                <h4>Capstone Requirements:</h4>
+                <u>Pick one of pairs</u>
                 {render(capstoneRequirements1)}
                 {render(capstoneRequirements2)}
             </div>
+            <br></br>
             <div>
                 <h4>University Requirements:</h4>
                 {render(universityRequirements)}
             </div>
+            <br></br>
             <div>
-                <h4>Writing Options:</h4>
+                <h4>Writing Requirement:</h4>
+                <u>Pick one</u>
                 {render(writingOptionRequirements)}
             </div>
+            <br></br>
             <div>
-                <h4>Laboratory Science:</h4>
+                <h4>Laboratory Science Requirements:</h4>
                 <div>Please choose your science track.</div>
                 <select onChange={handleLabChange} value={labTrack}>
                     <option value="Biology">Biology</option>
@@ -204,11 +450,12 @@ const InformationSystemsRequirements: React.FC<
                 </select>
                 {labTrack && labTrackRequirements[labTrack] && (
                     <div>
-                        <h5>Lab Requirements for {labTrack}:</h5>
+                        {/* <h6>Lab Requirements for {labTrack}:</h6> */}
                         {render(labTrackRequirements[labTrack])}
                     </div>
                 )}
             </div>
+            <br></br>
             <div>
                 <h4>Breadth Requirements:</h4>
                 {Object.entries(breadthCredits).map(([breadth, credits]) => (

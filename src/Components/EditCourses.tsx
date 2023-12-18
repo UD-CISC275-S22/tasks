@@ -85,6 +85,10 @@ function EditCourse({
                         value={editedCourse.semester}
                         onChange={handleInputChange}
                     />
+                    <div>
+                        (after it&apos;s changed, remove course from original
+                        semester)
+                    </div>
                 </label>
                 <div className="form-group">
                     <label htmlFor="breadth">Breadth: </label>

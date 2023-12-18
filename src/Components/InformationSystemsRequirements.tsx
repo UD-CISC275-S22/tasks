@@ -65,7 +65,11 @@ const InformationSystemsRequirements: React.FC<
     const buadCoreRequirements = [
         "ACCT207",
         "ACCT208",
-        "BUAD301 or FINC311",
+        "[",
+        "BUAD301",
+        "or",
+        "FINC311",
+        "]",
         "BUAD306",
         "BUAD309"
     ];
@@ -74,8 +78,16 @@ const InformationSystemsRequirements: React.FC<
     const capstoneRequirements1 = ["CISC498", "CISC499"];
     const capstoneRequirements2 = ["UNIV401", "UNIV402"];
 
-    const universityRequirements = ["ENGL110", "EGG101", "CISC355"];
-    const nonMajorRequirements = ["ENGL312 or ENGL410", "COMM212", "CISC355"];
+    const universityRequirements = ["ENGL110", "EGGG101", "CISC355"];
+    const nonMajorRequirements = [
+        "[",
+        "ENGL312",
+        "or",
+        "ENGL410",
+        "]",
+        "COMM212",
+        "CISC355"
+    ];
     const writingOptionRequirements = ["ENGL312 or ENGL410"];
 
     const biologyLabRequirements = ["BISC207", "BISC208"];
@@ -147,36 +159,46 @@ const InformationSystemsRequirements: React.FC<
 
     return (
         <div>
+            <br></br>
             <h2>Information Systems Degree Requirements</h2>
             <div>
                 <h4>CIS Core Requirements:</h4>
                 {render(majorCoreRequirements)}
             </div>
+            <br></br>
             <div>
                 <h4>BUAD Core Requirements:</h4>
                 {render(buadCoreRequirements)}
             </div>
+            <br></br>
             <div>
                 <h4>Math Core Requirements:</h4>
                 {render(mathCoreRequirements)}
             </div>
+            <br></br>
             <div>
                 <h4>Non Major Requirements:</h4>
                 {render(nonMajorRequirements)}
             </div>
+            <br></br>
             <div>
-                <h4>Capstone Requirements: Pick one of the two.</h4>
+                <h4>Capstone Requirements:</h4>
+                <u>Pick one of pairs</u>
                 {render(capstoneRequirements1)}
                 {render(capstoneRequirements2)}
             </div>
+            <br></br>
             <div>
                 <h4>University Requirements:</h4>
                 {render(universityRequirements)}
             </div>
+            <br></br>
             <div>
-                <h4>Writing Options:</h4>
+                <h4>Writing Requirement:</h4>
+                <u>Pick one</u>
                 {render(writingOptionRequirements)}
             </div>
+            <br></br>
             <div>
                 <h4>Laboratory Science:</h4>
                 <div>Please choose your science track.</div>
@@ -194,6 +216,7 @@ const InformationSystemsRequirements: React.FC<
                     </div>
                 )}
             </div>
+            <br></br>
             <div>
                 <h4>Breadth Requirements:</h4>
                 {Object.entries(breadthCredits).map(([breadth, credits]) => (
