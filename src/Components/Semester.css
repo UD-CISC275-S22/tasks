@@ -1,0 +1,124 @@
+.Semester {
+    text-align: center;
+    min-height: 100%; /*Can change height later depending on deployment*/
+    min-width: 100%; /*Can change width later depending on deployment*/
+    display: flex;
+    flex-direction: row; /*I think row will be good but check on deployment because the semesters should span across not down*/
+    align-items: center;
+    justify-content: center;
+    background-color: #0f234c;
+}
+
+.Fall {
+    padding: 10px; /*for the course elements within the semester*/
+    margin-right: 10px; /*all "margins" are for the other semester elements in the larger container*/
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 5px outset rgb(179, 100, 26);
+    text-align: center;
+    min-height: 80%; /*Can change height later depending on deployment*/
+    min-width: 10%; /*Can change width later depending on deployment*/
+    display: flex;
+    flex-direction: column; /*Actual singular semester should span downwards - column like courses*/
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(251, 207, 142);
+    font-family:'Times New Roman', Times, serif;
+    font-size: calc(4px + 2vmin); /*Can change size later depending on deployment*/
+}
+
+.Winter {
+    padding: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 5px outset rgb(28, 75, 58);
+    text-align: center;
+    min-height: 80%; /*Can change height later depending on deployment*/
+    min-width: 10%; /*Can change width later depending on deployment*/
+    display: flex;
+    flex-direction: column; /*Actual singular semester should span downwards - column like courses*/
+    align-items: center;
+    justify-content: center;
+    background-color: #9ed3be; /*Can change color for asethetic later if dislike*/
+    font-family:'Times New Roman', Times, serif;
+    font-size: calc(4px + 2vmin); /*Can change size later depending on deployment*/
+}
+
+.Spring {
+    padding: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 5px outset rgb(11, 100, 23);
+    text-align: center;
+    min-height: 80%; /*Can change height later depending on deployment*/
+    min-width: 10%; /*Can change width later depending on deployment*/
+    display: flex;
+    flex-direction: column; /*Actual singular semester should span downwards - column like courses*/
+    align-items: center;
+    justify-content: center;
+    background-color: #a4d39e; /*Can change color for asethetic later if dislike*/
+    font-family:'Times New Roman', Times, serif;
+    font-size: calc(4px + 2vmin); /*Can change size later depending on deployment*/
+}
+
+.Summer {
+    padding: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 5px outset rgb(75, 26, 71);
+    text-align: center;
+    min-height: 80%; /*Can change height later depending on deployment*/
+    min-width: 10%; /*Can change width later depending on deployment*/
+    display: flex;
+    flex-direction: column; /*Actual singular semester should span downwards - column like courses*/
+    align-items: center;
+    justify-content: center;
+    background-color: #deadd9; /*Can change color for asethetic later if dislike*/
+    font-family:'Times New Roman', Times, serif;
+    font-size: calc(4px + 2vmin); /*Can change size later depending on deployment*/
+}
+
+.Course {
+    padding: 8px;
+    margin-right: 2px;
+    margin-left: 2px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    min-width: 100%;
+    display: block;
+    border: 1px solid black;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.DropdownMenu {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: #0f234c;
+    padding: 20px;
+}
+
+Dropdown {
+    background-color: red;
+    margin-right: 2px;
+    margin-left: 2px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+Dropdown:default{
+    background-color: #1d442d;
+}
