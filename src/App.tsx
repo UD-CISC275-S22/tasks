@@ -16,8 +16,8 @@ export function App(): JSX.Element {
             <div>
                 <h1>Hello World</h1>
                 <img
-                    src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.computerhope.com%2Fjargon%2Fd%2Fdesktopc.htm&psig=AOvVaw1DMQo2OekdIuCIRyYy30VA&ust=1694879818062000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCNCm5739rIEDFQAAAAAdAAAAABAK"
-                    alt="This is a Computer"
+                    src="https://images.app.goo.gl/1xve48ShyVZvoxzq5"
+                    alt="The beach"
                 />
             </div>
 
