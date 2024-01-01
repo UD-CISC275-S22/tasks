@@ -25,7 +25,7 @@ export function App(): JSX.Element {
                 <ol>
                     <li>one</li>
                     <li>two</li>
-                    <li>three</li>
+                    <li>two</li>
                 </ol>
             </div>
 
