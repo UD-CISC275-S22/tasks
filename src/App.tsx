@@ -4,7 +4,9 @@ import "./App.css";
 function App(): JSX.Element {
     return (
         <div className="App">
-            <header className="App-header">UD CISC275 with Kevin Chau</header>
+            <header className="App-header">
+                Hello World UD CISC275 with Kevin Chau
+            </header>
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
