@@ -37,3 +37,19 @@
         transform: rotate(360deg);
     }
 }
+.button{
+    background-color: #61dafb;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 16px;
+    color: black;
+}
+.counter-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
