@@ -22,6 +22,7 @@ function App(): JSX.Element {
                 </button>
             </div>
             <h1>Michael Lutz</h1>
+            <h1>Hello World</h1>
         </div>
     );
 }
