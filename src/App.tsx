@@ -21,7 +21,7 @@ function App(): JSX.Element {
                     -
                 </button>
             </div>
-            <p>Michael Lutz</p>
+            <h1>Michael Lutz</h1>
         </div>
     );
 }
