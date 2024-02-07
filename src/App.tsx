@@ -7,7 +7,7 @@ function App(): JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript
             </header>
-            <h1>Hello World</h1>
+            <p>Hello World</p>
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically self destruct in five seconds.
