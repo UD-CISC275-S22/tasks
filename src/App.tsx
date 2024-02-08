@@ -18,18 +18,24 @@ function App(): JSX.Element {
             <p>
                 Edit Ben Le<code>src/App.tsx</code> and save. This page will
                 automatically reload. Hello World
-                <h1>This is a heading</h1>
+                <h1>HEADING OUT</h1>
             </p>
             <ul>
-                <li>Element 1</li>
-                <li>Element 2</li>
-                <li>Element 3</li>
+                <li>3</li>
+                <li>2</li>
+                <li>1</li>
             </ul>
             <div className="column">
                 <Container>
                     <Row>
-                        <Col>First Column.</Col>
-                        <Col>Second Column.</Col>
+                        <Col>
+                            RECTANGLE
+                            <div className="rectangle"></div>
+                        </Col>
+                        <Col>
+                            RECTANGLE
+                            <div className="rectangle"></div>
+                        </Col>
                     </Row>
                 </Container>
             </div>
