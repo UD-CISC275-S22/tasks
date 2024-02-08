@@ -17,6 +17,7 @@ function App(): JSX.Element {
                     <em>Isaac Weber</em>
                 </strong>
             </p>
+            <img src="tasks\src\assets\pizzaPC.jpg" alt="My Computer" />
         </div>
     );
 }
