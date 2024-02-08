@@ -28,11 +28,13 @@
 .App-link {
     color: #61dafb;
 }
-.column{
-    background-color: red;
-    width: 500px;
-    margin-left:125px;
-    height:500px;
+
+.rectangle{
+    background-color:red;
+    width:100px;
+    height:100px;
+    padding:75px;
+    margin-left:50px;
 }
 
 @keyframes App-logo-spin {
