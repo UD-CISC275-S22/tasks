@@ -34,9 +34,12 @@
     width:100px;
     height:100px;
     padding:75px;
-    margin-left:50px;
+    margin-left:255px;
 }
-
+ul{
+    width:200px;
+    margin-left:650px;
+}
 @keyframes App-logo-spin {
     from {
         transform: rotate(0deg);
