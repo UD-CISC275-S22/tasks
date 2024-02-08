@@ -9,7 +9,8 @@ function App(): JSX.Element {
             </header>
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload. I love Big Chungus
+                automatically reload. I love Big Chungus and he is a very big
+                bunny!
             </p>
         </div>
     );
