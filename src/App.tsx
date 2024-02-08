@@ -19,20 +19,18 @@ function App(): JSX.Element {
                 <li>The leaf is green</li>
                 <li>The Tree is a tree</li>
             </ul>
-            <div
-                style={{
-                    width: "10px solid red",
-                    height: "10px solid red",
-                    backgroundColor: "red"
-                }}
-            >
-                <Container>
-                    <Row>
-                        <Col>First Column</Col>
-                        <Col>This is the Second</Col>
-                    </Row>
-                </Container>
-            </div>
+            <Container>
+                <Row>
+                    <Col>
+                        First Column
+                        <div className="rectangle"></div>
+                    </Col>
+                    <Col>
+                        This is the Second
+                        <div className="rectangle"></div>
+                    </Col>
+                </Row>
+            </Container>
             <Button onClick={() => console.log("Hello World!")}>
                 Log Hello World
             </Button>
