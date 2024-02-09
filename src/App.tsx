@@ -13,7 +13,10 @@ function App(): JSX.Element {
                 automatically reload. Christopher Rasquin. Hello World
             </p>
             <h1>Cool Image Here</h1>
-            <img src={"Green,_yellow_snake"} alt="Its a cool snake" />
+            <img
+                src="../assets/images/Green,_yellow_snake.jpg"
+                alt="Its a cool snake"
+            />
             Movie List:
             <ol>
                 <li>The Hateful Eight</li>
