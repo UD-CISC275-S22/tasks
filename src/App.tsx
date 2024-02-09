@@ -5,7 +5,7 @@ import { Container } from "react-bootstrap";
 import { Row } from "react-bootstrap";
 import { Col } from "react-bootstrap";
 
-import img from "/Users/saakethpula/tasks/src/assets/images/rOphhcP.jpeg";
+import img from "./rOphhcP.jpeg";
 function App(): JSX.Element {
     return (
         <div className="App">
