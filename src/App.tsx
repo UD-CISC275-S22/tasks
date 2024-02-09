@@ -26,7 +26,7 @@ function App(): JSX.Element {
                         Hello World of Pizza Box Computing
                     </strong>
                     <Button
-                        style={{ position: "fixed", top: 196, right: 0 }}
+                        style={{ position: "fixed", top: 383, right: 0 }}
                         onClick={() => console.log("Hello World!")}
                     >
                         Log Hello World
