@@ -15,7 +15,7 @@
 
 .App-header {
     width: 100%;
-    background-color: #282c34;
+    background-color: #739beb;
     min-height: 40vh;
     display: flex;
     flex-direction: column;
@@ -36,4 +36,15 @@
     to {
         transform: rotate(360deg);
     }
+}
+.redBox {
+    width: 90px;
+    height: 180px;
+    background-color: rgba(255, 0, 0, 0.8);
+    display: flex;
+    flex-direction: center;
+    align-items: right;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: rgb(255, 0, 0);
 }
