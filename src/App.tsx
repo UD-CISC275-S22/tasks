@@ -10,7 +10,11 @@ export function App(): JSX.Element {
                 TypeScript
             </header>
             <h1>This is a header</h1>
-            <img src="/bus.png" alt="Picture of the front of a bus" />
+            <img
+                className="App-image"
+                src="https://i.imgur.com/GwyoHnI.jpeg"
+                alt="Picture of the front of a bus"
+            />
             <ul>
                 Unordered List
                 <li>Thing 1</li>

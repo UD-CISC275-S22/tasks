@@ -8,6 +8,10 @@
     background-color: #ff0000;
 }
 
+.App-image {
+    width: 500px;
+}
+
 .App-logo {
     height: 40vmin;
     pointer-events: none;
