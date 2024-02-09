@@ -14,7 +14,7 @@ function App(): JSX.Element {
             </p>
             <h1>Cool Image Here</h1>
             <img
-                src="../assets/images/Green,_yellow_snake.jpg"
+                src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Green%2C_yellow_snake.jpg"
                 alt="Its a cool snake"
             />
             Movie List:
