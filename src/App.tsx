@@ -1,6 +1,5 @@
 import React from "react";
 import "./App.css";
-import img from "./Green,_yellow_snake.jpeg";
 import { Button, Col, Container, Row } from "react-bootstrap";
 
 function App(): JSX.Element {
