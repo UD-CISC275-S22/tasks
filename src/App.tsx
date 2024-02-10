@@ -16,7 +16,9 @@ function App(): JSX.Element {
                 Saaketh Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload. Hello World.
             </p>
-            <h1 className="banner">This is the new header</h1>
+            <div className="New-header">
+                <h1 className="banner">This is the new header</h1>
+            </div>
             <p>My Favorite Games:</p>
             <ul>
                 <li>Assetto Corsa</li>
