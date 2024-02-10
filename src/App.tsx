@@ -17,7 +17,7 @@ function App(): JSX.Element {
                 automatically reload. Hello World.
             </p>
             <div className="New-header">
-                <h1 className="banner">This is the new header</h1>
+                <h1>This is the new header</h1>
             </div>
             <p>My Favorite Games:</p>
             <ul>
