@@ -30,7 +30,7 @@ function App(): JSX.Element {
             <Container>
                 <Row>
                     <Col>
-                        Reasons I love Assetto Corsa:
+                        Assetto Corsa:
                         <p>It is fun, cheap, and realistic</p>{" "}
                         <div className="redBox"></div>
                         <p> </p>
