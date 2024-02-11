@@ -18,7 +18,7 @@ function App(): JSX.Element {
                 <Row>
                     <Col>
                         <img
-                            src="...\assets\Clue.png"
+                            src="src\assets\Clue.png"
                             alt="A picture of a trainnn"
                         />
                         <div
