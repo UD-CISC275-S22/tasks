@@ -5,9 +5,11 @@ import { Button, Col, Container, Row } from "react-bootstrap";
 function App(): JSX.Element {
     return (
         <div className="App">
-            <header className="App-header">
-                UD CISC275 with React Hooks and TypeScript
-            </header>
+            <span style={{ color: "red" }}>
+                <header className="App-header">
+                    UD CISC275 with React Hooks and TypeScript
+                </header>
+            </span>
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload. Jacob Whitman automatically. Hello World!
@@ -28,9 +30,7 @@ function App(): JSX.Element {
                                 padding: "4px",
                                 backgroundColor: "solid blue"
                             }}
-                        >
-                            colored text
-                        </div>
+                        ></div>
                     </Col>
                     <Col>
                         <ul>
@@ -47,13 +47,14 @@ function App(): JSX.Element {
                                 padding: "4px",
                                 backgroundColor: "solid blue"
                             }}
-                        >
-                            colored text
-                        </div>
+                        ></div>
                     </Col>
                 </Row>
             </Container>
-            <Button onClick={() => console.log("Hello World!")}>
+            <Button
+                name="Log Hello World"
+                onClick={() => console.log("Hello World!")}
+            >
                 Click Me
             </Button>
         </div>
