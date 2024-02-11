@@ -12,7 +12,7 @@ export function App(): JSX.Element {
             <h1>This is a header</h1>
             <img
                 className="App-image"
-                src="https://i.imgur.com/GwyoHnI.jpeg"
+                src={require("../src/bus.jpeg")}
                 alt="Picture of the front of a bus"
             />
             <ul>
