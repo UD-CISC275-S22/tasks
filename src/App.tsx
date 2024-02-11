@@ -14,15 +14,48 @@ function App(): JSX.Element {
             </p>
             <Container>
                 <Row>
-                    <Col>First column.</Col>
                     <Col>
-                        Second column. You can put whatever you want in here,
-                        and it will be on the right side. Maybe try adding an
-                        image?
+                        <img
+                            src="...\assets\Clue.png"
+                            alt="A picture of a trainnn"
+                        />
+                        <div
+                            style={{
+                                color: "red",
+                                width: "40px",
+                                height: "40px",
+                                border: "1px solid blue",
+                                padding: "4px",
+                                backgroundColor: "solid blue"
+                            }}
+                        >
+                            colored text
+                        </div>
+                    </Col>
+                    <Col>
+                        <ul>
+                            <li>cats</li>
+                            <li>cats</li>
+                            <li>catssss</li>
+                        </ul>
+                        <div
+                            style={{
+                                color: "red",
+                                width: "40px",
+                                height: "40px",
+                                border: "1px solid blue",
+                                padding: "4px",
+                                backgroundColor: "solid blue"
+                            }}
+                        >
+                            colored text
+                        </div>
                     </Col>
                 </Row>
             </Container>
-            <Button onClick={() => console.log("I am logged")}>Click Me</Button>
+            <Button onClick={() => console.log("Hello World!")}>
+                Click Me
+            </Button>
         </div>
     );
 }
