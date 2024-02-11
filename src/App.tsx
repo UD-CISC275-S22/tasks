@@ -26,9 +26,9 @@ function App(): JSX.Element {
                                 color: "red",
                                 width: "40px",
                                 height: "40px",
-                                border: "1px solid blue",
+                                border: "1px solid red",
                                 padding: "4px",
-                                backgroundColor: "solid blue"
+                                backgroundColor: "solid red"
                             }}
                         ></div>
                     </Col>
@@ -43,9 +43,9 @@ function App(): JSX.Element {
                                 color: "red",
                                 width: "40px",
                                 height: "40px",
-                                border: "1px solid blue",
+                                border: "1px solid red",
                                 padding: "4px",
-                                backgroundColor: "solid blue"
+                                backgroundColor: "solid red"
                             }}
                         ></div>
                     </Col>
