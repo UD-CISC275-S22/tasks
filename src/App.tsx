@@ -16,10 +16,10 @@ export function App(): JSX.Element {
                 alt="Picture of the front of a bus"
             />
             <ul>
-                Unordered List
-                <li>Thing 1</li>
-                <li>Thing 2</li>
-                <li>Thing 3</li>
+                Things I like
+                <li>Money</li>
+                <li>Cars</li>
+                <li>Food</li>
             </ul>
             <Button onClick={() => console.log("Hello World!")}>
                 Log Hello World
@@ -28,14 +28,18 @@ export function App(): JSX.Element {
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
             </p>
-            <div className="App">
+            <div>
                 <Container>
                     <Row>
-                        <Col className="Rect">
-                            First column<p>nothing in here</p>
+                        <Col>
+                            First column
+                            <p>nothing in here</p>
+                            <div className="Rect"></div>
                         </Col>
-                        <Col className="Rect">
-                            Second column<p>nothing in here either</p>
+                        <Col>
+                            Second column
+                            <p>nothing in here either</p>
+                            <div className="Rect"></div>
                         </Col>
                     </Row>
                 </Container>
