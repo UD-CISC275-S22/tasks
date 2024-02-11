@@ -6,9 +6,9 @@ function App(): JSX.Element {
     return (
         <div className="App">
             <span style={{ color: "red" }}>
-                <header className="App-header">
+                <h1 className="App-header">
                     UD CISC275 with React Hooks and TypeScript
-                </header>
+                </h1>
             </span>
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
