@@ -12,18 +12,16 @@ function App(): JSX.Element {
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
-            </p>
-            <p> Mayowa Ayeni </p>
-            <div>
-                <h2>This is the fonz</h2>
-                <img src="https://i.imgflip.com/155tc5.jpg" alt="The fonz" />
-            </div>
-            <div>
                 <ul>
                     <li>StarTrek</li>
                     <li>Pirates of the Caribbean</li>
                     <li>Prometheus</li>
                 </ul>
+            </p>
+            <p> Mayowa Ayeni </p>
+            <div>
+                <h2>This is the fonz</h2>
+                <img src="https://i.imgflip.com/155tc5.jpg" alt="The fonz" />
             </div>
             <Button>Log Hello World</Button>
         </div>
