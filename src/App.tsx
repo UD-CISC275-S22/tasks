@@ -18,17 +18,14 @@ function App(): JSX.Element {
                 <Row>
                     <Col>
                         <img
-                            src="src\assets\Clue.png"
-                            alt="A picture of a trainnn"
+                            src={require("./assets/he.jpg")}
+                            alt="A picture of a he"
                         />
                         <div
                             style={{
-                                color: "red",
                                 width: "40px",
                                 height: "40px",
-                                border: "1px solid red",
-                                padding: "4px",
-                                backgroundColor: "solid red"
+                                backgroundColor: "red"
                             }}
                         ></div>
                     </Col>
@@ -40,21 +37,15 @@ function App(): JSX.Element {
                         </ul>
                         <div
                             style={{
-                                color: "red",
                                 width: "40px",
                                 height: "40px",
-                                border: "1px solid red",
-                                padding: "4px",
-                                backgroundColor: "solid red"
+                                backgroundColor: "red"
                             }}
                         ></div>
                     </Col>
                 </Row>
             </Container>
-            <Button
-                name="Log Hello World"
-                onClick={() => console.log("Hello World!")}
-            >
+            <Button type="button" name="Log Hello World">
                 Click Me
             </Button>
         </div>
