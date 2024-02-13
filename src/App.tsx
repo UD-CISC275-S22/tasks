@@ -26,6 +26,42 @@ function App(): JSX.Element {
             <Button onClick={() => console.log("Hello World!")}>
                 Log Hello World
             </Button>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+                <div style={{ marginRight: "20px" }}>
+                    <div
+                        style={{
+                            width: "100px",
+                            height: "200px",
+                            backgroundColor: "red",
+                            marginBottom: "20px"
+                        }}
+                    ></div>
+                    <div
+                        style={{
+                            width: "100px",
+                            height: "150px",
+                            backgroundColor: "red"
+                        }}
+                    ></div>
+                </div>
+                <div>
+                    <div
+                        style={{
+                            width: "100px",
+                            height: "200px",
+                            backgroundColor: "red",
+                            marginBottom: "20px"
+                        }}
+                    ></div>
+                    <div
+                        style={{
+                            width: "100px",
+                            height: "150px",
+                            backgroundColor: "red"
+                        }}
+                    ></div>
+                </div>
+            </div>
         </div>
     );
 }
