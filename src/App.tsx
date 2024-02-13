@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { Button } from "react-bootstrap";
-import { Col, Container, Row } from "react-bootstrap";
+// import { Col, Container, Row } from "react-bootstrap";
 
 function App(): JSX.Element {
     return (
