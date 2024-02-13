@@ -9,7 +9,7 @@ function App(): JSX.Element {
             </header>
             <p>
                 I am adding my name Nathan Rowell. This page will automatically
-                reload. Hello World
+                reload. Hello World. Hello World again
             </p>
         </div>
     );
