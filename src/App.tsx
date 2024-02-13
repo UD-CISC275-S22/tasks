@@ -1,3 +1,4 @@
+import { Button, Col, Container, Row } from "react-bootstrap";
 import React from "react";
 import "./App.css";
 
@@ -12,6 +13,33 @@ function App(): JSX.Element {
                 automatically reload.
             </p>
             <p>Hello World;</p>
+            <div>
+                <h1>Why I love Barcelona</h1>
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/300px-FC_Barcelona_%28crest%29.svg.png"
+                    alt="A picture of FC Barcelona badge"
+                />
+                <ul>
+                    <li>Barcelona is the best team in the world</li>
+                    <li>We have the best la masia in the footballing world</li>
+                    <li>Only team in spain with a treble</li>
+                </ul>
+                <Button onClick={() => console.log("Hello World!")}>
+                    Log Hello World
+                </Button>
+                <Container>
+                    <Row>
+                        <Col>
+                            Column1
+                            <div className="redRectangle"></div>
+                        </Col>
+                        <Col>
+                            Column2
+                            <div className="redRectangle"></div>
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
         </div>
     );
 }
