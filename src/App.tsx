@@ -9,6 +9,7 @@ function App(): JSX.Element {
             </header>
             <p>Presented by: Victoria Nikolaeva</p>
             <p>Silly Silly Goose, Reminder to drink your water!</p>
+            <p>Hello World</p>
         </div>
     );
 }
