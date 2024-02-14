@@ -12,7 +12,7 @@ function App(): JSX.Element {
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload. Miles Gaydos says Hello World
             </p>
-            <header>Image Below:</header>
+            <h1>Image Below:</h1>
             <img
                 src="src\images\TheWhale.jpg"
                 alt="A picture of Brendan Fraser"
