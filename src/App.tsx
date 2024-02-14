@@ -12,6 +12,7 @@ function App(): JSX.Element {
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
             </p>
+            <h1> This is a required header text</h1>
         </div>
     );
 }
