@@ -12,7 +12,7 @@ function App(): JSX.Element {
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload. Brett Bockstein says: Hello World
             </p>
-            <header>Image Below:</header>
+            <h1>Image Below:</h1>
             <img
                 src="src\Images\Republic.jpeg"
                 alt="Logo of the Old Republic"
@@ -32,10 +32,14 @@ function App(): JSX.Element {
             <Container>
                 <Row>
                     <Col>
-                        <div className="div1"></div>
+                        <div className="div1">
+                            <p>Column 1</p>
+                        </div>
                     </Col>
                     <Col>
-                        <div className="div1"></div>
+                        <div className="div1">
+                            <p>Column 2</p>
+                        </div>
                     </Col>
                 </Row>
             </Container>
