@@ -6,10 +6,10 @@ function App(): JSX.Element {
     //TODO:  Heading??? idk Also the red box, image and button
     return (
         <div className="App">
-            <h1 className="App-header">
+            <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript
-            </h1>
-
+            </header>
+            <h1>header2</h1>
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload. Jacob Whitman automatically. Hello World!
@@ -45,8 +45,12 @@ function App(): JSX.Element {
                     </Col>
                 </Row>
             </Container>
-            <Button className="button" name="/Log Hello World/i">
-                Click Me
+            <Button
+                className="button"
+                name="Log Hello World"
+                onClick={() => console.log("Hello World!")}
+            >
+                Log Hello World
             </Button>
         </div>
     );
