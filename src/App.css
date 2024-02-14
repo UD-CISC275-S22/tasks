@@ -7,6 +7,12 @@
     pointer-events: none;
 }
 
+.Red-Rect {
+    height: 20vmin;
+    width: 50vmin;
+    background-color: red;
+}
+
 @media (prefers-reduced-motion: no-preference) {
     .App-logo {
         animation: App-logo-spin infinite 20s linear;
@@ -15,7 +21,7 @@
 
 .App-header {
     width: 100%;
-    background-color: #282c34;
+    background-color: #3bdbff;
     min-height: 40vh;
     display: flex;
     flex-direction: column;
