@@ -45,7 +45,7 @@ function App(): JSX.Element {
                     </Col>
                 </Row>
             </Container>
-            <Button type="button" name="Log Hello World">
+            <Button className="button" name="/Log Hello World/i">
                 Click Me
             </Button>
         </div>
