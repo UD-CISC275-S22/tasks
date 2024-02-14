@@ -47,6 +47,7 @@ export function isQuestion(message: string): boolean {
     const lastChar = message[message.length - 1];
     let result = true;
 
+    // eslint-disable-next-line no-extra-parens
     lastChar === "?" ? (result = true) : (result = false);
     return result;
 }
