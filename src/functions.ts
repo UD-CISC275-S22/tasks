@@ -21,7 +21,7 @@ export function add3(first: number, second: number, third: number): number {
  * mark added to the end.
  */
 export function shout(message: string): string {
-    return "";
+    return message.toUpperCase() + "!";
 }
 
 /**
@@ -29,7 +29,8 @@ export function shout(message: string): string {
  * mark. Do not use an `if` statement in solving this question.
  */
 export function isQuestion(message: string): boolean {
-    return true;
+    const length: number = message.length;
+    return message.charAt(length - 1) === "?" ? true : false;
 }
 
 /**
@@ -38,5 +39,12 @@ export function isQuestion(message: string): boolean {
  * upper or lower case), then return `false`. Otherwise, return `null`.
  */
 export function convertYesNo(word: string): boolean | null {
-    return true;
+    word = word.toUpperCase();
+    if (word === "YES") {
+        return true;
+    } else if (word === "NO") {
+        return false;
+    } else {
+        return null;
+    }
 }
