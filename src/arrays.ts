@@ -5,6 +5,12 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
+    // const arr = [...numbers]; // Make a copy so we don't modify the original;
+    // const length = arr.length;
+    // if(length === 1){
+    //     return
+    // }
+    // }
     return numbers;
 }
 
@@ -13,7 +19,9 @@ export function bookEndList(numbers: number[]): number[] {
  * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
-    return numbers;
+    const arr = [...numbers];
+    const tripled = arr.map((num: number): number => num * 3);
+    return tripled;
 }
 
 /**
@@ -21,6 +29,9 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
+    const arr = [...numbers];
+
+    //const variables = arr.map((var: string): number => var.stringsToIntegers());
     return [];
 }
 
@@ -41,6 +52,10 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
+    // const arr = [...messages];
+    // const length = arr.length(())
+    // const point = arr.findIndex((poi: string): string => "?");
+
     return [];
 };
 
@@ -49,7 +64,9 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return 0;
+    const arr = [...words];
+    const letters = arr.filter((letter: string) => letter.length < 4);
+    return letters.length;
 }
 
 /**
@@ -58,7 +75,11 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    return false;
+    const arr = [...colors];
+    const all = arr.every(
+        (al: string): boolean => al === "red" || al === "blue" || al === "green"
+    );
+    return all;
 }
 
 /**
