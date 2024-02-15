@@ -14,7 +14,7 @@ function App(): JSX.Element {
                 automatically reload. Hello World
             </p>
             <h1>This is my header for Task 3!</h1>
-            <img src="https://www.google.com/search?q=mike+schimdt&tbm=isch&ved=2ahUKEwjczPOC46uEAxUPPlkFHfJ0BtIQ2-cCegQIABAA&oq=mike+schimdt&gs_lp=EgNpbWciDG1pa2Ugc2NoaW1kdDIFEAAYgAQyCRAAGIAEGBgYCjIJEAAYgAQYGBgKMgkQABiABBgYGAoyCRAAGIAEGBgYCjIJEAAYgAQYGBgKMgkQABiABBgYGAoyBxAAGIAEGBgyCRAAGIAEGBgYCkjWKFDFBli1J3ABeACQAQCYAVagAZMKqgECMjK4AQPIAQD4AQGKAgtnd3Mtd2l6LWltZ6gCAMICDRAAGIAEGIoFGEMYsQPCAgoQABiABBiKBRhDwgIIEAAYgAQYsQPCAgsQABiABBixAxiDAcICDhAAGIAEGIoFGLEDGIMBwgIEEAAYHogGAQ&sclient=img&ei=cDDNZdzUD4_85NoP8umZkA0&bih=730&biw=1536#imgrc=P6yyFv4bEFli-M" alt="The Best Baseball Player" />
+            <img src="https://sabr.org/wp-content/uploads/2020/09/Schmidt-Mike-Phillies-1979-600x400-1.jpg" alt="The Best Baseball Player" />
             <Button onClick={ () => console.log ("Hello World!") }>Log Hello World</Button>
             Unordered List:
             <ul>
