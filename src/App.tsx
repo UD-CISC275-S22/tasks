@@ -14,5 +14,16 @@ function App(): JSX.Element {
         </div>
     );
 }
+export function App2(): JSX.Element {
+    return (
+        <div>
+            <h1>Hello World NUMBER TWO</h1>
+            <img
+                src="https://media.pitchfork.com/photos/64c28ffcc526dd3929136bfd/16:9/w_2656,h_1494,c_limit/Taylor%20Swift.jpg"
+                alt="TAYLOR SWIFT"
+            />
+        </div>
+    );
+}
 
 export default App;
