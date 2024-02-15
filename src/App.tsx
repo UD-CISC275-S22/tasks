@@ -9,12 +9,21 @@ function App(): JSX.Element {
                 <Row>
                     <Col>
                         <header className="App-header">
-                            UD CISC275 with React Hooks and TypeScript
+                            <span style={{ color: "red" }}>
+                                UD CISC275 with React Hooks and TypeScript
+                            </span>
+                            .
                         </header>
                         <p>
                             I am adding my name Nathan Rowell. This page will
                             automatically reload. Hello World. Hello World again
                         </p>
+                        <p> my favorite animals:</p>
+                        <ol>
+                            <li>Cat</li>
+                            <li>Penguin</li>
+                            <li>Hippo</li>
+                        </ol>
                     </Col>
                     <Col>
                         <h1>Hello World NUMBER TWO</h1>
