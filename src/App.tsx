@@ -50,7 +50,7 @@ function App(): JSX.Element {
                     automatically reload.
                 </p>
 
-                <p>Junpuyin Weissssssss</p>
+                <p>Junpuyin Wei</p>
             </div>
         </div>
     );
