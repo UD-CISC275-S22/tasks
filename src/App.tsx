@@ -15,33 +15,25 @@ function App(): JSX.Element {
             <h1>Welcome I am Davyn Savage</h1>
             <Container>
                 <Row>
-                    <div
-                        style={{
-                            backgroundColor: "red",
-                            width: 100,
-                            height: 500
-                        }}
-                    >
-                        <Col>
-                            <ul>
-                                <li>I like to go by savage</li>
-                                <li>
-                                    My name is pronounced the same way you would
-                                    divine
-                                </li>
-                                <li>
-                                    I dislike having to correct how people say
-                                    name so I go by Savage
-                                </li>
-                            </ul>
-                        </Col>
-                        <Col>
-                            <img
-                                src="C:\Users\davyn\Documents\tasks\src\Images\Cityscape.jpg"
-                                alt="A picture of a beautiful city"
-                            />
-                        </Col>
-                    </div>
+                    <Col>
+                        <ul className="Rectangle">
+                            <li>I like to go by savage</li>
+                            <li>
+                                My name is pronounced the same way you would
+                                divine
+                            </li>
+                            <li>
+                                I dislike having to correct how people say name
+                                name so I go by Savage
+                            </li>
+                        </ul>
+                    </Col>
+                    <Col className="Rectangle">
+                        <img
+                            src="C:\Users\davyn\Documents\tasks\public\logo512.png"
+                            alt="A picture of a logo"
+                        />
+                    </Col>
                 </Row>
             </Container>
             <p>Davyn Savage</p>
