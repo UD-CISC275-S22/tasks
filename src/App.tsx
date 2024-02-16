@@ -46,7 +46,7 @@ function App(): JSX.Element {
                 <p>Doug the Dog</p>
             </div>
             <Button onClick={() => console.log("Hello World!")}>
-                Log Hello World
+                Hello World
             </Button>
         </div>
     );
