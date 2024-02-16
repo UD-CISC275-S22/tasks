@@ -20,6 +20,13 @@ function App(): JSX.Element {
                                 color: "white"
                             }}
                         >
+                            <div
+                                style={{
+                                    width: "600px",
+                                    height: "8px",
+                                    backgroundColor: "red"
+                                }}
+                            ></div>
                             <img
                                 src={require("./assets/tiny dtrawberry flipped transparent png.png")}
                                 alt="A flipped strawberry"
@@ -37,20 +44,30 @@ function App(): JSX.Element {
                             </ul>
                         </Col>
                         <Col
-                            style={{ backgroundColor: "pink", color: "green" }}
+                            style={{ backgroundColor: "pink", color: "white" }}
                         >
-                            <img
-                                src={require("./assets/tiny dtrawberry transparent png.png")}
-                                alt="A strawberry"
-                            />
+                            <div
+                                style={{
+                                    width: "600px",
+                                    height: "8px",
+                                    backgroundColor: "red"
+                                }}
+                            ></div>
+                            <p> ⬤ </p>
+                            <p> ⬤ </p>
+                            <p> ⬤ </p>
                             <Button
                                 style={{
                                     backgroundColor: "green",
                                     color: "white"
                                 }}
+                                onClick={() => console.log("Hello World!")}
                             >
-                                Click for silly surpise lol
+                                Log Hello World
                             </Button>
+                            <p> ⬤ </p>
+                            <p> ⬤ </p>
+                            <p> ⬤ </p>
                         </Col>
                     </Row>
                 </Container>
@@ -64,8 +81,8 @@ function App(): JSX.Element {
 //Add an image with alt text
 //Add a list with at least three elements
 //Change the background color of the header area
-Add a bootstrap button with the text Log Hello World
-Make the button log Hello World! when clicked
+//Add a bootstrap button with the text Log Hello World
+//Make the button log Hello World! when clicked
 
 //Have a two-column layout on the page somwhere
 Put a red-filled rectangle in each column using a div tag with width, height, and backgroundColor styles.
