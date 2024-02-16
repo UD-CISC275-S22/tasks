@@ -5,7 +5,13 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    return numbers;
+    if (numbers.length === 0) {
+        return []; // return empty array if there are no elements
+    } else if (numbers.length === 1) {
+        return [numbers[0], numbers[0]]; // return array with the single element twice
+    } else {
+        return [numbers[0], numbers[numbers.length - 1]]; // return array with first and last element
+    }
 }
 
 /**
@@ -13,7 +19,13 @@ export function bookEndList(numbers: number[]): number[] {
  * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
-    return numbers;
+    const tripledArray: number[] = [];
+
+    for (const num of numbers) {
+        tripledArray.push(num * 3); // triple each number and add to the new array
+    }
+
+    return tripledArray;
 }
 
 /**
@@ -21,7 +33,16 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    return [];
+    const integers: number[] = [];
+
+    for (const str of numbers) {
+        const parsedInt = parseInt(str, 10); // Parse string to integer with base 10
+
+        if (!isNaN(parsedInt)) {
+            integers.push(parsedInt); // Add parsed integer to the result array
+        } else {
+            integers.push(0); // If parsing fails, add 0 to the result array
+        }
 }
 
 /**
@@ -32,7 +53,20 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    return [];
+    const numbers: number[] = [];
+
+    for (const str of amounts) {
+        const cleanStr = str.replace(/^\$/, ''); // Remove "$" symbol from the beginning
+        const parsedInt = parseInt(cleanStr, 10); // Parse string to integer with base 10
+
+        if (!isNaN(parsedInt)) {
+            numbers.push(parsedInt); // Add parsed integer to the result array
+        } else {
+            numbers.push(0); // If parsing fails, add 0 to the result array
+        }
+    }
+
+    return numbers;
 };
 
 /**
@@ -41,7 +75,17 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    return [];
+    const processedMessages: string[] = [];
+
+    for (const message of messages) {
+        if (message.endsWith("!")) {
+            processedMessages.push(message.toUpperCase()); // Make uppercase if the message ends with "!"
+        } else if (!message.endsWith("?")) {
+            processedMessages.push(message); // Add to the result list if it doesn't end with "?"
+        }
+    }
+
+    return processedMessages;
 };
 
 /**
