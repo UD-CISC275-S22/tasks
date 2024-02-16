@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import City from "C:UsersdavynDocuments\taskssrcCityscape.jpg";
 import { Button, Col, Container, Row } from "react-bootstrap";
 
 function App(): JSX.Element {
@@ -31,9 +32,10 @@ function App(): JSX.Element {
                         </ul>
                     </Col>
                     <Col>
+                        return{" "}
                         <img
                             className="Rectangle"
-                            src="C:\Users\davyn\Documents\tasks\src\Images\Cityscape.jpg"
+                            src={City}
                             alt="A picture of a city"
                         />
                     </Col>
