@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "./logo512.png"; // with import
 import "./App.css";
 import { Button, Col, Container, Row } from "react-bootstrap";
 
@@ -16,9 +15,11 @@ function App(): JSX.Element {
             <h1>Welcome I am Davyn Savage</h1>
             <Container>
                 <Row>
-                    <Col className="Rectangle">
+                    <Col>
                         <ul>
-                            <li>I like to go by savage</li>
+                            <li className="Rectangle">
+                                I like to go by savage
+                            </li>
                             <li>
                                 My name is pronounced the same way you would
                                 divine
@@ -29,8 +30,12 @@ function App(): JSX.Element {
                             </li>
                         </ul>
                     </Col>
-                    <Col className="Rectangle">
-                        <img src={logo} alt="A picture of a logo" />
+                    <Col>
+                        <img
+                            className="Rectangle"
+                            src="C:\Users\davyn\Documents\tasks\src\Images\Cityscape.jpg"
+                            alt="A picture of a city"
+                        />
                     </Col>
                 </Row>
             </Container>
