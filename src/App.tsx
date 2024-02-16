@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import { Button, Col, Container, Row } from "react-bootstrap";
+import DougDogImage from "./DougDog.jpg";
 
 function App(): JSX.Element {
     return (
@@ -41,6 +42,8 @@ function App(): JSX.Element {
                         </Col>
                     </Row>
                 </Container>
+                <img src={DougDogImage} alt="Doug the Dog" />
+                <p>Doug the Dog</p>
             </div>
             <Button onClick={() => console.log("Hello World!")}>
                 Log Hello World
