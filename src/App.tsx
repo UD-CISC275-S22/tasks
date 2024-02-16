@@ -12,13 +12,14 @@ function App(): JSX.Element {
                             UD CISC275 with NATHAN ROWELL, React Hooks, and
                             TypeScript
                         </header>
+                        <p>Hello World again</p>
                         <Button onClick={() => console.log("Hello World!")}>
                             Log Hello World
                         </Button>
-                        <p>Hello World again</p>
+                        <div className="Rectangle"></div>
                     </Col>
                     <Col>
-                        <h1>TAYLOR SWIFT</h1>
+                        <h1 className="App-header2">TAYLOR SWIFT</h1>
                         <img
                             src="https://media.pitchfork.com/photos/64c28ffcc526dd3929136bfd/16:9/w_2656,h_1494,c_limit/Taylor%20Swift.jpg"
                             alt="TAYLOR SWIFT"
@@ -31,6 +32,7 @@ function App(): JSX.Element {
                             <li>Enchanted</li>
                             <li>You Belong With Me</li>
                         </ol>
+                        <div className="Rectangle"></div>
                     </Col>
                 </Row>
             </Container>
