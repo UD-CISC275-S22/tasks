@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import City from "C:./Cityscape.jpg";
+import City from "./Cityscape.jpg";
 import { Button, Col, Container, Row } from "react-bootstrap";
 
 function App(): JSX.Element {
