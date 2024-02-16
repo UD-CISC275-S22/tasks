@@ -16,29 +16,30 @@ function App(): JSX.Element {
             <h1>Welcome I am Davyn Savage</h1>
             <Container>
                 <Row>
-                    <Col>
-                        <ul>
-                            <li className="Rectangle">
-                                I like to go by savage
-                            </li>
-                            <li>
-                                My name is pronounced the same way you would
-                                divine
-                            </li>
-                            <li>
-                                I dislike having to correct how people say name
-                                name so I go by Savage
-                            </li>
-                        </ul>
-                    </Col>
-                    <Col>
-                        return{" "}
-                        <img
-                            className="Rectangle"
-                            src={City}
-                            alt="A picture of a city"
-                        />
-                    </Col>
+                    <div
+                        style={{
+                            width: "50px",
+                            height: "100px",
+                            backgroundColor: "red"
+                        }}
+                    >
+                        <Col>
+                            <ul>
+                                <li>I like to go by Savage</li>
+                                <li>
+                                    My name is pronounced the same way you would
+                                    divine
+                                </li>
+                                <li>
+                                    I dislike having to correct how people say
+                                    name name so I go by Savage
+                                </li>
+                            </ul>
+                        </Col>
+                        <Col>
+                            <img src={City} alt="A picture of a city" />
+                        </Col>
+                    </div>
                 </Row>
             </Container>
             <p>Davyn Savage</p>
