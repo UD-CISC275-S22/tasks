@@ -21,7 +21,7 @@ function App(): JSX.Element {
             <p>Created by: Ellie Dassoulas</p>{" "}
             <img src={sunflowers} alt="A picture of a sunflower field" />
             <ul>
-                <li>first element</li>
+                <li>First element</li>
                 <li>second element</li>
                 <li>third element</li>
             </ul>
