@@ -5,6 +5,22 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
+    const numbersCopy: number[] = [];
+
+    if (numbers.length === 0) {
+        const numbersCopy2 = [...numbersCopy];
+        return numbersCopy2;
+    } else if (numbers.length === 1) {
+        const numbersCopy2 = [...numbers, ...numbers];
+        return numbersCopy2;
+    } else {
+        const numbersFirst: number = numbers[0];
+        const numbersLast: number = numbers[numbers.length - 1];
+        // eslint-disable-next-line prettier/prettier
+
+        const numbersCopy2 = [numbersFirst, numbersLast];
+        return numbersCopy2;
+    }
     return numbers;
 }
 
@@ -13,7 +29,9 @@ export function bookEndList(numbers: number[]): number[] {
  * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
-    return numbers;
+    const tripled: number[] = numbers.map((num: number): number => num * 3);
+    //num is meant to represent the current element in the array as we go through the array
+    return tripled;
 }
 
 /**
@@ -21,7 +39,13 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    return [];
+    const ints: number[] = numbers.map((str: string): number => parseInt(str));
+    //currently contains NaN
+    const ints2: number[] = ints.map((num: number): number =>
+        Number.isNaN(num) ? (num = 0) : num
+    ); //this will replace those NaN's with 0s
+
+    return ints2;
 }
 
 /**
@@ -32,7 +56,15 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    return [];
+    const removed: string[] = amounts.map((amount: string): string =>
+        amount.replace("$", "")
+    );
+    const ints: number[] = removed.map((str: string): number => parseInt(str));
+    //currently contains NaN
+    const ints2: number[] = ints.map((num: number): number =>
+        Number.isNaN(num) ? (num = 0) : num
+    ); //this will replace those NaN's with 0s
+    return ints2;
 };
 
 /**
@@ -41,7 +73,16 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    return [];
+    //toUpperCase method works fine with strings that have '!'
+    const removed: string[] = messages.filter(
+        (message: string): boolean => message.includes("?") !== true
+    ); //removes any strings that contain a question mark
+
+    const uppercase: string[] = removed.map((message: string): string =>
+        message.includes("!") == true ? message.toUpperCase() : message
+    );
+
+    return uppercase;
 };
 
 /**
@@ -49,7 +90,11 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return 0;
+    const onlyShortWords: string[] = words.filter(
+        (word: string): boolean => word.length < 4
+    );
+
+    return onlyShortWords.length;
 }
 
 /**
@@ -58,7 +103,16 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    return false;
+    if (colors.length === 0) {
+        return true;
+    }
+
+    const RGB = colors.every(
+        (color: string): boolean =>
+            color === "red" || color === "blue" || color === "green"
+    );
+
+    return RGB;
 }
 
 /**
@@ -69,7 +123,43 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    if (addends.length === 0) {
+        return "0=0";
+    } else if (addends.length === 1) {
+        return addends[0] + "=" + addends[0];
+    }
+    const addendsCopy: number[] = [...addends];
+
+    //const equation = "";
+
+    const addendsFirst: number = addends[0];
+    const addendsLast: number = addends[addends.length - 1];
+
+    const sum: number = addendsCopy.reduce(
+        (currentTotal: number, num: number) => currentTotal + num,
+        0
+    );
+
+    const removedOuter2: number[] = addends.filter(
+        (num: number): boolean => num !== addendsFirst && num !== addendsLast
+    );
+
+    const plusAdded: string[] = removedOuter2.map(
+        (num: number): string => "+" + num
+    );
+
+    /*const commasRemoved: string[] = plusAdded.map((num: string): string =>
+        num.replace(",", "")
+    );*/
+
+    return (
+        sum +
+        "=" +
+        addendsFirst +
+        plusAdded.toString() +
+        "+" +
+        addendsLast
+    ).replaceAll(",", "");
 }
 
 /**
@@ -82,5 +172,37 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    return [];
+    const valuesCopy: number[] = [...values];
+    if (valuesCopy.length === 0) {
+        const valuesCopy2: number[] = [...values, 0];
+        return valuesCopy2;
+        // eslint-disable-next-line prettier/prettier
+        // eslint-disable-next-line prettier/prettier, brace-style
+    } else if (valuesCopy.length === 1) {
+        const valuesCopy2: number[] = [...values, values[0]];
+        return valuesCopy2;
+    } else if (
+        valuesCopy.every((value: number): boolean => value >= 0) === true
+    ) {
+        //case where there are no negatives
+        const sum: number = valuesCopy.reduce(
+            (currentTotal: number, num: number) => currentTotal + num
+        );
+        const valuesPositive: number[] = [...valuesCopy, sum];
+        return valuesPositive;
+    }
+    const firstNegative: number = valuesCopy.findIndex(
+        //first negative number's index
+        (value: number): boolean => value < 0
+    );
+    const firstHalf: number[] = valuesCopy.slice(0, firstNegative); //gets the numbers up to (not including) the first negative
+
+    const sum: number = firstHalf.reduce(
+        //gives us the sum
+        (currentTotal: number, num: number) => currentTotal + num,
+        0
+    );
+    valuesCopy.splice(firstNegative + 1, 0, sum); //inserts the sum in the correct position
+
+    return valuesCopy;
 }
