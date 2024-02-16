@@ -1,6 +1,6 @@
 import React from "react";
-import logo from "./logo512.png"; // with import
 import "./App.css";
+import City from "./Cityscape.jpg";
 import { Button, Col, Container, Row } from "react-bootstrap";
 
 function App(): JSX.Element {
@@ -16,22 +16,30 @@ function App(): JSX.Element {
             <h1>Welcome I am Davyn Savage</h1>
             <Container>
                 <Row>
-                    <Col className="Rectangle">
-                        <ul>
-                            <li>I like to go by savage</li>
-                            <li>
-                                My name is pronounced the same way you would
-                                divine
-                            </li>
-                            <li>
-                                I dislike having to correct how people say name
-                                name so I go by Savage
-                            </li>
-                        </ul>
-                    </Col>
-                    <Col className="Rectangle">
-                        <img src={logo} alt="A picture of a logo" />
-                    </Col>
+                    <div
+                        style={{
+                            width: "50px",
+                            height: "100px",
+                            backgroundColor: "red"
+                        }}
+                    >
+                        <Col>
+                            <ul>
+                                <li>I like to go by Savage</li>
+                                <li>
+                                    My name is pronounced the same way you would
+                                    divine
+                                </li>
+                                <li>
+                                    I dislike having to correct how people say
+                                    name name so I go by Savage
+                                </li>
+                            </ul>
+                        </Col>
+                        <Col>
+                            <img src={City} alt="A picture of a city" />
+                        </Col>
+                    </div>
                 </Row>
             </Container>
             <p>Davyn Savage</p>
