@@ -56,4 +56,24 @@ function App(): JSX.Element {
     );
 }
 
+export function farenheitToCelcius(degreesF: number): number {
+    const degreesC: number = (degreesF - 32) * (5 / 9);
+    console.log(degreesC);
+    console.log(degreesF);
+    return degreesC;
+}
+
+export function convertYesNo(ans: string): boolean {
+    const ansLower: string = ans.toLowerCase();
+    console.log(ans);
+    console.log(ansLower);
+    if (ansLower === "yes") {
+        return true;
+    } else if (ansLower === "no") {
+        return false;
+    } else {
+        return;
+    }
+}
+
 export default App;
