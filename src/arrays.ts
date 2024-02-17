@@ -43,6 +43,9 @@ export function stringsToIntegers(numbers: string[]): number[] {
         } else {
             integers.push(0); // If parsing fails, add 0 to the result array
         }
+    }
+
+    return integers;
 }
 
 /**
@@ -56,7 +59,7 @@ export const removeDollars = (amounts: string[]): number[] => {
     const numbers: number[] = [];
 
     for (const str of amounts) {
-        const cleanStr = str.replace(/^\$/, ''); // Remove "$" symbol from the beginning
+        const cleanStr = str.replace(/^\$/, ""); // Remove "$" symbol from the beginning
         const parsedInt = parseInt(cleanStr, 10); // Parse string to integer with base 10
 
         if (!isNaN(parsedInt)) {
@@ -93,7 +96,15 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return 0;
+    let count = 0;
+
+    for (const word of words) {
+        if (word.length < 4) {
+            count++;
+        }
+    }
+
+    return count;
 }
 
 /**
@@ -102,7 +113,17 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    return false;
+    if (colors.length === 0) {
+        return true;
+    }
+
+    for (const color of colors) {
+        if (color !== "red" && color !== "blue" && color !== "green") {
+            return false;
+        }
+    }
+
+    return true;
 }
 
 /**
@@ -113,7 +134,26 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    let sum = 0;
+    let sumString = "";
+
+    // Calculate sum and construct sumString
+    for (let i = 0; i < addends.length; i++) {
+        sum += addends[i];
+        sumString += addends[i].toString(); // Convert number to string
+        if (i < addends.length - 1) {
+            sumString += "+";
+        }
+    }
+
+    // If addends array is empty, set sumString to "0=0"
+    if (addends.length === 0) {
+        sumString = "0=0";
+    } else {
+        sumString += "=" + sum;
+    }
+
+    return sumString;
 }
 
 /**
@@ -126,5 +166,25 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    return [];
+    let sum = 0;
+    let negativeFound = false;
+    const result: number[] = [];
+
+    for (let i = 0; i < values.length; i++) {
+        if (values[i] < 0 && !negativeFound) {
+            negativeFound = true;
+            result.push(values[i]);
+            result.push(sum);
+        } else {
+            sum += values[i];
+            result.push(values[i]);
+        }
+    }
+
+    // If no negative number was found, append the sum to the end
+    if (!negativeFound) {
+        result.push(sum);
+    }
+
+    return result;
 }
