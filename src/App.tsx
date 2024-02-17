@@ -63,17 +63,15 @@ export function farenheitToCelcius(degreesF: number): number {
     return degreesC;
 }
 
-export function convertYesNo(ans: string): boolean {
-    const ansLower: string = ans.toLowerCase();
-    console.log(ans);
-    console.log(ansLower);
-    if (ansLower === "yes") {
+export function convertYesNo(ans) {
+    ans = ans.toLowerCase();
+    if (ans === "yes") {
         return true;
-    } else if (ansLower === "no") {
+    } else if (ans === "no") {
         return false;
-    } else {
-        return;
     }
+    return undefined;
+
 }
 
 export default App;
