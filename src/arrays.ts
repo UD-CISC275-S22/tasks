@@ -48,7 +48,13 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    return [];
+    const check = amounts.map((character: string): string =>
+        character.replace("$", "")
+    );
+    const result = check.map((text: string): number =>
+        isNaN(parseInt(text)) === true ? 0 : parseInt(text)
+    );
+    return result;
 };
 
 /**
@@ -57,7 +63,12 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    return [];
+    const result = messages
+        .filter((word: string): boolean => !word.endsWith("?"))
+        .map((word: string): string =>
+            word.endsWith("!") ? word.toUpperCase() : word
+        );
+    return result;
 };
 
 /**
@@ -65,7 +76,8 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return 0;
+    const result = words.filter((word: string): boolean => word.length < 4);
+    return result.length;
 }
 
 /**
@@ -74,7 +86,14 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    return false;
+    if (colors.length === 0) {
+        return true;
+    }
+    const result = colors.every(
+        (color: string): boolean =>
+            color === "red" || color === "blue" || color === "green"
+    );
+    return result;
 }
 
 /**
@@ -85,7 +104,16 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    if (addends.length === 0) {
+        return "0=0";
+    }
+    const start = [...addends];
+    const sum = addends.reduce(
+        (currentTotal: number, num: number) => currentTotal + num,
+        0
+    );
+    const result = start.join("+");
+    return sum + "=" + result;
 }
 
 /**
