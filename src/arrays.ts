@@ -5,13 +5,7 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    if (numbers.length === 0) {
-        return []; // return empty array if there are no elements
-    } else if (numbers.length === 1) {
-        return [numbers[0], numbers[0]]; // return array with the single element twice
-    } else {
-        return [numbers[0], numbers[numbers.length - 1]]; // return array with first and last element
-    }
+    return numbers.slice(0, 1).concat(numbers.slice(-1));
 }
 
 /**
@@ -19,13 +13,7 @@ export function bookEndList(numbers: number[]): number[] {
  * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
-    const tripledArray: number[] = [];
-
-    for (const num of numbers) {
-        tripledArray.push(num * 3); // triple each number and add to the new array
-    }
-
-    return tripledArray;
+    return numbers.map((num) => num * 3);
 }
 
 /**
@@ -33,19 +21,10 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    const integers: number[] = [];
-
-    for (const str of numbers) {
-        const parsedInt = parseInt(str, 10); // Parse string to integer with base 10
-
-        if (!isNaN(parsedInt)) {
-            integers.push(parsedInt); // Add parsed integer to the result array
-        } else {
-            integers.push(0); // If parsing fails, add 0 to the result array
-        }
-    }
-
-    return integers;
+    return numbers.map((str) => {
+        const parsedInt = parseInt(str, 10);
+        return isNaN(parsedInt) ? 0 : parsedInt;
+    });
 }
 
 /**
@@ -56,20 +35,11 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    const numbers: number[] = [];
-
-    for (const str of amounts) {
-        const cleanStr = str.replace(/^\$/, ""); // Remove "$" symbol from the beginning
-        const parsedInt = parseInt(cleanStr, 10); // Parse string to integer with base 10
-
-        if (!isNaN(parsedInt)) {
-            numbers.push(parsedInt); // Add parsed integer to the result array
-        } else {
-            numbers.push(0); // If parsing fails, add 0 to the result array
-        }
-    }
-
-    return numbers;
+    return amounts.map((str) => {
+        const cleanStr = str.replace(/^\$/, "");
+        const parsedInt = parseInt(cleanStr, 10);
+        return isNaN(parsedInt) ? 0 : parsedInt;
+    });
 };
 
 /**
@@ -78,17 +48,11 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    const processedMessages: string[] = [];
-
-    for (const message of messages) {
-        if (message.endsWith("!")) {
-            processedMessages.push(message.toUpperCase()); // Make uppercase if the message ends with "!"
-        } else if (!message.endsWith("?")) {
-            processedMessages.push(message); // Add to the result list if it doesn't end with "?"
-        }
-    }
-
-    return processedMessages;
+    return messages
+        .map((message) => {
+            return message.endsWith("!") ? message.toUpperCase() : message;
+        })
+        .filter((message) => !message.endsWith("?"));
 };
 
 /**
@@ -96,15 +60,9 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    let count = 0;
-
-    for (const word of words) {
-        if (word.length < 4) {
-            count++;
-        }
-    }
-
-    return count;
+    return words.reduce((count, word) => {
+        return count + (word.length < 4 ? 1 : 0);
+    }, 0);
 }
 
 /**
@@ -113,17 +71,9 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    if (colors.length === 0) {
-        return true;
-    }
-
-    for (const color of colors) {
-        if (color !== "red" && color !== "blue" && color !== "green") {
-            return false;
-        }
-    }
-
-    return true;
+    return colors.every(
+        (color) => color === "red" || color === "blue" || color === "green"
+    );
 }
 
 /**
@@ -134,26 +84,9 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    let sum = 0;
-    let sumString = "";
-
-    // Calculate sum and construct sumString
-    for (let i = 0; i < addends.length; i++) {
-        sum += addends[i];
-        sumString += addends[i].toString(); // Convert number to string
-        if (i < addends.length - 1) {
-            sumString += "+";
-        }
-    }
-
-    // If addends array is empty, set sumString to "0=0"
-    if (addends.length === 0) {
-        sumString = "0=0";
-    } else {
-        sumString += "=" + sum;
-    }
-
-    return sumString;
+    const sum = addends.reduce((acc, num) => acc + num, 0); // Calculate the sum using reduce
+    const sumString = addends.join("+"); // Join addends with "+" separator
+    return addends.length === 0 ? "0=0" : `${sum}=${sumString}`;
 }
 
 /**
