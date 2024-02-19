@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import { Button, Col, Container, Row } from "react-bootstrap";
+import "./Images/Republic.jpeg";
 
 function App(): JSX.Element {
     return (
@@ -13,10 +14,7 @@ function App(): JSX.Element {
                 automatically reload. Brett Bockstein says: Hello World
             </p>
             <h1>Image Below:</h1>
-            <img
-                src="src\Images\Republic.jpeg"
-                alt="Logo of the Old Republic"
-            />
+            <img src="./Images/Republic.jpeg" alt="Logo of the Old Republic" />
             <p></p>
             Unordered List:
             <ul>
