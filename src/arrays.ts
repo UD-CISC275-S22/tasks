@@ -5,7 +5,13 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    return numbers;
+    if (numbers.length === 0) {
+        return [];
+    } else if (numbers.length === 1) {
+        return [numbers[0], numbers[0]];
+    } else {
+        return [numbers[0], numbers[numbers.length - 1]];
+    }
 }
 
 /**
@@ -13,7 +19,11 @@ export function bookEndList(numbers: number[]): number[] {
  * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
-    return numbers;
+    let trip: number[] = [];
+    for (let i = 0; i < numbers.length; i++) {
+        trip.push(numbers[i] * 3);
+    }
+    return trip;
 }
 
 /**
@@ -21,7 +31,9 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    return [];
+    return numbers.map((str: string): number =>
+        isNaN(Number(str)) ? 0 : Number(str)
+    );
 }
 
 /**
@@ -32,7 +44,13 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    return [];
+    amounts = amounts.map((str: string): string =>
+        str.includes("$") ? str.replace("$", "") : str
+    );
+
+    return amounts.map((str: string): number =>
+        isNaN(Number(str)) ? 0 : Number(str)
+    );
 };
 
 /**
@@ -41,7 +59,10 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    return [];
+    messages = messages.filter((str: string): boolean => !str.endsWith("?"));
+    return messages.map((str: string): string =>
+        str.includes("!") ? str.toUpperCase() : str
+    );
 };
 
 /**
@@ -49,7 +70,7 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return 0;
+    return words.filter((str: string): boolean => str.length < 4).length;
 }
 
 /**
@@ -58,7 +79,10 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    return false;
+    return colors.every(
+        (str, string): boolean =>
+            str === "red" || str === "green" || str === "blue" || str === ""
+    );
 }
 
 /**
@@ -69,7 +93,10 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    let init = 0;
+    let sum = addends.reduce((accumular, current) => accumular + current, init);
+
+    return addends.length === 0 ? "0=0" : sum + "=" + addends.join("+");
 }
 
 /**
@@ -82,5 +109,37 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    return [];
+    let sum = 0;
+    const copiedArray = [...values];
+    const copiedArray2 = [...values];
+    const first_n_index = values.findIndex((n: number): boolean => n < 0);
+    const first_part_slice = [...copiedArray.splice(0, first_n_index)];
+    const second_part_slice = copiedArray2.splice(
+        first_n_index + 1,
+        values.length
+    );
+    if (first_n_index === -1) {
+        sum = values.reduce(
+            (accumular: number, current: number) => accumular + current,
+            0
+        );
+    } else {
+        sum = first_part_slice.reduce(
+            (accumular: number, current: number) => accumular + current,
+            0
+        );
+    }
+    let finalArray = [];
+
+    if (first_n_index === -1) {
+        finalArray = [...values, sum];
+    } else {
+        finalArray = [
+            ...first_part_slice,
+            values[first_n_index],
+            sum,
+            ...second_part_slice
+        ];
+    }
+    return finalArray;
 }
