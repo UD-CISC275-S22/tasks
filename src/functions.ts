@@ -28,7 +28,7 @@ export function shout(message: string): string {
     return message.toUpperCase() + "!";
 }
 
-/**
+/**n
  * Consumes a string (a message) and returns a boolean if the string ends in a question
  * mark. Do not use an `if` statement in solving this question.
  */
