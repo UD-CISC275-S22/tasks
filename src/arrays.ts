@@ -41,13 +41,16 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    // const no_dollars: number[] = amounts.map((num: string) => num.includes("$") ? num = // how to get the number with out the dollar sign?? : num = )
+    const no_dollars: string[] = amounts.map(
+        (num: string) => (num.includes("$") ? num.substring(1) : num)
+        //add condition for if it is just $
+    );
+    const integers: number[] = no_dollars.map(
+        (num: string) => parseInt(num)
+        //!Number.isNaN(parseInt(num)) ? parseInt(num) : 0
+    );
 
-    // const integers: number[] = numbers.map((word: string) =>
-    //     !isNaN(parseInt(word)) ? parseInt(word) : 0
-    // );
-
-    return [];
+    return integers;
 };
 
 /**
@@ -127,7 +130,7 @@ export function makeMath(addends: number[]): string {
  */
 export function injectPositive(values: number[]): number[] {
     //create new array
-    const newValues = [...values];
+    const newValues = values.map((value: number): number => value);
 
     const containsNegatives: boolean = values.some(
         (value: number): boolean => value < 0
@@ -138,8 +141,6 @@ export function injectPositive(values: number[]): number[] {
             (currentTotal: number, num: number) => currentTotal + num,
             0
         );
-
-        console.log("Sum == ", sum);
 
         //add new sum value to the array after the last value
 
