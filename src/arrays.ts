@@ -5,7 +5,10 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    return numbers;
+    // let bookEnded: number[];
+    // const isFirst = (element: number): boolean =>
+    // numbers.length === 0 ? bookEnded = [] : bookEnded =
+    // return numbers;
 }
 
 /**
@@ -13,7 +16,10 @@ export function bookEndList(numbers: number[]): number[] {
  * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
-    return numbers;
+    const tripled: number[] = numbers.map(
+        (a_number: number): number => a_number * 3
+    );
+    return tripled;
 }
 
 /**
@@ -21,7 +27,10 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    return [];
+    const integers: number[] = numbers.map((word: string) =>
+        !isNaN(parseInt(word)) ? parseInt(word) : 0
+    );
+    return integers;
 }
 
 /**
@@ -32,6 +41,12 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
+    // const no_dollars: number[] = amounts.map((num: string) => num.includes("$") ? num = // how to get the number with out the dollar sign?? : num = )
+
+    // const integers: number[] = numbers.map((word: string) =>
+    //     !isNaN(parseInt(word)) ? parseInt(word) : 0
+    // );
+
     return [];
 };
 
@@ -49,7 +64,11 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return 0;
+    const shortWords: string[] = words.filter(
+        (word: string): boolean => word.length < 4
+    );
+
+    return shortWords.length;
 }
 
 /**
@@ -69,7 +88,19 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    //get sum
+    const sum = addends.reduce(
+        (currentTotal: number, num: number) => currentTotal + num,
+        0
+    );
+
+    let theAddends: string;
+
+    addends.length === 0
+        ? (theAddends = "0")
+        : (theAddends = addends.join("+"));
+
+    return `${sum}=${theAddends}`;
 }
 
 /**
@@ -83,4 +114,7 @@ export function makeMath(addends: number[]): string {
  */
 export function injectPositive(values: number[]): number[] {
     return [];
+}
+function word(value: string, index: number, array: string[]): number {
+    throw new Error("Function not implemented.");
 }
