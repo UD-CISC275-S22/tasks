@@ -126,7 +126,50 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    return [];
+    //create new array
+    const newValues = [...values];
+
+    const containsNegatives: boolean = values.some(
+        (value: number): boolean => value < 0
+    );
+
+    if (containsNegatives) {
+        const sum = values.reduce(
+            (currentTotal: number, num: number) => currentTotal + num,
+            0
+        );
+
+        console.log("Sum == ", sum);
+
+        //add new sum value to the array after the last value
+
+        newValues.splice(values.length - 1, 0, sum);
+    } else {
+        //get first negative number
+        const firstNegative = values.find(
+            (value: number): boolean => value < 0
+        );
+
+        const negativeIndex: number = values.indexOf(
+            firstNegative as number,
+            0
+        );
+
+        // get sum before first negative number
+        let stop = false;
+        const sum = values.reduce(
+            (currentTotal: number, num: number) =>
+                num >= 0 && !stop
+                    ? currentTotal + num
+                    : ((stop = true), currentTotal),
+            0
+        );
+
+        //add new sum value to the array after the first negative
+        newValues.splice(negativeIndex, 0, sum);
+    }
+
+    return newValues;
 }
 function word(value: string, index: number, array: string[]): number {
     throw new Error("Function not implemented.");
