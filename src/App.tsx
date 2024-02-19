@@ -11,25 +11,22 @@ function App(): JSX.Element {
                 TypeScript
             </header>
             <h2>This is header text</h2>
-            <p>
-                Ricky Kiamilev <code>src/App.tsx</code> and save. This page will
-                automatically reload.
-            </p>
-            <p>
+            <p>Ricky Kiamilev and save. This page will automatically reload.</p>
+            <div>
                 Unordered List:
                 <ul>
                     <li>First thing</li>
                     <li>Another things</li>
                     <li>A third item</li>
                 </ul>
-            </p>
-            <p>
+            </div>
+            <div>
                 <Button onClick={() => console.log("Hello World!")}>
                     Log Hello World
                 </Button>
-            </p>
+            </div>
             <img src={image1} alt="Hello World!" />
-            <p>
+            <div>
                 <Container>
                     <Row>
                         <Col>
@@ -56,7 +53,7 @@ function App(): JSX.Element {
                         </Col>
                     </Row>
                 </Container>
-            </p>
+            </div>
         </div>
     );
 }
