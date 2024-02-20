@@ -44,6 +44,7 @@ export function add3(first: number, second: number, third: number): number
     {
         return 0;
     }
+    return 0;
 }
 
 /**
