@@ -19,11 +19,7 @@ export function bookEndList(numbers: number[]): number[] {
  * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
-    let trip: number[] = [];
-    for (let i = 0; i < numbers.length; i++) {
-        trip.push(numbers[i] * 3);
-    }
-    return trip;
+    return numbers.map((n: number): number => n * 3);
 }
 
 /**
@@ -93,9 +89,7 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    let init = 0;
-    let sum = addends.reduce((accumular, current) => accumular + current, init);
-
+    let sum = addends.reduce((accumular, current) => accumular + current, 0);
     return addends.length === 0 ? "0=0" : sum + "=" + addends.join("+");
 }
 
@@ -112,7 +106,8 @@ export function injectPositive(values: number[]): number[] {
     let sum = 0;
     const copiedArray = [...values];
     const copiedArray2 = [...values];
-    const first_n_index = values.findIndex((n: number): boolean => n < 0);
+    const copiedArray3 = [...values];
+    const first_n_index = copiedArray3.findIndex((n: number): boolean => n < 0);
     const first_part_slice = [...copiedArray.splice(0, first_n_index)];
     const second_part_slice = copiedArray2.splice(
         first_n_index + 1,
@@ -130,7 +125,6 @@ export function injectPositive(values: number[]): number[] {
         );
     }
     let finalArray = [];
-
     if (first_n_index === -1) {
         finalArray = [...values, sum];
     } else {
@@ -142,4 +136,25 @@ export function injectPositive(values: number[]): number[] {
         ];
     }
     return finalArray;
+    // const newArray: number[] = [...values];
+    // const firstNegative = newArray.findIndex(
+    //     (first: number): boolean => first < 0
+    // );
+    // if (firstNegative === -1) {
+    //     const sum = newArray.reduce(
+    //         (currentTotal: number, num: number) => currentTotal + num,
+    //         0
+    //     );
+    //     newArray.push(sum);
+    // } else {
+    //     const sum = newArray
+    //         .slice(0, firstNegative)
+    //         .reduce(
+    //             (currentTotal: number, num: number) => currentTotal + num,
+    //             0
+    //         );
+    //     console.log(sum);
+    //     newArray.splice(firstNegative + 1, 0, sum);
+    // }
+    // return newArray;
 }
