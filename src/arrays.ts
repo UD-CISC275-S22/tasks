@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 /**
  * Consume an array of numbers, and return a new array containing
  * JUST the first and last number. If there are no elements, return
