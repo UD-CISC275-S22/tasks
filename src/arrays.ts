@@ -5,10 +5,15 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    // let bookEnded: number[];
-    // const isFirst = (element: number): boolean =>
-    // numbers.length === 0 ? bookEnded = [] : bookEnded =
-    // return numbers;
+    const isFirst = (element: number): boolean =>
+        element === numbers[0] ? true : false;
+
+    const isLast = (element: number): boolean =>
+        element === numbers[numbers.length - 1] ? true : false;
+
+    const bookEnded: number[] = numbers.filter(isFirst || isLast);
+
+    return numbers;
 }
 
 /**
@@ -45,9 +50,8 @@ export const removeDollars = (amounts: string[]): number[] => {
         (num: string) => (num.includes("$") ? num.substring(1) : num)
         //add condition for if it is just $
     );
-    const integers: number[] = no_dollars.map(
-        (num: string) => parseInt(num)
-        //!Number.isNaN(parseInt(num)) ? parseInt(num) : 0
+    const integers: number[] = no_dollars.map((num: string) =>
+        !Number.isNaN(parseInt(num)) ? parseInt(num) : 0
     );
 
     return integers;
