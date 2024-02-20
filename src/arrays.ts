@@ -28,8 +28,8 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    const parsedIntegers: numbers[] = numbers.map((str) => {
-        const parsed = parsedInt(str, 10);
+    const parsedIntegers: number[] = numbers.map((str) => {
+        const parsed = parseInt(str, 10);
         return isNaN(parsed) ? 0 : parsed;
     });
     return parsedIntegers;
@@ -43,7 +43,11 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    return [];
+    const pasedNumbers: number[] = amounts.map((str) => {
+        const parsed = parseInt(str.replace(/^\$/, ""), 10);
+        return isNaN(parsed) ? 0 : parsed;
+    });
+    return pasedNumbers;
 };
 
 /**
@@ -52,7 +56,15 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    return [];
+    const processedMessages: string[] = messages.map((message) => {
+        if (message.endsWith("!")) {
+            return message.toUpperCase();
+        }
+        if (message.endsWith("?")) {
+            return null;
+        }
+    });
+    return processedMessages;
 };
 
 /**
@@ -60,7 +72,14 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return 0;
+    const shortWordsCount: number = words.reduce((count, word) => {
+        if (words.length < 4) {
+            return count + 1;
+        }
+        return count;
+    }, 0);
+
+    return shortWordsCount;
 }
 
 /**
