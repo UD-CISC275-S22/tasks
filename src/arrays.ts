@@ -135,51 +135,27 @@ export function injectPositive(values: number[]): number[] {
     const containsNegatives: boolean = values.some(
         (value: number): boolean => value < 0
     );
-    console.log("are there negatives? " + containsNegatives);
 
     if (!containsNegatives) {
         const sum = values.reduce(
             (currentTotal: number, num: number) => currentTotal + num,
             0
         );
-        console.log("The sum is " + sum);
         //add new sum value to the array after the last value
-        console.log(newValues);
         newValues.splice(values.length, 0, sum);
-        console.log(newValues);
     } else {
-        console.log(newValues);
         //get first negative number
         const firstNegative = values.findIndex(
             (value: number): boolean => value < 0
         );
-        console.log("The found index is:" + firstNegative);
-        /*
-        const negativeIndex: number = values.indexOf(
-            firstNegative as number,
-            0
-        );
-        */
         // get sum before first negative number
-        let stop = false;
 
         const prevArray = newValues.slice(0, firstNegative);
-
-        console.log("The array before the neg is " + prevArray);
 
         const sum = prevArray.reduce(
             (currentTotal: number, num: number) => currentTotal + num,
             0
         );
-        /*
-        const sum = values.reduce(
-            (currentTotal: number, num: number) =>
-                num >= 0 && !stop
-                    ? currentTotal + num
-                    : ((stop = true), currentTotal),
-            0
-        );
-        */
 
         //add new sum value to the array after the first negative
         newValues.splice(firstNegative + 1, 0, sum);
