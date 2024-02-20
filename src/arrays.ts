@@ -39,7 +39,6 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    //Not Done
     let newAmounts = [...amounts];
     newAmounts = newAmounts.map((num: string): string =>
         num.startsWith("$") ? num.replace("$", "") : num
@@ -97,15 +96,11 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    //Not Done
+    if (addends.length === 0) return "0=0";
     let sum = addends.reduce(
         (currentTotal: number, num: number) => currentTotal + num
     );
-    let adders = addends.reduce(
-        (currentString: number, num: number) => currentString + num
-    );
-
-    return sum + "=" + adders;
+    return sum + "=" + addends.join("+");
 }
 
 /**
