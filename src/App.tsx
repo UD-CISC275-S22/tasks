@@ -14,7 +14,7 @@ function App(): JSX.Element {
             <h1>H1</h1>
             <img
                 src={require("./Untitled drawing.png")}
-                alt="a random google drawing"
+                alt="a random Google Drawing"
             />
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
