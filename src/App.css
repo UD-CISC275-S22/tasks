@@ -37,9 +37,7 @@
         transform: rotate(360deg);
     }
 }
-.boxes {
-    text-align: center;
-}
+
 .Red-Box {
     width: 200px;
     height: 200px;
