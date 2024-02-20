@@ -5,8 +5,11 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    //Not done
-    return numbers;
+    let firstLast = [...numbers];
+    if (firstLast.length === 0) return [];
+    else if (firstLast.length === 1) return [...numbers, ...numbers];
+    firstLast.splice(1, firstLast.length - 2);
+    return firstLast;
 }
 
 /**
@@ -76,7 +79,12 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    //Not Done
+    let num = [...addends];
+    let sum = 0;
+    let adders = "";
+
+    return sum + "=" + adders;
 }
 
 /**
