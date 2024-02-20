@@ -5,15 +5,11 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    const isFirst = (element: number): boolean =>
-        element === numbers[0] ? true : false;
+    if (numbers.length < 1) {
+        return [];
+    }
 
-    const isLast = (element: number): boolean =>
-        element === numbers[numbers.length - 1] ? true : false;
-
-    const bookEnded: number[] = numbers.filter(isFirst || isLast);
-
-    return numbers;
+    return [numbers[0], numbers[numbers.length - 1]];
 }
 
 /**
@@ -134,34 +130,48 @@ export function makeMath(addends: number[]): string {
  */
 export function injectPositive(values: number[]): number[] {
     //create new array
-    const newValues = values.map((value: number): number => value);
+    const newValues = [...values];
 
     const containsNegatives: boolean = values.some(
         (value: number): boolean => value < 0
     );
+    console.log("are there negatives? " + containsNegatives);
 
-    if (containsNegatives) {
+    if (!containsNegatives) {
         const sum = values.reduce(
             (currentTotal: number, num: number) => currentTotal + num,
             0
         );
-
+        console.log("The sum is " + sum);
         //add new sum value to the array after the last value
-
-        newValues.splice(values.length - 1, 0, sum);
+        console.log(newValues);
+        newValues.splice(values.length, 0, sum);
+        console.log(newValues);
     } else {
+        console.log(newValues);
         //get first negative number
-        const firstNegative = values.find(
+        const firstNegative = values.findIndex(
             (value: number): boolean => value < 0
         );
-
+        console.log("The found index is:" + firstNegative);
+        /*
         const negativeIndex: number = values.indexOf(
             firstNegative as number,
             0
         );
-
+        */
         // get sum before first negative number
         let stop = false;
+
+        const prevArray = newValues.slice(0, firstNegative);
+
+        console.log("The array before the neg is " + prevArray);
+
+        const sum = prevArray.reduce(
+            (currentTotal: number, num: number) => currentTotal + num,
+            0
+        );
+        /*
         const sum = values.reduce(
             (currentTotal: number, num: number) =>
                 num >= 0 && !stop
@@ -169,9 +179,10 @@ export function injectPositive(values: number[]): number[] {
                     : ((stop = true), currentTotal),
             0
         );
+        */
 
         //add new sum value to the array after the first negative
-        newValues.splice(negativeIndex, 0, sum);
+        newValues.splice(firstNegative + 1, 0, sum);
     }
 
     return newValues;
