@@ -45,7 +45,7 @@ function App(): JSX.Element {
                 <img src={DougDogImage} alt="Doug the Dog" />
                 <p>Doug the Dog</p>
             </div>
-            <Button onClick={() => console.log("Hello World!")}>
+            <Button onClick={() => console.log("Log Hello World!")}>
                 Hello World
             </Button>
         </div>
