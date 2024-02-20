@@ -63,8 +63,11 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
         if (message.endsWith("?")) {
             return null;
         }
+
+        return message;
     });
-    return processedMessages;
+
+    return processedMessages.filter((message) => message !== null);
 };
 
 /**
