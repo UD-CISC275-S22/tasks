@@ -23,6 +23,9 @@ export function bookEndList(numbers: number[]): number[] {
  * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
+    for (let i = 0; i < numbers.length; i++) {
+        numbers[i] = numbers[i] * 3;
+    }
     return numbers;
 }
 
