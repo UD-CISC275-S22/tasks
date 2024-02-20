@@ -37,3 +37,9 @@
         transform: rotate(360deg);
     }
 }
+
+.Rectangle {
+    background-color: "red";
+    width: 100;
+    height: 500;
+}
