@@ -42,9 +42,9 @@ export const removeDollars = (amounts: string[]): number[] => {
     //Not Done
     let newAmounts = [...amounts];
     newAmounts = newAmounts.map((num: string): string =>
-        num[0] === "$" ? num.substring(1) : num
+        num.startsWith("$") ? num.replace("$", "") : num
     );
-    return amounts.map((num: string): number =>
+    return newAmounts.map((num: string): number =>
         isNaN(Number(num)) ? 0 : Number(num)
     );
 };
@@ -98,9 +98,12 @@ export function allRGB(colors: string[]): boolean {
  */
 export function makeMath(addends: number[]): string {
     //Not Done
-    let num = [...addends];
-    let sum = 0;
-    let adders = "";
+    let sum = addends.reduce(
+        (currentTotal: number, num: number) => currentTotal + num
+    );
+    let adders = addends.reduce(
+        (currentString: number, num: number) => currentString + num
+    );
 
     return sum + "=" + adders;
 }
