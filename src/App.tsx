@@ -10,7 +10,7 @@ function App(): JSX.Element {
                 style={{ backgroundColor: "#007bff" }}
             >
                 UD CISC275 with React Hooks and TypeScript- Melanie Heider-
-                Hello Worlds
+                Hello World
             </header>
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
