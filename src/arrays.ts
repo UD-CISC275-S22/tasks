@@ -5,7 +5,16 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    return numbers;
+    let ends: number[] = [];
+    if (numbers.length === 0) {
+        return ends;
+    } else if (numbers.length === 1) {
+        ends = [...numbers, ...numbers];
+        return ends;
+    } else {
+        ends = [numbers[0], numbers[numbers.length - 1]];
+        return ends;
+    }
 }
 
 /**
@@ -13,7 +22,7 @@ export function bookEndList(numbers: number[]): number[] {
  * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
-    return numbers;
+    return numbers.map((number) => number * 3);
 }
 
 /**
@@ -21,7 +30,10 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    return [];
+    return numbers.map((number) => {
+        const parsedInt = parseInt(number, 10);
+        return isNaN(parsedInt) ? 0 : parsedInt;
+    });
 }
 
 /**
@@ -32,7 +44,14 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    return [];
+    return amounts.map((number) => {
+        //remove dollar sign
+        const noDollarSign = number.startsWith("$") ? number.slice(1) : number;
+        //convert from string to int
+        const parsedInt = parseInt(noDollarSign, 10);
+        //determine if not A Number
+        return isNaN(parsedInt) ? 0 : parsedInt;
+    });
 };
 
 /**
@@ -41,7 +60,12 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    return [];
+    const noQuestions = messages
+        .map((message: string): string => {
+            return message.endsWith("!") ? message.toUpperCase() : message;
+        })
+        .filter((messages) => !messages.endsWith("?"));
+    return noQuestions;
 };
 
 /**
@@ -49,7 +73,8 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return 0;
+    const shortWords = words.filter((word: string): boolean => word.length < 4);
+    return shortWords.length;
 }
 
 /**
@@ -58,7 +83,13 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    return false;
+    if (colors.length === 0) {
+        return true;
+    }
+    return colors.every(
+        (color: string): boolean =>
+            color === "red" || color === "green" || color === "blue"
+    );
 }
 
 /**
@@ -69,7 +100,15 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    if (addends.length === 0) {
+        return "0=0";
+    }
+    const sum = addends.reduce(
+        (currentTotal: number, num: number) => currentTotal + num,
+        0
+    );
+    const mathExpression = addends.join("+");
+    return sum + "=" + mathExpression;
 }
 
 /**
@@ -82,5 +121,27 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    return [];
+    //make a new array
+    const newValues: number[] = [...values];
+    //find the first negative number
+    const findNegative = newValues.findIndex(
+        (value: number): boolean => value < 0
+    );
+    //if no negatives, summate and push to end
+    if (findNegative === -1) {
+        const currSum = newValues.reduce(
+            (currentTotal: number, num: number) => currentTotal + num,
+            0
+        );
+        newValues.push(currSum);
+    } else {
+        const negNumArr = newValues
+            .slice(0, findNegative)
+            .reduce(
+                (currentTotal: number, num: number) => currentTotal + num,
+                0
+            );
+        newValues.splice(findNegative + 1, 0, negNumArr);
+    }
+    return newValues;
 }
