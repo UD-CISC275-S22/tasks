@@ -5,7 +5,16 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    return numbers;
+    if (numbers.length === 0) {
+        return [];
+    }
+    if (numbers.length === 1) {
+        return [numbers[0], numbers[numbers.length - 1]];
+    }
+    const newArr = [];
+    newArr.push(numbers[0]);
+    newArr.push(numbers[numbers.length - 1]);
+    return newArr;
 }
 
 /**
@@ -13,7 +22,8 @@ export function bookEndList(numbers: number[]): number[] {
  * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
-    return numbers;
+    const tripled = numbers.map((price: number): number => price * 3);
+    return tripled;
 }
 
 /**
@@ -21,7 +31,10 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    return [];
+    const newNum = numbers.map((amount: string): number =>
+        Number.isNaN(parseInt(amount)) ? 0 : parseInt(amount)
+    );
+    return newNum;
 }
 
 /**
@@ -32,7 +45,13 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    return [];
+    const newNum = amounts.map((amount: string): number =>
+        amount.startsWith("$") ? parseInt(amount.slice(1)) : parseInt(amount)
+    );
+    const newNum2 = newNum.map((amount: number): number =>
+        Number.isNaN(amount) ? 0 : amount
+    );
+    return newNum2;
 };
 
 /**
@@ -41,7 +60,13 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    return [];
+    const newNum = messages.map((amount: string): string =>
+        amount.endsWith("!") ? amount.toUpperCase() : amount
+    );
+    const newList = newNum.filter(
+        (word: string): boolean => word.endsWith("?") === false
+    );
+    return newList;
 };
 
 /**
@@ -49,7 +74,8 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return 0;
+    const newList = words.filter((word: string): boolean => word.length < 4);
+    return newList.length;
 }
 
 /**
@@ -58,7 +84,16 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    return false;
+    if (colors.length === 0) {
+        return true;
+    }
+    const isAllRGB = colors.every(
+        (price: string): boolean =>
+            price.toLowerCase() === "red" ||
+            price.toLowerCase() === "green" ||
+            price.toLowerCase() === "blue"
+    );
+    return isAllRGB;
 }
 
 /**
@@ -69,7 +104,16 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    if (addends.length === 0) {
+        return "0=0";
+    }
+    const sum = addends.reduce(
+        (currentTotal: number, num: number) => currentTotal + num,
+        0
+    );
+    const message = sum.toString() + "=";
+    const second = addends.join("+");
+    return message + second;
 }
 
 /**
@@ -82,5 +126,22 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    return [];
+    let removedColors: number[] = [];
+    const firstNegative = values.findIndex(
+        (price: number): boolean => price < 0
+    );
+    const clonedValues = [...values];
+    if (firstNegative !== -1) {
+        removedColors = clonedValues.splice(firstNegative);
+    }
+    const sum = clonedValues.reduce(
+        (currentTotal: number, num: number) => currentTotal + num,
+        0
+    );
+    if (firstNegative !== -1) {
+        removedColors.splice(1, 0, sum);
+        return clonedValues.concat(removedColors);
+    } else {
+        return [...values, sum];
+    }
 }
