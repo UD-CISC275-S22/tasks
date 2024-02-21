@@ -56,18 +56,13 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    const processedMessages: string[] = messages.map((message) => {
-        if (message.endsWith("!")) {
-            return message.toUpperCase();
-        }
-        if (message.endsWith("?")) {
-            return null;
-        }
+    const processedMessages = messages
+        .map((message) =>
+            message.endsWith("!") ? message.toUpperCase() : message
+        )
+        .filter((message) => !message.endsWith("?"));
 
-        return message;
-    });
-
-    return processedMessages.filter((message) => message !== null);
+    return processedMessages;
 };
 
 /**
@@ -76,7 +71,7 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  */
 export function countShortWords(words: string[]): number {
     const shortWordsCount: number = words.reduce((count, word) => {
-        if (words.length < 4) {
+        if (word.length < 4) {
             return count + 1;
         }
         return count;
@@ -110,7 +105,7 @@ export function allRGB(colors: string[]): boolean {
 export function makeMath(addends: number[]): string {
     const sum = addends.reduce((acc, num) => acc + num, 0);
     const addendsString = addends.join("+");
-    return "${sum}=${addendsString || 0}";
+    return sum === 0 ? "0=0" : `${sum}=${addendsString}`;
 }
 
 /**
@@ -123,5 +118,21 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    return [];
+    let sum = 0;
+    let foundNegative = false;
+
+    return values
+        .map((num) => {
+            if (num < 0 && !foundNegative) {
+                foundNegative = true;
+                return num;
+            }
+
+            if (!foundNegative) {
+                sum += num;
+            }
+
+            return num;
+        })
+        .map((num) => (num < 0 && foundNegative ? sum : num));
 }
