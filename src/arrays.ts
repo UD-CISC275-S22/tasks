@@ -1,3 +1,5 @@
+/* eslint-disable no-extra-parens */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /**
  * Consume an array of numbers, and return a new array containing
  * JUST the first and last number. If there are no elements, return
@@ -8,7 +10,6 @@ export function bookEndList(numbers: number[]): number[] {
     if (numbers.length < 1) {
         return [];
     }
-
     return [numbers[0], numbers[numbers.length - 1]];
 }
 
@@ -91,6 +92,7 @@ export function allRGB(colors: string[]): boolean {
             color === "red" || color === "blue" || color === "green"
     );
 
+    // eslint-disable-next-line no-extra-parens
     colors.length === 0 ? (areRBG = true) : areRBG;
 
     return areRBG;
@@ -116,6 +118,7 @@ export function makeMath(addends: number[]): string {
         ? (theAddends = "0")
         : (theAddends = addends.join("+"));
 
+    //random comment
     return `${sum}=${theAddends}`;
 }
 
@@ -144,7 +147,7 @@ export function injectPositive(values: number[]): number[] {
         //add new sum value to the array after the last value
         newValues.splice(values.length, 0, sum);
     } else {
-        //get first negative number
+        //get first negative number!!
         const firstNegative = values.findIndex(
             (value: number): boolean => value < 0
         );
