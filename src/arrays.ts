@@ -5,7 +5,19 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    return numbers;
+    let final: number[] = [];
+    if (numbers.length === 0) return final;
+    if (numbers.length === 1) {
+        final = [...numbers, ...numbers];
+        return final;
+    } else {
+        final = numbers.filter(
+            (num: number): boolean =>
+                numbers.indexOf(num) === 0 ||
+                numbers.indexOf(num) === numbers.length
+        );
+        return final;
+    }
 }
 
 /**
@@ -13,7 +25,9 @@ export function bookEndList(numbers: number[]): number[] {
  * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
-    return numbers;
+    let final: number[] = [];
+    final = numbers.map((num: number): number => 3 * num);
+    return final;
 }
 
 /**
@@ -21,7 +35,11 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    return [];
+    let final: number[] = [];
+    final = numbers.map((num: string): number =>
+        !isNaN(Number(num)) ? parseInt(num) : 0
+    );
+    return final;
 }
 
 /**
@@ -32,7 +50,15 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    return [];
+    let final: number[] = [];
+    if (amounts.length === 0) return final;
+    final = amounts.map((num: string): number => {
+        // Remove "$" symbol if present
+        const cleanedNum = num.startsWith("$") ? num.slice(1) : num;
+        // Convert to number or 0 if not a valid number
+        return !isNaN(Number(cleanedNum)) ? parseInt(cleanedNum) : 0;
+    });
+    return final;
 };
 
 /**
