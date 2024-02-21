@@ -5,6 +5,16 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
+    let newNumbers: number[] = [];
+    if (numbers.length === 0) {
+        return newNumbers;
+    } else if (numbers.length === 1) {
+        newNumbers = [numbers[0], numbers[0]];
+        return newNumbers;
+    } else {
+        newNumbers = [numbers[0], numbers[numbers.length - 1]];
+        return newNumbers;
+    }
     return numbers;
 }
 
