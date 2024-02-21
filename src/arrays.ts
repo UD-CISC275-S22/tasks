@@ -5,7 +5,7 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    if (numbers.length === 0){
+    if (numbers.length === 0) {
         return [];
     }
     if (numbers.length === 1) {
@@ -80,7 +80,9 @@ export function allRGB(colors: string[]): boolean {
         return true;
     }
     // Check if all colors are valid and belong to the allowed set
-    return colors.every((color) => ['red', 'blue', 'green'].includes(color.toLowerCase()));
+    return colors.every((color) =>
+        ["red", "blue", "green"].includes(color.toLowerCase())
+    );
 }
 
 /**
