@@ -11,14 +11,12 @@ export function bookEndList(numbers: number[]): number[] {
         final = [...numbers, ...numbers];
         return final;
     } else {
-        final = numbers.filter(
-            (num: number): boolean =>
-                numbers.indexOf(num) === 0 ||
-                numbers.indexOf(num) === numbers.length
-        );
+        final = [numbers[0], numbers[numbers.length - 1]];
         return final;
     }
 }
+
+console.log(bookEndList([1, 2, 3]));
 
 /**
  * Consume an array of numbers, and return a new array where each
@@ -54,6 +52,7 @@ export const removeDollars = (amounts: string[]): number[] => {
     if (amounts.length === 0) return final;
     final = amounts.map((num: string): number => {
         const cleanedNum = num.startsWith("$") ? num.slice(1) : num;
+        if (cleanedNum === "") return 0;
         return !isNaN(Number(cleanedNum)) ? parseInt(cleanedNum) : 0;
     });
     return final;
@@ -64,17 +63,14 @@ export const removeDollars = (amounts: string[]): number[] => {
  * string that ends in "!" should be made uppercase. Also, remove any strings that end
  * in question marks ("?").
  */
-export const shoutIfExclaiming = (messages: string[]): string[] => {
-    let final: string[] = [];
-    final = messages.map((message: string): string =>
-        message.endsWith("!") ? message.toUpperCase() : message
-    );
-    final = messages.filter(
-        (message: string): boolean => !message.endsWith("?")
-    );
-    return final;
-};
+export const shoutIfExclaiming = (messages: string[]): string[] =>
+    messages
+        .map((message: string): string =>
+            message.endsWith("!") ? message.toUpperCase() : message
+        )
+        .filter((message: string): boolean => !message.endsWith("?"));
 
+console.log(shoutIfExclaiming(["Hello", "you", "are", "great!"]));
 /**
  * Consumes an array of words and returns the number of words that are LESS THAN
  * 4 letters long.
@@ -106,6 +102,7 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
+    if (addends.length === 0) return "0=0";
     const sum = addends.reduce(
         (currentTotal: number, num: number) => currentTotal + num,
         0
