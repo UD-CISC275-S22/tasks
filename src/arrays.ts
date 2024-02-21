@@ -132,11 +132,4 @@ export function injectPositive(values: number[]): number[] {
         return valuesWithSum;
     }
     return [0];
-    /*let negIndex = values.findIndex((num: number): boolean => num < 0);
-    let smallValues = values.splice(0, values.length - negIndex);
-    return values.splice(
-        negIndex,
-        0,
-        smallValues.reduce((currTotal: number, num: number) => currTotal + num)
-    );*/
 }
