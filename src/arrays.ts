@@ -1,5 +1,3 @@
-import { join } from "path";
-
 /**
  * Consume an array of numbers, and return a new array containing
  * JUST the first and last number. If there are no elements, return
@@ -115,8 +113,4 @@ export function injectPositive(values: number[]): number[] {
         newArr.splice(firstNegative + 1, 0, total);
         return newArr;
     }
-}
-
-function num(value: string, index: number, array: string[]): value is string {
-    throw new Error("Function not implemented.");
 }
