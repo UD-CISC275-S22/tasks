@@ -66,7 +66,8 @@ export function isValid(question: Question, answer: string): boolean {
  * name "My First Question" would become "9: My First Q".
  */
 export function toShortForm(question: Question): string {
-    return question.id.toString() + ": " + question.name.substring(0, 10);
+    const copy: Question = { ...question };
+    return copy.id.toString() + ": " + copy.name.substring(0, 10);
 }
 
 /**
@@ -105,7 +106,8 @@ export function toMarkdown(question: Question): string {
  * `newName`.
  */
 export function renameQuestion(question: Question, newName: string): Question {
-    return question;
+    const newQ: Question = { ...question, name: newName };
+    return newQ;
 }
 
 /**
@@ -114,7 +116,8 @@ export function renameQuestion(question: Question, newName: string): Question {
  * published; if it was published, now it should be not published.
  */
 export function publishQuestion(question: Question): Question {
-    return question;
+    const copy: Question = { ...question, published: !question.published };
+    return copy;
 }
 
 /**
@@ -124,7 +127,13 @@ export function publishQuestion(question: Question): Question {
  * The `published` field should be reset to false.
  */
 export function duplicateQuestion(id: number, oldQuestion: Question): Question {
-    return oldQuestion;
+    const copy: Question = {
+        ...oldQuestion,
+        name: "Copy of " + oldQuestion.name,
+        published: false,
+        id: id
+    };
+    return copy;
 }
 
 /**
@@ -135,7 +144,11 @@ export function duplicateQuestion(id: number, oldQuestion: Question): Question {
  * Check out the subsection about "Nested Fields" for more information.
  */
 export function addOption(question: Question, newOption: string): Question {
-    return question;
+    const copy: Question = {
+        ...question,
+        options: [...question.options, newOption]
+    };
+    return copy;
 }
 
 /**
@@ -152,5 +165,12 @@ export function mergeQuestion(
     contentQuestion: Question,
     { points }: { points: number }
 ): Question {
-    return contentQuestion;
+    const q1Copy: Question = {
+        ...contentQuestion,
+        id: id,
+        name: name,
+        points: points,
+        published: false
+    };
+    return q1Copy;
 }
