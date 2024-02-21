@@ -44,7 +44,11 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    return [];
+    return amounts.map((amount) => {
+        const removeDollarSign = amount.replace("$", "");
+        const parsedInt = parseInt(removeDollarSign);
+        return Number.isFinite(parsedInt) ? 0 : parsedInt;
+    });
 };
 
 /**
@@ -95,4 +99,7 @@ export function makeMath(addends: number[]): string {
  */
 export function injectPositive(values: number[]): number[] {
     return [];
+}
+function isNaN(parsedInt: number) {
+    throw new Error("Function not implemented.");
 }
