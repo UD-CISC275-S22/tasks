@@ -121,18 +121,18 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    const newArr = [...values];
-    const firstNegative = newArr.findIndex((value) => value < 0);
-    const smallArr = newArr.slice(
+    const newArray = [...values];
+    const firstNegative = newArray.findIndex((value) => value < 0);
+    const smallArr = newArray.slice(
         0,
-        firstNegative < 0 ? newArr.length : firstNegative
+        firstNegative < 0 ? newArray.length : firstNegative
     );
     const total = smallArr.reduce((sum, value) => sum + value, 0);
     if (firstNegative < 0) {
         return [...smallArr, total];
     } else {
-        newArr.splice(firstNegative + 1, 0, total);
-        return newArr;
+        newArray.splice(firstNegative + 1, 0, total);
+        return newArray;
     }
 }
 function includes(arg0: string): any {
