@@ -125,14 +125,10 @@ export function injectPositive(values: number[]): number[] {
         .map((num) => {
             if (num < 0 && !foundNegative) {
                 foundNegative = true;
-                return num;
+                return sum;
             }
-
-            if (!foundNegative) {
-                sum += num;
-            }
-
+            sum += num;
             return num;
         })
-        .map((num) => (num < 0 && foundNegative ? sum : num));
+        .concat(foundNegative ? [] : [sum]);
 }
