@@ -118,7 +118,25 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    return [];
+    const firstNegativeIndex = values.findIndex((num) => num < 0);
+    const sum = values
+        .slice(
+            0,
+            firstNegativeIndex !== -1 ? firstNegativeIndex : values.length
+        )
+        .reduce((acc, val) => acc + val, 0);
+
+    const result =
+        firstNegativeIndex !== -1
+            ? [
+                  ...values.slice(0, firstNegativeIndex),
+                  values[firstNegativeIndex],
+                  sum,
+                  ...values.slice(firstNegativeIndex + 1)
+              ]
+            : [...values, sum];
+
+    return result;
 }
 function isNaN(parsedInt: number) {
     throw new Error("Function not implemented.");
