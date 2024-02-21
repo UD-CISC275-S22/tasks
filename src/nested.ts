@@ -1,12 +1,16 @@
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
+import { duplicateQuestion, makeBlankQuestion } from "./objects";
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
  * that are `published`.
  */
 export function getPublishedQuestions(questions: Question[]): Question[] {
-    return [];
+    const justPublished: Question[] = questions.filter(
+        (quest: Question): boolean => quest.published === true
+    );
+    return justPublished;
 }
 
 /**
@@ -15,7 +19,14 @@ export function getPublishedQuestions(questions: Question[]): Question[] {
  * `expected`, and an empty array for its `options`.
  */
 export function getNonEmptyQuestions(questions: Question[]): Question[] {
-    return [];
+    const nonEmptyQ: Question[] = questions.filter(
+        (quest: Question): boolean =>
+            quest.body !== "" ||
+            quest.expected !== "" ||
+            quest.options.length > 0
+    );
+
+    return nonEmptyQ;
 }
 
 /***
@@ -26,7 +37,14 @@ export function findQuestion(
     questions: Question[],
     id: number
 ): Question | null {
-    return null;
+    const qSearched = questions.filter(
+        (quest: Question): boolean => quest.id === id
+    ); //the length of this array will determine if the question was found or not
+    if (qSearched.length === 1) {
+        //if it has a length of 1 it means that it was found
+        return qSearched[0];
+    }
+    return null; //if its empty it means it wasn't found
 }
 
 /**
@@ -34,7 +52,15 @@ export function findQuestion(
  * with the given `id`.
  */
 export function removeQuestion(questions: Question[], id: number): Question[] {
-    return [];
+    const qSearched: Question[] = questions.filter(
+        (quest: Question): boolean => quest.id === id
+    ); //this array will contain the question we want removed
+
+    const qRemoved: Question[] = questions.filter(
+        //this will create an array of question without the one we want removed
+        (quest: Question): boolean => quest.id !== qSearched[0].id
+    );
+    return qRemoved;
 }
 
 /***
@@ -42,21 +68,33 @@ export function removeQuestion(questions: Question[], id: number): Question[] {
  * questions, as an array.
  */
 export function getNames(questions: Question[]): string[] {
-    return [];
+    const names: string[] = questions.map(
+        (quest: Question): string => quest.name
+    );
+    return names;
 }
 
 /***
  * Consumes an array of questions and returns the sum total of all their points added together.
  */
 export function sumPoints(questions: Question[]): number {
-    return 0;
+    const sum: number = questions.reduce(
+        (currentTotal: number, quest: Question) => currentTotal + quest.points,
+        0
+    );
+    return sum;
 }
 
 /***
  * Consumes an array of questions and returns the sum total of the PUBLISHED questions.
  */
 export function sumPublishedPoints(questions: Question[]): number {
-    return 0;
+    const justPublished: Question[] = questions.filter(
+        (quest: Question): boolean => quest.published === true
+    );
+    //creates an array that only contains questions that are published
+    return sumPoints(justPublished);
+    //sum the points of the published ones
 }
 
 /***
@@ -77,7 +115,14 @@ id,name,options,points,published
  * Check the unit tests for more examples!
  */
 export function toCSV(questions: Question[]): string {
-    return "";
+    const questionsCSV = questions
+        .map(
+            (quest: Question): string =>
+                `${quest.id},${quest.name},${quest.options.length},${quest.points},${quest.published}`
+        )
+        .join("\n");
+    const header = "id,name,options,points,published\n";
+    return header + questionsCSV;
 }
 
 /**
@@ -86,7 +131,15 @@ export function toCSV(questions: Question[]): string {
  * making the `text` an empty string, and using false for both `submitted` and `correct`.
  */
 export function makeAnswers(questions: Question[]): Answer[] {
-    return [];
+    const answers: Answer[] = questions.map(
+        (quest: Question): Answer => ({
+            questionId: quest.id,
+            text: "",
+            submitted: false,
+            correct: false
+        })
+    );
+    return answers;
 }
 
 /***
@@ -94,7 +147,13 @@ export function makeAnswers(questions: Question[]): Answer[] {
  * each question is now published, regardless of its previous published status.
  */
 export function publishAll(questions: Question[]): Question[] {
-    return [];
+    const published: Question[] = questions.map(
+        (quest: Question): Question => ({
+            ...quest,
+            published: true
+        })
+    );
+    return published;
 }
 
 /***
@@ -102,6 +161,15 @@ export function publishAll(questions: Question[]): Question[] {
  * are the same type. They can be any type, as long as they are all the SAME type.
  */
 export function sameType(questions: Question[]): boolean {
+    const allMultipleChoice: boolean = questions.every(
+        (quest: Question): boolean => quest.type === "multiple_choice_question"
+    );
+    const allFreeResponse: boolean = questions.every(
+        (quest: Question): boolean => quest.type === "short_answer_question"
+    );
+    if (allMultipleChoice === true || allFreeResponse === true) {
+        return true;
+    }
     return false;
 }
 
@@ -116,7 +184,18 @@ export function addNewQuestion(
     name: string,
     type: QuestionType
 ): Question[] {
-    return [];
+    const blankQuestion: Question = makeBlankQuestion(id, name, type);
+
+    const deepQuestCopy: Question[] = questions.map(
+        (quest: Question): Question => ({
+            ...quest,
+            options: [...quest.options]
+        })
+    );
+
+    const addedBlank: Question[] = [...deepQuestCopy, blankQuestion]; //adds blank question to the copied array
+
+    return addedBlank;
 }
 
 /***
@@ -129,7 +208,32 @@ export function renameQuestionById(
     targetId: number,
     newName: string
 ): Question[] {
-    return [];
+    // console.log(newName);
+    // console.log(targetId);
+    // eslint-disable-next-line prettier/prettier
+    //this function will check to see if the current question has the targetId
+    //if it does it will return a copy of that question, with the name field altered
+    //otherwise it will just return the question unaltered
+    function rename(quest: Question, targetId: number, newName: string) {
+        if (quest.id === targetId) {
+            const alteredQuest: Question = {
+                ...quest,
+                name: newName,
+                options: [...quest.options]
+            };
+            return alteredQuest; //if it had the target id
+        } else {
+            return quest; //if it did not have the target id
+        }
+    }
+
+    const targetAltered: Question[] = questions.map(
+        (quest: Question): Question => ({
+            ...rename(quest, targetId, newName) //rename function used here to check for targetID
+        })
+    );
+    //console.log(targetAltered);
+    return targetAltered;
 }
 
 /***
@@ -144,8 +248,53 @@ export function changeQuestionTypeById(
     targetId: number,
     newQuestionType: QuestionType
 ): Question[] {
-    return [];
-}
+    function alterations( //helper function to assist with changes
+        quest: Question,
+        targetId: number,
+        newQuestionType: QuestionType
+    ) {
+        const deepQuestCopy: Question = {
+            //make copy of current question
+            ...quest,
+            options: [...quest.options]
+        };
+        if (
+            //checks if it has the right id and if the question no longer be a multiple choice question
+            deepQuestCopy.id === targetId &&
+            newQuestionType !== "multiple_choice_question"
+        ) {
+            const alteredCopy: Question = {
+                ...quest,
+                type: newQuestionType,
+                options: []
+            };
+            return alteredCopy;
+            // eslint-disable-next-line brace-style
+        }
+        // eslint-disable-next-line prettier/prettier
+        else if (
+            deepQuestCopy.id === targetId &&
+            newQuestionType === "multiple_choice_question"
+        ) {
+            //its the targetID, but the options array doesnt need to be altered
+            const alteredCopy: Question = {
+                ...quest,
+                type: newQuestionType,
+                options: [...deepQuestCopy.options]
+            };
+            return alteredCopy;
+        } else {
+            //its not the targetId
+            return deepQuestCopy;
+        }
+    } //helper function scope
+    const alteredCopy: Question[] = questions.map(
+        (quest: Question): Question => ({
+            ...alterations(quest, targetId, newQuestionType)
+        })
+    );
+    return alteredCopy;
+} //actual function scope
 
 /**
  * Consumes an array of Questions and produces a new array of Questions, where all
@@ -163,7 +312,49 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ): Question[] {
-    return [];
+    function alterations( //helper function to assist with changes
+        quest: Question,
+        targetId: number,
+        targetOptionIndex: number,
+        newOption: string
+    ) {
+        const deepQuestCopy: Question = {
+            //make copy of current question
+            ...quest,
+            options: [...quest.options]
+        };
+        if (
+            //checks if it has the right id and if the new option is being added to the end of the list
+            deepQuestCopy.id === targetId &&
+            targetOptionIndex === -1
+        ) {
+            const alteredCopy: Question = {
+                ...quest,
+                options: [...deepQuestCopy.options, newOption]
+            };
+            return alteredCopy;
+            // eslint-disable-next-line brace-style
+        }
+        // eslint-disable-next-line prettier/prettier
+        else if (deepQuestCopy.id === targetId && targetOptionIndex !== -1) {
+            //its the targetID, but the new string in options will replace the one at that target index
+            const alteredCopy: Question = {
+                ...quest,
+                options: [...deepQuestCopy.options]
+            };
+            alteredCopy.options[targetOptionIndex] = newOption;
+            return alteredCopy;
+        } else {
+            //its not the targetId
+            return deepQuestCopy;
+        }
+    }
+    const optionInserted: Question[] = questions.map(
+        (quest: Question): Question => ({
+            ...alterations(quest, targetId, targetOptionIndex, newOption)
+        })
+    );
+    return optionInserted;
 }
 
 /***
@@ -177,5 +368,23 @@ export function duplicateQuestionInArray(
     targetId: number,
     newId: number
 ): Question[] {
-    return [];
+    const targetIndex: number = questions.findIndex(
+        //get the index of the target question
+        (quest: Question): boolean => quest.id === targetId
+    );
+    console.log("This is target index: " + targetIndex);
+    const duplicateOfTarget: Question = duplicateQuestion(
+        //create duplicate of targetQuestion
+        newId,
+        questions[targetIndex]
+    );
+    const qCopied: Question[] = questions.map(
+        (quest: Question): Question => ({
+            ...quest,
+            options: [...quest.options]
+        })
+    );
+    qCopied.splice(targetIndex + 1, 0, duplicateOfTarget);
+    console.log(qCopied);
+    return qCopied;
 }
