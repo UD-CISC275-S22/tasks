@@ -113,13 +113,8 @@ export function makeMath(addends: number[]): string {
         (currentTotal: number, num: number) => currentTotal + num,
         0
     );
-    const lastVal = addends[addends.length - 1];
-    addends.pop();
-    const arr = addends.reduce(
-        (currStr: string, addend: number) => currStr + addend.toString() + "+",
-        ""
-    );
-    return "$(sum)" + arr + lastVal.toString;
+    const str: string = addends.join("+");
+    return sum + "=" + (str || 0);
 }
 
 /**
@@ -132,5 +127,25 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    return [];
+    const firstNegativI = values.findIndex(
+        (value: number): boolean => value < 0
+    );
+    const sliced = values.slice(0, firstNegativI);
+    const sum = sliced.reduce(
+        (currentTotal: number, num: number) => currentTotal + num,
+        0
+    );
+    const newArr = [...values];
+    if (firstNegativI !== -1) {
+        newArr.splice(firstNegativI + 1, 0, sum);
+    } else {
+        const sum2 = values.reduce(
+            (currentTotal: number, num: number) => currentTotal + num,
+            0
+        );
+        console.log(sum2);
+        newArr.push(sum2);
+        console.log(newArr);
+    }
+    return newArr;
 }
