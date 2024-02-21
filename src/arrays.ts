@@ -47,7 +47,7 @@ export const removeDollars = (amounts: string[]): number[] => {
     return amounts.map((amount) => {
         const removeDollarSign = amount.replace("$", "");
         const parsedInt = parseInt(removeDollarSign);
-        return Number.isFinite(parsedInt) ? 0 : parsedInt;
+        return Number.isNaN(parsedInt) ? 0 : parsedInt;
     });
 };
 
@@ -104,7 +104,7 @@ export function makeMath(addends: number[]): string {
         (accumulator, currentValue) => accumulator + currentValue,
         0
     );
-    const addendsString = addends.map(String).join("+");
+    const addendsString = addends.join("+");
     return "${sum} = ${addendsString || 0}";
 }
 
