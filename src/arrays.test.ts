@@ -262,12 +262,20 @@ describe("Testing the array functions", () => {
     //////////////////////////////////
     // injectPositive
     test("Testing the injectPositive function", () => {
-        expect(injectPositive(NUMBERS_1)).toEqual([1, 2, 3, 6]);
-        expect(injectPositive(NUMBERS_2)).toEqual([100, 300, 200, 600]);
-        expect(injectPositive(NUMBERS_3)).toEqual([5, 5]);
-        expect(injectPositive(NUMBERS_4)).toEqual([0]);
-        expect(injectPositive(NUMBERS_5)).toEqual([100, 199, 1, -5, 300, 7, 3]);
-        expect(injectPositive(NUMBERS_6)).toEqual([-100, 0, -200, 100, 200]);
-        expect(injectPositive(NUMBERS_7)).toEqual([199, 1, 550, 50, 200, 1000]);
+        expect(injectPositive({ values: NUMBERS_1 })).toEqual([1, 2, 3, 6]);
+        expect(injectPositive({ values: NUMBERS_2 })).toEqual([
+            100, 300, 200, 600
+        ]);
+        expect(injectPositive({ values: NUMBERS_3 })).toEqual([5, 5]);
+        expect(injectPositive({ values: NUMBERS_4 })).toEqual([0]);
+        expect(injectPositive({ values: NUMBERS_5 })).toEqual([
+            100, 199, 1, -5, 300, 7, 3
+        ]);
+        expect(injectPositive({ values: NUMBERS_6 })).toEqual([
+            -100, 0, -200, 100, 200
+        ]);
+        expect(injectPositive({ values: NUMBERS_7 })).toEqual([
+            199, 1, 550, 50, 200, 1000
+        ]);
     });
 });
