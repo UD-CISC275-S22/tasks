@@ -23,6 +23,8 @@ export function bookEndList(numbers: number[]): number[] {
  * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
+    let newNumbers: number[] = [];
+    newNumbers = numbers.map((number: number): number => number * 3);
     return numbers;
 }
 
