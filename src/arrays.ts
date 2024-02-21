@@ -136,7 +136,6 @@ export function injectPositive(values: number[]): number[] {
                 (currentTotal: number, num: number) => currentTotal + num,
                 0
             );
-        console.log(sum);
         newArray.splice(firstNegative + 1, 0, sum);
     }
     return newArray;
