@@ -46,7 +46,17 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
-    return false;
+    //Typescript flags this as trivally inferred from a boolean literal so I removed the boolean type
+    let result = false;
+    const compare: Question = { ...question };
+    if (compare.type === "short_answer_question") {
+        result = true;
+    } else {
+        if (compare.options.includes(answer)) {
+            result = true;
+        }
+    }
+    return result;
 }
 
 /**
@@ -56,7 +66,7 @@ export function isValid(question: Question, answer: string): boolean {
  * name "My First Question" would become "9: My First Q".
  */
 export function toShortForm(question: Question): string {
-    return "";
+    return question.id.toString() + ": " + question.name.substring(0, 10);
 }
 
 /**
@@ -77,7 +87,17 @@ export function toShortForm(question: Question): string {
  * Check the unit tests for more examples of what this looks like!
  */
 export function toMarkdown(question: Question): string {
-    return "";
+    const newQ: Question = { ...question };
+    let message: string = "# " + newQ.name + "\n" + newQ.body;
+    if (question.type === "multiple_choice_question") {
+        message += "\n";
+        const dashSpace = newQ.options
+            .map((option: string): string => "- " + option + "\n")
+            .join("");
+
+        message += dashSpace.substring(0, dashSpace.length - 1);
+    }
+    return message;
 }
 
 /**
