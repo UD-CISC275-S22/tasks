@@ -55,7 +55,14 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    return [];
+    let newM = messages.filter(
+        (message: string): boolean => message[message.length - 1] !== "?"
+    );
+    newM = newM.map((message: string): string =>
+        message[message.length - 1] === "!" ? message.toUpperCase() : message
+    );
+
+    return newM;
 };
 
 /**
@@ -63,7 +70,7 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return 0;
+    return words.filter((word: string): boolean => word.length < 4).length;
 }
 
 /**
@@ -72,7 +79,15 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    return false;
+    const length: number = colors.length;
+    if (length === 0) {
+        return true;
+    }
+    colors = colors.filter(
+        (color: string): boolean =>
+            color === "red" || color === "blue" || color === "green"
+    );
+    return length === colors.length;
 }
 
 /**
@@ -83,7 +98,15 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    if (addends.length === 0) {
+        return "0=0";
+    }
+    const sum = addends.reduce(
+        (currentTotal: number, num: number) => currentTotal + num,
+        0
+    );
+    const added: string = addends.join("+");
+    return `${sum}=${added}`;
 }
 
 /**
