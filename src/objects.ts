@@ -46,17 +46,15 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
-    //Typescript flags this as trivally inferred from a boolean literal so I removed the boolean type
-    let result = false;
     const compare: Question = { ...question };
     if (compare.type === "short_answer_question") {
-        result = true;
+        return true;
     } else {
         if (compare.options.includes(answer)) {
-            result = true;
+            return true;
         }
     }
-    return result;
+    return false;
 }
 
 /**
