@@ -113,6 +113,30 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    //Not Done
-    return [];
+    if (values.length > 0) {
+        if (values.every((num: number): boolean => num >= 0)) {
+            let sum = values.reduce(
+                (currTotal: number, num: number) => currTotal + num
+            );
+            return [...values, sum];
+        }
+        let negIndex = values.findIndex((num: number): boolean => num < 0);
+        const smallValues = [...values];
+        const valuesWithSum = [...values];
+        smallValues.splice(negIndex, values.length - negIndex);
+        const sum = smallValues.reduce(
+            (currTotal: number, num: number) => currTotal + num,
+            0
+        );
+        valuesWithSum.splice(negIndex + 1, 0, sum);
+        return valuesWithSum;
+    }
+    return [0];
+    /*let negIndex = values.findIndex((num: number): boolean => num < 0);
+    let smallValues = values.splice(0, values.length - negIndex);
+    return values.splice(
+        negIndex,
+        0,
+        smallValues.reduce((currTotal: number, num: number) => currTotal + num)
+    );*/
 }
