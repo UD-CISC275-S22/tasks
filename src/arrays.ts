@@ -123,7 +123,7 @@ export function makeMath(addends: number[]): string {
  * the sum to the list.
  *
  * For instance, the array [1, 9, -5, 7] would become [1, 9, -5, 10, 7]
- * And the array [1, 9, 7] would become [1, 9, 7, 17]
+ * And the array [1, 9, 7] woud become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
     let removedColors: number[] = [];
