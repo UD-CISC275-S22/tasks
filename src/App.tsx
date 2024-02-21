@@ -14,7 +14,7 @@ function App(): JSX.Element {
             </p>
             <h1>Image Below:</h1>
             <img
-                src="src\images\TheWhale.jpg"
+                src=".\images\TheWhale.jpg"
                 alt="A picture of Brendan Fraser"
             />
             <p></p>
