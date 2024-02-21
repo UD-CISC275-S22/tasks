@@ -53,9 +53,7 @@ export const removeDollars = (amounts: string[]): number[] => {
     let final: number[] = [];
     if (amounts.length === 0) return final;
     final = amounts.map((num: string): number => {
-        // Remove "$" symbol if present
         const cleanedNum = num.startsWith("$") ? num.slice(1) : num;
-        // Convert to number or 0 if not a valid number
         return !isNaN(Number(cleanedNum)) ? parseInt(cleanedNum) : 0;
     });
     return final;
@@ -67,7 +65,14 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    return [];
+    let final: string[] = [];
+    final = messages.map((message: string): string =>
+        message.endsWith("!") ? message.toUpperCase() : message
+    );
+    final = messages.filter(
+        (message: string): boolean => !message.endsWith("?")
+    );
+    return final;
 };
 
 /**
@@ -75,7 +80,9 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return 0;
+    let final: string[] = [];
+    final = words.filter((word: string): boolean => word.length < 4);
+    return final.length;
 }
 
 /**
