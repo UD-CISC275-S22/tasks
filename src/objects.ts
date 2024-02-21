@@ -10,7 +10,16 @@ export function makeBlankQuestion(
     name: string,
     type: QuestionType
 ): Question {
-    return {};
+    return {
+        id: id,
+        name: name,
+        type: type,
+        body: "",
+        expected: "",
+        options: [],
+        points: 1,
+        published: false
+    };
 }
 
 /**
@@ -21,7 +30,11 @@ export function makeBlankQuestion(
  * HINT: Look up the `trim` and `toLowerCase` functions.
  */
 export function isCorrect(question: Question, answer: string): boolean {
-    return false;
+    let givenAnswer: string = answer;
+    givenAnswer = givenAnswer.trim().toLowerCase();
+    let questionAnswer: string = question.expected;
+    questionAnswer = questionAnswer.trim().toLowerCase();
+    return givenAnswer === questionAnswer;
 }
 
 /**
@@ -31,7 +44,14 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
-    return false;
+    if (question.type === "short_answer_question") {
+        return true;
+    }
+    //Check if answer is in options list
+    const answerValid = question.options.some(
+        (option: string): boolean => answer === option
+    );
+    return answerValid;
 }
 
 /**
@@ -41,7 +61,7 @@ export function isValid(question: Question, answer: string): boolean {
  * name "My First Question" would become "9: My First Q".
  */
 export function toShortForm(question: Question): string {
-    return "";
+    return question.id.toString() + ": " + question.name.substring(0, 10);
 }
 
 /**
@@ -62,7 +82,13 @@ export function toShortForm(question: Question): string {
  * Check the unit tests for more examples of what this looks like!
  */
 export function toMarkdown(question: Question): string {
-    return "";
+    let shortForm = "# " + question.name + "\n" + question.body;
+    if (question.type === "multiple_choice_question") {
+        shortForm = shortForm + "\n" + "- ";
+        const theOptions = question.options.join("\n- ");
+        return shortForm + theOptions;
+    }
+    return shortForm;
 }
 
 /**
@@ -70,7 +96,16 @@ export function toMarkdown(question: Question): string {
  * `newName`.
  */
 export function renameQuestion(question: Question, newName: string): Question {
-    return question;
+    return {
+        id: question.id,
+        name: newName,
+        type: question.type,
+        body: question.body,
+        expected: question.expected,
+        options: question.options,
+        points: question.points,
+        published: question.published
+    };
 }
 
 /**
@@ -79,7 +114,16 @@ export function renameQuestion(question: Question, newName: string): Question {
  * published; if it was published, now it should be not published.
  */
 export function publishQuestion(question: Question): Question {
-    return question;
+    return {
+        id: question.id,
+        name: question.name,
+        type: question.type,
+        body: question.body,
+        expected: question.expected,
+        options: question.options,
+        points: question.points,
+        published: !question.published
+    };
 }
 
 /**
@@ -87,9 +131,19 @@ export function publishQuestion(question: Question): Question {
  * `options`, `expected`, and `points` without changes. The `name` should be copied
  * over as "Copy of ORIGINAL NAME" (e.g., so "Question 1" would become "Copy of Question 1").
  * The `published` field should be reset to false.
+ * Also puts the given id as the new id
  */
 export function duplicateQuestion(id: number, oldQuestion: Question): Question {
-    return oldQuestion;
+    return {
+        id: id,
+        name: "Copy of " + oldQuestion.name,
+        type: oldQuestion.type,
+        body: oldQuestion.body,
+        expected: oldQuestion.expected,
+        options: oldQuestion.options,
+        points: oldQuestion.points,
+        published: false
+    };
 }
 
 /**
@@ -100,7 +154,18 @@ export function duplicateQuestion(id: number, oldQuestion: Question): Question {
  * Check out the subsection about "Nested Fields" for more information.
  */
 export function addOption(question: Question, newOption: string): Question {
-    return question;
+    const newOptions = question.options.slice(0, question.options.length);
+    newOptions.push(newOption);
+    return {
+        id: question.id,
+        name: question.name,
+        type: question.type,
+        body: question.body,
+        expected: question.expected,
+        options: newOptions,
+        points: question.points,
+        published: question.published
+    };
 }
 
 /**
@@ -117,5 +182,14 @@ export function mergeQuestion(
     contentQuestion: Question,
     { points }: { points: number }
 ): Question {
-    return contentQuestion;
+    return {
+        id: id,
+        name: name,
+        type: contentQuestion.type,
+        body: contentQuestion.body,
+        expected: contentQuestion.expected,
+        options: contentQuestion.options,
+        published: false,
+        points: points
+    };
 }
