@@ -53,6 +53,11 @@ function App(): JSX.Element {
                                     backgroundColor: "red"
                                 }}
                             ></div>
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
                             <p> ⬤ </p>
                             <p> ⬤ </p>
                             <p> ⬤ </p>
@@ -77,6 +82,7 @@ function App(): JSX.Element {
 }
 
 /**
+//npm run start to start the website from this terminal
 //Add a header
 //Add an image with alt text
 //Add a list with at least three elements
