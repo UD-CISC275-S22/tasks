@@ -36,7 +36,7 @@ export function isQuestion(message: string): boolean {
     return message.endsWith("?");
 }
 
-/**
+/** adding words
  * Consumes a word (a string) and returns either `true`, `false`, or `null`. If the string
  * is "yes" (upper or lower case), then return `true`. If the string is "no" (again, either
  * upper or lower case), then return `false`. Otherwise, return `null`.
