@@ -119,16 +119,20 @@ export function makeMath(addends: number[]): string {
  */
 export function injectPositive(values: number[]): number[] {
     let sum = 0;
-    let foundNegative = false;
-
-    return values
-        .map((num) => {
-            if (num < 0 && !foundNegative) {
-                foundNegative = true;
-                return sum;
-            }
-            sum += num;
-            return num;
-        })
-        .concat(foundNegative ? [] : [sum]);
+    let negativeNum = false;
+    const result: number[] = [];
+    for (let i = 0; i < values.length; i++) {
+        if (values[i] < 0 && !negativeNum) {
+            negativeNum = true;
+            result.push(values[i]);
+            result.push(sum);
+        } else {
+            sum += values[i];
+            result.push(values[i]);
+        }
+    }
+    if (!negativeNum) {
+        result.push(sum);
+    }
+    return result;
 }
