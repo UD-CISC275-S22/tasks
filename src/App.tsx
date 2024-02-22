@@ -18,10 +18,7 @@ function App(): JSX.Element {
                 <Row>
                     <Col>
                         <div className="Red-Rect"></div>
-                        <img
-                            src={require("./catcircle.png")}
-                            alt="My children"
-                        />
+                        <img src={catcircle} alt="./catcircle.png" />
                     </Col>
                     <Col>
                         <div className="Red-Rect"></div>
