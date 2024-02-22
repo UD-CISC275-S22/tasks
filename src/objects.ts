@@ -35,10 +35,6 @@ export function isCorrect(question: Question, answer: string): boolean {
     const lowerExpected: string = question.expected.toLowerCase();
     const trimExpected: string = lowerExpected.trim();
 
-    console.log(
-        "trimAnswer == " + trimAnswer + " Expected == " + question.expected
-    );
-
     return trimAnswer === trimExpected;
 }
 
@@ -49,6 +45,15 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
+    //let valid = true;
+    if (question.type === "short_answer_question") {
+        return true;
+    } else {
+        // answer must be exactly one of the options
+        // but how????
+        //return string === question.options
+    }
+
     return false;
 }
 
@@ -59,7 +64,7 @@ export function isValid(question: Question, answer: string): boolean {
  * name "My First Question" would become "9: My First Q".
  */
 export function toShortForm(question: Question): string {
-    return "";
+    return `${question.id}: ${question.name[0 - 10]}`;
 }
 
 /**
