@@ -1,5 +1,7 @@
 import React from "react";
 import "./App.css";
+import { Button, Col, Container, Row } from "react-bootstrap";
+import catcircle from "./catcircle.png";
 
 function App(): JSX.Element {
     return (
@@ -8,9 +10,28 @@ function App(): JSX.Element {
                 UD CISC275 with React Hooks and TypeScript and also Kai Winterle
             </header>
             <p>
-                Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload.
+                Hello World! Edit <code>src/App.tsx</code> and save. This page
+                will automatically reload.
             </p>
+            <h1>Header? I hardly,</h1>
+            <Container>
+                <Row>
+                    <Col>
+                        <p>Mmmm Text Yummy</p>
+                    </Col>
+                    <Col>
+                        <img src={catcircle} alt="CircleofCatImage" />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <div className="redRect"></div>
+                    </Col>
+                    <Col>
+                        <div className="redRect"></div>
+                    </Col>
+                </Row>
+            </Container>
         </div>
     );
 }
