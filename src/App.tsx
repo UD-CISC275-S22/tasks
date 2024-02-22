@@ -32,6 +32,14 @@ function App(): JSX.Element {
                     </Col>
                 </Row>
             </Container>
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
+            <Button onClick={() => console.log("Hello World!")}>
+                Log Hello World
+            </Button>
         </div>
     );
 }
