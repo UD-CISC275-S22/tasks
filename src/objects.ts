@@ -85,7 +85,7 @@ export function toShortForm(question: Question): string {
  * Check the unit tests for more examples of what this looks like!
  */
 export function toMarkdown(question: Question): string {
-    return "";
+    return `# ${question.name}\n${question.body}\n${question.options}`;
 }
 
 /**
@@ -93,7 +93,9 @@ export function toMarkdown(question: Question): string {
  * `newName`.
  */
 export function renameQuestion(question: Question, newName: string): Question {
-    return question;
+    const newQuestion: Question = { ...question, name: newName };
+
+    return newQuestion;
 }
 
 /**
