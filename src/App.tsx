@@ -12,6 +12,7 @@ function App(): JSX.Element {
             <p>
                 Hello World! Edit <code>src/App.tsx</code> and save. This page
                 will automatically reload.
+            </p>
             <h1>Ying and Yang(Jack and Snowpuff)</h1>
             <Container>
                 <Row>
