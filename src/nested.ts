@@ -1,5 +1,6 @@
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
+import { makeBlankQuestion } from "./objects";
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
@@ -7,7 +8,12 @@ import { Question, QuestionType } from "./interfaces/question";
  */
 export function getPublishedQuestions(questions: Question[]): Question[] {
     const copy: Question[] = questions
-        .map((question: Question): Question => ({ ...question }))
+        .map(
+            (question: Question): Question => ({
+                ...question,
+                options: [...question.options]
+            })
+        )
         .filter((publish: Question): boolean => publish.published === true);
     return copy;
 }
@@ -19,7 +25,12 @@ export function getPublishedQuestions(questions: Question[]): Question[] {
  */
 export function getNonEmptyQuestions(questions: Question[]): Question[] {
     const empty: Question[] = questions
-        .map((question: Question): Question => ({ ...question }))
+        .map(
+            (question: Question): Question => ({
+                ...question,
+                options: [...question.options]
+            })
+        )
         .filter(
             (eQuestion: Question): boolean =>
                 eQuestion.body !== "" ||
@@ -38,7 +49,10 @@ export function findQuestion(
     id: number
 ): Question | null {
     const copy: Question[] = questions.map(
-        (question: Question): Question => ({ ...question })
+        (question: Question): Question => ({
+            ...question,
+            options: [...question.options]
+        })
     );
     const match: Question | undefined = copy.find(
         (question: Question): boolean => question.id === id
@@ -52,7 +66,12 @@ export function findQuestion(
  */
 export function removeQuestion(questions: Question[], id: number): Question[] {
     const copy: Question[] = questions
-        .map((question: Question): Question => ({ ...question }))
+        .map(
+            (question: Question): Question => ({
+                ...question,
+                options: [...question.options]
+            })
+        )
         .filter((exclude: Question): boolean => exclude.id !== id);
     return copy;
 }
@@ -63,7 +82,10 @@ export function removeQuestion(questions: Question[], id: number): Question[] {
  */
 export function getNames(questions: Question[]): string[] {
     const copy: Question[] = questions.map(
-        (question: Question): Question => ({ ...question })
+        (question: Question): Question => ({
+            ...question,
+            options: [...question.options]
+        })
     );
     const result: string[] = copy.map(
         (question: Question): string => question.name
@@ -76,7 +98,10 @@ export function getNames(questions: Question[]): string[] {
  */
 export function sumPoints(questions: Question[]): number {
     const copy: Question[] = questions.map(
-        (question: Question): Question => ({ ...question })
+        (question: Question): Question => ({
+            ...question,
+            options: [...question.options]
+        })
     );
     const result: number = copy.reduce(
         (currentTotal: number, qNum: Question): number =>
@@ -91,7 +116,12 @@ export function sumPoints(questions: Question[]): number {
  */
 export function sumPublishedPoints(questions: Question[]): number {
     const copy: Question[] = questions
-        .map((question: Question): Question => ({ ...question }))
+        .map(
+            (question: Question): Question => ({
+                ...question,
+                options: [...question.options]
+            })
+        )
         .filter((publish: Question): boolean => publish.published === true);
     const result: number = copy.reduce(
         (currentTotal: number, num: Question) => currentTotal + num.points,
@@ -118,7 +148,21 @@ id,name,options,points,published
  * Check the unit tests for more examples!
  */
 export function toCSV(questions: Question[]): string {
-    return "";
+    let csv = "id,name,options,points,published\n";
+    const copy: Question[] = questions.map(
+        (question: Question): Question => ({
+            ...question,
+            options: [...question.options]
+        })
+    );
+    const result: string = copy
+        .map(
+            (question: Question): string =>
+                `${question.id},${question.name},${question.options.length},${question.points},${question.published}`
+        )
+        .join("\n");
+    csv += result;
+    return csv;
 }
 
 /**
@@ -127,7 +171,15 @@ export function toCSV(questions: Question[]): string {
  * making the `text` an empty string, and using false for both `submitted` and `correct`.
  */
 export function makeAnswers(questions: Question[]): Answer[] {
-    return [];
+    const result: Answer[] = questions.map(
+        (question: Question): Answer => ({
+            questionId: question.id,
+            text: "",
+            submitted: false,
+            correct: false
+        })
+    );
+    return result;
 }
 
 /***
@@ -135,7 +187,14 @@ export function makeAnswers(questions: Question[]): Answer[] {
  * each question is now published, regardless of its previous published status.
  */
 export function publishAll(questions: Question[]): Question[] {
-    return [];
+    const copy: Question[] = questions.map(
+        (question: Question): Question => ({
+            ...question,
+            options: [...question.options],
+            published: true
+        })
+    );
+    return copy;
 }
 
 /***
@@ -143,7 +202,17 @@ export function publishAll(questions: Question[]): Question[] {
  * are the same type. They can be any type, as long as they are all the SAME type.
  */
 export function sameType(questions: Question[]): boolean {
-    return false;
+    const copy: Question[] = questions.map(
+        (question: Question): Question => ({
+            ...question,
+            options: [...question.options]
+        })
+    );
+    const check: Question = { ...copy[0] };
+    const result: boolean = copy.every(
+        (question: Question) => question.type === check.type
+    );
+    return result;
 }
 
 /***
@@ -157,7 +226,15 @@ export function addNewQuestion(
     name: string,
     type: QuestionType
 ): Question[] {
-    return [];
+    const copy: Question[] = questions.map(
+        (question: Question): Question => ({
+            ...question,
+            options: [...question.options]
+        })
+    );
+    const newQ: Question = makeBlankQuestion(id, name, type);
+    const updatedCopy: Question[] = [...copy, newQ];
+    return updatedCopy;
 }
 
 /***
