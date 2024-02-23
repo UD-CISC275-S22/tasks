@@ -88,15 +88,16 @@ export function toShortForm(question: Question): string {
  * Check the unit tests for more examples of what this looks like!
  */
 export function toMarkdown(question: Question): string {
-    // if (question.type === "multiple_choice_question") {
-    //     const type = question.options.map(
-    //         (choice: string): string => "- " + choice + "\n"
-    //     );
-    // const name = "# " + question.name;
-    // const body = question.body;
-    // console.log(name + "\n" + body + "\n" + type);
-    // return name + "\n" + body + "\n" + type;
-    return "";
+    const name = "# " + question.name;
+    const body = question.body;
+    if (question.type === "multiple_choice_question") {
+        const type = question.options
+            .map((choice: string): string => "- " + choice)
+            .join("\n");
+        return name + "\n" + body + "\n" + type;
+    } else {
+        return name + "\n" + body;
+    }
 }
 
 /**
@@ -137,7 +138,6 @@ export function duplicateQuestion(id: number, oldQuestion: Question): Question {
         published: false,
         id: id
     };
-    console.log(questions);
     return questions;
 }
 
@@ -170,5 +170,12 @@ export function mergeQuestion(
     contentQuestion: Question,
     { points }: { points: number }
 ): Question {
-    return contentQuestion;
+    const questions = {
+        ...contentQuestion,
+        id: id,
+        name: name,
+        published: false,
+        points: points
+    };
+    return questions;
 }
