@@ -10,7 +10,17 @@ export function makeBlankQuestion(
     name: string,
     type: QuestionType
 ): Question {
-    return {};
+    //used chatGPT for this code and to understand instructions for this part
+    return {
+        id: id,
+        name: name,
+        type: type,
+        body: "",
+        expected: "",
+        options: [],
+        points: 1,
+        published: false
+    };
 }
 
 /**
@@ -21,6 +31,9 @@ export function makeBlankQuestion(
  * HINT: Look up the `trim` and `toLowerCase` functions.
  */
 export function isCorrect(question: Question, answer: string): boolean {
+    if (answer.toLowerCase().trim() === question.expected) {
+        return true;
+    }
     return false;
 }
 
