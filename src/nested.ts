@@ -35,7 +35,10 @@ export function findQuestion(
     questions: Question[],
     id: number
 ): Question | null {
-    return null;
+    const result: Question | undefined = questions.find(
+        (quest: Question): boolean => quest.id === id
+    );
+    return result !== undefined ? result : null;
 }
 
 /**
@@ -43,7 +46,10 @@ export function findQuestion(
  * with the given `id`.
  */
 export function removeQuestion(questions: Question[], id: number): Question[] {
-    return [];
+    const result: Question[] = questions.filter(
+        (question: Question): boolean => question.id !== id
+    );
+    return result;
 }
 
 /***
@@ -51,7 +57,9 @@ export function removeQuestion(questions: Question[], id: number): Question[] {
  * questions, as an array.
  */
 export function getNames(questions: Question[]): string[] {
-    return [];
+    const result: string[] = [];
+    questions.map((question: Question) => result.push(question.name));
+    return result;
 }
 
 /***
