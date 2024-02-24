@@ -52,6 +52,7 @@ export function isValid(question: Question, answer: string): boolean {
         // answer must be exactly one of the options
         // but how????
         //return string === question.options
+        // try using some or filter or other array function
     }
 
     return false;
@@ -64,7 +65,17 @@ export function isValid(question: Question, answer: string): boolean {
  * name "My First Question" would become "9: My First Q".
  */
 export function toShortForm(question: Question): string {
-    return `${question.id}: ${question.name[0 - 10]}`;
+    let returnString: string;
+
+    if (question.name.length > 10) {
+        returnString = `${question.id}: ${question.name.substring(0, 10)}`;
+    } else {
+        returnString = `${question.id}: ${question.name.substring(0)}`;
+    }
+
+    console.log("name length == " + question.name.length);
+
+    return returnString;
 }
 
 /**
@@ -85,7 +96,12 @@ export function toShortForm(question: Question): string {
  * Check the unit tests for more examples of what this looks like!
  */
 export function toMarkdown(question: Question): string {
-    return `# ${question.name}\n${question.body}\n${question.options}`;
+    const formatedOptions: string = question.options.join("\n- ");
+    console.log(
+        "new string === " +
+            `# ${question.name}\n${question.body}\n${formatedOptions}`
+    );
+    return `# ${question.name}\n${question.body}\n${formatedOptions}`;
 }
 
 /**
