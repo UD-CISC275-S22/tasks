@@ -48,14 +48,11 @@ export function isValid(question: Question, answer: string): boolean {
     //let valid = true;
     if (question.type === "short_answer_question") {
         return true;
-    } else {
-        // answer must be exactly one of the options
-        // but how????
-        //return string === question.options
-        // try using some or filter or other array function
     }
 
-    return false;
+    return question.options.some(
+        (option: string): boolean => option === answer
+    );
 }
 
 /**
@@ -170,5 +167,14 @@ export function mergeQuestion(
     contentQuestion: Question,
     { points }: { points: number }
 ): Question {
-    return contentQuestion;
+    return {
+        id: id,
+        name: name,
+        body: contentQuestion.body,
+        type: contentQuestion.type,
+        options: contentQuestion.options,
+        expected: contentQuestion.expected,
+        points: points,
+        published: false
+    };
 }
