@@ -73,8 +73,6 @@ export function toShortForm(question: Question): string {
         returnString = `${question.id}: ${question.name.substring(0)}`;
     }
 
-    console.log("name length == " + question.name.length);
-
     return returnString;
 }
 
@@ -96,12 +94,12 @@ export function toShortForm(question: Question): string {
  * Check the unit tests for more examples of what this looks like!
  */
 export function toMarkdown(question: Question): string {
-    const formatedOptions: string = question.options.join("\n- ");
-    console.log(
-        "new string === " +
-            `# ${question.name}\n${question.body}\n${formatedOptions}`
-    );
-    return `# ${question.name}\n${question.body}\n${formatedOptions}`;
+    if (question.type == "multiple_choice_question") {
+        const formatedOptions: string = question.options.join("\n- ");
+        return `# ${question.name}\n${question.body}\n- ${formatedOptions}`;
+    }
+
+    return `# ${question.name}\n${question.body}`;
 }
 
 /**
