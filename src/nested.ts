@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
 import { makeBlankQuestion } from "./objects";
@@ -217,9 +218,6 @@ export function changeQuestionTypeById(
             return q;
         }
     });
-    //         const option = newQuestionType !== "multiple_choice_question" ? [] : q.options;
-    //         return q.id === targetId ? { ...q, type: newQuestionType, option } : q;
-    // });
     return find;
 }
 
@@ -239,7 +237,21 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ): Question[] {
-    return [];
+    const copy = [...questions];
+    const map = copy.map((q: Question): Question => {
+        if (targetId === q.id) {
+            const options =
+                targetOptionIndex === -1
+                    ? [...q.options, newOption]
+                    : q.options.map((option: string, index: number) =>
+                          index === targetOptionIndex ? newOption : option
+                      );
+            return { ...q, options };
+        } else {
+            return q;
+        }
+    });
+    return map;
 }
 
 /***
