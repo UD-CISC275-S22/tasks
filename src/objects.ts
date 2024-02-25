@@ -76,7 +76,7 @@ export function toShortForm(question: Question): string {
  */
 export function toMarkdown(question: Question): string {
     //Not Done
-    let newString = "# " + question.name + "\n" + question.body + question.type;
+    let newString = "# " + question.name + "\n" + question.body;
     if (question.type === "multiple_choice_question")
         newString += "\n- " + question.options.join("\n- ");
     return newString;
@@ -139,5 +139,11 @@ export function mergeQuestion(
     contentQuestion: Question,
     { points }: { points: number }
 ): Question {
-    return contentQuestion;
+    return {
+        ...contentQuestion,
+        points: points,
+        published: false,
+        id: id,
+        name: name
+    };
 }
