@@ -6,7 +6,11 @@ import { Question, QuestionType } from "./interfaces/question";
  * that are `published`.
  */
 export function getPublishedQuestions(questions: Question[]): Question[] {
-    return [];
+    const publishedQuestions: Question[] = questions.filter(
+        (question: Question): boolean => question.published
+    );
+
+    return publishedQuestions;
 }
 
 /**
@@ -34,7 +38,10 @@ export function findQuestion(
  * with the given `id`.
  */
 export function removeQuestion(questions: Question[], id: number): Question[] {
-    return [];
+    const newQuestions: Question[] = questions.filter(
+        (question: Question): boolean => !(question.id === id)
+    );
+    return newQuestions;
 }
 
 /***
