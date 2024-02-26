@@ -1,3 +1,4 @@
+import { queryByRole } from "@testing-library/react";
 import { Question, QuestionType } from "./interfaces/question";
 
 /**
@@ -83,12 +84,13 @@ export function toMarkdown(question: Question): string {
     let answer = "# " + question.name;
     answer += "\n" + question.body;
     if (question.type === "multiple_choice_question") {
-        // Append each option preceded by a dash and a space
-        answer += "\n";
-        question.options.forEach((option) => {
-            answer += `- ${option}\n`;
-        });
-        answer.trimEnd;
+        answer +=
+            "\n- " +
+            question.options[0] +
+            "\n- " +
+            question.options[1] +
+            "\n- " +
+            question.options[2];
     }
     return answer;
 }
