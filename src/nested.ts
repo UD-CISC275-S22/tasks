@@ -66,14 +66,21 @@ export function getNames(questions: Question[]): string[] {
  * Consumes an array of questions and returns the sum total of all their points added together.
  */
 export function sumPoints(questions: Question[]): number {
-    return 0;
+    return questions.reduce(
+        (sum: number, question: Question) => sum + question.points,
+        0
+    );
 }
 
 /***
  * Consumes an array of questions and returns the sum total of the PUBLISHED questions.
  */
 export function sumPublishedPoints(questions: Question[]): number {
-    return 0;
+    return questions.reduce(
+        (sum: number, question: Question) =>
+            question.published ? sum + question.points : sum,
+        0
+    );
 }
 
 /***
@@ -94,7 +101,15 @@ id,name,options,points,published
  * Check the unit tests for more examples!
  */
 export function toCSV(questions: Question[]): string {
-    return "";
+    return (
+        "id,name,options,points,published\n" +
+        questions
+            .map(
+                (question: Question): string =>
+                    `${question.id},${question.name},${question.options.length},${question.points},${question.published}`
+            )
+            .join("\n")
+    );
 }
 
 /**
