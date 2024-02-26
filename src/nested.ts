@@ -1,7 +1,7 @@
 /* eslint-disable indent */
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
-import { makeBlankQuestion } from "./objects";
+import { duplicateQuestion, makeBlankQuestion } from "./objects";
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
@@ -21,14 +21,14 @@ export function getPublishedQuestions(questions: Question[]): Question[] {
  * `expected`, and an empty array for its `options`.
  */
 export function getNonEmptyQuestions(questions: Question[]): Question[] {
-    const copy = [...questions];
+    const copy = questions.map((q: Question): Question => ({ ...q }));
     const nonempty = copy.filter(
         (question: Question): boolean =>
-            question.body !== "" &&
-            question.expected !== "" &&
-            question.options !== null
+            question.body !== "" ||
+            question.expected !== "" ||
+            question.options.length !== 0
     );
-    //console.log(empty);
+    //console.log(nonempty);
     return nonempty;
 }
 
@@ -158,6 +158,9 @@ export function publishAll(questions: Question[]): Question[] {
  */
 export function sameType(questions: Question[]): boolean {
     const copy = [...questions];
+    if (copy.length === 0) {
+        return true;
+    }
     const type1 = copy[0].type;
     const every = copy.every((q: Question): boolean => q.type === type1);
     return every;
@@ -265,5 +268,12 @@ export function duplicateQuestionInArray(
     targetId: number,
     newId: number
 ): Question[] {
-    return [];
+    const copy = [...questions];
+    const index = copy.findIndex((q: Question): boolean => q.id === targetId);
+    if (index != -1) {
+        const original = copy[index];
+        const dupe = duplicateQuestion(newId, original);
+        copy.splice(index + 1, 0, dupe);
+    }
+    return copy;
 }
