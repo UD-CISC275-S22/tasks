@@ -1,4 +1,3 @@
-import { queryByRole } from "@testing-library/react";
 import { Question, QuestionType } from "./interfaces/question";
 
 /**
@@ -122,7 +121,7 @@ export function duplicateQuestion(id: number, oldQuestion: Question): Question {
     const { body, type, options, expected, points } = oldQuestion;
     const name = "Copy of " + oldQuestion.name;
     const published = false;
-    return { ...oldQuestion, id, name, published };
+    return { body, type, options, expected, points, id, name, published };
 }
 
 /**
