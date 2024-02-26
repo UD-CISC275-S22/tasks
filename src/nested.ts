@@ -30,10 +30,12 @@ export function getNonEmptyQuestions(questions: Question[]): Question[] {
  * question is not found, return `null` instead.
  */
 export function findQuestion(
+    //Not Done
     questions: Question[],
     id: number
 ): Question | null {
     return null;
+    //return questions.some((question: Question): boolean => question.id === id) ? questions.find((question: Question): boolean => question.id === id): null;
 }
 
 /**
@@ -41,7 +43,7 @@ export function findQuestion(
  * with the given `id`.
  */
 export function removeQuestion(questions: Question[], id: number): Question[] {
-    return [];
+    return questions.filter((question: Question): boolean => question.id != id);
 }
 
 /***
