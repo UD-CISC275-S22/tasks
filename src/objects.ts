@@ -83,6 +83,9 @@ export function toShortForm(question: Question): string {
 export function toMarkdown(question: Question): string {
     const markdownString = `# ${question.name}\n${question.body}\n`;
 
+    if (question.type !== "multiple_choice_question") {
+        return markdownString.trimEnd();
+    }
     const optionsString =
         question.type === "multiple_choice_question"
             ? question.options.map((option) => `- ${option}`).join("\n")
