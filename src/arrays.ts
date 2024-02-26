@@ -131,35 +131,38 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    let retArr: number[] = [];
     let sum = 0;
     let foundNeg = false;
-    let everNeg = false;
+    let lastSum = false;
 
-    for (let i = 0; i < values.length; i++) {
-        if (values[i] < 0 && !foundNeg) {
+    const result = values.reduce((acc: number[], curr: number) => {
+        if (curr < 0 && !foundNeg) {
             foundNeg = true;
-        } else if (foundNeg) {
-            retArr.push(sum);
+            acc.push(curr);
+            acc.push(sum);
             sum = 0;
-            foundNeg = false;
-            everNeg = true;
-            i++;
+
+            lastSum = true;
+        } else {
+            if (lastSum) {
+                lastSum = false;
+            } else {
+                acc.push(curr);
+            }
         }
 
-        retArr.push(values[i]);
-        if (values[i] >= 0) {
-            sum += values[i];
-        }
+        sum += curr;
+
+        return acc;
+    }, []);
+
+    if (!foundNeg) {
+        result.push(sum);
     }
 
-    if (!everNeg) {
-        retArr.push(sum);
-    }
-
-    if (retArr.every((num) => num === 0)) {
+    if (result.every((num) => num === 0)) {
         return [0];
     }
 
-    return retArr;
+    return result;
 }
