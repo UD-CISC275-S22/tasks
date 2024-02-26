@@ -8,9 +8,18 @@ import { Question, QuestionType } from "./interfaces/question";
 export function makeBlankQuestion(
     id: number,
     name: string,
-    type: QuestionType
+    type: "short_answer_question"
 ): Question {
-    return {};
+    return {
+        id,
+        name,
+        type,
+        body: "",
+        expected: "",
+        options: [],
+        points: 1,
+        published: false
+    };
 }
 
 /**
@@ -21,7 +30,14 @@ export function makeBlankQuestion(
  * HINT: Look up the `trim` and `toLowerCase` functions.
  */
 export function isCorrect(question: Question, answer: string): boolean {
-    return false;
+    let tmp = answer;
+    tmp = tmp.toLowerCase();
+    tmp = tmp.trim();
+    if (tmp === question.expected) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 /**
@@ -31,7 +47,22 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
-    return false;
+    let tmp = answer;
+    tmp = tmp.toLowerCase();
+    tmp = tmp.trim();
+    if (question.type === "multiple_choice_question") {
+        let bool = false;
+        for (let i = 0; i < question.options.length; i++) {
+            if (tmp === question.options[i]) {
+                bool = true;
+            } else {
+                bool = false;
+            }
+        }
+        return bool;
+    } else {
+        return true;
+    }
 }
 
 /**
@@ -41,7 +72,12 @@ export function isValid(question: Question, answer: string): boolean {
  * name "My First Question" would become "9: My First Q".
  */
 export function toShortForm(question: Question): string {
-    return "";
+    let tmp = "";
+    tmp += question.id + ": ";
+    for (let i = 0; i < 10; i++) {
+        tmp += question.name[i];
+    }
+    return tmp;
 }
 
 /**
@@ -62,7 +98,13 @@ export function toShortForm(question: Question): string {
  * Check the unit tests for more examples of what this looks like!
  */
 export function toMarkdown(question: Question): string {
-    return "";
+    let tmp = "";
+    tmp += "# " + question.name + "\n";
+    tmp += question.body + "\n";
+    for (let i = 0; i < question.options.length; i++) {
+        tmp += "- w" + question.options[i] + "\n";
+    }
+    return tmp;
 }
 
 /**
