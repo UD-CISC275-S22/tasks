@@ -5,7 +5,13 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    return numbers;
+    if (numbers.length === 0) {
+        return [];
+    }
+    let newNums = [];
+    newNums.push(numbers[0]);
+    newNums.push(numbers[numbers.length - 1]);
+    return newNums;
 }
 
 /**
@@ -13,7 +19,8 @@ export function bookEndList(numbers: number[]): number[] {
  * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
-    return numbers;
+    const tripNums = numbers.map((numbers: number): number => numbers * 3);
+    return tripNums;
 }
 
 /**
@@ -21,7 +28,13 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    return [];
+    const intList1 = numbers.map((numbers: string): number =>
+        parseInt(numbers)
+    );
+    const intList2 = intList1.map((intList1: number): number =>
+        isNaN(intList1) ? 0 : intList1
+    );
+    return intList2;
 }
 
 /**
@@ -32,7 +45,14 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    return [];
+    const noSigns = amounts.map((amount: string) =>
+        amount.startsWith("$") ? amount.slice(1) : amount
+    );
+    const convNums = noSigns.map((amount: string): number => parseInt(amount));
+    const checkZero = convNums.map((num: number): number =>
+        isNaN(num) ? 0 : num
+    );
+    return checkZero;
 };
 
 /**
@@ -41,7 +61,15 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    return [];
+    const findQuest = messages.filter(
+        (messages: string): boolean => messages[messages.length - 1] !== "?"
+    );
+    const exclam = findQuest.map((findQuest: string): string =>
+        findQuest[findQuest.length - 1] === "!"
+            ? findQuest.toUpperCase()
+            : findQuest
+    );
+    return exclam;
 };
 
 /**
@@ -49,7 +77,10 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return 0;
+    const findShort = words.filter(
+        (words: string): boolean => words.length < 4
+    );
+    return findShort.length;
 }
 
 /**
@@ -58,7 +89,12 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    return false;
+    if (colors.length === 0) {
+        return true;
+    }
+    return colors.every(
+        (colors) => colors === "red" || colors === "blue" || colors === "green"
+    );
 }
 
 /**
@@ -69,7 +105,20 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    if (addends.length === 0) {
+        return "0=0";
+    }
+    let retStr = "";
+    const sum = addends.reduce(
+        (currentTotal: number, num: number) => currentTotal + num,
+        0
+    );
+    retStr = retStr + sum + "=";
+    for (let i = 0; i < addends.length; i++) {
+        retStr = retStr + addends[i] + "+";
+    }
+    const retStr2 = retStr.slice(0, -1);
+    return retStr2;
 }
 
 /**
@@ -82,5 +131,35 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    return [];
+    let retArr: number[] = [];
+    let sum = 0;
+    let foundNeg = false;
+    let everNeg = false;
+
+    for (let i = 0; i < values.length; i++) {
+        if (values[i] < 0 && !foundNeg) {
+            foundNeg = true;
+        } else if (foundNeg) {
+            retArr.push(sum);
+            sum = 0;
+            foundNeg = false;
+            everNeg = true;
+            i++;
+        }
+
+        retArr.push(values[i]);
+        if (values[i] >= 0) {
+            sum += values[i];
+        }
+    }
+
+    if (!everNeg) {
+        retArr.push(sum);
+    }
+
+    if (retArr.every((num) => num === 0)) {
+        return [0];
+    }
+
+    return retArr;
 }
