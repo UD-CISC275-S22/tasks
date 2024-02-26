@@ -296,19 +296,25 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ): Question[] {
-    const copy: Question[] = questions.map(
-        (question: Question): Question =>
-            question.id === targetId
-                ? targetOptionIndex === -1
-                    ? { ...question, options: [...question.options, newOption] }
-                    : {
-                          ...question,
-                          options: question.options.map((option, index) =>
-                              index === targetOptionIndex ? newOption : option
-                          )
-                      }
-                : { ...question, options: [...question.options] }
-    );
+    const copy: Question[] = questions.map((question: Question): Question => {
+        if (question.id === targetId) {
+            if (targetOptionIndex === -1) {
+                return {
+                    ...question,
+                    options: [...question.options, newOption]
+                };
+            } else {
+                return {
+                    ...question,
+                    options: question.options.map((option, index) =>
+                        index === targetOptionIndex ? newOption : option
+                    )
+                };
+            }
+        } else {
+            return { ...question, options: [...question.options] };
+        }
+    });
     return copy;
 }
 
@@ -326,17 +332,12 @@ export function duplicateQuestionInArray(
     const findQuestion: number = questions.findIndex(
         (question: Question): boolean => question.id === targetId
     );
-
-    if (findQuestion !== -1) {
-        const copy: Question[] = questions.map(
-            (question: Question): Question => ({ ...question })
-        );
-        const modifiedQuestion = duplicateQuestion(newId, {
-            ...copy[findQuestion]
-        });
-        copy.splice(findQuestion + 1, 0, modifiedQuestion);
-        return copy;
-    } else {
-        return questions;
-    }
+    const copy: Question[] = questions.map(
+        (question: Question): Question => ({ ...question })
+    );
+    const modifiedQuestion = duplicateQuestion(newId, {
+        ...copy[findQuestion]
+    });
+    copy.splice(findQuestion + 1, 0, modifiedQuestion);
+    return copy;
 }
