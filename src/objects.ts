@@ -86,7 +86,7 @@ export function toMarkdown(question: Question): string {
     output += "\n";
 
     for (let i = 0; i < question.options.length; i++) {
-        if (i != question.options.length - 1){
+        if (i != question.options.length - 1) {
             output += `- ${question.options[i]}\n`;
         } else output += `- ${question.options[i]}`;
     }
