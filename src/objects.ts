@@ -152,7 +152,6 @@ export function mergeQuestion(
     contentQuestion: Question,
     { points }: { points: number }
 ): Question {
-    console.log(contentQuestion.options);
     return {
         ...contentQuestion,
         id: id,
