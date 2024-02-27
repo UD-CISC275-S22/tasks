@@ -75,7 +75,7 @@ export function sumPublishedPoints(questions: Question[]): number {
     let x = 0;
     questions.forEach((point) => {
         if (point.published) {
-            x++;
+            x += point.points;
         }
     });
     return x;
@@ -114,6 +114,7 @@ export function toCSV(questions: Question[]): string {
             loop.published.toString() +
             "\n";
     });
+    done = done.slice(0, -1);
     return done;
 }
 
@@ -175,12 +176,13 @@ export function renameQuestionById(
     targetId: number,
     newName: string
 ): Question[] {
-    questions.forEach((loop) => {
-        if (loop.id === targetId) {
-            loop.name = newName;
+    const done = questions.map((question) => {
+        if (question.id === targetId) {
+            return { ...question, name: newName };
         }
+        return { ...question };
     });
-    return questions;
+    return done;
 }
 
 /***
@@ -195,20 +197,12 @@ export function changeQuestionTypeById(
     targetId: number,
     newQuestionType: QuestionType
 ): Question[] {
-    return questions.map((loop) => {
-        if ((loop.id = targetId)) {
-            return {
-                ...loop,
-                type: newQuestionType,
-                options:
-                    newQuestionType === "multiple_choice_question"
-                        ? loop.options
-                        : []
-            };
-        } else {
-            return loop;
-        }
-    });
+    const index = questions.findIndex((question) => question.id === targetId);
+    if (questions[index].type === "multiple_choice_question") {
+        questions[index].options = [];
+    }
+    questions[index].type = newQuestionType;
+    return questions;
 }
 
 /**
