@@ -265,8 +265,7 @@ export function editOption(
     if (sameIDIndex === -1) {
         return newQuestions;
     }
-    newQuestions[sameIDIndex].options =
-        newQuestions[sameIDIndex].options.slice();
+    newQuestions[sameIDIndex].options = [...newQuestions[sameIDIndex].options];
     if (targetOptionIndex === -1) {
         newQuestions[sameIDIndex].options.push(newOption);
     } else {
