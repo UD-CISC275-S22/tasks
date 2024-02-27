@@ -1,5 +1,6 @@
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
+import { makeBlankQuestion } from "./objects";
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
@@ -19,6 +20,12 @@ export function getPublishedQuestions(questions: Question[]): Question[] {
  * `expected`, and an empty array for its `options`.
  */
 export function getNonEmptyQuestions(questions: Question[]): Question[] {
+    const nonEmptyQuestions: Question[] = questions.filter(
+        (question: Question): boolean =>
+            question.body === "" &&
+            question.expected === "" &&
+            question.options.length === 0
+    );
     return [];
 }
 
@@ -107,6 +114,8 @@ export function toCSV(questions: Question[]): string {
  * making the `text` an empty string, and using false for both `submitted` and `correct`.
  */
 export function makeAnswers(questions: Question[]): Answer[] {
+    //const answersArray: string[] =
+
     return [];
 }
 
@@ -115,7 +124,13 @@ export function makeAnswers(questions: Question[]): Answer[] {
  * each question is now published, regardless of its previous published status.
  */
 export function publishAll(questions: Question[]): Question[] {
-    return [];
+    // const publishedQuestions: Question[] = questions.map(
+    //     (question: Question): Question => { ...questions, published: true }
+    // );
+
+    const publishedQuestions = { ...questions, published: true };
+
+    return publishedQuestions;
 }
 
 /***
@@ -137,7 +152,11 @@ export function addNewQuestion(
     name: string,
     type: QuestionType
 ): Question[] {
-    return [];
+    const newQuestions: Question[] = [
+        ...questions,
+        makeBlankQuestion(id, name, type)
+    ];
+    return newQuestions;
 }
 
 /***
@@ -150,7 +169,13 @@ export function renameQuestionById(
     targetId: number,
     newName: string
 ): Question[] {
-    return [];
+    const newQuestions: Question[] = questions.map(
+        (question: Question): Question =>
+            question.id === targetId
+                ? { ...question, name: newName }
+                : { ...question }
+    );
+    return newQuestions;
 }
 
 /***
