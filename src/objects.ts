@@ -81,11 +81,14 @@ export function toShortForm(question: Question): string {
  */
 export function toMarkdown(question: Question): string {
     let output = "";
-    output += `# ${question.name}\n${question.body}\n`;
-    if (question.type === "multiple_choice_question") {
-        for (let i = 0; i < question.options.length; i++) {
+    output += `# ${question.name}\n${question.body}`;
+    if (question.type === "short_answer_question") return output;
+    output += "\n";
+
+    for (let i = 0; i < question.options.length; i++) {
+        if (i != question.options.length - 1){
             output += `- ${question.options[i]}\n`;
-        }
+        } else output += `- ${question.options[i]}`;
     }
     return output;
 }
