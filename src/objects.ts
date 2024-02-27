@@ -57,7 +57,6 @@ export function isValid(question: Question, answer: string): boolean {
     }
     return false;
 }
-
 /**
  * Consumes a question and produces a string representation combining the
  * `id` and first 10 characters of the `name`. The two strings should be
@@ -67,7 +66,6 @@ export function isValid(question: Question, answer: string): boolean {
 export function toShortForm(question: Question): string {
     const id = question.id;
     const name = question.name.substring(0, 10);
-
     let shortForm = id.toString();
     shortForm = shortForm.concat(": ", name);
     return shortForm;
@@ -91,7 +89,20 @@ export function toShortForm(question: Question): string {
  * Check the unit tests for more examples of what this looks like!
  */
 export function toMarkdown(question: Question): string {
-    return "";
+    const name = question.name;
+    const body = question.body;
+    let answer = "# ";
+    answer = answer.concat(name.toString(), "\n", body);
+
+    if (question.type !== "multiple_choice_question") {
+        return answer;
+    } else {
+        const options = question.options;
+        const optionBody = options.map((Opt: string): string =>
+            "- ".concat(Opt, "\n")
+        );
+        return answer.concat("\n", optionBody.join("").trim());
+    }
 }
 
 /**
@@ -99,7 +110,7 @@ export function toMarkdown(question: Question): string {
  * `newName`.
  */
 export function renameQuestion(question: Question, newName: string): Question {
-    return question;
+    return { ...question, name: newName };
 }
 
 /**
@@ -108,7 +119,12 @@ export function renameQuestion(question: Question, newName: string): Question {
  * published; if it was published, now it should be not published.
  */
 export function publishQuestion(question: Question): Question {
-    return question;
+    const pub = question.published;
+    if (pub === true) {
+        return { ...question, published: false };
+    } else {
+        return { ...question, published: true };
+    }
 }
 
 /**
