@@ -8,7 +8,7 @@ import { Question, QuestionType } from "./interfaces/question";
 export function makeBlankQuestion(
     id: number,
     name: string,
-    type: "short_answer_question"
+    type: QuestionType
 ): Question {
     return {
         id,
@@ -32,7 +32,7 @@ export function makeBlankQuestion(
 export function isCorrect(question: Question, answer: string): boolean {
     let tmp = answer;
     tmp = tmp.toLowerCase();
-    tmp = tmp.trim();
+    tmp.trim();
     return (
         answer.trim().toLocaleLowerCase() ===
         question.expected.trim().toLocaleLowerCase()
