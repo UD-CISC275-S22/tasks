@@ -47,12 +47,8 @@ export function isCorrect(question: Question, answer: string): boolean {
 export function isValid(question: Question, answer: string): boolean {
     if (question.type === "short_answer_question") {
         return true;
-    } else {
-        for (const option of question.options) {
-            if (option === answer) {
-                return true;
-            }
-        }
+    } else if (question.type === "multiple_choice_question") {
+        return question.options.includes(answer);
     }
     return false;
 }
@@ -92,14 +88,10 @@ export function toMarkdown(question: Question): string {
     let final = "";
     final = "# " + question.name + "\n" + question.body;
     if (question.type === "multiple_choice_question") {
-        final += "\n";
-        for (let i = 0; i < question.options.length; i++) {
-            if (i === question.options.length - 1) {
-                final += "- " + question.options[i];
-            } else {
-                final += "- " + question.options[i] + "\n";
-            }
-        }
+        const optionsList = question.options
+            .map((option) => `- ${option}`)
+            .join("\n");
+        final += "\n" + optionsList;
     }
     return final;
 }
