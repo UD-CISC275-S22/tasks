@@ -150,13 +150,7 @@ export function makeAnswers(questions: Question[]): Answer[] {
 export function publishAll(questions: Question[]): Question[] {
     const questionData = questions.map(
         (question: Question): Question => ({
-            id: question.id,
-            name: question.name,
-            type: question.type,
-            body: question.body,
-            expected: question.expected,
-            options: question.options,
-            points: question.points,
+            ...question,
             published: true
         })
     );
@@ -206,7 +200,7 @@ export function renameQuestionById(
     newName: string
 ): Question[] {
     const newQuestions = questions.map(
-        (question: Question): Question => question
+        (question: Question): Question => ({ ...question })
     );
     const sameIDIndex = newQuestions.findIndex(
         (question: Question): boolean => question.id === targetId
@@ -214,16 +208,7 @@ export function renameQuestionById(
     if (sameIDIndex === -1) {
         return newQuestions;
     }
-    newQuestions[sameIDIndex] = {
-        id: newQuestions[sameIDIndex].id,
-        name: newName,
-        type: newQuestions[sameIDIndex].type,
-        body: newQuestions[sameIDIndex].body,
-        expected: newQuestions[sameIDIndex].expected,
-        options: newQuestions[sameIDIndex].options,
-        points: newQuestions[sameIDIndex].points,
-        published: newQuestions[sameIDIndex].published
-    };
+    newQuestions[sameIDIndex].name = newName;
     return newQuestions;
 }
 
@@ -240,7 +225,7 @@ export function changeQuestionTypeById(
     newQuestionType: QuestionType
 ): Question[] {
     const newQuestions = questions.map(
-        (question: Question): Question => question
+        (question: Question): Question => ({ ...question })
     );
     const sameIDIndex = newQuestions.findIndex(
         (question: Question): boolean => question.id === targetId
@@ -248,19 +233,10 @@ export function changeQuestionTypeById(
     if (sameIDIndex === -1) {
         return newQuestions;
     }
-    newQuestions[sameIDIndex] = {
-        id: newQuestions[sameIDIndex].id,
-        name: newQuestions[sameIDIndex].name,
-        type: newQuestionType,
-        body: newQuestions[sameIDIndex].body,
-        expected: newQuestions[sameIDIndex].expected,
-        options:
-            newQuestionType === "multiple_choice_question"
-                ? newQuestions[sameIDIndex].options
-                : [],
-        points: newQuestions[sameIDIndex].points,
-        published: newQuestions[sameIDIndex].published
-    };
+    newQuestions[sameIDIndex].type = newQuestionType;
+    if (newQuestions[sameIDIndex].type !== "multiple_choice_question") {
+        newQuestions[sameIDIndex].options = [];
+    }
     return newQuestions;
 }
 
@@ -281,7 +257,7 @@ export function editOption(
     newOption: string
 ): Question[] {
     const newQuestions = questions.map(
-        (question: Question): Question => question
+        (question: Question): Question => ({ ...question })
     );
     const sameIDIndex = newQuestions.findIndex(
         (question: Question): boolean => question.id === targetId
@@ -289,16 +265,6 @@ export function editOption(
     if (sameIDIndex === -1) {
         return newQuestions;
     }
-    newQuestions[sameIDIndex] = {
-        id: newQuestions[sameIDIndex].id,
-        name: newQuestions[sameIDIndex].name,
-        type: newQuestions[sameIDIndex].type,
-        body: newQuestions[sameIDIndex].body,
-        expected: newQuestions[sameIDIndex].expected,
-        options: newQuestions[sameIDIndex].options,
-        points: newQuestions[sameIDIndex].points,
-        published: newQuestions[sameIDIndex].published
-    };
     newQuestions[sameIDIndex].options =
         newQuestions[sameIDIndex].options.slice();
     if (targetOptionIndex === -1) {
@@ -325,7 +291,7 @@ export function duplicateQuestionInArray(
     newId: number
 ): Question[] {
     const newQuestions = questions.map(
-        (question: Question): Question => question
+        (question: Question): Question => ({ ...question })
     );
     const sameIDIndex = newQuestions.findIndex(
         (question: Question): boolean => question.id === targetId
