@@ -85,13 +85,23 @@ export function toMarkdown(question: Question): string {
     if (question.type === "short_answer_question") return output;
     output += "\n";
 
-    for (let i = 0; i < question.options.length; i++) {
-        if (i != question.options.length - 1) {
-            output += `- ${question.options[i]}\n`;
-        } else output += `- ${question.options[i]}`;
-    }
+    const optionsOutput = question.options
+        .map((option: string) => {
+            if (
+                question.options.indexOf(option) ===
+                question.options.length - 1
+            ) {
+                return `- ${option}`;
+            } else {
+                return `- ${option}\n`;
+            }
+        })
+        .join(""); // Join the array elements into a single string
+
+    output += optionsOutput;
     return output;
 }
+
 
 /**
  * Return a new version of the given question, except the name should now be
