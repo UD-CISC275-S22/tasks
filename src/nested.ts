@@ -6,7 +6,10 @@ import { Question, QuestionType } from "./interfaces/question";
  * that are `published`.
  */
 export function getPublishedQuestions(questions: Question[]): Question[] {
-    return [];
+    const publishedQ = questions.filter(
+        (question) => question.published === true
+    );
+    return publishedQ;
 }
 
 /**
@@ -15,7 +18,14 @@ export function getPublishedQuestions(questions: Question[]): Question[] {
  * `expected`, and an empty array for its `options`.
  */
 export function getNonEmptyQuestions(questions: Question[]): Question[] {
-    return [];
+    return questions.filter((question) => {
+        // Check if body, expected, and options are non-empty
+        const isNonEmpty =
+            question.body.trim().length > 0 ||
+            question.expected.trim().length > 0 ||
+            question.options.length > 0;
+        return isNonEmpty;
+    });
 }
 
 /***
@@ -26,7 +36,8 @@ export function findQuestion(
     questions: Question[],
     id: number
 ): Question | null {
-    return null;
+    const found = questions.find((question) => question.id === id);
+    return found || null;
 }
 
 /**
@@ -34,7 +45,7 @@ export function findQuestion(
  * with the given `id`.
  */
 export function removeQuestion(questions: Question[], id: number): Question[] {
-    return [];
+    return questions.filter((question) => question.id !== id);
 }
 
 /***
@@ -42,21 +53,24 @@ export function removeQuestion(questions: Question[], id: number): Question[] {
  * questions, as an array.
  */
 export function getNames(questions: Question[]): string[] {
-    return [];
+    return questions.map((question) => question.name);
 }
 
 /***
  * Consumes an array of questions and returns the sum total of all their points added together.
  */
 export function sumPoints(questions: Question[]): number {
-    return 0;
+    return questions.reduce((sum, question) => sum + question.points, 0);
 }
 
 /***
  * Consumes an array of questions and returns the sum total of the PUBLISHED questions.
  */
 export function sumPublishedPoints(questions: Question[]): number {
-    return 0;
+    const filtered = questions
+        .filter((question) => question.published)
+        .reduce((sum, question) => sum + question.points, 0);
+    return filtered;
 }
 
 /***
@@ -77,7 +91,13 @@ id,name,options,points,published
  * Check the unit tests for more examples!
  */
 export function toCSV(questions: Question[]): string {
-    return "";
+    const csv = questions
+        .map(
+            (question) =>
+                `${question.id},${question.name},${question.options.length},${question.points},${question.published}`
+        )
+        .join("\n");
+    return `id,name,options,points,published\n${csv}`;
 }
 
 /**
@@ -86,7 +106,13 @@ export function toCSV(questions: Question[]): string {
  * making the `text` an empty string, and using false for both `submitted` and `correct`.
  */
 export function makeAnswers(questions: Question[]): Answer[] {
-    return [];
+    const answer: Answer[] = questions.map((question) => ({
+        questionId: question.id,
+        correct: false,
+        text: "",
+        submitted: false
+    }));
+    return answer;
 }
 
 /***
@@ -94,7 +120,10 @@ export function makeAnswers(questions: Question[]): Answer[] {
  * each question is now published, regardless of its previous published status.
  */
 export function publishAll(questions: Question[]): Question[] {
-    return [];
+    return questions.map((question) => ({
+        ...question,
+        published: true
+    }));
 }
 
 /***
@@ -102,7 +131,17 @@ export function publishAll(questions: Question[]): Question[] {
  * are the same type. They can be any type, as long as they are all the SAME type.
  */
 export function sameType(questions: Question[]): boolean {
-    return false;
+    const MultiFiltered = questions.filter(
+        (question) => question.type === "multiple_choice_question"
+    );
+    const filtered = questions.filter(
+        (question) => question.type === "short_answer_question"
+    );
+    if (MultiFiltered.length === 0 || filtered.length === 0) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 /***
@@ -116,7 +155,17 @@ export function addNewQuestion(
     name: string,
     type: QuestionType
 ): Question[] {
-    return [];
+    const blankQ: Question = {
+        id,
+        name,
+        type,
+        body: "",
+        expected: "",
+        options: [],
+        points: 1,
+        published: false
+    };
+    return [...questions, blankQ];
 }
 
 /***
@@ -129,7 +178,10 @@ export function renameQuestionById(
     targetId: number,
     newName: string
 ): Question[] {
-    return [];
+    return questions.map((question) => ({
+        ...question,
+        name: question.id === targetId ? newName : question.name
+    }));
 }
 
 /***
@@ -163,7 +215,17 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ): Question[] {
-    return [];
+    return questions.map((question) => ({
+        ...question,
+        options:
+            question.id === targetId
+                ? targetOptionIndex === -1
+                    ? [...question.options, newOption]
+                    : question.options.map((option, index) =>
+                          index === targetOptionIndex ? newOption : option
+                      )
+                : question.options
+    }));
 }
 
 /***
