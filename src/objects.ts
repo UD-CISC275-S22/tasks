@@ -10,7 +10,16 @@ export function makeBlankQuestion(
     name: string,
     type: QuestionType
 ): Question {
-    return {};
+    return {
+        id,
+        name,
+        type,
+        body: "",
+        expected: "",
+        options: [],
+        points: 1,
+        published: false
+    };
 }
 
 /**
@@ -21,6 +30,12 @@ export function makeBlankQuestion(
  * HINT: Look up the `trim` and `toLowerCase` functions.
  */
 export function isCorrect(question: Question, answer: string): boolean {
+    const trimmedAnswer = answer.trim();
+    if (
+        question.expected.trim().toLowerCase() === trimmedAnswer.toLowerCase()
+    ) {
+        return true;
+    }
     return false;
 }
 
@@ -31,13 +46,18 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
+    if (question.type === "short_answer_question") {
+        return true;
+    } else if (question.type === "multiple_choice_question") {
+        return question.options.includes(answer);
+    }
     return false;
 }
 
 /**
  * Consumes a question and produces a string representation combining the
  * `id` and first 10 characters of the `name`. The two strings should be
- * separated by ": ". So for example, the question with id 9 and the
+ * separated by "  : ". So for example, the question with id 9 and the
  * name "My First Question" would become "9: My First Q".
  */
 export function toShortForm(question: Question): string {
