@@ -1,6 +1,6 @@
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
-import { makeBlankQuestion } from "./objects";
+import { duplicateQuestion, makeBlankQuestion } from "./objects";
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
@@ -35,8 +35,12 @@ export function findQuestion(
     questions: Question[],
     id: number
 ): Question | null {
-    return null;
-    //return questions.some((question: Question): boolean => question.id === id) ? questions.find((question: Question): boolean => question.id === id): null;
+    //return null;
+    return questions.reduce(
+        (question: Question | null, current: Question): Question | null =>
+            current.id === id ? current : question,
+        null
+    );
 }
 
 /**
@@ -168,7 +172,10 @@ export function renameQuestionById(
     targetId: number,
     newName: string
 ): Question[] {
-    return [];
+    return questions.map(
+        (question: Question): Question =>
+            question.id === targetId ? { ...question, name: newName } : question
+    );
 }
 
 /***
@@ -183,7 +190,14 @@ export function changeQuestionTypeById(
     targetId: number,
     newQuestionType: QuestionType
 ): Question[] {
-    return [];
+    return questions.map(
+        (question: Question): Question =>
+            question.id === targetId
+                ? newQuestionType === "short_answer_question"
+                    ? { ...question, type: newQuestionType, options: [] }
+                    : { ...question, type: newQuestionType }
+                : question
+    );
 }
 
 /**
@@ -202,7 +216,37 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ): Question[] {
-    return [];
+    return questions.map(
+        (question: Question): Question =>
+            question.id === targetId
+                ? editOptionHelper2(question, targetOptionIndex, newOption)
+                : { ...question }
+    );
+}
+
+function editOptionHelper(
+    array: string[],
+    index: number,
+    value: string
+): string[] {
+    const newArray = [...array];
+    newArray.splice(index, 1, value);
+    return newArray;
+}
+
+function editOptionHelper2(
+    question: Question,
+    index: number,
+    newOption: string
+): Question {
+    return {
+        ...question,
+        options: editOptionHelper(
+            question.options,
+            index === -1 ? question.options.length : index,
+            newOption
+        )
+    };
 }
 
 /***
@@ -216,5 +260,14 @@ export function duplicateQuestionInArray(
     targetId: number,
     newId: number
 ): Question[] {
-    return [];
+    const index = questions.findIndex(
+        (question: Question): boolean => question.id === targetId
+    );
+    const newQuestions = [...questions];
+    newQuestions.splice(
+        index + 1,
+        0,
+        duplicateQuestion(newId, questions[index])
+    );
+    return newQuestions;
 }
