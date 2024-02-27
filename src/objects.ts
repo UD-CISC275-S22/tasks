@@ -10,7 +10,16 @@ export function makeBlankQuestion(
     name: string,
     type: QuestionType
 ): Question {
-    return {};
+    return {
+        id: id,
+        name: name,
+        type: type,
+        body: "",
+        expected: "",
+        options: [],
+        points: 1,
+        published: false
+    };
 }
 
 /**
@@ -21,7 +30,13 @@ export function makeBlankQuestion(
  * HINT: Look up the `trim` and `toLowerCase` functions.
  */
 export function isCorrect(question: Question, answer: string): boolean {
-    return false;
+    const moddedAnswer = answer.toLowerCase();
+    const modAnswer = moddedAnswer.trim();
+
+    const moddedQuestion = question.expected.toLowerCase();
+    const modQuest = moddedQuestion.trim();
+
+    return modQuest === modAnswer;
 }
 
 /**
@@ -31,7 +46,11 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
-    return false;
+    if (question.type === "short_answer_question" && answer !== "") {
+        return true;
+    } else {
+        return question.options.includes(answer);
+    }
 }
 
 /**
@@ -41,7 +60,14 @@ export function isValid(question: Question, answer: string): boolean {
  * name "My First Question" would become "9: My First Q".
  */
 export function toShortForm(question: Question): string {
-    return "";
+    let questionAmount = "";
+    if (question.name.length >= 9) {
+        questionAmount = question.name.substring(0, 10);
+    } else {
+        questionAmount = question.name;
+    }
+
+    return question.id + ": " + questionAmount;
 }
 
 /**
@@ -62,7 +88,18 @@ export function toShortForm(question: Question): string {
  * Check the unit tests for more examples of what this looks like!
  */
 export function toMarkdown(question: Question): string {
-    return "";
+    if (question.type === "multiple_choice_question") {
+        const sentence = question.options.reduce(
+            (currentTotal: string, option: string) =>
+                question.options.indexOf(option) === question.options.length - 1
+                    ? currentTotal + "- " + option
+                    : currentTotal + "- " + option + "\n",
+            ""
+        );
+        return "# " + question.name + "\n" + question.body + "\n" + sentence;
+    } else {
+        return "# " + question.name + "\n" + question.body;
+    }
 }
 
 /**
@@ -70,7 +107,9 @@ export function toMarkdown(question: Question): string {
  * `newName`.
  */
 export function renameQuestion(question: Question, newName: string): Question {
-    return question;
+    const newQuestion = { ...question, name: newName };
+
+    return newQuestion;
 }
 
 /**
