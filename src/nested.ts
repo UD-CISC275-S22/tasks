@@ -1,6 +1,6 @@
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
-import { makeBlankQuestion } from "./objects";
+import { duplicateQuestion, makeBlankQuestion } from "./objects";
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
@@ -141,12 +141,16 @@ export function publishAll(questions: Question[]): Question[] {
  * are the same type. They can be any type, as long as they are all the SAME type.
  */
 export function sameType(questions: Question[]): boolean {
-    const firstQtype = questions[0].type;
+    //const firstQtype = questions[0].type;
 
-    if (questions.every((question) => question.type == firstQtype)) {
-        return true;
-    }
-    return false;
+    const MCType = questions.every(
+        (question) => question.type === "multiple_choice_question"
+    );
+    const SAType = questions.every(
+        (question) => question.type === "short_answer_question"
+    );
+
+    return MCType || SAType;
 }
 
 /***
@@ -194,7 +198,21 @@ export function changeQuestionTypeById(
     targetId: number,
     newQuestionType: QuestionType
 ): Question[] {
-    return [];
+    const newQuestions: Question[] = [...questions];
+
+    const targetIndex = newQuestions.findIndex(
+        (question) => question.id === targetId
+    );
+    newQuestions[targetIndex] = {
+        ...newQuestions[targetIndex],
+        type: newQuestionType
+    };
+
+    if (newQuestionType !== "multiple_choice_question") {
+        newQuestions[targetIndex].options = [];
+    }
+
+    return newQuestions;
 }
 
 /**
@@ -213,7 +231,21 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ): Question[] {
-    return [];
+    const newQuestions: Question[] = [...questions];
+
+    const targetIndex = newQuestions.findIndex(
+        (question) => question.id === targetId
+    );
+
+    const options = [...newQuestions[targetIndex].options];
+
+    if (targetOptionIndex === -1) {
+        options.push(newOption);
+    } else {
+        options[targetOptionIndex] = newOption;
+    }
+    newQuestions[targetIndex] = { ...newQuestions[targetIndex], options };
+    return newQuestions;
 }
 
 /***
@@ -227,5 +259,12 @@ export function duplicateQuestionInArray(
     targetId: number,
     newId: number
 ): Question[] {
-    return [];
+    return questions.reduce((result: Question[], question: Question) => {
+        result.push(question);
+        if (question.id === targetId) {
+            const duplicate = duplicateQuestion(newId, question);
+            result.push(duplicate);
+        }
+        return result;
+    }, []);
 }
