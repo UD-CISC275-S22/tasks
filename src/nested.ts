@@ -145,11 +145,6 @@ export function addNewQuestion(
     name: string,
     type: QuestionType
 ): Question[] {
-    if (isEmpty(name)) {
-        console.error("Question name cannot be empty.");
-        return questions; // Optionally, handle this case differently
-    }
-
     const blankQuestion: Question = {
         id: id,
         name: name,
@@ -271,7 +266,4 @@ export function duplicateQuestionInArray(
         duplicatedQuestion,
         ...questions.slice(index + 1)
     ];
-}
-function isEmpty(body: string): boolean {
-    return body === null || body === undefined || body.trim() === "";
 }
