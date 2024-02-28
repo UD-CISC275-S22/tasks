@@ -32,8 +32,10 @@ export function makeBlankQuestion(
  */
 export function isCorrect(question: Question, answer: string): boolean {
     const newQ = { ...question };
-    return newQ.expected.trim().toLocaleLowerCase() ===
-    answer.trim().toLocaleLowerCase();
+    return (
+        newQ.expected.trim().toLocaleLowerCase() ===
+        answer.trim().toLocaleLowerCase()
+    );
 }
 
 /**
@@ -83,9 +85,10 @@ export function toShortForm(question: Question): string {
  */
 export function toMarkdown(question: Question): string {
     const { name, body, options, type } = question;
-    const result = type === "multiple_choice_question"
-        ? `# ${name}\n${body}\n- ${options[0]}\n- ${options[1]}\n- ${options[2]}`
-        : `# ${name}\n${body}`;
+    const result =
+        type === "multiple_choice_question"
+            ? `# ${name}\n${body}\n- ${options[0]}\n- ${options[1]}\n- ${options[2]}`
+            : `# ${name}\n${body}`;
     return result;
 }
 
@@ -151,6 +154,6 @@ export function mergeQuestion(
         options: contentQuestion.options,
         expected: contentQuestion.expected,
         points,
-        published: false,
+        published: false
     };
 }
