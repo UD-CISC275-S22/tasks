@@ -18,12 +18,13 @@ export function getPublishedQuestions(questions: Question[]): Question[] {
  * `expected`, and an empty array for its `options`.
  */
 export function getNonEmptyQuestions(questions: Question[]): Question[] {
-    return questions.filter(
-        (question: Question): boolean =>
-            question.body.length !== 0 &&
-            question.expected.length !== 0 &&
-            question.options.length !== 0
-    );
+    return questions.filter((question: Question) => {
+        const condition =
+            question.body == "" &&
+            question.expected == "" &&
+            question.options.length == 0;
+        return !condition;
+    });
 }
 
 /***
@@ -153,7 +154,13 @@ export function publishAll(questions: Question[]): Question[] {
  * are the same type. They can be any type, as long as they are all the SAME type.
  */
 export function sameType(questions: Question[]): boolean {
-    const firstType = questions[0].type;
+    const firstquestion = questions.find(
+        (question: Question): boolean => questions.indexOf(question) === 0
+    );
+    let firstType: string | null = null;
+    if (firstquestion !== undefined) {
+        firstType = firstquestion.type;
+    }
     return questions.every(
         (question: Question): boolean => question.type === firstType
     );
@@ -222,6 +229,7 @@ export function changeQuestionTypeById(
             ...question,
             type: question.id === targetId ? newQuestionType : question.type,
             options:
+                question.id === targetId &&
                 newQuestionType !== "multiple_choice_question"
                     ? []
                     : question.options
@@ -229,6 +237,7 @@ export function changeQuestionTypeById(
     );
     return update;
 }
+
 
 /**
  * Consumes an array of Questions and produces a new array of Questions, where all
@@ -288,10 +297,12 @@ export function duplicateQuestionInArray(
     );
     if (targetQuestion !== undefined) {
         const index = questions.indexOf(targetQuestion);
-        newQuestions.splice(index + 1, 0, {
+        const duplicatedQuestion = {
             ...targetQuestion,
-            id: newId
-        });
+            id: newId,
+            name: `Copy of ${targetQuestion.name}` // Set the name to "Copy of Question 1"
+        };
+        newQuestions.splice(index + 1, 0, duplicatedQuestion);
     }
     return newQuestions;
 }
