@@ -118,7 +118,12 @@ export function renameQuestion(question: Question, newName: string): Question {
  * published; if it was published, now it should be not published.
  */
 export function publishQuestion(question: Question): Question {
-    return question;
+    //if published is true, make false
+    //if published is false, make true
+    const newPublish = question.published ? false : true;
+    const newQuestion = { ...question, published: newPublish };
+
+    return newQuestion;
 }
 
 /**
@@ -128,7 +133,14 @@ export function publishQuestion(question: Question): Question {
  * The `published` field should be reset to false.
  */
 export function duplicateQuestion(id: number, oldQuestion: Question): Question {
-    return oldQuestion;
+    const newQuestion = {
+        ...oldQuestion,
+        published: false,
+        name: "Copy of " + oldQuestion.name,
+        id: id
+    };
+
+    return newQuestion;
 }
 
 /**
@@ -139,7 +151,12 @@ export function duplicateQuestion(id: number, oldQuestion: Question): Question {
  * Check out the subsection about "Nested Fields" for more information.
  */
 export function addOption(question: Question, newOption: string): Question {
-    return question;
+    const newQuestion = {
+        ...question,
+        options: [...question.options, newOption]
+    };
+
+    return newQuestion;
 }
 
 /**
@@ -156,5 +173,13 @@ export function mergeQuestion(
     contentQuestion: Question,
     { points }: { points: number }
 ): Question {
-    return contentQuestion;
+    const newQuestion = {
+        ...contentQuestion,
+        published: false,
+        ...{ points },
+        id: id,
+        name: name
+    };
+
+    return newQuestion;
 }
