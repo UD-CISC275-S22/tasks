@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
 import { duplicateQuestion, makeBlankQuestion } from "./objects";
@@ -172,16 +173,16 @@ export function changeQuestionTypeById(
     return questions.map((q) =>
         q.id === targetId
             ? {
-                // eslint-disable-next-line prettier/prettier
+                  // eslint-disable-next-line prettier/prettier
                 ...q,
-                // eslint-disable-next-line prettier/prettier
+                  // eslint-disable-next-line prettier/prettier
                 type: newQuestionType,
-                // eslint-disable-next-line prettier/prettier
+                  // eslint-disable-next-line prettier/prettier
                 options:
                       newQuestionType === "multiple_choice_question"
                           ? q.options
                           : []
-                // eslint-disable-next-line prettier/prettier
+                  // eslint-disable-next-line prettier/prettier
             }
             : q
     );
@@ -206,17 +207,17 @@ export function editOption(
     return questions.map((q) =>
         q.id === targetId
             ? {
-                ...q,
-                options:
+                  ...q,
+                  options:
                       targetOptionIndex === -1
                           ? [...q.options, newOption]
                           : [
-                              ...q.options.slice(0, targetOptionIndex),
-                              // eslint-disable-next-line prettier/prettier
+                                ...q.options.slice(0, targetOptionIndex),
+                                // eslint-disable-next-line prettier/prettier
                               newOption,
-                              ...q.options.slice(targetOptionIndex + 1)
-                          ]
-            }
+                                ...q.options.slice(targetOptionIndex + 1)
+                            ]
+              }
             : q
     );
 }
