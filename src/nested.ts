@@ -37,13 +37,18 @@ export function findQuestion(
     questions: Question[],
     id: number
 ): Question | null {
-    const foundQuestion = questions.findLast(
+    // Filter the array of questions to find all questions with the given ID
+    const filteredQuestions = questions.filter(
         (question: Question) => question.id === id
     );
-    if (foundQuestion) {
-        return foundQuestion;
+
+    // If no questions with the given ID are found, return null
+    if (filteredQuestions.length === 0) {
+        return null;
     }
-    return null;
+
+    // Return the last question from the filtered array
+    return filteredQuestions[filteredQuestions.length - 1];
 }
 
 /**
