@@ -116,7 +116,7 @@ describe("Testing the object functions", () => {
     // toMarkdown
     test("Testing the toMarkdown function", () => {
         expect(toMarkdown(ADDITION_QUESTION)).toEqual(`# Addition
-What is 2+2?`);
+        What is 2+2?`);
         expect(toMarkdown(LETTER_QUESTION)).toEqual(`# Letters
 What is the last letter of the English alphabet?`);
         expect(toMarkdown(COLOR_QUESTION)).toEqual(`# Colors
