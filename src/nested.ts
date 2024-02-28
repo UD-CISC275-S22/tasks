@@ -1,5 +1,6 @@
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
+import { duplicateQuestion } from "./objects";
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
@@ -196,7 +197,20 @@ export function changeQuestionTypeById(
     targetId: number,
     newQuestionType: QuestionType
 ): Question[] {
-    return [];
+    return questions.map((question) => ({
+        ...question,
+        type:
+            question.id === targetId
+                ? newQuestionType === "short_answer_question"
+                    ? "short_answer_question"
+                    : "multiple_choice_question"
+                : question.type,
+        options:
+            question.id === targetId &&
+            newQuestionType !== "multiple_choice_question"
+                ? []
+                : question.options
+    }));
 }
 
 /**
@@ -239,5 +253,14 @@ export function duplicateQuestionInArray(
     targetId: number,
     newId: number
 ): Question[] {
-    return [];
+    const copyArray = [...questions];
+    const indexOfTarget = copyArray.findIndex(
+        (question) => question.id === targetId
+    );
+    if (indexOfTarget != -1) {
+        const origanl = copyArray[indexOfTarget];
+        const dupe = duplicateQuestion(newId, origanl);
+        copyArray.splice(indexOfTarget + 1, 0, dupe);
+    }
+    return copyArray;
 }
