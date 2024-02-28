@@ -1,5 +1,6 @@
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
+import { duplicateQuestion, makeBlankQuestion } from "./objects";
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
@@ -124,7 +125,11 @@ export function publishAll(questions: Question[]): Question[] {
  * are the same type. They can be any type, as long as they are all the SAME type.
  */
 export function sameType(questions: Question[]): boolean {
-    return false;
+    if (questions.length === 0) {
+        return true;
+    }
+    const firstType = questions[0].type;
+    return questions.every((question) => question.type === firstType);
 }
 
 /***
@@ -138,7 +143,8 @@ export function addNewQuestion(
     name: string,
     type: QuestionType
 ): Question[] {
-    return [];
+    const blankQuestion = makeBlankQuestion(id, name, type);
+    return [...questions, blankQuestion];
 }
 
 /***
@@ -151,7 +157,15 @@ export function renameQuestionById(
     targetId: number,
     newName: string
 ): Question[] {
-    return [];
+    return questions.map((question) => {
+        if (question.id === targetId) {
+            return {
+                ...question,
+                name: newName
+            };
+        }
+        return question;
+    });
 }
 
 /***
@@ -166,7 +180,20 @@ export function changeQuestionTypeById(
     targetId: number,
     newQuestionType: QuestionType
 ): Question[] {
-    return [];
+    return questions.map((question) => {
+        if (question.id === targetId) {
+            const updatedQuestion: Question = {
+                ...question,
+                type: newQuestionType,
+                options:
+                    newQuestionType === "multiple_choice_question"
+                        ? question.options
+                        : []
+            };
+            return updatedQuestion;
+        }
+        return question;
+    });
 }
 
 /**
@@ -185,7 +212,24 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ): Question[] {
-    return [];
+    return questions.map((question) => {
+        if (question.id === targetId) {
+            const updatedQuestion: Question = {
+                ...question,
+                options: [...question.options]
+            };
+            if (
+                targetOptionIndex >= 0 &&
+                targetOptionIndex < updatedQuestion.options.length
+            ) {
+                updatedQuestion.options[targetOptionIndex] = newOption;
+            } else if (targetOptionIndex === -1) {
+                updatedQuestion.options.push(newOption);
+            }
+            return updatedQuestion;
+        }
+        return question;
+    });
 }
 
 /***
@@ -199,5 +243,11 @@ export function duplicateQuestionInArray(
     targetId: number,
     newId: number
 ): Question[] {
-    return [];
+    return questions.flatMap((question) => {
+        if (question.id === targetId) {
+            const duplicate = duplicateQuestion(newId, question);
+            return [question, duplicate];
+        }
+        return question;
+    });
 }
