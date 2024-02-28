@@ -1,5 +1,7 @@
+import { text } from "stream/consumers";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
+import { duplicateQuestion, makeBlankQuestion } from "./objects";
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
@@ -120,7 +122,15 @@ export function toCSV(questions: Question[]): string {
  * making the `text` an empty string, and using false for both `submitted` and `correct`.
  */
 export function makeAnswers(questions: Question[]): Answer[] {
-    return [];
+    const answer = questions.map(
+        (question: Question): Answer => ({
+            questionId: question.id,
+            text: "",
+            submitted: false,
+            correct: false
+        })
+    );
+    return answer;
 }
 
 /***
@@ -128,7 +138,10 @@ export function makeAnswers(questions: Question[]): Answer[] {
  * each question is now published, regardless of its previous published status.
  */
 export function publishAll(questions: Question[]): Question[] {
-    return [];
+    const newQuestion = questions.map(
+        (question: Question): Question => ({ ...question, published: true })
+    );
+    return newQuestion;
 }
 
 /***
@@ -136,7 +149,17 @@ export function publishAll(questions: Question[]): Question[] {
  * are the same type. They can be any type, as long as they are all the SAME type.
  */
 export function sameType(questions: Question[]): boolean {
-    return false;
+    const MultiFiltered = questions.filter(
+        (question) => question.type === "multiple_choice_question"
+    );
+    const filtered = questions.filter(
+        (question) => question.type === "short_answer_question"
+    );
+    if (MultiFiltered.length === 0 || filtered.length === 0) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 /***
@@ -150,7 +173,7 @@ export function addNewQuestion(
     name: string,
     type: QuestionType
 ): Question[] {
-    return [];
+    return [...questions, makeBlankQuestion(id, name, type)];
 }
 
 /***
@@ -163,7 +186,10 @@ export function renameQuestionById(
     targetId: number,
     newName: string
 ): Question[] {
-    return [];
+    return questions.map((question) => ({
+        ...question,
+        name: question.id === targetId ? newName : question.name
+    }));
 }
 
 /***
@@ -178,7 +204,22 @@ export function changeQuestionTypeById(
     targetId: number,
     newQuestionType: QuestionType
 ): Question[] {
-    return [];
+    const reformedQuestion = questions.map(
+        (question: Question): Question => ({
+            ...question,
+            type: question.id === targetId ? newQuestionType : question.type
+        })
+    );
+    const fixed = reformedQuestion.map(
+        (question: Question): Question => ({
+            ...question,
+            options:
+                question.type !== "multiple_choice_question"
+                    ? []
+                    : question.options
+        })
+    );
+    return fixed;
 }
 
 /**
@@ -197,7 +238,31 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ): Question[] {
-    return [];
+    // Finding the question that matches the targetId
+    const updatedQuestions = questions.map((question: Question) => {
+        // Check if the current question has the targetId
+        if (question.id === targetId) {
+            // Make a copy of the question with the updated options array
+            let updatedOptions: string[];
+            if (targetOptionIndex === -1) {
+                // Add newOption to the end of the options array
+                updatedOptions = [...question.options, newOption];
+            } else {
+                // Replace the element at targetOptionIndex with newOption
+                updatedOptions = [
+                    ...question.options.slice(0, targetOptionIndex), // Elements before target index
+                    newOption, // New option at target index
+                    ...question.options.slice(targetOptionIndex + 1) // Elements after target index
+                ];
+            }
+            // Return a new question object with the updated options array
+            return { ...question, options: updatedOptions };
+        }
+        // For other questions, return them unchanged
+        return question;
+    });
+
+    return updatedQuestions;
 }
 
 /***
@@ -211,5 +276,14 @@ export function duplicateQuestionInArray(
     targetId: number,
     newId: number
 ): Question[] {
-    return [];
+    const copy = [...questions];
+    const index = copy.findIndex(
+        (question: Question): boolean => question.id === targetId
+    );
+    if (index != -1) {
+        const original = copy[index];
+        const dup = duplicateQuestion(newId, original);
+        copy.splice(index + 1, 0, dup);
+    }
+    return copy;
 }
