@@ -149,7 +149,7 @@ export function addNewQuestion(
         type: type,
         options: [],
         expected: "",
-        points: 1, // Initialize points to 1
+        points: 1,
         published: false
     };
 
@@ -185,7 +185,6 @@ export function changeQuestionTypeById(
 ): Question[] {
     return questions.map((question) => {
         if (question.id === targetId) {
-            // If the new type is not multiple choice, reset the options to an empty array
             const options =
                 newQuestionType === "multiple_choice_question"
                     ? question.options
@@ -215,13 +214,11 @@ export function editOption(
     return questions.map((question) => {
         if (question.id === targetId) {
             if (targetOptionIndex === -1) {
-                // If targetOptionIndex is -1, add the new option to the end of the options array
                 return {
                     ...question,
                     options: [...question.options, newOption]
                 };
             } else {
-                // If targetOptionIndex is a valid index, replace the option at that index
                 const options = [...question.options];
                 options[targetOptionIndex] = newOption;
                 return { ...question, options: options };
@@ -248,10 +245,9 @@ export function duplicateQuestionInArray(
         newArray.push(question);
 
         if (question.id === targetId) {
-            // Duplicate the question and insert it after the original
             const duplicate: Question = {
                 id: newId,
-                name: `Copy of ${question.name}`, // Adjusted line to set the name of the duplicated question
+                name: `Copy of ${question.name}`,
                 body: question.body,
                 type: question.type,
                 options: question.options ? [...question.options] : [],
