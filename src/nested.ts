@@ -1,5 +1,6 @@
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
+import { makeBlankQuestion, duplicateQuestion } from "./objects";
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
@@ -50,24 +51,24 @@ export function removeQuestion(questions: Question[], id: number): Question[] {
         (question: Question): boolean => question.id != id
     );
     return idQuestion;
+}
 
-    /***
-     * Consumes an array of questions and returns a new array containing just the names of the
-     * questions, as an array.
-     */
-   export function getNames(questions: Question[]): string[] {
+/***
+ * Consumes an array of questions and returns a new array containing just the names of the
+ * questions, as an array.
+ */
+export function getNames(questions: Question[]): string[] {
     const questionNames = questions.map(
         (question: Question): string => question.name
     );
     return questionNames;
 }
 
-
 /***
  * Consumes an array of questions and returns the sum total of all their points added together.
  */
 export function sumPoints(questions: Question[]): number {
-     return questions.reduce(
+    return questions.reduce(
         (accumulator: number, question: Question) =>
             accumulator + question.points,
         0
@@ -85,6 +86,7 @@ export function sumPublishedPoints(questions: Question[]): number {
                 : accumulator,
         0
     );
+}
 
 /***
  * Consumes an array of questions, and produces a Comma-Separated Value (CSV) string representation.
@@ -104,7 +106,7 @@ id,name,options,points,published
  * Check the unit tests for more examples!
  */
 export function toCSV(questions: Question[]): string {
-     const columns = ["id", "name", "options", "points", "published"];
+    const columns = ["id", "name", "options", "points", "published"];
     const rows = questions.map((question) => {
         const optionsCount =
             question.type === "multiple_choice_question"
@@ -155,6 +157,7 @@ export function sameType(questions: Question[]): boolean {
         );
     }
     return true;
+}
 
 /***
  * Consumes an array of Questions and produces a new array of the same Questions,
@@ -162,14 +165,13 @@ export function sameType(questions: Question[]): boolean {
  * you defined in the `objects.ts` file.
  */
 export function addNewQuestion(
-     questions: Question[],
+    questions: Question[],
     id: number,
     name: string,
     type: QuestionType
 ): Question[] {
     return [...questions, makeBlankQuestion(id, name, type)];
 }
-
 
 /***
  * Consumes an array of Questions and produces a new array of Questions, where all
@@ -214,6 +216,7 @@ export function changeQuestionTypeById(
         }
     });
 }
+
 /**
  * Consumes an array of Questions and produces a new array of Questions, where all
  * the Questions are the same EXCEPT for the one with the given `targetId`. That
