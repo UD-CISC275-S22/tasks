@@ -163,6 +163,6 @@ export function mergeQuestion(
         options: contentQuestion.options,
         expected: contentQuestion.expected,
         points: points,
-        published: false // Set published status to false
+        published: false
     };
 }
