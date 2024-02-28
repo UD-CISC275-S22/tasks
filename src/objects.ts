@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Question, QuestionType } from "./interfaces/question";
 
 /**
@@ -84,13 +85,15 @@ export function toShortForm(question: Question): string {
  * Check the unit tests for more examples of what this looks like!
  */
 export function toMarkdown(question: Question): string {
-    let result = "# " + question.name + "\n" + question.body + "\n";
+    let result = "# " + question.name + "\n" + question.body;
 
     if (question.type === "multiple_choice_question") {
-        question.options.forEach((option) => {
-            result += "- " + option + "\n";
-        });
+        const multipleChoiceQuestion = question;
+        for (let i = 0; i < multipleChoiceQuestion.options.length; i++) {
+            result += "\n" + "- " + multipleChoiceQuestion.options[i];
+        }
     }
+
     return result;
 }
 
@@ -99,9 +102,7 @@ export function toMarkdown(question: Question): string {
  * `newName`.
  */
 export function renameQuestion(question: Question, newName: string): Question {
-    const newQuestion = question;
-    newQuestion.name = newName;
-    return newQuestion;
+    return { ...question, name: newName };
 }
 
 /**
@@ -110,14 +111,7 @@ export function renameQuestion(question: Question, newName: string): Question {
  * published; if it was published, now it should be not published.
  */
 export function publishQuestion(question: Question): Question {
-    const newQuestion = question;
-    if (newQuestion.published === false) {
-        newQuestion.published = true;
-        return newQuestion;
-    } else {
-        newQuestion.published = false;
-        return newQuestion;
-    }
+    return { ...question, published: !question.published };
 }
 
 /**
@@ -127,10 +121,16 @@ export function publishQuestion(question: Question): Question {
  * The `published` field should be reset to false.
  */
 export function duplicateQuestion(id: number, oldQuestion: Question): Question {
-    const newQuestion = oldQuestion;
-    newQuestion.name = "Copy of " + oldQuestion.name;
-    newQuestion.published = false;
-    return newQuestion;
+    return {
+        id: id,
+        name: "Copy of " + oldQuestion.name,
+        type: oldQuestion.type,
+        body: oldQuestion.body,
+        options: oldQuestion.options,
+        expected: oldQuestion.expected,
+        points: oldQuestion.points,
+        published: false
+    };
 }
 
 /**
@@ -141,10 +141,10 @@ export function duplicateQuestion(id: number, oldQuestion: Question): Question {
  * Check out the subsection about "Nested Fields" for more information.
  */
 export function addOption(question: Question, newOption: string): Question {
-    const newQuestion: Question = { ...question };
-    newQuestion.options = question.options
-        ? [...question.options, newOption]
-        : [newOption];
+    const newQuestion: Question = {
+        ...question,
+        options: [...question.options, newOption]
+    };
     return newQuestion;
 }
 
@@ -169,7 +169,7 @@ export function mergeQuestion(
         type: contentQuestion.type,
         options: contentQuestion.options,
         expected: contentQuestion.expected,
-        points,
-        published: false
+        published: false,
+        points: points
     };
 }
