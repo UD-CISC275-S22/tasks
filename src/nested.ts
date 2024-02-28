@@ -162,17 +162,21 @@ export function publishAll(questions: Question[]): Question[] {
  * are the same type. They can be any type, as long as they are all the SAME type.
  */
 export function sameType(questions: Question[]): boolean {
-    if (questions.length === 0) {
+    const copy = [...questions];
+    if (copy.length === 0) {
         return true;
     }
+    const firstQuestionType = questions[0].type;
 
-    const firstQuestionType = typeof questions[0].name;
-    for (const question of questions.slice(1)) {
-        if (typeof question.name !== firstQuestionType) {
-            return false;
+    let bool = true;
+
+    copy.map((q: Question) => {
+        if (q.type !== firstQuestionType) {
+            bool = false;
         }
-    }
-    return true;
+    });
+
+    return bool;
 }
 
 /***
@@ -201,13 +205,16 @@ export function renameQuestionById(
     targetId: number,
     newName: string
 ): Question[] {
-    const ans: Question[] = [...questions];
-    ans.map((q: Question) => {
-        if (q.id === targetId) {
-            q.name = newName;
+    const copyQuestions = [...questions];
+    const removedQuestions = copyQuestions.map((question) => {
+        if (question.id === targetId) {
+            return { ...question, name: newName };
+        } else {
+            return question;
         }
     });
-    return ans;
+
+    return removedQuestions;
 }
 
 /***
@@ -222,19 +229,25 @@ export function changeQuestionTypeById(
     targetId: number,
     newQuestionType: QuestionType
 ): Question[] {
-    const ans: Question[] = [...questions];
-    ans.map((q: Question) => {
-        if (q.id === targetId) {
-            q.type = newQuestionType;
-            if (newQuestionType === "short_answer_question") {
-                q.options = [];
+    const copyQuestions = [...questions];
+    const updatedQuestions = copyQuestions.map((question) => {
+        if (question.id === targetId) {
+            const updatedQuestion: Question = {
+                ...question,
+                type: newQuestionType
+            };
+
+            if (newQuestionType !== "multiple_choice_question") {
+                updatedQuestion.options = [];
             }
-        }
-        if (newQuestionType !== "multiple_choice_question") {
-            q.options = [];
+
+            return updatedQuestion;
+        } else {
+            return question;
         }
     });
-    return ans;
+
+    return updatedQuestions;
 }
 
 /**
@@ -253,17 +266,26 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ): Question[] {
-    const ans: Question[] = [...questions];
-    ans.map((q: Question) => {
-        if (q.id === targetId) {
+    const copyQuestions = [...questions];
+    const updatedQuestions = copyQuestions.map((question) => {
+        if (question.id === targetId) {
+            const updatedOptions = [...question.options];
+
             if (targetOptionIndex === -1) {
-                q.options.push(newOption);
+                updatedOptions.push(newOption);
             } else {
-                q.options.splice(targetOptionIndex, 0, newOption);
+                updatedOptions[targetOptionIndex] = newOption;
             }
+            return {
+                ...question,
+                options: updatedOptions
+            };
+        } else {
+            return question;
         }
     });
-    return ans;
+
+    return updatedQuestions;
 }
 
 /***
@@ -277,17 +299,17 @@ export function duplicateQuestionInArray(
     targetId: number,
     newId: number
 ): Question[] {
-    const index = questions.findIndex((q: Question) => q.id === targetId);
-    if (index === -1) {
-        return questions;
-    }
+    const copyQuestions = [...questions];
+    const newQuestions: Question[] = [];
 
-    const duplicatedQuestion = duplicateQuestion(newId, questions[index]);
-    const duplicatedQuestions = [
-        ...questions.slice(0, index + 1),
-        duplicatedQuestion,
-        ...questions.slice(index + 1)
-    ];
+    copyQuestions.map((q: Question) => {
+        newQuestions.push(q);
 
-    return duplicatedQuestions;
+        if (q.id === targetId) {
+            const duplicate = duplicateQuestion(newId, q);
+            newQuestions.push(duplicate);
+        }
+    });
+
+    return newQuestions;
 }
