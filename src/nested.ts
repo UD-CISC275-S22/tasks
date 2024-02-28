@@ -231,15 +231,27 @@ export function editOption(
 ): Question[] {
     return questions.map((question) => ({
         ...question,
-        options:
-            question.id === targetId
-                ? targetOptionIndex === -1
-                    ? [...question.options, newOption]
-                    : question.options.map((option, index) =>
-                          index === targetOptionIndex ? newOption : option
-                      )
-                : question.options
+        options: modifyOptions(question, targetId, targetOptionIndex, newOption)
     }));
+}
+
+function modifyOptions(
+    question: Question,
+    targetId: number,
+    targetOptionIndex: number,
+    newOption: string
+): string[] {
+    if (question.id === targetId) {
+        if (targetOptionIndex === -1) {
+            return [...question.options, newOption];
+        } else {
+            return question.options.map((option, index) =>
+                index === targetOptionIndex ? newOption : option
+            );
+        }
+    } else {
+        return question.options;
+    }
 }
 
 /***
