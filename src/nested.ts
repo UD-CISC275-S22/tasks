@@ -43,16 +43,8 @@ export function findQuestion(
     questions: Question[],
     id: number
 ): Question | null {
-    if (questions === null || id === null) {
-        return null;
-    }
-    let ans: Question = questions[0];
-    questions.map((q: Question) => {
-        if (q.id === id) {
-            ans = q;
-        }
-    });
-    return ans;
+    const ans = questions.find((q: Question) => q.id === id);
+    return ans || null;
 }
 
 /**
@@ -60,8 +52,12 @@ export function findQuestion(
  * with the given `id`.
  */
 export function removeQuestion(questions: Question[], id: number): Question[] {
-    const question = [...questions];
-    question.filter((q: Question) => q.id === id);
+    const question: Question[] = [];
+    questions.map((q: Question) => {
+        if (!(q.id === id)) {
+            question.push(q);
+        }
+    });
     return question;
 }
 
@@ -117,7 +113,20 @@ id,name,options,points,published
  * Check the unit tests for more examples!
  */
 export function toCSV(questions: Question[]): string {
-    return "";
+    const header = "id,name,options,points,published";
+    const lines = questions.map((question) => {
+        const optionsCount = question.options.length;
+        const line = [
+            question.id,
+            `${question.name}`,
+            optionsCount,
+            question.points,
+            question.published
+        ].join(",");
+        return line;
+    });
+    const csv = [header, ...lines].join("\n");
+    return csv;
 }
 
 /**
@@ -126,9 +135,12 @@ export function toCSV(questions: Question[]): string {
  * making the `text` an empty string, and using false for both `submitted` and `correct`.
  */
 export function makeAnswers(questions: Question[]): Answer[] {
-    let ans: Question[] = [];
-    questions.map((q: Question) => {});
-    return [];
+    return questions.map((question) => ({
+        questionId: question.id,
+        text: "",
+        submitted: false,
+        correct: false
+    }));
 }
 
 /***
@@ -150,17 +162,17 @@ export function publishAll(questions: Question[]): Question[] {
  * are the same type. They can be any type, as long as they are all the SAME type.
  */
 export function sameType(questions: Question[]): boolean {
-    let ans = false;
-    let num = 0;
-    questions.map((q: Question) => {
-        if (q.type === "multiple_choice_question") {
-            num++;
-        }
-    });
-    if (num === questions.length) {
-        ans = true;
+    if (questions.length === 0) {
+        return true;
     }
-    return ans;
+
+    const firstQuestionType = typeof questions[0].name;
+    for (const question of questions.slice(1)) {
+        if (typeof question.name !== firstQuestionType) {
+            return false;
+        }
+    }
+    return true;
 }
 
 /***
@@ -214,8 +226,11 @@ export function changeQuestionTypeById(
     ans.map((q: Question) => {
         if (q.id === targetId) {
             q.type = newQuestionType;
+            if (newQuestionType === "short_answer_question") {
+                q.options = [];
+            }
         }
-        if (newQuestionType === "short_answer_question") {
+        if (newQuestionType !== "multiple_choice_question") {
             q.options = [];
         }
     });
@@ -262,14 +277,17 @@ export function duplicateQuestionInArray(
     targetId: number,
     newId: number
 ): Question[] {
-    const ans: Question[] = [...questions];
-    let count = 0;
-    ans.map((q: Question) => {
-        count++;
-        if (q.id === targetId) {
-            ans.splice(count + 1, 0, duplicateQuestion(newId, q));
-        }
-        count++;
-    });
-    return ans;
+    const index = questions.findIndex((q: Question) => q.id === targetId);
+    if (index === -1) {
+        return questions;
+    }
+
+    const duplicatedQuestion = duplicateQuestion(newId, questions[index]);
+    const duplicatedQuestions = [
+        ...questions.slice(0, index + 1),
+        duplicatedQuestion,
+        ...questions.slice(index + 1)
+    ];
+
+    return duplicatedQuestions;
 }
