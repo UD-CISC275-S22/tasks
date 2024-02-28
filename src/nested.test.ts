@@ -29,7 +29,9 @@ const {
 }: Record<string, Question[]> =
     // Typecast the test data that we imported to be a record matching
     //  strings to the question list
-    testQuestionData as Record<string, Question[]>;
+    // Typecast the test data that we imported to be a record matching
+    //  strings to the question list
+    testQuestionData as unknown as Record<string, Question[]>;
 
 // We have backup versions of the data to make sure all changes are immutable
 const {
@@ -38,7 +40,7 @@ const {
     TRIVIA_QUESTIONS: BACKUP_TRIVIA_QUESTIONS,
     EMPTY_QUESTIONS: BACKUP_EMPTY_QUESTIONS,
     SIMPLE_QUESTIONS_2: BACKUP_SIMPLE_QUESTIONS_2
-}: Record<string, Question[]> = backupQuestionData as Record<
+}: Record<string, Question[]> = backupQuestionData as unknown as Record<
     string,
     Question[]
 >;
