@@ -103,11 +103,7 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export const injectPositive = (values: number[]): number[] => {
-    // Find the index of the first negative number
     const firstNegativeIndex = values.findIndex((value) => value < 0);
-
-    // Calculate the sum of all numbers up to the first negative number
-    // If there is no negative number, this results in the sum of the entire array
     const sumOfPrevious = values
         .slice(
             0,
@@ -116,11 +112,8 @@ export const injectPositive = (values: number[]): number[] => {
         .reduce((acc, curr) => acc + curr, 0);
 
     if (firstNegativeIndex === -1) {
-        // If there are no negative numbers, return a new array with the sum appended
         return [...values, sumOfPrevious];
     } else {
-        // If there is a negative number, insert the sum right after the first negative number
-        // and return a new array reflecting this change
         return [
             ...values.slice(0, firstNegativeIndex + 1),
             sumOfPrevious,
