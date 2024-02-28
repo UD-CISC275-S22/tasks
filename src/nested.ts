@@ -17,7 +17,7 @@ export function getPublishedQuestions(questions: Question[]): Question[] {
 /**
  * Consumes an array of questions and returns a new array of only the questions that are
  * considered "non-empty". An empty question has an empty string for its `body` and
- * `expected`, and an empty array for its `options`.
+ * `expected`, and an empty array for its `options`. n
  */
 export function getNonEmptyQuestions(questions: Question[]): Question[] {
     const onlypublished = questions.filter(
@@ -26,7 +26,7 @@ export function getNonEmptyQuestions(questions: Question[]): Question[] {
             question.expected !== "" ||
             question.options.length !== 0
     );
-    return onlypublished;
+    return onlypublished; // nice
 }
 
 /***
