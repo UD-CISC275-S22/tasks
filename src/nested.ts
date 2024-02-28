@@ -172,12 +172,16 @@ export function changeQuestionTypeById(
     return questions.map((q) =>
         q.id === targetId
             ? {
+                // eslint-disable-next-line prettier/prettier
                 ...q,
+                // eslint-disable-next-line prettier/prettier
                 type: newQuestionType,
+                // eslint-disable-next-line prettier/prettier
                 options:
                       newQuestionType === "multiple_choice_question"
                           ? q.options
                           : []
+                // eslint-disable-next-line prettier/prettier
             }
             : q
     );
@@ -208,6 +212,7 @@ export function editOption(
                           ? [...q.options, newOption]
                           : [
                               ...q.options.slice(0, targetOptionIndex),
+                              // eslint-disable-next-line prettier/prettier
                               newOption,
                               ...q.options.slice(targetOptionIndex + 1)
                           ]
