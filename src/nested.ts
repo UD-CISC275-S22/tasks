@@ -267,7 +267,3 @@ export function duplicateQuestionInArray(
         ...questions.slice(index + 1)
     ];
 }
-function isEmpty(body: string): boolean {
-    throw new Error("Function not implemented.");
-    return false;
-}
