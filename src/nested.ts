@@ -1,4 +1,3 @@
-// import { text } from "stream/consumers";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
 import { duplicateQuestion, makeBlankQuestion } from "./objects";
@@ -11,6 +10,7 @@ export function getPublishedQuestions(questions: Question[]): Question[] {
     const onlypublished = questions.filter(
         (question: Question): boolean => question.published
     );
+    // good boy
     return onlypublished;
 }
 
