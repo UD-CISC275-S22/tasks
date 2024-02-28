@@ -98,17 +98,33 @@ export function toCSV(questions: Question[]): string {
     const lines = questions.map((question) => {
         const optionsCount = question.options ? question.options.length : 0;
         return (
-            question.id.toString +
+            question.id.toString() +
+            "," +
             question.name +
-            optionsCount.toString +
-            question.points.toString +
-            question.published.toString
+            "," +
+            optionsCount.toString() +
+            "," +
+            question.points.toString() +
+            "," +
+            question.published.toString()
         );
     });
 
     return [headers, ...lines].join("\n");
 }
-
+/***
+ * Consumes an array of Questions and produces a corresponding array of
+ * Answers. Each Question gets its own Answer, copying over the 'id' as the 'questionId',
+ * making the 'text' an empty string, and using false for both 'submitted' and 'correct'.
+ */
+export function makeAnswers(questions: Question[]): Answer[] {
+    return questions.map((question) => ({
+        questionId: question.id,
+        text: "",
+        submitted: false,
+        correct: false
+    }));
+}
 /***
  * Consumes an array of Questions and produces a new array of questions, where
  * each question is now published, regardless of its previous published status.
