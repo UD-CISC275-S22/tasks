@@ -1,8 +1,6 @@
-import { text } from "stream/consumers";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
-import { addOption, makeBlankQuestion, duplicateQuestion } from "./objects";
-import { Options } from "prettier";
+import { makeBlankQuestion, duplicateQuestion } from "./objects";
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
