@@ -1,6 +1,12 @@
 import React from "react";
 import "./App.css";
 import { Button, Col, Container, Row } from "react-bootstrap";
+import { ChangeType } from "./components/ChangeType";
+import { RevealAnswer } from "./components/RevealAnswer";
+import { Counter } from "./components/Counter";
+import { CycleHoliday } from "./components/CycleHoliday";
+import { StartAttempt } from "./components/StartAttempt";
+import { TwoDice } from "./components/TwoDice";
 
 function App(): JSX.Element {
     return (
@@ -38,6 +44,17 @@ function App(): JSX.Element {
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
             </p>
+            <ChangeType></ChangeType>
+            <hr></hr>
+            <Counter></Counter>
+            <hr></hr>
+            <CycleHoliday></CycleHoliday>
+            <hr></hr>
+            <RevealAnswer></RevealAnswer>
+            <hr></hr>
+            <StartAttempt></StartAttempt>
+            <hr></hr>
+            <TwoDice></TwoDice>
         </div>
     );
 }
