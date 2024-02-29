@@ -6,7 +6,7 @@ export function CheckAnswer({
 }: {
     expectedAnswer: string;
 }): JSX.Element {
-    //This is state
+    //This is the state
     // eslint-disable-next-line prettier/prettier
 
     const [userAnswer, setUserAnswer] = useState<string>("");
