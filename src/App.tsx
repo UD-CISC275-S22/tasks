@@ -14,6 +14,12 @@ import { ColoredBox } from "./bad-components/ColoredBox";
 import { ShoveBox } from "./bad-components/ShoveBox";
 import { ChooseTeam } from "./bad-components/ChooseTeam";
 
+import { CheckAnswer } from "./form-components/CheckAnswer";
+import { GiveAttempts } from "./form-components/GiveAttempts";
+import { EditMode } from "./form-components/EditMode";
+import { MultipleChoiceQuestion } from "./form-components/MultipleChoiceQuestion";
+import { ChangeColor } from "./form-components/ChangeColor";
+
 function App(): JSX.Element {
     return (
         <div className="App">
@@ -51,6 +57,19 @@ function App(): JSX.Element {
             </Container>
             <hr></hr>
             <DoubleHalf></DoubleHalf>
+            <CheckAnswer expectedAnswer="42"></CheckAnswer>
+            <hr></hr>
+            <GiveAttempts></GiveAttempts>
+            <hr></hr>
+            <EditMode></EditMode>
+            <hr></hr>
+            <ChangeColor></ChangeColor>
+            <hr></hr>
+            <MultipleChoiceQuestion
+                options={["a", "b", "c"]}
+                expectedAnswer="b"
+            ></MultipleChoiceQuestion>
+            <hr></hr>
             <hr></hr>
             <ChooseTeam></ChooseTeam>
             <hr></hr>
@@ -69,6 +88,24 @@ function App(): JSX.Element {
             <ChangeType></ChangeType>
             <hr />
             <CycleHoliday></CycleHoliday>
+            <hr>
+                <ChangeColor></ChangeColor>
+            </hr>
+            <hr>
+                <CheckAnswer expectedAnswer={""}></CheckAnswer>
+            </hr>
+            <hr>
+                <ChangeColor></ChangeColor>
+            </hr>
+            <hr>
+                <EditMode></EditMode>
+            </hr>
+            <hr>
+                <MultipleChoiceQuestion
+                    options={[]}
+                    expectedAnswer={""}
+                ></MultipleChoiceQuestion>
+            </hr>
         </div>
     );
 }
