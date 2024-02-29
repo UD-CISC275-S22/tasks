@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { Button, Col, Container, Row } from "react-bootstrap";
-import file from "../funny.jpeg";
+import file from "./funny.jpeg";
 
 function App(): JSX.Element {
     return (
@@ -23,7 +23,7 @@ function App(): JSX.Element {
                 <li>Guitars</li>
             </ol>
 
-            <img src={file} alt="funny computer science meme" />
+            <img src={"funny.jpeg"} alt="funny computer science meme" />
 
             <Button onClick={() => console.log("Hello World!")}>
                 Log Hello World
