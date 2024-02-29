@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import { VoidExpression } from "typescript";
 
 export function StartAttempt(): JSX.Element {
     const [attempts, setAttempts] = useState<number>(4);
