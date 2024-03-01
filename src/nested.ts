@@ -1,6 +1,6 @@
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
-import { makeBlankQuestion, duplicateQuestion } from "./objects";
+import { duplicateQuestion, makeBlankQuestion } from "./objects";
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
@@ -18,9 +18,9 @@ export function getPublishedQuestions(questions: Question[]): Question[] {
 export function getNonEmptyQuestions(questions: Question[]): Question[] {
     return questions.filter(
         (question) =>
-            question.body.trim() !== "" &&
-            question.expected.trim() !== "" &&
-            question.options.length > 0
+            question.body !== "" ||
+            question.expected !== "" ||
+            question.options.length != 0
     );
 }
 
@@ -128,13 +128,10 @@ export function publishAll(questions: Question[]): Question[] {
  * are the same type. They can be any type, as long as they are all the SAME type.
  */
 export function sameType(questions: Question[]): boolean {
-    if (questions.length === 0) {
-        return true;
-    }
-
-    const firstQuestionType = typeof questions[0];
-
-    return questions.every((question) => typeof question === firstQuestionType);
+    const answer = questions.every(
+        (aQuestion: Question): boolean => aQuestion.type === questions[0].type
+    );
+    return answer;
 }
 
 /***
@@ -241,12 +238,12 @@ export function duplicateQuestionInArray(
     targetId: number,
     newId: number
 ): Question[] {
-    const duplicatedQuestion = duplicateQuestion(
-        questions.find((question) => question.id === targetId),
-        newId
-    );
-    const index = questions.findIndex((question) => question.id === targetId);
     const newQuestions = [...questions];
-    newQuestions.splice(index + 1, 0, duplicatedQuestion);
+    const index = newQuestions.findIndex(
+        (aQuestion: Question): boolean => targetId === aQuestion.id
+    );
+    const targetQuestion = duplicateQuestion(newId, questions[index]);
+
+    newQuestions.splice(index + 1, 0, targetQuestion);
     return newQuestions;
 }
