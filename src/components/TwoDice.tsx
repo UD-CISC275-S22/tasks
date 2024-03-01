@@ -12,5 +12,45 @@ export function d6(): number {
 }
 
 export function TwoDice(): JSX.Element {
-    return <div>Two Dice</div>;
+    const [leftDie, setLeft] = useState<number>(-1);
+    const [rightDie, setRight] = useState<number>(7);
+
+    const rollLeft = () => {
+        const newNum = d6();
+        setLeft(newNum);
+        // result(leftDie, newNum);
+    };
+    const rollRight = () => {
+        const newNum = d6();
+        setRight(newNum);
+        // result(rightDie, newNum);
+    };
+
+    // function result(leftDie: number, rightDie: number): void {
+    //     //if the dice match, you win
+    //     if (leftDie === rightDie) {
+    //         console.log("You Win");
+    //         //if the dice are both 1, you lose
+    //     } else if (leftDie === 1 && rightDie === 1) {
+    //         console.log("You Lose");
+    //     }
+    // }
+
+    return (
+        <div>
+            <div>
+                <Button onClick={rollLeft}>Roll Left</Button>
+                <br /> <span data-testid="left-die">{leftDie}</span>
+            </div>
+            <div>
+                <Button onClick={rollRight}>Roll Right</Button>
+                <br /> <span data-testid="right-die">{rightDie}</span>
+            </div>
+            {leftDie === rightDie
+                ? leftDie === 1 && rightDie === 1
+                    ? "You Lose"
+                    : "You Win"
+                : null}
+        </div>
+    );
 }
