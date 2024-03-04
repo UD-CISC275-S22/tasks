@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import { QuestionType } from "../interfaces/question";
 
 export function ChangeType(): JSX.Element {
     type QuestionType = "multiple_choice_question" | "short_answer_question";
@@ -20,7 +19,7 @@ export function ChangeType(): JSX.Element {
             {questionType === "multiple_choice_question" ? (
                 <div>Multiple Choice</div>
             ) : (
-                <div>Short Answer </div>
+                <div>Short Answer</div>
             )}
         </div>
     );
