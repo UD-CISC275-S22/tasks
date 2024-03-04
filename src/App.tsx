@@ -1,8 +1,7 @@
 import React from "react";
 import "./App.css";
 import space from "./space.jpg";
-import { Button, Col, Row } from "react-bootstrap";
-import { Container } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { ChangeType } from "./components/ChangeType";
 import { RevealAnswer } from "./components/RevealAnswer";
 import { StartAttempt } from "./components/StartAttempt";
