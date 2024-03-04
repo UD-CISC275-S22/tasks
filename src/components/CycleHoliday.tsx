@@ -2,20 +2,8 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
 export function CycleHoliday(): JSX.Element {
-    const HolidaysAbc: string[] = [
-        "Christmas: 🎄",
-        "Diwali: 🪔",
-        "Halloween: 🎃",
-        "New Years: 🎉",
-        "Thanksgiving: 🦃"
-    ];
-    const HolidaysTime: string[] = [
-        "Diwali: 🪔",
-        "Halloween: 🎃",
-        "Thanksgiving: 🦃",
-        "Christmas: 🎄",
-        "New Years: 🎉"
-    ];
+    const HolidaysAbc: string[] = ["🎄", "🪔", "🎃", "🎉", "🦃"];
+    const HolidaysTime: string[] = ["🪔", "🎃", "🦃", "🎄", "🎉"];
 
     const [holiday, setHoliday] = useState<string>(HolidaysAbc[0]);
 
