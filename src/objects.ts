@@ -8,7 +8,7 @@ import { Question, QuestionType } from "./interfaces/question";
 export function makeBlankQuestion(
     id: number,
     name: string,
-    type: "short_answer_question"
+    type: QuestionType
 ): Question {
     return {
         id,
@@ -32,7 +32,7 @@ export function makeBlankQuestion(
 export function isCorrect(question: Question, answer: string): boolean {
     let tmp = answer;
     tmp = tmp.toLowerCase();
-    tmp = tmp.trim();
+    tmp.trim();
     return (
         answer.trim().toLocaleLowerCase() ===
         question.expected.trim().toLocaleLowerCase()
@@ -58,6 +58,7 @@ export function isValid(question: Question, answer: string): boolean {
     }
     return bool;
 }
+
 /**
  * Consumes a question and produces a string representation combining the
  * `id` and first 10 characters of the `name`. The two strings should be
@@ -125,7 +126,6 @@ export function publishQuestion(question: Question): Question {
  * over as "Copy of ORIGINAL NAME" (e.g., so "Question 1" would become "Copy of Question 1").
  * The `published` field should be reset to false.
  */
-
 export function duplicateQuestion(id: number, oldQuestion: Question): Question {
     return {
         ...oldQuestion,
