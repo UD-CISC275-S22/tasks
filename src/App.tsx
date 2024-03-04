@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import { Button, Container, Row, Col } from "react-bootstrap";
 
 function App(): JSX.Element {
     return (
@@ -10,7 +11,7 @@ function App(): JSX.Element {
             </header>
             <h2>This is a new secondary header</h2>
             <img
-                src="/Users/oodida/Desktop/tasks/src/dollar_coin.jpg"
+                src="/src/dollar_coin.jpg"
                 alt="A picture of a two dollar coin"
                 width="500"
                 height="500"
@@ -21,7 +22,31 @@ function App(): JSX.Element {
                 <li>Avatar the Last Airbender</li>
                 <li>Beyond the Boundary</li>
             </ul>
-
+            <Button onClick={() => console.log("Hello World!")}>
+                Log Hello World
+            </Button>
+            <Container>
+                <Row>
+                    <Col>
+                        First Column return{" "}
+                        <div
+                            style={{
+                                border: "100px solid red",
+                                padding: "0px"
+                            }}
+                        ></div>
+                    </Col>
+                    <Col>
+                        Second Column return{" "}
+                        <div
+                            style={{
+                                border: "100px solid red",
+                                padding: "0px"
+                            }}
+                        ></div>
+                    </Col>
+                </Row>
+            </Container>
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
