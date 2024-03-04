@@ -1,7 +1,5 @@
 import React from "react";
 import "./App.css";
-import { Col, Container, Row, Button } from "react-bootstrap";
-import image1 from "./Images/HelloWorld.jpeg";
 
 function App(): JSX.Element {
     return (
@@ -54,6 +52,18 @@ function App(): JSX.Element {
                     </Row>
                 </Container>
             </div>
+            <hr></hr>
+            <Counter></Counter>
+            <hr />
+            <RevealAnswer></RevealAnswer>
+            <hr />
+            <StartAttempt></StartAttempt>
+            <hr />
+            <TwoDice></TwoDice>
+            <hr />
+            <ChangeType></ChangeType>
+            <hr />
+            <CycleHoliday></CycleHoliday>
         </div>
     );
 }
