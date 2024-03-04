@@ -13,6 +13,26 @@ import { Counter } from "./components/Counter";
 function App(): JSX.Element {
     return (
         <div className="App">
+            <header className="App-header">
+                UD CISC275 with React Hooks and TypeScript
+            </header>
+            <p>
+                Edit <code>src/App.tsx</code> and save. This page will
+                automatically reload.
+            </p>
+            <h1 style={{ backgroundColor: "gray" }}>Explore The Space</h1>
+            <img src={space} width="400" height="200" alt="Space Photo" />
+            <ul>
+                <li>Earth</li>
+                <li>Moon</li>
+                <li>Sun</li>
+            </ul>
+            <Button onClick={() => console.log("Hello World!")}>
+                Log Hello World
+            </Button>
+            <p>Nazmul Hossain</p>
+            <p>Hello World</p>
+
             <hr></hr>
             <Counter></Counter>
             <hr />

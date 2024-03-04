@@ -17,21 +17,15 @@ export function TwoDice(): JSX.Element {
 
     return (
         <div>
-            <div>
-                <Button onClick={() => newLeftRoll(d6())}>
-                    <span data-testid="left-die"></span>Roll Left
-                </Button>
-                <span>{leftRoll}</span>
-            </div>
-            <div>
-                <Button onClick={() => newRightRoll(d6())}>
-                    <span data-testid="right-die"></span>Roll Right
-                </Button>
-                <span>{rightRoll}</span>
-            </div>
-            {((rightRoll === 1 && leftRoll === 1) ||
-                leftRoll === rightRoll) && <span>Lose</span>}
-            {rightRoll !== leftRoll && <span>Win</span>}
+            <span data-testid="left-die">{leftRoll}</span>
+
+            <Button onClick={() => newLeftRoll(d6())}>Roll Left</Button>
+            <Button onClick={() => newRightRoll(d6())}>Roll Right</Button>
+            <span data-testid="right-die">{rightRoll}</span>
+
+            {leftRoll === rightRoll && leftRoll !== 1 && <div>Win</div>}
+
+            {leftRoll === rightRoll && leftRoll === 1 && <div>Lose</div>}
         </div>
     );
 }

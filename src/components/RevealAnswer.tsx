@@ -6,6 +6,7 @@ export function RevealAnswer(): JSX.Element {
     function show(): void {
         visible(!hidden);
     }
+
     return (
         <div>
             <Button onClick={show}>Reveal Answer</Button>
