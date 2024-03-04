@@ -1,4 +1,3 @@
-import { Button, Col, Container, Row } from "react-bootstrap";
 import React from "react";
 import "./App.css";
 import { ChangeType } from "./components/ChangeType";
