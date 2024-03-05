@@ -10,6 +10,7 @@ export function RevealAnswer(): JSX.Element {
     return (
         <div>
             <Button onClick={show}>Reveal Answer</Button>
+            <hr></hr>
             {!hidden && <div>42</div>}
         </div>
     );
