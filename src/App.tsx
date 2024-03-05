@@ -57,7 +57,7 @@ function App(): JSX.Element {
             </Container>
             <hr></hr>
             <DoubleHalf></DoubleHalf>
-            <CheckAnswer expectedAnswer="42"></CheckAnswer>
+            {/*<CheckAnswer expectedAnswer="62"></CheckAnswer>*/}
             <hr></hr>
             <GiveAttempts></GiveAttempts>
             <hr></hr>
@@ -88,24 +88,15 @@ function App(): JSX.Element {
             <ChangeType></ChangeType>
             <hr />
             <CycleHoliday></CycleHoliday>
-            <hr>
-                <ChangeColor></ChangeColor>
-            </hr>
-            <hr>
-                <CheckAnswer expectedAnswer={""}></CheckAnswer>
-            </hr>
-            <hr>
-                <ChangeColor></ChangeColor>
-            </hr>
-            <hr>
-                <EditMode></EditMode>
-            </hr>
-            <hr>
-                <MultipleChoiceQuestion
-                    options={[]}
-                    expectedAnswer={""}
-                ></MultipleChoiceQuestion>
-            </hr>
+            <hr></hr>
+            <CheckAnswer expectedAnswer={"the"}></CheckAnswer>
+            <hr></hr>
+            <ChangeColor></ChangeColor>
+            <hr></hr>
+            <MultipleChoiceQuestion
+                options={["c1", "c2", "c3"]}
+                expectedAnswer={"c2"}
+            ></MultipleChoiceQuestion>
         </div>
     );
 }
