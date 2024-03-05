@@ -6,16 +6,26 @@ import { TwoDice } from "./components/TwoDice";
 import { StartAttempt } from "./components/StartAttempt";
 import { RevealAnswer } from "./components/RevealAnswer";
 import { CycleHoliday } from "./components/CycleHoliday";
+import { Counter } from "./components/Counter";
 
 function App(): JSX.Element {
     return (
-        <div>
-            <h1>Welcome to My App!</h1>
-            <Counter />
-            <TwoDice />
-            <StartAttempt />
-            <RevealAnswer />
-            <CycleHoliday />
+        <div className="App">
+            <header className="App-header">
+                UD CISC275 with React Hooks and TypeScript
+            </header>
+            <hr></hr>
+            <Counter></Counter>
+            <hr />
+            <RevealAnswer></RevealAnswer>
+            <hr />
+            <StartAttempt></StartAttempt>
+            <hr />
+            <TwoDice></TwoDice>
+            <hr />
+            <ChangeType></ChangeType>
+            <hr />
+            <CycleHoliday></CycleHoliday>
         </div>
     );
 }
