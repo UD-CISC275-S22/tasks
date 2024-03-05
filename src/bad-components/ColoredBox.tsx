@@ -8,7 +8,7 @@ function ChangeColor(): JSX.Element {
     const [colorIndex, setColorIndex] = useState<number>(DEFAULT_COLOR_INDEX);
     return (
         <Button onClick={() => setColorIndex((1 + colorIndex) % COLORS.length)}>
-            Next Color
+            Next Color (Index: {colorIndex}) Aligning with: {COLORS[colorIndex]}
         </Button>
     );
 }
