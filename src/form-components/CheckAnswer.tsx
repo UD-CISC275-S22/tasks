@@ -20,7 +20,7 @@ export function CheckAnswer({
     return (
         <div>
             <h3>Check Answer</h3>
-            <Form.Group controlId="answerBox">
+            <Form.Group>
                 <Form.Control value={userAnswer} onChange={inputAnswer} />
             </Form.Group>
             <div>{userAnswer === expectedAnswer ? "✔️" : "❌"}</div>
