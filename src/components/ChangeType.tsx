@@ -3,11 +3,11 @@ import { Button } from "react-bootstrap";
 import { QuestionType } from "../interfaces/question";
 
 export function ChangeType(): JSX.Element {
-    const [questionType, setQuestionType] = useState<QuestionType>(
+    const [questionType, setQType] = useState<QuestionType>(
         "short_answer_question"
     );
     const toggleQuestionType = () => {
-        setQuestionType((prevType) =>
+        setQType((prevType) =>
             prevType === "multiple_choice_question"
                 ? "short_answer_question"
                 : "multiple_choice_question"

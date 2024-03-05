@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 export function RevealAnswer(): JSX.Element {
-    const [toggled, setToggled] = useState<boolean>(false);
-    const toggle = () => {
-        setToggled(!toggled);
+    const [isVisible, setIsVisible] = useState<boolean>(false);
+
+    const toggleVisibility = () => {
+        setIsVisible(!isVisible);
     };
     return (
         <div>
-            <Button onClick={toggle}>RevealAnswer</Button>
-            <p>{toggled ? "42" : "The answer to everything is:"}</p>
+            <Button onClick={toggleVisibility}>Reveal Answer</Button>
+            {isVisible && <p>The answer is 42.</p>}
         </div>
     );
 }

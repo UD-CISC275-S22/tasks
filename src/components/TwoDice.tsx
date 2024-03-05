@@ -22,11 +22,15 @@ export function TwoDice(): JSX.Element {
     };
     return (
         <div>
-            <Button onClick={rollLeftDie}>Roll Left: {leftDie}</Button>
-            <Button onClick={rollRightDie}>Roll Right: {rightDie}</Button>
-            {leftDie === 1 && rightDie === 1 ? <p>You lose</p> : null}
+            <Button onClick={rollLeftDie} data-testid="left-die">
+                Roll Left: {leftDie}
+            </Button>
+            <Button onClick={rollRightDie} data-testid="right-die">
+                Roll Right: {rightDie}
+            </Button>
+            {leftDie === 1 && rightDie === 1 ? <p>You Lose</p> : null}
             {leftDie === rightDie && !(leftDie === 1 && rightDie === 1) ? (
-                <p>You win</p>
+                <p>You Win</p>
             ) : null}
         </div>
     );
