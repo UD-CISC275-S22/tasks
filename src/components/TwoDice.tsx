@@ -17,22 +17,12 @@ export function TwoDice(): JSX.Element {
 
     const handleRollLeft = () => {
         const rolledValue = d6();
-        if (rolledValue !== rightDie) {
-            setLeftDie(rolledValue);
-        } else {
-            setLeftDie(rolledValue);
-            setRightDie(d6());
-        }
+        setLeftDie(rolledValue);
     };
 
     const handleRollRight = () => {
         const rolledValue = d6();
-        if (rolledValue !== leftDie) {
-            setRightDie(rolledValue);
-        } else {
-            setRightDie(rolledValue);
-            setLeftDie(d6());
-        }
+        setRightDie(rolledValue);
     };
 
     return (
