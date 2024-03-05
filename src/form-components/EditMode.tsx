@@ -41,7 +41,7 @@ export function EditMode(): JSX.Element {
                     <Form.Group controlId="is-student">
                         <Form.Label>Student</Form.Label>
                         <Form.Check
-                            type="switch"
+                            type="checkbox"
                             checked={isStudent}
                             onChange={updateIsStudent}
                         />
