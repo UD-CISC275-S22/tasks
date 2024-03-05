@@ -14,7 +14,6 @@ function ShoveBoxButton({
 }
 
 function MoveableBox({ position }: { position: number }): JSX.Element {
-    //const [position, setPosition] = useState<number>(10);
     return (
         <div
             data-testid="moveable-box"
@@ -33,7 +32,6 @@ function MoveableBox({ position }: { position: number }): JSX.Element {
 
 export function ShoveBox(): JSX.Element {
     const [position, setPosition] = useState<number>(10);
-    //const box = MoveableBox();
     return (
         <div>
             <h3>Shove Box</h3>
