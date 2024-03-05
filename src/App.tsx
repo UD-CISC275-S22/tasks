@@ -1,21 +1,20 @@
 import React from "react";
 import "./App.css";
-
-import { Counter } from "./components/Counter";
-import { TwoDice } from "./components/TwoDice";
-import { StartAttempt } from "./components/StartAttempt";
-import { RevealAnswer } from "./components/RevealAnswer";
-import { CycleHoliday } from "./components/CycleHoliday";
+import { DoubleHalf } from "./bad-components/DoubleHalf";
+import { ChooseTeam } from "./bad-components/ChooseTeam";
+import { ColoredBox } from "./bad-components/ColoredBox";
+import { ShoveBox } from "./bad-components/ShoveBox";
 
 function App(): JSX.Element {
     return (
-        <div>
-            <h1>Welcome to My App!</h1>
-            <Counter />
-            <TwoDice />
-            <StartAttempt />
-            <RevealAnswer />
-            <CycleHoliday />
+        <div className="App">
+            <header className="App-header">
+                <h1>CISC275 Matt Holinger</h1>
+                <DoubleHalf />
+            </header>
+            <ChooseTeam />
+            <ColoredBox />
+            <ShoveBox />
         </div>
     );
 }
