@@ -9,10 +9,10 @@ export function RevealAnswer(): JSX.Element {
     }
     return (
         <div>
-            <button onClick={flipVisibility}>
+            <Button onClick={flipVisibility}>
                 <div>Reveal Answer</div>
                 {visible && <div>42</div>}
-            </button>
+            </Button>
         </div>
     );
 }

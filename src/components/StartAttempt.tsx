@@ -14,27 +14,24 @@ export function StartAttempt(): JSX.Element {
         setInProgress(false);
     }
     function mulligan() {
-        if (!inProgress) {
-            setNumAttempts(numAttempts + 1);
-        }
+        setNumAttempts(numAttempts + 1);
     }
 
     return (
         <div>
-            {numAttempts !== 0 && !inProgress && (
-                <button
-                    onClick={startAttempt}
-                    disabled={inProgress || numAttempts <= 0}
-                >
-                    Start Quiz
-                </button>
-            )}
-            <button onClick={stopAttempt} disabled={!inProgress}>
+            <Button
+                onClick={startAttempt}
+                disabled={inProgress || numAttempts === 0}
+            >
+                Start Quiz
+            </Button>
+
+            <Button onClick={stopAttempt} disabled={!inProgress}>
                 Stop Quiz
-            </button>
-            <button onClick={mulligan} disabled={inProgress}>
+            </Button>
+            <Button onClick={mulligan} disabled={inProgress}>
                 Mulligan
-            </button>
+            </Button>
             <div>Attempts: {numAttempts}</div>
         </div>
     );
