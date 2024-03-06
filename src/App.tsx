@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import { ChangeType } from "./components/ChangeType";
 import { RevealAnswer } from "./components/RevealAnswer";
@@ -54,5 +54,3 @@ function App(): JSX.Element {
         </div>
     );
 }
-
-export default App;
