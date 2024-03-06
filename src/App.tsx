@@ -7,6 +7,8 @@ import { Counter } from "./components/Counter";
 import { CycleHoliday } from "./components/CycleHoliday";
 import { StartAttempt } from "./components/StartAttempt";
 import { TwoDice } from "./components/TwoDice";
+import { DoubleHalf } from "./bad-components/DoubleHalf";
+import { ColoredBox } from "./bad-components/ColoredBox";
 
 function App(): JSX.Element {
     return (
@@ -55,6 +57,8 @@ function App(): JSX.Element {
             <StartAttempt></StartAttempt>
             <hr></hr>
             <TwoDice></TwoDice>
+            <hr></hr>
+            <ColoredBox></ColoredBox>
         </div>
     );
 }
