@@ -9,6 +9,8 @@ import { StartAttempt } from "./components/StartAttempt";
 import { TwoDice } from "./components/TwoDice";
 import { DoubleHalf } from "./bad-components/DoubleHalf";
 import { ColoredBox } from "./bad-components/ColoredBox";
+import { ChooseTeam } from "./bad-components/ChooseTeam";
+import { ShoveBox } from "./bad-components/ShoveBox";
 
 function App(): JSX.Element {
     return (
@@ -59,6 +61,12 @@ function App(): JSX.Element {
             <TwoDice></TwoDice>
             <hr></hr>
             <ColoredBox></ColoredBox>
+            <hr></hr>
+            <ChooseTeam></ChooseTeam>
+            <hr></hr>
+            <ShoveBox></ShoveBox>
+            <hr></hr>
+            <DoubleHalf></DoubleHalf>
         </div>
     );
 }
