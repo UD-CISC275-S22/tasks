@@ -1,4 +1,3 @@
-/* eslint-disable indent */
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
@@ -10,44 +9,43 @@ enum Holiday {
     Easter = "🐰"
 }
 
+const alphabeticallySortedHolidays: Holiday[] = [
+    Holiday.Christmas,
+    Holiday.Easter,
+    Holiday.Halloween,
+    Holiday.NewYear,
+    Holiday.Thanksgiving
+];
+
+const yearSortedHolidays: Holiday[] = [
+    Holiday.NewYear,
+    Holiday.Easter,
+    Holiday.Halloween,
+    Holiday.Thanksgiving,
+    Holiday.Christmas
+];
+
 export function CycleHoliday(): JSX.Element {
-    const [currentHoliday, setCurrentHoliday] = useState<Holiday>(
-        Holiday.Christmas
-    );
+    // State variable to represent the current holiday
+    const [currentHolidayIndex, setCurrentHolidayIndex] = useState(0);
 
-    const getNextHolidayAlphabetically = (current: Holiday): Holiday => {
-        const holidaysArray = Object.keys(Holiday) as Holiday[];
-        const currentIndex = holidaysArray.indexOf(current);
-        const nextIndex = (currentIndex + 1) % holidaysArray.length;
-        return holidaysArray[nextIndex];
-    };
-
-    const getNextHolidayInYear = (current: Holiday): Holiday => {
-        switch (current) {
-            case Holiday.NewYear:
-                return Holiday.Easter;
-            case Holiday.Easter:
-                return Holiday.Halloween;
-            case Holiday.Halloween:
-                return Holiday.Thanksgiving;
-            case Holiday.Thanksgiving:
-                return Holiday.Christmas;
-            case Holiday.Christmas:
-                return Holiday.NewYear;
-            default:
-                return Holiday.Christmas;
-        }
+    // Function to get the next holiday
+    const getNextHoliday = (current: number, holidays: Holiday[]): number => {
+        return (current + 1) % holidays.length;
     };
 
     return (
         <div>
             {/* Render current holiday */}
-            <p>Holiday: {currentHoliday}</p>
+            <p>Holiday: {alphabeticallySortedHolidays[currentHolidayIndex]}</p>
             {/* Button to advance alphabetically */}
             <Button
                 onClick={() =>
-                    setCurrentHoliday(
-                        getNextHolidayAlphabetically(currentHoliday)
+                    setCurrentHolidayIndex(
+                        getNextHoliday(
+                            currentHolidayIndex,
+                            alphabeticallySortedHolidays
+                        )
                     )
                 }
             >
@@ -56,7 +54,9 @@ export function CycleHoliday(): JSX.Element {
             {/* Button to advance by year */}
             <Button
                 onClick={() =>
-                    setCurrentHoliday(getNextHolidayInYear(currentHoliday))
+                    setCurrentHolidayIndex(
+                        getNextHoliday(currentHolidayIndex, yearSortedHolidays)
+                    )
                 }
             >
                 Advance by Year
