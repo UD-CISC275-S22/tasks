@@ -5,23 +5,37 @@ export function StartAttempt(): JSX.Element {
     const [numAttempts, setNumAttempts] = useState<number>(4);
     const [inProgress, setInProgress] = useState<boolean>(false);
     function startAttempt() {
-        setNumAttempts(numAttempts - 1);
-        setInProgress(true);
+        if (numAttempts > 0) {
+            setNumAttempts(numAttempts - 1);
+            setInProgress(true);
+        }
     }
     function stopAttempt() {
         setInProgress(false);
     }
     function mulligan() {
-        setNumAttempts(numAttempts + 1);
+        if (!inProgress) {
+            setNumAttempts(numAttempts + 1);
+        }
     }
 
     return (
         <div>
             {numAttempts !== 0 && !inProgress && (
-                <button onClick={startAttempt}>Start Quiz</button>
+                <button
+                    onClick={startAttempt}
+                    disabled={inProgress || numAttempts <= 0}
+                >
+                    Start Quiz
+                </button>
             )}
-            {inProgress && <button onClick={stopAttempt}>Stop Quiz</button>}
-            {inProgress && <button onClick={mulligan}>Mulligan</button>}
+            <button onClick={stopAttempt} disabled={!inProgress}>
+                Stop Quiz
+            </button>
+            <button onClick={mulligan} disabled={inProgress}>
+                Mulligan
+            </button>
+            <div>Attempts: {numAttempts}</div>
         </div>
     );
 }
