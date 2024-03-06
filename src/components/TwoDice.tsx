@@ -23,13 +23,9 @@ export function TwoDice(): JSX.Element {
     return (
         <div>
             <span data-testid="left-die">{leftDie}</span>
-            <Button onClick={rollLeft} disabled={isWin || isLose}>
-                Roll Left
-            </Button>
+            <Button onClick={rollLeft}>Roll Left</Button>
             <span data-testid="right-die">{rightDie}</span>
-            <Button onClick={rollRight} disabled={isWin || isLose}>
-                Roll Right
-            </Button>
+            <Button onClick={rollRight}>Roll Right</Button>
             {isWin && <div>You Win</div>}
             {isLose && <div>You Lose</div>}
         </div>
