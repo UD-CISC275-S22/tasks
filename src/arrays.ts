@@ -100,14 +100,20 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    const sum = addends.reduce(
-        (accumulator, currentValue) => accumulator + currentValue,
-        0
-    );
-    const addendsString = addends.join("+");
-    return "${sum} = ${addendsString || 0}";
-}
+    let sum = 0;
+    let representation = "";
 
+    for (let i = 0; i < addends.length; i++) {
+        sum += addends[i];
+        if (i === 0) {
+            representation += `${addends[i]}`;
+        } else {
+            representation += `+${addends[i]}`;
+        }
+    }
+
+    return `${sum}=${representation}`;
+}
 /**
  * Consumes an array of numbers and produces a new array of the same numbers,
  * with one difference. After the FIRST negative number, insert the sum of all
@@ -136,7 +142,4 @@ export function injectPositive(values: number[]): number[] {
     }
 
     return result;
-}
-function isNaN(parsedInt: number) {
-    throw new Error("Function not implemented.");
 }
