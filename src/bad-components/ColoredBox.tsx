@@ -9,10 +9,16 @@ const DEFAULT_COLOR_INDEX = 0;
 //     setColorIndex: (newColor: string) => void;
 // }
 
-function ChangeColor(): JSX.Element {
-    const [colorIndex, setColorIndex] = useState<number>(DEFAULT_COLOR_INDEX);
+function ChangeColor({
+    colorIndex,
+    setColorIndex
+}: {
+    colorIndex: number;
+    setColorIndex: (newColorIndex: number) => void;
+}): JSX.Element {
+    //const [colorIndex, setColorIndex] = useState<number>(DEFAULT_COLOR_INDEX);
     return (
-        <Button onClick={() => setColorIndex(1 + (colorIndex % COLORS.length))}>
+        <Button onClick={() => setColorIndex((1 + colorIndex) % COLORS.length)}>
             Next Color
         </Button>
         // <Button onClick={() => setColorIndex((1 + colorIndex) % COLORS.length)}>
@@ -21,14 +27,14 @@ function ChangeColor(): JSX.Element {
     );
 }
 
-function ColorPreview(): JSX.Element {
+function ColorPreview({ colorIndex }: { colorIndex: number }): JSX.Element {
     return (
         <div
             data-testid="colored-box"
             style={{
                 width: "50px",
                 height: "50px",
-                backgroundColor: COLORS[DEFAULT_COLOR_INDEX],
+                backgroundColor: COLORS[colorIndex],
                 display: "inline-block",
                 verticalAlign: "bottom",
                 marginLeft: "5px"
@@ -46,12 +52,12 @@ export function ColoredBox(): JSX.Element {
             <span>The current color is: {COLORS[DEFAULT_COLOR_INDEX]}</span>
             <div>
                 <ChangeColor
-                //setColorIndex={setColorIndex}
-                //colorIndex={colorIndex}
+                    setColorIndex={setColorIndex}
+                    colorIndex={colorIndex}
                 ></ChangeColor>
                 <ColorPreview
-                //setColorIndex={setColorIndex}
-                //colorIndex={colorIndex}
+                    colorIndex={colorIndex}
+                    //colorIndex={colorIndex}
                 ></ColorPreview>
             </div>
         </div>
