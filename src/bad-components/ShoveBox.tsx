@@ -36,7 +36,7 @@ export function ShoveBox(): JSX.Element {
         <div>
             <h3>Shove Box</h3>
             <div>
-                <span>The box is at: {MoveableBox}</span>
+                <span>The box is at: {position}</span>
                 <div>
                     <ShoveBoxButton
                         position={position}
