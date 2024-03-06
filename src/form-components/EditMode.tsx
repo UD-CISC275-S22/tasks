@@ -6,33 +6,33 @@ export function EditMode(): JSX.Element {
     const [mode, setMode] = useState<boolean>(false);
     const [status, setStatus] = useState<boolean>(true);
     function updateMode(event: React.ChangeEvent<HTMLInputElement>) {
-        setMode(!mode);
+        setMode(event.target.checked);
     }
     function updateName(event: React.ChangeEvent<HTMLInputElement>) {
         editStudent(event.target.value);
     }
     function updateStatus(event: React.ChangeEvent<HTMLInputElement>) {
-        setStatus(!status);
+        setStatus(event.target.checked);
     }
     return (
         <div>
             <h3>Edit Mode</h3>
             <Form.Check
                 type="switch"
-                id="is-edit"
+                id="isEditable"
                 label="Edit Mode"
                 checked={mode}
                 onChange={updateMode}
                 style={{ marginLeft: "700px", marginRight: "650px" }}
             />
             {!mode ? (
-                <div>
+                <span>
                     {status === true ? (
                         <div>{student} is a student</div>
                     ) : (
                         <div>{student} is not a student</div>
                     )}
-                </div>
+                </span>
             ) : (
                 <>
                     <Form.Group controlId="formChangeName">
@@ -41,9 +41,8 @@ export function EditMode(): JSX.Element {
                     </Form.Group>
                     <Form.Check
                         type="checkbox"
-                        id="is-StudentCheck"
+                        id="isStudentCheck"
                         label="Are you a student?"
-                        name="student"
                         checked={status}
                         onChange={updateStatus}
                     />
