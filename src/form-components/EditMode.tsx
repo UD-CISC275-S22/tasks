@@ -1,15 +1,18 @@
 import React, { useState } from "react";
+import { Form } from "react-bootstrap";
 
 export function EditMode(): JSX.Element {
-    const [editMode, setEditMode] = useState<boolean>(false);
-    const [userName, setUserName] = useState<string>("Your Name");
-    const [isStudent, setIsStudent] = useState<boolean>(true);
+    const [editMode, setEditMode] = useState(false);
+    const [userName, setUserName] = useState("Your name");
+    const [isStudent, setIsStudent] = useState(true);
 
     const toggleEditMode = () => {
         setEditMode(!editMode);
     };
 
-    const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const handleNameChange = (event: {
+        target: { value: React.SetStateAction<string> };
+    }) => {
         setUserName(event.target.value);
     };
 
@@ -35,13 +38,16 @@ export function EditMode(): JSX.Element {
                             value={userName}
                             onChange={handleNameChange}
                         />
-                        <label htmlFor="studentCheckbox">Student:</label>
-                        <input
-                            id="studentCheckbox"
-                            type="checkbox"
-                            checked={isStudent}
-                            onChange={handleStudentChange}
-                        />
+                        {/* Check if editMode is true before rendering the checkbox */}
+                        {editMode && (
+                            <Form.Check
+                                id="studentCheckbox"
+                                type="checkbox"
+                                label="Student"
+                                checked={isStudent}
+                                onChange={handleStudentChange}
+                            />
+                        )}
                     </div>
                 )}
                 <button onClick={toggleEditMode}>
@@ -51,5 +57,3 @@ export function EditMode(): JSX.Element {
         </div>
     );
 }
-
-export default EditMode;
