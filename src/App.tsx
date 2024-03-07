@@ -1,15 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
-
+import { CheckAnswer } from "./form-components/CheckAnswer";
+import { GiveAttempts } from "./form-components/GiveAttempts";
+import { EditMode } from "./form-components/EditMode";
+import ChangeColor from "./form-components/ChangeColor";
+import MultipleChoiceQuestion from "./form-components/MultipleChoiceQuestion";
+useState;
 function App(): JSX.Element {
     return (
         <div className="App">
             <header className="App-header">
-                UD CISC275 with React Hooks and TypeScript
+                <h1>CISC275 Matt Holinger</h1>
             </header>
-            <p>
-                Edit <code>src/App.tsx</code> and save to reload.
-            </p>
+            <div>
+                <h2>What is the capital of PA?</h2>
+                <CheckAnswer expectedAnswer={"Harrisburg"}></CheckAnswer>
+            </div>
+            <GiveAttempts />
+            <div>
+                <h3> </h3>
+            </div>
+            <div>
+                <EditMode />
+            </div>
+            <div>
+                <ChangeColor />
+            </div>
+            <div>
+                <h4>Multiple Choice Question</h4>
+                <MultipleChoiceQuestion
+                    expectedAnswer="2"
+                    options={["1", "2", "3"]}
+                />
+            </div>
         </div>
     );
 }
