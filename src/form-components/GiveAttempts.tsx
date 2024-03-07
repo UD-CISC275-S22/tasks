@@ -16,17 +16,22 @@ export function GiveAttempts(): JSX.Element {
                     type="number"
                     value={attemptsRequested}
                     onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-                        setAttemptsRequested(event.target.value)
+                        setAttemptsRequested(
+                            parseInt(event.target.value) || attemptsLeft
+                        )
                     }
                 />
             </Form.Group>
 
-            <Button onClick={() => setAttemptsLeft(attemptsLeft - 1)}>
+            <Button
+                onClick={() => setAttemptsLeft(attemptsLeft - 1)}
+                disabled={attemptsLeft === 0}
+            >
                 use
             </Button>
             <Button
                 onClick={() =>
-                    setAttemptsLeft(attemptsLeft + { attemptsRequested })
+                    setAttemptsLeft(attemptsLeft + attemptsRequested)
                 }
             >
                 gain
