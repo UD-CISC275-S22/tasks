@@ -1,5 +1,15 @@
 import React from "react";
 import "./App.css";
+import { ChangeType } from "./components/ChangeType";
+import { RevealAnswer } from "./components/RevealAnswer";
+import { StartAttempt } from "./components/StartAttempt";
+import { TwoDice } from "./components/TwoDice";
+import { CycleHoliday } from "./components/CycleHoliday";
+import { Counter } from "./components/Counter";
+import { DoubleHalf } from "./bad-components/DoubleHalf";
+import { ColoredBox } from "./bad-components/ColoredBox";
+import { ShoveBox } from "./bad-components/ShoveBox";
+import { ChooseTeam } from "./bad-components/ChooseTeam";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import ronaldoImage from "./ronaldo 5.jpeg";
 
@@ -9,50 +19,10 @@ function App(): JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript
             </header>
-            <h1>Welcome to my Website </h1>
-            <ul>
-                <li>First thing</li>
-                <li>Another thing</li>
-                <li>A third item</li>
-            </ul>
-            <Container>
-                <Row>
-                    <Col>
-                        <div
-                            style={{
-                                width: "100%",
-                                height: "100px",
-                                backgroundColor: "red"
-                            }}
-                        ></div>
-                        First column.
-                    </Col>
-                    <Col>
-                        <div
-                            style={{
-                                width: "100%",
-                                height: "100px",
-                                backgroundColor: "red"
-                            }}
-                        ></div>
-                        Second column. You can put whatever you want in here,
-                        and it will be on the right side. Maybe try adding an
-                        Maybe try adding an image?
-                    </Col>
-                </Row>
-            </Container>
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload. Harman Bagga. Hello World
+                automatically reload.
             </p>
-            <Button onClick={() => console.log("Hello World!")}>
-                Log Hello World
-            </Button>
-            <img
-                src={ronaldoImage}
-                alt="Ronaldo siuuuuuuuu"
-                style={{ height: "200px", width: "auto" }}
-            />
         </div>
     );
 }
