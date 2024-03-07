@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Form } from "react-bootstrap";
 
 export function ChangeColor(): JSX.Element {
     const [selectedColor, setSelectedColor] = useState("red");
@@ -21,20 +22,20 @@ export function ChangeColor(): JSX.Element {
     return (
         <div>
             <h3>Change Color</h3>
-            <div>
+            <Form.Group>
                 {colors.map((color) => (
-                    <div key={color.value}>
-                        <input
-                            type="radio"
-                            name="color"
-                            value={color.value}
-                            checked={selectedColor === color.value}
-                            onChange={handleChange}
-                        />
-                        <label htmlFor={color.value}>{color.label}</label>
-                    </div>
+                    <Form.Check
+                        key={color.value}
+                        inline
+                        type="radio"
+                        name="color"
+                        value={color.value}
+                        checked={selectedColor === color.value}
+                        onChange={handleChange}
+                        label={color.label}
+                    />
                 ))}
-            </div>
+            </Form.Group>
             <div
                 data-testid="colored-box"
                 style={{
