@@ -27,6 +27,7 @@ function App(): JSX.Element {
                 <ChangeColor />
             </div>
             <div>
+                <h4>Multiple Choice Question</h4>
                 <MultipleChoiceQuestion
                     expectedAnswer="2"
                     options={["1", "2", "3"]}

@@ -6,16 +6,9 @@ export function EditMode(): JSX.Element {
     const [userName, setUserName] = useState("Your name");
     const [isStudent, setIsStudent] = useState(true);
 
-    const toggleEditMode = () => {
+    const handleEditModeChange = () => {
         setEditMode(!editMode);
     };
-
-    const handleNameChange = (event: {
-        target: { value: React.SetStateAction<string> };
-    }) => {
-        setUserName(event.target.value);
-    };
-
     const handleStudentChange = () => {
         setIsStudent(!isStudent);
     };
@@ -23,37 +16,43 @@ export function EditMode(): JSX.Element {
     return (
         <div>
             <h3>Edit Mode</h3>
-            <div>
-                {!editMode ? (
-                    <p>
-                        {userName} is{" "}
-                        {isStudent ? "a student" : "not a student"}
-                    </p>
-                ) : (
-                    <div>
-                        <label htmlFor="nameInput">Name:</label>
-                        <input
-                            id="nameInput"
+            <Form.Check
+                type="switch"
+                id="editModeSwitch"
+                label="Edit Mode"
+                checked={editMode}
+                onChange={handleEditModeChange}
+            />
+            {editMode ? (
+                <Form>
+                    <Form.Group controlId="userName">
+                        <Form.Label>User Name</Form.Label>
+                        <Form.Control
                             type="text"
                             value={userName}
-                            onChange={handleNameChange}
+                            onChange={(event) =>
+                                setUserName(event.target.value)
+                            }
                         />
-                        {/* Check if editMode is true before rendering the checkbox */}
-                        {editMode && (
-                            <Form.Check
-                                id="studentCheckbox"
-                                type="checkbox"
-                                label="Student"
-                                checked={isStudent}
-                                onChange={handleStudentChange}
-                            />
-                        )}
-                    </div>
-                )}
-                <button onClick={toggleEditMode}>
-                    {editMode ? "Save" : "Edit"}
-                </button>
-            </div>
+                    </Form.Group>
+                    <Form.Group controlId="isStudentCheckbox">
+                        <Form.Check
+                            type="checkbox"
+                            label="Student"
+                            checked={isStudent}
+                            onChange={handleStudentChange}
+                        />
+                    </Form.Group>
+                </Form>
+            ) : (
+                <div>
+                    <h3>
+                        {`${userName} is ${
+                            isStudent ? "a student" : "not a student"
+                        }`}
+                    </h3>
+                </div>
+            )}
         </div>
     );
 }
