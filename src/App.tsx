@@ -2,6 +2,12 @@ import React from "react";
 import "./App.css";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import ronaldoImage from "./ronaldo 5.jpeg";
+import { ChangeType } from "./components/ChangeType";
+import { RevealAnswer } from "./components/RevealAnswer";
+import { StartAttempt } from "./components/StartAttempt";
+import { TwoDice } from "./components/TwoDice";
+import { CycleHoliday } from "./components/CycleHoliday";
+import { Counter } from "./components/Counter";
 
 function App(): JSX.Element {
     return (
@@ -53,8 +59,19 @@ function App(): JSX.Element {
                 alt="Ronaldo siuuuuuuuu"
                 style={{ height: "200px", width: "auto" }}
             />
+            <hr></hr>
+            <Counter></Counter>
+            <hr />
+            <RevealAnswer></RevealAnswer>
+            <hr />
+            <StartAttempt></StartAttempt>
+            <hr />
+            <TwoDice></TwoDice>
+            <hr />
+            <ChangeType></ChangeType>
+            <hr />
+            <CycleHoliday></CycleHoliday>
         </div>
     );
 }
-
 export default App;
