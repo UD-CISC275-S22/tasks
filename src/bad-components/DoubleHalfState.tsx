@@ -1,5 +1,3 @@
-//import { useState } from "react";
+import { useState } from "react";
 
-//export const [dhValue, setDhValue] = useState<number>(10);
-
-export {};
+export const [dhValue, setDhValue] = useState<number>(10);
