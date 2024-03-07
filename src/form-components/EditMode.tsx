@@ -14,7 +14,7 @@ export function EditMode(): JSX.Element {
         setName(event.target.value);
     }
 
-    function updateStudent(event: React.ChangeEvent<HTMLInputElement>) {
+    function updateStudent() {
         setIsStudent(!isStudent);
     }
 
