@@ -12,14 +12,28 @@ export function GiveAttempts(): JSX.Element {
                     type="number"
                     value={numRequest}
                     onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-                        setNumRequest(parseInt(event.target.value))
+                        setNumRequest(
+                            Math.abs(parseInt(event.target.value)) || 0
+                        )
                     }
                 />
-                <Button>Use</Button>
-                <Button>Gain</Button>
+                <Button
+                    onClick={() => {
+                        setRemainingAttempts(remainingAttempts - 1);
+                    }}
+                    disabled={remainingAttempts <= 0 ? true : false}
+                >
+                    Use
+                </Button>
+                <Button
+                    onClick={() => {
+                        setRemainingAttempts(remainingAttempts + numRequest);
+                    }}
+                >
+                    Gain
+                </Button>
                 <h3>Remaining Attempts: {remainingAttempts}</h3>
             </Form.Group>
-            <h3>Give Attempts</h3>
         </div>
     );
 }
