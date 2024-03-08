@@ -137,10 +137,7 @@ export function makeAnswers(questions: Question[]): Answer[] {
  * each question is now published, regardless of its previous published status.
  */
 export function publishAll(questions: Question[]): Question[] {
-    for (const loop of questions) {
-        loop.published = true;
-    }
-    return questions;
+    return questions.map((question) => ({ ...question, published: true }));
 }
 
 /***
@@ -176,13 +173,10 @@ export function renameQuestionById(
     targetId: number,
     newName: string
 ): Question[] {
-    const done = questions.map((question) => {
-        if (question.id === targetId) {
-            return { ...question, name: newName };
-        }
-        return { ...question };
-    });
-    return done;
+    return questions.map((question) => ({
+        ...question,
+        name: question.id === targetId ? newName : question.name
+    }));
 }
 
 /***
@@ -198,12 +192,22 @@ export function changeQuestionTypeById(
     newQuestionType: QuestionType
 ): Question[] {
     const index = questions.findIndex((question) => question.id === targetId);
-    if (questions[index].type === "multiple_choice_question") {
-        questions[index].options = [];
-    }
-    questions[index].type = newQuestionType;
-    return questions;
+    return questions.map((question) => ({
+        ...question,
+        type: question.id === targetId ? newQuestionType : question.type,
+        options:
+            question.type !== "multiple_choice_question" &&
+            question.id === targetId
+                ? []
+                : question.options
+    }));
 }
+//     if (questions[index].type === "multiple_choice_question") {
+//         questions[index].options = [];
+//     }
+//     questions[index].type = newQuestionType;
+//     return questions;
+// }
 
 /**
  * Consumes an array of Questions and produces a new array of Questions, where all
