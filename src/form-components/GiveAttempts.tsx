@@ -16,9 +16,7 @@ export function GiveAttempts(): JSX.Element {
                     type="number"
                     value={attemptsRequested}
                     onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-                        setAttemptsRequested(
-                            parseInt(event.target.value) || attemptsLeft
-                        )
+                        setAttemptsRequested(parseInt(event.target.value) || 0)
                     }
                 />
             </Form.Group>

@@ -10,7 +10,7 @@ export function MultipleChoiceQuestion({
 }): JSX.Element {
     const [answer, setAnswer] = useState<string>(options[0]);
 
-    function updateAnswer(event: React.ChangeEvent<HTMLInputElement>) {
+    function updateAnswer(event: React.ChangeEvent<HTMLSelectElement>) {
         setAnswer(event.target.value);
     }
 
@@ -22,9 +22,9 @@ export function MultipleChoiceQuestion({
             <Form.Group controlId="userAnswer">
                 <Form.Label>Select Your Answer</Form.Label>
                 <Form.Select value={answer} onChange={updateAnswer}>
-                    {options.map((option: string) => (
-                        <option key={option} value={option}>
-                            {option}
+                    {options.map((op: string) => (
+                        <option key={op} value={op}>
+                            {op}
                         </option>
                     ))}
                 </Form.Select>
