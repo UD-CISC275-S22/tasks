@@ -1,5 +1,11 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
+
+interface ShoveBoxButtonProps {
+    position: number;
+    setPosition: (newPosition: number) => void;
+}
 
 function ShoveBoxButton({
     position,
@@ -7,14 +13,21 @@ function ShoveBoxButton({
 }: {
     position: number;
     setPosition: (newPosition: number) => void;
-}) {
+setPosition: (newPosition: number) => void;
+}): JSX.Element {
     return (
         <Button onClick={() => setPosition(4 + position)}>Shove the Box</Button>
     );
 }
 
-function MoveableBox(): JSX.Element {
-    const [position, setPosition] = useState<number>(10);
+//return (
+//<Button>
+//onClick={handleClick}
+//Shove the Box
+//</Button>
+//);
+
+function MoveableBox({ position }: { position: number }): JSX.Element {
     return (
         <div
             data-testid="moveable-box"
@@ -32,19 +45,42 @@ function MoveableBox(): JSX.Element {
 }
 
 export function ShoveBox(): JSX.Element {
-    const box = MoveableBox();
+    //const [boxes, setBoxes] = useState<Array<number>>(
+    //Array.from({ length: 5 }, (_, index) => index * 10)
+    //);
+    const [position, setPosition] = useState<number>(10);
+    const box = MoveableBox({ position });
+
+    //const handleBoxPositionChange = (index: number, newPosition: number) => {
+    //setBoxes((prevBoxes) => {
+    //const newBoxes = [...prevBoxes];
+    //newBoxes[index] = newPosition;
+    //return newBoxes;
+    //});
+    //};
+
+    /*const moveableBoxes = boxes.map((position, index) => (
+        <MoveableBox
+            key={index}
+            position={position}
+            setPosition={(newPosition) =>
+                handleBoxPositionChange(index, newPosition)
+            }
+        />
+    ));
+    */
 
     return (
         <div>
             <h3>Shove Box</h3>
-            {/* <span>The box is at: {box.position}</span>
+            <span>The box is at: {position}</span>
             <div>
                 <ShoveBoxButton
-                    position={box.position}
-                    setPosition={box.setPosition}
+                    position={position}
+                    setPosition={setPosition}
                 ></ShoveBoxButton>
                 {box}
-            </div> */}
+            </div>
         </div>
     );
 }
