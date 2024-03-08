@@ -13,12 +13,14 @@ const PEOPLE = [
 export function ChooseTeam(): JSX.Element {
     const [team, setTeam] = useState<string[]>([]);
 
+    // Updated to ensure direct modification of the team state without direct mutation
     function chooseMember(newMember: string) {
         if (!team.includes(newMember)) {
-            team.push(newMember);
+            setTeam((currentTeam) => [...currentTeam, newMember]);
         }
     }
 
+    // Clear the team
     function clearTeam() {
         setTeam([]);
     }
@@ -28,23 +30,27 @@ export function ChooseTeam(): JSX.Element {
             <h3>Choose Team</h3>
             <Row>
                 <Col>
-                    {PEOPLE.map((option: string) => (
-                        <div key={option} style={{ marginBottom: "4px" }}>
+                    {PEOPLE.map((person) => (
+                        <div key={person} style={{ marginBottom: "4px" }}>
                             <Button
-                                onClick={() => chooseMember(option)}
+                                onClick={() => chooseMember(person)}
                                 size="sm"
                             >
-                                Add {option}
+                                Add {person}
                             </Button>
                         </div>
                     ))}
                 </Col>
                 <Col>
                     <strong>Team:</strong>
-                    {team.map((member: string) => (
-                        <li key={member}>{member}</li>
-                    ))}
-                    <Button onClick={clearTeam}>Clear Team</Button>
+                    <ul>
+                        {team.map((member, index) => (
+                            <li key={index}>Add {member}</li>
+                        ))}
+                    </ul>
+                    <Button onClick={clearTeam} style={{ marginTop: "10px" }}>
+                        Clear Team
+                    </Button>
                 </Col>
             </Row>
         </div>

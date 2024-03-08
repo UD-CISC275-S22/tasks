@@ -16,18 +16,20 @@ const Doubler: React.FC<DoublerProps> = ({ setDhValue, dhValue }) => {
 };
 
 const Halver: React.FC<HalverProps> = ({ setDhValue, dhValue }) => {
-    return <Button onClick={() => setDhValue(0.5 * dhValue)}>Halve</Button>;
+    return <Button onClick={() => setDhValue(dhValue / 2)}>Halve</Button>;
 };
 
 export const DoubleHalf: React.FC = () => {
-    const [dhValue, setDhValue] = useState<number>(1);
+    const [dhValue, setDhValue] = useState<number>(10);
 
     return (
         <div>
             <h3>Double Half</h3>
             <span>The current value is: {dhValue}</span>
-            <Doubler dhValue={dhValue} setDhValue={setDhValue} />
-            <Halver dhValue={dhValue} setDhValue={setDhValue} />
+            <div>
+                <Doubler dhValue={dhValue} setDhValue={setDhValue} />
+                <Halver dhValue={dhValue} setDhValue={setDhValue} />
+            </div>
         </div>
     );
 };

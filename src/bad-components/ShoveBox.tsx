@@ -9,9 +9,7 @@ interface ShoveBoxButtonProps {
 
 const ShoveBoxButton: React.FC<ShoveBoxButtonProps> = ({ setPosition }) => {
     return (
-        <Button
-            onClick={() => setPosition((prevPosition) => prevPosition + 50)}
-        >
+        <Button onClick={() => setPosition((prevPosition) => prevPosition + 4)}>
             Shove the Box
         </Button>
     );
