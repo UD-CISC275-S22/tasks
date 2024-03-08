@@ -30,7 +30,7 @@ export function GiveAttempts(): JSX.Element {
                 </Button>
                 <Button onClick={gain}>gain</Button>
             </form>
-            {attemptsLeft > 0} && <div>{attemptsLeft}</div>
+            {attemptsLeft > 0} <div>{attemptsLeft}</div>
         </div>
     );
 }
