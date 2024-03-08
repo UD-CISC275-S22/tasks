@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 
 export function GiveAttempts(): JSX.Element {
-    // State to manage the number of attempts left
     const [attemptsLeft, setAttemptsLeft] = useState<number>(3);
-
-    // State to manage the number of attempts requested
     const [requestedAttempts, setRequestedAttempts] = useState<string>("");
 
     return (

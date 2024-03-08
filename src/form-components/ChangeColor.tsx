@@ -17,7 +17,7 @@ export function ChangeColor(): JSX.Element {
             <h3>Change Color</h3>
             <div>
                 {colors.map((color, index) => (
-                    <label key={index}>
+                    <label key={index} style={{ marginRight: "10px" }}>
                         <input
                             type="radio"
                             name="color"
@@ -26,20 +26,40 @@ export function ChangeColor(): JSX.Element {
                             onChange={() => setSelectedColor(color)}
                             style={{ marginRight: "5px" }}
                         />
-                        {color}
+                        <span
+                            style={{
+                                backgroundColor: color,
+                                padding: "5px",
+                                borderRadius: "5px"
+                            }}
+                        >
+                            {color}
+                        </span>
                     </label>
                 ))}
             </div>
             <div
                 data-testid="colored-box"
                 style={{
-                    width: "100px",
-                    height: "100px",
-                    backgroundColor: selectedColor,
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
                     marginTop: "10px"
                 }}
             >
-                {selectedColor}
+                <div
+                    style={{
+                        width: "100px",
+                        height: "100px",
+                        backgroundColor: selectedColor
+                    }}
+                ></div>
+                <div style={{ marginTop: "10px" }}>
+                    You have chosen:{" "}
+                    <span style={{ backgroundColor: selectedColor }}>
+                        {selectedColor}
+                    </span>
+                </div>
             </div>
         </div>
     );

@@ -4,7 +4,6 @@ export function EditMode(): JSX.Element {
     const [editMode, setEditMode] = useState(false);
     const [userName, setUserName] = useState("Your Name");
     const [isStudent, setIsStudent] = useState(true);
-
     return (
         <div>
             <h3>Edit Mode</h3>
