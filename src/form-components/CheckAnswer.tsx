@@ -6,7 +6,7 @@ export function CheckAnswer({
 }: {
     expectedAnswer: string;
 }): JSX.Element {
-    const [answer, setAnswer] = useState("");
+    const [answer, setAnswer] = useState<string>("");
 
     function updateAnswer(event: React.ChangeEvent<HTMLInputElement>): void {
         setAnswer(event.target.value);
