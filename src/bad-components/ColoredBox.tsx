@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
 export const COLORS = ["red", "blue", "green"];
-const DEFAULT_COLOR_INDEX = 0;
 
 // If you're using TypeScript, define prop types using interfaces
 interface ChangeColorProps {
@@ -34,6 +33,7 @@ function ColorPreview({ colorIndex }: ColorPreviewProps): JSX.Element {
                 height: "50px",
                 // Use the colorIndex prop to dynamically set the backgroundColor
                 backgroundColor: COLORS[colorIndex],
+
                 display: "inline-block",
                 verticalAlign: "bottom",
                 marginLeft: "5px"
@@ -43,13 +43,17 @@ function ColorPreview({ colorIndex }: ColorPreviewProps): JSX.Element {
 }
 
 export function ColoredBox(): JSX.Element {
-    const [colorIndex, setColorIndex] = useState<number>(DEFAULT_COLOR_INDEX);
+    const [colorIndex, setColorIndex] = useState<number>(0);
+
+    const nextColorIndex = () =>
+        setColorIndex((prevIndex) => (prevIndex + 1) % COLORS.length);
 
     return (
         <div>
             <h3>Colored Box</h3>
             <span>The current color is: {COLORS[colorIndex]}</span>
             <div>
+
                 <ChangeColor
                     colorIndex={colorIndex}
                     setColorIndex={setColorIndex}

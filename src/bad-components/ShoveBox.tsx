@@ -38,7 +38,6 @@ const MoveableBox: React.FC<MoveableBoxProps> = ({ position }) => {
 
 export const ShoveBox: React.FC = () => {
     const [position, setPosition] = useState<number>(10);
-
     return (
         <div>
             <h3>Shove Box</h3>
@@ -47,6 +46,16 @@ export const ShoveBox: React.FC = () => {
                 <ShoveBoxButton setPosition={setPosition} />
                 <MoveableBox position={position} />
             </div>
+            <div
+                data-testid="moveable-box"
+                style={{
+                    width: "50px",
+                    height: "50px",
+                    backgroundColor: "lightblue",
+                    border: "1px solid blue",
+                    marginLeft: `${position}px`
+                }}
+            />
         </div>
     );
 };

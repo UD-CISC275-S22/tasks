@@ -1,3 +1,5 @@
+// Assuming the presence of a useState hook managing dhValue inside DoubleHalf
+
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
