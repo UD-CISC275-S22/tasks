@@ -3,27 +3,37 @@ import { Button } from "react-bootstrap";
 
 export const COLORS = ["red", "blue", "green"];
 
-// Define a type for the ChangeColor and ColorPreview props
+// If you're using TypeScript, define prop types using interfaces
 interface ChangeColorProps {
-    setColorIndex: () => void;
+    colorIndex: number;
+    setColorIndex: (index: number) => void;
 }
 
 interface ColorPreviewProps {
-    color: string;
+    colorIndex: number;
 }
 
-function ChangeColor({ setColorIndex }: ChangeColorProps): JSX.Element {
-    return <Button onClick={setColorIndex}>Next Color</Button>;
+function ChangeColor({
+    colorIndex,
+    setColorIndex
+}: ChangeColorProps): JSX.Element {
+    return (
+        <Button onClick={() => setColorIndex((colorIndex + 1) % COLORS.length)}>
+            Next Color
+        </Button>
+    );
 }
 
-function ColorPreview({ color }: ColorPreviewProps): JSX.Element {
+function ColorPreview({ colorIndex }: ColorPreviewProps): JSX.Element {
     return (
         <div
             data-testid="colored-box"
             style={{
                 width: "50px",
                 height: "50px",
-                backgroundColor: color,
+                // Use the colorIndex prop to dynamically set the backgroundColor
+                backgroundColor: COLORS[colorIndex],
+
                 display: "inline-block",
                 verticalAlign: "bottom",
                 marginLeft: "5px"
@@ -43,8 +53,12 @@ export function ColoredBox(): JSX.Element {
             <h3>Colored Box</h3>
             <span>The current color is: {COLORS[colorIndex]}</span>
             <div>
-                <ChangeColor setColorIndex={nextColorIndex} />
-                <ColorPreview color={COLORS[colorIndex]} />
+
+                <ChangeColor
+                    colorIndex={colorIndex}
+                    setColorIndex={setColorIndex}
+                />
+                <ColorPreview colorIndex={colorIndex} />
             </div>
         </div>
     );
