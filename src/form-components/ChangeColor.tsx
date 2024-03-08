@@ -31,7 +31,7 @@ export function ChangeColor(): JSX.Element {
                         label={colorOption}
                         value={colorOption}
                         checked={color === colorOption}
-                        style={{ width: "10%" }}
+                        style={{ width: "5%" }}
                     />
                 ))}
             </Form.Group>
