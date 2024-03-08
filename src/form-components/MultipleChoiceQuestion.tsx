@@ -8,7 +8,7 @@ export function MultipleChoiceQuestion({
     options: string[];
     expectedAnswer: string;
 }): JSX.Element {
-    const [answer, setAnswer] = useState<string>("");
+    const [answer, setAnswer] = useState<string>(options[0]);
 
     function updateAnswer(event: React.ChangeEvent<HTMLInputElement>) {
         setAnswer(event.target.value);
@@ -19,8 +19,8 @@ export function MultipleChoiceQuestion({
             <div>
                 <h3>Multiple Choice Question</h3>
             </div>
-            <Form.Group controlId="userEmotions">
-                <Form.Label>How do you feel?</Form.Label>
+            <Form.Group controlId="userAnswer">
+                <Form.Label>Select Your Answer</Form.Label>
                 <Form.Select value={answer} onChange={updateAnswer}>
                     {options.map((option: string) => (
                         <option key={option} value={option}>
@@ -29,6 +29,9 @@ export function MultipleChoiceQuestion({
                     ))}
                 </Form.Select>
             </Form.Group>
+            <div>
+                {answer === expectedAnswer ? <span>✔️</span> : <span>❌</span>}
+            </div>
         </>
     );
 }
