@@ -6,11 +6,15 @@ import { StartAttempt } from "./components/StartAttempt";
 import { TwoDice } from "./components/TwoDice";
 import { CycleHoliday } from "./components/CycleHoliday";
 import { Counter } from "./components/Counter";
-import { Button, Col, Container, Row } from "react-bootstrap";
 import { DoubleHalf } from "./bad-components/DoubleHalf";
-import { ChooseTeam } from "./bad-components/ChooseTeam";
 import { ColoredBox } from "./bad-components/ColoredBox";
 import { ShoveBox } from "./bad-components/ShoveBox";
+import { ChooseTeam } from "./bad-components/ChooseTeam";
+import { CheckAnswer } from "./form-components/CheckAnswer";
+import { GiveAttempts } from "./form-components/GiveAttempts";
+import { EditMode } from "./form-components/EditMode";
+import { MultipleChoiceQuestion } from "./form-components/MultipleChoiceQuestion";
+import { ChangeColor } from "./form-components/ChangeColor";
 function App(): JSX.Element {
     return (
         <div className="App">
@@ -20,6 +24,28 @@ function App(): JSX.Element {
             >
                 UD CISC275 with React Hooks and TypeScript, BBank
             </header>
+            <hr></hr>
+            <CheckAnswer expectedAnswer="42"></CheckAnswer>
+            <hr></hr>
+            <GiveAttempts></GiveAttempts>
+            <hr></hr>
+            <EditMode></EditMode>
+            <hr></hr>
+            <ChangeColor></ChangeColor>
+            <hr></hr>
+            <MultipleChoiceQuestion
+                options={["a", "b", "c"]}
+                expectedAnswer="b"
+            ></MultipleChoiceQuestion>
+            <hr></hr>
+            <DoubleHalf></DoubleHalf>
+            <hr></hr>
+            <ChooseTeam></ChooseTeam>
+            <hr></hr>
+            <ColoredBox></ColoredBox>
+            <hr></hr>
+            <ShoveBox></ShoveBox>
+            <hr></hr>
             <hr></hr>
             <Counter></Counter>
             <hr />
@@ -32,7 +58,7 @@ function App(): JSX.Element {
             <ChangeType></ChangeType>
             <hr />
             <CycleHoliday></CycleHoliday>
-            <h1>H1</h1>
+            {/* <h1>H1</h1>
             <img
                 src={require("./Untitled drawing.png")}
                 alt="a random Google Drawing"
@@ -73,7 +99,7 @@ function App(): JSX.Element {
                         Col2
                     </Col>
                 </Row>
-            </Container>
+            </Container> */}
             <hr></hr>
             {<DoubleHalf></DoubleHalf>}
             <hr></hr>
