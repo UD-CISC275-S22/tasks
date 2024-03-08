@@ -22,8 +22,6 @@ export function DoubleHalf(): JSX.Element {
         <div>
             <h3>Double Half</h3>
             <div>
-<h3>Double Half</h3>
-            <div>
                 The current value is: <span>{DHval}</span>
             </div>
             <Doubler DHval={DHval} setDHval={setDHval}></Doubler>
