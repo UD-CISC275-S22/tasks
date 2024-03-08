@@ -28,6 +28,7 @@ export function ChooseTeam(): JSX.Element {
         setTeam([]);
     }
 
+
     return (
         <div>
             <h3>Choose Team</h3>

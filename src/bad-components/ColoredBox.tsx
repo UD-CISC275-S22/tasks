@@ -33,7 +33,6 @@ function ColorPreview({ colorIndex }: { colorIndex: number }): JSX.Element {
 
 export function ColoredBox(): JSX.Element {
     const [colorIndex, setColorIndex] = useState<number>(DEFAULT_COLOR_INDEX);
-
     return (
         <div>
             <h3>Colored Box</h3>
