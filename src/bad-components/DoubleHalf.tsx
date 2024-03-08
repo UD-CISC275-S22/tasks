@@ -1,13 +1,9 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { dhValue, setDhValue } from "./DoubleHalfState";
-
 interface DhStuff {
     dhNum: number;
     setDhNum: React.Dispatch<React.SetStateAction<number>>;
 }
-
 function Doubler({ dhNum, setDhNum }: DhStuff): JSX.Element {
     return <Button onClick={() => setDhNum(2 * dhNum)}>Double</Button>;
 }
@@ -15,10 +11,8 @@ function Doubler({ dhNum, setDhNum }: DhStuff): JSX.Element {
 function Halver({ dhNum, setDhNum }: DhStuff): JSX.Element {
     return <Button onClick={() => setDhNum(0.5 * dhNum)}>Halve</Button>;
 }
-
 export function DoubleHalf(): JSX.Element {
     const [dhValue, setDhValue] = useState<number>(10);
-
     return (
         <div>
             <span>The current value is: {dhValue}</span>
