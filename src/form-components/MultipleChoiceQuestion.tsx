@@ -9,7 +9,6 @@ export function MultipleChoiceQuestion({
     expectedAnswer: string;
 }): JSX.Element {
     const [choice, setChoice] = useState<string>(options[0]);
-    const [check, setCheck] = useState<boolean>(true);
     function updateChoice(event: React.ChangeEvent<HTMLSelectElement>) {
         setChoice(event.target.value);
     }

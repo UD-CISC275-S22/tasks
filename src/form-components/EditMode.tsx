@@ -1,22 +1,10 @@
 import React, { useState } from "react";
-import { Form, Button } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 
 export function EditMode(): JSX.Element {
     const [name, setName] = useState<string>("Your Name");
     const [isStudent, setIsStudent] = useState<boolean>(true);
     const [inEdit, setInEdit] = useState<boolean>(false);
-    function NIE() {
-        if (inEdit === false) {
-            return "Your Name is a student";
-        }
-        // } else {
-        //     if (isStudent) {
-        //         return name + " is a student";
-        //     } else {
-        //         return name + " is not a student";
-        //     }
-        // }
-    }
     function updateName(event: React.ChangeEvent<HTMLInputElement>) {
         setName(event.target.value);
     }
