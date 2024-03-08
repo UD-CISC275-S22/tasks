@@ -1,3 +1,4 @@
+/* eslint-disable no-extra-parens */
 import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 
@@ -52,7 +53,6 @@ export function EditMode(): JSX.Element {
                 checked={editMode}
                 onChange={updateMode}
             />
-            {/* {edit === true} ? **code**: edit=== false ? **code** : edit === some ? **code** : none*/}
             {editMode === true ? (
                 checkAndText()
             ) : (
