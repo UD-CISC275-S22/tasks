@@ -191,7 +191,6 @@ export function changeQuestionTypeById(
     targetId: number,
     newQuestionType: QuestionType
 ): Question[] {
-    const index = questions.findIndex((question) => question.id === targetId);
     return questions.map((question) => ({
         ...question,
         type: question.id === targetId ? newQuestionType : question.type,
