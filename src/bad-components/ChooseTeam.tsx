@@ -13,14 +13,12 @@ const PEOPLE = [
 export function ChooseTeam(): JSX.Element {
     const [team, setTeam] = useState<string[]>([]);
 
-    // Updated to ensure direct modification of the team state without direct mutation
     function chooseMember(newMember: string) {
         if (!team.includes(newMember)) {
             setTeam((currentTeam) => [...currentTeam, newMember]);
         }
     }
 
-    // Clear the team
     function clearTeam() {
         setTeam([]);
     }
