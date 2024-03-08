@@ -18,10 +18,11 @@ function Halver({ DHval, setDHval }: DoubleHalfProps): JSX.Element {
 
 export function DoubleHalf(): JSX.Element {
     const [DHval, setDHval] = useState<number>(10);
-
     return (
         <div>
             <h3>Double Half</h3>
+            <div>
+<h3>Double Half</h3>
             <div>
                 The current value is: <span>{DHval}</span>
             </div>

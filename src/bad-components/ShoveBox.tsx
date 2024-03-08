@@ -13,6 +13,7 @@ function ShoveBoxButton({
 }: {
     position: number;
     setPosition: (newPosition: number) => void;
+setPosition: (newPosition: number) => void;
 }): JSX.Element {
     return (
         <Button onClick={() => setPosition(4 + position)}>Shove the Box</Button>
