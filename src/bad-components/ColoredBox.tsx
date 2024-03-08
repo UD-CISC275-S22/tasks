@@ -3,7 +3,6 @@ import { Button } from "react-bootstrap";
 
 export const COLORS = ["red", "blue", "green"];
 
-// If you're using TypeScript, define prop types using interfaces
 interface ChangeColorProps {
     colorIndex: number;
     setColorIndex: (index: number) => void;
@@ -31,9 +30,7 @@ function ColorPreview({ colorIndex }: ColorPreviewProps): JSX.Element {
             style={{
                 width: "50px",
                 height: "50px",
-                // Use the colorIndex prop to dynamically set the backgroundColor
                 backgroundColor: COLORS[colorIndex],
-
                 display: "inline-block",
                 verticalAlign: "bottom",
                 marginLeft: "5px"
