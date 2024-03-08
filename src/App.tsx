@@ -38,17 +38,6 @@ function App(): JSX.Element {
             <hr></hr>
             <ShoveBox></ShoveBox>
             <hr></hr>
-            <Counter></Counter>
-            <hr />
-            <RevealAnswer></RevealAnswer>
-            <hr />
-            <StartAttempt></StartAttempt>
-            <hr />
-            <TwoDice></TwoDice>
-            <hr />
-            <ChangeType></ChangeType>
-            <hr />
-            <CycleHoliday></CycleHoliday>
         </div>
     );
 }
