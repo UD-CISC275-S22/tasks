@@ -53,7 +53,6 @@ export function ColoredBox(): JSX.Element {
             <h3>Colored Box</h3>
             <span>The current color is: {COLORS[colorIndex]}</span>
             <div>
-
                 <ChangeColor
                     colorIndex={colorIndex}
                     setColorIndex={setColorIndex}
