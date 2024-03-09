@@ -15,6 +15,7 @@ import { GiveAttempts } from "./form-components/GiveAttempts";
 import { CheckAnswer } from "./form-components/CheckAnswer";
 import { ChangeColor } from "./form-components/ChangeColor";
 import { EditMode } from "./form-components/EditMode";
+import { MultipleChoiceQuestion } from "./form-components/MultipleChoiceQuestion";
 
 function App(): JSX.Element {
     return (
@@ -43,6 +44,11 @@ function App(): JSX.Element {
             <ChangeColor></ChangeColor>
             <hr></hr>
             <EditMode></EditMode>
+            <hr></hr>
+            <MultipleChoiceQuestion
+                options={["1", "2", "3"]}
+                expectedAnswer={"1"}
+            ></MultipleChoiceQuestion>
         </div>
     );
 }
