@@ -1,6 +1,13 @@
 import React from "react";
 import "./App.css";
 import { Button, Col, Container, Row } from "react-bootstrap";
+import { Counter } from "./components/Counter";
+import { ChangeType } from "./components/ChangeType";
+import { RevealAnswer } from "./components/RevealAnswer";
+import { StartAttempt } from "./components/StartAttempt";
+import { CycleHoliday } from "./components/CycleHoliday";
+import { TwoDice } from "./components/TwoDice";
+
 function App(): JSX.Element {
     return (
         <div className="App">
@@ -46,6 +53,19 @@ function App(): JSX.Element {
                     </Col>
                 </Row>
             </Container>
+            <hr></hr>
+            <Counter></Counter>
+            <hr />
+            <RevealAnswer></RevealAnswer>
+            <hr />
+            <ChangeType></ChangeType>
+            <hr />
+            <CycleHoliday></CycleHoliday>
+            <hr />
+            <StartAttempt></StartAttempt>
+            <hr />
+            <TwoDice></TwoDice>
+            <hr />
         </div>
     );
 }
