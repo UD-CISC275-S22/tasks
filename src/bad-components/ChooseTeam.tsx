@@ -17,11 +17,13 @@ export function ChooseTeam(): JSX.Element {
     function chooseMember(newMember: string) {
         if (!team.includes(newMember)) {
             setTeam([...team, newMember]);
+            setAllOptions(allOptions.filter((option) => option !== newMember));
         }
     }
 
     function clearTeam() {
         setTeam([]);
+        setAllOptions(PEOPLE);
     }
 
     return (
@@ -31,7 +33,6 @@ export function ChooseTeam(): JSX.Element {
                 <Col>
                     {allOptions.map((option: string) => (
                         <div key={option} style={{ marginBottom: "4px" }}>
-                            Add{" "}
                             <Button
                                 onClick={() => chooseMember(option)}
                                 size="sm"
