@@ -10,6 +10,11 @@ import { TwoDice } from "./components/TwoDice";
 import { DoubleHalf } from "./bad-components/DoubleHalf";
 import { ColoredBox } from "./bad-components/ColoredBox";
 import { ChooseTeam } from "./bad-components/ChooseTeam";
+import { ShoveBox } from "./bad-components/ShoveBox";
+import { GiveAttempts } from "./form-components/GiveAttempts";
+import { CheckAnswer } from "./form-components/CheckAnswer";
+import { ChangeColor } from "./form-components/ChangeColor";
+import { EditMode } from "./form-components/EditMode";
 
 function App(): JSX.Element {
     return (
@@ -30,6 +35,14 @@ function App(): JSX.Element {
             <ShoveBox></ShoveBox>
             <hr></hr>
             <DoubleHalf></DoubleHalf>
+            <hr></hr>
+            <GiveAttempts></GiveAttempts>
+            <hr></hr>
+            <CheckAnswer expectedAnswer={"2"}></CheckAnswer>
+            <hr></hr>
+            <ChangeColor></ChangeColor>
+            <hr></hr>
+            <EditMode></EditMode>
         </div>
     );
 }
