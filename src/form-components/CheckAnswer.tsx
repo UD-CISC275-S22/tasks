@@ -5,9 +5,10 @@ export function CheckAnswer({
 }: {
     expectedAnswer: string;
 }): JSX.Element {
-    const [display, setDisplay] = useState(false);
+    const [display, setDisplay] = useState(true);
     const [answer, setAnswer] = useState("");
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        event.preventDefault();
         setAnswer(event.target.value);
     };
     const handleCheckAnswer = () => {
@@ -24,7 +25,7 @@ export function CheckAnswer({
                         Check Answer
                     </button>
                 </label>
-                {!display && (
+                {display && (
                     <div>
                         {answer === expectedAnswer ? <p>✔️</p> : <p>❌</p>}
                     </div>
