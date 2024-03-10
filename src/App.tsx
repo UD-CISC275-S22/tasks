@@ -3,6 +3,12 @@ import "./App.css";
 
 import { Button, Col, Container, Row } from "react-bootstrap";
 import ronaldoImage from "./ronaldo 5.jpeg";
+import { ChangeType } from "./components/ChangeType";
+import { RevealAnswer } from "./components/RevealAnswer";
+import { StartAttempt } from "./components/StartAttempt";
+import { TwoDice } from "./components/TwoDice";
+import { CycleHoliday } from "./components/CycleHoliday";
+import { Counter } from "./components/Counter";
 
 import { ChangeType } from "./components/ChangeType";
 import { RevealAnswer } from "./components/RevealAnswer";
@@ -75,6 +81,7 @@ function App(): JSX.Element {
             <ColoredBox></ColoredBox>
             <hr></hr>
             <ShoveBox></ShoveBox>
+
             <hr></hr>
             <Counter></Counter>
             <hr />
@@ -90,5 +97,4 @@ function App(): JSX.Element {
         </div>
     );
 }
-
 export default App;
