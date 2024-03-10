@@ -103,7 +103,7 @@ function App(): JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript
             </header>
-            <div className="Intro">Hello World, Task 3 progress</div>
+            <h1 className="Intro">Hello World, Task 3 progress</h1>
             <div className="image-container">
                 <img
                     src="https://static4.depositphotos.com/1003362/340/i/450/depositphotos_3406277-stock-photo-red-heart-3d.jpg"
