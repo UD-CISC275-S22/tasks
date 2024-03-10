@@ -8,10 +8,6 @@ import { CycleHoliday } from "./components/CycleHoliday";
 import { Counter } from "./components/Counter";
 
 function App(): JSX.Element {
-    const handleButtonClick = () => {
-        console.log("Hello World!");
-    };
-
     return (
         <div>
             <header style={{ backgroundColor: "blue", color: "white" }}>
