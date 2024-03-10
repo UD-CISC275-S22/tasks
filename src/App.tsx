@@ -14,6 +14,11 @@ import { DoubleHalf } from "./bad-components/DoubleHalf";
 import { ColoredBox } from "./bad-components/ColoredBox";
 import { ShoveBox } from "./bad-components/ShoveBox";
 import { ChooseTeam } from "./bad-components/ChooseTeam";
+import { CheckAnswer } from "./form-components/CheckAnswer";
+import { GiveAttempts } from "./form-components/GiveAttempts";
+import { EditMode } from "./form-components/EditMode";
+import { MultipleChoiceQuestion } from "./form-components/MultipleChoiceQuestion";
+import { ChangeColor } from "./form-components/ChangeColor";
 
 function App(): JSX.Element {
     return (
@@ -21,52 +26,19 @@ function App(): JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript
             </header>
-
-            <h1>Welcome to my Website </h1>
-            <ul>
-                <li>First thing</li>
-                <li>Another thing</li>
-                <li>A third item</li>
-            </ul>
-            <Container>
-                <Row>
-                    <Col>
-                        <div
-                            style={{
-                                width: "100%",
-                                height: "100px",
-                                backgroundColor: "red"
-                            }}
-                        ></div>
-                        First column.
-                    </Col>
-                    <Col>
-                        <div
-                            style={{
-                                width: "100%",
-                                height: "100px",
-                                backgroundColor: "red"
-                            }}
-                        ></div>
-                        Second column. You can put whatever you want in here,
-                        and it will be on the right side. Maybe try adding an
-                        Maybe try adding an image?
-                    </Col>
-                </Row>
-            </Container>
-            <p>
-                Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload. Harman Bagga. Hello World
-            </p>
-            <Button onClick={() => console.log("Hello World!")}>
-                Log Hello World
-            </Button>
-            <img
-                src={ronaldoImage}
-                alt="Ronaldo siuuuuuuuu"
-                style={{ height: "200px", width: "auto" }}
-            />
-
+            <hr></hr>
+            <CheckAnswer expectedAnswer="42"></CheckAnswer>
+            <hr></hr>
+            <GiveAttempts></GiveAttempts>
+            <hr></hr>
+            <EditMode></EditMode>
+            <hr></hr>
+            <ChangeColor></ChangeColor>
+            <hr></hr>
+            <MultipleChoiceQuestion
+                options={["a", "b", "c"]}
+                expectedAnswer="b"
+            ></MultipleChoiceQuestion>
             <hr></hr>
             {<DoubleHalf></DoubleHalf>}
             <hr></hr>
