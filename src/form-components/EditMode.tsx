@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 
 export function EditMode(): JSX.Element {
-    const [edit, setEdit] = useState(true);
+    const [edit, setEdit] = useState(false);
     const [name, setName] = useState("Your Name");
     const [student, setStudent] = useState(true);
     function updateName(event: React.ChangeEvent<HTMLInputElement>) {
@@ -11,28 +11,47 @@ export function EditMode(): JSX.Element {
     function updateEdit(event: React.ChangeEvent<HTMLInputElement>) {
         setEdit(event.target.checked);
     }
-    function updateStudent() {
-        setStudent((prevStudent) => !prevStudent);
+    function updateStudent(event: React.ChangeEvent<HTMLInputElement>) {
+        setStudent(event.target.checked);
     }
 
     return (
         <div>
             <h3>Edit Mode</h3>
-            <Form.Check type="switch" checked={edit} onChange={updateEdit} />
             <Form.Check
-                type="checkbox"
-                checked={student}
-                onChange={updateStudent}
-                disabled={!edit}
-            ></Form.Check>
-            <input
-                value={name}
-                onChange={updateName}
-                disabled={edit === false}
+                type="switch"
+                id="in-edit"
+                label="Edit Mode"
+                checked={edit}
+                onChange={updateEdit}
             />
-            <h2>
-                {name} is {student ? "a student" : "not a student"}
-            </h2>
+            {edit && (
+                <form>
+                    <label>
+                        Name:
+                        <input
+                            type="text"
+                            id="name"
+                            onChange={updateName}
+                            value={name}
+                        />
+                    </label>
+                    <label>
+                        Is Student?
+                        <input
+                            type="checkbox"
+                            id="student?"
+                            checked={student}
+                            onChange={updateStudent}
+                        />
+                    </label>
+                </form>
+            )}
+            {!edit ? (
+                <>
+                    {name} is {student ? "" : "not"} a student{" "}
+                </>
+            ) : null}
         </div>
     );
 }
