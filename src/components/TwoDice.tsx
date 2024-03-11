@@ -29,52 +29,30 @@ When the two states are equal, render a message that includes the word Win.
 If you do all these and are still not passing all tests, read the test file, it is a good practice! In much of software engineering, the tests are the product spec.
 
  */
-export function TwoDice(): JSX.Element {
-    const [rightDie, setRightDie] = useState<number>(1);
-    const [leftDie, setLeftDie] = useState<number>(2);
-    function rollLeft(): void {
-        setLeftDie(d6);
-    }
-    function rollRight(): void {
-        setRightDie(d6);
-    }
-    let result: string;
 
 export function TwoDice(): JSX.Element {
     const [leftDie, setLeftDie] = useState<number>(1);
     const [rightDie, setRightDie] = useState<number>(2);
 
-    const rollLeftDieHandler = (): void => {
-        setLeftDie(d6());
-    };
-
-    const rollRightDieHandler = (): void => {
-        setRightDie(d6());
-    };
-
-    let result;
-
-
-    if (leftDie === 1 && rightDie === 1) {
-        result = "Lose";
-    } else if (leftDie === rightDie) {
-        result = "Win";
-    } else {
-        result = "Nope";
-        result = "None";
-    }
-
     return (
         <div>
-            <span data-testid="left-die">{leftDie}</span>
-            <Button onClick={() => rollLeft()}>Roll Left</Button>
-            <span data-testid="right-die">{rightDie}</span>
-            <Button onClick={() => rollRight()}>Roll Right</Button>
-            {<div>{result}</div>}
-            <Button onClick={rollLeftDieHandler}>Roll Left</Button>
-            <Button onClick={rollRightDieHandler}>Roll Right</Button>
-            <span data-testid="right-die">{rightDie}</span>
-            <p>{result}</p>
+            <div data-testid="left-die">
+                leftDie: <span>{leftDie}</span>
+            </div>
+            <div data-testid="right-die">
+                rightDie: <span>{rightDie}</span>
+            </div>
+            <Button onClick={() => setLeftDie(d6())}>Roll Left</Button>
+            <Button onClick={() => setRightDie(d6())}>Roll Right</Button>
+            <div>
+                {leftDie === 1 && rightDie === 1 ? (
+                    <span>Lose</span>
+                ) : leftDie === rightDie ? (
+                    <span>Win</span>
+                ) : (
+                    <span></span>
+                )}
+            </div>
         </div>
     );
 }
