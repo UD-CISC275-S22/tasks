@@ -12,17 +12,6 @@ export function RevealAnswer(): JSX.Element {
                 There is a Reveal Answer button
             </Button>
             {visible && <div>42</div>}
-    const [isAnswerVisible, setIsAnswerVisible] = useState<boolean>(false);
-
-    const flipAnswerVisiblity = (): void => {
-        setIsAnswerVisible(
-            (isAnswerVisible: boolean): boolean => !isAnswerVisible
-        );
-    };
-    return (
-        <div>
-            <Button onClick={flipAnswerVisiblity}>Reveal Answer</Button>
-            {isAnswerVisible && <p>42</p>}
         </div>
     );
 }
