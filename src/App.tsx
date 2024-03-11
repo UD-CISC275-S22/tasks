@@ -44,6 +44,7 @@ function App(): JSX.Element {
             <ColoredBox></ColoredBox>
             <hr></hr>
             <ShoveBox></ShoveBox>
+
             <hr></hr>
             <Counter></Counter>
             <hr />
@@ -59,5 +60,4 @@ function App(): JSX.Element {
         </div>
     );
 }
-
 export default App;

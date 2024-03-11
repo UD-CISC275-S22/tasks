@@ -40,12 +40,28 @@ export function TwoDice(): JSX.Element {
     }
     let result: string;
 
+export function TwoDice(): JSX.Element {
+    const [leftDie, setLeftDie] = useState<number>(1);
+    const [rightDie, setRightDie] = useState<number>(2);
+
+    const rollLeftDieHandler = (): void => {
+        setLeftDie(d6());
+    };
+
+    const rollRightDieHandler = (): void => {
+        setRightDie(d6());
+    };
+
+    let result;
+
+
     if (leftDie === 1 && rightDie === 1) {
         result = "Lose";
     } else if (leftDie === rightDie) {
         result = "Win";
     } else {
         result = "Nope";
+        result = "None";
     }
 
     return (
@@ -55,6 +71,10 @@ export function TwoDice(): JSX.Element {
             <span data-testid="right-die">{rightDie}</span>
             <Button onClick={() => rollRight()}>Roll Right</Button>
             {<div>{result}</div>}
+            <Button onClick={rollLeftDieHandler}>Roll Left</Button>
+            <Button onClick={rollRightDieHandler}>Roll Right</Button>
+            <span data-testid="right-die">{rightDie}</span>
+            <p>{result}</p>
         </div>
     );
 }
