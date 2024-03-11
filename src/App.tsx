@@ -1,9 +1,6 @@
 import React from "react";
 import "./App.css";
 
-import { Button, Col, Container, Row } from "react-bootstrap";
-import ronaldoImage from "./ronaldo 5.jpeg";
-
 import { ChangeType } from "./components/ChangeType";
 import { RevealAnswer } from "./components/RevealAnswer";
 import { StartAttempt } from "./components/StartAttempt";
