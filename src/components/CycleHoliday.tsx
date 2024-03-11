@@ -22,6 +22,7 @@ const holidayDateStrings: string[] = [
     "2024-12-25",
     "2024-11-28"
 ];
+
 const holidayDates: Date[] = holidayDateStrings.map(
     (date: string): Date => new Date(date)
 );
