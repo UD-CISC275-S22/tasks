@@ -198,6 +198,7 @@ function App(): JSX.Element {
             <TwoDice></TwoDice>
             <hr />
             <DoubleHalf></DoubleHalf>
+            <hr></hr>
             <CheckAnswer expectedAnswer="42"></CheckAnswer>
             <hr></hr>
             <GiveAttempts></GiveAttempts>
@@ -211,7 +212,6 @@ function App(): JSX.Element {
                 expectedAnswer="b"
             ></MultipleChoiceQuestion>
             <hr></hr>
-            {/* <DoubleHalf></DoubleHalf> */}
         </div>
     );
 }
