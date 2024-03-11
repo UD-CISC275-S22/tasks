@@ -9,7 +9,7 @@ function Halver({ onHalve }: { onHalve: () => void }): JSX.Element {
 }
 
 export function DoubleHalf(): JSX.Element {
-    const [dhValue, setDhValue] = useState<number>(10); // State management is now inside the component
+    const [dhValue, setDhValue] = useState<number>(10);
 
     return (
         <div>
