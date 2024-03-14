@@ -7,19 +7,11 @@ interface DoubleHalfProps {
 }
 
 function Doubler({ setDhValue, dhValue }: DoubleHalfProps): JSX.Element {
-    return (
-        <div>
-            <Button onClick={() => setDhValue(2 * dhValue)}>Double</Button>;
-        </div>
-    );
+    return <Button onClick={() => setDhValue(2 * dhValue)}>Double</Button>;
 }
 
 function Halver({ setDhValue, dhValue }: DoubleHalfProps): JSX.Element {
-    return (
-        <div>
-            <Button onClick={() => setDhValue(0.5 * dhValue)}>Halve</Button>;
-        </div>
-    );
+    return <Button onClick={() => setDhValue(0.5 * dhValue)}>Halve</Button>;
 }
 
 export function DoubleHalf(): JSX.Element {
