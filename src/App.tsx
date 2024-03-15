@@ -20,10 +20,14 @@ function App(): JSX.Element {
     //TODO:  Heading??? idk Also the red box, image and button
     return (
         <div className="App">
-            <header className="App-header">
-                UD CISC275 with React Hooks and TypeScript
+            <header
+                className="App-header"
+                style={{ backgroundColor: "LightSkyBlue" }}
+            >
+                Jacob Whitman - UD CISC275 with React Hooks and TypeScript
             </header>
             <hr></hr>
+            <DoubleHalf></DoubleHalf>
             <CheckAnswer expectedAnswer="42"></CheckAnswer>
             <hr></hr>
             <GiveAttempts></GiveAttempts>
