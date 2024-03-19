@@ -59,8 +59,6 @@ function App(): JSX.Element {
                 Hello World UD CISC275 with React Hooks and TypeScript, neelam
                 Hello World
             </header>
-            <hr></hr>
-            <DoubleHalf></DoubleHalf>
             <CheckAnswer expectedAnswer="42"></CheckAnswer>
             <hr></hr>
             <GiveAttempts></GiveAttempts>
@@ -74,7 +72,7 @@ function App(): JSX.Element {
                 expectedAnswer="b"
             ></MultipleChoiceQuestion>
             <hr></hr>
-            {/* <DoubleHalf></DoubleHalf> */}
+            <DoubleHalf></DoubleHalf>
             <hr></hr>
             <ChooseTeam></ChooseTeam>
             <hr></hr>
