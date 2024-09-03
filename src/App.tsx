@@ -1,12 +1,14 @@
 import React from "react";
 import "./App.css";
 
-function App(): JSX.Element {
+function App(): React.JSX.Element {
     return (
         <div className="App">
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript
             </header>
+            <p>Ethan Fassnacht - name for credit</p>
+            <p>Hello World</p>
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
