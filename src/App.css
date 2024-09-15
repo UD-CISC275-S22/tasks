@@ -12,10 +12,16 @@
         animation: App-logo-spin infinite 20s linear;
     }
 }
-
+.Column{
+    width: 500px;;
+    height:100px;
+    border-style: solid;
+    border-width: 5px;
+    background-color:red;
+}
 .App-header {
     width: 100%;
-    background-color: #282c34;
+    background-color: #8891EB;
     min-height: 40vh;
     display: flex;
     flex-direction: column;
@@ -24,7 +30,6 @@
     font-size: calc(10px + 2vmin);
     color: white;
 }
-
 .App-link {
     color: #61dafb;
 }
