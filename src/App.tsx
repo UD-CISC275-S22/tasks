@@ -5,11 +5,11 @@ function App(): JSX.Element {
     return (
         <div className="App">
             <header className="App-header">
-                UD CISC275 with React Hooks and TypeScript
+                UD CISC275 with React Hooks and TypeScript (Zachariah Barraza /
+                SamuraiZach)
             </header>
             <p>
-                Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload.
+                <code>Zachariah Barraza SamuraiZach Hello World TESTING</code>
             </p>
         </div>
     );
