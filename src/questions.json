@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Sample Question 1",
+        "type": "short_answer_question",
+        "body": "What is 2 + 2?",
+        "expected": "4",
+        "options": [],
+        "points": 1,
+        "published": false
+    },
+    {
+        "id": 2,
+        "name": "Sample Question 2",
+        "type": "multiple_choice_question",
+        "body": "Select the correct option.",
+        "expected": "B",
+        "options": ["A", "B", "C"],
+        "points": 2,
+        "published": true
+    }
+]
+
