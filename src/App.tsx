@@ -6,54 +6,62 @@ import { StartAttempt } from "./components/StartAttempt";
 import { TwoDice } from "./components/TwoDice";
 import { CycleHoliday } from "./components/CycleHoliday";
 import { Counter } from "./components/Counter";
+import { Button } from "react-bootstrap";
 
-export function Counter (){
-    const [count, setCount] = useState<number>(0);
-    return (
-        <div>
-            <p>Count: {count}</p>
-            <button onClick={() => setCount(count + 1)} >Increment</button>
-        </div>
-    );
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function App(){
+function App() {
     return (
         <div className="App">
-            <header className="App-header" style = {{backgroundColor: "red"}}>
-               <h1>UD CISC275 with React Hooks and TypeScript</h1>
+            <header className="App-header" style={{ backgroundColor: "red" }}>
+                <h1>UD CISC275 with React Hooks and TypeScript</h1>
             </header>
-            <hr></hr>
-            <Counter></Counter>
+
+            {/* Image with alt text */}
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/4/4b/383-waving-hand-1.svg"
+                alt="Waving"
+                className="App-image"
+            />
+
+            {/* List with at least 3 elements */}
+            <ul>
+                <li>1st</li>
+                <li>2nd</li>
+                <li>3rd</li>
+            </ul>
+
             <hr />
-            <RevealAnswer></RevealAnswer>
+
+            {/* Bootstrap Button that logs Hello World */}
+            <Button
+                className="btn btn-primary"
+                onClick={() => console.log("Hello World!")}
+            >
+                Log Hello World
+            </Button>
+
             <hr />
-            <StartAttempt></StartAttempt>
+
+            <Counter />
+
             <hr />
-            <TwoDice></TwoDice>
+
+            <RevealAnswer />
+
             <hr />
-            <ChangeType></ChangeType>
+
+            <StartAttempt />
+
             <hr />
-            <CycleHoliday></CycleHoliday>
+
+            <TwoDice />
+
+            <hr />
+
+            <ChangeType />
+
+            <hr />
+
+            <CycleHoliday />
         </div>
     );
 }
