@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 
-function App(): JSX.Element {
+function App(): React.JSX.Element {
     return (
         <div className="App">
             <header className="App-header">
@@ -11,6 +11,8 @@ function App(): JSX.Element {
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
             </p>
+            <p>Vibav Tandel</p>
+            <p>Hello World</p>
         </div>
     );
 }
