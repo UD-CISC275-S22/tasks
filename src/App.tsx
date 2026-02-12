@@ -8,33 +8,21 @@ import { CycleHoliday } from "./components/CycleHoliday";
 import { Counter } from "./components/Counter";
 import { Button } from "react-bootstrap";
 
-function App() {
+function App(): JSX.Element {
     return (
         <div className="App">
             <header className="App-header" style={{ backgroundColor: "red" }}>
-                <h1>UD CISC275 with React Hooks and TypeScript</h1>
+                <h1>UD CISC275 with React Hooks and TypeScript fanta</h1>
             </header>
-
-            {/* Image with alt text */}
-            <img
-                src="https://upload.wikimedia.org/wikipedia/commons/4/4b/383-waving-hand-1.svg"
-                alt="Waving"
-                className="App-image"
-            />
-
-            {/* List with at least 3 elements */}
-            <ul>
-                <li>1st</li>
-                <li>2nd</li>
-                <li>3rd</li>
-            </ul>
 
             <hr />
 
             {/* Bootstrap Button that logs Hello World */}
             <Button
                 className="btn btn-primary"
-                onClick={() => console.log("Hello World!")}
+                onClick={() => {
+                    console.log("Hello World!");
+                }}
             >
                 Log Hello World
             </Button>
