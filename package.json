@@ -20,6 +20,7 @@
         "build": "react-scripts build",
         "test": "react-scripts test",
         "test:cov": "react-scripts test --coverage --watchAll",
+        "test:json": "react-scripts test --json --watchAll=false --outputFile jest-output.json --coverage",
         "eject": "react-scripts eject",
         "lint": "eslint ./src --ext .tsx --ext .ts --max-warnings 0",
         "eslint-output": "eslint-output ./src --ext .tsx --ext .ts --max-warnings 0",
