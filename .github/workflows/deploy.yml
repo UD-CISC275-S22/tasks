@@ -152,8 +152,3 @@ jobs:
         if: ${{ !cancelled() }}
         id: deployment
         uses: actions/deploy-pages@v4
-
-        name: Set up python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.11'
