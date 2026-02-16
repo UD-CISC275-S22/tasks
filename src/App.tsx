@@ -13,16 +13,22 @@ function App(): React.JSX.Element {
             {/* Header */}
             <header
                 style={{
-                    backgroundColor: "#f0a500",
-                    color: "white",
-                    fontSize: "2rem",
-                    fontWeight: "bold",
-                    padding: "20px",
-                    borderRadius: "8px",
                     marginBottom: "20px",
                 }}
             >
-                UD CISC275 with React Hooks and TypeScript
+                <h1
+                    style={{
+                        backgroundColor: "#f0a500",
+                        color: "white",
+                        fontSize: "2rem",
+                        fontWeight: "bold",
+                        padding: "20px",
+                        borderRadius: "8px",
+                        margin: 0,
+                    }}
+                >
+                    UD CISC275 with React Hooks and TypeScript
+                </h1>
             </header>
 
             {/* Paragraphs */}
