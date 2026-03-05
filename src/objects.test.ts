@@ -18,11 +18,8 @@ import backupQuestionData from "./data/questions.json";
 // Setting up the test data
 
 const { BLANK_QUESTIONS, SIMPLE_QUESTIONS }: Record<string, Question[]> =
-    // Typecast the test data that we imported to be a record matching
-    //  strings to the question list
     testQuestionData as Record<string, Question[]>;
 
-// We have backup versions of the data to make sure all changes are immutable
 const {
     BLANK_QUESTIONS: BACKUP_BLANK_QUESTIONS,
     SIMPLE_QUESTIONS: BACKUP_SIMPLE_QUESTIONS,
@@ -31,7 +28,6 @@ const {
     Question[]
 >;
 
-// Unpack the list of simple questions into convenient constants
 const [ADDITION_QUESTION, LETTER_QUESTION, COLOR_QUESTION, SHAPE_QUESTION] =
     SIMPLE_QUESTIONS;
 const [
