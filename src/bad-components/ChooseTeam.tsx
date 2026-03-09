@@ -33,7 +33,12 @@ export function ChooseTeam(): React.JSX.Element {
                         <div key={option} style={{ marginBottom: "4px" }}>
                             Add{" "}
                             <Button
-                                onClick={() => chooseMember(option)}
+                                /* FIX: Added curly braces and semicolon to 
+                                   satisfy @typescript-eslint/no-confusing-void-expression 
+                                */
+                                onClick={() => {
+                                    chooseMember(option);
+                                }}
                                 size="sm"
                             >
                                 {option}
@@ -49,7 +54,14 @@ export function ChooseTeam(): React.JSX.Element {
                             <li key={member}>{member}</li>
                         ))}
                     </ul>
-                    <Button onClick={clearTeam}>Clear Team</Button>
+                    {/* FIX: Also added braces here for consistency */}
+                    <Button
+                        onClick={() => {
+                            clearTeam();
+                        }}
+                    >
+                        Clear Team
+                    </Button>
                 </Col>
             </Row>
         </div>
