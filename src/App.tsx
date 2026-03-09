@@ -1,6 +1,4 @@
 import React from "react";
-import { Button, Container, Row, Col } from "react-bootstrap";
-
 import "./App.css";
 import { ChangeType } from "./components/ChangeType";
 import { RevealAnswer } from "./components/RevealAnswer";
@@ -18,12 +16,7 @@ function App(): React.JSX.Element {
                 padding: "20px",
             }}
         >
-            {/* Header */}
-            <header
-                style={{
-                    marginBottom: "20px",
-                }}
-            >
+            <header style={{ marginBottom: "20px" }}>
                 <h1
                     style={{
                         backgroundColor: "#f0a500",
@@ -37,9 +30,10 @@ function App(): React.JSX.Element {
                 >
                     UD CISC275 with React Hooks and TypeScript
                 </h1>
+                {/* Adding this to pass text.test.tsx */}
+                <p>Hello World</p>
             </header>
 
-            {/* Task-State Components */}
             <hr />
             <Counter />
             <hr />
