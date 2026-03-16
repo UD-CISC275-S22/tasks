@@ -16,9 +16,9 @@ export function CheckAnswer({
                 <Form.Control
                     type="text"
                     value={userAnswer}
-                    onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                        setUserAnswer(e.target.value)
-                    }
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                        setUserAnswer(e.target.value);
+                    }}
                 />
             </Form.Group>
             <div>{userAnswer === expectedAnswer ? "✔️" : "❌"}</div>

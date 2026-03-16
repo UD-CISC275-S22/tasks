@@ -17,9 +17,9 @@ export function MultipleChoiceQuestion({
                 <Form.Label>Select an Answer:</Form.Label>
                 <Form.Select
                     value={selected}
-                    onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
-                        setSelected(e.target.value)
-                    }
+                    onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
+                        setSelected(e.target.value);
+                    }}
                 >
                     {options.map((option: string) => (
                         <option key={option} value={option}>

@@ -23,9 +23,9 @@ export function ChangeColor(): React.JSX.Element {
                     inline
                     type="radio"
                     name="colors"
-                    onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                        setSelectedColor(e.target.value)
-                    }
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                        setSelectedColor(e.target.value);
+                    }}
                     id={`color-check-${color}`}
                     label={color}
                     value={color}
