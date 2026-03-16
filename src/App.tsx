@@ -39,37 +39,36 @@ function App(): React.JSX.Element {
                 >
                     UD CISC275 with React Hooks and TypeScript
                 </h1>
-                {/* Adding this to pass text.test.tsx */}
+                {/* Required to pass text.test.tsx */}
                 <p>Hello World</p>
             </header>
-            <hr></hr>
-<<<<<<< HEAD
-            <DoubleHalf></DoubleHalf>
-=======
-            <CheckAnswer expectedAnswer="42"></CheckAnswer>
-            <hr></hr>
-            <GiveAttempts></GiveAttempts>
-            <hr></hr>
-            <EditMode></EditMode>
-            <hr></hr>
-            <ChangeColor></ChangeColor>
-            <hr></hr>
+
+            {/* Form Components Section */}
+            <CheckAnswer expectedAnswer="42" />
+            <hr />
+            <GiveAttempts />
+            <hr />
+            <EditMode />
+            <hr />
+            <ChangeColor />
+            <hr />
             <MultipleChoiceQuestion
                 options={["a", "b", "c"]}
                 expectedAnswer="b"
-            ></MultipleChoiceQuestion>
-            <hr></hr>
-            {/* <DoubleHalf></DoubleHalf> */}
->>>>>>> upstream/task-forms
-            <hr></hr>
-            <ChooseTeam></ChooseTeam>
-            <hr></hr>
-            <ColoredBox></ColoredBox>
-            <hr></hr>
-            <ShoveBox></ShoveBox>
-            <hr></hr>
-            <Counter></Counter>
+            />
             <hr />
+
+            {/* Bad Components Section */}
+            <DoubleHalf />
+            <hr />
+            <ChooseTeam />
+            <hr />
+            <ColoredBox />
+            <hr />
+            <ShoveBox />
+            <hr />
+
+            {/* Basic Components Section */}
             <Counter />
             <hr />
             <RevealAnswer />
