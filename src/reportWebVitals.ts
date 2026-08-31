@@ -9,7 +9,7 @@ const reportWebVitals = (onPerfEntry?: ReportHandler): void => {
                 getFCP(onPerfEntry);
                 getLCP(onPerfEntry);
                 getTTFB(onPerfEntry);
-            }
+            },
         );
     }
 };
